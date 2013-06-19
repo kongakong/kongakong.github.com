@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-18T22:20:21+10:00</updated>
+  <updated>2013-06-20T09:21:54+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,5 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to install beautifulsoup in python3]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/20/beautifulsoup4/"/>
+    <updated>2013-06-20T08:14:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/20/beautifulsoup4</id>
+    <content type="html"><![CDATA[<p>This will fail immediately</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>  /usr/local/bin/easy_install3 BeautifulSoup
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>with error message</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  File <span class="s2">&quot;/usr/local/Cellar/python3/3.3.0/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/distribute-0.6.28-py3.3.egg/setuptools/sandbox.py&quot;</span>, line 33, in &lt;lambda&gt;
+</span><span class='line'>    <span class="o">)</span>.read<span class="o">()</span>, <span class="s2">&quot;setup.py&quot;</span>, <span class="s1">&#39;exec&#39;</span><span class="o">)</span>,
+</span><span class='line'>  File <span class="s2">&quot;setup.py&quot;</span>, line 22
+</span><span class='line'>    print <span class="s2">&quot;Unit tests have failed!&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the right way</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span> /usr/local/bin/pip3 install beautifulsoup4
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Octopress]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/19/using-octopress/"/>
+    <updated>2013-06-19T06:09:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/19/using-octopress</id>
+    <content type="html"><![CDATA[<p>Octopress really makes blogging on github easy.</p>
+]]></content>
+  </entry>
   
 </feed>
