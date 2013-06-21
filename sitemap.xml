@@ -1,6 +1,110 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://kongakong.github.io/blog/2010/08/31/p-1042184794/</loc>
+        <lastmod>2013-06-22T01:04:42+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/02/p-1052903118/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/04/p-1058809611/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/04/p-1063367493/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/05/p-1069081574/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/05/p-1069124599/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/09/p-1091664243/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/12/p-1108382072/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/14/p-1118971148/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/14/p-1119099362/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/20/p-1153892343/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/09/22/p-1163578480/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2010/10/06/p-1250836116/</loc>
+        <lastmod>2013-06-22T01:04:30+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/01/29/p-2990139811/</loc>
+        <lastmod>2013-06-22T00:27:18+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/10/p-10010520600/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/10/p-10011448975/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/10/p-10030662475/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/12/p-10124153751/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/13/p-10126553227/</loc>
+        <lastmod>2013-06-22T00:57:19+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/13/p-10160722248/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/09/19/p-10401158770/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/10/18/p-11609025409/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/10/24/p-11861944294/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/10/31/p-12121817265/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/10/31/p-12157348043/</loc>
+        <lastmod>2013-06-22T00:50:13+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/blog/2011/11/01/p-12165024693/</loc>
+        <lastmod>2013-06-22T00:55:05+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/2013/06/19/using-octopress/</loc>
         <lastmod>2013-06-20T09:58:21+10:00</lastmod>
     </url>
@@ -10,11 +114,11 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-06-20T09:58:21+10:00</lastmod>
+        <lastmod>2013-06-22T01:04:42+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-06-20T09:58:21+10:00</lastmod>
+        <lastmod>2013-06-22T01:04:42+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>

@@ -5,11 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: development - Timeline</title>
+  <title>To turn on SQL tracing in Hibernate  - Timeline</title>
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Category: development">
+  <meta name="description" content="Extremely useful for debugging which HSQL has caused database server exception 1
+2
+3
+4
+log4j.logger.org.hibernate.SQL=trace
+log4j.logger.org. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kongakong.github.ioblog/categories/development">
+  <link rel="canonical" href="http://kongakong.github.io/blog/2011/09/12/p-10124153751">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
@@ -64,35 +69,98 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Development</h1>
+    
+      <h1 class="entry-title">To Turn on SQL Tracing in Hibernate</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-12T22:52:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2011</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>Extremely useful for debugging which HSQL has caused database server exception</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/06/19/using-octopress/">Using Octopress</a></h1>
-<time datetime="2013-06-19T06:09:00+10:00" pubdate><span class='month'>Jun</span> <span class='day'>19</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/development/'>development</a></span>
-</footer>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>log4j.logger.org.hibernate.SQL=trace
+</span><span class='line'>log4j.logger.org.hibernate.engine.query=trace
+</span><span class='line'>log4j.logger.org.hibernate.type=trace
+</span><span class='line'>log4j.logger.org.hibernate.jdbc=trace</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
-
+<h1>java #logj4 #hiberate #debug</h1>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-12T22:52:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/debug/'>debug</a>, <a class='category' href='/blog/categories/hiberate/'>hiberate</a>, <a class='category' href='/blog/categories/java/'>java</a>, <a class='category' href='/blog/categories/logj4/'>logj4</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kongakong.github.io/blog/2011/09/12/p-10124153751/" data-via="kongakong" data-counturl="http://kongakong.github.io/blog/2011/09/12/p-10124153751/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/09/10/p-10030662475/" title="Previous Post: ">&laquo; </a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/09/13/p-10126553227/" title="Next Post: Common Python Beginner Mistake (1) - Shadowing">Common Python Beginner Mistake (1) - Shadowing &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
 </div>
