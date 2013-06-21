@@ -15,12 +15,16 @@ layout: post
 title: "%(title)s"
 date: %(pub_date)s
 comments: true
-categories: 
+categories: %(tags)s
 ---"""
 
 def lxmlwork():
     j = os.path.join
-    fn = j('/Users/antkong/octopress', 'localdata', 'anthonykong', 'posts', '2990139811.html')
+    srcdir = j('/Users/antkong/octopress', 'localdata', 'anthonykong', 'posts')
+    for f in os.listdir(srcdir):
+        parse_file(j(srcdir, f))
+
+def parse_file(fn):
     print "working on", fn
 
     parser = etree.HTMLParser()
@@ -29,7 +33,7 @@ def lxmlwork():
 
     attribs = []
     lines = []
-    meta = {}
+    meta = {'title':'', 'tags':''}
     
     for node in t.iter():
         if node.tag == 'body':
@@ -60,7 +64,6 @@ def lxmlwork():
         print >>ofile, l
     ofile.close()
 
-
 def handle_node(article_node, lines, metas):
     for node in article_node.findall("./*"):
         # assumes ...
@@ -72,7 +75,11 @@ def handle_node(article_node, lines, metas):
         if node.tag == 'p':
             if node.text:
                 lines.append("\n%s\n" % node.text)
-            handle_node(node, lines, metas)
+            p_class = node.attrib.get('class', None)
+            if p_class == 'tags' and node.text:
+                metas['tags'] = node.text.replace("#", "")      
+            else:
+                handle_node(node, lines, metas)
         if node.tag == 'a':
             if node.attrib.get('class', '') == 'llink':
                 continue
@@ -83,6 +90,8 @@ def handle_node(article_node, lines, metas):
             node_class = node.attrib.get('class', None)
             if node_class == 'date':
                 metas['pub_date'] = node.text
+        if node.tag == 'code' or node.tag == 'pre':
+            lines.append("```%s```" % node.text)
                 
                 
         

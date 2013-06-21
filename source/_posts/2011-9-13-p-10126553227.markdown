@@ -18,15 +18,5 @@ AttributeError: 'NoneType' object has no attribute 'today'
 
 
 ```
-```date```
-``` date```
-```datetime```
 
-
-
-
-```handleDate```
-```in_date```
-
-#python
 
