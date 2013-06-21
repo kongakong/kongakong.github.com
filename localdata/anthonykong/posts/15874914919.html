@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-15874914919>
+<p class=meta><span class=date>15/01/2012 18:02:00</span>
+<a class=llink href=../posts/15874914919.html>¶</a>
+<a href=http://www.ahwkong.com/post/15874914919 rel=canonical>●</a></p>
+<h2>Problem solved: compiling python 3.3 on osx</h2>
+<p>
+It is a follow-up on <a href="http://www.ahwkong.com/post/15288901020/what-is-going-on">this post</a>.
+</p>
+
+<p>
+Turns out this problem has been reported to python bug database: <a href="http://bugs.python.org/issue13241"><a href="http://bugs.python.org/issue13241">http://bugs.python.org/issue13241</a></a>.
+</p>
+
+<p>
+The llvm gcc compiler that comes with XCode 4.x is causing the problem.
+</p>
+
+<p>
+Do 
+
+
+</p><pre>
+CC=gcc-4.2; ./configure
+</pre>
+
+
+will fix the issue.
+<p class=tags>#osx #gcc #python #llvm</p>
+</article>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-22040614206>
+<p class=meta><span class=date>29/04/2012 20:21:12</span>
+<a class=llink href=../posts/22040614206.html>¶</a>
+<a href=http://www.ahwkong.com/post/22040614206 rel=canonical>●</a></p>
+<h2>__get__</h2>
+<p>Got this bit of code from one of Alex Martelli&#8217;s talk
+
+<pre class="brush:python">
+def adder (x, y): x + y
+
+adder20 = adder.__get__(20)
+
+adder20(100) # returns 120
+</pre>
+
+While it is an example to illustrate the concept of descriptor, I am still a bit at loss about when and for what purpose <code>__get__</code> is to be used</p>
+<p class=tags>#python3</p>
+</article>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2762296356>
+<p class=meta><span class=date>16/01/2011 04:34:00</span>
+<a class=llink href=../posts/2762296356.html>¶</a>
+<a href=http://www.ahwkong.com/post/2762296356 rel=canonical>●</a></p>
+<h2>Fall into the same trap everytime</h2>
+<p>I was just trying a very simple cpp program in osx.</p>
+
+<pre><code>#include &lt;iostream&gt;
+
+int main()
+
+{
+
+    std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+
+}
+</code></pre>
+
+<p>Then I ran</p>
+
+<pre><code>gcc test.cpp
+</code></pre>
+
+<p>It failed with</p>
+
+<pre><code>Undefined symbols:
+  "std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp; std::operator&lt;&lt; &lt;std::char_traits&lt;char&gt; &gt;(std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp;, char const*)", referenced from:
+      _main in cc6rSzeu.o
+  "std::ios_base::Init::Init()", referenced from:
+      __static_initialization_and_destruction_0(int, int)in cc6rSzeu.o
+  "std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::size() const", referenced from:
+      std::__verify_grouping(char const*, unsigned long, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)in cc6rSzeu.o
+...
+</code></pre>
+
+<p>Change to <strong>g++</strong> fixes the issue</p>
+</article>

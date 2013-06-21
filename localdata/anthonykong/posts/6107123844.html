@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6107123844>
+<p class=meta><span class=date>02/06/2011 23:52:00</span>
+<a class=llink href=../posts/6107123844.html>¶</a>
+<a href=http://www.ahwkong.com/post/6107123844 rel=canonical>●</a></p>
+Compile this and run,
+
+<pre class="brush: c">
+#include &lt;stdio.h&gt;
+int main(void){
+       printf ("%x" ,-1&lt;&lt;4); 
+}
+</pre>
+<p>
+gives me this
+</p>
+<pre>
+$ ./a.out 
+fffffff0
+</pre>
+
+
+
+
+<p>
+However, technically left-shifting a negative integer invokes <b>Undefined Behaviour</b> in C99
+</p>
+<p class=tags>#c #c99</p>
+</article>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-28255736183>
+<p class=meta><span class=date>29/07/2012 18:38:00</span>
+<a class=llink href=../posts/28255736183.html>¶</a>
+<a href=http://www.ahwkong.com/post/28255736183 rel=canonical>●</a></p>
+<h2>This class is not key value coding-compliant for the key 'xyz'</h2>
+<p>I was playing with a <a href="http://www.mobisoftinfotech.com/blog/iphone/ios-tutorial-custom-speedometer-control/">Speedo Meter Demo</a>. I added and removed some controls arbitrarily, then I got hit by this error meesage</p>
+
+<pre>
+2012-07-15 22:41:27.145 SpeedometerDemo[6223:f803] *** Terminating app due to uncaught 
+exception 'NSUnknownKeyException', reason: '[<speedometerdemoviewcontroller> 
+setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key test.'
+*** First throw call stack:
+
+</speedometerdemoviewcontroller></pre>
+
+<p>It turned out I added a control &#8216;test&#8217;, linked it to an IBOutlet and then removed the control. Since the link to IBOutlet is still in the IB file, hence the error.</p>
+
+<p>By right mouse click on the &#8216;Owner&#8217; and remove the invalid link, it fixes the problem.</p>
+<p class=tags>#ios #NSUnknownKeyException</p>
+</article>

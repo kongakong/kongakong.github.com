@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2988855627>
+<p class=meta><span class=date>29/01/2011 16:42:00</span>
+<a class=llink href=../posts/2988855627.html>¶</a>
+<a href=http://www.ahwkong.com/post/2988855627 rel=canonical>●</a></p>
+<h2>My EXC_BAD_ACCESS mystery</h2>
+<p>It turns out it is because of the following line of code:</p>
+
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <strong>numberOfObjects</strong> returns an integer</p>
+</article>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-21778700793>
+<p class=meta><span class=date>25/04/2012 22:02:43</span>
+<a class=llink href=../posts/21778700793.html>¶</a>
+<a href=http://www.ahwkong.com/post/21778700793 rel=canonical>●</a></p>
+<p>
+I want to enable <a href="http://ethanschoonover.com/solarized">solarize</a> color scheme in putty. The default color scheme of putty left much to be desired (e.g. blue on black makes it hard to read)
+
+</p>
+
+<p>
+The putty solarize color scheme files can be found <a href="https://github.com/brantb/solarized/tree/master/putty-colors-solarized">here</a>. They are basically two reg files for regedt32 to run and add keys values to putty session definitions.
+</p>
+<p>
+Alternatively, if you have powershell, you can run the following:
+</p>
+<p>
+(assuming your the name of the session is &#8216;server_a&#8217;)
+</p>
+<pre>
+cd HKCU:\Software\SimonTatham\PuTTY\Sessions\server_a
+# light schema
+Set-ItemProperty -Path .  -Name Colour0  -Value "101,123,131"
+Set-ItemProperty -Path .  -Name Colour1  -Value "88,110,117"
+Set-ItemProperty -Path .  -Name Colour2  -Value "253,246,227"
+Set-ItemProperty -Path .  -Name Colour3  -Value "238,232,213"
+Set-ItemProperty -Path .  -Name Colour4  -Value "238,232,213"
+Set-ItemProperty -Path .  -Name Colour5  -Value "101,123,131"
+Set-ItemProperty -Path .  -Name Colour6  -Value "7,54,66"
+Set-ItemProperty -Path .  -Name Colour7  -Value "0,43,54"
+Set-ItemProperty -Path .  -Name Colour8  -Value "220,50,47"
+Set-ItemProperty -Path .  -Name Colour9  -Value "203,75,22"
+Set-ItemProperty -Path .  -Name Colour10  -Value "133,153,0"
+Set-ItemProperty -Path .  -Name Colour11  -Value "88,110,117"
+Set-ItemProperty -Path .  -Name Colour12  -Value "181,137,0"
+Set-ItemProperty -Path .  -Name Colour13  -Value "101,123,131"
+Set-ItemProperty -Path .  -Name Colour14  -Value "38,139,210"
+Set-ItemProperty -Path .  -Name Colour15  -Value "131,148,150"
+Set-ItemProperty -Path .  -Name Colour16  -Value "211,54,130"
+Set-ItemProperty -Path .  -Name Colour17  -Value "108,113,196"
+Set-ItemProperty -Path .  -Name Colour18  -Value "42,161,152"
+Set-ItemProperty -Path .  -Name Colour19  -Value "147,161,161"
+Set-ItemProperty -Path .  -Name Colour20  -Value "238,232,213"
+Set-ItemProperty -Path .  -Name Colour21  -Value "253,246,227"
+#dark
+
+Set-ItemProperty -Path . -Name Colour0 -Value "131,148,150"
+Set-ItemProperty -Path . -Name Colour1 -Value "147,161,161"
+Set-ItemProperty -Path . -Name Colour2 -Value "0,43,54"
+Set-ItemProperty -Path . -Name Colour3 -Value "7,54,66"
+Set-ItemProperty -Path . -Name Colour4 -Value "0,43,54"
+Set-ItemProperty -Path . -Name Colour5 -Value "238,232,213"
+Set-ItemProperty -Path . -Name Colour6 -Value "7,54,66"
+Set-ItemProperty -Path . -Name Colour7 -Value "0,43,54"
+Set-ItemProperty -Path . -Name Colour8 -Value "220,50,47"
+Set-ItemProperty -Path . -Name Colour9 -Value "203,75,22"
+Set-ItemProperty -Path . -Name Colour10 -Value "133,153,0"
+Set-ItemProperty -Path . -Name Colour11 -Value "88,110,117"
+Set-ItemProperty -Path . -Name Colour12 -Value "181,137,0"
+Set-ItemProperty -Path . -Name Colour13 -Value "101,123,131"
+Set-ItemProperty -Path . -Name Colour14 -Value "38,139,210"
+Set-ItemProperty -Path . -Name Colour15 -Value "131,148,150"
+Set-ItemProperty -Path . -Name Colour16 -Value "211,54,130"
+Set-ItemProperty -Path . -Name Colour17 -Value "108,113,196"
+Set-ItemProperty -Path . -Name Colour18 -Value "42,161,152"
+Set-ItemProperty -Path . -Name Colour19 -Value "147,161,161"
+Set-ItemProperty -Path . -Name Colour20 -Value "238,232,213"
+Set-ItemProperty -Path . -Name Colour21 -Value "253,246,227"
+</pre>
+</article>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-24942635911>
+<p class=meta><span class=date>12/06/2012 17:06:33</span>
+<a class=llink href=../posts/24942635911.html>¶</a>
+<a href=http://www.ahwkong.com/post/24942635911 rel=canonical>●</a></p>
+<p>Finally figure out the back button title not set issue.</p>
+
+<p>That&#8217;s what I have been doing in the originating controller&#8217;s <code>prepareForSegue</code> method:</p>
+
+<pre>
+        self.navigationItem.backBarButtonItem.title = @"Back";
+        </pre>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
+
+<pre>
+
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" 
+style:UIBarButtonItemStylePlain target:nil action:nil];
+
+</pre>
+<p class=tags>#ios #xcode4 #navigationItem</p>
+</article>

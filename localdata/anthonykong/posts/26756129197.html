@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-26756129197>
+<p class=meta><span class=date>08/07/2012 20:08:00</span>
+<a class=llink href=../posts/26756129197.html>¶</a>
+<a href=http://www.ahwkong.com/post/26756129197 rel=canonical>●</a></p>
+<h2>Singleton</h2>
+<p>Quoted from <em>Expert Python Programming</em> by Tarek Ziadé</p>
+
+<p>The Singleton pattern makes sure that a given class has always only one living instance in the application. This can be used, for example, when you want to restrict a resource access to one and only one memory context in the process. For instance, a database connector class can be a Singleton that deals with synchronization and manages its data in memory. It makes the assumption that no other instance is interacting with the database in the meantime.
+This pattern can simplify a lot the way concurrency is handled in an application. Utilities that provide application-wide functions are often declared as Singletons. For instance, in web applications, a class that is in charge of reserving a unique document ID would benefit from the Singleton pattern. There should be one and only one utility doing this job.</p>
+
+<p>Implementing the Singleton pattern is straightforward with the <strong>new</strong> method:</p>
+
+<pre class="brush:python">
+&gt;&gt;&gt; class Singleton(object):
+￼￼￼￼... def __new__(cls, *args, **kw):
+...     if not hasattr(cls, '_instance'):
+...         orig = super(Singleton, cls)
+￼...         cls._instance = orig.__new__(cls, *args, **kw)
+...         return cls._instance
+...
+&gt;&gt;&gt; class MyClass(Singleton):
+...         a =1
+...
+&gt;&gt;&gt; one = MyClass() 
+&gt;&gt;&gt; two = MyClass()
+&gt;&gt;&gt; two.a = 3
+&gt;&gt;&gt; one.a
+3
+</pre>
+
+<p>Although the problem with this pattern is subclassing; all instances will be instances of MyClass no matter what the method resolution order (<code>__mro__</code>) says:</p>
+
+<pre class="brush:python">
+&gt;&gt;&gt; class MyOtherClass(MyClass): 
+...     b= 2
+...
+&gt;&gt;&gt; three = MyOtherClass()
+   &gt;&gt;&gt; three.b
+   Traceback (most recent call last):
+     File "<stdin>", line 1, in ?
+   AttributeError: 'MyClass' object has no attribute 'b'
+</stdin></pre>
+
+<p>To avoid this limitation, Alex Martelli proposed an alternative implementation based on shared state called Borg.</p>
+
+<p>The idea is quite simple. What really matters in the Singleton pattern is not the number of living instances a class has, but rather the fact that they all share the same state at all times. So Alex Martelli came up with a class that makes all instances of the class share the same <strong>dict</strong>:</p>
+
+<pre class="brush:python">
+&gt;&gt;&gt; class Borg(object)
+...     _state = {}
+...     def __new__(cls, *args, **kw):
+...         ob = super(Borg, cls).__new__(cls, *args, **kw)
+...         ob.__dict__ = cls._state
+...         return ob
+...
+&gt;&gt;&gt; class MyClass(Borg):
+...    a =1
+...
+&gt;&gt;&gt; one = MyClass()
+&gt;&gt;&gt; two = MyClass() 
+&gt;&gt;&gt; two.a = 3
+&gt;&gt;&gt; one.a
+[
+3
+&gt;&gt;&gt; class MyOtherClass(MyClass): ... b= 2
+...
+&gt;&gt;&gt; three = MyOtherClass()
+&gt;&gt;&gt; three.b
+2
+&gt;&gt;&gt; three.a
+3
+&gt;&gt;&gt; three.a = 2
+&gt;&gt;&gt; one.a
+2
+</pre>
+
+<p>This fixes the subclassing issue, but is still dependent on how the subclass code works. For instance, if <strong>getattr</strong> is overridden, the pattern can be broken.</p>
+
+<p>Nevertheless, Singletons should not have several levels of inheritance. A class that is marked as a Singleton is already specific.</p>
+
+<p>That said, this pattern is considered by many developers as a heavy way to deal with uniqueness in an application. If a Singleton is needed, why not use a module with functions instead, since a Python module is a Singleton?</p>
+<p class=tags>#design pattern #python</p>
+</article>

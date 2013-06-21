@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6887207400>
+<p class=meta><span class=date>25/06/2011 12:03:00</span>
+<a class=llink href=../posts/6887207400.html>¶</a>
+<a href=http://www.ahwkong.com/post/6887207400 rel=canonical>●</a></p>
+<h2>VirtualBox is so cool</h2>
+<p>
+I have started an instance of Ubuntu VM. 
+</p>
+<p>
+However I do not know the IP of this VM. The IP of the VM is assigned by the DHCP server. I could have logged into AirPort to find out, or just log in via the Ubuntu instance&#8217;s virtual screen. 
+</p>
+<p>
+But being a lazy bastard I would rather be able to find out this bit of information without leaving my shell (which has an active ssh session into the host PC)
+</p>
+<p>
+Then I discover this cool feature of <b>VirtualBox</b>: <code>guestcontrol</code>
+</p>
+<p>
+
+So it is what I did:
+</p>
+<pre>
+
+$ VBoxManage guestcontrol exec Ubuntu11.04 "/sbin/ifconfig"  --username me --password password  --wait-for stdout
+eth0      Link encap:Ethernet  HWaddr 08:00:27:ba:8d:35  
+          inet addr:10.0.1.82  Bcast:10.0.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:ffff:fffff:ffff/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:45762 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:2098 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:8797563 (8.7 MB)  TX bytes:321711 (321.7 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:25 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:25 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:1680 (1.6 KB)  TX bytes:1680 (1.6 KB)
+
+</pre>
+
+It is awesome.
+<p class=tags>#virtualbox #ubuntu</p>
+</article>

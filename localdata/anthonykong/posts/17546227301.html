@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-17546227301>
+<p class=meta><span class=date>13/02/2012 21:16:00</span>
+<a class=llink href=../posts/17546227301.html>¶</a>
+<a href=http://www.ahwkong.com/post/17546227301 rel=canonical>●</a></p>
+<h2>Trying to declare a class in objective-c...</h2>
+Using my fuzzy memory of objective-c syntax, I wrote an objective-c class like this:
+
+<pre>
+    #import &lt;Foundation/Foundation.h&gt;
+    
+    @protocol Calculator : NSObject
+    
+    @end
+    
+    void handleOperator:(NSString*)oper ;
+    void handleNumber:(NSString*)num ;
+    void handleReset;
+</pre>
+<p>
+So wrong!
+</p>
+
+<ol><li>It is @interface not @protocol</li>
+<li>return type void should be enclosed in parenthese</li>
+<li>@end should be the last line
+</li></ol><p>
+I wanted to  see if I can recall the syntax after all these studies and readings, and I failed miserably. It really takes time to become proficient in another programming language.
+</p>
+<p class=tags>#objective-c</p>
+</article>

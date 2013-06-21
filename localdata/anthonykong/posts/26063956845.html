@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-26063956845>
+<p class=meta><span class=date>28/06/2012 20:15:21</span>
+<a class=llink href=../posts/26063956845.html>¶</a>
+<a href=http://www.ahwkong.com/post/26063956845 rel=canonical>●</a></p>
+<p>It is how to list schemes in a xcode project</p>
+
+<p><code></code></p>
+
+<pre><code>mbp002:menote user$ xcodebuild -project menote.xcodeproj/ -list
+Information about project "medianote":
+Targets:
+    menote
+    menoteTests
+
+Build Configurations:
+    Debug
+    Release
+
+If no build configuration is specified and -scheme is not passed then "Release" is used.
+
+Schemes:
+    menote
+</code></pre>
+</article>

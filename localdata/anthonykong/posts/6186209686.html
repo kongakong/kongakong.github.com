@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6186209686>
+<p class=meta><span class=date>05/06/2011 06:10:06</span>
+<a class=llink href=../posts/6186209686.html>¶</a>
+<a href=http://www.ahwkong.com/post/6186209686 rel=canonical>●</a></p>
+<h2>Item 26:  Guard against potential ambiguity</h2>
+<p>Compiler cannot decide:
+
+<pre class="brush: c">
+void f(int);
+void f(char);
+ double d = 6.02;
+ f(d);                         // error! — ambiguous
+</pre>
+
+
+Better alternative: <b>explicit cast</b>
+
+
+<pre class="brush: c">
+
+f(static_cast<int>(d));       // fine, calls f(int)
+f(static_cast<char>(d));      // fine, cal
+</char></int></pre></p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

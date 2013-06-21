@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>December 2012</h1>
+
+
+<article class=regular id=p-37258221019>
+<p class=meta><span class=date>06/12/2012 00:15:03</span>
+<a class=llink href=../posts/37258221019.html>¶</a>
+<a href=http://www.ahwkong.com/post/37258221019 rel=canonical>●</a></p>
+<h2>Easiest way to set up JAVA_HOME in OSX</h2>
+<p>No more guesswork.</p>
+
+<pre><code>export JAVA_HOME=$(/usr/libexec/java_home)
+</code></pre>
+
+<p>End result:</p>
+
+<pre><code>JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+</code></pre>
+<p class=tags>#osx #java</p>
+</article>
+
+<article class=regular id=p-37050868937>
+<p class=meta><span class=date>03/12/2012 06:44:00</span>
+<a class=llink href=../posts/37050868937.html>¶</a>
+<a href=http://www.ahwkong.com/post/37050868937 rel=canonical>●</a></p>
+<h2>XCode linker error</h2>
+<p>An old project was created for iOS 5. When trying to re-run it, I got these error messages</p>
+
+<pre><code>Undefined symbols for architecture armv7:
+  "_OBJC_CLASS_$_AVCaptureSession", referenced from:
+       objc-class-ref in MNoteMediaPlayViewController.o
+ ld: symbol(s) not found for architecture armv7
+ clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</code></pre>
+
+<p>Do not recall this kind of trouble before with iOS upgrade.</p>
+
+<p>Set the &#8216;Deployment Target&#8217; to iOS6, clean and rebuilt but it did not work.</p>
+
+<p>AVFoundation Framework is actually dropped out from &#8220;Link Binary with Libraries&#8221; section. Re-adding the framework fixes the issue.</p>
+<p class=tags>#xcode</p>
+</article>
+
+<article class=link id=p-37006859461>
+<p class=meta><span class=date>02/12/2012 15:33:11</span>
+<a class=llink href=../posts/37006859461.html>¶</a>
+<a href=http://www.ahwkong.com/post/37006859461 rel=canonical>●</a></p>
+<h2><a href="http://www.chromium.org/nativeclient/pnacl/building-and-testing-portable-native-client">What is Portable Native Client?</a></h2>
+
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

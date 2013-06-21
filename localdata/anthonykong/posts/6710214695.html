@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6710214695>
+<p class=meta><span class=date>20/06/2011 12:46:00</span>
+<a class=llink href=../posts/6710214695.html>¶</a>
+<a href=http://www.ahwkong.com/post/6710214695 rel=canonical>●</a></p>
+It always take me a while to recall why the java generic is written this way for <code>static</code>.
+
+
+
+Take <a href="http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java">this</a>
+ as an example.
+
+<p></p>
+It is a common style of static function signature in this module:
+
+<pre class="brush: java">
+  public static &lt;E extends Enum&lt;E&gt;&gt; ImmutableSet&lt;E&gt; immutableEnumSet(
+      Iterable&lt;E&gt; elements) {
+</pre>
+
+We need to specify how the generic type (<b>E</b>) is resolved. Therefore there is an extra &#8216;&lt;E extends Enum&lt;E&gt; &gt;&#8217; block after <b>public static</b>.
+<p class=tags>#java</p>
+</article>

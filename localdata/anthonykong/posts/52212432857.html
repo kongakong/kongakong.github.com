@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-52212432857>
+<p class=meta><span class=date>05/06/2013 20:40:29</span>
+<a class=llink href=../posts/52212432857.html>¶</a>
+<a href=http://www.ahwkong.com/post/52212432857 rel=canonical>●</a></p>
+<h2>Two ways to build file names</h2>
+<p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
+
+<pre><code>// 1
+NSString* txt_file_path = [NSString pathWithComponents:@[file_unzip_location, @"content.txt"]];
+// 2
+NSString* txt_file_path = [file_unzip_location stringByAppendingString:@"content.txt"];
+</code></pre>
+<p class=tags>#objective-c #tip</p>
+</article>

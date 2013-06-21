@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-1541948032>
+<p class=meta><span class=date>11/11/2010 21:32:30</span>
+<a class=llink href=../posts/1541948032.html>¶</a>
+<a href=http://www.ahwkong.com/post/1541948032 rel=canonical>●</a></p>
+<h2>Objective-c: Notification</h2>
+<p><strong>NSNotificationCenter</strong></p>
+
+<p><strong>NSNotification</strong></p>
+
+<p><code>addObserver:selector:name:object</code></p>
+
+<p>Objects that have registered with the notification center are responsible for removing themselves when they no longer wish to receive notifications or when being destroyed. It is particularly important to remove an observer object in the object&#8217;s dealloc method, since the notification center does not retain observers. If you do not remove objects before they are destroyed, the notification center will attempt to send messages to objects that no longer exist, resulting in a runtime exception</p>
+</article>

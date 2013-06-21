@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5412233175>
+<p class=meta><span class=date>12/05/2011 13:45:44</span>
+<a class=llink href=../posts/5412233175.html>¶</a>
+<a href=http://www.ahwkong.com/post/5412233175 rel=canonical>●</a></p>
+<h2>Warm Up (II)</h2>
+<p>Using <b>guard</b>:
+
+<pre class="brush: erl">
+-module(fib).
+
+-export([fib_p/1, fib_g/1]).
+
+-export([test/0, test_t/0]).
+
+
+%% fib_p: non-tail recursion version
+fib_p(0) -&gt; 0;
+fib_p(1) -&gt; 1;
+fib_p(N) -&gt; fib_p(N-1) + fib_p(N-2).
+
+
+%% guard
+fib_g(N) when N == 0 -&gt; 0 ;
+fib_g(N) when N == 1 -&gt; 1;
+fib_g(N) -&gt; fib_g(N-1) + fib_g(N-2).
+
+
+%% test
+test() -&gt;
+        fib_p(10),
+        fib_g(10).
+
+test_t() -&gt;
+        timer:tc(fib, fib_g, [10]).
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>

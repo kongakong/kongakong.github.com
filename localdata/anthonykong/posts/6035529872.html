@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6035529872>
+<p class=meta><span class=date>31/05/2011 22:27:00</span>
+<a class=llink href=../posts/6035529872.html>¶</a>
+<a href=http://www.ahwkong.com/post/6035529872 rel=canonical>●</a></p>
+<h2>Item 11:  Declare a copy constructor and an assignment operator for classes with dynamically allocated memory</h2>
+<p>An <b>assignment operator</b> is to address this kind of situation:
+
+<pre class="brush: c">
+
+String a("Hello");                 // define and construct a
+ {                                  // open new scope
+  String b("World");               // define and construct b
+   ...
+   b = a;                           // execute default op=,
+                                   // lose b's memory
+ }                                  // close scope, call b's
+                                   // destructor
+ String c = a;                      // c.data is undefined!
+                                   // a.data is already deleted
+
+</pre>
+
+<b>Copy constructor</b> is to handle the pass-by-value situation in function invokation.</p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

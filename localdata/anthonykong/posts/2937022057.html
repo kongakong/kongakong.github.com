@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2937022057>
+<p class=meta><span class=date>26/01/2011 16:14:00</span>
+<a class=llink href=../posts/2937022057.html>¶</a>
+<a href=http://www.ahwkong.com/post/2937022057 rel=canonical>●</a></p>
+<h2>Looking into stacktrace related to EXC_BAD_ACCESS</h2>
+<p>The stack trace</p>
+
+<pre><code># 0  0x010f9a60 in objc_msgSend ()
+#1  0x00022023 in _NSDescriptionWithLocaleFunc ()
+#2  0x00f8129d in __CFStringAppendFormatCore ()
+#3  0x00ec8f27 in _CFStringCreateWithFormatAndArgumentsAux ()
+#4  0x00f5091e in _CFLogvEx ()
+#5  0x0009fa61 in NSLogv ()
+#6  0x0009f9d0 in NSLog ()
+#7  0x00003b44 in -[FundClassListDetailController numberOfSectionsInTableView:] (self=0xb20ce10, _cmd=0x6e6d42, tableView=0x501de00) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/FundClassListDetailController.m:133
+#8  0x0048035e in -[UITableViewRowData(UITableViewRowDataPrivate)        _updateNumSections] ()
+#9  0x0048000f in -[UITableViewRowData invalidateAllSections] ()
+#10 0x0033ab00 in -[UITableView(_UITableViewPrivate) _updateRowData] ()
+</code></pre>
+</article>

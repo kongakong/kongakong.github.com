@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6115016559>
+<p class=meta><span class=date>03/06/2011 05:40:00</span>
+<a class=llink href=../posts/6115016559.html>¶</a>
+<a href=http://www.ahwkong.com/post/6115016559 rel=canonical>●</a></p>
+<h2>Item 21:  Use const whenever possible</h2>
+<p><pre class="brush: c">
+
+ char *p              = "Hello";          // non-const pointer,
+                                         // non-const data5
+ const char *p        = "Hello";          // non-const pointer,
+                                        // const data
+ char * const p       = "Hello";          // const pointer,
+                                        // non-const data
+ const char * const p = "Hello";          // const pointer,
+                                        // const data
+</pre></p>
+<p class=tags>#c++ #Effective C++</p>
+</article>

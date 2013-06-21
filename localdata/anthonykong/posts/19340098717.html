@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-19340098717>
+<p class=meta><span class=date>15/03/2012 22:05:31</span>
+<a class=llink href=../posts/19340098717.html>¶</a>
+<a href=http://www.ahwkong.com/post/19340098717 rel=canonical>●</a></p>
+<h2>Disappointed at MS powershell</h2>
+<p>My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell&#8217;s formula with the new one.</p>
+
+<p>So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.</p>
+
+<p>Some COM calls to the excel workbook object just failed when it works fine in vbs or python  with win32com.</p>
+
+<p>The lack of string manipulation functions is not helping either, especially the completion comes from scripting languages like python.</p>
+
+<p>Powershell is probably a good tool to interface with .Net framework and to handle Windows admin task. But for me it is not a language of first choice.</p>
+<p class=tags>#powershell #COM #python</p>
+</article>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-12165024693>
+<p class=meta><span class=date>01/11/2011 04:25:00</span>
+<a class=llink href=../posts/12165024693.html>¶</a>
+<a href=http://www.ahwkong.com/post/12165024693 rel=canonical>●</a></p>
+<h2>P(SPAM|"today is secret")</h2>
+<p><code><br/>
+P'(SPAM|"today", "is", "secret")  = <br/>
+P("today"|SPAM)  * P("is"|SPAM)  * P("secret"|SPAM)  * P(SPAM)   (1)<br/></code></p>
+
+<p><code><br/>
+P'(~SPAM|"today", "is", "secret") = <br/>
+P("today"|~SPAM) * P("is"|~SPAM) * P("secret"|~SPAM) * P(~SPAM)  (2)<br/></code></p>
+
+<p><code><br/>
+P(SPAM|"today", "is", "secret") =<br/>
+                 P'(SPAM|"today", "is", "secret")<br/>
+-------------------------------------------------------------------- (3)<br/>
+P'(SPAM|"today", "is", "secret") + P'(~SPAM|"today", "is", "secret")<br/></code></p>
+
+<p>Using laplacian smoothing with k = 1, we get the following values:<br/><code><br/>
+P(SPAM)           = (3 + 1) / (8 + 2) = 0.400000<br/>
+P("today"|SPAM)   = (0 + 1) / ( 9 + 12) = 0.047619<br/>
+P("today"|~SPAM)  = (2 + 1) / (15 + 12) = 0.111111<br/>
+P("is"|SPAM)      = (1 + 1) / ( 9 + 12) = 0.095238<br/>
+P("is"|~SPAM)     = (1 + 1) / (15 + 12) = 0.074074<br/>
+P("secret"|SPAM)  = (3 + 1) / ( 9 + 12) = 0.190476<br/>
+P("secret"|~SPAM) = (1 + 1) / (15 + 12) = 0.074074<br/></code><br/>
+Notice that we calculate P(SPAM) over the space of messages, whereas all other probabilities are calculated over the space of words. Also notice that conditional probabilities are normalized under the set of words that belong to the evidence – e.g. probabilities conditional to SPAM are normalized to the word count of SPAM messages, as opposed to the total word count of SPAM and HAM messages.</p>
+
+<p>Now plugging the above values in formulas (1), (2) and (3) we get:</p>
+
+<p><code><br/>
+P(SPAM|"today", "is", "secret") = 0.485757</code></p>
+
+
+
+<p>From <a href="http://www.aiqus.com/questions/6628/516-how-do-we-calculate-pmessage?page=1#6666">aiqus</a></p>
+</article>

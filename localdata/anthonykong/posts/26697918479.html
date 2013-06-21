@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-26697918479>
+<p class=meta><span class=date>08/07/2012 00:39:58</span>
+<a class=llink href=../posts/26697918479.html>¶</a>
+<a href=http://www.ahwkong.com/post/26697918479 rel=canonical>●</a></p>
+<h2>Creational pattern in python</h2>
+<p>A creational pattern provides a particular instantiation mechanism. It can be a particular object factory or even a class factory. This is an important pattern in compiled languages such as C, since it is harder to generate types on-demand at run time.</p>
+
+<p>But this feature is built-in in Python, for instance the type built-in, which lets you define a new type by code:</p>
+
+<pre>
+   &gt;&gt;&gt; MyType = type('MyType', (object,), {'a': 1})
+   &gt;&gt;&gt; ob = MyType()
+   &gt;&gt;&gt; type(ob)
+   <class>
+   &gt;&gt;&gt; ob.a
+   1
+   &gt;&gt;&gt; isinstance(ob, object)
+   True
+</class></pre>
+
+<p>Classes and types are built-in factories</p>
+<p class=tags>#python</p>
+</article>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-29960657754>
+<p class=meta><span class=date>22/08/2012 21:34:43</span>
+<a class=llink href=../posts/29960657754.html>¶</a>
+<a href=http://www.ahwkong.com/post/29960657754 rel=canonical>●</a></p>
+<p>It is extremely frustrating to use Windows. Any basic tool that you would expect a modern OS to have is absent in Windows. In a corporate environment a PC is locked down so it is not possible to download useful utilities at will. To use Windows productively is always a daily struggle.</p>
+
+<p>Today I want to find out a md5 checksum of a file in a Windows 7 PC. Of course, <code>md5sum</code> is nowhere in sight.</p>
+
+<p>Luckily python is available on this PC. So, I rolled my own <code>md5sum</code>:</p>
+
+<pre>
+C:\&gt; python -c "import hashlib; import sys; print hashlib.md5(open(sys.argv[1], 'r').read()).hexdigest()" TheFile.dat
+
+ 
+</pre>
+<p class=tags>#MD5sum</p>
+</article>

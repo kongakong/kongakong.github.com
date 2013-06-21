@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-8544970346>
+<p class=meta><span class=date>06/08/2011 14:28:33</span>
+<a class=llink href=../posts/8544970346.html>¶</a>
+<a href=http://www.ahwkong.com/post/8544970346 rel=canonical>●</a></p>
+<p>A very simple test to compare g++ and clang++
+
+<pre>
+$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+</pre>
+
+clang++ does not complaint at all
+
+<pre>
+$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</pre></p>
+</article>

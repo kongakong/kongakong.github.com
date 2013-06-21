@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6011529808>
+<p class=meta><span class=date>31/05/2011 06:33:00</span>
+<a class=llink href=../posts/6011529808.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011529808 rel=canonical>●</a></p>
+<h2>Item 8:  Adhere to convention when writing operator new and operator delete</h2>
+<p>Since C++ guarantees it&#8217;s always safe to delete the null pointer, make sure the custom <code>delete</code> will honor that guarantee
+
+
+
+General Idea:
+
+<pre class="brush: c">
+void operator delete(void *rawMemory)
+{
+  if (rawMemory == 0) return;    // do nothing if the null
+                                 // pointer is being deleted
+   deallocate the memory pointed to by rawMemory;
+   return;
+}
+
+
+</pre></p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

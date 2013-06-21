@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5573888817>
+<p class=meta><span class=date>17/05/2011 21:39:00</span>
+<a class=llink href=../posts/5573888817.html>¶</a>
+<a href=http://www.ahwkong.com/post/5573888817 rel=canonical>●</a></p>
+<h2>To convert an NSString into an NSNumber</h2>
+<p><pre class="brush: c">
+NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+[f setNumberStyle:NSNumberFormatterDecimalStyle];
+NSNumber * myNumber = [f numberFromString:@"42"];
+[f release];
+</pre></p>
+<p class=tags>#ios</p>
+</article>

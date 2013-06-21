@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>June 2013</h1>
+
+
+<article class=regular id=p-52782958923>
+<p class=meta><span class=date>12/06/2013 21:20:23</span>
+<a class=llink href=../posts/52782958923.html>¶</a>
+<a href=http://www.ahwkong.com/post/52782958923 rel=canonical>●</a></p>
+<p>Just installed RVM.</p>
+
+<p>Message from RVM after installation:</p>
+
+<pre><code>  * To start using RVM you need to run `source /Users/antkong/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+</code></pre>
+<p class=tags>#ruby</p>
+</article>
+
+<article class=regular id=p-52781713139>
+<p class=meta><span class=date>12/06/2013 20:40:22</span>
+<a class=llink href=../posts/52781713139.html>¶</a>
+<a href=http://www.ahwkong.com/post/52781713139 rel=canonical>●</a></p>
+<p><strong>Note to self</strong></p>
+
+<p>iPhone sync backup can be found in this location:</p>
+
+<pre><code>~Library/Application Support/MobileSync
+</code></pre>
+</article>
+
+<article class=regular id=p-52620998556>
+<p class=meta><span class=date>10/06/2013 21:44:07</span>
+<a class=llink href=../posts/52620998556.html>¶</a>
+<a href=http://www.ahwkong.com/post/52620998556 rel=canonical>●</a></p>
+<p>In light of the NSA PRISM scandal, I recommend these two videos from &#8216;Conversation with History&#8217; series:</p>
+
+<p><a href="http://www.youtube.com/watch?v=-qlFjrgGqVA">Interview with Glenn Greenwald</a></p>
+
+<p><a href="http://youtu.be/CBGgxU27kJA">&#8216;Deep State&#8217; - Interview with Professor Peter Dale Scott</a></p>
+<p class=tags>#sharing</p>
+</article>
+
+<article class=regular id=p-52534137425>
+<p class=meta><span class=date>09/06/2013 20:40:18</span>
+<a class=llink href=../posts/52534137425.html>¶</a>
+<a href=http://www.ahwkong.com/post/52534137425 rel=canonical>●</a></p>
+<p>Weird error message of <code>say</code> in 10.8.4</p>
+
+<pre><code>$ say tony
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+</code></pre>
+<p class=tags>#osx #osx 10.8.4</p>
+</article>
+
+<article class=regular id=p-52453247211>
+<p class=meta><span class=date>08/06/2013 21:20:15</span>
+<a class=llink href=../posts/52453247211.html>¶</a>
+<a href=http://www.ahwkong.com/post/52453247211 rel=canonical>●</a></p>
+<h2>OSX terminal and .bashrc</h2>
+<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.</p>
+
+<p>I added this to my .bash_profile to fix the problem:</p>
+
+<pre><code>[[ -s ~/.bashrc ]] &amp;&amp; source ~/.bashrc
+</code></pre>
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+<p class=tags>#bash #osx</p>
+</article>
+
+<article class=regular id=p-52451932662>
+<p class=meta><span class=date>08/06/2013 20:40:15</span>
+<a class=llink href=../posts/52451932662.html>¶</a>
+<a href=http://www.ahwkong.com/post/52451932662 rel=canonical>●</a></p>
+<p>Morgan Stanley uses (AFS)[http://en.wikipedia.org/wiki/Andrew_File_System] for application deployment with good results.</p>
+<p class=tags>#afs #finance</p>
+</article>
+
+<article class=regular id=p-52372899462>
+<p class=meta><span class=date>07/06/2013 21:20:07</span>
+<a class=llink href=../posts/52372899462.html>¶</a>
+<a href=http://www.ahwkong.com/post/52372899462 rel=canonical>●</a></p>
+<h2>The core of lisp</h2>
+<p>The core of lisp is just 7 functions:</p>
+
+<ul><li>(quote x)</li>
+<li>(atom x)</li>
+<li>(eq x y)</li>
+<li>(cons x y)</li>
+<li>(cond (x y) (w z) (t q))</li>
+<li>(car x)</li>
+<li>(cdr x)</li>
+</ul>
+<p class=tags>#lisp</p>
+</article>
+
+<article class=regular id=p-52371654734>
+<p class=meta><span class=date>07/06/2013 20:40:07</span>
+<a class=llink href=../posts/52371654734.html>¶</a>
+<a href=http://www.ahwkong.com/post/52371654734 rel=canonical>●</a></p>
+<p>Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful: <a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications</a></p>
+</article>
+
+<article class=regular id=p-52293987426>
+<p class=meta><span class=date>06/06/2013 21:20:17</span>
+<a class=llink href=../posts/52293987426.html>¶</a>
+<a href=http://www.ahwkong.com/post/52293987426 rel=canonical>●</a></p>
+<p>Useful OSX API to find home and temp directory</p>
+
+<pre><code>NSHomeDirectory
+
+NSTemporaryDirectory
+</code></pre>
+</article>
+
+<article class=regular id=p-52292736599>
+<p class=meta><span class=date>06/06/2013 20:40:00</span>
+<a class=llink href=../posts/52292736599.html>¶</a>
+<a href=http://www.ahwkong.com/post/52292736599 rel=canonical>●</a></p>
+<p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage - a scarce resource - to its citizens.</p>
+
+<p>From <a href="http://en.wikipedia.org/wiki/Oregon_Health_Plan">Wikipedia</a>:</p>
+
+<pre><code>New enrollment in the program was closed from mid-2004 until early 
+2008, when a lottery-based system was introduced. Tens of thousands 
+of Oregonians signed up, competing for 3,000 new spots in the plan.
+</code></pre>
+
+<p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
+<p class=tags>#til</p>
+</article>
+
+<article class=link id=p-52213593051>
+<p class=meta><span class=date>05/06/2013 21:20:36</span>
+<a class=llink href=../posts/52213593051.html>¶</a>
+<a href=http://www.ahwkong.com/post/52213593051 rel=canonical>●</a></p>
+<h2><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></h2>
+<blockquote class="link_og_blockquote">Professor Roly Sussex shares his love of rhyming slang</blockquote>
+
+
+
+<p>&#8216;Apple and Pear&#8217; means &#8216;upstair&#8217;. Fun.</p>
+<p class=tags>#Sharing</p>
+</article>
+
+<article class=regular id=p-52212432857>
+<p class=meta><span class=date>05/06/2013 20:40:29</span>
+<a class=llink href=../posts/52212432857.html>¶</a>
+<a href=http://www.ahwkong.com/post/52212432857 rel=canonical>●</a></p>
+<h2>Two ways to build file names</h2>
+<p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
+
+<pre><code>// 1
+NSString* txt_file_path = [NSString pathWithComponents:@[file_unzip_location, @"content.txt"]];
+// 2
+NSString* txt_file_path = [file_unzip_location stringByAppendingString:@"content.txt"];
+</code></pre>
+<p class=tags>#objective-c #tip</p>
+</article>
+
+<article class=regular id=p-52133031773>
+<p class=meta><span class=date>04/06/2013 21:20:17</span>
+<a class=llink href=../posts/52133031773.html>¶</a>
+<a href=http://www.ahwkong.com/post/52133031773 rel=canonical>●</a></p>
+<h2>Basename-equivalent in Objective-C</h2>
+<p>Use <code>lastPathComponent</code></p>
+
+<pre><code>NSString* filepaht = @"/tmp/mypath/myfile.txt"; 
+NSString* filename = [filepath lastPathComponent];
+</code></pre>
+<p class=tags>#objective-c #tip</p>
+</article>
+
+<article class=link id=p-52131731225>
+<p class=meta><span class=date>04/06/2013 20:40:16</span>
+<a class=llink href=../posts/52131731225.html>¶</a>
+<a href=http://www.ahwkong.com/post/52131731225 rel=canonical>●</a></p>
+<h2><a href="http://feedproxy.google.com/~r/TEDTalks_video/~3/8g9dc9r8sZs/paola_antonelli_why_i_brought_pacman_to_moma.html">TEDTalks (video) - TED: Paola Antonelli: Why I brought Pac-Man to MoMA - Paola Antonelli (2013)</a></h2>
+<p>When the Museum of Modern Art&#8217;s senior curator of architecture and design announced the acquisition of 14 video games in 2012, &#8220;all hell broke loose.&#8221; In this far-ranging, entertaining, and deeply insightful talk, Paola Antonelli explains why she&#8217;s delighted to challenge preconceived ideas about art and galleries, and describes her burning wish to help establish a broader understanding of design</p>
+<p class=tags>#sharing</p>
+</article>
+
+<article class=regular id=p-52049362507>
+<p class=meta><span class=date>03/06/2013 21:00:19</span>
+<a class=llink href=../posts/52049362507.html>¶</a>
+<a href=http://www.ahwkong.com/post/52049362507 rel=canonical>●</a></p>
+<p>Don&#8217;t know how widely is this xml schema is used</p>
+
+<pre><code><a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a>
+</code></pre>
+<p class=tags>#xml</p>
+</article>
+
+<article class=regular id=p-51959897403>
+<p class=meta><span class=date>02/06/2013 21:00:11</span>
+<a class=llink href=../posts/51959897403.html>¶</a>
+<a href=http://www.ahwkong.com/post/51959897403 rel=canonical>●</a></p>
+<h2>Drone Warfare</h2>
+<p>This is a public lecture by investigative journalist/activist Jeremy Scahill:</p>
+
+<p><a href="https://www.commonwealthclub.org/node/65484">https://www.commonwealthclub.org/node/65484</a></p>
+
+<p>Very chilling account of the impact of drone warfare on the targeted population as well as the democratic values of USA.</p>
+
+<p>From another perspective, here is an interview of General Norton Schwartz:</p>
+
+<p><a href="http://www.uctv.tv/shows/The-Air-Force-in-the-Twenty-First-Century-with-General-Norton-Schwartz-Conversations-with-History-25072">http://www.uctv.tv/shows/The-Air-Force-in-the-Twenty-First-Century-with-General-Norton-Schwartz-Conversations-with-History-25072</a></p>
+
+<p>Harry put the drone warfare question to him near the end of interview.</p>
+<p class=tags>#sharing</p>
+</article>
+
+<article class=regular id=p-51873320799>
+<p class=meta><span class=date>01/06/2013 20:30:11</span>
+<a class=llink href=../posts/51873320799.html>¶</a>
+<a href=http://www.ahwkong.com/post/51873320799 rel=canonical>●</a></p>
+<p>erlang mode in emacs is very handy.</p>
+
+<p><strong>C-c C-k (erlang-compile)</strong> will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.</p>
+<p class=tags>#erlang</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

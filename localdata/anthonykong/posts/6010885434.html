@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6010885434>
+<p class=meta><span class=date>31/05/2011 06:13:00</span>
+<a class=llink href=../posts/6010885434.html>¶</a>
+<a href=http://www.ahwkong.com/post/6010885434 rel=canonical>●</a></p>
+<h2>Item 7 revisited</h2>
+<p>There is a discussion on <a href="http://stackoverflow.com/questions/1332015/using-class-specific-set-new-handler/1332080#1332080">SO</a> about <a href="http://www.ahwkong.com/post/6010484565/item-7-be-prepared-for-out-of-memory-conditions">Item 7: Be prepared for out-of-memory conditions</a>.
+
+It is pointed out that the code example in item 7 is not thread safe. 
+
+An alternative:
+
+<pre class="brush: c">
+
+void* X::operator new(std::size_t sz) {
+  void *p;
+  while ((p = ::operator new(sz, std::nothrow) == NULL) {
+    X::new_handler(); // install a specific new handler for X
+  }
+  return p;
+}
+</pre>
+
+In conclusion, great care must be taken when overriding <code>new</code></p>
+<p class=tags>#c++ #Effective C++</p>
+</article>

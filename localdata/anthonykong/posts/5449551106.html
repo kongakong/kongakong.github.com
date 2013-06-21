@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5449551106>
+<p class=meta><span class=date>13/05/2011 23:38:00</span>
+<a class=llink href=../posts/5449551106.html>¶</a>
+<a href=http://www.ahwkong.com/post/5449551106 rel=canonical>●</a></p>
+<p>
+Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a>:
+</p>
+
+<p>
+<code> math</code> module contains a <code>sqrt</code> function, but 
+can’t pass it as an argument.
+</p>
+<p>
+Module functions aren’t higher-order function.
+</p>
+<p>
+Instead, we can wrap it with a <b>fun</b>
+</p>
+<pre class="brush: erl">
+1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]).
+[3.00000,4.00000,5.00000
+</pre>
+<p class=tags>#erlang</p>
+</article>

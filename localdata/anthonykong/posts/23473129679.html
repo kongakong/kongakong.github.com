@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23473129679>
+<p class=meta><span class=date>21/05/2012 19:36:00</span>
+<a class=llink href=../posts/23473129679.html>¶</a>
+<a href=http://www.ahwkong.com/post/23473129679 rel=canonical>●</a></p>
+<p>Installing pyML by running <code>python setup.py install</code></p>
+
+<p>But I do not think it is going to fly because, for example,</p>
+
+<p><code></code></p>
+
+<p>/usr/bin/llvm-gcc -fno-strict-aliasing -O3 -w -pipe -march=core2 -msse4 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/usr/local/bin/../Cellar/python/2.7.2/include/python2.7 -c PyML/containers/ext/Kernel.cpp -o build/temp.macosx-10.4-x86_64-2.7/PyML/containers/ext/Kernel.o<br/>
+cc1plus: warning: command line option &#8220;-Wstrict-prototypes&#8221; is valid for Ada/C/ObjC but not for C++<br/>
+/usr/bin/llvm-g++ -bundle -undefined dynamic_lookup -L/usr/local/Cellar/readline/6.2.2/lib build/temp.macosx-10.4-x86_64-2.7/PyML/clusterers/ext/kmeans_wrap.o build/temp.macosx-10.4-x86_64-2.7/PyML/clusterers/ext/kmeans.o build/temp.macosx-10.4-x86_64-2.7/PyML/containers/ext/DataSet.o build/temp.macosx-10.4-x86_64-2.7/PyML/containers/ext/Kernel.o -o build/lib.macosx-10.4-x86_64-2.7/PyML/clusterers/ext/_ckmeans.so</p>
+
+
+
+<p>It is using llvm-gcc instead of gcc-4.2 (the GUN compiler)</p>
+<p class=tags>#python #pyml</p>
+</article>

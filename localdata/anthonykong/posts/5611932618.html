@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5611932618>
+<p class=meta><span class=date>19/05/2011 04:40:34</span>
+<a class=llink href=../posts/5611932618.html>¶</a>
+<a href=http://www.ahwkong.com/post/5611932618 rel=canonical>●</a></p>
+<h2>Mobius (III)</h2>
+<p>My first part of erlang self-study has come to an end.
+
+Somehow I cannot get <code>mobius:find_square_multiples(3, 20)</code> to work as required <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lab1/index.html">here</a>. 
+
+<pre class="brush: erlang">
+-module(mobius).
+
+-export([is_prime/1]).
+-export([prime_factors/1]).
+-export([is_square_multiple/1]).
+-export([find_square_multiples/2]).
+
+is_prime(N) -&gt;
+is_prime_test(N, trunc(math:sqrt(N))).
+
+
+is_prime_test(1, _) -&gt; true;
+is_prime_test(2, _) -&gt; true;
+is_prime_test(_, 1) -&gt; true; %% termination condition
+is_prime_test(Testee, N) when Testee rem N =:= 0
+-&gt; false;
+is_prime_test(Testee, N) when Testee rem N =/= 0
+-&gt; is_prime_test(Testee, N-1).
+
+
+prime_factors(N) -&gt;
+    prime_factors2(N, [], 2).
+
+prime_factors2(1, [], _) -&gt; [1];
+prime_factors2(N, Result, N) -&gt; Result ++ [N];
+prime_factors2(N, Result, M) when N rem M =/= 0
+    -&gt; prime_factors2(N, Result, M+1);
+prime_factors2(N, Result, M) when N rem M =:= 0
+    -&gt; prime_factors2(N div M, Result ++ [M] , 2).
+
+
+is_square_multiple(N) -&gt;
+    Res = fmf([], prime_factors(N)),
+    Res2 = lists:filter(fun({_, F}) -&gt; F &gt; 1 end, Res),
+    length(Res2) &gt;= 1.
+
+fmf(Res, [H|T]) -&gt;
+    FullLen = length([H|T]),
+    Tmp = lists:filter(fun(X) -&gt; X =/= H end, T),
+    fmf([{H, FullLen - length(Tmp)}] ++ Res, Tmp);
+    fmf(Res, []) -&gt;
+    Res.
+
+%% By definition the Count must be bigger than 1
+is_square_multiple2(N, Count) when Count &gt; 1 -&gt;
+    Res = fmf([], prime_factors(N)),
+    Res2 = lists:filter(fun({_, F}) -&gt; F &gt;= Count end, Res),
+    length(Res2) &gt;= 1.
+
+
+find_square_multiples(Count, MaxN) -&gt;
+    fsm(Count, MaxN, is_square_multiple2(MaxN, Count)).
+
+fsm(_Count, Counter, true) -&gt;
+    Counter;
+fsm(_, 2, _) -&gt;
+    fail; %% search failed
+fsm(Count, Counter, false) -&gt;
+    fsm(Count, Counter-1, is_square_multiple2(Counter-1, Count)).
+</pre></p>
+<p class=tags>#erlang</p>
+</article>

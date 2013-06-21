@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-9992918894>
+<p class=meta><span class=date>09/09/2011 22:40:49</span>
+<a class=llink href=../posts/9992918894.html>¶</a>
+<a href=http://www.ahwkong.com/post/9992918894 rel=canonical>●</a></p>
+<h2>brew install couchdb</h2>
+<p><pre>
+$ brew install couchdb
+Warning: It appears you have MacPorts or Fink installed.
+Software installed with other package managers causes known problems for
+Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
+==&gt; Downloading <a href="http://www.apache.org/dyn/closer.cgi?path=couchdb/1.1.0/apache-couchdb-1.1.0.tar.gz">http://www.apache.org/dyn/closer.cgi?path=couchdb/1.1.0/apache-couchdb-1.1.0.tar.gz</a>
+File already downloaded in /Users/antkong/Library/Caches/Homebrew
+==&gt; ./configure --prefix=/usr/local/Cellar/couchdb/1.1.0 --localstatedir=/usr/local/var --sysconfdir=/usr/local/etc --with-erlang=/usr/local/lib/erlang/usr/include --with-js-include=/usr/local/include --w
+==&gt; make
+==&gt; make install
+==&gt; Caveats
+If this is your first install, automatically load on login with:
+    mkdir -p ~/Library/LaunchAgents
+    cp /usr/local/Cellar/couchdb/1.1.0/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
+    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+    cp /usr/local/Cellar/couchdb/1.1.0/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+Or start manually with:
+    couchdb
+==&gt; Summary
+/usr/local/Cellar/couchdb/1.1.0: 303 files, 2.8M, built in 73 seconds
+</pre></p>
+<p class=tags>#couchdb #osx</p>
+</article>

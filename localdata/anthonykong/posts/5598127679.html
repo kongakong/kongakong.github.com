@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5598127679>
+<p class=meta><span class=date>18/05/2011 14:07:15</span>
+<a class=llink href=../posts/5598127679.html>¶</a>
+<a href=http://www.ahwkong.com/post/5598127679 rel=canonical>●</a></p>
+<p>Loving JQuery.
+
+I want to use javascript to toggle the highlight of some anchor tags. This is the first cut:
+
+<pre class="brush: js">
+function handle_txn_group_links(txn_group) {
+    $('.txn_group_link').each(function() {
+        $(this).removeClass('selected-item');
+    });
+    $('.txn_group_link')
+            .filter('[txn_group="' + txn_group + '"]')
+            .addClass('selected-item');
+};
+</pre>
+
+Basically it steps thru all links of the same class, turn off the highlight, then set the candidate link to highlight css class.
+
+Then I realised there is a smarter way to do it through the use of <code>siblings()</code>:
+
+<pre class="brush: js">
+            function handle_txn_group_links(txn_group) {
+				$('.txn_group_link')
+						.filter('[txn_group="' + txn_group + '"]')
+						.addClass('selected-item').siblings().removeClass('selected-item');
+            };
+
+</pre></p>
+<p class=tags>#jquery</p>
+</article>

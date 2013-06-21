@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23820463221>
+<p class=meta><span class=date>27/05/2012 07:46:00</span>
+<a class=llink href=../posts/23820463221.html>¶</a>
+<a href=http://www.ahwkong.com/post/23820463221 rel=canonical>●</a></p>
+<pre>
+2012-05-27 07:39:51.068 myapp[2277:707] -[NSURL isEqualToString:]: unrecognized selector 
+sent to instance 0x171070
+2012-05-27 07:39:51.073 myapp[2277:707] *** Terminating app due to uncaught exception 
+'NSInvalidArgumentException', reason: '-[NSURL isEqualToString:]: unrecognized selector sent to 
+instance 0x171070'
+*** First throw call stack:
+(0x3577288f 0x37b19259 0x35775a9b 0x35774915 0x356cf650 0x332722b9 0xbf597 0x33206efb 
+0x33205fd9 0x33205763 0x331a9f15 0x356d11fb 0x325a1aa5 0x325a16bd 0x325a5843 0x325a557f 
+0x325cd911 0x325cd8e3 0x331eb10f 0x331d8b33 0x331a6ac3 0x331a6567 0x331a5f3b 
+0x3736522b 0x35746523 0x357464c5 0x35745313 0x356c84a5 0x356c836d 0x331d786b 
+0x331d4cd5 0xbee23 0xbedc8)
+terminate called throwing an exception(lldb) 
+</pre>
+
+In the  iphone console log, it shows these after the stack trace,
+
+<pre>
+May 27 07:39:51 unknown com.apple.debugserver-64[2275] <warning>: 1 [08e3/0303]: error: 
+::mach_vm_read ( task = 0x1603, addr = 0x00000000, size = 512, data =&gt; 0x00000000, dataCnt =&gt; 
+0 ) err = (os/kern) invalid address (0x00000001)
+May 27 07:39:51 unknown com.apple.debugserver-64[2275] <warning>: 2 [08e3/0303]: error: 
+::mach_vm_read ( task = 0x1603, addr = 0x00000000, size = 512, data =&gt; 0x00000000, dataCnt =&gt;
+ 0 ) err = (os/kern) invalid address (0x00000001)
+May 27 07:39:51 unknown com.apple.debugserver-64[2275] <warning>: 3 [08e3/0303]: error: 
+::mach_vm_read ( task = 0x1603, addr = 0x00000000, size = 512, data =&gt; 0x00000000, dataCnt =&gt;
+ 0 ) err = (os/kern) invalid address (0x00000001)
+May 27 07:39:51 unknown com.apple.debugserver-64[2275] <warning>: 4 [08e3/0303]: error: 
+::mach_vm_read ( task = 0x1603, addr = 0x00000000, size = 512, data =&gt; 0x00000000, dataCnt =&gt;
+ 0 ) err = (os/kern) invalid address (0x00000001)
+
+</warning></warning></warning></warning></pre>
+
+<p>
+The debugger will stop at the <code>UIApplicationMain</code> line
+</p>
+<pre>
+int main(int argc, char *argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([MNoteAppDelegate class]));
+    }
+}
+</pre>
+<p>
+It totally throws me off because nothing is wrong on that line.
+</p>
+<p>
+I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.
+</p>
+
+<p>
+But it did not fix the problem.
+</p>
+
+<p>
+Eventually I undo the last change I made, which is
+
+</p>
+
+<pre>
+cell.detailTextLabel.text = [item valueForProperty:MPMediaItemPropertyAssetURL];
+</pre>
+
+<p>
+and it works again.
+
+</p>
+
+<p>
+Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.
+</p>
+</article>

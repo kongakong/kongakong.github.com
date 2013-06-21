@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23786684708>
+<p class=meta><span class=date>26/05/2012 18:25:00</span>
+<a class=llink href=../posts/23786684708.html>¶</a>
+<a href=http://www.ahwkong.com/post/23786684708 rel=canonical>●</a></p>
+<p>
+Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.
+</p>
+
+<p>
+Since I did not start with a UITableViewController at the beginning, I was unable to connect a segway to an individual cell inside the table view. 
+</p> 
+
+
+<p>
+Finally, by trial and error, I dragged a &#8216;Table View Cell&#8217; object onto the UITableView. It is now displayed as &#8216;Prototype Cells&#8217;
+</p>
+
+<p>
+I can create an outgoing segway from this prototype cell. But now I am getting this error message
+</p>
+
+<pre>
+
+Prototype table cells must have reuse identifiers
+
+</pre>
+
+<p>
+
+It can be easily fixed by simply filling in the <b>Identifier</b> field in the <b>Attribute inspector</b>. </p>
+<p class=tags>#ios #xcode #storyboard</p>
+</article>

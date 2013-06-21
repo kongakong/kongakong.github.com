@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2952633404>
+<p class=meta><span class=date>27/01/2011 15:13:00</span>
+<a class=llink href=../posts/2952633404.html>¶</a>
+<a href=http://www.ahwkong.com/post/2952633404 rel=canonical>●</a></p>
+<h2>Core Data 4</h2>
+<p>I did not know that after implemented a <code>NSFetchResultController</code>, I still need to programmatically fetch the data and then call the table view to <code>reloadData</code></p>
+
+<p>An example:</p>
+
+<pre>
+
+    NSError *error = nil;
+    [self.fetchedResultsController performFetch:&amp;error];
+    if (error) {
+        NSLog(@"[CoreDataTableViewController performFetchForTableView:] %@ (%@)", 
+[error localizedDescription], [error localizedFailureReason]);
+    }
+    [tableView reloadData];
+
+</pre>
+<p class=tags>#ios #coredata</p>
+</article>

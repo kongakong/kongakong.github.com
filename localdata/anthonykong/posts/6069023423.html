@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6069023423>
+<p class=meta><span class=date>01/06/2011 21:17:17</span>
+<a class=llink href=../posts/6069023423.html>¶</a>
+<a href=http://www.ahwkong.com/post/6069023423 rel=canonical>●</a></p>
+<h2>Assignment operator is right-associative</h2>
+<p><pre class="brush: c">
+w = x = y = z = "Hello";
+</pre>
+
+<pre class="brush: c">
+ w = (x = (y = (z = "Hello")));
+</pre>
+
+<pre class="brush: c">
+
+w.operator=(x.operator=(y.operator=(z.operator=("Hello"))));
+
+</pre></p>
+<p class=tags>#c++ #cs11 #self-study</p>
+</article>

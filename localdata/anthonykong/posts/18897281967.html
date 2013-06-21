@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-18897281967>
+<p class=meta><span class=date>07/03/2012 22:00:05</span>
+<a class=llink href=../posts/18897281967.html>¶</a>
+<a href=http://www.ahwkong.com/post/18897281967 rel=canonical>●</a></p>
+<h2>How to wrap an exception in a custom exception with original stacktrace and re-raise?</h2>
+<p>Here is an example:
+
+<pre class="brush:python">
+import sys
+class CustomException(Exception):
+    pass
+
+def bad_fun():
+    h = None
+    h.hi()
+
+try:
+    bad_fun()
+except Exception, e:
+    raise CustomException, e, sys.exc_info()[2]
+
+</pre></p>
+</article>

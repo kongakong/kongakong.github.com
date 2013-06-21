@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5442998050>
+<p class=meta><span class=date>13/05/2011 15:01:46</span>
+<a class=llink href=../posts/5442998050.html>¶</a>
+<a href=http://www.ahwkong.com/post/5442998050 rel=canonical>●</a></p>
+<h2>Mobius (II)</h2>
+<p>Find all prime factors
+
+<pre class="brush: erl">
+-module(mobius).
+
+-export([is_prime/1]).
+-export([prime_factors/1]).
+
+is_prime(N) -&gt;
+        is_prime_test(N, trunc(math:sqrt(N))).
+
+
+is_prime_test(1, _) -&gt; true;
+is_prime_test(2, _) -&gt; true;
+is_prime_test(_, 1) -&gt; true; %% termination condition
+is_prime_test(Testee, N) when Testee rem N =:= 0
+                        -&gt; false;
+is_prime_test(Testee, N) when Testee rem N =/= 0
+                        -&gt; is_prime_test(Testee, N-1).
+
+
+prime_factors(N) -&gt;
+        factor2(N, [], 2).
+
+factor2(1, [], _) -&gt; [1];
+factor2(N, Result, N) -&gt; Result ++ [N];
+factor2(N, Result, M) when N rem M =/= 0
+                -&gt; factor2(N, Result, M+1);
+factor2(N, Result, M) when N rem M =:= 0
+                -&gt; factor2(N div M, Result ++ [M] , 2).
+
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>

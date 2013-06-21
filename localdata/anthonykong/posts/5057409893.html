@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5057409893>
+<p class=meta><span class=date>30/04/2011 11:50:00</span>
+<a class=llink href=../posts/5057409893.html>¶</a>
+<a href=http://www.ahwkong.com/post/5057409893 rel=canonical>●</a></p>
+<h2>To sort an array of array by the array size</h2>
+<p>A possible solution:</p>
+
+<pre><code>NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"@count"
+                                                 ascending:YES];
+NSArray *sds = [NSArray arrayWithObject:sd];
+NSArray *sortedArray = [array sortedArrayUsingDescriptors:sds];
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>

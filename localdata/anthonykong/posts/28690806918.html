@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-28690806918>
+<p class=meta><span class=date>04/08/2012 19:22:00</span>
+<a class=llink href=../posts/28690806918.html>¶</a>
+<a href=http://www.ahwkong.com/post/28690806918 rel=canonical>●</a></p>
+<p>Trying to retrofit coredata into an iOS Tabbed application. Kind of painful.</p>
+
+<p>Finally get it done by these steps:</p>
+
+<ul><li><p>create an iOS Master-Detail Application with &#8216;Use Core Data&#8217; option checked</p></li>
+<li><p>Lift the boiler-plate code from the dummy project to my AppDelegate</p></li>
+<li><p>In other ViewControllers, use <code>[[UIApplication sharedApplication] delegate]</code> to retrieve the delegate singleton and obtain the reference to the <code>ManagedObjectContext</code> from it.</p></li>
+</ul><p>Then I have spent a bit of time to solve the problem I have encountered before: <a href="http://www.ahwkong.com/post/23922752806/problem-cannot-use-push-segue-between-a-uitableview">Cannot use ‘push’ segue between a UITableview cell and another controller</a></p>
+
+<p>Now I am woking on using static style table cells in a non-UITableViewController (Error:  <code>Static table views are only valid when embedded in UITableViewController instances</code>). Gonna be bit tough to solve</p>
+<p class=tags>#ios #coredata</p>
+</article>

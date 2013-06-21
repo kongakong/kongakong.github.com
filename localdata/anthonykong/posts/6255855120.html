@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6255855120>
+<p class=meta><span class=date>07/06/2011 05:06:00</span>
+<a class=llink href=../posts/6255855120.html>¶</a>
+<a href=http://www.ahwkong.com/post/6255855120 rel=canonical>●</a></p>
+<p>Seems like I have polluted my python installation a little bit. There are two python2.6
+
+<pre>
+
+mbp002:cpython $ md5sum /usr/bin/python
+e3a892c8511d5086b485aeb7e9700672  /usr/bin/python
+mbp002:cpython $ md5sum /opt/local/bin/python
+defb6eacf7bf552bef7c4033e685ec13  /opt/local/bin/python
+
+
+
+mbp002:cpython $ otool -L /usr/bin/python
+/usr/bin/python:
+	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 550.29.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
+mbp002:cpython $ otool -L /opt/local/bin/python
+/opt/local/bin/python:
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
+
+
+</pre>
+
+<code>/usr/bin/python</code> comes from original osx distribution. The framework version is probably built by me just for the sake of building python.
+
+<pre>
+
+mbp002:cpython $ ls -l /opt/local/bin/python
+lrwxr-xr-x  1 root  admin  18 24 May  2010 /opt/local/bin/python -&gt; /usr/bin/python2.6
+mbp002:cpython $ ls -l /usr/bin/python2.6
+lrwxr-xr-x  1 root  wheel  75  5 May  2010 /usr/bin/python2.6 -&gt; ../../System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6
+
+
+</pre>
+
+
+I will probably take out the symlink of <code>/opt/local/bin/python </code> to see if it fixes my python build problem.</p>
+<p class=tags>#osx #python #otool</p>
+</article>

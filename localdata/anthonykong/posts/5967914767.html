@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5967914767>
+<p class=meta><span class=date>30/05/2011 02:14:42</span>
+<a class=llink href=../posts/5967914767.html>¶</a>
+<a href=http://www.ahwkong.com/post/5967914767 rel=canonical>●</a></p>
+<h2>Item 1:  Prefer const and inline to #define</h2>
+<p>Classic example of why sometimes macro is a bad idea:
+
+<pre class="brush: c">
+
+#define max(a,b) ((a) &gt; (b) ? (a) : (b))
+
+max(++a, b);         // a is incremented twice
+max(++a, b+10);      // a is incremented once
+
+
+</pre></p>
+<p class=tags>#effective c++ #c++</p>
+</article>

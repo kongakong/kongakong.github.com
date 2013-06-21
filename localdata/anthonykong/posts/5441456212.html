@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5441456212>
+<p class=meta><span class=date>13/05/2011 13:45:00</span>
+<a class=llink href=../posts/5441456212.html>¶</a>
+<a href=http://www.ahwkong.com/post/5441456212 rel=canonical>●</a></p>
+<h2>Mobius</h2>
+<p>A simple prime number test rountine
+
+
+<pre class="brush: erl">
+
+-module(mobius).
+
+-export([is_prime/1]).
+-export([is_prime_test/2]).
+
+is_prime(N) -&gt;
+        is_prime_test(N, trunc(math:sqrt(N))).
+
+
+is_prime_test(1, _) -&gt; true;
+is_prime_test(2, _) -&gt; true;
+is_prime_test(_, 1) -&gt; true; %% termination condition
+is_prime_test(Testee, N) when Testee rem N =:= 0
+                        -&gt; false;
+is_prime_test(Testee, N) when Testee rem N =/= 0
+                        -&gt; is_prime_test(Testee, N-1).
+</pre></p>
+<p class=tags>#erlang</p>
+</article>

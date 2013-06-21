@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-4959026781>
+<p class=meta><span class=date>27/04/2011 02:43:00</span>
+<a class=llink href=../posts/4959026781.html>¶</a>
+<a href=http://www.ahwkong.com/post/4959026781 rel=canonical>●</a></p>
+<h2>C refresher (2)</h2>
+<p>Generating a random number in the range of 0 to 100</p>
+
+<pre><code>srandom(time(NULL)); // seed using time
+
+NSNumber secret = (uint64_t) random() * 100 / RAND_MAX; // cast, multiply then divide
+</code></pre>
+</article>

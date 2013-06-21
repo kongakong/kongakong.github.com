@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-7709579240>
+<p class=meta><span class=date>17/07/2011 12:52:00</span>
+<a class=llink href=../posts/7709579240.html>¶</a>
+<a href=http://www.ahwkong.com/post/7709579240 rel=canonical>●</a></p>
+<h2>How to customise your math.sqrt()?</h2>
+<p>It is an interesting question.
+
+Someone posted such as solution: 
+
+<pre class="brush: py">
+# broken into two lines for readability in the blog post
+math.sqrt=(lambda sqrt=math.sqrt: lambda x: x.__sqrt__(x)  \
+           if hasattr(x,'__sqrt__') else sqrt(x))()
+</pre>
+
+At first glance it is a bit complicated. A simpler solution can be:
+
+<pre class="brush: py">
+lambda x: x.__sqrt__(x) if hasattr(x,'__sqrt__') else math.sqrt(x)
+</pre>
+
+But the longer version allows you a choice of what <code>sqrt()</code> as default  (The <code>lambda sqrt=math.sqrt: </code> part)
+
+Source: <a href="http://permalink.gmane.org/gmane.comp.python.general/694858">Python newsgroup</a></p>
+<p class=tags>#python</p>
+</article>

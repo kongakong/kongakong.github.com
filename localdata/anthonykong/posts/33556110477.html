@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-33556110477>
+<p class=meta><span class=date>14/10/2012 19:30:28</span>
+<a class=llink href=../posts/33556110477.html>¶</a>
+<a href=http://www.ahwkong.com/post/33556110477 rel=canonical>●</a></p>
+<p>Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a &#8216;Hello Word&#8217; program. I did that by creating a Scala Object. Here is the code</p>
+
+<pre>
+package greeter
+
+object helloworld {
+    println("hello, world")
+}
+</pre>
+
+<p>I proceeded to run it by using the &#8216;Run it&#8230;&#8217;. I expected to see &#8216;Run as Scala Application&#8217; but the option was not there.</p>
+
+<p>Turns out it is my mistake. I need to extends the object from <strong>App</strong>:</p>
+
+<pre>
+package greeter
+
+object helloworld extends App {
+    println("hello, world")
+}
+</pre>
+
+<p>Then the option will appear (as shown here):</p>
+
+<p><img src="http://media.tumblr.com/tumblr_mbvkaxoK7w1qb37bm.jpg" alt=""/></p>
+<p class=tags>#scala #scalaIDE</p>
+</article>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-10160722248>
+<p class=meta><span class=date>13/09/2011 20:46:00</span>
+<a class=llink href=../posts/10160722248.html>¶</a>
+<a href=http://www.ahwkong.com/post/10160722248 rel=canonical>●</a></p>
+<h2>A neat way to generate SQL in Java</h2>
+<p>
+<a href="http://sourceforge.net/apps/trac/jooq">JOOQ</a>
+</p>
+
+<pre class="brush: java">
+
+Connection connection = null;
+Factory create = new MySQLFactory(connection);
+String sql1 = create.select(A, B, C)
+                    .from(MY_TABLE)
+                    .where(A.equal(5))
+                    .and(B.greaterThan(8))
+                    .getSQL();
+
+String sql2 = create.insertInto(MY_TABLE)
+                    .values(A, 1)
+                    .values(B, 2)
+                    .getSQL();
+
+String sql3 = create.update(MY_TABLE)
+                    .set(A, 1)
+                    .set(B, 2)
+                    .where(C.greaterThan(5))
+                    .getSQL();
+
+</pre>
+</article>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=photo id=p-23788398195>
+<p class=meta><span class=date>26/05/2012 19:47:00</span>
+<a class=llink href=../posts/23788398195.html>¶</a>
+<a href=http://www.ahwkong.com/post/23788398195 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_m4mj297WQi1qbpfzro1_1280.png"></p>
+<p>
+When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.
+</p>
+
+<p>
+The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a &#8216;push&#8217; segue. 
+</p>
+
+<p>
+Once I change the segue type to &#8216;modal&#8217;, it works.
+</p>
+<p class=tags>#ios #segue #storyboard</p>
+</article>

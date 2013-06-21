@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5689829696>
+<p class=meta><span class=date>21/05/2011 15:47:00</span>
+<a class=llink href=../posts/5689829696.html>¶</a>
+<a href=http://www.ahwkong.com/post/5689829696 rel=canonical>●</a></p>
+<h2>Sieve of Eratosthenes, Process-Style</h2>
+<p>Obviously I am less familiar with the syntax than I was a year ago.</p>
+
+<p><b>Experience Point:</b> Whenever there seems to be a need to use <code>if</code> inside the code, it is better to check if we can use guard instead.</p>
+
+
+<pre class="brush: erlang">
+
+-module(proc_sieve).
+
+-export([generate/1]).
+
+
+-define(TRACE(X), io:format("{~p,~p}: ~p~n", [?MODULE,?LINE,X])).
+-define(TIMEOUT, 1000000).
+
+sieve2(0, InvalidPid) -&gt;
+    receive 
+        P -&gt; sieve2(P, InvalidPid)
+    after ?TIMEOUT -&gt;
+        ?TRACE("time out in P=0~n")
+    end; 
+
+%% starting condition
+sieve2(P, NextPid) when is_pid(NextPid) -&gt;
+    receive 
+        {done, From} -&gt;
+            NextPid ! {done, self()},
+            receive 
+                LstOfRes -&gt; 
+                    From ! [P] ++ LstOfRes 
+            end;
+        N when N rem P == 0 -&gt; 
+            sieve2(P, NextPid); %% this semicolon is needed
+        N when N rem P /= 0 -&gt; 
+            NextPid ! N,
+            sieve2(P, NextPid) %% put semicolon here causes syntax error
+    after ?TIMEOUT -&gt;
+        ?TRACE(io:format("time out in is_pid clause P=~p~n", [P]))
+    end;
+ sieve2(P, Invalid) -&gt;
+    receive 
+        {done, From} -&gt;
+            %% no downstream process, just send the result back 
+            From ! [P];
+        N when N rem P == 0 -&gt; 
+            sieve2(P, Invalid); %% this semicolon is needed
+        N when N rem P /= 0 -&gt; 
+            ?TRACE(io:format("Starting ~p for ~p~n", [self(), N])), 
+            Pid = spawn(proc_sieve, sieve2, [0, void]),
+            Pid ! N,
+            sieve2(P, Pid) %% put semicolon here causes syntax error
+    after ?TIMEOUT -&gt;
+        ?TRACE(io:format("time out in no pid clause P=~p~n", [P]))
+    end.
+    
+sieve() -&gt;
+    spawn(proc_sieve, sieve2, [0, void]).
+
+generate(MaxN) -&gt;
+        Pid = sieve(),
+        generate2(Pid, 2, MaxN).
+
+generate2(Pid, End, End) -&gt;
+        Pid ! {done, self()},
+        receive
+                Res -&gt; Res
+        end;
+
+generate2(Pid, N, End) -&gt;
+        Pid ! N,
+        generate2(Pid, N + 1, End).
+
+
+</pre>
+<p class=tags>#erlang</p>
+</article>

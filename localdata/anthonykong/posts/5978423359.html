@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5978423359>
+<p class=meta><span class=date>30/05/2011 07:47:00</span>
+<a class=llink href=../posts/5978423359.html>¶</a>
+<a href=http://www.ahwkong.com/post/5978423359 rel=canonical>●</a></p>
+<h2>Item 19:  Differentiate among member functions, non-member functions, and friend functions</h2>
+<p>Summary:</p>
+
+<p><b>Virtual functions</b> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p>  <br/><b>operator&#187;</b> and <b>operator&#171;</b> are never members. If f is <b>operator&#187;</b> or <b> operator&#171;</b>, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C. </p>
+
+<p><br/>
+Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.  </p>
+
+<p><br/>
+Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
+<p class=tags>#Effective C++ #c++ #self-study</p>
+</article>

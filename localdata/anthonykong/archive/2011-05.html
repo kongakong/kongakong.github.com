@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>May 2011</h1>
+
+
+<article class=regular id=p-6036284846>
+<p class=meta><span class=date>31/05/2011 23:12:00</span>
+<a class=llink href=../posts/6036284846.html>¶</a>
+<a href=http://www.ahwkong.com/post/6036284846 rel=canonical>●</a></p>
+<h2>C++: Dynamic Array</h2>
+<p>We can dynamically allocate arrays of primitive types using new as well 
+
+<pre class="brush: c">
+int numValues = 35; 
+int *valArray = new int[numValues]; 
+
+</pre>
+
+
+With primitives, the values are uninitialized!  We need to use a loop to initialize the values.
+
+<pre class="brush: c"> 
+for (int i = 0; i &lt; numValues; i++) 
+  valArray[i] = 0; 
+</pre>
+
+
+Remember to free the array using the <b>delete[]</b> operator</p>
+<p class=tags>#c++ #cs11</p>
+</article>
+
+<article class=regular id=p-6036161971>
+<p class=meta><span class=date>31/05/2011 23:05:00</span>
+<a class=llink href=../posts/6036161971.html>¶</a>
+<a href=http://www.ahwkong.com/post/6036161971 rel=canonical>●</a></p>
+<h2>C++ Weirdness</h2>
+<p>This calls the copy constructor
+
+<pre class="brush: c">
+
+Point p1(19.6, -3.5); 
+Point p2(p1); // Copy p1 
+Point p3 = p1 // syntax sugar  for calling the copy-constructor
+
+</pre>
+
+This calls the assignment operator
+
+
+
+<pre class="brush: c">
+
+
+Point p1(19.6, -3.5); 
+Point p2; 
+p2 = p1; // Calls the default constructor on p2, 
+               // then does assignment 
+
+
+</pre></p>
+<p class=tags>#c++ #cs11</p>
+</article>
+
+<article class=regular id=p-6035862177>
+<p class=meta><span class=date>31/05/2011 22:47:00</span>
+<a class=llink href=../posts/6035862177.html>¶</a>
+<a href=http://www.ahwkong.com/post/6035862177 rel=canonical>●</a></p>
+<h2>C++: Required Class Operations</h2>
+<p>
+Related to <a href="http://www.ahwkong.com/post/6035529872/item-11-declare-a-copy-constructor-and-an-assignment">Item 11</a>:
+</p>
+
+<p>
+
+C++ requires that all classes must provide certain operations 
+</p>
+<p>
+
+If you don’t provide them, the compiler will make them up by following some simple rules. This can lead to problems 
+</p>
+
+<b>Required operations: </b>
+<ul><li> At least one non-copy constructor </li>
+<li>A copy constructor</li> 
+<li> An assignment operator  </li>
+<li>A destructor</li>
+</ul>
+
+Quoted from <a href="http://www.cs.caltech.edu/courses/cs11/material/cpp/donnie/lectures/cs11-cpp-lec2.pdf">cs11 lecture 2</a>
+<p class=tags>#c++ #cs11</p>
+</article>
+
+<article class=regular id=p-6035529872>
+<p class=meta><span class=date>31/05/2011 22:27:00</span>
+<a class=llink href=../posts/6035529872.html>¶</a>
+<a href=http://www.ahwkong.com/post/6035529872 rel=canonical>●</a></p>
+<h2>Item 11:  Declare a copy constructor and an assignment operator for classes with dynamically allocated memory</h2>
+<p>An <b>assignment operator</b> is to address this kind of situation:
+
+<pre class="brush: c">
+
+String a("Hello");                 // define and construct a
+ {                                  // open new scope
+  String b("World");               // define and construct b
+   ...
+   b = a;                           // execute default op=,
+                                   // lose b's memory
+ }                                  // close scope, call b's
+                                   // destructor
+ String c = a;                      // c.data is undefined!
+                                   // a.data is already deleted
+
+</pre>
+
+<b>Copy constructor</b> is to handle the pass-by-value situation in function invokation.</p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>
+
+<article class=regular id=p-6031499072>
+<p class=meta><span class=date>31/05/2011 17:50:00</span>
+<a class=llink href=../posts/6031499072.html>¶</a>
+<a href=http://www.ahwkong.com/post/6031499072 rel=canonical>●</a></p>
+<h2>How to abort a maven build if checkstyle fails</h2>
+<p>It is not entirely obvious in <a href="http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html">checkstyle maven plugin documentation</a>. 
+
+
+It is what I have done to the pom file:
+
+
+
+<pre class="brush: xml">
+...
+&lt;build&gt;
+       &lt;plugins&gt;
+       &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+               &lt;version&gt;2.6&lt;/version&gt;
+               &lt;executions&gt;
+                               &lt;execution&gt;
+                               &lt;id&gt;Compulsory coding style check&lt;/id&gt;
+                               &lt;phase&gt;compile&lt;/phase&gt;
+                               &lt;goals&gt;
+                                       &lt;goal&gt;checkstyle&lt;/goal&gt;
+                               &lt;/goals&gt;
+                               &lt;/execution&gt;
+               &lt;/executions&gt;
+               &lt;configuration&gt;
+                       &lt;failsOnError&gt;true&lt;/failsOnError&gt;
+                       &lt;consoleOutput&gt;true&lt;/consoleOutput&gt;
+               &lt;/configuration&gt;
+       &lt;/plugin&gt;
+       &lt;/plugins&gt;
+&lt;/build&gt;
+...
+</pre>
+
+The <b>failsOnError</b> will abort the build process if violation is detected.</p>
+<p class=tags>#java #maven #checkstyle</p>
+</article>
+
+<article class=regular id=p-6011688672>
+<p class=meta><span class=date>31/05/2011 06:38:00</span>
+<a class=llink href=../posts/6011688672.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011688672 rel=canonical>●</a></p>
+<h2>Item 10:  Write operator delete if you write operator new</h2>
+<p>
+Rather self-explanatory.
+</p>
+<p>
+Two recommended checks:
+</p>
+<p>
+<b>Null Pointer Check</b>
+</p>
+<pre class="brush: c">
+  if (deadObject == 0) return;       
+</pre>
+
+
+<b>Size Check</b>
+
+<pre class="brush: c">
+// pass on to default delete if the size does not match
+   if (size != sizeof(MyTestClass))     {  
+    ::operator delete(deadObject);
+    return;
+  }
+</pre>
+<p class=tags>#c++ #self-study #Effective C++</p>
+</article>
+
+<article class=regular id=p-6011639593>
+<p class=meta><span class=date>31/05/2011 06:36:00</span>
+<a class=llink href=../posts/6011639593.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011639593 rel=canonical>●</a></p>
+<h2>Item 9:  Avoid hiding the "normal" form of new</h2>
+<p>Not good:
+
+<pre class="brush: c">
+
+class X {
+public:
+  void f();
+   // operator new allowing specification of a
+  // new-handling function
+  static void * operator new(size_t size, new_handler p);
+};
+
+</pre>
+
+Better:
+
+
+<pre class="brush: c">
+
+class X {
+public:
+  void f();
+   static void * operator new(size_t size, new_handler p);
+   static void * operator new(size_t size){ 
+        return ::operator new(size); 
+   }
+};
+
+</pre></p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>
+
+<article class=regular id=p-6011529808>
+<p class=meta><span class=date>31/05/2011 06:33:00</span>
+<a class=llink href=../posts/6011529808.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011529808 rel=canonical>●</a></p>
+<h2>Item 8:  Adhere to convention when writing operator new and operator delete</h2>
+<p>Since C++ guarantees it&#8217;s always safe to delete the null pointer, make sure the custom <code>delete</code> will honor that guarantee
+
+
+
+General Idea:
+
+<pre class="brush: c">
+void operator delete(void *rawMemory)
+{
+  if (rawMemory == 0) return;    // do nothing if the null
+                                 // pointer is being deleted
+   deallocate the memory pointed to by rawMemory;
+   return;
+}
+
+
+</pre></p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>
+
+<article class=regular id=p-6011303409>
+<p class=meta><span class=date>31/05/2011 06:26:21</span>
+<a class=llink href=../posts/6011303409.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011303409 rel=canonical>●</a></p>
+<p><a href="http://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands">United States Minor Outlying Islands</a></p>
+<p class=tags>#til #Today I Learn</p>
+</article>
+
+<article class=regular id=p-6010885434>
+<p class=meta><span class=date>31/05/2011 06:13:00</span>
+<a class=llink href=../posts/6010885434.html>¶</a>
+<a href=http://www.ahwkong.com/post/6010885434 rel=canonical>●</a></p>
+<h2>Item 7 revisited</h2>
+<p>There is a discussion on <a href="http://stackoverflow.com/questions/1332015/using-class-specific-set-new-handler/1332080#1332080">SO</a> about <a href="http://www.ahwkong.com/post/6010484565/item-7-be-prepared-for-out-of-memory-conditions">Item 7: Be prepared for out-of-memory conditions</a>.
+
+It is pointed out that the code example in item 7 is not thread safe. 
+
+An alternative:
+
+<pre class="brush: c">
+
+void* X::operator new(std::size_t sz) {
+  void *p;
+  while ((p = ::operator new(sz, std::nothrow) == NULL) {
+    X::new_handler(); // install a specific new handler for X
+  }
+  return p;
+}
+</pre>
+
+In conclusion, great care must be taken when overriding <code>new</code></p>
+<p class=tags>#c++ #Effective C++</p>
+</article>
+
+<article class=regular id=p-6010484565>
+<p class=meta><span class=date>31/05/2011 06:00:38</span>
+<a class=llink href=../posts/6010484565.html>¶</a>
+<a href=http://www.ahwkong.com/post/6010484565 rel=canonical>●</a></p>
+<h2>Item 7:  Be prepared for out-of-memory conditions</h2>
+<p>When operator <code>new</code> cannot satisfy a request for memory, it calls the new-handler function not once, but repeatedly until it can find enough memory.
+
+The handler can use do one of the following:
+
+<ul><li>Make more memory available</li>
+
+<li>Install a different new-handler</li>
+
+<li>Deinstall the new-handler - caused a std::bad_alloc to be thrown</li>
+
+<li>Throw an exception </li>
+
+<li>Not return - call abort or exit</li>
+</ul>
+
+
+An example:
+
+<pre class="brush: c">
+void * X::operator new(size_t size)
+{
+  new_handler globalHandler =                // install X's
+    std::set_new_handler(currentHandler);    // handler
+   void *memory;
+   try {                                      // attempt
+    memory = ::operator new(size);           // allocation
+  }
+  catch (std::bad_alloc&amp;) {                  // restore
+    std::set_new_handler(globalHandler);     // handler;
+    throw;                                   // propagate
+  }                                          // exception
+ 
+  std::set_new_handler(globalHandler);       // restore
+                                             // handler
+  return memory;
+}
+</pre></p>
+</article>
+
+<article class=regular id=p-6008713823>
+<p class=meta><span class=date>31/05/2011 05:02:00</span>
+<a class=llink href=../posts/6008713823.html>¶</a>
+<a href=http://www.ahwkong.com/post/6008713823 rel=canonical>●</a></p>
+<p>A way to remove a certain layer form a UIView&#8217;s layers
+
+<pre class="brush: c">
+
+NSIndexSet *indexSet = [mainLayer.sublayers indexesOfObjectsPassingTest:^(id obj, NSUInteger idx, BOOL *stop){
+    return [obj passMyTest]; // Put your test here
+}];
+
+NSArray *textLayers = [mainLayer.sublayers objectsAtIndexes:indexSet];
+for (CATextLayer *textLayer in textLayers) {
+    [textLayer removeFromSuperlayer];
+}
+</pre>
+
+
+Keywords: <code>indexesOfObjectsPassingTest</code>, <code>removeFromSuperlayer</code></p>
+<p class=tags>#objective-c #ios</p>
+</article>
+
+<article class=regular id=p-5999039887>
+<p class=meta><span class=date>30/05/2011 22:33:00</span>
+<a class=llink href=../posts/5999039887.html>¶</a>
+<a href=http://www.ahwkong.com/post/5999039887 rel=canonical>●</a></p>
+<h2>Item 6:  Use delete on pointer members in destructors</h2>
+<p>Summary:
+
+
+</p><ul><li>deleting a null pointer is always safe</li>
+<li>
+Do not delete a pointer that was passed into a class in the first place
+</li>
+</ul>
+<p class=tags>#c++ #Effective C++</p>
+</article>
+
+<article class=regular id=p-5998846098>
+<p class=meta><span class=date>30/05/2011 22:21:00</span>
+<a class=llink href=../posts/5998846098.html>¶</a>
+<a href=http://www.ahwkong.com/post/5998846098 rel=canonical>●</a></p>
+<h2>Item 5:  Use the same form in corresponding uses of new and delete</h2>
+<p><pre class="brush: c">
+string *stringPtr2 = new string[100];
+ ...
+ delete [] stringPtr2;        // delete an array of object
+</pre></p>
+<p class=tags>#c++ #Effective C++</p>
+</article>
+
+<article class=regular id=p-5998507148>
+<p class=meta><span class=date>30/05/2011 22:01:04</span>
+<a class=llink href=../posts/5998507148.html>¶</a>
+<a href=http://www.ahwkong.com/post/5998507148 rel=canonical>●</a></p>
+<p>Another oldie: &#8220;Put The Blame On Mame&#8221; by Rita Hayworth</p>
+<p class=tags>#music</p>
+</article>
+
+<article class=regular id=p-5998352678>
+<p class=meta><span class=date>30/05/2011 21:51:02</span>
+<a class=llink href=../posts/5998352678.html>¶</a>
+<a href=http://www.ahwkong.com/post/5998352678 rel=canonical>●</a></p>
+<p>&#8220;Send Me to the Electric Chair&#8221; by Dinah Washington. Very interesting.</p>
+<p class=tags>#music</p>
+</article>
+
+<article class=regular id=p-5998276893>
+<p class=meta><span class=date>30/05/2011 21:46:01</span>
+<a class=llink href=../posts/5998276893.html>¶</a>
+<a href=http://www.ahwkong.com/post/5998276893 rel=canonical>●</a></p>
+<p>Etta James</p>
+<p class=tags>#music</p>
+</article>
+
+<article class=regular id=p-5997722246>
+<p class=meta><span class=date>30/05/2011 21:09:14</span>
+<a class=llink href=../posts/5997722246.html>¶</a>
+<a href=http://www.ahwkong.com/post/5997722246 rel=canonical>●</a></p>
+<h2>Item 4:   Prefer C++-style comments</h2>
+
+<p class=tags>#Effective C++ #c++</p>
+</article>
+
+<article class=regular id=p-5997673759>
+<p class=meta><span class=date>30/05/2011 21:05:56</span>
+<a class=llink href=../posts/5997673759.html>¶</a>
+<a href=http://www.ahwkong.com/post/5997673759 rel=canonical>●</a></p>
+<h2>Item 3: Prefer new and delete to malloc and free</h2>
+<p>The problem with malloc and free: they don&#8217;t know about constructors and destructors</p>
+<p class=tags>#Effective C++ #c++ #self-study</p>
+</article>
+
+<article class=regular id=p-5997010665>
+<p class=meta><span class=date>30/05/2011 20:20:00</span>
+<a class=llink href=../posts/5997010665.html>¶</a>
+<a href=http://www.ahwkong.com/post/5997010665 rel=canonical>●</a></p>
+<h2>Item 2:  Prefer <iostream> to <stdio.h></h2>
+<p>Advantage of <b>iostream</b>: type safety</p>
+
+<p><br/><b>iostream</b> vs <b>iostream.h</b>: <b>isostream</b> has its own namespace.</p>
+<p class=tags>#self-study #Effective C++ #c++</p>
+</article>
+
+<article class=regular id=p-5978423359>
+<p class=meta><span class=date>30/05/2011 07:47:00</span>
+<a class=llink href=../posts/5978423359.html>¶</a>
+<a href=http://www.ahwkong.com/post/5978423359 rel=canonical>●</a></p>
+<h2>Item 19:  Differentiate among member functions, non-member functions, and friend functions</h2>
+<p>Summary:</p>
+
+<p><b>Virtual functions</b> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p>  <br/><b>operator&#187;</b> and <b>operator&#171;</b> are never members. If f is <b>operator&#187;</b> or <b> operator&#171;</b>, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C. </p>
+
+<p><br/>
+Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.  </p>
+
+<p><br/>
+Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
+<p class=tags>#Effective C++ #c++ #self-study</p>
+</article>
+
+<article class=regular id=p-5967914767>
+<p class=meta><span class=date>30/05/2011 02:14:42</span>
+<a class=llink href=../posts/5967914767.html>¶</a>
+<a href=http://www.ahwkong.com/post/5967914767 rel=canonical>●</a></p>
+<h2>Item 1:  Prefer const and inline to #define</h2>
+<p>Classic example of why sometimes macro is a bad idea:
+
+<pre class="brush: c">
+
+#define max(a,b) ((a) &gt; (b) ? (a) : (b))
+
+max(++a, b);         // a is incremented twice
+max(++a, b+10);      // a is incremented once
+
+
+</pre></p>
+<p class=tags>#effective c++ #c++</p>
+</article>
+
+<article class=regular id=p-5966779736>
+<p class=meta><span class=date>30/05/2011 01:35:31</span>
+<a class=llink href=../posts/5966779736.html>¶</a>
+<a href=http://www.ahwkong.com/post/5966779736 rel=canonical>●</a></p>
+<p>The <b>explicit</b> keyword in C++ is used to declare explicit constructors. Explicit constructors are constructors that cannot take part in an implicit conversion</p>
+<p class=tags>#c++</p>
+</article>
+
+<article class=regular id=p-5965954476>
+<p class=meta><span class=date>30/05/2011 01:05:06</span>
+<a class=llink href=../posts/5965954476.html>¶</a>
+<a href=http://www.ahwkong.com/post/5965954476 rel=canonical>●</a></p>
+<h2>Item 38:  Never redefine an inherited default parameter value</h2>
+<p>Virtual functions are dynamically bound, but default parameters are statically bound. </p>
+
+<p>It means that you may end up invoking a virtual function defined in a derived class but using a default parameter value from a base class</p>
+<p class=tags>#c++ #effective c++ #self-study</p>
+</article>
+
+<article class=regular id=p-5961968377>
+<p class=meta><span class=date>29/05/2011 21:48:26</span>
+<a class=llink href=../posts/5961968377.html>¶</a>
+<a href=http://www.ahwkong.com/post/5961968377 rel=canonical>●</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Alexander%27s_Star">Alexander&#8217;s Star</a></p>
+<p class=tags>#TIL #Today I Learn</p>
+</article>
+
+<article class=regular id=p-5961356223>
+<p class=meta><span class=date>29/05/2011 21:06:52</span>
+<a class=llink href=../posts/5961356223.html>¶</a>
+<a href=http://www.ahwkong.com/post/5961356223 rel=canonical>●</a></p>
+<p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
+<p class=tags>#c++ #self-study</p>
+</article>
+
+<article class=regular id=p-5942654011>
+<p class=meta><span class=date>29/05/2011 07:39:00</span>
+<a class=llink href=../posts/5942654011.html>¶</a>
+<a href=http://www.ahwkong.com/post/5942654011 rel=canonical>●</a></p>
+<p><b>initialize</b> is a class method which will be called before any other method is called on a class. Alternatively use a function with <b>__attribute__ ((constructor))</b></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5941073480>
+<p class=meta><span class=date>29/05/2011 06:44:00</span>
+<a class=llink href=../posts/5941073480.html>¶</a>
+<a href=http://www.ahwkong.com/post/5941073480 rel=canonical>●</a></p>
+<p>To find out what iOS device is attached to the system, we can try monitor <a href="http://developer.apple.com/library/ios/#featuredarticles/ExternalAccessoryPT/Articles/MonitoringEvents.html">Monitoring Accessory-Related Events</a></p>
+<p class=tags>#ios</p>
+</article>
+
+<article class=regular id=p-5940804774>
+<p class=meta><span class=date>29/05/2011 06:35:31</span>
+<a class=llink href=../posts/5940804774.html>¶</a>
+<a href=http://www.ahwkong.com/post/5940804774 rel=canonical>●</a></p>
+<h2>Difference between setObject:forKey: and setValue:forKey: in  NSMutableDictionary</h2>
+<p>From <a href="http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653">SO</a></p>
+
+<p><b>setValue:forKey:</b> is part of the <b>NSKeyValueCoding</b> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <b>setValue:forKey:</b> is implemented in classes other than NSDictionary.</p>
+
+<p><b>setObject:forKey:</b> is<b> NSMutableDictionary</b>&#8217;s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It&#8217;s somewhat of a coincidence that the signatures are so similar.</p>
+
+<p>What adds to the confusion is that <b>NSMutableDictionary</b>&#8217;s implementation of setValue:forKey: is equivalent to<b> setObject:forKey:</b> in most cases. In other classes, <b>setValue:forKey: </b> changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a &#8216;@&#8217; character &#8212; in which case it modifies member variables.</p>
+
+<p>So in a nutshell, use <b>setObject:forKey: </b> when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
+<p class=tags>#objective-c #stackoverflow</p>
+</article>
+
+<article class=regular id=p-5898731686>
+<p class=meta><span class=date>28/05/2011 01:21:58</span>
+<a class=llink href=../posts/5898731686.html>¶</a>
+<a href=http://www.ahwkong.com/post/5898731686 rel=canonical>●</a></p>
+<p>Boby guard technique</p>
+
+<p>1) Side-by-side/hand holding/hand on shoulder</p>
+
+<p>2) From behind (palm strike or knee back attack + head turn)</p>
+
+<p>3) From side</p>
+<p class=tags>#krav maga</p>
+</article>
+
+<article class=regular id=p-5886593746>
+<p class=meta><span class=date>27/05/2011 12:52:00</span>
+<a class=llink href=../posts/5886593746.html>¶</a>
+<a href=http://www.ahwkong.com/post/5886593746 rel=canonical>●</a></p>
+<h2>Stupid mistake</h2>
+<p>
+My app crashed for no reason.
+</p>
+<p>
+Turns out I did it 
+</p>
+<pre class="brush: c">
+[self.view.addSublayer:myLayer];
+[myLayer dealloc];
+</pre>
+
+when I mean to do it
+
+<pre class="brush: c">
+[self.view.addSublayer:myLayer];
+[myLayer release];
+</pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5844393478>
+<p class=meta><span class=date>26/05/2011 08:03:10</span>
+<a class=llink href=../posts/5844393478.html>¶</a>
+<a href=http://www.ahwkong.com/post/5844393478 rel=canonical>●</a></p>
+<h2>Counting unique items in an array</h2>
+<p>From <a href="http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754">SO</a>
+
+<pre class="brush: c">
+NSCountedSet *cs = [NSCountedSet new];
+for(id anObj in someArray) 
+    [cs addObject: anObj];
+
+// then, you can access counts like this:
+.... count = [cs countForObject: anObj]; ...
+
+[cs release];
+
+</pre></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5844217301>
+<p class=meta><span class=date>26/05/2011 07:57:48</span>
+<a class=llink href=../posts/5844217301.html>¶</a>
+<a href=http://www.ahwkong.com/post/5844217301 rel=canonical>●</a></p>
+<p>When I use google doc in chrome, I can directly print the document to the printer by just pressing the printer icon. </p>
+
+<p>It was less straight-forward in the past. It usually involved downloading a pdf rendering of the file, then print it to a printer via the pdf reader.</p>
+
+<p>Nice.</p>
+</article>
+
+<article class=regular id=p-5815038508>
+<p class=meta><span class=date>25/05/2011 09:41:00</span>
+<a class=llink href=../posts/5815038508.html>¶</a>
+<a href=http://www.ahwkong.com/post/5815038508 rel=canonical>●</a></p>
+<h2>Liskov substitution principle</h2>
+<p><a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov Principle</a>: no subclass should take away something that&#8217;s in the superclass</p>
+<p class=tags>#computer science</p>
+</article>
+
+<article class=quote id=p-5810996367>
+<p class=meta><span class=date>25/05/2011 07:42:00</span>
+<a class=llink href=../posts/5810996367.html>¶</a>
+<a href=http://www.ahwkong.com/post/5810996367 rel=canonical>●</a></p>
+<blockquote><p>It is like you want to be a nun because you saw a flying nun.</p></blockquote>
+<p>Edward Conlon, author of <i>Blue Blood</i>, on people wanting to join CSI after watching the TV show</p>
+<p class=tags>#fun</p>
+</article>
+
+<article class=regular id=p-5797170054>
+<p class=meta><span class=date>24/05/2011 20:12:00</span>
+<a class=llink href=../posts/5797170054.html>¶</a>
+<a href=http://www.ahwkong.com/post/5797170054 rel=canonical>●</a></p>
+<h2>Earn another experience point</h2>
+<p>Wrote up a simple test module code (simply called &#8216;test&#8217;), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<b>r</b>) and repayment periods (<b>n</b>).</p>
+
+<p>When I compile the module, I get this error message:</p>
+
+<p><code>Warning: this expression will fail with a 'badarith' exception</code></p>
+
+<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
+
+<p>Now I get another error message:</p>
+
+<p><code><br/>
+exception error: no function clause matching test:mp(100000, 0.00625, 360)<br/></code></p>
+
+<p>Turns out the function declaration is <code>mp(B, r, n) </code>.</p>
+
+<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5796329592>
+<p class=meta><span class=date>24/05/2011 19:00:05</span>
+<a class=llink href=../posts/5796329592.html>¶</a>
+<a href=http://www.ahwkong.com/post/5796329592 rel=canonical>●</a></p>
+<p>For some reason my Chrome installation is gone from my window XP at work. I have to re-install and redo some setup again</p>
+
+<p>There are two must-install chrome extensions:</p>
+
+<ul><li>Ad block</li>
+<li>Ghostery</li>
+</ul>
+</article>
+
+<article class=photo id=p-5778741381>
+<p class=meta><span class=date>24/05/2011 07:48:26</span>
+<a class=llink href=../posts/5778741381.html>¶</a>
+<a href=http://www.ahwkong.com/post/5778741381 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_llo4kq1ZLS1qbpfzro1_400.png"></p>
+<p>Simple grid like arrangement on iOS</p>
+<p class=tags>#ios</p>
+</article>
+
+<article class=quote id=p-5764934331>
+<p class=meta><span class=date>23/05/2011 21:55:25</span>
+<a class=llink href=../posts/5764934331.html>¶</a>
+<a href=http://www.ahwkong.com/post/5764934331 rel=canonical>●</a></p>
+<blockquote><p>A friend helps you move. </p>
+
+<p>A good friend helps you move a body</p></blockquote>
+<p>Rich Hall</p>
+<p class=tags>#fun</p>
+</article>
+
+<article class=regular id=p-5760858058>
+<p class=meta><span class=date>23/05/2011 16:43:00</span>
+<a class=llink href=../posts/5760858058.html>¶</a>
+<a href=http://www.ahwkong.com/post/5760858058 rel=canonical>●</a></p>
+<h2>RSS Feed Parsing Tasks (I)</h2>
+<p>
+<b>Goal:</b> return true if the root element looks something like &lt;rss version=&#8221;2.0&#8221;&gt;
+</p>
+
+<p>
+(Actually do not know why the use of &#8216;2.0&#8217; and &#8220;2.0&#8221; in the comparison below can cause a difference in outcome)
+</p>
+
+<pre class="brush: erlang">
+-module(rss_parse).
+
+-export([test/0]).
+-export([is_rss2_feed/1]).
+
+-include_lib("xmerl/include/xmerl.hrl").
+
+
+test()-&gt;
+        is_rss2_feed('digg-science-rss1.xml').
+
+
+is_rss2_feed(Filename) -&gt;
+        {ParseResult, _} = xmerl_scan:file(Filename),
+        Attrs = ParseResult#xmlElement.attributes,
+        is_rss2_feed_test(Attrs).
+
+is_rss2_feed_test([]) -&gt;
+        false;
+is_rss2_feed_test([#xmlAttribute{name=version,value="2.0"}|_T]) -&gt;
+        true;
+is_rss2_feed_test([_|T]) -&gt;
+        is_rss2_feed_test(T).
+</pre>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5741485064>
+<p class=meta><span class=date>23/05/2011 05:46:28</span>
+<a class=llink href=../posts/5741485064.html>¶</a>
+<a href=http://www.ahwkong.com/post/5741485064 rel=canonical>●</a></p>
+<p><code>CGAffineTransformMakeRotation</code> vs <code> CGAffineTransformRotate</code></p>
+</article>
+
+<article class=regular id=p-5724362792>
+<p class=meta><span class=date>22/05/2011 16:41:00</span>
+<a class=llink href=../posts/5724362792.html>¶</a>
+<a href=http://www.ahwkong.com/post/5724362792 rel=canonical>●</a></p>
+<p>Note to self: <b>net_adm</b> can be used to discover the erlang cluster topology.
+
+<pre class="brush: erlang">
+10&gt; net_adm:world().    
+** exception exit: {error,enoent}
+     in function  net_adm:world/1
+
+</pre>
+
+<code>enoent</code> is most likely a result of missing file</p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5724311546>
+<p class=meta><span class=date>22/05/2011 16:38:12</span>
+<a class=llink href=../posts/5724311546.html>¶</a>
+<a href=http://www.ahwkong.com/post/5724311546 rel=canonical>●</a></p>
+<p>Note to self: <b>auth</b> module can help us to find out the cookie of nodes.
+
+<pre class="brush: erlang">
+7&gt; auth:cookie().
+nocookie
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5724189909>
+<p class=meta><span class=date>22/05/2011 16:31:00</span>
+<a class=llink href=../posts/5724189909.html>¶</a>
+<a href=http://www.ahwkong.com/post/5724189909 rel=canonical>●</a></p>
+<p>Note to self: cannot add ivar to a category @interface</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5723114401>
+<p class=meta><span class=date>22/05/2011 15:37:00</span>
+<a class=llink href=../posts/5723114401.html>¶</a>
+<a href=http://www.ahwkong.com/post/5723114401 rel=canonical>●</a></p>
+<h2>To detect iPhone 4/Retina Display</h2>
+<p>A few posts about this topic:
+
+<ul><li>
+<a href="http://stackoverflow.com/questions/3294100/how-to-differentiate-between-iphone4-and-iphone-3">The accepted answer does not take iPad into account</a>
+</li>
+<li>
+
+<a href="http://stackoverflow.com/questions/3504173/detect-retina-display/4641481#4641481">Probably the definite answer</a>
+</li>
+
+</ul><pre class="brush: c">
+if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &amp;&amp;
+    ([UIScreen mainScreen].scale == 2.0)) {
+  // Retina display
+} else {
+  // non-Retina display
+}
+</pre></p>
+<p class=tags>#ios</p>
+</article>
+
+<article class=photo id=p-5718675568>
+<p class=meta><span class=date>22/05/2011 12:55:00</span>
+<a class=llink href=../posts/5718675568.html>¶</a>
+<a href=http://www.ahwkong.com/post/5718675568 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_llktfpZxg11qbpfzro1_1280.png"></p>
+<p>To add framework to a project in XCode 4</p>
+<p class=tags>#xcode4</p>
+</article>
+
+<article class=regular id=p-5689829696>
+<p class=meta><span class=date>21/05/2011 15:47:00</span>
+<a class=llink href=../posts/5689829696.html>¶</a>
+<a href=http://www.ahwkong.com/post/5689829696 rel=canonical>●</a></p>
+<h2>Sieve of Eratosthenes, Process-Style</h2>
+<p>Obviously I am less familiar with the syntax than I was a year ago.</p>
+
+<p><b>Experience Point:</b> Whenever there seems to be a need to use <code>if</code> inside the code, it is better to check if we can use guard instead.</p>
+
+
+<pre class="brush: erlang">
+
+-module(proc_sieve).
+
+-export([generate/1]).
+
+
+-define(TRACE(X), io:format("{~p,~p}: ~p~n", [?MODULE,?LINE,X])).
+-define(TIMEOUT, 1000000).
+
+sieve2(0, InvalidPid) -&gt;
+    receive 
+        P -&gt; sieve2(P, InvalidPid)
+    after ?TIMEOUT -&gt;
+        ?TRACE("time out in P=0~n")
+    end; 
+
+%% starting condition
+sieve2(P, NextPid) when is_pid(NextPid) -&gt;
+    receive 
+        {done, From} -&gt;
+            NextPid ! {done, self()},
+            receive 
+                LstOfRes -&gt; 
+                    From ! [P] ++ LstOfRes 
+            end;
+        N when N rem P == 0 -&gt; 
+            sieve2(P, NextPid); %% this semicolon is needed
+        N when N rem P /= 0 -&gt; 
+            NextPid ! N,
+            sieve2(P, NextPid) %% put semicolon here causes syntax error
+    after ?TIMEOUT -&gt;
+        ?TRACE(io:format("time out in is_pid clause P=~p~n", [P]))
+    end;
+ sieve2(P, Invalid) -&gt;
+    receive 
+        {done, From} -&gt;
+            %% no downstream process, just send the result back 
+            From ! [P];
+        N when N rem P == 0 -&gt; 
+            sieve2(P, Invalid); %% this semicolon is needed
+        N when N rem P /= 0 -&gt; 
+            ?TRACE(io:format("Starting ~p for ~p~n", [self(), N])), 
+            Pid = spawn(proc_sieve, sieve2, [0, void]),
+            Pid ! N,
+            sieve2(P, Pid) %% put semicolon here causes syntax error
+    after ?TIMEOUT -&gt;
+        ?TRACE(io:format("time out in no pid clause P=~p~n", [P]))
+    end.
+    
+sieve() -&gt;
+    spawn(proc_sieve, sieve2, [0, void]).
+
+generate(MaxN) -&gt;
+        Pid = sieve(),
+        generate2(Pid, 2, MaxN).
+
+generate2(Pid, End, End) -&gt;
+        Pid ! {done, self()},
+        receive
+                Res -&gt; Res
+        end;
+
+generate2(Pid, N, End) -&gt;
+        Pid ! N,
+        generate2(Pid, N + 1, End).
+
+
+</pre>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5678250254>
+<p class=meta><span class=date>21/05/2011 08:45:00</span>
+<a class=llink href=../posts/5678250254.html>¶</a>
+<a href=http://www.ahwkong.com/post/5678250254 rel=canonical>●</a></p>
+<h2>Generate a list of number</h2>
+<p>Python
+
+<pre class="brush: python">
+&gt;&gt;&gt; range(1, 11)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</pre>
+
+Erlang
+
+
+<pre class="brush: erlang">
+
+1&gt; lists:seq(1,10).
+[1,2,3,4,5,6,7,8,9,10]
+
+</pre>
+
+And the Java way
+
+
+<pre class="brush: java">
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class TestGen {
+	
+	@Test
+	public void testGen() {
+		List l = new ArrayList();
+		for (int i = 0; i &lt;= 10; i++) {
+			l.add(new Integer(i));
+		}
+		
+		System.out.print(l);
+	}
+
+}
+
+
+</pre></p>
+<p class=tags>#erlang #python #java</p>
+</article>
+
+<article class=regular id=p-5676800268>
+<p class=meta><span class=date>21/05/2011 07:50:58</span>
+<a class=llink href=../posts/5676800268.html>¶</a>
+<a href=http://www.ahwkong.com/post/5676800268 rel=canonical>●</a></p>
+<p>kick advance (back foot in, front foot kick)</p>
+
+<p>kick retreat (front foot back, back foot kick)</p>
+
+<p>wrist control (both thumb on/below knuckle, elbow up)</p>
+
+<p>wrist/knife control</p>
+
+<p>knife upfront, knife (long range), knife (close range)</p>
+<p class=tags>#krav maga</p>
+</article>
+
+<article class=regular id=p-5663294755>
+<p class=meta><span class=date>20/05/2011 19:30:06</span>
+<a class=llink href=../posts/5663294755.html>¶</a>
+<a href=http://www.ahwkong.com/post/5663294755 rel=canonical>●</a></p>
+<h2>Erlang built-in functions for working with tuples</h2>
+<p><pre>
+size(Tuple)
+
+element(Pos, Tuple)
+
+setelement(Pos, Tuple, Val)
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5662989288>
+<p class=meta><span class=date>20/05/2011 19:00:06</span>
+<a class=llink href=../posts/5662989288.html>¶</a>
+<a href=http://www.ahwkong.com/post/5662989288 rel=canonical>●</a></p>
+<h2>$ in erlang</h2>
+<p><b>$</b> followed by a character evaluates to the character’s value
+
+<pre>
+
+
+3&gt; $$.
+36
+4&gt; $..
+46
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5661137162>
+<p class=meta><span class=date>20/05/2011 16:25:00</span>
+<a class=llink href=../posts/5661137162.html>¶</a>
+<a href=http://www.ahwkong.com/post/5661137162 rel=canonical>●</a></p>
+<h2>Some erlang predefined macros</h2>
+<p><ul><li><b>?MODULE</b> – name of current module, as an atom</li>
+<li><b>?MODULE_STRING</b> – name of current module, as a string</li>
+<li><b>?FILE</b> – filename of the current module</li>
+<li><b>?LINE</b> – current line-number</li>
+<ul></ul></ul></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5660996693>
+<p class=meta><span class=date>20/05/2011 16:16:00</span>
+<a class=llink href=../posts/5660996693.html>¶</a>
+<a href=http://www.ahwkong.com/post/5660996693 rel=canonical>●</a></p>
+<h2>Erlang shell command rr</h2>
+<p><ul><li>“Read records”</li>
+<li>Takes a module name (atom) or a file name (string)</li>
+</ul></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=photo id=p-5638805068>
+<p class=meta><span class=date>20/05/2011 01:26:24</span>
+<a class=llink href=../posts/5638805068.html>¶</a>
+<a href=http://www.ahwkong.com/post/5638805068 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_llg87zf8gm1qbpfzro1_400.png"></p>
+<p>Root View Controller&#8217;s connections</p>
+</article>
+
+<article class=photo id=p-5636895222>
+<p class=meta><span class=date>19/05/2011 23:30:00</span>
+<a class=llink href=../posts/5636895222.html>¶</a>
+<a href=http://www.ahwkong.com/post/5636895222 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_llg2uqNiKZ1qbpfzro1_400.png"></p>
+<p>Detail View Controller&#8217;s connection</p>
+</article>
+
+<article class=regular id=p-5611932618>
+<p class=meta><span class=date>19/05/2011 04:40:34</span>
+<a class=llink href=../posts/5611932618.html>¶</a>
+<a href=http://www.ahwkong.com/post/5611932618 rel=canonical>●</a></p>
+<h2>Mobius (III)</h2>
+<p>My first part of erlang self-study has come to an end.
+
+Somehow I cannot get <code>mobius:find_square_multiples(3, 20)</code> to work as required <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lab1/index.html">here</a>. 
+
+<pre class="brush: erlang">
+-module(mobius).
+
+-export([is_prime/1]).
+-export([prime_factors/1]).
+-export([is_square_multiple/1]).
+-export([find_square_multiples/2]).
+
+is_prime(N) -&gt;
+is_prime_test(N, trunc(math:sqrt(N))).
+
+
+is_prime_test(1, _) -&gt; true;
+is_prime_test(2, _) -&gt; true;
+is_prime_test(_, 1) -&gt; true; %% termination condition
+is_prime_test(Testee, N) when Testee rem N =:= 0
+-&gt; false;
+is_prime_test(Testee, N) when Testee rem N =/= 0
+-&gt; is_prime_test(Testee, N-1).
+
+
+prime_factors(N) -&gt;
+    prime_factors2(N, [], 2).
+
+prime_factors2(1, [], _) -&gt; [1];
+prime_factors2(N, Result, N) -&gt; Result ++ [N];
+prime_factors2(N, Result, M) when N rem M =/= 0
+    -&gt; prime_factors2(N, Result, M+1);
+prime_factors2(N, Result, M) when N rem M =:= 0
+    -&gt; prime_factors2(N div M, Result ++ [M] , 2).
+
+
+is_square_multiple(N) -&gt;
+    Res = fmf([], prime_factors(N)),
+    Res2 = lists:filter(fun({_, F}) -&gt; F &gt; 1 end, Res),
+    length(Res2) &gt;= 1.
+
+fmf(Res, [H|T]) -&gt;
+    FullLen = length([H|T]),
+    Tmp = lists:filter(fun(X) -&gt; X =/= H end, T),
+    fmf([{H, FullLen - length(Tmp)}] ++ Res, Tmp);
+    fmf(Res, []) -&gt;
+    Res.
+
+%% By definition the Count must be bigger than 1
+is_square_multiple2(N, Count) when Count &gt; 1 -&gt;
+    Res = fmf([], prime_factors(N)),
+    Res2 = lists:filter(fun({_, F}) -&gt; F &gt;= Count end, Res),
+    length(Res2) &gt;= 1.
+
+
+find_square_multiples(Count, MaxN) -&gt;
+    fsm(Count, MaxN, is_square_multiple2(MaxN, Count)).
+
+fsm(_Count, Counter, true) -&gt;
+    Counter;
+fsm(_, 2, _) -&gt;
+    fail; %% search failed
+fsm(Count, Counter, false) -&gt;
+    fsm(Count, Counter-1, is_square_multiple2(Counter-1, Count)).
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5598127679>
+<p class=meta><span class=date>18/05/2011 14:07:15</span>
+<a class=llink href=../posts/5598127679.html>¶</a>
+<a href=http://www.ahwkong.com/post/5598127679 rel=canonical>●</a></p>
+<p>Loving JQuery.
+
+I want to use javascript to toggle the highlight of some anchor tags. This is the first cut:
+
+<pre class="brush: js">
+function handle_txn_group_links(txn_group) {
+    $('.txn_group_link').each(function() {
+        $(this).removeClass('selected-item');
+    });
+    $('.txn_group_link')
+            .filter('[txn_group="' + txn_group + '"]')
+            .addClass('selected-item');
+};
+</pre>
+
+Basically it steps thru all links of the same class, turn off the highlight, then set the candidate link to highlight css class.
+
+Then I realised there is a smarter way to do it through the use of <code>siblings()</code>:
+
+<pre class="brush: js">
+            function handle_txn_group_links(txn_group) {
+				$('.txn_group_link')
+						.filter('[txn_group="' + txn_group + '"]')
+						.addClass('selected-item').siblings().removeClass('selected-item');
+            };
+
+</pre></p>
+<p class=tags>#jquery</p>
+</article>
+
+<article class=regular id=p-5573888817>
+<p class=meta><span class=date>17/05/2011 21:39:00</span>
+<a class=llink href=../posts/5573888817.html>¶</a>
+<a href=http://www.ahwkong.com/post/5573888817 rel=canonical>●</a></p>
+<h2>To convert an NSString into an NSNumber</h2>
+<p><pre class="brush: c">
+NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+[f setNumberStyle:NSNumberFormatterDecimalStyle];
+NSNumber * myNumber = [f numberFromString:@"42"];
+[f release];
+</pre></p>
+<p class=tags>#ios</p>
+</article>
+
+<article class=regular id=p-5546012348>
+<p class=meta><span class=date>17/05/2011 01:45:13</span>
+<a class=llink href=../posts/5546012348.html>¶</a>
+<a href=http://www.ahwkong.com/post/5546012348 rel=canonical>●</a></p>
+<p>Trying to add SplitViewController to <code>self.window</code> as a RootViewController. Still not working. </p>
+
+<p>Need to work on the XIB magic</p>
+</article>
+
+<article class=regular id=p-5545670118>
+<p class=meta><span class=date>17/05/2011 01:26:59</span>
+<a class=llink href=../posts/5545670118.html>¶</a>
+<a href=http://www.ahwkong.com/post/5545670118 rel=canonical>●</a></p>
+<p>Getting to understand more about the role of rootViewController</p>
+</article>
+
+<article class=regular id=p-5544709639>
+<p class=meta><span class=date>17/05/2011 00:30:59</span>
+<a class=llink href=../posts/5544709639.html>¶</a>
+<a href=http://www.ahwkong.com/post/5544709639 rel=canonical>●</a></p>
+<h2>If external screen is attached to an ios device</h2>
+<p>This will return True:
+
+<pre class="brush: c">
+[[UIScreen screens] count] &gt; 1
+</pre></p>
+</article>
+
+<article class=regular id=p-5506236422>
+<p class=meta><span class=date>15/05/2011 20:17:00</span>
+<a class=llink href=../posts/5506236422.html>¶</a>
+<a href=http://www.ahwkong.com/post/5506236422 rel=canonical>●</a></p>
+<p>Here is a code fragment from XCode 4 generated iOS app template:
+
+<pre class="brush: c">
+
+@interface viewexampleAppDelegate : NSObject &lt; UIApplicationDelegate &gt; {
+}
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet viewexampleViewController *viewController;
+@end
+
+</pre>
+
+In the .m file, 
+
+
+<pre class="brush: c">
+
+
+@synthesize window=_window;
+@synthesize viewController=_viewController;
+
+</pre>
+
+<code>_window</code> is not declared anywhere. A backing instance variable by this name will be generated automatically</p>
+<p class=tags>#ios</p>
+</article>
+
+<article class=regular id=p-5476741786>
+<p class=meta><span class=date>14/05/2011 21:08:00</span>
+<a class=llink href=../posts/5476741786.html>¶</a>
+<a href=http://www.ahwkong.com/post/5476741786 rel=canonical>●</a></p>
+<p>To exit an app when <code>applicationDidEnterBackground:(UIApplication *)application </code> is called, try set <code>UIApplicationExitsOnSuspend</code> to <code>YES</code> in project plist file.</p>
+<p class=tags>#ios</p>
+</article>
+
+<article class=regular id=p-5474554164>
+<p class=meta><span class=date>14/05/2011 17:54:00</span>
+<a class=llink href=../posts/5474554164.html>¶</a>
+<a href=http://www.ahwkong.com/post/5474554164 rel=canonical>●</a></p>
+<p>Removing <code>*.xcodeproj/project.xcworkspace/</code> can reset the window/workspace settings in xcode 4</p>
+<p class=tags>#xcode4</p>
+</article>
+
+<article class=regular id=p-5449551106>
+<p class=meta><span class=date>13/05/2011 23:38:00</span>
+<a class=llink href=../posts/5449551106.html>¶</a>
+<a href=http://www.ahwkong.com/post/5449551106 rel=canonical>●</a></p>
+<p>
+Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a>:
+</p>
+
+<p>
+<code> math</code> module contains a <code>sqrt</code> function, but 
+can’t pass it as an argument.
+</p>
+<p>
+Module functions aren’t higher-order function.
+</p>
+<p>
+Instead, we can wrap it with a <b>fun</b>
+</p>
+<pre class="brush: erl">
+1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]).
+[3.00000,4.00000,5.00000
+</pre>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5449490950>
+<p class=meta><span class=date>13/05/2011 23:34:00</span>
+<a class=llink href=../posts/5449490950.html>¶</a>
+<a href=http://www.ahwkong.com/post/5449490950 rel=canonical>●</a></p>
+<p>Did not know I can declare an anonymous function with multiple clauses as such:
+
+<pre class="brush: erl">
+Abs = fun
+(X) when X &gt;= 0 -&gt; X;
+(X) -&gt; -X
+end.
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5442998050>
+<p class=meta><span class=date>13/05/2011 15:01:46</span>
+<a class=llink href=../posts/5442998050.html>¶</a>
+<a href=http://www.ahwkong.com/post/5442998050 rel=canonical>●</a></p>
+<h2>Mobius (II)</h2>
+<p>Find all prime factors
+
+<pre class="brush: erl">
+-module(mobius).
+
+-export([is_prime/1]).
+-export([prime_factors/1]).
+
+is_prime(N) -&gt;
+        is_prime_test(N, trunc(math:sqrt(N))).
+
+
+is_prime_test(1, _) -&gt; true;
+is_prime_test(2, _) -&gt; true;
+is_prime_test(_, 1) -&gt; true; %% termination condition
+is_prime_test(Testee, N) when Testee rem N =:= 0
+                        -&gt; false;
+is_prime_test(Testee, N) when Testee rem N =/= 0
+                        -&gt; is_prime_test(Testee, N-1).
+
+
+prime_factors(N) -&gt;
+        factor2(N, [], 2).
+
+factor2(1, [], _) -&gt; [1];
+factor2(N, Result, N) -&gt; Result ++ [N];
+factor2(N, Result, M) when N rem M =/= 0
+                -&gt; factor2(N, Result, M+1);
+factor2(N, Result, M) when N rem M =:= 0
+                -&gt; factor2(N div M, Result ++ [M] , 2).
+
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5441456212>
+<p class=meta><span class=date>13/05/2011 13:45:00</span>
+<a class=llink href=../posts/5441456212.html>¶</a>
+<a href=http://www.ahwkong.com/post/5441456212 rel=canonical>●</a></p>
+<h2>Mobius</h2>
+<p>A simple prime number test rountine
+
+
+<pre class="brush: erl">
+
+-module(mobius).
+
+-export([is_prime/1]).
+-export([is_prime_test/2]).
+
+is_prime(N) -&gt;
+        is_prime_test(N, trunc(math:sqrt(N))).
+
+
+is_prime_test(1, _) -&gt; true;
+is_prime_test(2, _) -&gt; true;
+is_prime_test(_, 1) -&gt; true; %% termination condition
+is_prime_test(Testee, N) when Testee rem N =:= 0
+                        -&gt; false;
+is_prime_test(Testee, N) when Testee rem N =/= 0
+                        -&gt; is_prime_test(Testee, N-1).
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=photo id=p-5418642232>
+<p class=meta><span class=date>12/05/2011 21:27:00</span>
+<a class=llink href=../posts/5418642232.html>¶</a>
+<a href=http://www.ahwkong.com/post/5418642232 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_ll2fgxjEHu1qbpfzro1_1280.png"></p>
+<p>To <code>cd()</code> in erlang on MS window, one must escape the path separator properly.</p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5415580642>
+<p class=meta><span class=date>12/05/2011 16:59:00</span>
+<a class=llink href=../posts/5415580642.html>¶</a>
+<a href=http://www.ahwkong.com/post/5415580642 rel=canonical>●</a></p>
+<h2>Warm Up (III)</h2>
+<p>Use of<b> tail-recursion</b>
+
+<pre class="brush: erl">
+
+-module(fib).
+
+-export([fib_p/1, fib_g/1, tail_fib/1]).
+
+-export([test/0, test_t/0]).
+
+
+%% fib_p: non-tail recursion version
+fib_p(0) -&gt; 0;
+fib_p(1) -&gt; 1;
+fib_p(N) -&gt; fib_p(N-1) + fib_p(N-2).
+
+
+%% guard
+fib_g(N) when N == 0 -&gt; 0 ;
+fib_g(N) when N == 1 -&gt; 1;
+fib_g(N) -&gt; fib_g(N-1) + fib_g(N-2).
+
+
+%% tail version
+tail_fib(N)
+        -&gt; fib_t(N, 0, []).
+
+fib_t(1, _, _) -&gt; 1; %% special condition 1
+fib_t(2, _, _) -&gt; 1; %% special condition 2
+fib_t(EndCond, 0, [])
+                -&gt; fib_t(EndCond, 1, [1]); %% initial condition 1
+fib_t(EndCond, 1, [1])
+                -&gt; fib_t(EndCond, 2, [1, 1]); %% initial condition 2
+fib_t(EndCond, Counter, [X,Y|Tail]) when EndCond =/= Counter
+                -&gt; fib_t(EndCond, Counter+1, [X+Y, X, Y|Tail]);
+fib_t(N, N, [Head| _])
+                -&gt; Head. %% end condition
+
+%% test
+test() -&gt;
+        io:format("fib_p ~p~n", [fib_p(10)]),
+        io:format("fib_g ~p~n", [fib_g(10)]),
+        io:format("tail_fib ~p~n", [tail_fib(10)]).
+
+test_t() -&gt;
+        timer:tc(fib, fib_g, [10]).
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5412233175>
+<p class=meta><span class=date>12/05/2011 13:45:44</span>
+<a class=llink href=../posts/5412233175.html>¶</a>
+<a href=http://www.ahwkong.com/post/5412233175 rel=canonical>●</a></p>
+<h2>Warm Up (II)</h2>
+<p>Using <b>guard</b>:
+
+<pre class="brush: erl">
+-module(fib).
+
+-export([fib_p/1, fib_g/1]).
+
+-export([test/0, test_t/0]).
+
+
+%% fib_p: non-tail recursion version
+fib_p(0) -&gt; 0;
+fib_p(1) -&gt; 1;
+fib_p(N) -&gt; fib_p(N-1) + fib_p(N-2).
+
+
+%% guard
+fib_g(N) when N == 0 -&gt; 0 ;
+fib_g(N) when N == 1 -&gt; 1;
+fib_g(N) -&gt; fib_g(N-1) + fib_g(N-2).
+
+
+%% test
+test() -&gt;
+        fib_p(10),
+        fib_g(10).
+
+test_t() -&gt;
+        timer:tc(fib, fib_g, [10]).
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5409864307>
+<p class=meta><span class=date>12/05/2011 12:20:22</span>
+<a class=llink href=../posts/5409864307.html>¶</a>
+<a href=http://www.ahwkong.com/post/5409864307 rel=canonical>●</a></p>
+<h2>Warm Up</h2>
+<p>Fibonacci function, according to <a href="http://en.wikipedia.org/wiki/Fibonacci_number">wikipedia</a>
+
+<pre class="brush: erl">
+-module(fib).
+
+-export([fib/1]).
+
+fib(0) -&gt; 0;
+
+fib(1) -&gt; 1;
+
+fib(N) -&gt; fib(N-1) + fib(N-2).
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>
+
+<article class=regular id=p-5389068846>
+<p class=meta><span class=date>11/05/2011 22:07:35</span>
+<a class=llink href=../posts/5389068846.html>¶</a>
+<a href=http://www.ahwkong.com/post/5389068846 rel=canonical>●</a></p>
+<p>Happy to have enabled syntax highlight in this blog</p>
+</article>
+
+<article class=regular id=p-5374715698>
+<p class=meta><span class=date>11/05/2011 09:50:09</span>
+<a class=llink href=../posts/5374715698.html>¶</a>
+<a href=http://www.ahwkong.com/post/5374715698 rel=canonical>●</a></p>
+<p>Hammer</p>
+
+<p>Side hammer, back hammer</p>
+
+<p>left strike, step forward, hammer, fighting stance, move around</p>
+<p class=tags>#krav maga</p>
+</article>
+
+<article class=regular id=p-5182164222>
+<p class=meta><span class=date>04/05/2011 14:20:00</span>
+<a class=llink href=../posts/5182164222.html>¶</a>
+<a href=http://www.ahwkong.com/post/5182164222 rel=canonical>●</a></p>
+<h2>Reversing a list with slice in python</h2>
+<p><pre class="brush: py">
+
+foo = ['red', 'white', 'blue', 1, 2, 3]
+
+foo[-1::-1]
+
+</pre></p>
+<p class=tags>#python</p>
+</article>
+
+<article class=regular id=p-5157584144>
+<p class=meta><span class=date>03/05/2011 19:50:00</span>
+<a class=llink href=../posts/5157584144.html>¶</a>
+<a href=http://www.ahwkong.com/post/5157584144 rel=canonical>●</a></p>
+<p>Hook and uppercut</p>
+
+<p>Turn the body</p>
+
+<p>Don&#8217;t send signal with the arms</p>
+
+<p>Hold fist properly</p>
+<p class=tags>#krav maga</p>
+</article>
+
+<article class=regular id=p-5141033780>
+<p class=meta><span class=date>03/05/2011 07:12:49</span>
+<a class=llink href=../posts/5141033780.html>¶</a>
+<a href=http://www.ahwkong.com/post/5141033780 rel=canonical>●</a></p>
+<p><a href="http://en.wikipedia.org/wiki/GLSL">GLSL</a></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5140582900>
+<p class=meta><span class=date>03/05/2011 06:56:00</span>
+<a class=llink href=../posts/5140582900.html>¶</a>
+<a href=http://www.ahwkong.com/post/5140582900 rel=canonical>●</a></p>
+<p>New OpenGL API</p>
+
+<pre><code>glPointSize(15); // 15 desired size
+</code></pre>
+
+<p>equivalent to</p>
+
+<pre><code>float params[] = { 1, 0, 0 };
+glPointParameterfv(GL_POINT_DISTANCE_ATTENUATION, params);
+</code></pre>
+
+<p>The underlying calculation:</p>
+
+<pre><code>actualSize = desiredSize / sqrt(p[0] + p[1] * d + p[2] * d * d)
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5139355717>
+<p class=meta><span class=date>03/05/2011 06:11:42</span>
+<a class=llink href=../posts/5139355717.html>¶</a>
+<a href=http://www.ahwkong.com/post/5139355717 rel=canonical>●</a></p>
+<p><code>NSManagedObject::willTurnIntoFault</code></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5100977256>
+<p class=meta><span class=date>02/05/2011 00:48:00</span>
+<a class=llink href=../posts/5100977256.html>¶</a>
+<a href=http://www.ahwkong.com/post/5100977256 rel=canonical>●</a></p>
+<p>Reading about GameKit and Session</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5097610507>
+<p class=meta><span class=date>01/05/2011 21:20:55</span>
+<a class=llink href=../posts/5097610507.html>¶</a>
+<a href=http://www.ahwkong.com/post/5097610507 rel=canonical>●</a></p>
+<p><strong>VBO</strong>: OpenGL Vertex Buffer Object</p>
+</article>
+
+<article class=regular id=p-5097506923>
+<p class=meta><span class=date>01/05/2011 21:12:00</span>
+<a class=llink href=../posts/5097506923.html>¶</a>
+<a href=http://www.ahwkong.com/post/5097506923 rel=canonical>●</a></p>
+<p>Just learn something new to me: <a href="http://developer.apple.com/library/ios/#documentation/uikit/reference/UISegmentedControl_Class/Reference/UISegmentedControl.html">UISegmentedControl</a>&#160;:</p>
+
+<pre><code>A UISegmentedControl object is a horizontal control made of multiple segments, each segment functioning as a discrete butto
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5096909680>
+<p class=meta><span class=date>01/05/2011 20:21:45</span>
+<a class=llink href=../posts/5096909680.html>¶</a>
+<a href=http://www.ahwkong.com/post/5096909680 rel=canonical>●</a></p>
+<p>Reading about <a href="http://iphone-3d-programming.labs.oreilly.com/ch07.html#CocoaMix">Mixing OpenGL ES and UIKit</a></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-5096022206>
+<p class=meta><span class=date>01/05/2011 19:04:00</span>
+<a class=llink href=../posts/5096022206.html>¶</a>
+<a href=http://www.ahwkong.com/post/5096022206 rel=canonical>●</a></p>
+<h2>C refresher (3)</h2>
+<p>From <strong>arc4rand</strong> man page:</p>
+
+<pre><code>The random() function will by default produce a sequence of numbers that
+ can be duplicated by calling srandom() with '1' as the seed.  The
+ srandom() function may be called with any arbitrary seed value to get
+ slightly more unpredictable numbers.  It is important to remember that
+ the random() function is entirely predictable, and is therefore not of
+ use where knowledge of the sequence of numbers may be of benefit to an
+ attacker.
+
+ The arc4rand() function will return very good quality random numbers,
+ slightly better suited for security-related purposes.  The random numbers
+ from arc4rand() are seeded from the entropy device if it is available.
+</code></pre>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

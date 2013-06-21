@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23836233379>
+<p class=meta><span class=date>27/05/2012 12:26:23</span>
+<a class=llink href=../posts/23836233379.html>¶</a>
+<a href=http://www.ahwkong.com/post/23836233379 rel=canonical>●</a></p>
+<h2>Interface type cannot be statically allocated</h2>
+<p>This code fragment
+<pre>
+// item is a MPMediaItem
+NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+</pre>
+
+causes <code>Interface type cannot be statically allocated </code>
+
+But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
+<p class=tags>#xcode</p>
+</article>

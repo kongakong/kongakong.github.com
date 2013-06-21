@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2759634210>
+<p class=meta><span class=date>16/01/2011 00:27:58</span>
+<a class=llink href=../posts/2759634210.html>¶</a>
+<a href=http://www.ahwkong.com/post/2759634210 rel=canonical>●</a></p>
+<p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
+</article>

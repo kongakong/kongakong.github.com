@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-4879079522>
+<p class=meta><span class=date>24/04/2011 09:28:00</span>
+<a class=llink href=../posts/4879079522.html>¶</a>
+<a href=http://www.ahwkong.com/post/4879079522 rel=canonical>●</a></p>
+<p>Compiling Python 3.x (<a href="http://svn.python.org/projects/python/branches/py3k">http://svn.python.org/projects/python/branches/py3k</a> @88828), and got a bunch of error messages</p>
+
+<pre><code>gcc   -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl  -framework CoreFoundation     
+Could not find platform dependent libraries &lt;exec_prefix&gt;
+Consider setting $PYTHONHOME to &lt;prefix&gt;[:&lt;exec_prefix&gt;]
+Fatal Python error: Py_Initialize: can't initialize sys standard streams
+Traceback (most recent call last):
+   File "/Users/antkong/wd/python/python3/Lib/io.py", line 60, in &lt;module&gt;
+/bin/sh: line 1: 55310 Abort trap              CC='gcc' LDSHARED='gcc -bundle -undefined dynamic_lookup  ' OPT='-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes' ./python.exe -E ./setup.py build
+make: *** [sharedmods] Error 134
+</code></pre>
+</article>

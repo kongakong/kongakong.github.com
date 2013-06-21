@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6475222144>
+<p class=meta><span class=date>13/06/2011 12:27:13</span>
+<a class=llink href=../posts/6475222144.html>¶</a>
+<a href=http://www.ahwkong.com/post/6475222144 rel=canonical>●</a></p>
+<h2>Item 42:  Use private inheritance judiciously</h2>
+<p>To inherit the implementation but not the interface.
+
+Example:
+
+<pre class="brush: c">
+class Person { ... };
+ class Student:                      
+  private Person { ... };           // private inheritance
+</pre>
+
+In this case, a <code>Student</code> will not be considered a <code>Person</code> by the compiler.</p>
+<p class=tags>#c++ #Effective C++</p>
+</article>

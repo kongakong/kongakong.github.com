@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-14912627259>
+<p class=meta><span class=date>28/12/2011 21:20:14</span>
+<a class=llink href=../posts/14912627259.html>¶</a>
+<a href=http://www.ahwkong.com/post/14912627259 rel=canonical>●</a></p>
+<h2>port is corrupted</h2>
+<p>Probably related to my previous <code>hg </code> problem, my <code> port </code> install base is also corrupted. This is the error message: </p>
+
+<p><code></code></p>
+
+<p><br/>
+mbp002:python.project antkong$ sudo port selfupdate<br/>
+Warning: No index(es) found! Have you synced your source indexes?<br/>
+port registry doesn&#8217;t exist at &#8220;/opt/local/var/macports/registry/registry.db&#8221; and couldn&#8217;t write to this location<br/>
+    while executing<br/>
+&#8220;registry::open $db_path&#8221;<br/>
+    (procedure &#8220;mportinit&#8221; line 536)<br/>
+    invoked from within<br/>
+&#8220;mportinit ui_options global_options global_variations&#8221;<br/>
+Error: /opt/local/bin/port: Failed to initialize MacPorts, port registry doesn&#8217;t exist at &#8220;/opt/local/var/macports/registry/registry.db&#8221; and couldn&#8217;t write to this location</p>
+
+<p><br/>
+Rerun the installer seems to have fixed the issue.</p>
+<p class=tags>#osx #port</p>
+</article>

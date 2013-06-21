@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-10126553227>
+<p class=meta><span class=date>13/09/2011 01:17:00</span>
+<a class=llink href=../posts/10126553227.html>¶</a>
+<a href=http://www.ahwkong.com/post/10126553227 rel=canonical>●</a></p>
+<h2>Common Python Beginner Mistake (1) - Shadowing</h2>
+<pre class="brush:python">
+&gt;&gt;&gt; from datetime import date
+&gt;&gt;&gt; def handleDate(date=None):
+...     d = date.today()
+... 
+&gt;&gt;&gt; handleDate()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "&lt;stdin&gt;", line 2, in handleDate
+AttributeError: 'NoneType' object has no attribute 'today'
+
+
+</pre>
+
+In this case, the parameter <code>date</code> has shadowed the <code> date</code> imported from lib <code>datetime</code>
+
+<p>
+<b>Solution:</b>
+</p>
+Change the name of the parameter of <code>handleDate</code> to something else e.g. <code>in_date</code>
+<p class=tags>#python</p>
+</article>

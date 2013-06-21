@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6196319451>
+<p class=meta><span class=date>05/06/2011 11:42:00</span>
+<a class=llink href=../posts/6196319451.html>¶</a>
+<a href=http://www.ahwkong.com/post/6196319451 rel=canonical>●</a></p>
+<h2>Item 23 revisited</h2>
+<p>Revisiting <a href="http://www.ahwkong.com/post/6172106672/item-23-dont-try-to-return-a-reference-when-you-must">Item 23: Don’t try to return a reference when you must return an object</a>
+</p>
+
+
+<p>
+While the title sounds rather generic, the main content is about what is appropriate to return from various operator functions.
+</p>
+
+<p>
+SO has a more <a href="http://stackoverflow.com/questions/4421706/operator-overloading/4421729">in-depth treatment</a> on this subject.
+</p>
+
+<p>
+In the case of binary operators, here is a good example of the function declaration/implementation:
+</p>
+
+
+
+<pre class="brush: c">
+class X { 
+  X&amp; operator+=(const X&amp; rhs) 
+  {
+    // actual addition of rhs to *this 
+    return *this;
+  }
+}; 
+inline X operator+(X lhs, const X&amp; rhs)
+{
+  lhs += rhs;
+  return lhs;
+} 
+}; 
+
+</pre>
+
+Note the parameter <code>lhs</code> is passed into <code>operator+</code> via copying.
+<p class=tags>#c++ #Effective C++</p>
+</article>

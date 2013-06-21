@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5724362792>
+<p class=meta><span class=date>22/05/2011 16:41:00</span>
+<a class=llink href=../posts/5724362792.html>¶</a>
+<a href=http://www.ahwkong.com/post/5724362792 rel=canonical>●</a></p>
+<p>Note to self: <b>net_adm</b> can be used to discover the erlang cluster topology.
+
+<pre class="brush: erlang">
+10&gt; net_adm:world().    
+** exception exit: {error,enoent}
+     in function  net_adm:world/1
+
+</pre>
+
+<code>enoent</code> is most likely a result of missing file</p>
+<p class=tags>#erlang</p>
+</article>

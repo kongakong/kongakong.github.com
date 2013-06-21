@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-49716537787>
+<p class=meta><span class=date>06/05/2013 06:56:00</span>
+<a class=llink href=../posts/49716537787.html>¶</a>
+<a href=http://www.ahwkong.com/post/49716537787 rel=canonical>●</a></p>
+<h2>Single quote is for something else in erlang</h2>
+<p>In python, single quote and double quote are pretty much interchangable. Not so in erlang.</p>
+
+<pre><code>254&gt; httpd_util:convert_request_date('Sun, 25 Jan 2009 19:20:02 +0000').
+** exception error: no function clause matching     httpd_util:convert_request_date('Sun, 25 Jan 2009 19:20:02 +0000') (httpd_util.erl, line 257)
+255&gt; httpd_util:convert_request_date("Sun, 25 Jan 2009 19:20:02 +0000").
+{{2009,1,25},{19,20,2}}
+</code></pre>
+<p class=tags>#erlang #python</p>
+</article>

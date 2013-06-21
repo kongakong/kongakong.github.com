@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5140582900>
+<p class=meta><span class=date>03/05/2011 06:56:00</span>
+<a class=llink href=../posts/5140582900.html>¶</a>
+<a href=http://www.ahwkong.com/post/5140582900 rel=canonical>●</a></p>
+<p>New OpenGL API</p>
+
+<pre><code>glPointSize(15); // 15 desired size
+</code></pre>
+
+<p>equivalent to</p>
+
+<pre><code>float params[] = { 1, 0, 0 };
+glPointParameterfv(GL_POINT_DISTANCE_ATTENUATION, params);
+</code></pre>
+
+<p>The underlying calculation:</p>
+
+<pre><code>actualSize = desiredSize / sqrt(p[0] + p[1] * d + p[2] * d * d)
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2807506716>
+<p class=meta><span class=date>18/01/2011 16:44:21</span>
+<a class=llink href=../posts/2807506716.html>¶</a>
+<a href=http://www.ahwkong.com/post/2807506716 rel=canonical>●</a></p>
+<h2>subversion note 2</h2>
+<p>To back out a changeset from your working copy (eg. 4321):</p>
+
+<pre><code>svn merge -c -4321 .
+svn checkin
+</code></pre>
+
+<p>Or multiple changesets:</p>
+
+<pre><code>svn merge -c -4321,-5432 .
+</code></pre>
+</article>

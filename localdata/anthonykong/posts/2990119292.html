@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-2990119292>
+<p class=meta><span class=date>29/01/2011 18:29:33</span>
+<a class=llink href=../posts/2990119292.html>¶</a>
+<a href=http://www.ahwkong.com/post/2990119292 rel=canonical>●</a></p>
+<h2>Another EXC_BAD_ACCESS</h2>
+<p>This time it has something to do with a split view.</p>
+
+<pre><code>#0  0x010f15a8 in objc_exception_throw ()
+#1  0x00f55628 in +[NSException raise:format:arguments:] ()
+#2  0x00f5559a in +[NSException raise:format:] ()
+#3  0x006127df in -[UIPopoverController presentPopoverFromRect:inView:permittedArrowDirections:animated:] ()
+#4  0x00009c77 in -[MGSplitViewController reconfigureForMasterInPopover:] (self=0x6178400, _cmd=0xfbcd, inPopover=0 '\0') at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:579
+#5  0x00007cf2 in -[MGSplitViewController layoutSubviewsForInterfaceOrientation:withAnimation:] (self=0x6178400, _cmd=0xfc50, theOrientation=UIInterfaceOrientationLandscapeRight, animate=1 '\001') at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:254
+#6  0x000094e7 in -[MGSplitViewController layoutSubviews] (self=0x6178400, _cmd=0x6da3de) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:491
+#7  0x000095e0 in -[MGSplitViewController viewWillAppear:] (self=0x6178400, _cmd=0x6f21a2, animated=1 '\001') at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:505
+#8  0x00576cd4 in -[UIWindowController transition:fromViewController:toViewController:target:didEndSelector:] ()
+#9  0x00381682 in -[UIViewController _dismissModalViewControllerWithTransition:from:] ()
+#10 0x0037e324 in -[UIViewController dismissModalViewControllerWithTransition:] ()
+#11 0x0635ab26 in -[UIViewControllerAccessibility(SafeCategory) dismissModalViewControllerWithTransition:] ()
+#12 0x00003a47 in -[LoginViewController doLogin:] (self=0x640ba80, _cmd=0xeb53, sender=0x6413570) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/../LoginViewController.m:76
+#13 0x00003c43 in -[LoginViewController(UITextFieldDelegate) textFieldShouldReturn:] (self=0x640ba80, _cmd=0x6ef376, sender=0x6413570) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/../LoginViewController.m:100
+#14 0x0634b740 in -[UITextFieldAccessibility(SafeCategory) keyboardInput:shouldInsertText:isMarkedText:] ()
+</code></pre>
+</article>

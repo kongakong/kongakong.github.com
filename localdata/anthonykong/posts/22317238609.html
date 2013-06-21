@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-22317238609>
+<p class=meta><span class=date>03/05/2012 22:21:11</span>
+<a class=llink href=../posts/22317238609.html>¶</a>
+<a href=http://www.ahwkong.com/post/22317238609 rel=canonical>●</a></p>
+<p>The pip cannot install scipy properly. 
+
+<pre class="brush:python">
+
+&gt;&gt;&gt; import pybrain
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/__init__.py", line 1, in <module>
+    from structure.__init__ import *
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/__init__.py", line 2, in <module>
+    from modules.__init__ import *
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/__init__.py", line 2, in <module>
+    from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py", line 11, in <module>
+    from pybrain.tools.functions import sigmoid, sigmoidPrime
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py", line 4, in <module>
+    from scipy.linalg import inv, det, svd
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/__init__.py", line 115, in <module>
+    from misc import *
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py", line 3, in <module>
+    import fblas
+ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:
+	/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+</module></module></module></module></module></module></module></module></stdin></pre></p>
+<p class=tags>#python #virtualenv #scipy #osx #lion</p>
+</article>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-22117940575>
+<p class=meta><span class=date>30/04/2012 21:42:02</span>
+<a class=llink href=../posts/22117940575.html>¶</a>
+<a href=http://www.ahwkong.com/post/22117940575 rel=canonical>●</a></p>
+<h2>Very old easy_install</h2>
+<p>For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries.
+
+
+<pre>
+
+$ ls -l /usr/local/bin/easy_install
+-rwxr-xr-x  1 root  wheel  364 28 Feb  2009 /usr/local/bin/easy_install
+
+</pre>
+
+The shebang of <code>easy_install</code> is still pointing to a python 2.5 installation
+
+<pre class="brush:python">
+#!/System/Library/Frameworks/Python.framework/Versions/2.5/Resources/Python.app/Contents/MacOS/Python
+ </pre></p>
+</article>

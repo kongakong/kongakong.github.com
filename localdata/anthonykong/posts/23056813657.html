@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23056813657>
+<p class=meta><span class=date>15/05/2012 07:01:00</span>
+<a class=llink href=../posts/23056813657.html>¶</a>
+<a href=http://www.ahwkong.com/post/23056813657 rel=canonical>●</a></p>
+<h2>Slicing magic </h2>
+<p>
+Original post: <a href="http://stackoverflow.com/a/9858902/58129">http://stackoverflow.com/a/9858902/58129</a>
+</p>
+<p>
+Given this
+</p>
+<pre class="brush:python">
+&gt;&gt;&gt; a  = array([[1,2,3,4], [5,6,7,8], [9, 10,11,12]])
+&gt;&gt;&gt; a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+</pre>
+
+You can use the following code to extract data in the first and second column as such
+
+<pre class="brush:python">
+&gt;&gt;&gt; list1 = a[:,0]
+&gt;&gt;&gt; list1
+array([1, 5, 9])
+&gt;&gt;&gt; list1 = a[:,1]
+&gt;&gt;&gt; list1
+array([ 2,  6, 10])
+</pre>
+
+
+Slicing documentation:<a href="http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing"> <a href="http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing">http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing</a></a>
+<p class=tags>#python #slice</p>
+</article>

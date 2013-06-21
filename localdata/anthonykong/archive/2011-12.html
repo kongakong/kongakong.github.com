@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>December 2011</h1>
+
+
+<article class=regular id=p-15045964017>
+<p class=meta><span class=date>31/12/2011 09:01:06</span>
+<a class=llink href=../posts/15045964017.html>¶</a>
+<a href=http://www.ahwkong.com/post/15045964017 rel=canonical>●</a></p>
+<h2>Brew symlink exception</h2>
+<p>Tried to install erlang. Got this error message
+
+<pre>
+$ brew install erlang
+==&gt; Downloading <a href="https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz">https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz</a>
+######################################################################## 100.0%
+==&gt; Pouring erlang-R14B04.bottle.tar.gz
+ln: liberts_r.a: Permission denied
+Error: The linking step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+You can try again using `brew link erlang'
+==&gt; Summary
+/usr/local/Cellar/erlang/R14B04: 6978 files, 261M
+</pre>
+
+Tried the following but did not work
+
+<pre>
+$ brew cleanup erlang; brew unlink erlang; brew link erlang
+Removing /usr/local/Cellar/erlang/R14B02...
+Removing /usr/local/Cellar/erlang/R14B03...
+Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
+</pre>
+
+<code>sudo</code> unlink and link fixed the issue finally</p>
+<p class=tags>#osx #brew #erlang</p>
+</article>
+
+<article class=regular id=p-15022191238>
+<p class=meta><span class=date>30/12/2011 22:03:00</span>
+<a class=llink href=../posts/15022191238.html>¶</a>
+<a href=http://www.ahwkong.com/post/15022191238 rel=canonical>●</a></p>
+<h2>How to retrieve session information of a @WebMethod call in Spring Framework</h2>
+<pre class="brush: java">
+import java.util.List;
+ 
+import javax.annotation.Resource; // 
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.xml.ws.WebServiceContext; // 1
+import org.apache.log4j.Logger;
+     
+@WebMethod(operationName='dataService')
+@WebResult(name='result')
+class MyDataService
+{
+          @Resource private WebServiceContext wsContext; // 2
+    
+          @WebMethod(operationName="getData")
+          @WebResult(name="riskData")
+          public List<datavalue> getData(@WebParam(name="dataRequest") DataRequest request) {
+             //  Perform action here ...
+ 
+             LOG.info("message context " + wsContext.getMessageContext().keySet()); // 3
+     
+             return result;
+           }
+}
+</datavalue></pre>
+
+The necessary changes are:
+
+<p>
+1) New import statements for <code>Resource </code> and <code>WebServiceContext</code>
+</p>
+
+<p>
+2) A declaration of variable of type <code> WebServiceContext</code>
+</p>
+
+<p>
+3) Obtain the session information by calling <code>getMessageContext()</code>
+</p>
+<p class=tags>#framework #java #spring #session</p>
+</article>
+
+<article class=link id=p-14937137581>
+<p class=meta><span class=date>29/12/2011 09:01:05</span>
+<a class=llink href=../posts/14937137581.html>¶</a>
+<a href=http://www.ahwkong.com/post/14937137581 rel=canonical>●</a></p>
+<h2><a href="http://dpip.testingperspective.com/">Design Pattern in Python</a></h2>
+
+</article>
+
+<article class=regular id=p-14932261293>
+<p class=meta><span class=date>29/12/2011 07:26:00</span>
+<a class=llink href=../posts/14932261293.html>¶</a>
+<a href=http://www.ahwkong.com/post/14932261293 rel=canonical>●</a></p>
+<h2>my python 3.3 compilation ends in this</h2>
+<p><code><br/>
+    /usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols<br/>
+    /usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols<br/>
+    ranlib libpython3.3m.a<br/>
+    ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols<br/>
+    ranlib: file: libpython3.3m.a(pymath.o) has no symbols<br/>
+    gcc   -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl  -framework CoreFoundation     <br/>
+    ./python.exe -SE -m sysconfig --generate-posix-vars<br/>
+    python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)<br/>
+    *** error: can't allocate region<br/>
+    *** set a breakpoint in malloc_error_break to debug<br/>
+    make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11<br/>
+    make: *** Deleting file `Lib/_sysconfigdata.py'</code></p>
+<p class=tags>#osx #python</p>
+</article>
+
+<article class=regular id=p-14913827164>
+<p class=meta><span class=date>28/12/2011 22:30:11</span>
+<a class=llink href=../posts/14913827164.html>¶</a>
+<a href=http://www.ahwkong.com/post/14913827164 rel=canonical>●</a></p>
+<h2>Autoconf on Lion</h2>
+<p>Oops</p>
+
+<p><code><br/><b>$ autoconf</b><br/>
+configure.in:8: error: Autoconf version 2.65 or higher is required<br/>
+configure.in:8: the top level<br/>
+autom4te: /usr/bin/gm4 failed with exit status: 63<br/></code></p>
+
+<p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
+<p class=tags>#osx #autoconf</p>
+</article>
+
+<article class=regular id=p-14913221859>
+<p class=meta><span class=date>28/12/2011 21:54:00</span>
+<a class=llink href=../posts/14913221859.html>¶</a>
+<a href=http://www.ahwkong.com/post/14913221859 rel=canonical>●</a></p>
+<h2>A simple example of using hg</h2>
+<p><code></code></p>
+
+<p><b>$ hg pull</b><br/>
+pulling from <a href="http://hg.python.org/cpython">http://hg.python.org/cpython</a><br/>
+searching for changes<br/>
+adding changesets<br/>
+adding manifests<br/>
+adding file changes<br/>
+added 3265 changesets with 6204 changes to 1117 files<br/>
+(run &#8216;hg update&#8217; to get a working copy)</p>
+
+<p><b>$ hg summary</b><br/>
+parent: 70924:d1d5a7392e39&#160;<br/>
+ (merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in<br/>
+branch: default<br/>
+commit: 3 unknown (clean)<br/>
+update: 2705 new changesets (update)</p>
+
+<p><b>$ hg update</b><br/>
+991 files updated, 0 files merged, 12 files removed, 0 files unresolved</p>
+
+<p><b>$ hg summary</b><br/>
+parent: 74189:456b02030100 tip<br/>
+ don&#8217;t fail if CLOEXEC doesn&#8217;t exist<br/>
+branch: default<br/>
+commit: 3 unknown (clean)<br/>
+update: (current)</p>
+<p class=tags>#python #hg #mercurial</p>
+</article>
+
+<article class=regular id=p-14912930755>
+<p class=meta><span class=date>28/12/2011 21:37:00</span>
+<a class=llink href=../posts/14912930755.html>¶</a>
+<a href=http://www.ahwkong.com/post/14912930755 rel=canonical>●</a></p>
+<h2>port vs brew</h2>
+<p>Remove <code> port</code> for now to try out <code>brew</code></p>
+
+<p>Personally <code>port</code> is simple enough. Let see if brew can exceed the bar set by MacPort</p>
+<p class=tags>#osx #port #brew</p>
+</article>
+
+<article class=regular id=p-14912627259>
+<p class=meta><span class=date>28/12/2011 21:20:14</span>
+<a class=llink href=../posts/14912627259.html>¶</a>
+<a href=http://www.ahwkong.com/post/14912627259 rel=canonical>●</a></p>
+<h2>port is corrupted</h2>
+<p>Probably related to my previous <code>hg </code> problem, my <code> port </code> install base is also corrupted. This is the error message: </p>
+
+<p><code></code></p>
+
+<p><br/>
+mbp002:python.project antkong$ sudo port selfupdate<br/>
+Warning: No index(es) found! Have you synced your source indexes?<br/>
+port registry doesn&#8217;t exist at &#8220;/opt/local/var/macports/registry/registry.db&#8221; and couldn&#8217;t write to this location<br/>
+    while executing<br/>
+&#8220;registry::open $db_path&#8221;<br/>
+    (procedure &#8220;mportinit&#8221; line 536)<br/>
+    invoked from within<br/>
+&#8220;mportinit ui_options global_options global_variations&#8221;<br/>
+Error: /opt/local/bin/port: Failed to initialize MacPorts, port registry doesn&#8217;t exist at &#8220;/opt/local/var/macports/registry/registry.db&#8221; and couldn&#8217;t write to this location</p>
+
+<p><br/>
+Rerun the installer seems to have fixed the issue.</p>
+<p class=tags>#osx #port</p>
+</article>
+
+<article class=regular id=p-14912402052>
+<p class=meta><span class=date>28/12/2011 21:07:00</span>
+<a class=llink href=../posts/14912402052.html>¶</a>
+<a href=http://www.ahwkong.com/post/14912402052 rel=canonical>●</a></p>
+<h2>hg problem</h2>
+<p>9:06pm</p>
+
+<p>Tried to run <code>hg</code>. Got this error:</p>
+
+<p><code><br/>
+Traceback (most recent call last):<br/>
+  File "/usr/local/bin/hg", line 4, in <module><br/>
+    import pkg_resources<br/>
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 2603, in <module><br/>
+    working_set.require(__requires__)<br/>
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 666, in require<br/>
+    needed = self.resolve(parse_requirements(requirements))<br/>
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 565, in resolve<br/>
+    raise DistributionNotFound(req)  # XXX put more info here<br/>
+pkg_resources.DistributionNotFound: mercurial==1.8.2<br/></module></module></code></p>
+<p class=tags>#osx #hg #python</p>
+</article>
+
+<article class=quote id=p-14584037817>
+<p class=meta><span class=date>22/12/2011 09:54:06</span>
+<a class=llink href=../posts/14584037817.html>¶</a>
+<a href=http://www.ahwkong.com/post/14584037817 rel=canonical>●</a></p>
+<blockquote><p>The City of London shows that logic has its limits and that the City lies outside them.</p></blockquote>
+<p>Heard from the public lecture, The City of London, at LSE given by Professor David Kynaston</p>
+</article>
+
+<article class=link id=p-14580909653>
+<p class=meta><span class=date>22/12/2011 08:55:06</span>
+<a class=llink href=../posts/14580909653.html>¶</a>
+<a href=http://www.ahwkong.com/post/14580909653 rel=canonical>●</a></p>
+<h2><a href="http://en.wikipedia.org/wiki/BoKS_(software)">Just find out about boks_sshd</a></h2>
+
+<p class=tags>#sshd</p>
+</article>
+
+<article class=regular id=p-14559224775>
+<p class=meta><span class=date>21/12/2011 22:43:40</span>
+<a class=llink href=../posts/14559224775.html>¶</a>
+<a href=http://www.ahwkong.com/post/14559224775 rel=canonical>●</a></p>
+<h2>EFP</h2>
+<p><a href="http://www.asx.net.au/products/what-are-efps.htm">Exchange for Physical</a></p>
+<p class=tags>#finance</p>
+</article>
+
+<article class=link id=p-14080946389>
+<p class=meta><span class=date>12/12/2011 07:49:35</span>
+<a class=llink href=../posts/14080946389.html>¶</a>
+<a href=http://www.ahwkong.com/post/14080946389 rel=canonical>●</a></p>
+<h2><a href="http://www.oracle.com/technetwork/server-storage/solaris11/technologies/ips-323421.html">Oracle Solaris 11 Package Management with IPS</a></h2>
+
+</article>
+
+<article class=quote id=p-13869082153>
+<p class=meta><span class=date>07/12/2011 22:12:33</span>
+<a class=llink href=../posts/13869082153.html>¶</a>
+<a href=http://www.ahwkong.com/post/13869082153 rel=canonical>●</a></p>
+<blockquote><p>Computer scientists study Artificial Intelligence; Economists study Natural Stupidity</p></blockquote>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

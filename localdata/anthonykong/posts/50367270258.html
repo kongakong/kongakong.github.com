@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-50367270258>
+<p class=meta><span class=date>14/05/2013 07:21:00</span>
+<a class=llink href=../posts/50367270258.html>¶</a>
+<a href=http://www.ahwkong.com/post/50367270258 rel=canonical>●</a></p>
+<h2>Whenever you think you need urllib2, you actually need requests</h2>
+<p>Since I have started using python since version 2.4, I have a lot of old die-hard habit. For one, I write exception handler like this</p>
+
+<pre><code>except Exception, e:
+</code></pre>
+
+<p>instead  of</p>
+
+<pre><code>except Exception as e:
+</code></pre>
+
+<p>The later is of course a better and more flexible style.</p>
+
+<p>So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.</p>
+
+<p>It usually works great&#8230; until you need something more than basic.</p>
+
+<p>Apparently I need to set some cookie and set to the server. Let&#8217;s import cookiejar and cookie&#8230;</p>
+
+<p>Why it throws an exception <strong>AttributeError: &#8216;SimpleCookie&#8217; object has no attribute +&#8217;rfc2965&#8217;</strong>?</p>
+
+<p>OK, let&#8217;s import DefaultCookiePolicy. Then I got hit by a <strong>missing domain attribute</strong> exception. &#8220;Do I need to use a lower level Cookie class to set the domain?&#8221;, I wonder. Try switching to Cookie and it throw this exception</p>
+
+<pre><code>Traceback (most recent call last):
+    ...
+    c = Cookie()
+TypeError: __init__() takes at least 17 arguments (1 given)  
+</code></pre>
+
+<p>At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.</p>
+
+<pre><code>    import urllib2
+    from cookielib import Cookie, CookieJar, DefaultCookiePolicy  
+    from Cookie import SimpleCookie        
+
+    policy = DefaultCookiePolicy(rfc2965=True)        
+
+    c = SimpleCookie()
+    c['secretkey'] = auth_token
+    cj = CookieJar(policy)
+    cj.set_cookie(c)
+
+    req = urllib2.Request("%s/postdata" % self.server_url)
+    proxyHandler = urllib2.ProxyHandler( {} )
+    defaultErrorHandler = urllib2.HTTPDefaultErrorHandler()
+    cookieHandler = urllib2.HTTPCookieProcessor(cj)
+    opener = urllib2.build_opener( proxyHandler, defaultErrorHandler, cookieHandler )
+    opener.open(req, data, 10000)
+</code></pre>
+
+<p>Instead of continuing banging my head against a wall, I recall reading about &#8216;requests&#8217; module. Let give it a go.</p>
+
+<p>Like magic, it is all I need. 2 lines.</p>
+
+<pre><code>     import requests
+     requests.post(url, data, cookie=cookie, headers=headers)
+</code></pre>
+
+<p>It just works. Well done, requests!</p>
+<p class=tags>#python #requests</p>
+</article>

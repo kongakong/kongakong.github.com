@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-21844435707>
+<p class=meta><span class=date>26/04/2012 22:02:27</span>
+<a class=llink href=../posts/21844435707.html>¶</a>
+<a href=http://www.ahwkong.com/post/21844435707 rel=canonical>●</a></p>
+<p>I think I finally understand what the problem is. </p>
+
+<p>In previous version of Xcode (prior to 4.3), it will install the llvm-gcc and the &#8216;original&#8217; gcc.</p>
+
+<p>gcc will invoke the llvm-gcc and gcc-4.2 will invoke the GNU gcc.</p>
+
+<p>However, since 4.3, these command line tools will not be installed by default. We can have the command line tools like svn, make and gcc installed by download the &#8216;command line tools for OSX&#8217; in XCode.</p>
+
+<p>However, the package does not include GNU gcc. </p>
+
+<p>It is the next problem I have to fix.</p>
+<p class=tags>#xcode #osx #gcc</p>
+</article>

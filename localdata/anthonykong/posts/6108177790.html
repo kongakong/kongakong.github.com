@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6108177790>
+<p class=meta><span class=date>11/04/2011 22:53:00</span>
+<a class=llink href=../posts/6108177790.html>¶</a>
+<a href=http://www.ahwkong.com/post/6108177790 rel=canonical>●</a></p>
+<h2>JVM: Sizing the Generations</h2>
+<p>
+A few parameters:
+</p>
+<ul><li> Committed space (-Xms) and virtual space (-Xmx) in the heap</li>
+
+<li> Tenured generation to and young generation</li>
+
+<li>Eden vs Survivor ratio</li>
+</ul><p>
+From <a href="http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html">Sun JVM Documentation</a>
+</p>
+
+<p>
+<b>Note</b>
+</p>
+<p>
+The proportion of the heap dedicated to the young generation: The bigger the young generation, the less often minor collections occur. However, for a bounded heap size a larger young generation implies a smaller tenured generation, which will increase the frequency of major collections. The optimal choice depends on the lifetime distribution of the objects allocated by the application.
+</p>
+<p class=tags>#java #jvm</p>
+</article>

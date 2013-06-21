@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-28548986312>
+<p class=meta><span class=date>02/08/2012 19:57:00</span>
+<a class=llink href=../posts/28548986312.html>¶</a>
+<a href=http://www.ahwkong.com/post/28548986312 rel=canonical>●</a></p>
+<p>Sometimes it is quite fun to answer some questions in Stackoverflow: you can help someone seeking answer and you may also learn a new thing or two yourself in the process.</p>
+
+<p>This is one such example: <a href="http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.">http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.</a></p>
+
+<p>Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example &#8220;assesses&#8221; has the substring &#8220;sses&#8221; 2 times.</p>
+
+<p>It is a very simple question, but there is still something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a &#8216;lookahead&#8217; in the regular expression.</p>
+
+<p>My proposed solution is simply an improved version of OP&#8217;s code.</p>
+
+<pre class="brush:python">
+first = "an"
+second = "trans-Panamanian banana"
+
+def count_needle(first, second):
+
+        location = str.find(second,first)
+        if location == -1:
+                return 0 # none whatsoever
+        else:
+                count = 1
+                while location &lt; len(second):
+                   location = str.find(second,first,location +1)   
+                   if location &lt; 0:
+                      break
+                   count = count + 1
+        return count
+
+print(count_needle(first, second))
+</pre>
+
+<p>
+Here is a even shorter version which takes advantage of python&#8217;s flexible comparison syntax:
+</p>
+
+<pre class="brush:python">
+first = "an"
+second = "trans-Panamanian banana"
+
+def count_needle(first, second):
+        count = 0
+        location = str.find(second,first)
+        while (0 &lt;= location &lt; len(second)):
+                   count += 1
+                   location = str.find(second,first,location +1)
+        return count
+
+print(count_needle(first, second))                                
+</pre>
+<p class=tags>#python</p>
+</article>

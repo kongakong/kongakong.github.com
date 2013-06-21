@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-52453247211>
+<p class=meta><span class=date>08/06/2013 21:20:15</span>
+<a class=llink href=../posts/52453247211.html>¶</a>
+<a href=http://www.ahwkong.com/post/52453247211 rel=canonical>●</a></p>
+<h2>OSX terminal and .bashrc</h2>
+<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.</p>
+
+<p>I added this to my .bash_profile to fix the problem:</p>
+
+<pre><code>[[ -s ~/.bashrc ]] &amp;&amp; source ~/.bashrc
+</code></pre>
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+<p class=tags>#bash #osx</p>
+</article>

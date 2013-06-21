@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23475900705>
+<p class=meta><span class=date>21/05/2012 21:51:06</span>
+<a class=llink href=../posts/23475900705.html>¶</a>
+<a href=http://www.ahwkong.com/post/23475900705 rel=canonical>●</a></p>
+<p>Changed a controller to be a subclass of UITableViewController and got this</p>
+
+<p><br/><code><br/>
+2012-05-19 11:24:07.612 medianote[1973:f803] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UITableViewController loadView] loaded the "2-view-16" nib but didn't get a UITableView.'<br/></code></p>
+
+<p>I skipped a few steps. After I did the following</p>
+
+<p>1) Change the view class to UITableVIew</p>
+
+<p>2) Connect the view to the &#8216;view&#8217; slot of the Controller</p>
+
+<p>3) Connect the view&#8217;s datasource and delegate to the Controller.</p>
+
+<p>the runtime exception is gone.</p>
+<p class=tags>#objective-c #xcode #mn</p>
+</article>

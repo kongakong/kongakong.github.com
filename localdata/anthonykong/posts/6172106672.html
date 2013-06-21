@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6172106672>
+<p class=meta><span class=date>04/06/2011 20:55:00</span>
+<a class=llink href=../posts/6172106672.html>¶</a>
+<a href=http://www.ahwkong.com/post/6172106672 rel=canonical>●</a></p>
+<h2>Item 23:  Don't try to return a reference when you must return an object</h2>
+<p><b>Example: </b></p>
+
+<p><code>operator*</code> and <code>operator+</code> should return a new object instead of a reference. The latter approach will introduce problem such as memory leak</p>
+
+<p><br/><b>Additional note:</b></p>
+
+<p><br/>
+Avoid overloading short-circuiting operators: x || y or x &amp;&amp; y. The overloaded versions of these do not short-circuit — they evaluate both operands even if the left-hand operand &#8220;determines&#8221; the outcome, so that confuses users.</p>
+
+<p>From <a href="http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9">C++ FAQ</a></p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>August 2011</h1>
+
+
+<article class=regular id=p-9585407349>
+<p class=meta><span class=date>30/08/2011 23:00:00</span>
+<a class=llink href=../posts/9585407349.html>¶</a>
+<a href=http://www.ahwkong.com/post/9585407349 rel=canonical>●</a></p>
+<p>Last warning.
+
+<pre>
+
+wx             : wxWidgets not found, wx will NOT be usable
+</pre>
+
+Probably no existing rpm for this. 
+
+These yum commands fixed most of the warnings
+
+<pre>
+yum install ncurses
+yum install ncurses-devel
+yum install java-1.6.0-openjdk
+yum install libssh2-devel 
+yum install openssl-devel
+yum install java-1.6.0-openjdk-devel
+yum install unixODBC
+yum install unixODBC-devel
+</pre></p>
+</article>
+
+<article class=regular id=p-9585200763>
+<p class=meta><span class=date>30/08/2011 22:49:05</span>
+<a class=llink href=../posts/9585200763.html>¶</a>
+<a href=http://www.ahwkong.com/post/9585200763 rel=canonical>●</a></p>
+<p>erlang&#8217;s <code> configure</code> still reports these components as missing:
+<pre>
+crypto         : No usable OpenSSL found
+jinterface     : No Java compiler found
+odbc           : ODBC library - link check failed
+ssh            : No usable OpenSSL found
+ssl            : No usable OpenSSL found
+</pre></p>
+<p class=tags>#linux #erlang</p>
+</article>
+
+<article class=regular id=p-9585102499>
+<p class=meta><span class=date>30/08/2011 22:43:33</span>
+<a class=llink href=../posts/9585102499.html>¶</a>
+<a href=http://www.ahwkong.com/post/9585102499 rel=canonical>●</a></p>
+<p>Trying to build erlang on scientific linux. </p>
+
+<p>Currently missing a number of libraries. Installing java-1.6.0-openjdk now for the jinterface</p>
+<p class=tags>#linux #erlang</p>
+</article>
+
+<article class=regular id=p-9543635958>
+<p class=meta><span class=date>29/08/2011 22:38:57</span>
+<a class=llink href=../posts/9543635958.html>¶</a>
+<a href=http://www.ahwkong.com/post/9543635958 rel=canonical>●</a></p>
+<h2>Enabling STM in python</h2>
+<p>This <a href="http://bugs.python.org/issue12850">python issue</a> is about making it possible for extension modules to install a pair of custom GIL handler (one for getting it and the other for releasing it)</p>
+
+<p>I am surprised by how short the patch is.</p>
+<p class=tags>#python #stm</p>
+</article>
+
+<article class=regular id=p-9497321169>
+<p class=meta><span class=date>28/08/2011 20:56:00</span>
+<a class=llink href=../posts/9497321169.html>¶</a>
+<a href=http://www.ahwkong.com/post/9497321169 rel=canonical>●</a></p>
+<p>Try to use <code>git</code> on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a <code>.gitignore</code> myself, probably. Turns out there is a <code>.gitignore</code> in the repository. Glad need not to do this extra work</p>
+<p class=tags>#python #git</p>
+</article>
+
+<article class=regular id=p-9455015711>
+<p class=meta><span class=date>28/08/2011 00:14:50</span>
+<a class=llink href=../posts/9455015711.html>¶</a>
+<a href=http://www.ahwkong.com/post/9455015711 rel=canonical>●</a></p>
+<p>IAN: Indexed Amortizing Notes</p>
+<p class=tags>#finance #glossary</p>
+</article>
+
+<article class=regular id=p-9448858352>
+<p class=meta><span class=date>27/08/2011 17:49:47</span>
+<a class=llink href=../posts/9448858352.html>¶</a>
+<a href=http://www.ahwkong.com/post/9448858352 rel=canonical>●</a></p>
+<h2>comm</h2>
+<p>Every now and then I still discover some unix command that I did not know before but is very useful. For example, <code>comm</code>.</p>
+<p class=tags>#linux #unix</p>
+</article>
+
+<article class=regular id=p-9158815320>
+<p class=meta><span class=date>20/08/2011 17:53:00</span>
+<a class=llink href=../posts/9158815320.html>¶</a>
+<a href=http://www.ahwkong.com/post/9158815320 rel=canonical>●</a></p>
+<p><code>gcc</code> on Scientific Linux is 4.4.5. The latest stable is 4.6.1.</p>
+
+<p>Not too far behind.</p>
+<p class=tags>#linux</p>
+</article>
+
+<article class=regular id=p-9155192863>
+<p class=meta><span class=date>20/08/2011 15:22:00</span>
+<a class=llink href=../posts/9155192863.html>¶</a>
+<a href=http://www.ahwkong.com/post/9155192863 rel=canonical>●</a></p>
+<p><a href="http://www.scientificlinux.org/">Scientific Linux </a> Installed (kernel: 2.6.32-131.0.15.el6.x86_64)</p>
+<p class=tags>#linux</p>
+</article>
+
+<article class=regular id=p-9120392547>
+<p class=meta><span class=date>19/08/2011 22:35:53</span>
+<a class=llink href=../posts/9120392547.html>¶</a>
+<a href=http://www.ahwkong.com/post/9120392547 rel=canonical>●</a></p>
+<p>Installing Scientific Linux&#8230; Apparently 256M RAM is not sufficient</p>
+<p class=tags>#linux</p>
+</article>
+
+<article class=photo id=p-9096119007>
+<p class=meta><span class=date>19/08/2011 08:25:16</span>
+<a class=llink href=../posts/9096119007.html>¶</a>
+<a href=http://www.ahwkong.com/post/9096119007 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_lq5aa4YCoJ1qbpfzro1_1280.png"></p>
+<p>Balmain Pier</p>
+</article>
+
+<article class=regular id=p-9031220952>
+<p class=meta><span class=date>17/08/2011 16:17:00</span>
+<a class=llink href=../posts/9031220952.html>¶</a>
+<a href=http://www.ahwkong.com/post/9031220952 rel=canonical>●</a></p>
+<p>Rbind - bind data frame by rows</p>
+<p class=tags>#R</p>
+</article>
+
+<article class=link id=p-8994757912>
+<p class=meta><span class=date>16/08/2011 23:03:45</span>
+<a class=llink href=../posts/8994757912.html>¶</a>
+<a href=http://www.ahwkong.com/post/8994757912 rel=canonical>●</a></p>
+<h2><a href="http://stackoverflow.com/questions/1295955/what-is-the-most-useful-r-trick">Top most useful R trick: str</a></h2>
+
+</article>
+
+<article class=link id=p-8994621620>
+<p class=meta><span class=date>16/08/2011 22:56:36</span>
+<a class=llink href=../posts/8994621620.html>¶</a>
+<a href=http://www.ahwkong.com/post/8994621620 rel=canonical>●</a></p>
+<h2><a href="https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J">https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J</a></h2>
+<p>Learn something about <code>import dis</code> from this post</p>
+<p class=tags>#python</p>
+</article>
+
+<article class=regular id=p-8596499220>
+<p class=meta><span class=date>07/08/2011 20:44:46</span>
+<a class=llink href=../posts/8596499220.html>¶</a>
+<a href=http://www.ahwkong.com/post/8596499220 rel=canonical>●</a></p>
+<p>Discovered two useful modules in python
+
+<pre class="brush: python">
+import warnings
+</pre>
+
+and 
+
+<pre class="brush: python">
+import dateutil
+</pre></p>
+<p class=tags>#python</p>
+</article>
+
+<article class=link id=p-8581922778>
+<p class=meta><span class=date>07/08/2011 12:17:04</span>
+<a class=llink href=../posts/8581922778.html>¶</a>
+<a href=http://www.ahwkong.com/post/8581922778 rel=canonical>●</a></p>
+<h2><a href="http://www.reddit.com/r/apple/comments/j9tm7/any_developers_running_lion_with_4_gigs_of_memory/c2aiip1">Why iOS developer should wait for the 15" MPA</a></h2>
+
+</article>
+
+<article class=regular id=p-8545277735>
+<p class=meta><span class=date>06/08/2011 14:36:52</span>
+<a class=llink href=../posts/8545277735.html>¶</a>
+<a href=http://www.ahwkong.com/post/8545277735 rel=canonical>●</a></p>
+<p>Xcode 4.1.1 is out</p>
+</article>
+
+<article class=regular id=p-8544970346>
+<p class=meta><span class=date>06/08/2011 14:28:33</span>
+<a class=llink href=../posts/8544970346.html>¶</a>
+<a href=http://www.ahwkong.com/post/8544970346 rel=canonical>●</a></p>
+<p>A very simple test to compare g++ and clang++
+
+<pre>
+$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+</pre>
+
+clang++ does not complaint at all
+
+<pre>
+$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</pre></p>
+</article>
+
+<article class=regular id=p-8544748050>
+<p class=meta><span class=date>06/08/2011 14:22:00</span>
+<a class=llink href=../posts/8544748050.html>¶</a>
+<a href=http://www.ahwkong.com/post/8544748050 rel=canonical>●</a></p>
+<h2>A simple clang version check</h2>
+<p>Supposedly it is the clang used by Xcode 4.1. 
+
+<pre>
+$ clang -v
+Apple clang version 2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
+Target: x86_64-apple-darwin11.0.0
+Thread model: posix
+</pre></p>
+<p class=tags>#osx</p>
+</article>
+
+<article class=regular id=p-8427446977>
+<p class=meta><span class=date>03/08/2011 23:50:58</span>
+<a class=llink href=../posts/8427446977.html>¶</a>
+<a href=http://www.ahwkong.com/post/8427446977 rel=canonical>●</a></p>
+<p>There are still a lot to like about lion. e.g. when I run &#8216;mvn&#8217;, it failed because no java runtime is found on my MBP. Immediately a window pops up and asked if I want to download java. A software update dialog appears and java is installed.</p>
+</article>
+
+<article class=regular id=p-8427413963>
+<p class=meta><span class=date>03/08/2011 23:49:13</span>
+<a class=llink href=../posts/8427413963.html>¶</a>
+<a href=http://www.ahwkong.com/post/8427413963 rel=canonical>●</a></p>
+<p>XCode 4.1 does not play too well with &#8216;Full screen&#8217; mode. If I connect an iPhone to the MBP, the Xcode will show a dialog box to ask me if I want to capture the latest iOS. The dialog box appears in the Organiser windows, but it is totally inaccessible. (You can see between the gap of two desktop when doing three-fingers swipe)</p>
+<p class=tags>#code #lion</p>
+</article>
+
+<article class=regular id=p-8400000511>
+<p class=meta><span class=date>03/08/2011 08:01:48</span>
+<a class=llink href=../posts/8400000511.html>¶</a>
+<a href=http://www.ahwkong.com/post/8400000511 rel=canonical>●</a></p>
+<p>LSE has a public lecture about the rise and decline of Wallonia, Belgium. Sounds interesting.</p>
+</article>
+
+<article class=regular id=p-8396862778>
+<p class=meta><span class=date>03/08/2011 06:43:26</span>
+<a class=llink href=../posts/8396862778.html>¶</a>
+<a href=http://www.ahwkong.com/post/8396862778 rel=canonical>●</a></p>
+<p>Finally killed the <b>perl</b> job that owns the alert window. Killed the parent <b>uninstalld</b>  (?) process too</p>
+</article>
+
+<article class=regular id=p-8396704828>
+<p class=meta><span class=date>03/08/2011 06:39:24</span>
+<a class=llink href=../posts/8396704828.html>¶</a>
+<a href=http://www.ahwkong.com/post/8396704828 rel=canonical>●</a></p>
+<p>It is not looking good. The new Xcode installation hang. It stops to alert me to close iTune. But after it is closed the alert stay. I killed the installer but the alert window is still there.</p>
+<p class=tags>#osx</p>
+</article>
+
+<article class=regular id=p-8396663423>
+<p class=meta><span class=date>03/08/2011 06:38:18</span>
+<a class=llink href=../posts/8396663423.html>¶</a>
+<a href=http://www.ahwkong.com/post/8396663423 rel=canonical>●</a></p>
+<p>XCode 4.2 beta also does not work with Lion. Uninstalled.</p>
+</article>
+
+<article class=regular id=p-8353796822>
+<p class=meta><span class=date>02/08/2011 07:15:07</span>
+<a class=llink href=../posts/8353796822.html>¶</a>
+<a href=http://www.ahwkong.com/post/8353796822 rel=canonical>●</a></p>
+<p>Xcode 3 no longer works with Lion. Need to figure out how to remove it properly. (Is running <code>uninstall-developer-folder</code>  all I need?)</p>
+<p class=tags>#lion #xcode #osx</p>
+</article>
+
+<article class=regular id=p-8338413512>
+<p class=meta><span class=date>01/08/2011 22:38:00</span>
+<a class=llink href=../posts/8338413512.html>¶</a>
+<a href=http://www.ahwkong.com/post/8338413512 rel=canonical>●</a></p>
+<p>A yard is a jargon for &#8216;billions&#8217; in trading</p>
+</article>
+
+<article class=regular id=p-8311908423>
+<p class=meta><span class=date>01/08/2011 07:42:56</span>
+<a class=llink href=../posts/8311908423.html>¶</a>
+<a href=http://www.ahwkong.com/post/8311908423 rel=canonical>●</a></p>
+<p>NaCl (Native Client) reached ABI stability</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

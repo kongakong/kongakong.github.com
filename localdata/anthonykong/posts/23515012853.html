@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23515012853>
+<p class=meta><span class=date>22/05/2012 11:01:37</span>
+<a class=llink href=../posts/23515012853.html>¶</a>
+<a href=http://www.ahwkong.com/post/23515012853 rel=canonical>●</a></p>
+<p>OSX cflags </p>
+
+<p><code><br/>
+$ /usr/bin/python-config --cflags<br/>
+-I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -I/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7 -fno-strict-aliasing -fno-common -dynamic -g -Os -pipe -fno-common -fno-strict-aliasing -fwrapv -mno-fused-madd -DENABLE_DTRACE -DMACOSX -DNDEBUG -Wall -Wstrict-prototypes -Wshorten-64-to-32 -DNDEBUG -g -fwrapv -Os -Wall -Wstrict-prototypes -DENABLE_DTRACE -arch i386 -arch x86_64<br/></code></p>
+
+<p>vs brew cflags </p>
+
+<p><code><br/>
+$  /usr/local/bin/python2.7-config --cflags<br/>
+-I/usr/local/Cellar/python/2.7.2/include/python2.7 -I/usr/local/Cellar/python/2.7.2/include/python2.7 -fno-strict-aliasing -O3 -w -pipe -march=core2 -msse4 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes<br/></code></p>
+<p class=tags>#python #brew</p>
+</article>

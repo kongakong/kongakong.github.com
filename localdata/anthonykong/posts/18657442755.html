@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-18657442755>
+<p class=meta><span class=date>03/03/2012 22:30:05</span>
+<a class=llink href=../posts/18657442755.html>¶</a>
+<a href=http://www.ahwkong.com/post/18657442755 rel=canonical>●</a></p>
+<h2>Augmented assignment in Python</h2>
+<p>This is a surprise</p>
+
+<pre class="brush: python">
+&gt;&gt;&gt; l = ([],)
+&gt;&gt;&gt; l[0]+=[1]
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment
+&gt;&gt;&gt; l
+([1],)
+</pre>
+
+<p>
+Despite the TypeError, the element 0 of the tuple is changed
+</p>
+<p>
+An explanation <a href="http://article.gmane.org/gmane.comp.python.general/534412/match=augmented+assignment+tuple">here</a>
+</p>
+<p class=tags>#python</p>
+</article>

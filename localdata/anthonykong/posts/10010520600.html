@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-10010520600>
+<p class=meta><span class=date>10/09/2011 08:52:05</span>
+<a class=llink href=../posts/10010520600.html>¶</a>
+<a href=http://www.ahwkong.com/post/10010520600 rel=canonical>●</a></p>
+<h2>Sometimes software development is really just about complexity management</h2>
+
+I want to install the apple preview of jdk. After installation I could not find the binary. Instead I found two (not one but two) instance of ire I compiled from the openjdk source.
+
+Want to refresh the code base, then I got this <code>hg</code> error message:
+
+<pre>
+Traceback (most recent call last):
+  File "/usr/local/bin/hg", line 4, in <module>
+    import pkg_resources
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 2603, in <module>
+    working_set.require(__requires__)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 666, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 565, in resolve
+    raise DistributionNotFound(req)  # XXX put more info here
+pkg_resources.DistributionNotFound: mercurial==1.8.2
+</module></module></pre></p>
+</article>

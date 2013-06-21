@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-15022191238>
+<p class=meta><span class=date>30/12/2011 22:03:00</span>
+<a class=llink href=../posts/15022191238.html>¶</a>
+<a href=http://www.ahwkong.com/post/15022191238 rel=canonical>●</a></p>
+<h2>How to retrieve session information of a @WebMethod call in Spring Framework</h2>
+<pre class="brush: java">
+import java.util.List;
+ 
+import javax.annotation.Resource; // 
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebResult;
+import javax.jws.WebService;
+import javax.xml.ws.WebServiceContext; // 1
+import org.apache.log4j.Logger;
+     
+@WebMethod(operationName='dataService')
+@WebResult(name='result')
+class MyDataService
+{
+          @Resource private WebServiceContext wsContext; // 2
+    
+          @WebMethod(operationName="getData")
+          @WebResult(name="riskData")
+          public List<datavalue> getData(@WebParam(name="dataRequest") DataRequest request) {
+             //  Perform action here ...
+ 
+             LOG.info("message context " + wsContext.getMessageContext().keySet()); // 3
+     
+             return result;
+           }
+}
+</datavalue></pre>
+
+The necessary changes are:
+
+<p>
+1) New import statements for <code>Resource </code> and <code>WebServiceContext</code>
+</p>
+
+<p>
+2) A declaration of variable of type <code> WebServiceContext</code>
+</p>
+
+<p>
+3) Obtain the session information by calling <code>getMessageContext()</code>
+</p>
+<p class=tags>#framework #java #spring #session</p>
+</article>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>January 2011</h1>
+
+
+<article class=regular id=p-2990139811>
+<p class=meta><span class=date>29/01/2011 18:31:43</span>
+<a class=llink href=../posts/2990139811.html>¶</a>
+<a href=http://www.ahwkong.com/post/2990139811 rel=canonical>●</a></p>
+<h2>Another EXC_BAD_ACCESS (2)</h2>
+<p>Probably related to this one</p>
+
+<p><a href="https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16">https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16</a></p>
+</article>
+
+<article class=regular id=p-2990119292>
+<p class=meta><span class=date>29/01/2011 18:29:33</span>
+<a class=llink href=../posts/2990119292.html>¶</a>
+<a href=http://www.ahwkong.com/post/2990119292 rel=canonical>●</a></p>
+<h2>Another EXC_BAD_ACCESS</h2>
+<p>This time it has something to do with a split view.</p>
+
+<pre><code>#0  0x010f15a8 in objc_exception_throw ()
+#1  0x00f55628 in +[NSException raise:format:arguments:] ()
+#2  0x00f5559a in +[NSException raise:format:] ()
+#3  0x006127df in -[UIPopoverController presentPopoverFromRect:inView:permittedArrowDirections:animated:] ()
+#4  0x00009c77 in -[MGSplitViewController reconfigureForMasterInPopover:] (self=0x6178400, _cmd=0xfbcd, inPopover=0 '\0') at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:579
+#5  0x00007cf2 in -[MGSplitViewController layoutSubviewsForInterfaceOrientation:withAnimation:] (self=0x6178400, _cmd=0xfc50, theOrientation=UIInterfaceOrientationLandscapeRight, animate=1 '\001') at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:254
+#6  0x000094e7 in -[MGSplitViewController layoutSubviews] (self=0x6178400, _cmd=0x6da3de) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:491
+#7  0x000095e0 in -[MGSplitViewController viewWillAppear:] (self=0x6178400, _cmd=0x6f21a2, animated=1 '\001') at /Users/antkong/Documents/Cocoa/FlipPad/Classes/MGSplitViewController.m:505
+#8  0x00576cd4 in -[UIWindowController transition:fromViewController:toViewController:target:didEndSelector:] ()
+#9  0x00381682 in -[UIViewController _dismissModalViewControllerWithTransition:from:] ()
+#10 0x0037e324 in -[UIViewController dismissModalViewControllerWithTransition:] ()
+#11 0x0635ab26 in -[UIViewControllerAccessibility(SafeCategory) dismissModalViewControllerWithTransition:] ()
+#12 0x00003a47 in -[LoginViewController doLogin:] (self=0x640ba80, _cmd=0xeb53, sender=0x6413570) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/../LoginViewController.m:76
+#13 0x00003c43 in -[LoginViewController(UITextFieldDelegate) textFieldShouldReturn:] (self=0x640ba80, _cmd=0x6ef376, sender=0x6413570) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/../LoginViewController.m:100
+#14 0x0634b740 in -[UITextFieldAccessibility(SafeCategory) keyboardInput:shouldInsertText:isMarkedText:] ()
+</code></pre>
+</article>
+
+<article class=regular id=p-2988855627>
+<p class=meta><span class=date>29/01/2011 16:42:00</span>
+<a class=llink href=../posts/2988855627.html>¶</a>
+<a href=http://www.ahwkong.com/post/2988855627 rel=canonical>●</a></p>
+<h2>My EXC_BAD_ACCESS mystery</h2>
+<p>It turns out it is because of the following line of code:</p>
+
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <strong>numberOfObjects</strong> returns an integer</p>
+</article>
+
+<article class=regular id=p-2952633404>
+<p class=meta><span class=date>27/01/2011 15:13:00</span>
+<a class=llink href=../posts/2952633404.html>¶</a>
+<a href=http://www.ahwkong.com/post/2952633404 rel=canonical>●</a></p>
+<h2>Core Data 4</h2>
+<p>I did not know that after implemented a <code>NSFetchResultController</code>, I still need to programmatically fetch the data and then call the table view to <code>reloadData</code></p>
+
+<p>An example:</p>
+
+<pre>
+
+    NSError *error = nil;
+    [self.fetchedResultsController performFetch:&amp;error];
+    if (error) {
+        NSLog(@"[CoreDataTableViewController performFetchForTableView:] %@ (%@)", 
+[error localizedDescription], [error localizedFailureReason]);
+    }
+    [tableView reloadData];
+
+</pre>
+<p class=tags>#ios #coredata</p>
+</article>
+
+<article class=regular id=p-2937022057>
+<p class=meta><span class=date>26/01/2011 16:14:00</span>
+<a class=llink href=../posts/2937022057.html>¶</a>
+<a href=http://www.ahwkong.com/post/2937022057 rel=canonical>●</a></p>
+<h2>Looking into stacktrace related to EXC_BAD_ACCESS</h2>
+<p>The stack trace</p>
+
+<pre><code># 0  0x010f9a60 in objc_msgSend ()
+#1  0x00022023 in _NSDescriptionWithLocaleFunc ()
+#2  0x00f8129d in __CFStringAppendFormatCore ()
+#3  0x00ec8f27 in _CFStringCreateWithFormatAndArgumentsAux ()
+#4  0x00f5091e in _CFLogvEx ()
+#5  0x0009fa61 in NSLogv ()
+#6  0x0009f9d0 in NSLog ()
+#7  0x00003b44 in -[FundClassListDetailController numberOfSectionsInTableView:] (self=0xb20ce10, _cmd=0x6e6d42, tableView=0x501de00) at /Users/antkong/Documents/Cocoa/FlipPad/Classes/FundClassListDetailController.m:133
+#8  0x0048035e in -[UITableViewRowData(UITableViewRowDataPrivate)        _updateNumSections] ()
+#9  0x0048000f in -[UITableViewRowData invalidateAllSections] ()
+#10 0x0033ab00 in -[UITableView(_UITableViewPrivate) _updateRowData] ()
+</code></pre>
+</article>
+
+<article class=regular id=p-2930386975>
+<p class=meta><span class=date>26/01/2011 09:35:00</span>
+<a class=llink href=../posts/2930386975.html>¶</a>
+<a href=http://www.ahwkong.com/post/2930386975 rel=canonical>●</a></p>
+<p>Delete the working project in shell by accident! Time Machine saved the day</p>
+</article>
+
+<article class=regular id=p-2928337512>
+<p class=meta><span class=date>26/01/2011 07:19:31</span>
+<a class=llink href=../posts/2928337512.html>¶</a>
+<a href=http://www.ahwkong.com/post/2928337512 rel=canonical>●</a></p>
+<p>App just mysteriously terminates after core data fetch&#8230;</p>
+</article>
+
+<article class=regular id=p-2912666648>
+<p class=meta><span class=date>25/01/2011 08:00:00</span>
+<a class=llink href=../posts/2912666648.html>¶</a>
+<a href=http://www.ahwkong.com/post/2912666648 rel=canonical>●</a></p>
+<p>Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation</p>
+<p class=tags>#ios #coredata</p>
+</article>
+
+<article class=regular id=p-2907806178>
+<p class=meta><span class=date>24/01/2011 21:39:00</span>
+<a class=llink href=../posts/2907806178.html>¶</a>
+<a href=http://www.ahwkong.com/post/2907806178 rel=canonical>●</a></p>
+<h2>Core Data 3</h2>
+<p><code>The model used to open the store is incompatible with the one used to create the store</code></p>
+
+<p>Delete the app from the iOS simulator whenever seeing this error message</p>
+<p class=tags>#ios #coredata</p>
+</article>
+
+<article class=regular id=p-2879727373>
+<p class=meta><span class=date>23/01/2011 09:21:00</span>
+<a class=llink href=../posts/2879727373.html>¶</a>
+<a href=http://www.ahwkong.com/post/2879727373 rel=canonical>●</a></p>
+<h2>The console message is rather helpful</h2>
+<p><code>*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a fetch request with sort descriptors'</code></p>
+<p class=tags>#coredata #ios</p>
+</article>
+
+<article class=regular id=p-2879685346>
+<p class=meta><span class=date>23/01/2011 09:18:24</span>
+<a class=llink href=../posts/2879685346.html>¶</a>
+<a href=http://www.ahwkong.com/post/2879685346 rel=canonical>●</a></p>
+<h2>error: @synthesize property must be in implementation context   </h2>
+<p>Yes, <code>@synthesize</code> should be within the <code>@implementation</code> block</p>
+</article>
+
+<article class=regular id=p-2878322041>
+<p class=meta><span class=date>23/01/2011 07:52:00</span>
+<a class=llink href=../posts/2878322041.html>¶</a>
+<a href=http://www.ahwkong.com/post/2878322041 rel=canonical>●</a></p>
+<h2>Core Data 2</h2>
+<p>Adding <code>NSFetchedResultsControllerDelegate</code> to the View Controller to add core data support.</p>
+
+<p>The amount of boiler plate code is incredible&#8230;</p>
+<p class=tags>#ios #coredata</p>
+</article>
+
+<article class=regular id=p-2873951048>
+<p class=meta><span class=date>23/01/2011 02:05:25</span>
+<a class=llink href=../posts/2873951048.html>¶</a>
+<a href=http://www.ahwkong.com/post/2873951048 rel=canonical>●</a></p>
+<p>core data is not easy&#8230;</p>
+</article>
+
+<article class=regular id=p-2807506716>
+<p class=meta><span class=date>18/01/2011 16:44:21</span>
+<a class=llink href=../posts/2807506716.html>¶</a>
+<a href=http://www.ahwkong.com/post/2807506716 rel=canonical>●</a></p>
+<h2>subversion note 2</h2>
+<p>To back out a changeset from your working copy (eg. 4321):</p>
+
+<pre><code>svn merge -c -4321 .
+svn checkin
+</code></pre>
+
+<p>Or multiple changesets:</p>
+
+<pre><code>svn merge -c -4321,-5432 .
+</code></pre>
+</article>
+
+<article class=regular id=p-2807483211>
+<p class=meta><span class=date>18/01/2011 16:42:24</span>
+<a class=llink href=../posts/2807483211.html>¶</a>
+<a href=http://www.ahwkong.com/post/2807483211 rel=canonical>●</a></p>
+<h2>subversion note 1</h2>
+<p>Added in svn 1.6: The caret ^ shorthand notation to shorten subversion URLs when using the command line. The caret symbol can be used in place of the portion of the URL up through the repository name.</p>
+
+<p>Ex:</p>
+
+<pre><code>svn switch ^/myProject/branches/fooBranch
+</code></pre>
+
+<p>instead of</p>
+
+<pre><code>svn switch http://machine22/repos/SandboxRepo/myProject/branches/fooBranch
+</code></pre>
+
+<p><a href="http://stackoverflow.com/questions/294256/favorite-non-obvious-feature-of-svn">Source</a></p>
+</article>
+
+<article class=regular id=p-2796356969>
+<p class=meta><span class=date>18/01/2011 04:00:00</span>
+<a class=llink href=../posts/2796356969.html>¶</a>
+<a href=http://www.ahwkong.com/post/2796356969 rel=canonical>●</a></p>
+<h2>Core Data 1</h2>
+<p>Reading <code>NSFetchedResultsController</code></p>
+<p class=tags>#ios #coredata</p>
+</article>
+
+<article class=regular id=p-2762296356>
+<p class=meta><span class=date>16/01/2011 04:34:00</span>
+<a class=llink href=../posts/2762296356.html>¶</a>
+<a href=http://www.ahwkong.com/post/2762296356 rel=canonical>●</a></p>
+<h2>Fall into the same trap everytime</h2>
+<p>I was just trying a very simple cpp program in osx.</p>
+
+<pre><code>#include &lt;iostream&gt;
+
+int main()
+
+{
+
+    std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
+
+}
+</code></pre>
+
+<p>Then I ran</p>
+
+<pre><code>gcc test.cpp
+</code></pre>
+
+<p>It failed with</p>
+
+<pre><code>Undefined symbols:
+  "std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp; std::operator&lt;&lt; &lt;std::char_traits&lt;char&gt; &gt;(std::basic_ostream&lt;char, std::char_traits&lt;char&gt; &gt;&amp;, char const*)", referenced from:
+      _main in cc6rSzeu.o
+  "std::ios_base::Init::Init()", referenced from:
+      __static_initialization_and_destruction_0(int, int)in cc6rSzeu.o
+  "std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;::size() const", referenced from:
+      std::__verify_grouping(char const*, unsigned long, std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt; const&amp;)in cc6rSzeu.o
+...
+</code></pre>
+
+<p>Change to <strong>g++</strong> fixes the issue</p>
+</article>
+
+<article class=regular id=p-2759634210>
+<p class=meta><span class=date>16/01/2011 00:27:58</span>
+<a class=llink href=../posts/2759634210.html>¶</a>
+<a href=http://www.ahwkong.com/post/2759634210 rel=canonical>●</a></p>
+<p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
+</article>
+
+<article class=regular id=p-2727123479>
+<p class=meta><span class=date>13/01/2011 20:22:00</span>
+<a class=llink href=../posts/2727123479.html>¶</a>
+<a href=http://www.ahwkong.com/post/2727123479 rel=canonical>●</a></p>
+<h2>Splash screen on iOS</h2>
+<p>In iPhone/iPad development the default.png file is displayed by the device automatically so you don&#8217;t have to program it which is really useful.</p>
+
+<p><a href="http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942">Source</a></p>
+</article>
+
+<article class=regular id=p-2716846397>
+<p class=meta><span class=date>13/01/2011 06:59:00</span>
+<a class=llink href=../posts/2716846397.html>¶</a>
+<a href=http://www.ahwkong.com/post/2716846397 rel=canonical>●</a></p>
+<p>Modal View screws up the SplitView after dismiss.</p>
+
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
+</article>
+
+<article class=regular id=p-2668647745>
+<p class=meta><span class=date>10/01/2011 02:44:12</span>
+<a class=llink href=../posts/2668647745.html>¶</a>
+<a href=http://www.ahwkong.com/post/2668647745 rel=canonical>●</a></p>
+<h2>iOS Idiom 2</h2>
+<p><code>[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];</code></p>
+</article>
+
+<article class=regular id=p-2667588233>
+<p class=meta><span class=date>10/01/2011 00:40:35</span>
+<a class=llink href=../posts/2667588233.html>¶</a>
+<a href=http://www.ahwkong.com/post/2667588233 rel=canonical>●</a></p>
+<p>Got <code>Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'</code></p>
+
+<p>when trying to dismiss a modal view controller.</p>
+</article>
+
+<article class=regular id=p-2658426192>
+<p class=meta><span class=date>09/01/2011 10:23:00</span>
+<a class=llink href=../posts/2658426192.html>¶</a>
+<a href=http://www.ahwkong.com/post/2658426192 rel=canonical>●</a></p>
+<h2>Some note on frame vs bounds</h2>
+<p>The <strong>frame</strong> property contains the frame rectangle, which specifies the size and location of the view in its superview’s coordinate system.</p>
+
+<p>The <strong>center</strong> property contains the known center point of the view in the superview’s coordinate system.</p>
+
+<p>The <strong>bounds</strong> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the view’s own local coordinate syst</p>
+</article>
+
+<article class=regular id=p-2623149828>
+<p class=meta><span class=date>07/01/2011 01:05:20</span>
+<a class=llink href=../posts/2623149828.html>¶</a>
+<a href=http://www.ahwkong.com/post/2623149828 rel=canonical>●</a></p>
+<p>Cannot get UISplitViewController to rotate. Very frustrated</p>
+</article>
+
+<article class=regular id=p-2586930582>
+<p class=meta><span class=date>04/01/2011 10:28:39</span>
+<a class=llink href=../posts/2586930582.html>¶</a>
+<a href=http://www.ahwkong.com/post/2586930582 rel=canonical>●</a></p>
+<h2>iOS Idiom 1</h2>
+<p>To access the main window</p>
+
+<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
+</article>
+
+<article class=regular id=p-2566688864>
+<p class=meta><span class=date>02/01/2011 23:17:58</span>
+<a class=llink href=../posts/2566688864.html>¶</a>
+<a href=http://www.ahwkong.com/post/2566688864 rel=canonical>●</a></p>
+<p>Some UIKit classes such as <code>UIColor</code>, <code>UIFont</code> and  <code>UIImage</code> are thread safe</p>
+</article>
+
+<article class=regular id=p-2566308188>
+<p class=meta><span class=date>02/01/2011 22:07:02</span>
+<a class=llink href=../posts/2566308188.html>¶</a>
+<a href=http://www.ahwkong.com/post/2566308188 rel=canonical>●</a></p>
+<p>Use <code>NSZombieEnabled</code> to catch BAD_ASSESS</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6045982408>
+<p class=meta><span class=date>01/06/2011 06:29:00</span>
+<a class=llink href=../posts/6045982408.html>¶</a>
+<a href=http://www.ahwkong.com/post/6045982408 rel=canonical>●</a></p>
+<h2>Item 12: Prefer initialization to assignment in constructors</h2>
+initialization: 
+
+<pre class="brush: c">
+
+template&lt;class T&gt;
+NamedPtr&lt;T&gt;::NamedPtr(const string&amp; initName, T *initPtr  )
+: name(initName), ptr(initPtr)
+{}
+
+</pre>
+
+Assignments in the constructor body: 
+
+
+<pre class="brush: c">
+ template&lt;class T&gt;
+NamedPtr&lt;T&gt;::NamedPtr(const string&amp; initName, T *initPtr)
+{
+  name = initName;
+  ptr = initPtr;
+}
+
+</pre>
+
+Reasons  why initialization is better:
+
+<ul><li>Make sense for <b>const</b> member variable which can only be initialised</li>
+<li> More efficient (assignment calls constructor and assignment operator)</li>
+</ul><p>
+<b>Exception</b>:
+</p>
+<p>
+When there is a large number of data members of built-in types
+</p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

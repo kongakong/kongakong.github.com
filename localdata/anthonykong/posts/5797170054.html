@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5797170054>
+<p class=meta><span class=date>24/05/2011 20:12:00</span>
+<a class=llink href=../posts/5797170054.html>¶</a>
+<a href=http://www.ahwkong.com/post/5797170054 rel=canonical>●</a></p>
+<h2>Earn another experience point</h2>
+<p>Wrote up a simple test module code (simply called &#8216;test&#8217;), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<b>r</b>) and repayment periods (<b>n</b>).</p>
+
+<p>When I compile the module, I get this error message:</p>
+
+<p><code>Warning: this expression will fail with a 'badarith' exception</code></p>
+
+<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
+
+<p>Now I get another error message:</p>
+
+<p><code><br/>
+exception error: no function clause matching test:mp(100000, 0.00625, 360)<br/></code></p>
+
+<p>Turns out the function declaration is <code>mp(B, r, n) </code>.</p>
+
+<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
+<p class=tags>#erlang</p>
+</article>

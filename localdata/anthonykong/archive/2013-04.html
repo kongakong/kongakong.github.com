@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>April 2013</h1>
+
+
+<article class=regular id=p-49203298223>
+<p class=meta><span class=date>30/04/2013 07:12:11</span>
+<a class=llink href=../posts/49203298223.html>¶</a>
+<a href=http://www.ahwkong.com/post/49203298223 rel=canonical>●</a></p>
+<h2>Emacs fu 2</h2>
+<p>erlware-mode is deprecated (<a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a>)</p>
+
+<p>Use erlang-mode in erlang distribution instead</p>
+<p class=tags>#Emacs #erlang</p>
+</article>
+
+<article class=regular id=p-49177916186>
+<p class=meta><span class=date>30/04/2013 00:01:00</span>
+<a class=llink href=../posts/49177916186.html>¶</a>
+<a href=http://www.ahwkong.com/post/49177916186 rel=canonical>●</a></p>
+<h2>homebrew and erlang R16B</h2>
+<p>Currently the version of erlang in homebrew is defaulted to version R15B03-1 even though a more recent version, R16B, is available.</p>
+
+<p>To install R16B, it is what I did:</p>
+
+<pre><code>$ brew unlink erlang # remove R15B
+$ brew versions erlang
+R15B03-1 git checkout 29323da /usr/local/Library/Formula/erlang.rb
+R16B     git checkout 7ab778a /usr/local/Library/Formula/erlang.rb
+R15B03   git checkout 311472d /usr/local/Library/Formula/erlang.rb
+R15B02   git checkout 44e09dd /usr/local/Library/Formula/erlang.rb
+R15B01   git checkout 6b8d25f /usr/local/Library/Formula/erlang.rb
+R14B04   git checkout 0fe383a /usr/local/Library/Formula/erlang.rb
+R14B03   git checkout 9332ca9 /usr/local/Library/Formula/erlang.rb
+R14B02   git checkout b782d9d /usr/local/Library/Formula/erlang.rb
+R14B01   git checkout 0476235 /usr/local/Library/Formula/erlang.rb
+R14B     git checkout 7871a99 /usr/local/Library/Formula/erlang.rb
+R13B04   git checkout 31f1fab /usr/local/Library/Formula/erlang.rb    
+R13B03   git checkout 729f3fa /usr/local/Library/Formula/erlang.rb
+R13B02-1 git checkout 0d673c6 /usr/local/Library/Formula/erlang.rb
+$ cd /usr/local/Library/Formula/
+$ git checkout 7ab778a erlang.rb
+$ brew switch erlang R16B
+Cleaning /usr/local/Cellar/erlang/R15B01
+Cleaning /usr/local/Cellar/erlang/R15B03-1
+Cleaning /usr/local/Cellar/erlang/R16B
+643 links created for /usr/local/Cellar/erlang/R16B # I have built it previously. Otherwise I think I need to run 'brew install erlang'
+</code></pre>
+<p class=tags>#erlang #homebrew</p>
+</article>
+
+<article class=regular id=p-48953372171>
+<p class=meta><span class=date>27/04/2013 07:17:51</span>
+<a class=llink href=../posts/48953372171.html>¶</a>
+<a href=http://www.ahwkong.com/post/48953372171 rel=canonical>●</a></p>
+<h2>Emacs fu 1</h2>
+<p>Find out the current emac.d location</p>
+
+<p><code>C-H v init-user-file &lt;RET&gt;</code></p>
+<p class=tags>#emacs</p>
+</article>
+
+<article class=regular id=p-48145048805>
+<p class=meta><span class=date>17/04/2013 07:18:51</span>
+<a class=llink href=../posts/48145048805.html>¶</a>
+<a href=http://www.ahwkong.com/post/48145048805 rel=canonical>●</a></p>
+<h2>Using sbt in ubuntu</h2>
+<p>First, to install, follow the instrument here: <a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
+
+<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
+
+<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
+<p class=tags>#sbt scala</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

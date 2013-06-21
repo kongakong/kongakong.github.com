@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-37050868937>
+<p class=meta><span class=date>03/12/2012 06:44:00</span>
+<a class=llink href=../posts/37050868937.html>¶</a>
+<a href=http://www.ahwkong.com/post/37050868937 rel=canonical>●</a></p>
+<h2>XCode linker error</h2>
+<p>An old project was created for iOS 5. When trying to re-run it, I got these error messages</p>
+
+<pre><code>Undefined symbols for architecture armv7:
+  "_OBJC_CLASS_$_AVCaptureSession", referenced from:
+       objc-class-ref in MNoteMediaPlayViewController.o
+ ld: symbol(s) not found for architecture armv7
+ clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</code></pre>
+
+<p>Do not recall this kind of trouble before with iOS upgrade.</p>
+
+<p>Set the &#8216;Deployment Target&#8217; to iOS6, clean and rebuilt but it did not work.</p>
+
+<p>AVFoundation Framework is actually dropped out from &#8220;Link Binary with Libraries&#8221; section. Re-adding the framework fixes the issue.</p>
+<p class=tags>#xcode</p>
+</article>

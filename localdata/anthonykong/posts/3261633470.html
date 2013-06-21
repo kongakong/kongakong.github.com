@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-3261633470>
+<p class=meta><span class=date>13/02/2011 11:52:08</span>
+<a class=llink href=../posts/3261633470.html>¶</a>
+<a href=http://www.ahwkong.com/post/3261633470 rel=canonical>●</a></p>
+<p>I am doing</p>
+
+<pre><code>NSError* error = nil;
+...
+NSLog(@"Error is %s", [error description]);
+</code></pre>
+
+<p>And I got this warning</p>
+
+<pre><code>warning: Format String Issue: Conversion specifies type 'char *' but the argument has type 'NSString *'
+</code></pre>
+
+<p>Change <code>%s</code> to <code>%@</code> get rid of the warning</p>
+</article>

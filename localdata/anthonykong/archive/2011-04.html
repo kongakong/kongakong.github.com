@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>April 2011</h1>
+
+
+<article class=regular id=p-5057409893>
+<p class=meta><span class=date>30/04/2011 11:50:00</span>
+<a class=llink href=../posts/5057409893.html>¶</a>
+<a href=http://www.ahwkong.com/post/5057409893 rel=canonical>●</a></p>
+<h2>To sort an array of array by the array size</h2>
+<p>A possible solution:</p>
+
+<pre><code>NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"@count"
+                                                 ascending:YES];
+NSArray *sds = [NSArray arrayWithObject:sd];
+NSArray *sortedArray = [array sortedArrayUsingDescriptors:sds];
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4960525859>
+<p class=meta><span class=date>27/04/2011 03:57:03</span>
+<a class=llink href=../posts/4960525859.html>¶</a>
+<a href=http://www.ahwkong.com/post/4960525859 rel=canonical>●</a></p>
+<p>NSNumber is an object class whereas NSInteger is a primitive type.</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4960381679>
+<p class=meta><span class=date>27/04/2011 03:49:00</span>
+<a class=llink href=../posts/4960381679.html>¶</a>
+<a href=http://www.ahwkong.com/post/4960381679 rel=canonical>●</a></p>
+<p>A note-to-myself on <code>release</code></p>
+
+<pre><code>[f1 release]
+
+NSLog(@"f1 is %@"); // result undefined here
+</code></pre>
+
+<p>Do not release before the variable is in use</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4959026781>
+<p class=meta><span class=date>27/04/2011 02:43:00</span>
+<a class=llink href=../posts/4959026781.html>¶</a>
+<a href=http://www.ahwkong.com/post/4959026781 rel=canonical>●</a></p>
+<h2>C refresher (2)</h2>
+<p>Generating a random number in the range of 0 to 100</p>
+
+<pre><code>srandom(time(NULL)); // seed using time
+
+NSNumber secret = (uint64_t) random() * 100 / RAND_MAX; // cast, multiply then divide
+</code></pre>
+</article>
+
+<article class=regular id=p-4953620092>
+<p class=meta><span class=date>26/04/2011 20:45:02</span>
+<a class=llink href=../posts/4953620092.html>¶</a>
+<a href=http://www.ahwkong.com/post/4953620092 rel=canonical>●</a></p>
+<h2>Brasilia</h2>
+<p>TIL Brasilia is the capital of Brazil and is located in the central-west of the country.</p>
+
+<p>Considering it is a purpose-build, new capital city and its remoteness from existing cities (such as Rio), the growth of Brasilia is rather remarkable.</p>
+</article>
+
+<article class=regular id=p-4951312542>
+<p class=meta><span class=date>26/04/2011 17:10:39</span>
+<a class=llink href=../posts/4951312542.html>¶</a>
+<a href=http://www.ahwkong.com/post/4951312542 rel=canonical>●</a></p>
+<h2>UIView tag and viewWithTag</h2>
+<p>Bad idea to set tag to 0</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4914366240>
+<p class=meta><span class=date>25/04/2011 11:52:33</span>
+<a class=llink href=../posts/4914366240.html>¶</a>
+<a href=http://www.ahwkong.com/post/4914366240 rel=canonical>●</a></p>
+<h2>C refresher</h2>
+<p>Divide an int by int returns an int. So, 100/255 will give you 0 in C.</p>
+
+<p>Very much like python</p>
+</article>
+
+<article class=regular id=p-4913837185>
+<p class=meta><span class=date>25/04/2011 11:34:15</span>
+<a class=llink href=../posts/4913837185.html>¶</a>
+<a href=http://www.ahwkong.com/post/4913837185 rel=canonical>●</a></p>
+<h2>More CG APIs: CGGeometry</h2>
+<p>CGGeometry documentation <a href="http://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html">here</a></p>
+
+<p>e.g</p>
+
+<p>Getting Min, Mid, and Max Values</p>
+
+<pre><code>CGRectGetMinX
+CGRectGetMinY
+CGRectGetMidX
+CGRectGetMidY
+CGRectGetMaxX
+CGRectGetMaxY
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4913273382>
+<p class=meta><span class=date>25/04/2011 11:14:45</span>
+<a class=llink href=../posts/4913273382.html>¶</a>
+<a href=http://www.ahwkong.com/post/4913273382 rel=canonical>●</a></p>
+<p>Latest Python Developer&#8217;s Guide: <a href="http://docs.python.org/devguide/setup.html"><a href="http://docs.python.org/devguide/setup.html">http://docs.python.org/devguide/setup.html</a></a></p>
+</article>
+
+<article class=regular id=p-4898036474>
+<p class=meta><span class=date>25/04/2011 01:59:00</span>
+<a class=llink href=../posts/4898036474.html>¶</a>
+<a href=http://www.ahwkong.com/post/4898036474 rel=canonical>●</a></p>
+<h2>Some CG APIs</h2>
+<p>CGContextMoveToPoint</p>
+
+<pre><code>CGContextBeginPath
+
+CGContextSetLineCap
+
+CGContextSetLineJoin
+
+CGContextAddArc
+
+CGContextAddCurveToPoint
+
+CGContextSelectFont 
+
+CGContextSetTextDrawingMode
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4897898874>
+<p class=meta><span class=date>25/04/2011 01:53:36</span>
+<a class=llink href=../posts/4897898874.html>¶</a>
+<a href=http://www.ahwkong.com/post/4897898874 rel=canonical>●</a></p>
+<h2>Addis Ababa</h2>
+<p>Addis Ababa is the capital city of Ethiopia.  It is also where the African Union and its predecessor the OAU are based</p>
+</article>
+
+<article class=regular id=p-4897539210>
+<p class=meta><span class=date>25/04/2011 01:37:48</span>
+<a class=llink href=../posts/4897539210.html>¶</a>
+<a href=http://www.ahwkong.com/post/4897539210 rel=canonical>●</a></p>
+<p>Quartz aligns elements midway between pixels</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4895607809>
+<p class=meta><span class=date>25/04/2011 00:05:56</span>
+<a class=llink href=../posts/4895607809.html>¶</a>
+<a href=http://www.ahwkong.com/post/4895607809 rel=canonical>●</a></p>
+<p><strong>CTM</strong>: current transformation matrix</p>
+</article>
+
+<article class=regular id=p-4893899586>
+<p class=meta><span class=date>24/04/2011 22:15:21</span>
+<a class=llink href=../posts/4893899586.html>¶</a>
+<a href=http://www.ahwkong.com/post/4893899586 rel=canonical>●</a></p>
+<p><a href="http://www.omnigroup.com/blog/designing_graceful_gracious_interfaces_for_ipad">Introduction to iPad GUI design by Omnigroup</a></p>
+</article>
+
+<article class=regular id=p-4892935796>
+<p class=meta><span class=date>24/04/2011 20:53:00</span>
+<a class=llink href=../posts/4892935796.html>¶</a>
+<a href=http://www.ahwkong.com/post/4892935796 rel=canonical>●</a></p>
+<h2>Reflow and off-DOM node manipulation</h2>
+<p><a href="http://www.youtube.com/watch?v=q_O9_C2ZjoA">Google Developers talk by Paul Irish.</a> It covers reflow, hardware accelerated css,  animation optimization (<code>tranformZ</code>), <code>requestAnimationFrame</code> (Chrome and FF) etc.</p>
+</article>
+
+<article class=regular id=p-4891169876>
+<p class=meta><span class=date>24/04/2011 18:09:47</span>
+<a class=llink href=../posts/4891169876.html>¶</a>
+<a href=http://www.ahwkong.com/post/4891169876 rel=canonical>●</a></p>
+<p>There is this &#8216;Album Rating&#8217; feature in iTune</p>
+</article>
+
+<article class=regular id=p-4890388362>
+<p class=meta><span class=date>24/04/2011 17:09:47</span>
+<a class=llink href=../posts/4890388362.html>¶</a>
+<a href=http://www.ahwkong.com/post/4890388362 rel=canonical>●</a></p>
+<h2>Installing mercurial </h2>
+<p>Ran <code>easy_install mercurial</code> which in turns installed the egg in /Library/Python/2.6/site-packages</p>
+
+<p>Reasonably easy</p>
+</article>
+
+<article class=regular id=p-4884375676>
+<p class=meta><span class=date>24/04/2011 12:48:18</span>
+<a class=llink href=../posts/4884375676.html>¶</a>
+<a href=http://www.ahwkong.com/post/4884375676 rel=canonical>●</a></p>
+<h2>getspent</h2>
+<p>Part of the APIs to deal with shadow password file entry</p>
+
+<p>Other related function calls: <code>spent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf</code></p>
+</article>
+
+<article class=regular id=p-4879079522>
+<p class=meta><span class=date>24/04/2011 09:28:00</span>
+<a class=llink href=../posts/4879079522.html>¶</a>
+<a href=http://www.ahwkong.com/post/4879079522 rel=canonical>●</a></p>
+<p>Compiling Python 3.x (<a href="http://svn.python.org/projects/python/branches/py3k">http://svn.python.org/projects/python/branches/py3k</a> @88828), and got a bunch of error messages</p>
+
+<pre><code>gcc   -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl  -framework CoreFoundation     
+Could not find platform dependent libraries &lt;exec_prefix&gt;
+Consider setting $PYTHONHOME to &lt;prefix&gt;[:&lt;exec_prefix&gt;]
+Fatal Python error: Py_Initialize: can't initialize sys standard streams
+Traceback (most recent call last):
+   File "/Users/antkong/wd/python/python3/Lib/io.py", line 60, in &lt;module&gt;
+/bin/sh: line 1: 55310 Abort trap              CC='gcc' LDSHARED='gcc -bundle -undefined dynamic_lookup  ' OPT='-DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes' ./python.exe -E ./setup.py build
+make: *** [sharedmods] Error 134
+</code></pre>
+</article>
+
+<article class=regular id=p-4831750850>
+<p class=meta><span class=date>22/04/2011 18:48:55</span>
+<a class=llink href=../posts/4831750850.html>¶</a>
+<a href=http://www.ahwkong.com/post/4831750850 rel=canonical>●</a></p>
+<p>Tried this to build 64 bit erlang on osx: <code>./configure  --enable-darwin-64bit; make</code></p>
+
+<p>Got a bunch of error messages:</p>
+
+<pre><code>"_inflateInit2_", referenced from:
+    _erts_gzopen in gzio.o
+    _erts_gzinflate_buffer in gzio.o
+    _zlib_ctl in zlib_drv.o
+"_inflateSync", referenced from:
+    _zlib_ctl in zlib_drv.o
+"_inflateSetDictionary", referenced from:
+    _zlib_ctl in zlib_drv.o
+"_deflateReset", referenced from:
+    _zlib_ctl in zlib_drv.o
+"_deflateSetDictionary", referenced from:
+    _zlib_ctl in zlib_drv.o
+"_deflateParams", referenced from:
+    _zlib_ctl in zlib_drv.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+</code></pre>
+</article>
+
+<article class=regular id=p-4786879758>
+<p class=meta><span class=date>21/04/2011 08:01:56</span>
+<a class=llink href=../posts/4786879758.html>¶</a>
+<a href=http://www.ahwkong.com/post/4786879758 rel=canonical>●</a></p>
+<p>Got the following error messages when compiling a few c files in OSX</p>
+
+<pre><code>Undefined symbols for architecture x86_64:
+  "_driver_alloc", referenced from:
+      _example_drv_start in ccD9FKBB.o
+  "_driver_free", referenced from:
+      _example_drv_stop in ccD9FKBB.o
+  "_driver_output", referenced from:
+      _example_drv_output in ccD9FKBB.o
+  ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+</code></pre>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4758221695>
+<p class=meta><span class=date>20/04/2011 08:28:43</span>
+<a class=llink href=../posts/4758221695.html>¶</a>
+<a href=http://www.ahwkong.com/post/4758221695 rel=canonical>●</a></p>
+<p>Mac OS X Objective-C 2.0 runtime library support functions and data structures are implemented in the shared library /usr/lib/libobjc.A.dylib.</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4744830990>
+<p class=meta><span class=date>19/04/2011 21:39:45</span>
+<a class=llink href=../posts/4744830990.html>¶</a>
+<a href=http://www.ahwkong.com/post/4744830990 rel=canonical>●</a></p>
+<p><strong>NSValue</strong> is for wrapping primitive type as an object</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4730673516>
+<p class=meta><span class=date>19/04/2011 09:15:37</span>
+<a class=llink href=../posts/4730673516.html>¶</a>
+<a href=http://www.ahwkong.com/post/4730673516 rel=canonical>●</a></p>
+<p>Apparently there are a lot of possibility in clever use of <code>addSubView:</code> method of UIView. Need to find out more</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4711913957>
+<p class=meta><span class=date>18/04/2011 15:24:52</span>
+<a class=llink href=../posts/4711913957.html>¶</a>
+<a href=http://www.ahwkong.com/post/4711913957 rel=canonical>●</a></p>
+<p>A fun idea: why not do something to drive objective-c runtime system using erlang?</p>
+</article>
+
+<article class=regular id=p-4704255801>
+<p class=meta><span class=date>18/04/2011 10:25:42</span>
+<a class=llink href=../posts/4704255801.html>¶</a>
+<a href=http://www.ahwkong.com/post/4704255801 rel=canonical>●</a></p>
+<p>Struggled with Jquery autocomplete for a few days. It turns out I was using an unsupported version from bassistance.de</p>
+
+<p>The autocomplete from  <a href="http://jqueryui.com/">JQuery UI Project</a> is the working version</p>
+</article>
+
+<article class=regular id=p-4657024002>
+<p class=meta><span class=date>16/04/2011 21:49:00</span>
+<a class=llink href=../posts/4657024002.html>¶</a>
+<a href=http://www.ahwkong.com/post/4657024002 rel=canonical>●</a></p>
+<p><strong>anchor point</strong>, the center point of a CALayer widget (i.e. (0.5, 0.5) )</p>
+
+<p><strong>position</strong> is relative to the <strong>anchor point</strong></p>
+</article>
+
+<article class=regular id=p-4654529334>
+<p class=meta><span class=date>16/04/2011 17:42:49</span>
+<a class=llink href=../posts/4654529334.html>¶</a>
+<a href=http://www.ahwkong.com/post/4654529334 rel=canonical>●</a></p>
+<p><strong>ivar</strong>, because it is &#8216;instance variable&#8217;</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4615878748>
+<p class=meta><span class=date>15/04/2011 07:58:20</span>
+<a class=llink href=../posts/4615878748.html>¶</a>
+<a href=http://www.ahwkong.com/post/4615878748 rel=canonical>●</a></p>
+<h2>-Werr or GTFO</h2>
+
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-6107975448>
+<p class=meta><span class=date>14/04/2011 20:04:00</span>
+<a class=llink href=../posts/6107975448.html>¶</a>
+<a href=http://www.ahwkong.com/post/6107975448 rel=canonical>●</a></p>
+<h2>Is there any condition where finally might not run in java?</h2>
+<p>1. If there is lock condition in the <code>try<code> block</code></code></p>
+
+<p>2. JVM is terminated (e.g. <code>System.exit()</code> before finally is executed</p>
+<p class=tags>#java</p>
+</article>
+
+<article class=regular id=p-4575978486>
+<p class=meta><span class=date>13/04/2011 18:39:00</span>
+<a class=llink href=../posts/4575978486.html>¶</a>
+<a href=http://www.ahwkong.com/post/4575978486 rel=canonical>●</a></p>
+<h2>Naming convention: -init, -new, -copy</h2>
+<p>Retain count = 1</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4572573701>
+<p class=meta><span class=date>13/04/2011 14:15:34</span>
+<a class=llink href=../posts/4572573701.html>¶</a>
+<a href=http://www.ahwkong.com/post/4572573701 rel=canonical>●</a></p>
+<p>Interesting talk: <a href="http://player.vimeo.com/video/17760875">Spelunking OS X by Jonathan &#8220;Wolf&#8221; Rentzsch</a></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4554600240>
+<p class=meta><span class=date>13/04/2011 01:53:00</span>
+<a class=llink href=../posts/4554600240.html>¶</a>
+<a href=http://www.ahwkong.com/post/4554600240 rel=canonical>●</a></p>
+<h2>Central Line</h2>
+<p>TIL about the Central Line (aka <a href="http://en.wikipedia.org/wiki/Central_venous_catheter">CVC</a> ):</p>
+
+<p>Central lines (e.g., for cancer patients)</p>
+
+<p>– Approx. 10% of all central lines have gotten infected</p>
+
+<p>– 10-20% of infected patients have died in some hospital</p>
+</article>
+
+<article class=regular id=p-4545675783>
+<p class=meta><span class=date>12/04/2011 14:17:51</span>
+<a class=llink href=../posts/4545675783.html>¶</a>
+<a href=http://www.ahwkong.com/post/4545675783 rel=canonical>●</a></p>
+<p>Learn something interesting today:  <a href="http://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/doc/uid/20000050-SW5">NSObject::resolveInstanceMethod:</a></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-6108177790>
+<p class=meta><span class=date>11/04/2011 22:53:00</span>
+<a class=llink href=../posts/6108177790.html>¶</a>
+<a href=http://www.ahwkong.com/post/6108177790 rel=canonical>●</a></p>
+<h2>JVM: Sizing the Generations</h2>
+<p>
+A few parameters:
+</p>
+<ul><li> Committed space (-Xms) and virtual space (-Xmx) in the heap</li>
+
+<li> Tenured generation to and young generation</li>
+
+<li>Eden vs Survivor ratio</li>
+</ul><p>
+From <a href="http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html">Sun JVM Documentation</a>
+</p>
+
+<p>
+<b>Note</b>
+</p>
+<p>
+The proportion of the heap dedicated to the young generation: The bigger the young generation, the less often minor collections occur. However, for a bounded heap size a larger young generation implies a smaller tenured generation, which will increase the frequency of major collections. The optimal choice depends on the lifetime distribution of the objects allocated by the application.
+</p>
+<p class=tags>#java #jvm</p>
+</article>
+
+<article class=regular id=p-4500465032>
+<p class=meta><span class=date>11/04/2011 04:42:14</span>
+<a class=llink href=../posts/4500465032.html>¶</a>
+<a href=http://www.ahwkong.com/post/4500465032 rel=canonical>●</a></p>
+<p>Related to KVO: Cocoa Binding</p>
+
+<p><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html">http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html</a></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4499826123>
+<p class=meta><span class=date>11/04/2011 04:17:52</span>
+<a class=llink href=../posts/4499826123.html>¶</a>
+<a href=http://www.ahwkong.com/post/4499826123 rel=canonical>●</a></p>
+<p>Learn something new today: <a href="http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/KeyValueObserving/KeyValueObserving.html">KVO</a></p>
+
+<p>KVO: Key value observation. Related to Notification.</p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-4499737022>
+<p class=meta><span class=date>11/04/2011 04:14:26</span>
+<a class=llink href=../posts/4499737022.html>¶</a>
+<a href=http://www.ahwkong.com/post/4499737022 rel=canonical>●</a></p>
+<p>Learn something new today: <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNotificationCenter_Class/Reference/Reference.html">NSNotificationCenter</a></p>
+<p class=tags>#objective-c</p>
+</article>
+
+<article class=regular id=p-6108881664>
+<p class=meta><span class=date>04/04/2011 22:24:00</span>
+<a class=llink href=../posts/6108881664.html>¶</a>
+<a href=http://www.ahwkong.com/post/6108881664 rel=canonical>●</a></p>
+<h2>Example of EqualBuilder</h2>
+<pre class="brush: java">
+
+ public boolean equals(Object obj) {
+   if (obj == null) { return false; }
+   if (obj == this) { return true; }
+   if (obj.getClass() != getClass()) {
+     return false;
+   }
+   MyClass rhs = (MyClass) obj;
+   return new EqualsBuilder()
+                 .appendSuper(super.equals(obj))
+                 .append(field1, rhs.field1)
+                 .append(field2, rhs.field2)
+                 .append(field3, rhs.field3)
+                 .isEquals();
+  }
+ 
+</pre>
+
+<p>
+
+from <a href="http://commons.apache.org/lang/api-2.4/org/apache/commons/lang/builder/EqualsBuilder.html">apache common lang documentation</a> </p>
+<p class=tags>#java</p>
+</article>
+
+<article class=regular id=p-6106984922>
+<p class=meta><span class=date>02/04/2011 23:44:00</span>
+<a class=llink href=../posts/6106984922.html>¶</a>
+<a href=http://www.ahwkong.com/post/6106984922 rel=canonical>●</a></p>
+<h2>Java vs Python (Prolog)</h2>
+<p>If you are expecting some sort of combative comments in this post, you will be disappointed. </p>
+
+<p>It all started a few days ago: I was asked by someone of extensive Java development background about the advantage of python, and if it is a suitable language for large scale. Despite I have been doing python application (web app) development for a few years, I found that my arguments did not come off very convincing. </p>
+
+<p>So it gives me an idea to write a few, hopefully useful, pieces on this subject matter.</p>
+<p class=tags>#idea</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

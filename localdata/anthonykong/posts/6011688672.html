@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6011688672>
+<p class=meta><span class=date>31/05/2011 06:38:00</span>
+<a class=llink href=../posts/6011688672.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011688672 rel=canonical>●</a></p>
+<h2>Item 10:  Write operator delete if you write operator new</h2>
+<p>
+Rather self-explanatory.
+</p>
+<p>
+Two recommended checks:
+</p>
+<p>
+<b>Null Pointer Check</b>
+</p>
+<pre class="brush: c">
+  if (deadObject == 0) return;       
+</pre>
+
+
+<b>Size Check</b>
+
+<pre class="brush: c">
+// pass on to default delete if the size does not match
+   if (size != sizeof(MyTestClass))     {  
+    ::operator delete(deadObject);
+    return;
+  }
+</pre>
+<p class=tags>#c++ #self-study #Effective C++</p>
+</article>

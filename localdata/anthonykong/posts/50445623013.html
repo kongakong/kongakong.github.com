@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-50445623013>
+<p class=meta><span class=date>15/05/2013 07:33:00</span>
+<a class=llink href=../posts/50445623013.html>¶</a>
+<a href=http://www.ahwkong.com/post/50445623013 rel=canonical>●</a></p>
+<h2>brew local modification error and solution</h2>
+<p>$ brew update
+       error: Your local changes to the following files would be overwritten by  merge:
+        Library/Formula/erlang.rb
+      Please, commit your changes or stash them before you can merge.
+      Aborting
+      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</p>
+
+<p><strong>Solution</strong></p>
+
+<pre><code>$ cd `brew --prefix`
+$ cd Cellar/erlang/
+$ git reset --hard HEAD
+</code></pre>
+<p class=tags>#homebrew</p>
+</article>

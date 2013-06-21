@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-22652064495>
+<p class=meta><span class=date>09/05/2012 00:19:00</span>
+<a class=llink href=../posts/22652064495.html>¶</a>
+<a href=http://www.ahwkong.com/post/22652064495 rel=canonical>●</a></p>
+<p>One way to separate the keys and values of a dictionary into two lists
+
+
+<pre class="brush:python">
+adict ={'YLE': 6, 'QYL': 36, 'PTD': 32, 'AGG': 145, 'QYG': 34, 'QYD': 34,
+'AGD': 188, 'QYS': 35, 'AGS': 177, 'AGA': 154, 'QYA': 23, 'AGL': 16, 'LAU':
+1, 'PTA': 7, 'AGY': 7, 'QYY': 19, 'QYE': 6, 'PAT': 57, 'QYT': 28, 'AGT': 10, 'QYQ': 34,
+'AGQ': 140, 'QYP': 32, 'AGP': 167, 'TAT': 31, 'SGS': 174, 'TAP': 18, 'YLP':
+49, 'TAQ': 23, 'UQE': 5, 'UAQ': 9, 'UAT': 8, 'UAE': 7, 'TAD': 1, 'TAG': 15, 'TAA':
+20, 'TAS': 1, 'YUP': 1, 'TAL': 45, 'ALU': 20, 'PEP': 14, 'UAG': 6, 'EAL':
+16, 'SYY': 36, 'EAS': 35, 'SYT': 29, 'EAA': 16, 'SYQ': 13, 'EAG': 28}
+
+
+import operator
+aminos, weights = zip(*sorted(adict.items(), key=operator.itemgetter(1)))
+print aminos, weights
+
+</pre>
+
+The output becomes
+
+<pre>
+('YUP', 'TAS', 'TAD', 'LAU', 'UQE', 'YLE', 'UAG', 'QYE', 'AGY', 'UAE', 'PTA', 'UAT', 'UAQ', 'AGT', 
+'SYQ', 'PEP', 'TAG', 'AGL', 'EAL', 'EAA', 'TAP', 'QYY', 'TAA', 'ALU', 'TAQ', 'QYA', 'EAG', 'QYT', 
+'SYT', 'TAT', 'QYP', 'PTD', 'QYQ', 'QYG', 'QYD', 'QYS', 'EAS', 'QYL', 'SYY', 'TAL', 'YLP', 'PAT', 
+'AGQ', 'AGG', 'AGA', 'AGP', 'SGS', 'AGS', 'AGD') (1, 1, 1, 1, 5, 6, 6, 6, 7, 7, 7, 8, 9, 10, 13, 14, 
+15, 16, 16, 16, 18, 19, 20, 20, 23, 23, 28, 28, 29, 31, 32, 32, 34, 34, 34, 35, 35, 36, 36, 45, 49, 57,
+140, 145, 154, 167, 174, 177, 188)
+</pre></p>
+<p class=tags>#python</p>
+</article>

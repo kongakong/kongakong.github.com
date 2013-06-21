@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-31877647026>
+<p class=meta><span class=date>20/09/2012 06:52:00</span>
+<a class=llink href=../posts/31877647026.html>¶</a>
+<a href=http://www.ahwkong.com/post/31877647026 rel=canonical>●</a></p>
+<h2>Side effect programming is bad</h2>
+<p>This bit of code is trying to calculate a list of mid prices based on bid and ask prices</p>
+
+<pre>
+def mids(self, bids, asks):
+    f = lambda X, Y: (X is not None) and (Y  is not None) and (X+Y)/2 or None
+    return [f(bid, ask) for bid, ask in zip(bids, asks)
+
+</pre>
+
+<p>It works fine until one day there is a None in mids.</p>
+
+<p>The bid and ask of the corresponding item are both zero. We expect to see zero in the result.</p>
+
+<p>So what happened?</p>
+
+<p>The original lambda, f, rely on the side effect of short-circuit behaviour of  and/or operator to return the mid price (if there is data) or None (if both are <code>None</code>)</p>
+
+<p>But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the &#8216;or&#8217; part of the expression.</p>
+
+<p>A better to write the lambda:</p>
+
+<pre>
+ f = lambda X, Y:  (X+Y)/2.0 if (X is not None) and (Y  is not None)  else None
+</pre>
+<p class=tags>#python</p>
+</article>

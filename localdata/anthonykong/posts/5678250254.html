@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5678250254>
+<p class=meta><span class=date>21/05/2011 08:45:00</span>
+<a class=llink href=../posts/5678250254.html>¶</a>
+<a href=http://www.ahwkong.com/post/5678250254 rel=canonical>●</a></p>
+<h2>Generate a list of number</h2>
+<p>Python
+
+<pre class="brush: python">
+&gt;&gt;&gt; range(1, 11)
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</pre>
+
+Erlang
+
+
+<pre class="brush: erlang">
+
+1&gt; lists:seq(1,10).
+[1,2,3,4,5,6,7,8,9,10]
+
+</pre>
+
+And the Java way
+
+
+<pre class="brush: java">
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class TestGen {
+	
+	@Test
+	public void testGen() {
+		List l = new ArrayList();
+		for (int i = 0; i &lt;= 10; i++) {
+			l.add(new Integer(i));
+		}
+		
+		System.out.print(l);
+	}
+
+}
+
+
+</pre></p>
+<p class=tags>#erlang #python #java</p>
+</article>

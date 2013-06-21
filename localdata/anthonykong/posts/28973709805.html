@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-28973709805>
+<p class=meta><span class=date>08/08/2012 19:53:37</span>
+<a class=llink href=../posts/28973709805.html>¶</a>
+<a href=http://www.ahwkong.com/post/28973709805 rel=canonical>●</a></p>
+<p>Got this error message in xcode</p>
+
+<pre><code>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+ a UITableView.'
+*** First throw call stack:
+</code></pre>
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
+</article>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>September 2012</h1>
+
+
+<article class=regular id=p-32374610695>
+<p class=meta><span class=date>27/09/2012 13:02:02</span>
+<a class=llink href=../posts/32374610695.html>¶</a>
+<a href=http://www.ahwkong.com/post/32374610695 rel=canonical>●</a></p>
+<p>Simple R vector</p>
+
+<pre>
+
+&gt; x  x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 
+ [16] 16 17 18 19 20
+
+</pre>
+
+<p>“[1]” means the index of the element in the resultant vector</p>
+<p class=tags>#R</p>
+</article>
+
+<article class=video id=p-32322486387>
+<p class=meta><span class=date>26/09/2012 21:04:22</span>
+<a class=llink href=../posts/32322486387.html>¶</a>
+<a href=http://www.ahwkong.com/post/32322486387 rel=canonical>●</a></p>
+<iframe width="400" height="300" src="http://www.youtube.com/embed/Pi9NpxAvYSs?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0" frameborder="0" allowfullscreen></iframe>
+<p>&#8220;Python Epiphanies&#8221; by Stuart Williams</p>
+<p><a href="http://www.youtube.com/watch?v=Pi9NpxAvYSs">Original</a></p>
+<p class=tags>#python</p>
+</article>
+
+<article class=regular id=p-32266848480>
+<p class=meta><span class=date>26/09/2012 02:16:00</span>
+<a class=llink href=../posts/32266848480.html>¶</a>
+<a href=http://www.ahwkong.com/post/32266848480 rel=canonical>●</a></p>
+<p>Do not have git on my rebuilt MBP. Was about to hit &#8216;brew install git&#8217;. Then I realised: I already have git installed. It is part of XCode.</p>
+
+<p>So it is what I did: add the following line to <code>.bash_rc</code></p>
+
+<pre><code>alias git='xcrun git'
+</code></pre>
+<p class=tags>#git #xcode #osx</p>
+</article>
+
+<article class=link id=p-32107367444>
+<p class=meta><span class=date>23/09/2012 16:20:00</span>
+<a class=llink href=../posts/32107367444.html>¶</a>
+<a href=http://www.ahwkong.com/post/32107367444 rel=canonical>●</a></p>
+<h2><a href="http://www.youtube.com/watch?v=9SzwiZMSBeQ">The most cost-effective way to store a DNA sequence ... is the DNA itself</a></h2>
+<p>DNA material, if stored in dark, cool and dry space, can survive thousand years. It is  a lot more cost-effective than storing the sequence on tapes, which needs to be rotated and maintained, and will degrade overtime. Proper storage of DNA can keep it in good condition for multiple  <strong>epochs</strong>.</p>
+<p class=tags>#Today I Learn</p>
+</article>
+
+<article class=regular id=p-31877647026>
+<p class=meta><span class=date>20/09/2012 06:52:00</span>
+<a class=llink href=../posts/31877647026.html>¶</a>
+<a href=http://www.ahwkong.com/post/31877647026 rel=canonical>●</a></p>
+<h2>Side effect programming is bad</h2>
+<p>This bit of code is trying to calculate a list of mid prices based on bid and ask prices</p>
+
+<pre>
+def mids(self, bids, asks):
+    f = lambda X, Y: (X is not None) and (Y  is not None) and (X+Y)/2 or None
+    return [f(bid, ask) for bid, ask in zip(bids, asks)
+
+</pre>
+
+<p>It works fine until one day there is a None in mids.</p>
+
+<p>The bid and ask of the corresponding item are both zero. We expect to see zero in the result.</p>
+
+<p>So what happened?</p>
+
+<p>The original lambda, f, rely on the side effect of short-circuit behaviour of  and/or operator to return the mid price (if there is data) or None (if both are <code>None</code>)</p>
+
+<p>But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the &#8216;or&#8217; part of the expression.</p>
+
+<p>A better to write the lambda:</p>
+
+<pre>
+ f = lambda X, Y:  (X+Y)/2.0 if (X is not None) and (Y  is not None)  else None
+</pre>
+<p class=tags>#python</p>
+</article>
+
+<article class=link id=p-31813116468>
+<p class=meta><span class=date>19/09/2012 06:39:26</span>
+<a class=llink href=../posts/31813116468.html>¶</a>
+<a href=http://www.ahwkong.com/post/31813116468 rel=canonical>●</a></p>
+<h2><a href="https://github.com/harrah/xsbt/wiki">Scala build tool</a></h2>
+
+<p class=tags>#scale</p>
+</article>
+
+<article class=regular id=p-31619891652>
+<p class=meta><span class=date>16/09/2012 09:42:00</span>
+<a class=llink href=../posts/31619891652.html>¶</a>
+<a href=http://www.ahwkong.com/post/31619891652 rel=canonical>●</a></p>
+<h2>iMac woe</h2>
+<p>This 27&#8221; iMac brings me endless issue.</p>
+
+<p>When I first bought it, it got recalled right away.</p>
+
+<p>I have to take a cab to and from the apple store because it is too hard to find parking in the CBD near the Apple Store. Have to move this heavy beast up and down to get to the genius bar.</p>
+
+<p>From then on there is a lot of stability issue.</p>
+
+<p>I am trying to upgrade it to Mountain Lion today.</p>
+
+<p>My previous attempts on Macbook air and Macbook Pro are very smooth.</p>
+
+<p>But not on this iMac.</p>
+
+<p>For days, I cannot download the Mountain Lion installer to Launder.</p>
+
+<p>Fine.</p>
+
+<p>Prepared an mountain lion OSX thumb drive and boot it up. Cannot run installer because it cannot download components for installation!</p>
+
+<p>Should never buy an iMac. Look stunning but really unreliable. Should have bough a mac mini + display instead. At least it will make it easier to visit a Genius Bar when there is a trouble.</p>
+<p class=tags>#apple #rant</p>
+</article>
+
+<article class=video id=p-31263644336>
+<p class=meta><span class=date>10/09/2012 19:52:19</span>
+<a class=llink href=../posts/31263644336.html>¶</a>
+<a href=http://www.ahwkong.com/post/31263644336 rel=canonical>●</a></p>
+<iframe width="400" height="300" src="http://www.youtube.com/embed/NNnIGh9g6fA?wmode=transparent&autohide=1&egm=0&hd=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&showsearch=0" frameborder="0" allowfullscreen></iframe>
+<p><strong>Human Behavioral Biology</strong> by <a href="http://en.wikipedia.org/wiki/Robert_Sapolsky">Robert Spalosky</a>. Very engaging lecture series.</p>
+<p><a href="http://www.youtube.com/watch?v=NNnIGh9g6fA">Original</a></p>
+</article>
+
+<article class=link id=p-31190527440>
+<p class=meta><span class=date>09/09/2012 20:43:19</span>
+<a class=llink href=../posts/31190527440.html>¶</a>
+<a href=http://www.ahwkong.com/post/31190527440 rel=canonical>●</a></p>
+<h2><a href="https://github.com/tpope/vim-pathogen">Pathogen: manage vim runtimepath </a></h2>
+
+<p class=tags>#vim</p>
+</article>
+
+<article class=regular id=p-31050185788>
+<p class=meta><span class=date>07/09/2012 19:52:00</span>
+<a class=llink href=../posts/31050185788.html>¶</a>
+<a href=http://www.ahwkong.com/post/31050185788 rel=canonical>●</a></p>
+<p>I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.</p>
+
+<p>My last-gen MBP has a 320Gb harddisk and about 265Gb of data. I am too lazy to do an initial time machine backup via a ethernet cable.</p>
+
+<p>So over wifi and 10 hours later, the backup is still less than half way through.</p>
+
+<p>I did not expect this scheme to work at all because my past research indicated that Apple/TimeMachine did not allow backup to network drive unless it is hosted by Time Capsule.</p>
+<p class=tags>#mac</p>
+</article>
+
+<article class=link id=p-31011821379>
+<p class=meta><span class=date>07/09/2012 06:53:00</span>
+<a class=llink href=../posts/31011821379.html>¶</a>
+<a href=http://www.ahwkong.com/post/31011821379 rel=canonical>●</a></p>
+<h2><a href="http://www.tuaw.com/2012/08/29/itunes-festival-app-on-apple-tv/">Checked out my AppleTV and it indeed happened...</a></h2>
+<p>Very sneaky. Many good gig nonetheless.</p>
+<p class=tags>#iTune #apple tv</p>
+</article>
+
+<article class=photo id=p-31575783650>
+<p class=meta><span class=date>05/09/2012 00:00:00</span>
+<a class=llink href=../posts/31575783650.html>¶</a>
+<a href=http://www.ahwkong.com/post/31575783650 rel=canonical>●</a></p>
+<p><img alt="" src="../images/tumblr_madsymrzmO1qbpfzro1_400.png"></p>
+<p><a href="http://www.youtube.com/watch?v=yag-v_T0IQk"> &#8220;Population - Can We Begin to Talk Sensibly?&#8221;</a> by Prof Aubrey Manning. I was stunned, at around 22 mins into the video, when the professor pointed out what I thought was cloud is actually smoke from forest-clearing fire (in the right hand side of the picture).</p>
+<p class=tags>#earth #population</p>
+</article>
+
+<article class=regular id=p-30862158032>
+<p class=meta><span class=date>04/09/2012 19:33:01</span>
+<a class=llink href=../posts/30862158032.html>¶</a>
+<a href=http://www.ahwkong.com/post/30862158032 rel=canonical>●</a></p>
+<h2>Doing python programming on osx</h2>
+<p>Saw this <a href="http://www.reddit.com/r/Python/comments/z16ap/switch_to_mac_for_python_programming/c60vbly">post</a> on reddit and is going to try out a few of the recommendations.</p>
+
+<p>Basically, they are</p>
+
+<ul><li>use homebrew for installing/managing mysql/nginx/apache/etc - but not Python!</li>
+<li>use pythonbrew for managing your Python installs.</li>
+<li>use buildout in place of virtualenv. Trust me on this. You will thank me later.</li>
+<li>use supervisor to run any dev-based daemons (nginx/mysql/mongodb/etc).</li>
+</ul><p>A main problem I had before is building scipy. Hopefully pythonbrew might fix this issue.</p>
+<p class=tags>#python</p>
+</article>
+
+<article class=regular id=p-30790775058>
+<p class=meta><span class=date>03/09/2012 20:00:00</span>
+<a class=llink href=../posts/30790775058.html>¶</a>
+<a href=http://www.ahwkong.com/post/30790775058 rel=canonical>●</a></p>
+<h2>Donkey anaphora</h2>
+<p>It refers to the linguistic analysis, in the area of formal logic, of the sentence &#8220;Every farmer who owns a donkey beats it&#8221;.</p>
+
+<p>Who would have thought this simple sentence is studied so extensively.</p>
+
+<p>My feeling* is  if we analyse semantic of a sentence based on solely its syntactical  structure, we will not go very far. It is because a human brain does not parse and understand a sentence in insolation. A lot of lateral association and re-interpretation happens in the process.</p>
+
+<ul><li>I really have nothing profound to add to this topic.</li>
+</ul>
+</article>
+
+<article class=link id=p-30717068256>
+<p class=meta><span class=date>02/09/2012 19:51:13</span>
+<a class=llink href=../posts/30717068256.html>¶</a>
+<a href=http://www.ahwkong.com/post/30717068256 rel=canonical>●</a></p>
+<h2><a href="http://code.disqus.com/code/projects/gargoyle.html">Gargoyle</a></h2>
+<p>Gargoyle is a platform built on top of Django which allows you to switch functionality of your application on and off based on conditions.</p>
+<p class=tags>#python</p>
+</article>
+
+<article class=regular id=p-30646969056>
+<p class=meta><span class=date>01/09/2012 20:44:00</span>
+<a class=llink href=../posts/30646969056.html>¶</a>
+<a href=http://www.ahwkong.com/post/30646969056 rel=canonical>●</a></p>
+<p>Doing a clean install of Mountain Lion.</p>
+
+<p>Basically all you need to know is contained in this <a href="http://apple.stackexchange.com/questions/60653/how-to-do-fresh-install-of-mountain-lion">Q&amp;A</a> on Apple StackExchange.</p>
+
+<p>I decided to make a bootable usb thumb drive, following the instruction <a href="http://apple.stackexchange.com/a/60660/3428">here</a>.</p>
+
+<p>However, when I used the Disk Utility to prepare the usb thumb drive, an error message &#8216;Could not Restore. Invalid Argument&#8217; came up.</p>
+
+<p>Turns out the thumb drive works despite the error message.</p>
+
+<p>Now I am restoring my files from the time machine copy.</p>
+<p class=tags>#osx #mountain lion</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

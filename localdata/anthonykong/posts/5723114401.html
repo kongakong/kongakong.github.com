@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5723114401>
+<p class=meta><span class=date>22/05/2011 15:37:00</span>
+<a class=llink href=../posts/5723114401.html>¶</a>
+<a href=http://www.ahwkong.com/post/5723114401 rel=canonical>●</a></p>
+<h2>To detect iPhone 4/Retina Display</h2>
+<p>A few posts about this topic:
+
+<ul><li>
+<a href="http://stackoverflow.com/questions/3294100/how-to-differentiate-between-iphone4-and-iphone-3">The accepted answer does not take iPad into account</a>
+</li>
+<li>
+
+<a href="http://stackoverflow.com/questions/3504173/detect-retina-display/4641481#4641481">Probably the definite answer</a>
+</li>
+
+</ul><pre class="brush: c">
+if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &amp;&amp;
+    ([UIScreen mainScreen].scale == 2.0)) {
+  // Retina display
+} else {
+  // non-Retina display
+}
+</pre></p>
+<p class=tags>#ios</p>
+</article>

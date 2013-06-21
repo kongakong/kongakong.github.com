@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5886593746>
+<p class=meta><span class=date>27/05/2011 12:52:00</span>
+<a class=llink href=../posts/5886593746.html>¶</a>
+<a href=http://www.ahwkong.com/post/5886593746 rel=canonical>●</a></p>
+<h2>Stupid mistake</h2>
+<p>
+My app crashed for no reason.
+</p>
+<p>
+Turns out I did it 
+</p>
+<pre class="brush: c">
+[self.view.addSublayer:myLayer];
+[myLayer dealloc];
+</pre>
+
+when I mean to do it
+
+<pre class="brush: c">
+[self.view.addSublayer:myLayer];
+[myLayer release];
+</pre>
+<p class=tags>#objective-c</p>
+</article>

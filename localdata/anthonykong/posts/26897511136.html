@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-26897511136>
+<p class=meta><span class=date>10/07/2012 20:11:29</span>
+<a class=llink href=../posts/26897511136.html>¶</a>
+<a href=http://www.ahwkong.com/post/26897511136 rel=canonical>●</a></p>
+<h2>numpy sum and axis</h2>
+<p>For a 2-dim array, axis 0 is the y-axis and 1 is the x-axis</p>
+
+<pre class="brush:python">
+&gt;&gt;&gt; b = numpy.random.random(9)
+&gt;&gt;&gt; b.resize(3,3)
+&gt;&gt;&gt; b
+array([[ 0.87004074,  0.96632953,  0.23284793],
+       [ 0.51685093,  0.28653961,  0.10544557],
+       [ 0.06448447,  0.62316361,  0.93653307]])
+&gt;&gt;&gt; numpy.sum(b, axis=0)
+array([ 1.45137614,  1.87603274,  1.27482656])
+&gt;&gt;&gt; numpy.sum(b, axis=1)
+array([ 2.06921819,  0.90883611,  1.62418114])
+
+</pre>
+<p class=tags>#numpy #python</p>
+</article>

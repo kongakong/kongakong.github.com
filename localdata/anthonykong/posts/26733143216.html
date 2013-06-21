@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-26733143216>
+<p class=meta><span class=date>08/07/2012 11:44:24</span>
+<a class=llink href=../posts/26733143216.html>¶</a>
+<a href=http://www.ahwkong.com/post/26733143216 rel=canonical>●</a></p>
+<p>Got this when running <code>brew install python3</code></p>
+
+<pre>
+mkdir: /usr/local/Cellar/sqlite/3.7.12.1/lib: File exists
+make[1]: *** [install-libLTLIBRARIES] Error 1
+make[1]: *** Waiting for unfinished jobs....
+ /usr/bin/install -c -m 644 sqlite3.h sqlite3ext.h '/usr/local/Cellar/sqlite/3.7.12.1/include'
+ /usr/bin/install -c -m 644 sqlite3.pc '/usr/local/Cellar/sqlite/3.7.12.1/lib/pkgconfig'
+ /usr/bin/install -c -m 644 sqlite3.1 '/usr/local/Cellar/sqlite/3.7.12.1/share/man/man1'
+make: *** [install-am] Error 2
+config.log was copied to /Users/antkong/Library/Logs/Homebrew
+
+</pre>
+
+<p>Running <code>brew update</code> and <code>brew doctor</code></p>
+</article>

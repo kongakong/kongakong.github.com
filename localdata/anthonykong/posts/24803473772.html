@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-24803473772>
+<p class=meta><span class=date>10/06/2012 18:38:01</span>
+<a class=llink href=../posts/24803473772.html>¶</a>
+<a href=http://www.ahwkong.com/post/24803473772 rel=canonical>●</a></p>
+<p>Annoying. Cannot get the subview resized automatically, despite doing this:</p>
+
+<pre>
+    container_view.autoresizesSubviews = YES;
+    container_view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+</pre>
+
+<p>Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController</p>
+
+<pre>
+    subview.autoresizesSubviews = YES;
+    subview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+   [container_view addSubview:subview]
+</pre>
+<p class=tags>#xcode4 #ios</p>
+</article>

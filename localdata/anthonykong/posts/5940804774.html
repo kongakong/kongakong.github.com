@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5940804774>
+<p class=meta><span class=date>29/05/2011 06:35:31</span>
+<a class=llink href=../posts/5940804774.html>¶</a>
+<a href=http://www.ahwkong.com/post/5940804774 rel=canonical>●</a></p>
+<h2>Difference between setObject:forKey: and setValue:forKey: in  NSMutableDictionary</h2>
+<p>From <a href="http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653">SO</a></p>
+
+<p><b>setValue:forKey:</b> is part of the <b>NSKeyValueCoding</b> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <b>setValue:forKey:</b> is implemented in classes other than NSDictionary.</p>
+
+<p><b>setObject:forKey:</b> is<b> NSMutableDictionary</b>&#8217;s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It&#8217;s somewhat of a coincidence that the signatures are so similar.</p>
+
+<p>What adds to the confusion is that <b>NSMutableDictionary</b>&#8217;s implementation of setValue:forKey: is equivalent to<b> setObject:forKey:</b> in most cases. In other classes, <b>setValue:forKey: </b> changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a &#8216;@&#8217; character &#8212; in which case it modifies member variables.</p>
+
+<p>So in a nutshell, use <b>setObject:forKey: </b> when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
+<p class=tags>#objective-c #stackoverflow</p>
+</article>

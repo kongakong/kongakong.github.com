@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23500399525>
+<p class=meta><span class=date>22/05/2012 07:42:30</span>
+<a class=llink href=../posts/23500399525.html>¶</a>
+<a href=http://www.ahwkong.com/post/23500399525 rel=canonical>●</a></p>
+<h2>ImportError: No module named _ckernel</h2>
+<p>After installing pyML from source: <code> python setup.py install</code> in pyML-0.7.9 
+
+<pre>
+
+&gt;&gt;&gt; import PyML
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "PyML/__init__.py", line 4, in &lt;module&gt;
+    from PyML.containers import *
+  File "PyML/containers/__init__.py", line 3, in &lt;module&gt;
+    VectorDataSet = __import__('PyML.containers.vectorDatasets', fromlist=['']).VectorDataSet
+  File "PyML/containers/vectorDatasets.py", line 4, in &lt;module&gt;
+    from PyML.containers.baseDatasets import WrapperDataSet, BaseVectorDataSet
+  File "PyML/containers/baseDatasets.py", line 4, in &lt;module&gt;
+    from PyML.containers import ker
+  File "PyML/containers/ker.py", line 6, in &lt;module&gt;
+    from ext import ckernel
+  File "PyML/containers/ext/ckernel.py", line 25, in &lt;module&gt;
+    _ckernel = swig_import_helper()
+  File "PyML/containers/ext/ckernel.py", line 17, in swig_import_helper
+    import _ckernel
+ImportError: No module named _ckernel
+
+</pre>
+
+The _ckernel.so is built and present.
+
+
+It turns out the problem is that I started the python in the directory of pyML-0.7.9 which I  unpacked from the tarball. If I <code>cd</code> to an alternative directory, problem solved.</p>
+<p class=tags>#pyML #python</p>
+</article>

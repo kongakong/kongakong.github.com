@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-29187540494>
+<p class=meta><span class=date>11/08/2012 19:54:13</span>
+<a class=llink href=../posts/29187540494.html>¶</a>
+<a href=http://www.ahwkong.com/post/29187540494 rel=canonical>●</a></p>
+<h2>Calculate cash flows in python</h2>
+<p><strong>Q:</strong> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
+
+<p><strong>A:</strong></p>
+
+<pre><code># contribution at age
+&gt;&gt;&gt; [(i, 5000)for i in range(25, 30+1)]
+[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+
+&gt;&gt;&gt; sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+34009.5640625
+</code></pre>
+<p class=tags>#python #cash flow</p>
+</article>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-28758435068>
+<p class=meta><span class=date>05/08/2012 19:50:00</span>
+<a class=llink href=../posts/28758435068.html>¶</a>
+<a href=http://www.ahwkong.com/post/28758435068 rel=canonical>●</a></p>
+<p>Encountered this error when adding core data support to my ios project</p>
+
+<pre>
+Receiver 'NSManagedObjectContext' for class message is a forward declaration.
+</pre>
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the &lt;AppName&gt;-Prefix.pch</p>
+<p class=tags>#coredata #objective-c #ios</p>
+</article>

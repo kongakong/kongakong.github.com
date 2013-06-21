@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-9702772529>
+<p class=meta><span class=date>02/09/2011 21:41:00</span>
+<a class=llink href=../posts/9702772529.html>¶</a>
+<a href=http://www.ahwkong.com/post/9702772529 rel=canonical>●</a></p>
+<h2>Brew update issue on Lion</h2>
+<p>Try to run &#8216;brew update&#8217;. Got this error:
+
+<pre>
+$ brew update
+
+Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317, done.
+remote: Compressing objects: 100% (19213/19213), done.
+remote: Total 43317 (delta 26643), reused 38295 (delta 23498)
+Receiving objects: 100% (43317/43317), 5.93 MiB | 457 KiB/s, done.
+Resolving deltas: 100% (26643/26643), done.
+From <a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a>
+ * branch            master     -&gt; FETCH_HEAD
+error: Untracked working tree file '.gitignore' would be overwritten by merge.
+
+Error: Failed while executing git pull <a href="http://github.com/mxcl/homebrew.git">http://github.com/mxcl/homebrew.git</a> master
+</pre>
+
+Turns out Lion upgrade changed the permission of <code>/usr/local</code> and hence the error.
+
+I do not want to change the permission of the directory, therefore I followed these instructions:
+
+<pre>
+git add .
+git stash
+git reset --hard
+</pre></p>
+<p class=tags>#lion #osx</p>
+</article>

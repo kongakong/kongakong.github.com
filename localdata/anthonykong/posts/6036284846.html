@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6036284846>
+<p class=meta><span class=date>31/05/2011 23:12:00</span>
+<a class=llink href=../posts/6036284846.html>¶</a>
+<a href=http://www.ahwkong.com/post/6036284846 rel=canonical>●</a></p>
+<h2>C++: Dynamic Array</h2>
+<p>We can dynamically allocate arrays of primitive types using new as well 
+
+<pre class="brush: c">
+int numValues = 35; 
+int *valArray = new int[numValues]; 
+
+</pre>
+
+
+With primitives, the values are uninitialized!  We need to use a loop to initialize the values.
+
+<pre class="brush: c"> 
+for (int i = 0; i &lt; numValues; i++) 
+  valArray[i] = 0; 
+</pre>
+
+
+Remember to free the array using the <b>delete[]</b> operator</p>
+<p class=tags>#c++ #cs11</p>
+</article>

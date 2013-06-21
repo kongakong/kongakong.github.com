@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6073241354>
+<p class=meta><span class=date>02/06/2011 01:14:00</span>
+<a class=llink href=../posts/6073241354.html>¶</a>
+<a href=http://www.ahwkong.com/post/6073241354 rel=canonical>●</a></p>
+<h2>Null Pointer in different languages</h2>
+<p>
+Each programming language calls it differently: nil, null, none etc&#8230; Let&#8217;s do a revision.
+</p>
+<p>
+<b>Objective-c</b>
+</p>
+
+<code>nil</code> for id. Example:
+
+<pre class="brush: c">
+
+NSNumber * num = ...;
+
+if (num == nil) {
+    ...
+};
+
+</pre>
+
+<code>NULL</code> for normal C pointer (<code>void *</code>)
+
+
+<p></p>
+
+<p>
+<b>Java</b>
+</p>
+
+<code>null</code>
+
+<pre class="brush: java">
+
+Integer num = ...;
+
+if (num == null) {
+   ...
+}
+
+</pre>
+
+
+
+<p></p>
+
+<p>
+<b>Visual Basic/VB.Net</b>
+</p>
+
+Let throw in some VB for fun: <code>Nothing</code>
+
+<pre>
+
+Dim num as Integer
+
+If num is Nothing Then
+    ....
+End If
+
+</pre>
+
+We can alternatively use function <code>IsNothing</code> to check.
+
+
+
+<p></p>
+
+<p>
+<b>Python</b>
+</p>
+
+We test for <code>None</code>
+
+
+<pre class="brush: python">
+
+num = ...
+
+if num is None:
+   ...
+
+
+</pre>
+
+
+
+<p></p>
+
+<p>
+<b>Erlang</b>
+</p>
+
+There is no concept of Null Pointer in Erlang due to its pattern matching nature.
+<p class=tags>#erlang #java #objective-c #python #visual basic</p>
+</article>

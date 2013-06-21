@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-27756289320>
+<p class=meta><span class=date>22/07/2012 19:56:00</span>
+<a class=llink href=../posts/27756289320.html>¶</a>
+<a href=http://www.ahwkong.com/post/27756289320 rel=canonical>●</a></p>
+<h2>Casting is optional</h2>
+<p>In objective-c, if you have an variable of type <code>id</code> but you want to  call a certain method on it as if it an instance of a specific class, you can do it this way:</p>
+
+<pre>
+        id test = [[TestDynamic alloc] init];
+        
+        if ([test respondsToSelector:@selector(myFunction)]) {
+            [test myFunction]; 
+        }
+        
+</pre>
+
+<p>Here is the definition of the <code>TestDynamic</code> class:</p>
+
+<pre>
+#import &lt;Foundation/Foundation.h&gt;
+
+@interface TestDynamic : NSObject
+
+-(void) myFunction;
+
+@end
+</pre>
+
+<p>In static languages, you will need to test if the variable is of type <code>TestDynamic</code>, then <strong>cast</strong> it to <code>TestDynamic</code> before you can call <code>myFunction</code></p>
+<p class=tags>#objective-c</p>
+</article>

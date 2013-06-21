@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-17569618488>
+<p class=meta><span class=date>21/02/2012 08:38:17</span>
+<a class=llink href=../posts/17569618488.html>¶</a>
+<a href=http://www.ahwkong.com/post/17569618488 rel=canonical>●</a></p>
+<h2>Common Python Beginner Mistake (2) - return value 'None'</h2>
+The following statements look very innocent.
+
+<pre class="brush:python">
+q = 123
+...
+q = l.append('b')
+...
+</pre>
+
+<p>
+Beginner will only discover a problem when they try to use the variable &#8216;q&#8217; later down the track. They will be surprised that the variable &#8216;q&#8217;, for some reasons, has been set to None.
+</p>
+
+<pre class="brush:python">
+print q+1
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+
+</pre>
+
+<p>
+Most developers from static languages backgrounnd are used to have the compilers to catch this kind of programming error, namely, a function that returns nothing (&#8216;void&#8217;) should not appear in the RHS of an assignment operand.
+</p>
+
+<p>
+
+But it is not the case for python. If a function returns nothing, the variable on the LHS will be set to None
+
+</p>
+
+<p>
+It is a very subtle problem. Beginners may have written the assignment due to mistake or oversight. Then they tend to spend a lot of time to trace down the &#8216;bug&#8217; 
+</p>
+<p class=tags>#python</p>
+</article>

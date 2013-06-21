@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-22116078999>
+<p class=meta><span class=date>30/04/2012 20:21:18</span>
+<a class=llink href=../posts/22116078999.html>¶</a>
+<a href=http://www.ahwkong.com/post/22116078999 rel=canonical>●</a></p>
+<p>Install python 2.7 using brew. Brew also downloaded and installed <code>distribute</code>
+
+<pre>
+$ brew install python
+==&gt; Installing python dependency: sqlite
+==&gt; Downloading <a href="http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz">http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz</a>
+######################################################################## 100.0%
+==&gt; ./configure --prefix=/usr/local/Cellar/sqlite/3.7.9
+==&gt; make install
+/usr/local/Cellar/sqlite/3.7.9: 9 files, 1.9M, built in 57 seconds
+==&gt; Installing python dependency: gdbm
+==&gt; Downloading <a href="http://ftpmirror.gnu.org/gdbm/gdbm-1.10.tar.gz">http://ftpmirror.gnu.org/gdbm/gdbm-1.10.tar.gz</a>
+######################################################################## 100.0%
+==&gt; ./configure --prefix=/usr/local/Cellar/gdbm/1.10 --mandir=/usr/local/Cellar/gdbm/1.10/share/man --infodir=/usr/local/Cellar/gdbm/1.10/share/info
+==&gt; make install
+/usr/local/Cellar/gdbm/1.10: 10 files, 228K, built in 33 seconds
+==&gt; Installing python
+==&gt; Downloading <a href="http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2">http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2</a>
+######################################################################## 100.0%
+==&gt; Patching
+patching file Lib/whichdb.py
+Hunk #1 succeeded at 91 with fuzz 1.
+==&gt; ./configure --prefix=/usr/local/Cellar/python/2.7.2 --enable-shared
+==&gt; make
+==&gt; make install
+==&gt; Downloading <a href="http://pypi.python.org/packages/source/d/distribute/distribute-0.6.24.tar.gz">http://pypi.python.org/packages/source/d/distribute/distribute-0.6.24.tar.gz</a>
+######################################################################## 100.0%
+==&gt; /usr/local/Cellar/python/2.7.2/bin/python setup.py install
+==&gt; Caveats
+A "distutils.cfg" has been written to:
+  /usr/local/Cellar/python/2.7.2/lib/python2.7/distutils
+specifing the install-scripts folder as:
+  /usr/local/share/python
+
+If you install Python packages via "python setup.py install", easy_install, pip,
+any provided scripts will go into the install-scripts folder above, so you may
+want to add it to your PATH.
+
+Distribute has been installed, so easy_install is available.
+To update distribute itself outside of Homebrew:
+    /usr/local/share/python/easy_install pip
+    /usr/local/share/python/pip install --upgrade distribute
+
+See: <a href="https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python">https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python</a>
+==&gt; Summary
+/usr/local/Cellar/python/2.7.2: 4803 files, 80M, built in 4.9 minutes
+
+</pre></p>
+</article>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-21914025778>
+<p class=meta><span class=date>28/04/2012 01:08:52</span>
+<a class=llink href=../posts/21914025778.html>¶</a>
+<a href=http://www.ahwkong.com/post/21914025778 rel=canonical>●</a></p>
+<p>Followup piece of <a href="http://www.ahwkong.com/post/21844435707/i-think-i-finally-understand-what-the-problem-is"> GNU gcc-4.2 issue on OSX 10.7</a>.
+
+
+So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. 
+
+
+Then run this command
+
+<pre>
+installer -pkg GCC-10.7.pkg -target /
+</pre>
+
+
+Problem solved.
+
+
+Now I can compile python3. For example,
+
+
+<pre>
+CC=gcc-4.2 ./configure
+make &amp;&amp; make install
+</pre></p>
+<p class=tags>#osx #gnu-gcc #gcc #python3 #python</p>
+</article>

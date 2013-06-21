@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6172071952>
+<p class=meta><span class=date>04/06/2011 20:52:00</span>
+<a class=llink href=../posts/6172071952.html>¶</a>
+<a href=http://www.ahwkong.com/post/6172071952 rel=canonical>●</a></p>
+<h2>Item 22:  Prefer pass-by-reference to pass-by-value</h2>
+<p>First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.</p>
+
+<p>Secondly, it avoids this kind of error:</p>
+
+<p>A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.</p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

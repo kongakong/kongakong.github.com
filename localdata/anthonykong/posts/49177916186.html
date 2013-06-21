@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-49177916186>
+<p class=meta><span class=date>30/04/2013 00:01:00</span>
+<a class=llink href=../posts/49177916186.html>¶</a>
+<a href=http://www.ahwkong.com/post/49177916186 rel=canonical>●</a></p>
+<h2>homebrew and erlang R16B</h2>
+<p>Currently the version of erlang in homebrew is defaulted to version R15B03-1 even though a more recent version, R16B, is available.</p>
+
+<p>To install R16B, it is what I did:</p>
+
+<pre><code>$ brew unlink erlang # remove R15B
+$ brew versions erlang
+R15B03-1 git checkout 29323da /usr/local/Library/Formula/erlang.rb
+R16B     git checkout 7ab778a /usr/local/Library/Formula/erlang.rb
+R15B03   git checkout 311472d /usr/local/Library/Formula/erlang.rb
+R15B02   git checkout 44e09dd /usr/local/Library/Formula/erlang.rb
+R15B01   git checkout 6b8d25f /usr/local/Library/Formula/erlang.rb
+R14B04   git checkout 0fe383a /usr/local/Library/Formula/erlang.rb
+R14B03   git checkout 9332ca9 /usr/local/Library/Formula/erlang.rb
+R14B02   git checkout b782d9d /usr/local/Library/Formula/erlang.rb
+R14B01   git checkout 0476235 /usr/local/Library/Formula/erlang.rb
+R14B     git checkout 7871a99 /usr/local/Library/Formula/erlang.rb
+R13B04   git checkout 31f1fab /usr/local/Library/Formula/erlang.rb    
+R13B03   git checkout 729f3fa /usr/local/Library/Formula/erlang.rb
+R13B02-1 git checkout 0d673c6 /usr/local/Library/Formula/erlang.rb
+$ cd /usr/local/Library/Formula/
+$ git checkout 7ab778a erlang.rb
+$ brew switch erlang R16B
+Cleaning /usr/local/Cellar/erlang/R15B01
+Cleaning /usr/local/Cellar/erlang/R15B03-1
+Cleaning /usr/local/Cellar/erlang/R16B
+643 links created for /usr/local/Cellar/erlang/R16B # I have built it previously. Otherwise I think I need to run 'brew install erlang'
+</code></pre>
+<p class=tags>#erlang #homebrew</p>
+</article>

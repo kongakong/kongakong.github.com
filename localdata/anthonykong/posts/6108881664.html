@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6108881664>
+<p class=meta><span class=date>04/04/2011 22:24:00</span>
+<a class=llink href=../posts/6108881664.html>¶</a>
+<a href=http://www.ahwkong.com/post/6108881664 rel=canonical>●</a></p>
+<h2>Example of EqualBuilder</h2>
+<pre class="brush: java">
+
+ public boolean equals(Object obj) {
+   if (obj == null) { return false; }
+   if (obj == this) { return true; }
+   if (obj.getClass() != getClass()) {
+     return false;
+   }
+   MyClass rhs = (MyClass) obj;
+   return new EqualsBuilder()
+                 .appendSuper(super.equals(obj))
+                 .append(field1, rhs.field1)
+                 .append(field2, rhs.field2)
+                 .append(field3, rhs.field3)
+                 .isEquals();
+  }
+ 
+</pre>
+
+<p>
+
+from <a href="http://commons.apache.org/lang/api-2.4/org/apache/commons/lang/builder/EqualsBuilder.html">apache common lang documentation</a> </p>
+<p class=tags>#java</p>
+</article>

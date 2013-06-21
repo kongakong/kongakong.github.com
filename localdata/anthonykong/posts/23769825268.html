@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-23769825268>
+<p class=meta><span class=date>26/05/2012 12:00:00</span>
+<a class=llink href=../posts/23769825268.html>¶</a>
+<a href=http://www.ahwkong.com/post/23769825268 rel=canonical>●</a></p>
+<p>Can you spot the problem here?
+
+    <pre class="brush:">
+    MPMediaQuery* mediaQuery = [[MPMediaQuery alloc] init];
+    ...
+    
+    for (MPMediaItem *item in [mediaQuery collections]) {
+        NSString *title = [item valueForProperty:MPMediaItemPropertyPodcastTitle];
+        NSLog(@"&gt;&gt;&gt; title %@", title);          
+    }
+</pre>
+
+It printed something like this:
+
+<pre>
+2012-05-26 11:55:34.975 myapp[647:707] &gt;&gt;&gt; title (null)
+2012-05-26 11:55:34.980 myapp[647:707] &gt;&gt;&gt; title (null)
+2012-05-26 11:55:34.982 myapp[647:707] &gt;&gt;&gt; title (null)
+</pre>
+
+
+It is because I sent <code>collections</code> to <code>mediaQuery</code> but expect to get back to a list of MPMediaItem.</p>
+<p class=tags>#ios</p>
+</article>

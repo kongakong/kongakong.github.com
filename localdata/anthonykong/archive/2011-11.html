@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>November 2011</h1>
+
+
+<article class=link id=p-13249061069>
+<p class=meta><span class=date>24/11/2011 21:59:35</span>
+<a class=llink href=../posts/13249061069.html>¶</a>
+<a href=http://www.ahwkong.com/post/13249061069 rel=canonical>●</a></p>
+<h2><a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=H0G1yslM5rc">Make me feel excited about Particle Filter too</a></h2>
+
+</article>
+
+<article class=quote id=p-12787053118>
+<p class=meta><span class=date>14/11/2011 23:29:55</span>
+<a class=llink href=../posts/12787053118.html>¶</a>
+<a href=http://www.ahwkong.com/post/12787053118 rel=canonical>●</a></p>
+<blockquote><p>Research turns money into idea; Innovation turns idea into money</p></blockquote>
+<p>Unknown</p>
+</article>
+
+<article class=link id=p-12752158354>
+<p class=meta><span class=date>14/11/2011 07:25:49</span>
+<a class=llink href=../posts/12752158354.html>¶</a>
+<a href=http://www.ahwkong.com/post/12752158354 rel=canonical>●</a></p>
+<h2><a href="http://worrydream.com/LadderOfAbstraction/">Up and Down the Ladder Of Abstraction</a></h2>
+
+</article>
+
+<article class=regular id=p-12734630146>
+<p class=meta><span class=date>13/11/2011 23:21:17</span>
+<a class=llink href=../posts/12734630146.html>¶</a>
+<a href=http://www.ahwkong.com/post/12734630146 rel=canonical>●</a></p>
+<h2>Three Forms of Learning</h2>
+<p>1) Supervised</p>
+
+<p>2) Unsupervised - Clustering</p>
+
+<p>3) Reinforcement Learning - rewards and policy</p>
+</article>
+
+<article class=regular id=p-12611347736>
+<p class=meta><span class=date>11/11/2011 08:37:00</span>
+<a class=llink href=../posts/12611347736.html>¶</a>
+<a href=http://www.ahwkong.com/post/12611347736 rel=canonical>●</a></p>
+<h2>XCode 4 woe - It keeps crashing</h2>
+<p>From organiser, doing search</p>
+
+<p>&#8220;You don’t own the file “index.html” and don’t have permission to write to it.&#8221;</p>
+<p class=tags>#xcode4</p>
+</article>
+
+<article class=regular id=p-12165024693>
+<p class=meta><span class=date>01/11/2011 04:25:00</span>
+<a class=llink href=../posts/12165024693.html>¶</a>
+<a href=http://www.ahwkong.com/post/12165024693 rel=canonical>●</a></p>
+<h2>P(SPAM|"today is secret")</h2>
+<p><code><br/>
+P'(SPAM|"today", "is", "secret")  = <br/>
+P("today"|SPAM)  * P("is"|SPAM)  * P("secret"|SPAM)  * P(SPAM)   (1)<br/></code></p>
+
+<p><code><br/>
+P'(~SPAM|"today", "is", "secret") = <br/>
+P("today"|~SPAM) * P("is"|~SPAM) * P("secret"|~SPAM) * P(~SPAM)  (2)<br/></code></p>
+
+<p><code><br/>
+P(SPAM|"today", "is", "secret") =<br/>
+                 P'(SPAM|"today", "is", "secret")<br/>
+-------------------------------------------------------------------- (3)<br/>
+P'(SPAM|"today", "is", "secret") + P'(~SPAM|"today", "is", "secret")<br/></code></p>
+
+<p>Using laplacian smoothing with k = 1, we get the following values:<br/><code><br/>
+P(SPAM)           = (3 + 1) / (8 + 2) = 0.400000<br/>
+P("today"|SPAM)   = (0 + 1) / ( 9 + 12) = 0.047619<br/>
+P("today"|~SPAM)  = (2 + 1) / (15 + 12) = 0.111111<br/>
+P("is"|SPAM)      = (1 + 1) / ( 9 + 12) = 0.095238<br/>
+P("is"|~SPAM)     = (1 + 1) / (15 + 12) = 0.074074<br/>
+P("secret"|SPAM)  = (3 + 1) / ( 9 + 12) = 0.190476<br/>
+P("secret"|~SPAM) = (1 + 1) / (15 + 12) = 0.074074<br/></code><br/>
+Notice that we calculate P(SPAM) over the space of messages, whereas all other probabilities are calculated over the space of words. Also notice that conditional probabilities are normalized under the set of words that belong to the evidence – e.g. probabilities conditional to SPAM are normalized to the word count of SPAM messages, as opposed to the total word count of SPAM and HAM messages.</p>
+
+<p>Now plugging the above values in formulas (1), (2) and (3) we get:</p>
+
+<p><code><br/>
+P(SPAM|"today", "is", "secret") = 0.485757</code></p>
+
+
+
+<p>From <a href="http://www.aiqus.com/questions/6628/516-how-do-we-calculate-pmessage?page=1#6666">aiqus</a></p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

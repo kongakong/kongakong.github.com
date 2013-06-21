@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6036161971>
+<p class=meta><span class=date>31/05/2011 23:05:00</span>
+<a class=llink href=../posts/6036161971.html>¶</a>
+<a href=http://www.ahwkong.com/post/6036161971 rel=canonical>●</a></p>
+<h2>C++ Weirdness</h2>
+<p>This calls the copy constructor
+
+<pre class="brush: c">
+
+Point p1(19.6, -3.5); 
+Point p2(p1); // Copy p1 
+Point p3 = p1 // syntax sugar  for calling the copy-constructor
+
+</pre>
+
+This calls the assignment operator
+
+
+
+<pre class="brush: c">
+
+
+Point p1(19.6, -3.5); 
+Point p2; 
+p2 = p1; // Calls the default constructor on p2, 
+               // then does assignment 
+
+
+</pre></p>
+<p class=tags>#c++ #cs11</p>
+</article>

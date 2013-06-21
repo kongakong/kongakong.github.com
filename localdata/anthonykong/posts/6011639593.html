@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6011639593>
+<p class=meta><span class=date>31/05/2011 06:36:00</span>
+<a class=llink href=../posts/6011639593.html>¶</a>
+<a href=http://www.ahwkong.com/post/6011639593 rel=canonical>●</a></p>
+<h2>Item 9:  Avoid hiding the "normal" form of new</h2>
+<p>Not good:
+
+<pre class="brush: c">
+
+class X {
+public:
+  void f();
+   // operator new allowing specification of a
+  // new-handling function
+  static void * operator new(size_t size, new_handler p);
+};
+
+</pre>
+
+Better:
+
+
+<pre class="brush: c">
+
+class X {
+public:
+  void f();
+   static void * operator new(size_t size, new_handler p);
+   static void * operator new(size_t size){ 
+        return ::operator new(size); 
+   }
+};
+
+</pre></p>
+<p class=tags>#c++ #Effective C++ #self-study</p>
+</article>

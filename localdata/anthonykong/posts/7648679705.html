@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-7648679705>
+<p class=meta><span class=date>15/07/2011 21:36:00</span>
+<a class=llink href=../posts/7648679705.html>¶</a>
+<a href=http://www.ahwkong.com/post/7648679705 rel=canonical>●</a></p>
+<p>Trivial, unrealistic example of the application of <code> partial()</code>
+
+<pre class="brush: python">
+# let's say we want to sort this list of numbers
+RAW=[1, 23, 4, 234, 22, 554, 2, 676, 9991, 99, -232]
+
+# hypo situation:
+# A function that I have to use for ordering
+# but it takes three parameters
+# dir: direction
+def cmp_x_and_y(dir, x, y):
+    return cmp(x, y) if dir else cmp(y, x)
+
+
+from functools import partial
+print sorted(RAW, cmp=partial(cmp_x_and_y, True))
+print sorted(RAW, cmp=partial(cmp_x_and_y, False))
+</pre></p>
+<p class=tags>#python</p>
+</article>

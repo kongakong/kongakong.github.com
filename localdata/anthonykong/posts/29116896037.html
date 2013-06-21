@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-29116896037>
+<p class=meta><span class=date>10/08/2012 19:58:04</span>
+<a class=llink href=../posts/29116896037.html>¶</a>
+<a href=http://www.ahwkong.com/post/29116896037 rel=canonical>●</a></p>
+<p>Calculate regular payment based on rate, number of payment and PV</p>
+
+<pre class="brush:python">
+def pmt(i, n, p):
+    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))
+</pre>
+
+<p>Example:</p>
+
+<pre><code>&gt;&gt;&gt; pmt(0.06, 120, 120000)
+-7206.622591189367
+</code></pre>
+<p class=tags>#python #time value of money</p>
+</article>

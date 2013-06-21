@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6010484565>
+<p class=meta><span class=date>31/05/2011 06:00:38</span>
+<a class=llink href=../posts/6010484565.html>¶</a>
+<a href=http://www.ahwkong.com/post/6010484565 rel=canonical>●</a></p>
+<h2>Item 7:  Be prepared for out-of-memory conditions</h2>
+<p>When operator <code>new</code> cannot satisfy a request for memory, it calls the new-handler function not once, but repeatedly until it can find enough memory.
+
+The handler can use do one of the following:
+
+<ul><li>Make more memory available</li>
+
+<li>Install a different new-handler</li>
+
+<li>Deinstall the new-handler - caused a std::bad_alloc to be thrown</li>
+
+<li>Throw an exception </li>
+
+<li>Not return - call abort or exit</li>
+</ul>
+
+
+An example:
+
+<pre class="brush: c">
+void * X::operator new(size_t size)
+{
+  new_handler globalHandler =                // install X's
+    std::set_new_handler(currentHandler);    // handler
+   void *memory;
+   try {                                      // attempt
+    memory = ::operator new(size);           // allocation
+  }
+  catch (std::bad_alloc&amp;) {                  // restore
+    std::set_new_handler(globalHandler);     // handler;
+    throw;                                   // propagate
+  }                                          // exception
+ 
+  std::set_new_handler(globalHandler);       // restore
+                                             // handler
+  return memory;
+}
+</pre></p>
+</article>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5844393478>
+<p class=meta><span class=date>26/05/2011 08:03:10</span>
+<a class=llink href=../posts/5844393478.html>¶</a>
+<a href=http://www.ahwkong.com/post/5844393478 rel=canonical>●</a></p>
+<h2>Counting unique items in an array</h2>
+<p>From <a href="http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754">SO</a>
+
+<pre class="brush: c">
+NSCountedSet *cs = [NSCountedSet new];
+for(id anObj in someArray) 
+    [cs addObject: anObj];
+
+// then, you can access counts like this:
+.... count = [cs countForObject: anObj]; ...
+
+[cs release];
+
+</pre></p>
+<p class=tags>#objective-c</p>
+</article>

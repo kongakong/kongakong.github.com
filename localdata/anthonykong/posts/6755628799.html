@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6755628799>
+<p class=meta><span class=date>22/06/2011 00:17:06</span>
+<a class=llink href=../posts/6755628799.html>¶</a>
+<a href=http://www.ahwkong.com/post/6755628799 rel=canonical>●</a></p>
+<p>Tried to build <b>python</b> in <b>Solaris Express 11</b>.
+
+Used <code>pkg</code> to install the <code>gcc/g++</code>. 
+
+and <code>hg</code>. 
+
+Ran <code>configure</code> to generate the <code>Makefile</code>.
+
+After hitting <code>make</code>, got this error message:
+
+<pre>
+math.h no such file or directory 
+</pre>
+
+Solved by running: <code>pkg install header-math</code></p>
+<p class=tags>#python #solaris express</p>
+</article>

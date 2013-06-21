@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-3261736550>
+<p class=meta><span class=date>13/02/2011 11:58:00</span>
+<a class=llink href=../posts/3261736550.html>¶</a>
+<a href=http://www.ahwkong.com/post/3261736550 rel=canonical>●</a></p>
+<p>XCode 4 GM is flagging this style of code</p>
+
+<pre><code>NSEnumerator *e = [mutableFetchResults objectEnumerator];
+id object;
+while (object = [e nextObject]) {
+    // do something with object
+    Stock* fc = (Stock*) object;
+    NSLog(@"get a stock %@", [[fc name] description]);
+}
+</code></pre>
+
+<p>Very annoying.</p>
+</article>

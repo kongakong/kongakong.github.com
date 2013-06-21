@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5415580642>
+<p class=meta><span class=date>12/05/2011 16:59:00</span>
+<a class=llink href=../posts/5415580642.html>¶</a>
+<a href=http://www.ahwkong.com/post/5415580642 rel=canonical>●</a></p>
+<h2>Warm Up (III)</h2>
+<p>Use of<b> tail-recursion</b>
+
+<pre class="brush: erl">
+
+-module(fib).
+
+-export([fib_p/1, fib_g/1, tail_fib/1]).
+
+-export([test/0, test_t/0]).
+
+
+%% fib_p: non-tail recursion version
+fib_p(0) -&gt; 0;
+fib_p(1) -&gt; 1;
+fib_p(N) -&gt; fib_p(N-1) + fib_p(N-2).
+
+
+%% guard
+fib_g(N) when N == 0 -&gt; 0 ;
+fib_g(N) when N == 1 -&gt; 1;
+fib_g(N) -&gt; fib_g(N-1) + fib_g(N-2).
+
+
+%% tail version
+tail_fib(N)
+        -&gt; fib_t(N, 0, []).
+
+fib_t(1, _, _) -&gt; 1; %% special condition 1
+fib_t(2, _, _) -&gt; 1; %% special condition 2
+fib_t(EndCond, 0, [])
+                -&gt; fib_t(EndCond, 1, [1]); %% initial condition 1
+fib_t(EndCond, 1, [1])
+                -&gt; fib_t(EndCond, 2, [1, 1]); %% initial condition 2
+fib_t(EndCond, Counter, [X,Y|Tail]) when EndCond =/= Counter
+                -&gt; fib_t(EndCond, Counter+1, [X+Y, X, Y|Tail]);
+fib_t(N, N, [Head| _])
+                -&gt; Head. %% end condition
+
+%% test
+test() -&gt;
+        io:format("fib_p ~p~n", [fib_p(10)]),
+        io:format("fib_g ~p~n", [fib_g(10)]),
+        io:format("tail_fib ~p~n", [tail_fib(10)]).
+
+test_t() -&gt;
+        timer:tc(fib, fib_g, [10]).
+
+</pre></p>
+<p class=tags>#erlang</p>
+</article>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-16344686959>
+<p class=meta><span class=date>24/01/2012 06:13:09</span>
+<a class=llink href=../posts/16344686959.html>¶</a>
+<a href=http://www.ahwkong.com/post/16344686959 rel=canonical>●</a></p>
+<h2>Installing JDEE for emacs: Problem with avltree</h2>
+I got this error message when starting emacs:
+
+<pre>
+File error: Cannot open load file, avltree
+</pre>
+
+<p>
+It means I am missing the elib library. 
+</p>
+<p>
+However according to <a href="http://www.gnu.org/software/elib/">GNU</a>, eLib is decommissioned. The old link to eLib 1.0 on JDEE is pointing to a non-existent location
+</p>
+
+<p>
+It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old <code>avltree</code> in elib.
+</p>
+<p>
+Use brew to install the latest version of emacs
+</p>
+<p class=tags>#emacs #osx #version</p>
+</article>

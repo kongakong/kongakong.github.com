@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-49924605254>
+<p class=meta><span class=date>08/05/2013 20:00:00</span>
+<a class=llink href=../posts/49924605254.html>¶</a>
+<a href=http://www.ahwkong.com/post/49924605254 rel=canonical>●</a></p>
+<h2>XPath, Python and Erlang</h2>
+<p>Just feel that python is easier for XML manipulation.</p>
+
+<p>e.g.</p>
+
+<pre><code>from lxml import etree
+f = open("digg-science-rss1.xml")
+tree  = etree.parse(f)
+tree.xpath(expr) 
+</code></pre>
+
+<p>Very concise.</p>
+
+<p>whereas in erlang, since the function xmerl:string may return a list that&#8217;s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
+
+<pre><code>      #xmlText{
+          parents = [{item,16},{channel,2},{rss,1}],
+          pos = 3,language = [],value = "\n   ",type = text},
+      #xmlElement{
+          name = link,expanded_name = link,nsinfo = [],
+          namespace = 
+              #xmlNamespace{
+                  default = [],
+                  nodes =
+</code></pre>
+<p class=tags>#erlang #python</p>
+</article>

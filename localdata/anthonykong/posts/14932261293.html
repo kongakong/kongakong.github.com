@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-14932261293>
+<p class=meta><span class=date>29/12/2011 07:26:00</span>
+<a class=llink href=../posts/14932261293.html>¶</a>
+<a href=http://www.ahwkong.com/post/14932261293 rel=canonical>●</a></p>
+<h2>my python 3.3 compilation ends in this</h2>
+<p><code><br/>
+    /usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols<br/>
+    /usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols<br/>
+    ranlib libpython3.3m.a<br/>
+    ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols<br/>
+    ranlib: file: libpython3.3m.a(pymath.o) has no symbols<br/>
+    gcc   -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl  -framework CoreFoundation     <br/>
+    ./python.exe -SE -m sysconfig --generate-posix-vars<br/>
+    python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)<br/>
+    *** error: can't allocate region<br/>
+    *** set a breakpoint in malloc_error_break to debug<br/>
+    make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11<br/>
+    make: *** Deleting file `Lib/_sysconfigdata.py'</code></p>
+<p class=tags>#osx #python</p>
+</article>

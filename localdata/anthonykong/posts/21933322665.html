@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-21933322665>
+<p class=meta><span class=date>28/04/2012 07:42:58</span>
+<a class=llink href=../posts/21933322665.html>¶</a>
+<a href=http://www.ahwkong.com/post/21933322665 rel=canonical>●</a></p>
+<h2>pip, setuptools, easy_install and distribute</h2>
+<p>Trying to install pip 1.1 for python3. 
+
+<pre>
+$ python3 setup.py install
+Traceback (most recent call last):
+  File "setup.py", line 3, in <module>
+    from setuptools import setup
+  File "<frozen importlib>", line 1036, in _find_and_load
+ImportError: No module named 'setuptools'
+</frozen></module></pre>
+
+Naturally I tried to download and install <a href="http://pypi.python.org/pypi/setuptools">setuptools</a>.  However it does not support python 3!
+
+Investigating its python 3 counterpart on <a href="http://packages.python.org/distribute/">Distribute</a></p>
+<p class=tags>#python3 #setuptools #pip</p>
+</article>

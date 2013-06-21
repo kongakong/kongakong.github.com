@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6068911247>
+<p class=meta><span class=date>01/06/2011 21:09:00</span>
+<a class=llink href=../posts/6068911247.html>¶</a>
+<a href=http://www.ahwkong.com/post/6068911247 rel=canonical>●</a></p>
+<h2>Item 15:  Have operator= return a reference to *this</h2>
+<p>
+A common error amongst new C++ programmers is to have<b> operator=</b> return void, a decision that seems reasonable until you realize it prevents chains of assignment.
+
+</p>
+
+
+<p>
+Here is an example implementation:
+</p>
+
+<pre class="brush: c">
+
+String&amp; String::operator=(const String&amp; rhs)
+{
+   ...
+   return *this;            // return reference
+                           // to left-hand object
+}
+
+</pre>
+<p class=tags>#c++ #cs11 #self-study</p>
+</article>

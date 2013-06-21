@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5760858058>
+<p class=meta><span class=date>23/05/2011 16:43:00</span>
+<a class=llink href=../posts/5760858058.html>¶</a>
+<a href=http://www.ahwkong.com/post/5760858058 rel=canonical>●</a></p>
+<h2>RSS Feed Parsing Tasks (I)</h2>
+<p>
+<b>Goal:</b> return true if the root element looks something like &lt;rss version=&#8221;2.0&#8221;&gt;
+</p>
+
+<p>
+(Actually do not know why the use of &#8216;2.0&#8217; and &#8220;2.0&#8221; in the comparison below can cause a difference in outcome)
+</p>
+
+<pre class="brush: erlang">
+-module(rss_parse).
+
+-export([test/0]).
+-export([is_rss2_feed/1]).
+
+-include_lib("xmerl/include/xmerl.hrl").
+
+
+test()-&gt;
+        is_rss2_feed('digg-science-rss1.xml').
+
+
+is_rss2_feed(Filename) -&gt;
+        {ParseResult, _} = xmerl_scan:file(Filename),
+        Attrs = ParseResult#xmlElement.attributes,
+        is_rss2_feed_test(Attrs).
+
+is_rss2_feed_test([]) -&gt;
+        false;
+is_rss2_feed_test([#xmlAttribute{name=version,value="2.0"}|_T]) -&gt;
+        true;
+is_rss2_feed_test([_|T]) -&gt;
+        is_rss2_feed_test(T).
+</pre>
+<p class=tags>#erlang</p>
+</article>

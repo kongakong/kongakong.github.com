@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>September 2011</h1>
+
+
+<article class=link id=p-10401158770>
+<p class=meta><span class=date>19/09/2011 22:38:00</span>
+<a class=llink href=../posts/10401158770.html>¶</a>
+<a href=http://www.ahwkong.com/post/10401158770 rel=canonical>●</a></p>
+<h2><a href="http://www.scholarpedia.org/article/Main_Page">Alternative to Wikipedia</a></h2>
+
+</article>
+
+<article class=regular id=p-10237031224>
+<p class=meta><span class=date>15/09/2011 21:45:00</span>
+<a class=llink href=../posts/10237031224.html>¶</a>
+<a href=http://www.ahwkong.com/post/10237031224 rel=canonical>●</a></p>
+<h2>Use of java.util.concurrent.Executor stops tomcat from stopping</h2>
+I need to use <code>java.util.concurrent.Executor</code> to serialize the execution of some legacy code inside a WebService.
+
+I have added an member variable, executor, to the <code>WebService</code> class. It is injected from the outside by the springframework.
+
+The executor bean is defined as such:
+
+<pre>
+&lt;bean id="riskValueEstimateUpdateExecutor" scope="singleton"
+        class="java.util.concurrent.Executors"
+        factory-method="newSingleThreadExecutor" /&gt;
+</pre>
+
+<b>Problem:</b>
+
+The WS works as expected. We rolled it out to a linux server. Then we realised the tomcat stop script could no longer stop the service.
+
+I sent <code>kill -3</code> to the tomcat instance. In the thread dump I find these lines:
+
+<pre>
+"pool-2-thread-1" prio=10 tid=0xad637c00 nid=0xf37 waiting on condition [0xae882000..0xae883020]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for   (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:946)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:906)
+        at java.lang.Thread.run(Thread.java:619)
+</pre>
+
+To fix this, I need to tell Spring framework how to shut down the executor
+
+<pre>
+&lt;bean id="riskValueEstimateUpdateExecutor" scope="singleton"
+        destroy-method="shutdown"
+        class="java.util.concurrent.Executors"
+        factory-method="newSingleThreadExecutor" /&gt;
+</pre>
+
+<a href="http://stackoverflow.com/questions/7427132/use-of-java-util-concurrent-executor-stops-tomcat-from-stopping">Originally asked on SO</a>
+
+<p></p>
+<b>Version information:</b>
+
+* Tomcat version: 6.0.22
+* Java version: 1.6
+* spring framework: 2.5.5
+</article>
+
+<article class=regular id=p-10160722248>
+<p class=meta><span class=date>13/09/2011 20:46:00</span>
+<a class=llink href=../posts/10160722248.html>¶</a>
+<a href=http://www.ahwkong.com/post/10160722248 rel=canonical>●</a></p>
+<h2>A neat way to generate SQL in Java</h2>
+<p>
+<a href="http://sourceforge.net/apps/trac/jooq">JOOQ</a>
+</p>
+
+<pre class="brush: java">
+
+Connection connection = null;
+Factory create = new MySQLFactory(connection);
+String sql1 = create.select(A, B, C)
+                    .from(MY_TABLE)
+                    .where(A.equal(5))
+                    .and(B.greaterThan(8))
+                    .getSQL();
+
+String sql2 = create.insertInto(MY_TABLE)
+                    .values(A, 1)
+                    .values(B, 2)
+                    .getSQL();
+
+String sql3 = create.update(MY_TABLE)
+                    .set(A, 1)
+                    .set(B, 2)
+                    .where(C.greaterThan(5))
+                    .getSQL();
+
+</pre>
+</article>
+
+<article class=regular id=p-10126553227>
+<p class=meta><span class=date>13/09/2011 01:17:00</span>
+<a class=llink href=../posts/10126553227.html>¶</a>
+<a href=http://www.ahwkong.com/post/10126553227 rel=canonical>●</a></p>
+<h2>Common Python Beginner Mistake (1) - Shadowing</h2>
+<pre class="brush:python">
+&gt;&gt;&gt; from datetime import date
+&gt;&gt;&gt; def handleDate(date=None):
+...     d = date.today()
+... 
+&gt;&gt;&gt; handleDate()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "&lt;stdin&gt;", line 2, in handleDate
+AttributeError: 'NoneType' object has no attribute 'today'
+
+
+</pre>
+
+In this case, the parameter <code>date</code> has shadowed the <code> date</code> imported from lib <code>datetime</code>
+
+<p>
+<b>Solution:</b>
+</p>
+Change the name of the parameter of <code>handleDate</code> to something else e.g. <code>in_date</code>
+<p class=tags>#python</p>
+</article>
+
+<article class=regular id=p-10124153751>
+<p class=meta><span class=date>12/09/2011 22:52:00</span>
+<a class=llink href=../posts/10124153751.html>¶</a>
+<a href=http://www.ahwkong.com/post/10124153751 rel=canonical>●</a></p>
+<h2>To turn on SQL tracing in Hibernate </h2>
+<p>Extremely useful for debugging which HSQL has caused database server exception
+
+<pre>
+log4j.logger.org.hibernate.SQL=trace
+log4j.logger.org.hibernate.engine.query=trace
+log4j.logger.org.hibernate.type=trace
+log4j.logger.org.hibernate.jdbc=trace
+</pre></p>
+<p class=tags>#java #logj4 #hiberate #debug</p>
+</article>
+
+<article class=regular id=p-10030662475>
+<p class=meta><span class=date>10/09/2011 20:23:01</span>
+<a class=llink href=../posts/10030662475.html>¶</a>
+<a href=http://www.ahwkong.com/post/10030662475 rel=canonical>●</a></p>
+<p>If you command-click the title bar of <code>Preview</code>, the directory stack will show up</p>
+<p class=tags>#osx</p>
+</article>
+
+<article class=regular id=p-10011448975>
+<p class=meta><span class=date>10/09/2011 09:17:00</span>
+<a class=llink href=../posts/10011448975.html>¶</a>
+<a href=http://www.ahwkong.com/post/10011448975 rel=canonical>●</a></p>
+<h2>Java 1.7 preview edition on OSX</h2>
+<p>At first I thought I installed it wrong. The Java version number is:
+
+<pre>
+$ java -version
+java version "1.6.0_27"
+Java(TM) SE Runtime Environment (build 1.6.0_27-b07-393-11M3511)
+Java HotSpot(TM) 64-Bit Server VM (build 20.2-b06-393, mixed mode)
+</pre>
+
+According to the release note, it is the one.</p>
+<p class=tags>#osx #java</p>
+</article>
+
+<article class=regular id=p-10010520600>
+<p class=meta><span class=date>10/09/2011 08:52:05</span>
+<a class=llink href=../posts/10010520600.html>¶</a>
+<a href=http://www.ahwkong.com/post/10010520600 rel=canonical>●</a></p>
+<p>Sometimes software development is really just about complexity management. 
+
+I want to install the apple preview of jdk. After installation I could not find the binary. Instead I found two (not one but two) instance of ire I compiled from the openjdk source.
+
+Want to refresh the code base, then I got this <code>hg</code> error message:
+
+<pre>
+Traceback (most recent call last):
+  File "/usr/local/bin/hg", line 4, in <module>
+    import pkg_resources
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 2603, in <module>
+    working_set.require(__requires__)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 666, in require
+    needed = self.resolve(parse_requirements(requirements))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/pkg_resources.py", line 565, in resolve
+    raise DistributionNotFound(req)  # XXX put more info here
+pkg_resources.DistributionNotFound: mercurial==1.8.2
+</module></module></pre></p>
+</article>
+
+<article class=regular id=p-9992918894>
+<p class=meta><span class=date>09/09/2011 22:40:49</span>
+<a class=llink href=../posts/9992918894.html>¶</a>
+<a href=http://www.ahwkong.com/post/9992918894 rel=canonical>●</a></p>
+<h2>brew install couchdb</h2>
+<p><pre>
+$ brew install couchdb
+Warning: It appears you have MacPorts or Fink installed.
+Software installed with other package managers causes known problems for
+Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
+==&gt; Downloading <a href="http://www.apache.org/dyn/closer.cgi?path=couchdb/1.1.0/apache-couchdb-1.1.0.tar.gz">http://www.apache.org/dyn/closer.cgi?path=couchdb/1.1.0/apache-couchdb-1.1.0.tar.gz</a>
+File already downloaded in /Users/antkong/Library/Caches/Homebrew
+==&gt; ./configure --prefix=/usr/local/Cellar/couchdb/1.1.0 --localstatedir=/usr/local/var --sysconfdir=/usr/local/etc --with-erlang=/usr/local/lib/erlang/usr/include --with-js-include=/usr/local/include --w
+==&gt; make
+==&gt; make install
+==&gt; Caveats
+If this is your first install, automatically load on login with:
+    mkdir -p ~/Library/LaunchAgents
+    cp /usr/local/Cellar/couchdb/1.1.0/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
+    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+    cp /usr/local/Cellar/couchdb/1.1.0/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+Or start manually with:
+    couchdb
+==&gt; Summary
+/usr/local/Cellar/couchdb/1.1.0: 303 files, 2.8M, built in 73 seconds
+</pre></p>
+<p class=tags>#couchdb #osx</p>
+</article>
+
+<article class=regular id=p-9991195593>
+<p class=meta><span class=date>09/09/2011 20:45:00</span>
+<a class=llink href=../posts/9991195593.html>¶</a>
+<a href=http://www.ahwkong.com/post/9991195593 rel=canonical>●</a></p>
+<p>Java will <a href="http://mail.openjdk.java.net/pipermail/lambda-dev/2011-September/003936.html">adopt the lambda syntax of c#</a>. A pragmatic move.</p>
+<p class=tags>#java</p>
+</article>
+
+<article class=regular id=p-9991186528>
+<p class=meta><span class=date>09/09/2011 20:44:31</span>
+<a class=llink href=../posts/9991186528.html>¶</a>
+<a href=http://www.ahwkong.com/post/9991186528 rel=canonical>●</a></p>
+<p>Apple announced on the openJDK mailing list the availability of the developer preview of &#8220;Java for Mac OS X 10.7 Update 1&#8221;</p>
+<p class=tags>#java #lion</p>
+</article>
+
+<article class=regular id=p-9898870525>
+<p class=meta><span class=date>07/09/2011 10:48:05</span>
+<a class=llink href=../posts/9898870525.html>¶</a>
+<a href=http://www.ahwkong.com/post/9898870525 rel=canonical>●</a></p>
+<p>Question to self: Can I use <code>Xcode</code> to read/manage CPython code?</p>
+<p class=tags>#xcode #python</p>
+</article>
+
+<article class=regular id=p-9898871014>
+<p class=meta><span class=date>07/09/2011 10:48:05</span>
+<a class=llink href=../posts/9898871014.html>¶</a>
+<a href=http://www.ahwkong.com/post/9898871014 rel=canonical>●</a></p>
+<h2>lldb</h2>
+<p>There is a lot to like about <code>lldb</code></p>
+
+<p>A lot of useful features such as &#8216;auto completion&#8217; in the shell and integration with Python.</p>
+</article>
+
+<article class=regular id=p-9897360122>
+<p class=meta><span class=date>07/09/2011 10:13:05</span>
+<a class=llink href=../posts/9897360122.html>¶</a>
+<a href=http://www.ahwkong.com/post/9897360122 rel=canonical>●</a></p>
+<h2>Hong Kong Triumvirate?</h2>
+<p>There is a bit of speculation going on in Hong Kong about who could be the next CE (Chief Executive, equivalent to Governor in the colonial time).</p>
+
+<p>A proposal raised by an &#8216;insider&#8217; suggests a combination of Tang, Leung and Fan. Remind me of &#8216;Triumvirate&#8217;.</p>
+</article>
+
+<article class=regular id=p-9876743904>
+<p class=meta><span class=date>06/09/2011 23:50:20</span>
+<a class=llink href=../posts/9876743904.html>¶</a>
+<a href=http://www.ahwkong.com/post/9876743904 rel=canonical>●</a></p>
+<h2>voltdb</h2>
+<p><code>voltdb</code> is said to be open source, but I cannot find the source to download.</p>
+
+<p>Maybe I should look at the Hbase?</p>
+</article>
+
+<article class=regular id=p-9702772529>
+<p class=meta><span class=date>02/09/2011 21:41:00</span>
+<a class=llink href=../posts/9702772529.html>¶</a>
+<a href=http://www.ahwkong.com/post/9702772529 rel=canonical>●</a></p>
+<h2>Brew update issue on Lion</h2>
+<p>Try to run &#8216;brew update&#8217;. Got this error:
+
+<pre>
+$ brew update
+
+Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317, done.
+remote: Compressing objects: 100% (19213/19213), done.
+remote: Total 43317 (delta 26643), reused 38295 (delta 23498)
+Receiving objects: 100% (43317/43317), 5.93 MiB | 457 KiB/s, done.
+Resolving deltas: 100% (26643/26643), done.
+From <a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a>
+ * branch            master     -&gt; FETCH_HEAD
+error: Untracked working tree file '.gitignore' would be overwritten by merge.
+
+Error: Failed while executing git pull <a href="http://github.com/mxcl/homebrew.git">http://github.com/mxcl/homebrew.git</a> master
+</pre>
+
+Turns out Lion upgrade changed the permission of <code>/usr/local</code> and hence the error.
+
+I do not want to change the permission of the directory, therefore I followed these instructions:
+
+<pre>
+git add .
+git stash
+git reset --hard
+</pre></p>
+<p class=tags>#lion #osx</p>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

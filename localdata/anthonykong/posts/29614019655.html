@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-29614019655>
+<p class=meta><span class=date>17/08/2012 19:45:25</span>
+<a class=llink href=../posts/29614019655.html>¶</a>
+<a href=http://www.ahwkong.com/post/29614019655 rel=canonical>●</a></p>
+<p>A way to generate random password in erlang</p>
+
+<pre>
+$ erl
+Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.8.5  (abort with ^G)
+1&gt; base64:encode_to_string(crypto:rand_bytes(16)).
+"9d1L2K5ZYEyFEXCs+dVqfA=="
+</pre>
+<p class=tags>#erlang</p>
+</article>

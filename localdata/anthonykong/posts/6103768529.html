@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-6103768529>
+<p class=meta><span class=date>02/06/2011 20:32:00</span>
+<a class=llink href=../posts/6103768529.html>¶</a>
+<a href=http://www.ahwkong.com/post/6103768529 rel=canonical>●</a></p>
+<h2>Installing couchdb using brew</h2>
+<p>Message after a successful installation
+
+<pre>
+
+If this is your first install, automatically load on login with:
+    mkdir -p ~/Library/LaunchAgents
+    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
+    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+Or start manually with:
+    couchdb
+
+</pre></p>
+<p class=tags>#couchdb #erlang #osx #brew</p>
+</article>

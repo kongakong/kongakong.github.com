@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=archive>
+
+<h1>February 2011</h1>
+
+
+<article class=regular id=p-3548480522>
+<p class=meta><span class=date>28/02/2011 06:12:18</span>
+<a class=llink href=../posts/3548480522.html>¶</a>
+<a href=http://www.ahwkong.com/post/3548480522 rel=canonical>●</a></p>
+<p>Trying out the core-plot example, then I hit this error:</p>
+
+<p><code>error: There is no SDK with the name or path '~/Documents/Cocoa/core-plot.trunk/framework/macosx10.5'</code></p>
+</article>
+
+<article class=regular id=p-3542725170>
+<p class=meta><span class=date>27/02/2011 21:38:35</span>
+<a class=llink href=../posts/3542725170.html>¶</a>
+<a href=http://www.ahwkong.com/post/3542725170 rel=canonical>●</a></p>
+<h2>Core plot related error</h2>
+<p>Got this during build:</p>
+
+<p><code>Library not found for -lCorePlot-CocoaTouch</code></p>
+</article>
+
+<article class=regular id=p-3516910656>
+<p class=meta><span class=date>26/02/2011 16:05:47</span>
+<a class=llink href=../posts/3516910656.html>¶</a>
+<a href=http://www.ahwkong.com/post/3516910656 rel=canonical>●</a></p>
+<h2>Xcode 4 error</h2>
+<p><code>Couldn't load CorePlot.xcodeproj because it is already opened from another project or workspace</code></p>
+</article>
+
+<article class=regular id=p-3360442709>
+<p class=meta><span class=date>18/02/2011 20:58:36</span>
+<a class=llink href=../posts/3360442709.html>¶</a>
+<a href=http://www.ahwkong.com/post/3360442709 rel=canonical>●</a></p>
+<h2>Go Game 18/2/2011</h2>
+<p>White wins by 130.5</p>
+
+<p>I am playing black stones against GNU go. An improvement.</p>
+</article>
+
+<article class=regular id=p-3261736550>
+<p class=meta><span class=date>13/02/2011 11:58:00</span>
+<a class=llink href=../posts/3261736550.html>¶</a>
+<a href=http://www.ahwkong.com/post/3261736550 rel=canonical>●</a></p>
+<p>XCode 4 GM is flagging this style of code</p>
+
+<pre><code>NSEnumerator *e = [mutableFetchResults objectEnumerator];
+id object;
+while (object = [e nextObject]) {
+    // do something with object
+    Stock* fc = (Stock*) object;
+    NSLog(@"get a stock %@", [[fc name] description]);
+}
+</code></pre>
+
+<p>Very annoying.</p>
+</article>
+
+<article class=regular id=p-3261633470>
+<p class=meta><span class=date>13/02/2011 11:52:08</span>
+<a class=llink href=../posts/3261633470.html>¶</a>
+<a href=http://www.ahwkong.com/post/3261633470 rel=canonical>●</a></p>
+<p>I am doing</p>
+
+<pre><code>NSError* error = nil;
+...
+NSLog(@"Error is %s", [error description]);
+</code></pre>
+
+<p>And I got this warning</p>
+
+<pre><code>warning: Format String Issue: Conversion specifies type 'char *' but the argument has type 'NSString *'
+</code></pre>
+
+<p>Change <code>%s</code> to <code>%@</code> get rid of the warning</p>
+</article>
+
+<article class=regular id=p-3261322321>
+<p class=meta><span class=date>13/02/2011 11:33:38</span>
+<a class=llink href=../posts/3261322321.html>¶</a>
+<a href=http://www.ahwkong.com/post/3261322321 rel=canonical>●</a></p>
+<h2>Exit full screen mode of chrome in osx</h2>
+<p>Move the mouse all the way up or press SHIFT+COMMAND+&#8217;F&#8217;</p>
+</article>
+
+<article class=regular id=p-3260669210>
+<p class=meta><span class=date>13/02/2011 10:54:35</span>
+<a class=llink href=../posts/3260669210.html>¶</a>
+<a href=http://www.ahwkong.com/post/3260669210 rel=canonical>●</a></p>
+<h2>Change default text editor in osx</h2>
+<p>Pick a text file and use Ctrl-I to change the &#8216;open with&#8217; application.</p>
+
+<p>It is probably the easiest way.</p>
+
+<p>More info in <a href="http://superuser.com/questions/231854/default-editor-for-files-without-file-name-extension-in-mac-os-x">SuperUser</a></p>
+
+<p>Before Ctrl-I, I actually tried to <code>open ~/Library/Preferences/com.apple.LaunchServices.plist</code>. It opens up XCode4 which is actually not an ideal tool to edit a plist.</p>
+</article>
+
+<article class=regular id=p-3170880054>
+<p class=meta><span class=date>08/02/2011 10:42:00</span>
+<a class=llink href=../posts/3170880054.html>¶</a>
+<a href=http://www.ahwkong.com/post/3170880054 rel=canonical>●</a></p>
+<h2>Unix Note (1)</h2>
+<p>Use  <code>-printf</code> to print the full file name (including the directory)</p>
+
+<p>Useful for construction of a Java CLASSPATH</p>
+
+<pre><code>find -name "*.jar" -printf "%h/%f:"
+</code></pre>
+</article>
+
+<article class=regular id=p-3163671681>
+<p class=meta><span class=date>08/02/2011 01:09:22</span>
+<a class=llink href=../posts/3163671681.html>¶</a>
+<a href=http://www.ahwkong.com/post/3163671681 rel=canonical>●</a></p>
+<p>After installing the Xcode 4 GM, it replaces the underlying Xcode executable of the Xcode icon on Dock to 4 too.</p>
+
+<p>I hope this Xcode 4 is a lot more robust Xcode 3</p>
+</article>
+
+<article class=regular id=p-3119228706>
+<p class=meta><span class=date>05/02/2011 17:41:00</span>
+<a class=llink href=../posts/3119228706.html>¶</a>
+<a href=http://www.ahwkong.com/post/3119228706 rel=canonical>●</a></p>
+<h2>Core data 5</h2>
+<p>To fetch just one row from core data, uses</p>
+
+<pre><code>[request setFetchLimit:1];
+</code></pre>
+<p class=tags>#coredata #ios</p>
+</article>
+
+<article class=regular id=p-3098890370>
+<p class=meta><span class=date>04/02/2011 14:42:00</span>
+<a class=llink href=../posts/3098890370.html>¶</a>
+<a href=http://www.ahwkong.com/post/3098890370 rel=canonical>●</a></p>
+<h2>maven2 archetype:generate problem</h2>
+<p>This archetype does not generate the site module which causes problem when running <code>mvn install</code></p>
+
+<p>And use <code>archetype:generate</code> instead of <code>archetype:create</code></p>
+
+<p>Also somehow the project id is not set according to the command line options.</p>
+</article>
+
+<article class=regular id=p-3055250498>
+<p class=meta><span class=date>02/02/2011 09:27:11</span>
+<a class=llink href=../posts/3055250498.html>¶</a>
+<a href=http://www.ahwkong.com/post/3055250498 rel=canonical>●</a></p>
+<h2>Next steps</h2>
+<ul><li><p>Finish the test data creation helper</p></li>
+<li><p>Finish the table view cell rendering</p></li>
+</ul>
+</article>
+
+
+<p><a href=../ rel=contents>Index</a></p>

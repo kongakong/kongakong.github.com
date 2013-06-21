@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-5096022206>
+<p class=meta><span class=date>01/05/2011 19:04:00</span>
+<a class=llink href=../posts/5096022206.html>¶</a>
+<a href=http://www.ahwkong.com/post/5096022206 rel=canonical>●</a></p>
+<h2>C refresher (3)</h2>
+<p>From <strong>arc4rand</strong> man page:</p>
+
+<pre><code>The random() function will by default produce a sequence of numbers that
+ can be duplicated by calling srandom() with '1' as the seed.  The
+ srandom() function may be called with any arbitrary seed value to get
+ slightly more unpredictable numbers.  It is important to remember that
+ the random() function is entirely predictable, and is therefore not of
+ use where knowledge of the sequence of numbers may be of benefit to an
+ attacker.
+
+ The arc4rand() function will return very good quality random numbers,
+ slightly better suited for security-related purposes.  The random numbers
+ from arc4rand() are seeded from the entropy device if it is available.
+</code></pre>
+</article>

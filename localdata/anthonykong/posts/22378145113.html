@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-22378145113>
+<p class=meta><span class=date>04/05/2012 21:32:53</span>
+<a class=llink href=../posts/22378145113.html>¶</a>
+<a href=http://www.ahwkong.com/post/22378145113 rel=canonical>●</a></p>
+<p>It is a follow-up on an <a href="http://www.ahwkong.com/post/22193612740/trying-to-install-scipy-in-ubuntu-ran-pip-install">earlier post</a>.
+
+My solution is 
+
+1) Install numpy and scipy via apt-get 
+
+<pre>
+sudo apt-get install python-scipy # this will take care of the numpy dependency
+</pre>
+
+2) create a virtualenv 
+
+<pre>
+ virtualenv  --distribute --system-site-packages  ENV
+</pre>
+
+By using <code>--system-site-packages</code>, python in ENV will be able to use scipy.
+
+3) Starting installing software in the virtual environment
+<pre>
+ENV/bin/pip install pybrain
+
+</pre></p>
+<p class=tags>#python #ubuntu #virtualenv #pybrain</p>
+</article>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<meta charset=utf-8>
+<title>Timeline</title>
+<link rel=stylesheet href=../backup.css>
+
+<body class=post>
+
+<article class=regular id=p-29256890594>
+<p class=meta><span class=date>12/08/2012 19:50:00</span>
+<a class=llink href=../posts/29256890594.html>¶</a>
+<a href=http://www.ahwkong.com/post/29256890594 rel=canonical>●</a></p>
+<h2>How to dismiss a modal view controller which is created by a segue in storyboard?</h2>
+<p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
+
+<pre>
+- (IBAction)cancelAddItem:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+</pre>
+
+<p>But it does not work in storyboard anymore.</p>
+
+<p>This is the solution:</p>
+
+<pre>
+- (IBAction)cancelAddItem:(UIBarButtonItem *)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+</pre>
+<p class=tags>#ios #uiviewcontoller #storyboard</p>
+</article>
