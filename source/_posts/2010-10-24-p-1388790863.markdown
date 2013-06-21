@@ -1,0 +1,28 @@
+---
+layout: post
+title: "dscl"
+date: 2010-10-24 22:41
+comments: true
+categories: 
+---
+
+None
+
+
+Another difference between Linux and OSX: no more 
+
+
+So, for example, in order to find out what groups are defined locally, we can run
+
+
+None
+
+
+To add someone to a group, we should run
+
+
+None
+
+
+Don't know where 
+

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "'struct winsize' declared inside parameter list"
+date: 2010-10-08 08:52
+comments: true
+categories: 
+---
+
+None
+
+
+Seeing a lot of
+
+
+```warning: 'struct winsize' declared inside parameter list```
+
+
+Eventually failed at ```./Modules/posixmodule.c```
+
+
+Fixed by using forward declaration
+

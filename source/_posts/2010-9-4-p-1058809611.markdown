@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "View and Controller"
-date: 04/09/2010 01:18:12
+date: 2010-09-04 01:18
 comments: true
 categories: 
 ---
+
+None
+
 
 In the research of the best way to let the view and controller interact with each other
 

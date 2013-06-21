@@ -1,21 +1,15 @@
 ---
 layout: post
 title: "To turn on SQL tracing in Hibernate "
-date: 12/09/2011 22:52:00
+date: 2011-09-12 22:52
 comments: true
 categories: java logj4 hiberate debug
 ---
 
+None
+
+
 Extremely useful for debugging which HSQL has caused database server exception
 
 
-
-```
-log4j.logger.org.hibernate.SQL=trace
-log4j.logger.org.hibernate.engine.query=trace
-log4j.logger.org.hibernate.type=trace
-log4j.logger.org.hibernate.jdbc=trace
-```
-
-#java #logj4 #hiberate #debug
 

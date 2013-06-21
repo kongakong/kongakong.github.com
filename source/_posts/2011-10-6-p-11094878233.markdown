@@ -1,0 +1,52 @@
+---
+layout: post
+title: "When answer is Excel, it is probably not"
+date: 2011-10-06 18:50
+comments: true
+categories: 
+---
+
+None
+
+
+In financial industry, passing files around is still the most common method for data transfer. 
+
+
+You may use ftp, sftp, scp or whatever fancy tools the corporate mandates, but at the end of the day it is about getting the file from system A to system B.
+
+
+The advantage is obvious: It is simple and easy to understand. Any transfer failure can be quickly recovered (such as network failure). Anyone can open the file for inspection, verification and reconciliation. 
+
+
+There are also many ways to stuff up the files. Upgrade of database server is a good example.
+
+
+Database upgrades sometimes change the ordering of data in a result set. If the generation of a file is based on a database query and yet the query itself does not use any explicit *order by* clause, the outcome is at the mercy of the database implementation. 
+
+
+Normally in this situation, some people will suggest to use Excel to fix the file. The overall process will be: Download the problematic file to a local PC. Fire up Excel. Open the file. Sort. Save. Upload to the server. Rerun the batch. 
+
+
+If your server is a Windows server, I would have nothing to say about this process. But if the batch jobs and the files live on a unix/linux server, you are doing it wrong. 
+
+
+In unix you should use a combination of 
+
+
+The benefits:
+
+
+1) Re-runnable: same fix can be easily applied to different files at different time.
+
+
+2) History: easy to find out what have been done to the data
+
+
+3) Incremental improvement: additional fix can be added to existing script quickly.
+
+
+4) Fast: since scripting avoids human error, it will always be faster to run despite higher cost upfront to write and test a script.
+
+
+Resist the suggestion to use Excel.
+

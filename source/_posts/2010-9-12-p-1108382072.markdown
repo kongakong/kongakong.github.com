@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "Abstract base class support in objective-c"
-date: 12/09/2010 19:42:49
+date: 2010-09-12 19:42
 comments: true
 categories: 
 ---
+
+None
+
 
 Basically, there is no support of Abstract base class in objective-c.
 

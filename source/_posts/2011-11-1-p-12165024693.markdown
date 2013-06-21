@@ -1,14 +1,30 @@
 ---
 layout: post
-title: "P(SPAM|today is secret)"
-date: 01/11/2011 04:25:00
+title: "P(SPAM|"today is secret")"
+date: 2011-11-01 04:25
 comments: true
 categories: 
 ---
+
+None
+
+
+None
+
+
+None
+
+
+None
+
+
 Using laplacian smoothing with k = 1, we get the following values:
 
 
 Now plugging the above values in formulas (1), (2) and (3) we get:
+
+
+None
 
 
 From 

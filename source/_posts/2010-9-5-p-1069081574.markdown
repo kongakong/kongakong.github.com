@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "Optional Methods"
-date: 05/09/2010 20:53:00
+date: 2010-09-05 20:53
 comments: true
 categories: 
 ---
+
+None
+
 
 Just learn another feature of objective-c: optional methods.
 

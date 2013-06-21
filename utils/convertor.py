@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 
+# some exception cases
+# /Users/antkong/octopress/source/_posts/2011-11-1-p-12165024693.markdown
 
 import sys
 print (sys.version)
@@ -22,7 +24,13 @@ def lxmlwork():
     j = os.path.join
     srcdir = j('/Users/antkong/octopress', 'localdata', 'anthonykong', 'posts')
     for f in os.listdir(srcdir):
-        parse_file(j(srcdir, f))
+        if f.endswith('html'):
+            preprocess_file(f)
+            parse_file(j(srcdir, f))
+
+def preprocess_file(f):
+    pass
+
 
 def parse_file(fn):
     print "working on", fn
@@ -52,6 +60,7 @@ def parse_file(fn):
     if pub_date_str:
         from datetime import datetime
         pub_date = datetime.strptime(pub_date_str, "%d/%m/%Y %H:%M:%S")
+        meta['pub_date'] = pub_date.strftime("%Y-%m-%d %H:%M")
 
     if pub_date:
         ofilename = "%s-%s-%s-%s.markdown" % (pub_date.year, pub_date.month, pub_date.day, meta['id'])
@@ -59,9 +68,18 @@ def parse_file(fn):
         ofilename = meta['id'] + ".markdown"
     
     ofile = open(os.path.join(dest_dir, ofilename), "w")
-    print >>ofile, HEADER % meta
+    try:
+        print >>ofile, HEADER % meta
+    except UnicodeEncodeError:
+        print "meta issue", meta
+        raise
     for l in lines:
-        print >>ofile, l
+        try:
+            print >>ofile, l
+        except UnicodeEncodeError:
+            print "line char problem", l
+            raise
+            
     ofile.close()
 
 def handle_node(article_node, lines, metas):
@@ -72,13 +90,12 @@ def handle_node(article_node, lines, metas):
         # etree.dump(node)
         if node.tag == 'h2':
             metas['title'] = node.text
-        if node.tag == 'p':
-            if node.text:
-                lines.append("\n%s\n" % node.text)
+        if node.tag == 'p': 
             p_class = node.attrib.get('class', None)
             if p_class == 'tags' and node.text:
                 metas['tags'] = node.text.replace("#", "")      
             else:
+                lines.append("\n%s\n" % node.text)
                 handle_node(node, lines, metas)
         if node.tag == 'a':
             if node.attrib.get('class', '') == 'llink':
@@ -90,8 +107,8 @@ def handle_node(article_node, lines, metas):
             node_class = node.attrib.get('class', None)
             if node_class == 'date':
                 metas['pub_date'] = node.text
-        if node.tag == 'code' or node.tag == 'pre':
-            lines.append("```%s```" % node.text)
+                #if node.tag == 'code' or node.tag == 'pre':
+                #lines.append("```%s```" % node.text)
                 
                 
         

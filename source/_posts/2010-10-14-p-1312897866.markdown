@@ -1,0 +1,19 @@
+---
+layout: post
+title: "postgresql memo"
+date: 2010-10-14 23:57
+comments: true
+categories: 
+---
+
+None
+
+
+As a not-so-frequent user of psql, I really need a reminder on the commonly used commands
+
+
+Use 
+
+
+The equivalent in MSSQL or Sybase will be 
+
