@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Sometimes software development is really just about complexity management"
+date: 10/09/2011 08:52:05
+comments: true
+categories: 
+---
+```hg```
+```
+Traceback (most recent call last):
+  File "/usr/local/bin/hg", line 4, in ```

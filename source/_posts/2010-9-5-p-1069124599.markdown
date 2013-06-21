@@ -1,0 +1,19 @@
+---
+layout: post
+title: "UIViewController::viewDidLoad is not called"
+date: 05/09/2010 21:08:00
+comments: true
+categories: 
+---
+
+Spent an hour to check why my 
+
+
+Breakpoints, debugger, documentation, online forum and whatnot were tried but of no avail.
+
+
+It turned out I have overridden the wrong method: I have overridden the 
+
+
+Epic fail.
+

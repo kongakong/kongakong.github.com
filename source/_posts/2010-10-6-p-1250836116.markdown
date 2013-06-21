@@ -1,0 +1,13 @@
+---
+layout: post
+title: "ActiveMQ build error"
+date: 06/10/2010 07:42:41
+comments: true
+categories: 
+---
+
+Try to build it, but hit this error:
+
+```The system is out of resources.
+Consult the following stack trace for details.
+java.lang.OutOfMemoryError: Java heap space```

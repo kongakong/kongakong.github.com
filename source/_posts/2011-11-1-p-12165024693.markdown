@@ -1,0 +1,17 @@
+---
+layout: post
+title: "P(SPAM|"today is secret")"
+date: 01/11/2011 04:25:00
+comments: true
+categories: 
+---
+Using laplacian smoothing with k = 1, we get the following values:
+
+
+Now plugging the above values in formulas (1), (2) and (3) we get:
+
+
+From 
+
+[http://www.aiqus.com/questions/6628/516-how-do-we-calculate-pmessage?page=1#6666](aiqus)
+

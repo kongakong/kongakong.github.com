@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Common Python Beginner Mistake (1) - Shadowing"
+date: 13/09/2011 01:17:00
+comments: true
+categories: python
+---
+```
+>>> from datetime import date
+>>> def handleDate(date=None):
+...     d = date.today()
+... 
+>>> handleDate()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in handleDate
+AttributeError: 'NoneType' object has no attribute 'today'
+
+
+```
+```date```
+``` date```
+```datetime```
+
+
+
+
+```handleDate```
+```in_date```
+
+#python
+

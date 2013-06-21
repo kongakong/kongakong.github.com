@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Use of Custom View"
+date: 02/09/2010 21:40:00
+comments: true
+categories: 
+---
+
+Created a custom view class and changed the view in a xib to this new custom class. Worked like a charm.
+
+
+Start to develop some intuition about how these xib files work in a XCode project
+

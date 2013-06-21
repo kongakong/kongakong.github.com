@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Abstract base class support in objective-c"
+date: 12/09/2010 19:42:49
+comments: true
+categories: 
+---
+
+Basically, there is no support of Abstract base class in objective-c.
+
+
+The handling is similar to what you can do in python (pre-2.6): inside the supposedly abstract class method throws an exception.
+

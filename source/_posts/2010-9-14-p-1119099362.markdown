@@ -1,0 +1,13 @@
+---
+layout: post
+title: "EXC_BAD_ACCESS resolved"
+date: 14/09/2010 13:56:00
+comments: true
+categories: 
+---
+
+It turns out I was trying to send 
+
+
+It is probably a wrong conclusion, but commenting out the line works.
+

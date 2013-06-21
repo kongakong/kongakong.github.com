@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Hit a persistence related exception"
+date: 22/09/2010 08:38:38
+comments: true
+categories: 
+---
+```The model used to open the store is incompatible with the one used to create the store```
+
+Killed the main thread
+

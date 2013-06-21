@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Use of java.util.concurrent.Executor stops tomcat from stopping"
+date: 15/09/2011 21:45:00
+comments: true
+categories: 
+---
+```java.util.concurrent.Executor```
+```WebService```
+```
+<bean id="riskValueEstimateUpdateExecutor" scope="singleton"
+        class="java.util.concurrent.Executors"
+        factory-method="newSingleThreadExecutor" />
+```
+```kill -3```
+```
+"pool-2-thread-1" prio=10 tid=0xad637c00 nid=0xf37 waiting on condition [0xae882000..0xae883020]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for   (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:158)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1925)
+        at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:358)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:946)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:906)
+        at java.lang.Thread.run(Thread.java:619)
+```
+```
+<bean id="riskValueEstimateUpdateExecutor" scope="singleton"
+        destroy-method="shutdown"
+        class="java.util.concurrent.Executors"
+        factory-method="newSingleThreadExecutor" />
+```
+[http://stackoverflow.com/questions/7427132/use-of-java-util-concurrent-executor-stops-tomcat-from-stopping](Originally asked on SO)
+
