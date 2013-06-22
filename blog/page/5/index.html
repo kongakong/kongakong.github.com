@@ -134,6 +134,10 @@
 
   <div class="entry-content"><p>When I start up emacs in shell, I got this error message:</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Error in init file: Symbol's function definition is void: global-linum-mode</span></code></pre></td></tr></table></div></figure>
+
+
 <p>But my config file works fine with Aquamacs.</p>
 
 <p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
@@ -173,6 +177,16 @@
 
 
   <div class="entry-content"><p>The podfile is for a osx 10.8 project. Here is the output from <code>podfile install</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Installing SSZipArchive (0.2.3)
+</span><span class='line'>Using libextobjc (0.2.5)
+</span><span class='line'>dtrace: failed to open framework/TestResources/CorePlotProbes.d: No such file or directory</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -185,7 +199,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/05/29/p-51633107176/">Added SSToolkit to My Podfile and Got This Message. Don’t Know What It Means…</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/05/29/p-51633107176/">SSToolkit</a></h1>
     
     
       <p class="meta">
@@ -209,6 +223,10 @@
 
 
   <div class="entry-content"><p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -244,16 +262,29 @@
   </header>
 
 
-  <div class="entry-content"><p>$ brew update</p>
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>       error: Your local changes to the following files would be overwritten by  merge:
+</span><span class='line'>        Library/Formula/erlang.rb
+</span><span class='line'>      Please, commit your changes or stash them before you can merge.
+</span><span class='line'>      Aborting
+</span><span class='line'>      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>   error: Your local changes to the following files would be overwritten by  merge:
-    Library/Formula/erlang.rb
-  Please, commit your changes or stash them before you can merge.
-  Aborting
-  Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master
-</code></pre>
 
 <p><em>Solution</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd `brew --prefix`
+</span><span class='line'>$ cd Cellar/erlang/
+</span><span class='line'>$ git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -294,7 +325,7 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM.</a>
+        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM</a>
       </li>
     
   </ul>

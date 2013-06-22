@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T21:55:53+10:00</updated>
+  <updated>2013-06-22T23:00:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -89,7 +89,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Just installed RVM.]]></title>
+    <title type="html"><![CDATA[Just installed RVM]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/12/p-52782958923/"/>
     <updated>2013-06-12T21:20:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/12/p-52782958923</id>
@@ -97,23 +97,28 @@
 
 <p>Message from RVM after installation:</p>
 
-<p><code>`  * To start using RVM you need to run</code>source /Users/antkong/.rvm/scripts/rvm`</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>* To start using RVM you need to run `source /Users/antkong/.rvm/scripts/rvm`
+</span><span class='line'>    in all your open shell windows, in rare cases you need to reopen all shell windows.</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>in all your open shell windows, in rare cases you need to reopen all shell windows.
-</code></pre>
 
-<p>&#8220;</p>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[*Note to self*]]></title>
+    <title type="html"><![CDATA[Note to self]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/12/p-52781713139/"/>
     <updated>2013-06-12T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/12/p-52781713139</id>
     <content type="html"><![CDATA[<p><em>Note to self</em></p>
 
 <p>iPhone sync backup can be found in this location:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~Library/Application Support/MobileSync</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   
@@ -136,6 +141,12 @@
     <updated>2013-06-09T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/09/p-52534137425</id>
     <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+</span><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   
@@ -153,11 +164,11 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Morgan Stanley uses (AFS)[http://en.wikipedia.org/wiki/Andrew_File_System] for application deployment with good results.]]></title>
+    <title type="html"><![CDATA[AFS]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/08/p-52451932662/"/>
     <updated>2013-06-08T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/08/p-52451932662</id>
-    <content type="html"><![CDATA[<p>Morgan Stanley uses (AFS)[<a href="http://en.wikipedia.org/wiki/Andrew_File_System">http://en.wikipedia.org/wiki/Andrew_File_System</a>] for application deployment with good results.</p>
+    <content type="html"><![CDATA[<p>Morgan Stanley uses <a href="http://en.wikipedia.org/wiki/Andrew_File_System">AFS</a> for application deployment with good results.</p>
 ]]></content>
   </entry>
   
@@ -167,17 +178,35 @@
     <updated>2013-06-07T21:20:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/07/p-52372899462</id>
     <content type="html"><![CDATA[<p>The core of lisp is just 7 functions:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(quote x)
+</span><span class='line'>(atom x)
+</span><span class='line'>(eq x y)
+</span><span class='line'>(cons x y)
+</span><span class='line'>(cond (x y) (w z) (t q))
+</span><span class='line'>(car x)
+</span><span class='line'>(cdr x)</span></code></pre></td></tr></table></div></figure>
+
+
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful:]]></title>
+    <title type="html"><![CDATA[NSDocument and First Responder]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/07/p-52371654734/"/>
     <updated>2013-06-07T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/07/p-52371654734</id>
     <content type="html"><![CDATA[<p>Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful:</p>
 
-<p><a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications</a></p>
+<p>(<a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications</a>)[<a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications</a>]</p>
 ]]></content>
   </entry>
   
@@ -187,11 +216,19 @@
     <updated>2013-06-06T21:20:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/06/p-52293987426</id>
     <content type="html"><![CDATA[<p>Useful OSX API to find home and temp directory</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>NSHomeDirectory
+</span><span class='line'>
+</span><span class='line'>NSTemporaryDirectory</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage - a scarce resource - to its citizens.]]></title>
+    <title type="html"><![CDATA[Health system in Oregon]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/06/p-52292736599/"/>
     <updated>2013-06-06T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/06/p-52292736599</id>
@@ -199,7 +236,11 @@
 
 <p>From</p>
 
-<p><a href="Wikipedia">http://en.wikipedia.org/wiki/Oregon_Health_Plan</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Oregon_Health_Plan">Wikipedia</a></p>
+
+<blockquote><p>New enrollment in the program was closed from mid-2004 until early
+2008, when a lottery-based system was introduced. Tens of thousands
+of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockquote>
 
 <p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
 ]]></content>
@@ -210,7 +251,7 @@
     <link href="http://kongakong.github.io/blog/2013/06/05/p-52213593051/"/>
     <updated>2013-06-05T21:20:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/05/p-52213593051</id>
-    <content type="html"><![CDATA[<p><a href="A%20word%20in%20your%20ear:%20Rhyming%20slang">http://www.abc.net.au/local/audio/2013/05/02/3750497.htm</a></p>
+    <content type="html"><![CDATA[<p><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></p>
 
 <p>‘Apple and Pear’ means ‘upstair’. Fun.</p>
 ]]></content>
@@ -235,18 +276,18 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[TEDTalks (video) - TED: Paola Antonelli: Why I brought Pac-Man to MoMA - Paola Antonelli (2013)]]></title>
+    <title type="html"><![CDATA[TED: Paola Antonelli: Why I brought Pac-Man to MoMA - Paola Antonelli (2013)]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/04/p-52131731225/"/>
     <updated>2013-06-04T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/04/p-52131731225</id>
-    <content type="html"><![CDATA[<p><a href="TEDTalks%20(video">http://feedproxy.google.com/~r/TEDTalks_video/~3/8g9dc9r8sZs/paola_antonelli_why_i_brought_pacman_to_moma.html</a> &ndash; TED: Paola Antonelli: Why I brought Pac-Man to MoMA &ndash; Paola Antonelli (2013))</p>
+    <content type="html"><![CDATA[<p><a href="http://feedproxy.google.com/~r/TEDTalks_video/~3/8g9dc9r8sZs/paola_antonelli_why_i_brought_pacman_to_moma.html">TEDTalks (video) &ndash; TED: Paola Antonelli: Why I brought Pac-Man to MoMA &ndash; Paola Antonelli (2013)</a></p>
 
 <p>When the Museum of Modern Art’s senior curator of architecture and design announced the acquisition of 14 video games in 2012, “all hell broke loose.” In this far-ranging, entertaining, and deeply insightful talk, Paola Antonelli explains why she’s delighted to challenge preconceived ideas about art and galleries, and describes her burning wish to help establish a broader understanding of design</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Don’t know how widely is this xml schema is used]]></title>
+    <title type="html"><![CDATA[purl]]></title>
     <link href="http://kongakong.github.io/blog/2013/06/03/p-52049362507/"/>
     <updated>2013-06-03T21:00:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/03/p-52049362507</id>

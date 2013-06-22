@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/erlang/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T21:55:53+10:00</updated>
+  <updated>2013-06-22T23:00:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -30,6 +30,10 @@
     <updated>2013-05-09T20:00:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/05/09/p-50003419743</id>
     <content type="html"><![CDATA[<p>Tell you the location of library files</p>
+
+<p><code>
+code:lib_dir(xmerl).
+</code></p>
 ]]></content>
   </entry>
   
@@ -40,11 +44,34 @@
     <id>http://kongakong.github.io/blog/2013/05/08/p-49924605254</id>
     <content type="html"><![CDATA[<p>Just feel that python is easier for XML manipulation.</p>
 
-<p>e.g.</p>
+<p>e.g.
+<code>
+from lxml import etree
+f = open("digg-science-rss1.xml")
+tree  = etree.parse(f)
+tree.xpath(expr)
+</code></p>
 
 <p>Very concise.</p>
 
 <p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
+
+<p>```
+&hellip;</p>
+
+<pre><code>  #xmlText{
+      parents = [{item,16},{channel,2},{rss,1}],
+      pos = 3,language = [],value = "\n   ",type = text},
+  #xmlElement{
+      name = link,expanded_name = link,nsinfo = [],
+      namespace = 
+          #xmlNamespace{
+              default = [],
+              nodes =
+</code></pre>
+
+<p>&hellip;
+```</p>
 ]]></content>
   </entry>
   
@@ -62,9 +89,7 @@
     <link href="http://kongakong.github.io/blog/2013/04/30/p-49203298223/"/>
     <updated>2013-04-30T07:12:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/04/30/p-49203298223</id>
-    <content type="html"><![CDATA[<p>erlware-mode is deprecated (</p>
-
-<p><a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
+    <content type="html"><![CDATA[<p>erlware-mode is deprecated ( <a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
 
 <p>Use erlang-mode in erlang distribution instead</p>
 ]]></content>

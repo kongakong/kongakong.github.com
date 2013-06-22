@@ -9,7 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Just feel that python is easier for XML manipulation. e.g. Very concise. whereas in erlang, since the function xmerl:string may return a list that’s &hellip;">
+  <meta name="description" content="Just feel that python is easier for XML manipulation. e.g. 1
+2
+3
+4
+from lxml import etree
+f = open("digg-science-rss1.xml")
+tree = etree.parse(f) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -95,9 +101,43 @@
 
 <p>e.g.</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>from lxml import etree
+</span><span class='line'>f = open("digg-science-rss1.xml")
+</span><span class='line'>tree  = etree.parse(f)
+</span><span class='line'>tree.xpath(expr) </span></code></pre></td></tr></table></div></figure>
+
+
 <p>Very concise.</p>
 
 <p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>      #xmlText{
+</span><span class='line'>          parents = [{item,16},{channel,2},{rss,1}],
+</span><span class='line'>          pos = 3,language = [],value = "\n   ",type = text},
+</span><span class='line'>      #xmlElement{
+</span><span class='line'>          name = link,expanded_name = link,nsinfo = [],
+</span><span class='line'>          namespace = 
+</span><span class='line'>              #xmlNamespace{
+</span><span class='line'>                  default = [],
+</span><span class='line'>                  nodes =
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -177,7 +217,7 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM.</a>
+        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM</a>
       </li>
     
   </ul>

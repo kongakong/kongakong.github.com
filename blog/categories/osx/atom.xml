@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T21:55:53+10:00</updated>
+  <updated>2013-06-22T23:00:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -36,6 +36,11 @@ dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKi
     <updated>2013-06-09T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/09/p-52534137425</id>
     <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
+
+<p><code>
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+</code></p>
 ]]></content>
   </entry>
   
@@ -45,6 +50,11 @@ dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKi
     <updated>2013-06-09T20:40:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/09/p-52534137425</id>
     <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
+
+<p><code>
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+</code></p>
 ]]></content>
   </entry>
   
@@ -62,15 +72,17 @@ dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKi
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[When I start up emacs in shell, I got this error message:]]></title>
-    <link href="http://kongakong.github.io/blog/2013/05/31/p-51794320183/"/>
-    <updated>2013-05-31T20:00:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/05/31/p-51794320183</id>
-    <content type="html"><![CDATA[<p>When I start up emacs in shell, I got this error message:</p>
+    <title type="html"><![CDATA[Useful OSX API to find home and temp directory]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/06/p-52293987426/"/>
+    <updated>2013-06-06T21:20:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/06/p-52293987426</id>
+    <content type="html"><![CDATA[<p>Useful OSX API to find home and temp directory</p>
 
-<p>But my config file works fine with Aquamacs.</p>
+<p>```
+NSHomeDirectory</p>
 
-<p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
+<p>NSTemporaryDirectory
+```</p>
 ]]></content>
   </entry>
   

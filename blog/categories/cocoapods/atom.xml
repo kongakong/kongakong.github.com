@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CocoaPods | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/cocoapods/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T21:55:53+10:00</updated>
+  <updated>2013-06-22T23:00:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -19,15 +19,25 @@
     <updated>2013-05-30T20:00:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/05/30/p-51714499390</id>
     <content type="html"><![CDATA[<p>The podfile is for a osx 10.8 project. Here is the output from <code>podfile install</code></p>
+
+<p><code>
+Installing SSZipArchive (0.2.3)
+Using libextobjc (0.2.5)
+dtrace: failed to open framework/TestResources/CorePlotProbes.d: No such file or directory
+</code></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Added SSToolkit to my Podfile and got this message. Don’t know what it means…]]></title>
+    <title type="html"><![CDATA[SSToolkit]]></title>
     <link href="http://kongakong.github.io/blog/2013/05/29/p-51633107176/"/>
     <updated>2013-05-29T20:00:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/05/29/p-51633107176</id>
     <content type="html"><![CDATA[<p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
+
+<p><code>
+[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks
+</code></p>
 ]]></content>
   </entry>
   

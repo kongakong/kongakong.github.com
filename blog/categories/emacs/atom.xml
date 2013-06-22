@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Emacs | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T21:55:53+10:00</updated>
+  <updated>2013-06-22T23:00:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,6 +20,10 @@
     <id>http://kongakong.github.io/blog/2013/05/31/p-51794320183</id>
     <content type="html"><![CDATA[<p>When I start up emacs in shell, I got this error message:</p>
 
+<p><code>
+Error in init file: Symbol's function definition is void: global-linum-mode
+</code></p>
+
 <p>But my config file works fine with Aquamacs.</p>
 
 <p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
@@ -31,9 +35,7 @@
     <link href="http://kongakong.github.io/blog/2013/04/30/p-49203298223/"/>
     <updated>2013-04-30T07:12:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/04/30/p-49203298223</id>
-    <content type="html"><![CDATA[<p>erlware-mode is deprecated (</p>
-
-<p><a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
+    <content type="html"><![CDATA[<p>erlware-mode is deprecated ( <a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
 
 <p>Use erlang-mode in erlang distribution instead</p>
 ]]></content>

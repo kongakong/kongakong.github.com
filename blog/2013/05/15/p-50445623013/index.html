@@ -9,7 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="$ brew update error: Your local changes to the following files would be overwritten by merge: Library/Formula/erlang.rb Please, commit your changes &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+$ brew update error: Your local changes to the following files would be overwritten by merge: Library/Formula/erlang.rb Please, commit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,16 +97,29 @@
   </header>
 
 
-<div class="entry-content"><p>$ brew update</p>
+<div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>       error: Your local changes to the following files would be overwritten by  merge:
+</span><span class='line'>        Library/Formula/erlang.rb
+</span><span class='line'>      Please, commit your changes or stash them before you can merge.
+</span><span class='line'>      Aborting
+</span><span class='line'>      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>   error: Your local changes to the following files would be overwritten by  merge:
-    Library/Formula/erlang.rb
-  Please, commit your changes or stash them before you can merge.
-  Aborting
-  Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master
-</code></pre>
 
 <p><em>Solution</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd `brew --prefix`
+</span><span class='line'>$ cd Cellar/erlang/
+</span><span class='line'>$ git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -149,7 +168,7 @@
         <a class="basic-alignment left" href="/blog/2013/05/14/p-50367270258/" title="Previous Post: Whenever you think you need urllib2, you actually need requests">&laquo; Whenever you think you need urllib2, you actually need requests</a>
       
       
-        <a class="basic-alignment right" href="/blog/2013/05/29/p-51633107176/" title="Next Post: Added SSToolkit to my Podfile and got this message. Don’t know what it means…">Added SSToolkit to my Podfile and got this message. Don’t know what it means… &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/05/29/p-51633107176/" title="Next Post: SSToolkit">SSToolkit &raquo;</a>
       
     </p>
   </footer>
@@ -180,7 +199,7 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM.</a>
+        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM</a>
       </li>
     
   </ul>
