@@ -11,3 +11,11 @@ categories: python cash flow
 
 *A:*
 
+{% codeblock %}
+# contribution at age
+>>> [(i, 5000)for i in range(25, 30+1)]
+[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+
+>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+34009.5640625
+{% endcodeblock %}

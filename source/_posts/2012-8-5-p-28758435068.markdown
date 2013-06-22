@@ -8,6 +8,9 @@ categories: coredata objective-c ios
 
 Encountered this error when adding core data support to my ios project
 
+```
+Receiver 'NSManagedObjectContext' for class message is a forward declaration.
+```
 
-Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the 
+Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the ``<AppName>-Prefix.pch`` 
 

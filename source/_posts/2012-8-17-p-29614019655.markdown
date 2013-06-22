@@ -8,3 +8,14 @@ categories: erlang
 
 A way to generate random password in erlang
 
+{% codeblock lang:erlang %}
+$ erl
+Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.8.5  (abort with ^G)
+1> base64:encode_to_string(crypto:rand_bytes(16)).
+"9d1L2K5ZYEyFEXCs+dVqfA=="
+
+
+
+{% endcodeblock %}

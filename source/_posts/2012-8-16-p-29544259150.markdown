@@ -8,13 +8,22 @@ categories: ios uitableview
 
 To enable the swipe to delete feature, one must implement this API:
 
-
-``- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+{% codeblock %}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
                                             forRowAtIndexPath:(NSIndexPath *)indexPath``
 
+{% endcodeblock %}
 
 I can enable this feature, but I got this exception from this function
 
+```
+2012-08-11 22:30:46.286 app[76532:fb03] *** Terminating app due to uncaught exception
+ 'NSInternalInconsistencyException', reason: 'Invalid update: invalid number of rows in section 0.  
+The number of rows contained in an existing section after the update (10) must be equal to the 
+number of rows contained in that section before the update (10), plus or minus the number of rows 
+inserted or deleted from that section (0 inserted, 1 deleted) and plus or minus the number of rows 
+moved into or out of that section (0 moved in, 0 moved out).'
+```
 
 It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.
 

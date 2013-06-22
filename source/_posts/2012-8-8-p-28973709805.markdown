@@ -3,11 +3,17 @@ layout: post
 title: "Got this error message in xcode"
 date: 2012-08-08 19:53
 comments: true
-categories: 
+categories: ios objective-c
 ---
 
 Got this error message in xcode
 
+```
+*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+ a UITableView.'
+*** First throw call stack:
+```
 
 It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem
 

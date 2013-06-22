@@ -8,3 +8,10 @@ categories:
 
 In ocaml, “let rec” defines a recursive function, for example:
 
+{% codeblock lang:ocaml %}
+# let rec ipow n m = if m = 0 then 1 else n * ipow n (m -1);;
+val ipow : int -> int -> int = <fun>
+# ipow 7 8;;
+- : int = 5764801
+
+{% endcodeblock %}

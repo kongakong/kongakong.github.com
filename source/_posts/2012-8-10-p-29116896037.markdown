@@ -3,8 +3,20 @@ layout: post
 title: "Calculate regular payment based on rate, number of payment and PV"
 date: 2012-08-10 19:58
 comments: true
-categories: 
+categories: python 
 ---
 
 Calculate regular payment based on rate, number of payment and PV
+
+{% codeblock %}
+def pmt(i, n, p):
+    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))
+{% endcodeblock %}
+
+Example:
+
+{% codeblock %}
+>>> pmt(0.06, 120, 120000)
+-7206.622591189367
+{% endcodeblock %}
 

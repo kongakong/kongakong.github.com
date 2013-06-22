@@ -147,7 +147,7 @@ def handle_video_node(article_node, lines, metas):
                 txt = "{%% youtube %s %%}" % (vlink[idx+2:])
                 lines.append(txt)
             else:
-                lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+                lines.append("[%s](%s)\n" % (node.text, node.attrib['href']))
         if node.tag == 'span':
             node_class = node.attrib.get('class', None)
             if node_class == 'date':
@@ -176,7 +176,7 @@ def handle_quote_node(article_node, lines, metas):
                 continue
             if 'www.ahwkong.com' in node.attrib['href']:
                 continue
-            lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+            lines.append("[%s](%s)\n" % (node.text, node.attrib['href']))
             metas['title'] = 'Quote of the Day'
         if node.tag == 'span':
             node_class = node.attrib.get('class', None)
@@ -202,7 +202,7 @@ def handle_link_node(article_node, lines, metas):
                 continue
             if 'www.ahwkong.com' in node.attrib['href']:
                 continue
-            lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+            lines.append("[%s](%s)\n" % (node.text, node.attrib['href']))
             metas['title'] = node.text.replace("\"", "'")
 
 def handle_normal_node(article_node, lines, metas):
@@ -227,7 +227,7 @@ def handle_normal_node(article_node, lines, metas):
                 continue
             if 'www.ahwkong.com' in node.attrib['href']:
                 continue
-            lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+            lines.append("[%s](%s)\n" % (node.text, node.attrib['href'] ))
         if node.tag == 'span':
             node_class = node.attrib.get('class', None)
             if node_class == 'date':

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Use ``python setup.py sdist`` to create source code release archive"
+title: "python setup.py sdist"
 date: 2012-07-01 19:34
 comments: true
 categories: python

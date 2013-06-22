@@ -8,9 +8,20 @@ categories: ios uiviewcontoller storyboard
 
 A way to dismiss a modal view controller is to link the button to an ``IBAction`` like this:
 
+{% codeblock lang:objc %}
+- (IBAction)cancelAddItem:(UIBarButtonItem *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+{% endcodeblock %}
 
 But it does not work in storyboard anymore.
 
 
 This is the solution:
 
+{% codeblock  lang:objc %}
+- (IBAction)cancelAddItem:(UIBarButtonItem *)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+{% endcodeblock %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Do not have git on my rebuilt MBP. Was about to hit ‘brew install git’. Then I realised: I already have git installed. It is part of XCode."
+title: "Was about to hit ‘brew install git’. Then I realised I'd already have git installed"
 date: 2012-09-26 02:16
 comments: true
 categories: git xcode osx
