@@ -1,18 +1,15 @@
 ---
 layout: post
 title: "
-None
+Create NSIndexPath with this Idiom
 "
 date: 2010-12-31 19:44
 comments: true
 categories: 
 ---
 
-None
-
-
 Create NSIndexPath with this Idiom
 
 
-None
+```[NSIndexPath indexPathForRow: inSection:]```
 

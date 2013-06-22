@@ -1,20 +1,14 @@
 ---
 layout: post
 title: "
-None
+Changed a controller to be a subclass of UITableViewController and got this
 "
 date: 2012-05-21 21:51
 comments: true
 categories: objective-c xcode mn
 ---
 
-None
-
-
 Changed a controller to be a subclass of UITableViewController and got this
-
-
-None
 
 
 I skipped a few steps. After I did the following

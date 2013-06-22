@@ -1,17 +1,14 @@
 ---
 layout: post
-title: "
-None
-"
+title: "http://bugs.python.org/issue12267"
 date: 2011-06-21 05:51
 comments: true
 categories: python windows x86_64
 ---
+[http://bugs.python.org/issue12267](http://bugs.python.org/issue12267)
 
-None
 
-
-None
+*Building Python on Windows - May skip VS2010*
 
 
 Brian Curtin submitted a patch to enable python 2.7 to compile using VS2010 for x64 target. The bug is rejected at the end because it might eventually move to VS2012

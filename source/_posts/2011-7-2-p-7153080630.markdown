@@ -6,15 +6,12 @@ comments: true
 categories: python ms-windows
 ---
 
-None
-
-
 Learn about this from a 
 
 [http://bugs.python.org/issue12459](python bug discussion)
 
 
-When you call 
+When you call ```sleep(-1)```) in Windows, it means sleep infinitely. Possible use case is to put an application in sleep unTIL waken up by signal.
 
 
 Seems like only Windows do that.

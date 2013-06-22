@@ -6,9 +6,6 @@ comments: true
 categories: llvm
 ---
 
-None
-
-
 Type based alias analysis
 
 

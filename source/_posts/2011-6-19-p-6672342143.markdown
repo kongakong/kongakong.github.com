@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.
 "
 date: 2011-06-19 11:04
 comments: true
 categories: virtualbox solaris express
 ---
-
-None
-
 
 Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.
 

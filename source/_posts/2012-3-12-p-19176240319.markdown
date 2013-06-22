@@ -6,11 +6,8 @@ comments: true
 categories: powershell
 ---
 
-None
-
-
 Dived into Microsoft Powershell (v1.0) for a few days, and I start to like this tool. 
 
 
-It is very versatile and useful. The REPL command line interface allows me to interrogate and play with a COM object easily. It also integrates the registry in a very interesting way.
+It is very versaTILe and useful. The REPL command line interface allows me to interrogate and play with a COM object easily. It also integrates the registry in a very interesting way.
 

@@ -6,8 +6,7 @@ comments: true
 categories: 
 ---
 
-None
+For a derived class, a way to achieve this is by reusing base class’s ```=``` operator: 
 
 
-For a derived class, a way to achieve this is by reusing base class’s 
 

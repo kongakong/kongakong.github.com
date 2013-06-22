@@ -6,11 +6,8 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Got this during build:
 
 
-None
+```Library not found for -lCorePlot-CocoaTouch```
 

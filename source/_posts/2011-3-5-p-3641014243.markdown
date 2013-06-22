@@ -6,8 +6,5 @@ comments: true
 categories: 
 ---
 
-None
-
-
-Going to try removal of these two lines from 
+Going to try removal of these two lines from ```project.pbxproj```
 

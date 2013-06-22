@@ -6,9 +6,6 @@ comments: true
 categories: c++ Effective C++ self-study
 ---
 
-None
-
-
 First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.
 
 

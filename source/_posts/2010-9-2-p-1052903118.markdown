@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Created a custom view class and changed the view in a xib to this new custom class. Worked like a charm.
 
 

@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+NSNumber is an object class whereas NSInteger is a primitive type.
 "
 date: 2011-04-27 03:57
 comments: true
 categories: objective-c
 ---
-
-None
-
 
 NSNumber is an object class whereas NSInteger is a primitive type.
 

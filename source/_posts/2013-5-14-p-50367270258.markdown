@@ -6,9 +6,6 @@ comments: true
 categories: python requests
 ---
 
-None
-
-
 Since I have started using python since version 2.4, I have a lot of old die-hard habit. For one, I write exception handler like this
 
 
@@ -21,16 +18,16 @@ The later is of course a better and more flexible style.
 So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.
 
 
-It usually works great… until you need something more than basic.
+It usually works great… unTIL you need something more than basic.
 
 
 Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…
 
 
-Why it throws an exception 
+Why it throws an exception *AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’*>?
 
 
-OK, let’s import DefaultCookiePolicy. Then I got hit by a 
+OK, let’s import DefaultCookiePolicy. Then I got hit by a *missing domain attribute*> exception. “Do I need to use a lower level Cookie class to set the domain?”, I wonder. Try switching to Cookie and it throw this exception
 
 
 At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.

@@ -6,9 +6,6 @@ comments: true
 categories: xcode4 ios
 ---
 
-None
-
-
 ```
 [parentView bringSubviewToFront:childView];
 ```

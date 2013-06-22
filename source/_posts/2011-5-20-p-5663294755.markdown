@@ -6,9 +6,6 @@ comments: true
 categories: erlang
 ---
 
-None
-
-
 ```
 size(Tuple)
 

@@ -1,21 +1,18 @@
 ---
 layout: post
 title: "
-None
+When it is a NSString, do ```copy``` in @property
 "
 date: 2010-12-31 20:35
 comments: true
 categories: 
 ---
 
-None
-
-
-When it is a NSString, do 
+When it is a NSString, do ```copy``` in @property
 
 
 e.g.
 
 
-None
+```@property (copy) NSString *info;```
 

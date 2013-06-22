@@ -6,17 +6,11 @@ comments: true
 categories: 
 ---
 
-None
-
-
-None
-
-
 From Project -> Edit Project Settings
 
 
 Choose Build tab
 
 
-Set ‘Base SDK’ to 
+Set ‘Base SDK’ to *Latest iOS*>
 

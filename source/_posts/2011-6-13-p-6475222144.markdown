@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 To inherit the implementation but not the interface.
 
 Example:

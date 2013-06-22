@@ -1,17 +1,14 @@
 ---
 layout: post
 title: "
-None
+Got ```Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'```
 "
 date: 2011-01-10 00:40
 comments: true
 categories: 
 ---
 
-None
-
-
-Got 
+Got ```Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'```
 
 
 when trying to dismiss a modal view controller.

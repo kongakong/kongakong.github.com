@@ -6,14 +6,5 @@ comments: true
 categories: c++ Effective C++
 ---
 
-None
-
-
-The purpose of declaring a 
-
-
-None
-
-
-None
+The purpose of declaring a ```*pure virtual function*``` is to have derived classes inherit a function interface only
 

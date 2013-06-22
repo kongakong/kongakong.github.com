@@ -1,15 +1,26 @@
 ---
 layout: post
 title: "
-None
+erlang’s ``` configure``` sTILl reports these components as missing:
+```
+crypto         : No usable OpenSSL found
+jinterface     : No Java compiler found
+odbc           : ODBC library - link check failed
+ssh            : No usable OpenSSL found
+ssl            : No usable OpenSSL found
+```
 "
 date: 2011-08-30 22:49
 comments: true
 categories: linux erlang
 ---
 
-None
-
-
-erlang’s 
+erlang’s ``` configure``` sTILl reports these components as missing:
+```
+crypto         : No usable OpenSSL found
+jinterface     : No Java compiler found
+odbc           : ODBC library - link check failed
+ssh            : No usable OpenSSL found
+ssl            : No usable OpenSSL found
+```
 

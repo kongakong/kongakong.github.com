@@ -6,20 +6,11 @@ comments: true
 categories: Effective C++ c++ self-study
 ---
 
-None
-
-
 Summary:
 
 
-None
+*Virtual functions* must be members. If f needs to be virtual, make it a member function of C.
 
 
   
-
-
-None
-
-
-None
 

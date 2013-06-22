@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+To exit an app when ```applicationDidEnterBackground:(UIApplication *)application ``` is called, try set ```UIApplicationExitsOnSuspend``` to ```YES``` in project plist file.
 "
 date: 2011-05-14 21:08
 comments: true
 categories: ios
 ---
 
-None
-
-
-To exit an app when 
+To exit an app when ```applicationDidEnterBackground:(UIApplication *)application ``` is called, try set ```UIApplicationExitsOnSuspend``` to ```YES``` in project plist file.
 

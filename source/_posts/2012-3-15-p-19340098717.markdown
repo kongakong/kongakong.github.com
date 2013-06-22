@@ -6,9 +6,6 @@ comments: true
 categories: powershell COM python
 ---
 
-None
-
-
 My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.
 
 

@@ -1,15 +1,70 @@
 ---
 layout: post
 title: "
-None
+Installing ```erlang``` on a ubuntu 10.10 instance
+
+A snapshot of dependencies:
+
+```
+
+akong@vb-ubuntu-01:~$ sudo apt-get install erlang
+[sudo] password for akong: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  emacsen-common erlang-appmon erlang-asn1 erlang-common-test erlang-corba erlang-debugger erlang-dev erlang-dialyzer erlang-docbuilder
+  erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inviso erlang-megaco erlang-mode
+  erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-reltool erlang-snmp erlang-src
+  erlang-ssh erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool odbcinst odbcinst1debian2 tk tk8.4
+  unixodbc
+Suggested packages:
+  erlang-manpages erlang-doc-html fop libmyodbc odbc-postgresql tdsodbc unixodbc-bin
+The following NEW packages will be installed:
+  emacsen-common erlang erlang-appmon erlang-asn1 erlang-common-test erlang-corba erlang-debugger erlang-dev erlang-dialyzer
+  erlang-docbuilder erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inviso erlang-megaco
+  erlang-mode erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-reltool erlang-snmp
+  erlang-src erlang-ssh erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool odbcinst odbcinst1debian2
+  tk tk8.4 unixodbc
+0 upgraded, 41 newly installed, 0 to remove and 327 not upgraded.
+Need to get 18.0MB of archives.
+After this operation, 82.5MB of additional disk space will be used.
+
+```
 "
 date: 2011-06-12 18:27
 comments: true
 categories: erlang ubuntu
 ---
 
-None
+Installing ```erlang``` on a ubuntu 10.10 instance
 
+A snapshot of dependencies:
 
-Installing 
+```
+
+akong@vb-ubuntu-01:~$ sudo apt-get install erlang
+[sudo] password for akong: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  emacsen-common erlang-appmon erlang-asn1 erlang-common-test erlang-corba erlang-debugger erlang-dev erlang-dialyzer erlang-docbuilder
+  erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inviso erlang-megaco erlang-mode
+  erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-reltool erlang-snmp erlang-src
+  erlang-ssh erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool odbcinst odbcinst1debian2 tk tk8.4
+  unixodbc
+Suggested packages:
+  erlang-manpages erlang-doc-html fop libmyodbc odbc-postgresql tdsodbc unixodbc-bin
+The following NEW packages will be installed:
+  emacsen-common erlang erlang-appmon erlang-asn1 erlang-common-test erlang-corba erlang-debugger erlang-dev erlang-dialyzer
+  erlang-docbuilder erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inviso erlang-megaco
+  erlang-mode erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-reltool erlang-snmp
+  erlang-src erlang-ssh erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool odbcinst odbcinst1debian2
+  tk tk8.4 unixodbc
+0 upgraded, 41 newly installed, 0 to remove and 327 not upgraded.
+Need to get 18.0MB of archives.
+After this operation, 82.5MB of additional disk space will be used.
+
+```
 

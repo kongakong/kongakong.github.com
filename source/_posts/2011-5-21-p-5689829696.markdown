@@ -6,11 +6,8 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Obviously I am less familiar with the syntax than I was a year ago.
 
 
-None
+*Experience Point:* Whenever there seems to be a need to use ```if``` inside the code, it is better to check if we can use guard instead.
 

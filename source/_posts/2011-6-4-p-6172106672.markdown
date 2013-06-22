@@ -6,19 +6,10 @@ comments: true
 categories: c++ Effective C++ self-study
 ---
 
-None
+*Example: *
 
 
-None
-
-
-None
-
-
-None
-
-
-None
+```operator*``` and ```operator+``` should return a new object instead of a reference. The latter approach will introduce problem such as memory leak
 
 
 From 

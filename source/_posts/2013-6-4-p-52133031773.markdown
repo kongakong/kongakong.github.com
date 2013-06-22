@@ -6,8 +6,5 @@ comments: true
 categories: objective-c tip
 ---
 
-None
-
-
-Use 
+Use ```lastPathComponent```
 

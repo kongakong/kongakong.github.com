@@ -6,10 +6,7 @@ comments: true
 categories: 
 ---
 
-None
-
-
-In financial industry, passing files around is still the most common method for data transfer. 
+In financial industry, passing files around is sTILl the most common method for data transfer. 
 
 
 You may use ftp, sftp, scp or whatever fancy tools the corporate mandates, but at the end of the day it is about getting the file from system A to system B.
@@ -30,7 +27,7 @@ Normally in this situation, some people will suggest to use Excel to fix the fil
 If your server is a Windows server, I would have nothing to say about this process. But if the batch jobs and the files live on a unix/linux server, you are doing it wrong. 
 
 
-In unix you should use a combination of 
+In unix you should use a combination of ```sort```, ```uniq```, ```sed```, ```sed``` (any appropriate unix commands) and file redirection to get the job done.
 
 
 The benefits:

@@ -6,11 +6,8 @@ comments: true
 categories: c++ Effective C++ self-study
 ---
 
-None
-
-
 Don’t think anyone will seriously argue against the usefulness of namespace.
 
 
-It is also mentioned that we can use 
+It is also mentioned that we can use ```struct``` to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.
 

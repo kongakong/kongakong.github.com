@@ -6,11 +6,8 @@ comments: true
 categories: 
 ---
 
-None
-
-
 One of the steps
 
 
-None
+```./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework```
 

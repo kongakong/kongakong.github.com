@@ -6,9 +6,6 @@ comments: true
 categories: go osx lion
 ---
 
-None
-
-
 ```
 $ brew install google-go
 /usr/local/bin/hg

@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+*initialize* is a class method which will be called before any other method is called on a class. Alternatively use a function with *__attribute__ ((constructor))*
 "
 date: 2011-05-29 07:39
 comments: true
 categories: objective-c
 ---
 
-None
-
-
-None
+*initialize* is a class method which will be called before any other method is called on a class. Alternatively use a function with *__attribute__ ((constructor))*
 

@@ -6,11 +6,8 @@ comments: true
 categories: 
 ---
 
-None
-
-
 To access the main window
 
 
-None
+```UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];```
 

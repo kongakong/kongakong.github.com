@@ -6,8 +6,5 @@ comments: true
 categories: c++ Effective C++
 ---
 
-None
-
-
 Lead to difference in behavior if a derived class is casted to its base class. Not advised.
 

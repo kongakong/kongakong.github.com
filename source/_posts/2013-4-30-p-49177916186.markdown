@@ -6,9 +6,6 @@ comments: true
 categories: erlang homebrew
 ---
 
-None
-
-
 Currently the version of erlang in homebrew is defaulted to version R15B03-1 even though a more recent version, R16B, is available.
 
 

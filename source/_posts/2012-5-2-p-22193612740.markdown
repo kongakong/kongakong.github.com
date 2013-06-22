@@ -1,17 +1,28 @@
 ---
 layout: post
 title: "
-None
+Trying to install scipy in ubuntu. Ran ```pip install scipy```
+
+
+```
+
+numpy.distuTILs.system_info.BlasNotFoundError:
+
+    Blas (
 "
 date: 2012-05-02 00:49
 comments: true
 categories: ubuntu python scipy
 ---
 
-None
+Trying to install scipy in ubuntu. Ran ```pip install scipy```
 
 
-Trying to install scipy in ubuntu. Ran 
+```
+
+numpy.distuTILs.system_info.BlasNotFoundError:
+
+    Blas (
 
 [http://www.netlib.org/blas/](http://www.netlib.org/blas/)
 

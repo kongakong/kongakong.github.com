@@ -1,15 +1,272 @@
 ---
 layout: post
 title: "
-None
+Had  a bunch of byte-compiling error when running ```python3 distribute_setup.py```
+
+
+
+```
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/easy_install.py to easy_install.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/pkg_resources.py to pkg_resources.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/pkg_resources.py", line 45
+    def _bypass_ensure_directory(name, mode=0777):
+                                               ^
+SyntaxError: invalid token
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/__init__.py to __init__.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/archive_uTIL.py to archive_uTIL.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/__init__.py to __init__.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/alias.py to alias.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/alias.py", line 12
+    if arg.split()[arg]:
+                   ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_egg.py to bdist_egg.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_egg.py", line 410
+    if safe is None or bool(safe)flag:
+                                  ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_rpm.py to bdist_rpm.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_wininst.py to bdist_wininst.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/build_ext.py to build_ext.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/build_py.py to build_py.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/develop.py to develop.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/easy_install.py to easy_install.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/easy_install.py", line 195
+    print 'distribute %s' % get_distribution('distribute').version
+                        ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/egg_info.py to egg_info.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install.py to install.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_egg_info.py to install_egg_info.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_lib.py to install_lib.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_scripts.py to install_scripts.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_scripts.py", line 52
+    chmod(target,0755)
+                    ^
+SyntaxError: invalid token
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/register.py to register.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/rotate.py to rotate.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/saveopts.py to saveopts.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/sdist.py to sdist.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/setopt.py to setopt.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/test.py to test.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload.py to upload.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload.py", line 158
+    raise AssertionError, "unsupported schema "+schema
+                        ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload_docs.py to upload_docs.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload_docs.py", line 160
+    except socket.error, e:
+                       ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/depends.py to depends.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/depends.py", line 39
+    str(version)"unknown" and version >= self.requested_version
+                 ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/dist.py to dist.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/dist.py", line 103
+    except ValueError, e:
+                     ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/extension.py to extension.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/package_index.py to package_index.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/package_index.py", line 355
+    if cs.hexdigest()info[4:]:
+                      ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/sandbox.py to sandbox.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/sandbox.py", line 35
+    except SystemExit, v:
+                     ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/script template (dev).py to script template (dev).cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/script template.py to script template.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/__init__.py to __init__.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/doctest.py to doctest.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/doctest.py", line 370
+    raise TypeError, 'Expected a module: %r' % module
+                   ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/server.py to server.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_build_ext.py to test_build_ext.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_develop.py to test_develop.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_develop.py", line 76
+    except DistuTILsError, e:
+                         ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_easy_install.py to test_easy_install.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_packageindex.py to test_packageindex.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_packageindex.py", line 17
+    except Exception, v:
+                    ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_resources.py to test_resources.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_resources.py", line 640
+    except ImportError, e:
+                      ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_sandbox.py to test_sandbox.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_upload_docs.py to test_upload_docs.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/site.py to site.cpython-33.pyc
+running install_egg_info
+Writing /Users/antkong/local/lib/python3.3/site-packages/distribute-0.6.26-py3.3.egg-info
+After install bootstrap.
+Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools-0.6c11-py3.3.egg-info
+Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools.pth
+```
 "
 date: 2012-04-28 21:41
 comments: true
 categories: python3 distribute
 ---
 
-None
+Had  a bunch of byte-compiling error when running ```python3 distribute_setup.py```
 
 
-Had  a bunch of byte-compiling error when running 
+
+```
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/easy_install.py to easy_install.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/pkg_resources.py to pkg_resources.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/pkg_resources.py", line 45
+    def _bypass_ensure_directory(name, mode=0777):
+                                               ^
+SyntaxError: invalid token
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/__init__.py to __init__.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/archive_uTIL.py to archive_uTIL.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/__init__.py to __init__.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/alias.py to alias.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/alias.py", line 12
+    if arg.split()[arg]:
+                   ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_egg.py to bdist_egg.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_egg.py", line 410
+    if safe is None or bool(safe)flag:
+                                  ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_rpm.py to bdist_rpm.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_wininst.py to bdist_wininst.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/build_ext.py to build_ext.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/build_py.py to build_py.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/develop.py to develop.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/easy_install.py to easy_install.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/easy_install.py", line 195
+    print 'distribute %s' % get_distribution('distribute').version
+                        ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/egg_info.py to egg_info.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install.py to install.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_egg_info.py to install_egg_info.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_lib.py to install_lib.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_scripts.py to install_scripts.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_scripts.py", line 52
+    chmod(target,0755)
+                    ^
+SyntaxError: invalid token
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/register.py to register.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/rotate.py to rotate.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/saveopts.py to saveopts.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/sdist.py to sdist.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/setopt.py to setopt.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/test.py to test.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload.py to upload.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload.py", line 158
+    raise AssertionError, "unsupported schema "+schema
+                        ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload_docs.py to upload_docs.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload_docs.py", line 160
+    except socket.error, e:
+                       ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/depends.py to depends.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/depends.py", line 39
+    str(version)"unknown" and version >= self.requested_version
+                 ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/dist.py to dist.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/dist.py", line 103
+    except ValueError, e:
+                     ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/extension.py to extension.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/package_index.py to package_index.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/package_index.py", line 355
+    if cs.hexdigest()info[4:]:
+                      ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/sandbox.py to sandbox.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/sandbox.py", line 35
+    except SystemExit, v:
+                     ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/script template (dev).py to script template (dev).cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/script template.py to script template.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/__init__.py to __init__.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/doctest.py to doctest.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/doctest.py", line 370
+    raise TypeError, 'Expected a module: %r' % module
+                   ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/server.py to server.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_build_ext.py to test_build_ext.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_develop.py to test_develop.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_develop.py", line 76
+    except DistuTILsError, e:
+                         ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_easy_install.py to test_easy_install.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_packageindex.py to test_packageindex.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_packageindex.py", line 17
+    except Exception, v:
+                    ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_resources.py to test_resources.cpython-33.pyc
+  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_resources.py", line 640
+    except ImportError, e:
+                      ^
+SyntaxError: invalid syntax
+
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_sandbox.py to test_sandbox.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_upload_docs.py to test_upload_docs.cpython-33.pyc
+byte-compiling /Users/antkong/local/lib/python3.3/site-packages/site.py to site.cpython-33.pyc
+running install_egg_info
+Writing /Users/antkong/local/lib/python3.3/site-packages/distribute-0.6.26-py3.3.egg-info
+After install bootstrap.
+Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools-0.6c11-py3.3.egg-info
+Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools.pth
+```
 

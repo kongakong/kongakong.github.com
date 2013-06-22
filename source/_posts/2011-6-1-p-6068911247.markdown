@@ -6,11 +6,10 @@ comments: true
 categories: 
 ---
 
-None
+
+A common error amongst new C++ programmers is to have* operator=* return void, a decision that seems reasonable unTIL you realize it prevents chains of assignment.
 
 
-
-A common error amongst new C++ programmers is to have
 
 
 

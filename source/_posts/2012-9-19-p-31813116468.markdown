@@ -1,12 +1,9 @@
 ---
 layout: post
-title: "
-None
-"
+title: "Scala build tool"
 date: 2012-09-19 06:39
 comments: true
 categories: scale
 ---
-
-None
+[https://github.com/harrah/xsbt/wiki](Scala build tool)
 

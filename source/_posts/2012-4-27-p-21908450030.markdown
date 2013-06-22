@@ -6,9 +6,6 @@ comments: true
 categories: ios itune osx
 ---
 
-None
-
-
 Go into ```iTunes -> preferences -> devices``` to remove multiple backups of your iOS devices
 
 I recovered about 5Gb space.

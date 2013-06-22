@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+Xcode 3 no longer works with Lion. Need to figure out how to remove it properly. (Is running ```uninstall-developer-folder```  all I need?)
 "
 date: 2011-08-02 07:15
 comments: true
 categories: lion xcode osx
 ---
 
-None
-
-
-Xcode 3 no longer works with Lion. Need to figure out how to remove it properly. (Is running 
+Xcode 3 no longer works with Lion. Need to figure out how to remove it properly. (Is running ```uninstall-developer-folder```  all I need?)
 

@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+```/etc/inet/netmasks``` is the official SVr4 name of the netmasks
 "
 date: 2011-06-26 08:53
 comments: true
 categories: solaris
 ---
 
-None
-
-
-None
+```/etc/inet/netmasks``` is the official SVr4 name of the netmasks
 

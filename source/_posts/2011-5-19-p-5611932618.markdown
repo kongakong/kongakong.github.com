@@ -6,12 +6,9 @@ comments: true
 categories: 
 ---
 
-None
-
-
 My first part of erlang self-study has come to an end.
 
-Somehow I cannot get 
+Somehow I cannot get ```mobius:find_square_multiples(3, 20)``` to work as required 
 
 [http://www.cs.caltech.edu/courses/cs11/material/erlang/lab1/index.html](here)
 

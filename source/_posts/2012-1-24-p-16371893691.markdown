@@ -6,13 +6,7 @@ comments: true
 categories: 
 ---
 
-None
-
-
-None
-
-
-None
+*yecc: LALR-1 Parser Generator*
 
 [http://www.erlang.org/doc/man/yecc.html](None)
 

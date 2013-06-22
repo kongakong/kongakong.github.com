@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+Mac OS X Objective-C 2.0 runtime library support functions and data structures are implemented in the shared library /usr/lib/libobjc.A.dylib.
 "
 date: 2011-04-20 08:28
 comments: true
 categories: objective-c
 ---
-
-None
-
 
 Mac OS X Objective-C 2.0 runtime library support functions and data structures are implemented in the shared library /usr/lib/libobjc.A.dylib.
 

@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Added files to a wrong location in a project (basically above the project root node) and I cannot remove them (Delete option is disabled)
 
 

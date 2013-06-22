@@ -6,14 +6,11 @@ comments: true
 categories: 
 ---
 
-None
-
-
 It turns out it is because of the following line of code:
 
 
-None
+```NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);```
 
 
-It should be 
+It should be ```%i``` because  *numberOfObjects*> returns an integer
 

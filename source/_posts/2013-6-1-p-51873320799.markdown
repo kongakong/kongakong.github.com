@@ -1,18 +1,15 @@
 ---
 layout: post
 title: "
-None
+erlang mode in emacs is very handy.
 "
 date: 2013-06-01 20:30
 comments: true
 categories: erlang
 ---
 
-None
-
-
 erlang mode in emacs is very handy.
 
 
-None
+*C-c C-k (erlang-compile)*> will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.
 

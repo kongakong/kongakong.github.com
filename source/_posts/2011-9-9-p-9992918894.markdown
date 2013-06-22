@@ -6,9 +6,6 @@ comments: true
 categories: couchdb osx
 ---
 
-None
-
-
 ```
 $ brew install couchdb
 Warning: It appears you have MacPorts or Fink installed.

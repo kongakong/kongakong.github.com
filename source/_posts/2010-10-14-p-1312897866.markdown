@@ -6,14 +6,11 @@ comments: true
 categories: 
 ---
 
-None
-
-
 As a not-so-frequent user of psql, I really need a reminder on the commonly used commands
 
 
-Use 
+Use ```\connect 
 
 
-The equivalent in MSSQL or Sybase will be 
+The equivalent in MSSQL or Sybase will be ```use 
 

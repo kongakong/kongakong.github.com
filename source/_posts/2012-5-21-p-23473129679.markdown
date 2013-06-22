@@ -1,23 +1,20 @@
 ---
 layout: post
 title: "
-None
+Installing pyML by running ```python setup.py install```
 "
 date: 2012-05-21 19:36
 comments: true
 categories: python pyml
 ---
 
-None
-
-
-Installing pyML by running 
+Installing pyML by running ```python setup.py install```
 
 
 But I do not think it is going to fly because, for example,
 
 
-None
+``````
 
 
 /usr/bin/llvm-gcc -fno-strict-aliasing -O3 -w -pipe -march=core2 -msse4 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/usr/local/bin/../Cellar/python/2.7.2/include/python2.7 -c PyML/containers/ext/Kernel.cpp -o build/temp.macosx-10.4-x86_64-2.7/PyML/containers/ext/Kernel.o

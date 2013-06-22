@@ -6,11 +6,10 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Try to build it, but hit this error:
 
 
-None
+```The system is out of resources.
+Consult the following stack trace for details.
+java.lang.OutOfMemoryError: Java heap space```
 

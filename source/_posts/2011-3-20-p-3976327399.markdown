@@ -1,18 +1,15 @@
 ---
 layout: post
 title: "
-None
+One difference between ```git clone``` and ```git pull```: ```git pull``` will require a pre-existing .git.
 "
 date: 2011-03-20 18:00
 comments: true
 categories: 
 ---
 
-None
+One difference between ```git clone``` and ```git pull```: ```git pull``` will require a pre-existing .git.
 
 
-One difference between 
-
-
-If I need to check out the source code for the first time, use of 
+If I need to check out the source code for the first time, use of ```git pull``` is certainly not the right command.
 

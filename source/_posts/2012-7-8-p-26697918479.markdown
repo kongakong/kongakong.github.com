@@ -6,9 +6,6 @@ comments: true
 categories: python
 ---
 
-None
-
-
 A creational pattern provides a particular instantiation mechanism. It can be a particular object factory or even a class factory. This is an important pattern in compiled languages such as C, since it is harder to generate types on-demand at run time.
 
 

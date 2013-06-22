@@ -1,17 +1,24 @@
 ---
 layout: post
 title: "
-None
+Install python 2.7 using brew. Brew also downloaded and installed ```distribute```
+
+```
+$ brew install python
+==> Installing python dependency: sqlite
+==> Downloading 
 "
 date: 2012-04-30 20:21
 comments: true
 categories: 
 ---
 
-None
+Install python 2.7 using brew. Brew also downloaded and installed ```distribute```
 
-
-Install python 2.7 using brew. Brew also downloaded and installed 
+```
+$ brew install python
+==> Installing python dependency: sqlite
+==> Downloading 
 
 [http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz](http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz)
 

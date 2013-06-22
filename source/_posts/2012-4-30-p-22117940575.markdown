@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries.
 
 
@@ -19,5 +16,7 @@ $ ls -l /usr/local/bin/easy_install
 
 ```
 
-The shebang of 
+The shebang of ```easy_install``` is sTILl pointing to a python 2.5 installation
+
+
 

@@ -1,18 +1,15 @@
 ---
 layout: post
 title: "
-None
+As a beginner of objective-C, from time to time I sTILl get caught in incorrect format string used in NSLog.
 "
 date: 2012-05-18 19:42
 comments: true
 categories: objective-c nslog
 ---
 
-None
+As a beginner of objective-C, from time to time I sTILl get caught in incorrect format string used in NSLog.
 
 
-As a beginner of objective-C, from time to time I still get caught in incorrect format string used in NSLog.
-
-
-For example, I should use 
+For example, I should use ```%f``` for float and ```%@``` for NSNumber. If I used %@ instead for float, obj-c will throw exception.
 

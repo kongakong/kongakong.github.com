@@ -6,8 +6,5 @@ comments: true
 categories: 
 ---
 
-None
-
-
-None
+```Couldn't load CorePlot.xcodeproj because it is already opened from another project or workspace```
 

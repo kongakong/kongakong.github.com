@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+Grand Central Dispatch is in some sense a mail-box (message queue) type messaging system. And as erlang has proved that you can use message queue to achieve synchronisation, you can use GCD to effectively setup critical section.
 "
 date: 2011-07-21 22:40
 comments: true
 categories: osx
 ---
-
-None
-
 
 Grand Central Dispatch is in some sense a mail-box (message queue) type messaging system. And as erlang has proved that you can use message queue to achieve synchronisation, you can use GCD to effectively setup critical section.
 

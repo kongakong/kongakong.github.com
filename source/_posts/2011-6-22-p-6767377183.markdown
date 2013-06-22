@@ -1,15 +1,22 @@
 ---
 layout: post
 title: "
-None
+*svn update *is again split into two stage process in *hg*:
+
+```
+hg pull
+hg update
+```
 "
 date: 2011-06-22 07:18
 comments: true
 categories: Mercurial
 ---
 
-None
+*svn update *is again split into two stage process in *hg*:
 
-
-None
+```
+hg pull
+hg update
+```
 

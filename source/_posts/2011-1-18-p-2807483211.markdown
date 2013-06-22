@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Added in svn 1.6: The caret ^ shorthand notation to shorten subversion URLs when using the command line. The caret symbol can be used in place of the portion of the URL up through the repository name.
 
 
@@ -16,9 +13,6 @@ Ex:
 
 
 instead of
-
-
-None
 
 [http://stackoverflow.com/questions/294256/favorite-non-obvious-feature-of-svn](Source)
 

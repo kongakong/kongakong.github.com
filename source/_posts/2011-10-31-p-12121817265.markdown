@@ -1,12 +1,9 @@
 ---
 layout: post
-title: "
-None
-"
+title: "switch statement requires all the case labels to be constant at compile time"
 date: 2011-10-31 04:26
 comments: true
 categories: java
 ---
-
-None
+[http://tools.android.com/tips/non-constant-fields](switch statement requires all the case labels to be constant at compile time)
 

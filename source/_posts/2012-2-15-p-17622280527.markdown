@@ -6,12 +6,9 @@ comments: true
 categories: objective-c syntax
 ---
 
-None
-
-
 ```
-@interface ClassName ( CategoryName ) < protocol list >
+@interface ClassName ( CategoryName ) 
 ```
 
-As a java/c++ programmer, my first instinct is that 
+As a java/c++ programmer, my first instinct is that ** works as generic
 

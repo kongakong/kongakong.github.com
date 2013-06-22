@@ -1,14 +1,11 @@
 ---
 layout: post
-title: "
-None
-"
+title: "How to convert an NSString into an NSNumber?"
 date: 2012-03-08 22:00
 comments: true
 categories: objective-c
 ---
-
-None
+[http://stackoverflow.com/questions/1448804/how-to-convert-an-nsstring-into-an-nsnumber](How to convert an NSString into an NSNumber?)
 
 
 1) NSNumberFormatter 

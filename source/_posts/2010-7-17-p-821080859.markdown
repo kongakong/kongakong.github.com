@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 glColor3f is not available in OpenGL ES.
 
 

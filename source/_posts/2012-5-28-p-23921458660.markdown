@@ -1,18 +1,15 @@
 ---
 layout: post
-title: "
-None
-"
+title: "Frame vs Bound"
 date: 2012-05-28 19:29
 comments: true
 categories: ios objective-c
 ---
-
-None
-
-
-The 
+[http://stackoverflow.com/a/1210141/58129](Frame vs Bound)
 
 
-The 
+The *frame* of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.
+
+
+The *bounds* of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).
 

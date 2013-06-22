@@ -6,9 +6,6 @@ comments: true
 categories: c++ Effective C++
 ---
 
-None
-
-
 The deadly diamond shape inheritance relationship.
 
 

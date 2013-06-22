@@ -6,10 +6,7 @@ comments: true
 categories: 
 ---
 
-None
-
-
-It turns out I was trying to send 
+It turns out I was trying to send *release*> message to a NSArray instance which was created using the class method 
 
 
 It is probably a wrong conclusion, but commenting out the line works.

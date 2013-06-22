@@ -1,20 +1,14 @@
 ---
 layout: post
 title: "
-None
+For some reason I cannot set the title of the ```backBarButtonItem``` of ```navigationItem``` programmatically. I can only set it in the InterfaceBuilder.
 "
 date: 2012-06-11 18:33
 comments: true
 categories: 
 ---
 
-None
-
-
-None
-
-
-For some reason I cannot set the title of the 
+For some reason I cannot set the title of the ```backBarButtonItem``` of ```navigationItem``` programmatically. I can only set it in the InterfaceBuilder.
 
 
 Also it must be done in the controller that initiates the page transition

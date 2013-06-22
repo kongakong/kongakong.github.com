@@ -6,8 +6,11 @@ comments: true
 categories: pyML python
 ---
 
-None
+After installing pyML from source: ``` python setup.py install``` in pyML-0.7.9 
 
+```
 
-After installing pyML from source: 
+>>> import PyML
+Traceback (most recent call last):
+  File "
 

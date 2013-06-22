@@ -1,15 +1,14 @@
 ---
 layout: post
 title: "
-None
+
+Encountered 
+
 "
 date: 2011-06-16 22:17
 comments: true
 categories: virtualbox gcc g++ fedora
 ---
-
-None
-
 
 
 Encountered 
@@ -17,7 +16,9 @@ Encountered
 
 
 
-when trying to install the 
+when trying to install the ```Guest Additions``` into the Fedora 15 VM instance in VirtualBox.
+
+
 
 
 
@@ -26,7 +27,8 @@ As part of the error message, it clearly indicated which package (a kernel-devel
 
 
 
-Then it reports the gcc is not found. 
+Then it reports the gcc is not found. ``` yum install gcc g++``` seems to take care of this problem.
+
 
 
 

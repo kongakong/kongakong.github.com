@@ -6,8 +6,5 @@ comments: true
 categories: Effective C++ c++ self-study
 ---
 
-None
-
-
 The problem with malloc and free: they don’t know about constructors and destructors
 

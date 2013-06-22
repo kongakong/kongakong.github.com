@@ -6,26 +6,17 @@ comments: true
 categories: c++ Effective C++
 ---
 
-None
-
-
 There are three technique to make a header file more self-contained:
 
 
-1. 
+1. ```Avoid using objects when object references and pointers will do```
 
 
 This will avoid the need of including a header file
 
 
-2. 
+2. ```Don't *#include* header files in your header files unless your headers won't compile without them``` 
 
 
 Use forward declaration instead
-
-
-None
-
-
-None
 

@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+iOS 5 added a remote virtual interface (RVI) facility that lets you use Mac OS X packet trace programs to capture traces from an iOS device.
 "
 date: 2012-07-20 19:55
 comments: true
-categories: Today I Learn ios
+categories: TIL ios
 ---
-
-None
-
 
 iOS 5 added a remote virtual interface (RVI) facility that lets you use Mac OS X packet trace programs to capture traces from an iOS device.
 

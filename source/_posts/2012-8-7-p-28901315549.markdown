@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+In ocaml, “let rec” defines a recursive function, for example:
 "
 date: 2012-08-07 19:59
 comments: true
-categories: ocaml
+categories: 
 ---
-
-None
-
 
 In ocaml, “let rec” defines a recursive function, for example:
 

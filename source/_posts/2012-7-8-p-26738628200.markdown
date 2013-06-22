@@ -1,17 +1,14 @@
 ---
 layout: post
 title: "
-None
+It is never easy with ```easy_install```.
 "
 date: 2012-07-08 13:16
 comments: true
 categories: 
 ---
 
-None
-
-
-It is never easy with 
+It is never easy with ```easy_install```.
 
 
 Despite the error messages at the end, the installation seems to work.

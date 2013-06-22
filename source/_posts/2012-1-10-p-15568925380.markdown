@@ -1,15 +1,22 @@
 ---
 layout: post
 title: "
-None
+I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn
+
+```
+$ svn info 
+dyld: Library not loaded: /usr/lib/libpq.5.dylib
+  Referenced from: /usr/bin/svn
+  Reason: image not found
+Trace/BPT trap: 5
+```
+
+Run it in a new shell and the problem goes away.
 "
 date: 2012-01-10 03:01
 comments: true
 categories: osx
 ---
-
-None
-
 
 I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn
 

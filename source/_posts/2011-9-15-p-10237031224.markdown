@@ -1,15 +1,9 @@
 ---
 layout: post
-title: "Use of java.util.concurrent.Executor stops tomcat from stopping"
+title: "Use of java.uTIL.concurrent.Executor stops tomcat from stopping"
 date: 2011-09-15 21:45
 comments: true
 categories: 
 ---
-
-None
-
-[http://stackoverflow.com/questions/7427132/use-of-java-util-concurrent-executor-stops-tomcat-from-stopping](Originally asked on SO)
-
-
-None
+[http://stackoverflow.com/questions/7427132/use-of-java-uTIL-concurrent-executor-stops-tomcat-from-stopping](Originally asked on SO)
 

@@ -1,15 +1,36 @@
 ---
 layout: post
 title: "
-None
+The *python* build on *solaris express* is a partial success. Here is part of the output message:
+
+```
+Python build finished, but the necessary bits to build these modules were not found:
+_gdbm              ossaudiodev                        
+To find the necessary bits, look in setup.py in detect_modules() for the module's name.
+
+
+Failed to build these modules:
+_curses            _curses_panel                      
+
+
+```
 "
 date: 2011-06-22 00:22
 comments: true
 categories: python solaris express
 ---
 
-None
+The *python* build on *solaris express* is a partial success. Here is part of the output message:
+
+```
+Python build finished, but the necessary bits to build these modules were not found:
+_gdbm              ossaudiodev                        
+To find the necessary bits, look in setup.py in detect_modules() for the module's name.
 
 
-The 
+Failed to build these modules:
+_curses            _curses_panel                      
+
+
+```
 

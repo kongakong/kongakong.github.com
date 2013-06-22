@@ -6,11 +6,8 @@ comments: true
 categories: java
 ---
 
-None
+1. If there is lock condition in the ```try``` block``````
 
 
-1. If there is lock condition in the 
-
-
-2. JVM is terminated (e.g. 
+2. JVM is terminated (e.g. ```System.exit()``` before finally is executed
 

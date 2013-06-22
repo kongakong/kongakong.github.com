@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 It is not entirely obvious in 
 
 [http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html](checkstyle maven plugin documentation)

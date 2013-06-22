@@ -6,9 +6,6 @@ comments: true
 categories: python3 setuptools pip
 ---
 
-None
-
-
 Trying to install pip 1.1 for python3. 
 
 ```

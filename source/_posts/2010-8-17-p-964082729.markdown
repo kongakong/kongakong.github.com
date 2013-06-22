@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Drove me nut.
 
 
@@ -18,5 +15,5 @@ For some reason I could not open a xib file in Xcode 4. Googling and whatnot yie
 Finally I realised the mode of editor is in  ‘Version’ (as opposed to ‘Standard’ and ‘Assistant’)
 
 
-Still, it is a good idea to have an integrated xib editor in xcode.
+STILl, it is a good idea to have an integrated xib editor in xcode.
 

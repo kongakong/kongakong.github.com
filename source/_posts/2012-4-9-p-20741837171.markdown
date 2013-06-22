@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use 
 "
 date: 2012-04-09 09:04
 comments: true
 categories: xcode objective-c ios
 ---
-
-None
-
 
 The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use 
 

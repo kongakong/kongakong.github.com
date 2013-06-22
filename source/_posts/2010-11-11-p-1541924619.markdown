@@ -6,32 +6,29 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Usage:
 
 
-None
+```NSBundle *bundle = [NSBundle mainBundle];```
 
 
-None
+```NSString *imagePath = [bundle pathForResource:@"mug_shot" ofType:@"tiff"]```
 
 
-None
+```NSImage *anImage = [[NSImage alloc] initWithContentsOfFile:imagePath];```
 
 
-None
+*Loading Code*>
 
 
 Selectors:
 
 
-None
+```load```
 
 
-None
+```principlaClass```
 
 
-None
+```classNamed```
 

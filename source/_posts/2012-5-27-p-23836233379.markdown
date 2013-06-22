@@ -6,14 +6,13 @@ comments: true
 categories: xcode
 ---
 
-None
-
-
 This code fragment
 ```
 // item is a MPMediaItem
 NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
 ```
 
-causes 
+causes ```Interface type cannot be statically allocated ```
+
+But xcode is smart enough to show a tip right away on how to fix it. Just need to change ```NSURL``` to ```NSURL*```
 

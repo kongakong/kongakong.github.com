@@ -1,26 +1,23 @@
 ---
 layout: post
 title: "
-None
+To query for a list of vm, do this:
 "
 date: 2011-06-13 20:35
 comments: true
 categories: virtualbox note
 ---
 
-None
-
-
 To query for a list of vm, do this:
 
 
-None
+```
 
 
 Once you have a list of vms, you can query each of them by
 
 
-None
+```
 
 
 It will only work if you run it as the same user that starts the vm instances

@@ -1,17 +1,14 @@
 ---
 layout: post
 title: "
-None
+Trying out ``` ALAssetsLibrary```
 "
 date: 2012-05-24 20:11
 comments: true
-categories: ios xcode
+categories: 
 ---
 
-None
-
-
-Trying out 
+Trying out ``` ALAssetsLibrary```
 
 
 This is how to import the header file:

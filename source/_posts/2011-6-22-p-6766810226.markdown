@@ -6,8 +6,11 @@ comments: true
 categories: Mercurial python
 ---
 
-None
+In *hg* you have to use two commands to extract info similar to *svn*.
 
-
-In 
+```
+$ hg tip
+changeset:   70656:3301a01071f9
+tag:         tip
+user:        Martin v. LÃ¶wis 
 

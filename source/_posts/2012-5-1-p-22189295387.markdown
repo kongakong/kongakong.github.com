@@ -6,8 +6,9 @@ comments: true
 categories: 
 ---
 
-None
+For my setup (```python``` from ```brew```), I should run this to install virtualenv
 
-
-For my setup (
+```
+/usr/local/share/python/pip install  virtualenv
+```
 

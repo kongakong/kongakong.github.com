@@ -6,9 +6,6 @@ comments: true
 categories: objective-c
 ---
 
-None
-
-
 
 You cannot just add one NSNumber to another. 
 

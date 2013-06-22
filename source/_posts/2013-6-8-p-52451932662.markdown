@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+Morgan Stanley uses (AFS)[http://en.wikipedia.org/wiki/Andrew_File_System] for application deployment with good results.
 "
 date: 2013-06-08 20:40
 comments: true
 categories: afs finance
 ---
-
-None
-
 
 Morgan Stanley uses (AFS)[http://en.wikipedia.org/wiki/Andrew_File_System] for application deployment with good results.
 

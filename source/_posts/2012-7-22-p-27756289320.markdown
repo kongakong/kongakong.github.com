@@ -3,17 +3,11 @@ layout: post
 title: "Casting is optional"
 date: 2012-07-22 19:56
 comments: true
-categories: objective-c
+categories: 
 ---
 
-None
+In objective-c, if you have an variable of type ```id``` but you want to  call a certain method on it as if it an instance of a specific class, you can do it this way:
 
 
-In objective-c, if you have an variable of type 
-
-
-Here is the definition of the 
-
-
-In static languages, you will need to test if the variable is of type 
+Here is the definition of the ```TestDynamic``` class:
 

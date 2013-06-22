@@ -1,17 +1,14 @@
 ---
 layout: post
 title: "
-None
+OK, so ```nltk.download()``` will actually bring up a GUI downloader.
 "
 date: 2010-10-26 21:04
 comments: true
 categories: 
 ---
 
-None
-
-
-OK, so 
+OK, so ```nltk.download()``` will actually bring up a GUI downloader.
 
 
 Did not notice this, and waited for hour.

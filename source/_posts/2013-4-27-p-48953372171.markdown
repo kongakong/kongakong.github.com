@@ -6,11 +6,8 @@ comments: true
 categories: emacs
 ---
 
-None
-
-
 Find out the current emac.d location
 
 
-None
+```C-H v init-user-file 
 

@@ -6,11 +6,8 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Just learn another feature of objective-c: optional methods.
 
 
-Use keyword 
+Use keyword *@optional*> for declaration.
 

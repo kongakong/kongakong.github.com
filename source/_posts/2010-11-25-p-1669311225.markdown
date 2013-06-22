@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Turns out the modems have issue with TPG, and the problem can only be fixed by refreshing the firmware. But when I discovered it, I have already spent hours to isolate the problem.
 
 

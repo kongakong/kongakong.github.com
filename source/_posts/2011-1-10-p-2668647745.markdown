@@ -6,8 +6,5 @@ comments: true
 categories: 
 ---
 
-None
-
-
-None
+```[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];```
 

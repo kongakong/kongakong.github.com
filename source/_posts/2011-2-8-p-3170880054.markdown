@@ -6,10 +6,7 @@ comments: true
 categories: 
 ---
 
-None
-
-
-Use  
+Use  ```-printf``` to print the full file name (including the directory)
 
 
 Useful for construction of a Java CLASSPATH

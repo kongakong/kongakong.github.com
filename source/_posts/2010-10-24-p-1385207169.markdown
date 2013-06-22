@@ -6,11 +6,8 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Need to install libYAML-0.1.3 and PyYAML-3.0.9 first
 
 
-Turns out the python system path is not set properly, and I am still unable to install nltk. Need fixing
+Turns out the python system path is not set properly, and I am sTILl unable to install nltk. Need fixing
 

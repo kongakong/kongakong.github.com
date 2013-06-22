@@ -6,29 +6,26 @@ comments: true
 categories: 
 ---
 
-None
+*NSArchiver*>
 
 
-None
+*NSUnarchiver*>
 
 
-None
+*NSKeyedArchiver*>
 
 
-None
+*NSKeyedUnarchiver*>
 
 
-None
-
-
-None
+*NSPortCoder*>
 
 
 NSObject supports
 
 
-None
+```- (void) encodeWithCoder:(NSCoder *) encoder;```
 
 
-None
+```- (id) initWithCoder:(NSCoder *) decoder;```
 

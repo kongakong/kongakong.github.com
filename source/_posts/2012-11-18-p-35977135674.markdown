@@ -6,9 +6,6 @@ comments: true
 categories: ubuntu python3 Pip
 ---
 
-None
-
-
 First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)
 
 
@@ -18,4 +15,6 @@ Then you’ll need to create a virtualenv and activate it. For details see
 
 
 Since I want to install packages using pip, I proceed to install distribute.
+
+[http://python-distribute.org/distribute_setup.py](http://python-distribute.org/distribute_setup.py)
 

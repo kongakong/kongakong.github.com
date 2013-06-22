@@ -6,9 +6,6 @@ comments: true
 categories: 
 ---
 
-None
-
-
 We can dynamically allocate arrays of primitive types using new as well 
 
 

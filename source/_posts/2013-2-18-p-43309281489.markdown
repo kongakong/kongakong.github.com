@@ -6,8 +6,5 @@ comments: true
 categories: native client
 ---
 
-None
-
-
 It is because I have turned on the flag ‘Native Client GDB-based debugging’. It is not compatible with nexe that are linked with newlib.
 

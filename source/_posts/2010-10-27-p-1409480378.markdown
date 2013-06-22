@@ -6,13 +6,10 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Run
 
 
-None
+```text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])```
 
 
 but it says,

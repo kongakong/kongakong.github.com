@@ -6,9 +6,6 @@ comments: true
 categories: c++ effective c++ self-study
 ---
 
-None
-
-
 Virtual functions are dynamically bound, but default parameters are statically bound. 
 
 

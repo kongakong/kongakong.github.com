@@ -6,8 +6,5 @@ comments: true
 categories: erlang python
 ---
 
-None
-
-
 In python, single quote and double quote are pretty much interchangable. Not so in erlang.
 

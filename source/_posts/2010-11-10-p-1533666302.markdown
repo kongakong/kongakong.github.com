@@ -6,8 +6,5 @@ comments: true
 categories: 
 ---
 
-None
-
-
 Adds the object to the current autorelease pool. This allows you to release your interest in an object without immediately causing the retain count to reach 0. When the autorelease pool is itself released, it sends the release message to every object it contains. This is most useful when you want to pass the object to another object as a return value and won’t have the opportunity to release the object later by yourself.
 

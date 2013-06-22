@@ -6,22 +6,19 @@ comments: true
 categories: python hg mercurial
 ---
 
-None
+``````
 
 
-None
-
-
-None
+*$ hg pull*
 
 [http://hg.python.org/cpython](http://hg.python.org/cpython)
 
 
-None
+*$ hg summary*
 
 
-None
+*$ hg update*
 
 
-None
+*$ hg summary*
 

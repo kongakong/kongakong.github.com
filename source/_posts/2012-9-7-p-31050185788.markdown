@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.
 "
 date: 2012-09-07 19:52
 comments: true
 categories: mac
 ---
-
-None
-
 
 I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.
 
@@ -17,7 +14,7 @@ I am sharing an external harddisk connected to the Airport Extreme Base station.
 My last-gen MBP has a 320Gb harddisk and about 265Gb of data. I am too lazy to do an initial time machine backup via a ethernet cable.
 
 
-So over wifi and 10 hours later, the backup is still less than half way through.
+So over wifi and 10 hours later, the backup is sTILl less than half way through.
 
 
 I did not expect this scheme to work at all because my past research indicated that Apple/TimeMachine did not allow backup to network drive unless it is hosted by Time Capsule.

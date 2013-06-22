@@ -6,14 +6,11 @@ comments: true
 categories: 
 ---
 
-None
-
-
-Need to use 
+Need to use *NSImmutableArray*> if we want to dynamically change the content of an array
 
 
 In python world, I cannot think of any built-in classes that are immutable
 
 
-In Java, classes covered by the language standard are usually mutable except 
+In Java, classes covered by the language standard are usually mutable except *java.lang.String*>. Java places more emphasis on thread-safety of a class instead of mutability
 

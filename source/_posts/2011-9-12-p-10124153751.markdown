@@ -6,9 +6,6 @@ comments: true
 categories: java logj4 hiberate debug
 ---
 
-None
-
-
 Extremely useful for debugging which HSQL has caused database server exception
 
 ```

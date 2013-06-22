@@ -6,14 +6,11 @@ comments: true
 categories: osx autoconf
 ---
 
-None
-
-
 Oops
 
 
-None
+```
 
 
-The version of autoconf in both 
+The version of autoconf in both ```brew``` and ```/Developer``` are 2.61
 

@@ -1,12 +1,9 @@
 ---
 layout: post
-title: "
-None
-"
+title: "Bunch of c-python development tasks that are marked as 'easy'"
 date: 2011-07-08 04:34
 comments: true
 categories: python
 ---
-
-None
+[http://bugs.python.org/issue?@columns=title,id,activity,type,components,versions,severity,status&@sort=-activity&@group=priority&@filter=keywords,status&@pagesize=50&@startwith=0&keywords=6&status=1&@dispname=Easy%20Tasks](Bunch of c-python development tasks that are marked as "easy")
 

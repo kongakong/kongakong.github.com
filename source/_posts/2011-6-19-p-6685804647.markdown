@@ -1,15 +1,48 @@
 ---
 layout: post
 title: "
-None
+Now let’s try install *erlang* on *Solaris Express*:
+
+```
+~$ sudo pkg install erlang
+Password: 
+               Packages to install:     2
+           Create boot environment:    No
+DOWNLOAD                                  PKGS       FILES    XFER (MB)
+Completed                                  2/2   8577/8577    79.7/79.7
+
+PHASE                                        ACTIONS
+Install Phase                              9425/9425 
+
+PHASE                                          ITEMS
+Package State Update Phase                       2/2 
+Image State Update Phase                         2/2 
+```
+
+That’s all the message I got from the process. Very neat.
 "
 date: 2011-06-19 21:47
 comments: true
 categories: solaris solaris express erlang
 ---
 
-None
+Now let’s try install *erlang* on *Solaris Express*:
 
+```
+~$ sudo pkg install erlang
+Password: 
+               Packages to install:     2
+           Create boot environment:    No
+DOWNLOAD                                  PKGS       FILES    XFER (MB)
+Completed                                  2/2   8577/8577    79.7/79.7
 
-Now let’s try install 
+PHASE                                        ACTIONS
+Install Phase                              9425/9425 
+
+PHASE                                          ITEMS
+Package State Update Phase                       2/2 
+Image State Update Phase                         2/2 
+```
+
+That’s all the message I got from the process. Very neat.
 

@@ -1,15 +1,24 @@
 ---
 layout: post
 title: "
-None
+Hit a EXC_BAD_ACCESS exception.
+
+
+
+In the lldb, I tried to interrogate some internal variable, but no success.
+
+
+```
+
+(lldb) p [lessons count]
+error: no known method '-count'; cast the message send to the method's return type
+error: 1 errors parsing expression
+```
 "
 date: 2012-05-26 08:37
 comments: true
 categories: xcode ios
 ---
-
-None
-
 
 Hit a EXC_BAD_ACCESS exception.
 

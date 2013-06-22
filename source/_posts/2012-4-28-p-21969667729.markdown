@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "
-None
+Follow-up on a previous 
 "
 date: 2012-04-28 20:22
 comments: true
 categories: python setuptools distribute
 ---
-
-None
-
 
 Follow-up on a previous 
 
@@ -19,8 +16,8 @@ It turns out on
 [http://packages.python.org/distribute/](Distribute’s site)
 
 
-None
+```setuptools``` -> ```distribute```
 
 
-None
+```easy_install``` -> ```pip```
 

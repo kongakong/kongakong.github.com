@@ -1,17 +1,14 @@
 ---
 layout: post
 title: "
-None
+Tried this to build 64 bit erlang on osx: ```./configure  --enable-darwin-64bit; make```
 "
 date: 2011-04-22 18:48
 comments: true
 categories: 
 ---
 
-None
-
-
-Tried this to build 64 bit erlang on osx: 
+Tried this to build 64 bit erlang on osx: ```./configure  --enable-darwin-64bit; make```
 
 
 Got a bunch of error messages:

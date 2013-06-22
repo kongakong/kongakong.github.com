@@ -1,18 +1,15 @@
 ---
 layout: post
 title: "
-None
+Just learn that *Fedora* uses ```inittab``` to control ```runlevel``` no more
 "
 date: 2011-06-19 10:10
 comments: true
 categories: fedora
 ---
 
-None
+Just learn that *Fedora* uses ```inittab``` to control ```runlevel``` no more
 
 
-Just learn that 
-
-
-Instead it uses 
+Instead it uses ```/etc/systemd/system/default.target```
 

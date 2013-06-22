@@ -1,17 +1,14 @@
 ---
 layout: post
 title: "
-None
+A note-to-myself on ```release```
 "
 date: 2011-04-27 03:49
 comments: true
 categories: objective-c
 ---
 
-None
-
-
-A note-to-myself on 
+A note-to-myself on ```release```
 
 
 Do not release before the variable is in use

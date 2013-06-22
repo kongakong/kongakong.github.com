@@ -1,15 +1,13 @@
 ---
 layout: post
 title: "
-None
+
+Taken from 
 "
 date: 2011-05-13 23:38
 comments: true
 categories: 
 ---
-
-None
-
 
 
 Taken from 
@@ -18,6 +16,8 @@ Taken from
 
 
 
+``` math``` module contains a ```sqrt``` function, but 
+canât pass it as an argument.
 
 
 
@@ -27,5 +27,6 @@ Module functions arenât higher-order function.
 
 
 
-Instead, we can wrap it with a 
+Instead, we can wrap it with a *fun*
+
 

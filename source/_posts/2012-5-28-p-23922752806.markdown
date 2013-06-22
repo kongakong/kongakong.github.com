@@ -6,16 +6,13 @@ comments: true
 categories: ios uiviewcontoller
 ---
 
-None
-
-
-None
+*Cause*
 
 
 The UITableViewController does not ‘live’ in a UINavigationController
 
 
-None
+*Solution*
 
 
 Because I am using storyboard, the solution is slightly different from non-storyboard project.

@@ -6,17 +6,14 @@ comments: true
 categories: 
 ---
 
-None
+*NSString*>
 
 
-None
+*NSComparisonResult*> - returned from ```NSString:compare:str``` selector
 
 
-None
+*NSMutableString*>
 
 
-None
-
-
-None
+*NSScanner*>
 

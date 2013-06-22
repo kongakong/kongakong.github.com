@@ -6,9 +6,6 @@ comments: true
 categories: c++ Effective C++
 ---
 
-None
-
-
 Layering is known as composition, containment, and embedding.
 
 
