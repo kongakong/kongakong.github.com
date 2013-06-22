@@ -9,6 +9,5 @@ categories:
 Finally downloaded the installer for swi-prolog.
 
 
-To load up the dataset, we need to use the ```
-consult(
+To load up the dataset, we need to use the ``consult(
 

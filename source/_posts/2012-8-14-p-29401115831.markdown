@@ -1,18 +1,12 @@
 ---
 layout: post
-title: "
-Output from ```
-brew install python3
-```. Need to check why symlink step failed
-"
+title: "Output from ``brew install python3``. Need to check why symlink step failed"
 date: 2012-08-14 19:50
 comments: true
 categories: 
 ---
 
-Output from ```
-brew install python3
-```. Need to check why symlink step failed
+Output from ``brew install python3``. Need to check why symlink step failed
 
 [http://sqlite.org/sqlite-autoconf-3071300.tar.gz](http://sqlite.org/sqlite-autoconf-3071300.tar.gz)
 

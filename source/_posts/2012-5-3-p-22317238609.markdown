@@ -1,10 +1,6 @@
 ---
 layout: post
-title: "
-The pip cannot install scipy properly. 
-
-
-"
+title: "The pip cannot install scipy properly."
 date: 2012-05-03 22:21
 comments: true
 categories: 

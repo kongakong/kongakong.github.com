@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Trying to build erlang on scientific linux. 
-"
+title: "Trying to build erlang on scientific linux."
 date: 2011-08-30 22:43
 comments: true
 categories: linux erlang

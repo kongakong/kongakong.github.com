@@ -9,7 +9,5 @@ categories:
 Got this during build:
 
 
-```
-Library not found for -lCorePlot-CocoaTouch
-```
+``Library not found for -lCorePlot-CocoaTouch``
 

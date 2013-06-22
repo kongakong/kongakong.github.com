@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code
-"
+title: "Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code"
 date: 2012-10-14 19:30
 comments: true
 categories: scala scalaIDE

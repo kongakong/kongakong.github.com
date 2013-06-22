@@ -6,9 +6,7 @@ comments: true
 categories: python3 distribute
 ---
 
-Had  a bunch of byte-compiling error when running ```
-python3 distribute_setup.py
-```
+Had  a bunch of byte-compiling error when running ``python3 distribute_setup.py``
 
 
 

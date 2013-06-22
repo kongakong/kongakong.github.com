@@ -17,7 +17,5 @@ More info in
 [http://superuser.com/questions/231854/default-editor-for-files-without-file-name-extension-in-mac-os-x](SuperUser)
 
 
-Before Ctrl-I, I actually tried to ```
-open ~/Library/Preferences/com.apple.LaunchServices.plist
-```. It opens up XCode4 which is actually not an ideal tool to edit a plist.
+Before Ctrl-I, I actually tried to ``open ~/Library/Preferences/com.apple.LaunchServices.plist``. It opens up XCode4 which is actually not an ideal tool to edit a plist.
 

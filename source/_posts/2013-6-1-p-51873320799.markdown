@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-erlang mode in emacs is very handy.
-"
+title: "erlang mode in emacs is very handy."
 date: 2013-06-01 20:30
 comments: true
 categories: erlang

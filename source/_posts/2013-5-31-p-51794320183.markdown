@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-When I start up emacs in shell, I got this error message:
-"
+title: "When I start up emacs in shell, I got this error message:"
 date: 2013-05-31 20:00
 comments: true
 categories: Emacs osx

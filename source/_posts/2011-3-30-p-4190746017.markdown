@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-I was having UIWebView problem because I did not set my custom controller as the root view controller.
-"
+title: "I was having UIWebView problem because I did not set my custom controller as the root view controller."
 date: 2011-03-30 07:34
 comments: true
 categories: 

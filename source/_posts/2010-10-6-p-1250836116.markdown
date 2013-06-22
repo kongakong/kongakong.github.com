@@ -9,9 +9,7 @@ categories:
 Try to build it, but hit this error:
 
 
-```
-The system is out of resources.
+``The system is out of resources.
 Consult the following stack trace for details.
-java.lang.OutOfMemoryError: Java heap space
-```
+java.lang.OutOfMemoryError: Java heap space``
 

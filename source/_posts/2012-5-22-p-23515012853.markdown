@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-OSX cflags 
-"
+title: "OSX cflags"
 date: 2012-05-22 11:01
 comments: true
 categories: python brew
@@ -11,13 +9,11 @@ categories: python brew
 OSX cflags 
 
 
-```
-
+``
 
 
 vs brew cflags 
 
 
-```
-
+``
 

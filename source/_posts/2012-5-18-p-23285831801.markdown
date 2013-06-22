@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Trying out iTerm2. Does not work well with vi by default (up/down arrow keys are not recognised)
-"
+title: "Trying out iTerm2. Does not work well with vi by default (up/down arrow keys are not recognised)"
 date: 2012-05-18 21:31
 comments: true
 categories: osx

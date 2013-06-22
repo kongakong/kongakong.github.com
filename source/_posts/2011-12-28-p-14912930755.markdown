@@ -6,14 +6,8 @@ comments: true
 categories: osx port brew
 ---
 
-Remove ```
- port
-``` for now to try out ```
-brew
-```
+Remove `` port`` for now to try out ``brew``
 
 
-Personally ```
-port
-``` is simple enough. Let see if brew can exceed the bar set by MacPort
+Personally ``port`` is simple enough. Let see if brew can exceed the bar set by MacPort
 

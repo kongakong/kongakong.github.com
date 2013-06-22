@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-_ufsdump_ - incremental file system dump
-"
+title: "_ufsdump_ - incremental file system dump"
 date: 2011-06-29 23:15
 comments: true
 categories: solaris

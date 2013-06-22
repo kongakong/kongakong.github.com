@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-I am doing
-"
+title: "I am doing"
 date: 2011-02-13 11:52
 comments: true
 categories: 
@@ -14,9 +12,5 @@ I am doing
 And I got this warning
 
 
-Change ```
-%s
-``` to ```
-%@
-``` get rid of the warning
+Change ``%s`` to ``%@`` get rid of the warning
 

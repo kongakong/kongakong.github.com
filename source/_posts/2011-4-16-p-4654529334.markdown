@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-*ivar*, because it is ‘instance variable’
-"
+title: "*ivar*, because it is ‘instance variable’"
 date: 2011-04-16 17:42
 comments: true
 categories: objective-c

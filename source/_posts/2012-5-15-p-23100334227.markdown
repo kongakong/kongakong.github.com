@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-There is no _insertAfter_ in JavaScript
-"
+title: "There is no _insertAfter_ in JavaScript"
 date: 2012-05-15 22:20
 comments: true
 categories: javascript

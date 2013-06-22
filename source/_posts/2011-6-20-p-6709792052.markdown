@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Trying to compile _python 3.2_ on _winxp_ using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work. 
-"
+title: "Trying to compile _python 3.2_ on _winxp_ using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work."
 date: 2011-06-20 12:32
 comments: true
 categories: visual studio python

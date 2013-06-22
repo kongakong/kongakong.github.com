@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Modal View screws up the SplitView after dismiss.
-"
+title: "Modal View screws up the SplitView after dismiss."
 date: 2011-01-13 06:59
 comments: true
 categories: 
@@ -14,18 +12,10 @@ Modal View screws up the SplitView after dismiss.
 Tried
 
 
-```
-if ([self modalViewController]) {
-```
-```
-return;
-```
-```
-}
-```
+``if ([self modalViewController]) {``
+``return;``
+``}``
 
 
-in ```
-willHideSplitView
-``` but it does not work
+in ``willHideSplitView`` but it does not work
 

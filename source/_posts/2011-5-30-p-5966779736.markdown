@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-The _explicit_ keyword in C++ is used to declare explicit constructors. Explicit constructors are constructors that cannot take part in an implicit conversion
-"
+title: "The _explicit_ keyword in C++ is used to declare explicit constructors. Explicit constructors are constructors that cannot take part in an implicit conversion"
 date: 2011-05-30 01:35
 comments: true
 categories: c++

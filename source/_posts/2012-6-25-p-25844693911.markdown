@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-In XCode, Option + Command + ‘Click on a symbol’ will open the definition in a second window
-"
+title: "In XCode, Option + Command + ‘Click on a symbol’ will open the definition in a second window"
 date: 2012-06-25 19:25
 comments: true
 categories: xcode

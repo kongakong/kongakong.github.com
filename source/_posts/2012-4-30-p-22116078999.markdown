@@ -6,9 +6,7 @@ comments: true
 categories: 
 ---
 
-Install python 2.7 using brew. Brew also downloaded and installed ```
-distribute
-```
+Install python 2.7 using brew. Brew also downloaded and installed ``distribute``
 
 ```
 

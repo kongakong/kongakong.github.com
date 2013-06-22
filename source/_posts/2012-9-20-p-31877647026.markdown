@@ -18,9 +18,7 @@ The bid and ask of the corresponding item are both zero. We expect to see zero i
 So what happened?
 
 
-The original lambda, f, rely on the side effect of short-circuit behaviour of  and/or operator to return the mid price (if there is data) or None (if both are ```
-None
-```)
+The original lambda, f, rely on the side effect of short-circuit behaviour of  and/or operator to return the mid price (if there is data) or None (if both are ``None``)
 
 
 But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the ‘or’ part of the expression.

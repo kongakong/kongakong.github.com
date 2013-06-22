@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-pip cannot find the pyML package
-"
+title: "pip cannot find the pyML package"
 date: 2012-05-20 15:54
 comments: true
 categories: pyython pyML

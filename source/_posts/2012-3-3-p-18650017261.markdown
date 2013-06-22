@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Do custom initialisation in ViewDidLoad of a ViewController
-"
+title: "Do custom initialisation in ViewDidLoad of a ViewController"
 date: 2012-03-03 16:59
 comments: true
 categories: objective-c

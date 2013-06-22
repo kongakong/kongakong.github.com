@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Getting this:  “Couldn’t register com.abc.MyApp with the bootstrap server. Error: unknown error code.” when trying to run a unit test in AppCode.
-"
+title: "Getting this:  “Couldn’t register com.abc.MyApp with the bootstrap server. Error: unknown error code.” when trying to run a unit test in AppCode."
 date: 2012-03-17 12:38
 comments: true
 categories: objective-c xcode4.3.1 appcode

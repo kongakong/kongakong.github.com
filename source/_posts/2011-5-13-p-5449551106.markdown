@@ -1,9 +1,6 @@
 ---
 layout: post
-title: "
-
-Taken from 
-"
+title: "Taken from"
 date: 2011-05-13 23:38
 comments: true
 categories: 
@@ -16,11 +13,7 @@ Taken from
 
 
 
-```
- math
-``` module contains a ```
-sqrt
-``` function, but 
+`` math`` module contains a ``sqrt`` function, but 
 canât pass it as an argument.
 
 

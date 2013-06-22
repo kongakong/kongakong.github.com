@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-_initialize_ is a class method which will be called before any other method is called on a class. Alternatively use a function with ___attribute__ ((constructor))_
-"
+title: "_initialize_ is a class method which will be called before any other method is called on a class. Alternatively use a function with ___attribute__ ((constructor))_"
 date: 2011-05-29 07:39
 comments: true
 categories: objective-c

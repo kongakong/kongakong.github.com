@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-On unix like systems, _ActiveMQ_ is running on port 61616
-"
+title: "On unix like systems, _ActiveMQ_ is running on port 61616"
 date: 2011-06-18 01:31
 comments: true
 categories: activemq

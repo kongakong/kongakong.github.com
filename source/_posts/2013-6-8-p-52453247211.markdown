@@ -12,7 +12,5 @@ When I create a new tab in Terminal, the new bash shell does not automatically e
 I added this to my .bash_profile to fix the problem:
 
 
-```
--s
-``` here means if the file exists and not of size 0
+``-s`` here means if the file exists and not of size 0
 

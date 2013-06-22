@@ -9,7 +9,5 @@ categories:
 Create NSIndexPath with this Idiom
 
 
-```
-[NSIndexPath indexPathForRow: inSection:]
-```
+``[NSIndexPath indexPathForRow: inSection:]``
 

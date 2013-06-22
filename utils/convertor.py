@@ -32,8 +32,8 @@ def preprocess_file(f):
     fbuff = open(f).read()
     fbuff = fbuff.replace("<pre>", "```\n")
     fbuff = fbuff.replace("</pre>", "\n```")
-    fbuff = fbuff.replace("<code>", "```\n")
-    fbuff = fbuff.replace("</code>", "\n```")
+    fbuff = fbuff.replace("<code>", "``")
+    fbuff = fbuff.replace("</code>", "``")
     fbuff = fbuff.replace("Today I Learn", "TIL")
     fbuff = fbuff.replace("til", "TIL")
     fbuff = fbuff.replace("<strong>", "*")
@@ -89,7 +89,12 @@ def parse_file(fn):
 
     # fix up title
     if not meta['title']:
-        meta['title'] = lines[0] # take the first line
+        title = lines[0]
+        if "\n" in title:
+            title = [l.strip() for l in title.split("\n") if l.strip()][0]
+        if "," in title[-1]:
+            title = title[:-1] + "..."
+        meta['title'] = title # take the first line
      
     ofile = open(os.path.join(dest_dir, ofilename), "w")
     try:

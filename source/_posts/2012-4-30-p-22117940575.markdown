@@ -18,9 +18,7 @@ $ ls -l /usr/local/bin/easy_install
 
 ```
 
-The shebang of ```
-easy_install
-``` is sTILl pointing to a python 2.5 installation
+The shebang of ``easy_install`` is sTILl pointing to a python 2.5 installation
 
 
 

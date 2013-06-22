@@ -1,18 +1,12 @@
 ---
 layout: post
-title: "
-Trying out ```
- ALAssetsLibrary
-```
-"
+title: "Trying out `` ALAssetsLibrary``"
 date: 2012-05-24 20:11
 comments: true
 categories: 
 ---
 
-Trying out ```
- ALAssetsLibrary
-```
+Trying out `` ALAssetsLibrary``
 
 
 This is how to import the header file:

@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Emacs-style key bindings are built into Cocoa
-"
+title: "Emacs-style key bindings are built into Cocoa"
 date: 2012-06-26 19:32
 comments: true
 categories: cocoa TIL

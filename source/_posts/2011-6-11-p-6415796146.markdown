@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-To install ssh service to a Ubuntu server
-"
+title: "To install ssh service to a Ubuntu server"
 date: 2011-06-11 21:57
 comments: true
 categories: ubuntu linux sshd
@@ -11,6 +9,5 @@ categories: ubuntu linux sshd
 To install ssh service to a Ubuntu server
 
 
-```
-
+``
 

@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Way to make a widget auto-resize to the size container view
-"
+title: "Way to make a widget auto-resize to the size container view"
 date: 2011-03-20 22:21
 comments: true
 categories: 
@@ -11,7 +9,5 @@ categories:
 Way to make a widget auto-resize to the size container view
 
 
-```
-view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-```
+``view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;``
 

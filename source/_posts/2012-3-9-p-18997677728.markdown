@@ -1,10 +1,6 @@
 ---
 layout: post
-title: "
-
-I have these buttons that for some reason will send message to two ‘slots’: one to the controller and the other to the responders.
-
-"
+title: "I have these buttons that for some reason will send message to two ‘slots’: one to the controller and the other to the responders."
 date: 2012-03-09 22:00
 comments: true
 categories: objective-c

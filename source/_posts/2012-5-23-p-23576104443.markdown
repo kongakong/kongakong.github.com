@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-When creating the new project in Xcode, the ‘Class prefix’ should be of reasonable length (say 2 to 6 characters). 
-"
+title: "When creating the new project in Xcode, the ‘Class prefix’ should be of reasonable length (say 2 to 6 characters)."
 date: 2012-05-23 10:12
 comments: true
 categories: objective-c tip xcode

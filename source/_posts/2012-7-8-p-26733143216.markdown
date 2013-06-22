@@ -1,23 +1,13 @@
 ---
 layout: post
-title: "
-Got this when running ```
-brew install python3
-```
-"
+title: "Got this when running ``brew install python3``"
 date: 2012-07-08 11:44
 comments: true
 categories: 
 ---
 
-Got this when running ```
-brew install python3
-```
+Got this when running ``brew install python3``
 
 
-Running ```
-brew update
-``` and ```
-brew doctor
-```
+Running ``brew update`` and ``brew doctor``
 

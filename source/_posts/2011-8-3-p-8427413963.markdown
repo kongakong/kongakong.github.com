@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-XCode 4.1 does not play too well with ‘Full screen’ mode. If I connect an iPhone to the MBP, the Xcode will show a dialog box to ask me if I want to capture the latest iOS. The dialog box appears in the Organiser windows, but it is totally inaccessible. (You can see between the gap of two desktop when doing three-fingers swipe)
-"
+title: "XCode 4.1 does not play too well with ‘Full screen’ mode. If I connect an iPhone to the MBP, the Xcode will show a dialog box to ask me if I want to capture the latest iOS. The dialog box appears in the Organiser windows, but it is totally inaccessible. (You can see between the gap of two desktop when doing three-fingers swipe)"
 date: 2011-08-03 23:49
 comments: true
 categories: code lion

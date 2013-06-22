@@ -6,9 +6,7 @@ comments: true
 categories: osx scipy
 ---
 
-```
-./bin/pip install scipy
-``` failed. It is a dependency of pybrain
+``./bin/pip install scipy`` failed. It is a dependency of pybrain
 
 
 

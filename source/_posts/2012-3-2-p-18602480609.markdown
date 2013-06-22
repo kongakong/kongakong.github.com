@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-There is no such thing as NSFloat
-"
+title: "There is no such thing as NSFloat"
 date: 2012-03-02 22:30
 comments: true
 categories: objective-c

@@ -22,9 +22,7 @@ But being a lazy bastard I would rather be able to find out this bit of informat
 
 
 
-Then I discover this cool feature of _VirtualBox_: ```
-guestcontrol
-```
+Then I discover this cool feature of _VirtualBox_: ``guestcontrol``
 
 
 

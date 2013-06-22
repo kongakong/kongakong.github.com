@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-*anchor point*, the center point of a CALayer widget (i.e. (0.5, 0.5) )
-"
+title: "*anchor point*, the center point of a CALayer widget (i.e. (0.5, 0.5) )"
 date: 2011-04-16 21:49
 comments: true
 categories: 

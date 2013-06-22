@@ -9,10 +9,8 @@ categories:
 As a not-so-frequent user of psql, I really need a reminder on the commonly used commands
 
 
-Use ```
-\connect 
+Use ``\connect 
 
 
-The equivalent in MSSQL or Sybase will be ```
-use 
+The equivalent in MSSQL or Sybase will be ``use 
 

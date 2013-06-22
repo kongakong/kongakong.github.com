@@ -1,51 +1,6 @@
 ---
 layout: post
-title: "
-Seems like I have polluted my python installation a little bit. There are two python2.6
-
-```
-
-
-mbp002:cpython $ md5sum /usr/bin/python
-e3a892c8511d5086b485aeb7e9700672  /usr/bin/python
-mbp002:cpython $ md5sum /opt/local/bin/python
-defb6eacf7bf552bef7c4033e685ec13  /opt/local/bin/python
-
-
-
-mbp002:cpython $ otool -L /usr/bin/python
-/usr/bin/python:
-	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 550.29.0)
-	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
-mbp002:cpython $ otool -L /opt/local/bin/python
-/opt/local/bin/python:
-	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
-
-
-
-```
-
-```
-/usr/bin/python
-``` comes from original osx distribution. The framework version is probably built by me just for the sake of building python.
-
-```
-
-
-mbp002:cpython $ ls -l /opt/local/bin/python
-lrwxr-xr-x  1 root  admin  18 24 May  2010 /opt/local/bin/python -> /usr/bin/python2.6
-mbp002:cpython $ ls -l /usr/bin/python2.6
-lrwxr-xr-x  1 root  wheel  75  5 May  2010 /usr/bin/python2.6 -> ../../System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6
-
-
-
-```
-
-
-I will probably take out the symlink of ```
-/opt/local/bin/python 
-``` to see if it fixes my python build problem.
-"
+title: "Seems like I have polluted my python installation a little bit. There are two python2.6"
 date: 2011-06-07 05:06
 comments: true
 categories: osx python otool
@@ -75,9 +30,7 @@ mbp002:cpython $ otool -L /opt/local/bin/python
 
 ```
 
-```
-/usr/bin/python
-``` comes from original osx distribution. The framework version is probably built by me just for the sake of building python.
+``/usr/bin/python`` comes from original osx distribution. The framework version is probably built by me just for the sake of building python.
 
 ```
 
@@ -92,7 +45,5 @@ lrwxr-xr-x  1 root  wheel  75  5 May  2010 /usr/bin/python2.6 -> ../../System/Li
 ```
 
 
-I will probably take out the symlink of ```
-/opt/local/bin/python 
-``` to see if it fixes my python build problem.
+I will probably take out the symlink of ``/opt/local/bin/python `` to see if it fixes my python build problem.
 

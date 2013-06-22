@@ -1,21 +1,13 @@
 ---
 layout: post
-title: "
-use ```
-xcode-select
-``` to select which XCode to run e.g.
-"
+title: "use ``xcode-select`` to select which XCode to run e.g."
 date: 2012-06-29 20:18
 comments: true
 categories: 
 ---
 
-use ```
-xcode-select
-``` to select which XCode to run e.g.
+use ``xcode-select`` to select which XCode to run e.g.
 
 
-```
-xcode-select -switch /Applications/XCode.Version.app
-```
+``xcode-select -switch /Applications/XCode.Version.app``
 

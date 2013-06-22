@@ -6,11 +6,7 @@ comments: true
 categories: ios coredata
 ---
 
-I did not know that after implemented a ```
-NSFetchResultController
-```, I sTILl need to programmatically fetch the data and then call the table view to ```
-reloadData
-```
+I did not know that after implemented a ``NSFetchResultController``, I sTILl need to programmatically fetch the data and then call the table view to ``reloadData``
 
 
 An example:

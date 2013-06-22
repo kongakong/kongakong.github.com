@@ -6,15 +6,11 @@ comments: true
 categories: c++ Effective C++
 ---
 
-It touches on the topic of ```
-downcasting
-``` (cast a derived class to its base class)
+It touches on the topic of ``downcasting`` (cast a derived class to its base class)
 
 
 First of all, downcasting itself is usually unnecessary in most situation where the virtual functions are suffice. 
 
 
-If it must be done, use ```
-dynamic_cast
-```. It will return null if cast is unsuccessful
+If it must be done, use ``dynamic_cast``. It will return null if cast is unsuccessful
 

@@ -6,11 +6,7 @@ comments: true
 categories: 
 ---
 
-For my setup (```
-python
-``` from ```
-brew
-```), I should run this to install virtualenv
+For my setup (``python`` from ``brew``), I should run this to install virtualenv
 
 ```
 

@@ -1,23 +1,15 @@
 ---
 layout: post
-title: "
-```
-[[webView.subviews objectAtIndex:0] setScrollEnabled:NO];
-```
-"
+title: "``[[webView.subviews objectAtIndex:0] setScrollEnabled:NO];``"
 date: 2011-03-20 10:35
 comments: true
 categories: 
 ---
 
-```
-[[webView.subviews objectAtIndex:0] setScrollEnabled:NO];
-```
+``[[webView.subviews objectAtIndex:0] setScrollEnabled:NO];``
 
 
-```
-[[webView.subviews objectAtIndex:0] setBounces:NO];
-```
+``[[webView.subviews objectAtIndex:0] setBounces:NO];``
 
 
 So, a UIWebView contains a UIScrollView at index 0

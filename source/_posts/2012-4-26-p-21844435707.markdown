@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-I think I finally understand what the problem is. 
-"
+title: "I think I finally understand what the problem is."
 date: 2012-04-26 22:02
 comments: true
 categories: xcode osx gcc

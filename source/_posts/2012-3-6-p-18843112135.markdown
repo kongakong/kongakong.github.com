@@ -1,17 +1,6 @@
 ---
 layout: post
-title: "
-Was getting ‘class has no selector alloc’ method error when I wrote 
-
-```
-
-MyClass* obj;
-obj = [[MyClass alloc] init];
-
-```
-
-It is because I did not make MyClass a subclass of NSObject
-"
+title: "Was getting ‘class has no selector alloc’ method error when I wrote"
 date: 2012-03-06 22:00
 comments: true
 categories: objective-c

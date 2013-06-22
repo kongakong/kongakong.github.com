@@ -1,24 +1,12 @@
 ---
 layout: post
-title: "
-Trying to ```
-pip install numpy
-``` on ubuntu, and got this:
-
-```
-
-SystemError: Cannot compile 'Python.h'. Perhaps you need to install python-dev|python-devel.
-
-```
-"
+title: "Trying to ``pip install numpy`` on ubuntu, and got this:"
 date: 2012-05-02 21:22
 comments: true
 categories: ubuntu numpy pip
 ---
 
-Trying to ```
-pip install numpy
-``` on ubuntu, and got this:
+Trying to ``pip install numpy`` on ubuntu, and got this:
 
 ```
 

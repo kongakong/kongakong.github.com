@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Did a ‘git commit .’ but did not realised the commit has failed.
-"
+title: "Did a ‘git commit .’ but did not realised the commit has failed."
 date: 2012-06-02 03:26
 comments: true
 categories: xcode4 git

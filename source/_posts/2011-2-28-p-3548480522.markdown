@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Trying out the core-plot example, then I hit this error:
-"
+title: "Trying out the core-plot example, then I hit this error:"
 date: 2011-02-28 06:12
 comments: true
 categories: 
@@ -11,7 +9,5 @@ categories:
 Trying out the core-plot example, then I hit this error:
 
 
-```
-error: There is no SDK with the name or path '~/Documents/Cocoa/core-plot.trunk/framework/macosx10.5'
-```
+``error: There is no SDK with the name or path '~/Documents/Cocoa/core-plot.trunk/framework/macosx10.5'``
 

@@ -1,16 +1,10 @@
 ---
 layout: post
-title: "
-*pkgadd* is in ```
-/usr/sbin
-``` on the Solaris platform
-"
+title: "*pkgadd* is in ``/usr/sbin`` on the Solaris platform"
 date: 2010-11-17 00:23
 comments: true
 categories: 
 ---
 
-*pkgadd* is in ```
-/usr/sbin
-``` on the Solaris platform
+*pkgadd* is in ``/usr/sbin`` on the Solaris platform
 

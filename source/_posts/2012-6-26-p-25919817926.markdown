@@ -6,11 +6,7 @@ comments: true
 categories: xcode
 ---
 
-Had ```
-"Error: No developer directory found at /Developer. Run /usr/bin/xcode-select to update the developer directory path"
-``` when I ran ```
-xcodebuild
-```.
+Had ``"Error: No developer directory found at /Developer. Run /usr/bin/xcode-select to update the developer directory path"`` when I ran ``xcodebuild``.
 
 
 Most likely an issue left from an old xcode installation (pre 4.2)
@@ -19,7 +15,5 @@ Most likely an issue left from an old xcode installation (pre 4.2)
 The following command fix the problem
 
 
-```
-sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-```
+``sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer``
 

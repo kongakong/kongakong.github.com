@@ -9,17 +9,13 @@ categories: c++ Effective C++
 There are three technique to make a header file more self-contained:
 
 
-1. ```
-Avoid using objects when object references and pointers will do
-```
+1. ``Avoid using objects when object references and pointers will do``
 
 
 This will avoid the need of including a header file
 
 
-2. ```
-Don't _#include_ header files in your header files unless your headers won't compile without them
-``` 
+2. ``Don't _#include_ header files in your header files unless your headers won't compile without them`` 
 
 
 Use forward declaration instead

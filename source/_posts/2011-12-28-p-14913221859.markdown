@@ -6,9 +6,7 @@ comments: true
 categories: python hg mercurial
 ---
 
-```
-
-```
+````
 
 
 _$ hg pull_

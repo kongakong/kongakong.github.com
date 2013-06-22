@@ -6,7 +6,5 @@ comments: true
 categories: linux unix
 ---
 
-Every now and then I sTILl discover some unix command that I did not know before but is very useful. For example, ```
-comm
-```.
+Every now and then I sTILl discover some unix command that I did not know before but is very useful. For example, ``comm``.
 

@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Annoying. Cannot get the subview resized automatically, despite doing this:
-"
+title: "Annoying. Cannot get the subview resized automatically, despite doing this:"
 date: 2012-06-10 18:38
 comments: true
 categories: xcode4 ios

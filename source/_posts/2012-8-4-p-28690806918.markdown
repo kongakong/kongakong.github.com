@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Trying to retrofit coredata into an iOS Tabbed application. Kind of painful.
-"
+title: "Trying to retrofit coredata into an iOS Tabbed application. Kind of painful."
 date: 2012-08-04 19:22
 comments: true
 categories: ios coredata
@@ -17,7 +15,5 @@ Finally get it done by these steps:
 Then I have spent a bit of time to solve the problem I have encountered before: 
 
 
-Now I am woking on using static style table cells in a non-UITableViewController (Error:  ```
-Static table views are only valid when embedded in UITableViewController instances
-```). Gonna be bit tough to solve
+Now I am woking on using static style table cells in a non-UITableViewController (Error:  ``Static table views are only valid when embedded in UITableViewController instances``). Gonna be bit tough to solve
 

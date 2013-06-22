@@ -6,9 +6,7 @@ comments: true
 categories: ios coredata
 ---
 
-Adding ```
-NSFetchedResultsControllerDelegate
-``` to the View Controller to add core data support.
+Adding ``NSFetchedResultsControllerDelegate`` to the View Controller to add core data support.
 
 
 The amount of boiler plate code is incredible…

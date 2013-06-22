@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original
-"
+title: "Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original"
 date: 2011-05-29 21:06
 comments: true
 categories: c++ self-study

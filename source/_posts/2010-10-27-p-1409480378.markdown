@@ -9,9 +9,7 @@ categories:
 Run
 
 
-```
-text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])
-```
+``text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])``
 
 
 but it says,

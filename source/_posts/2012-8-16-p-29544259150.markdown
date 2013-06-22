@@ -9,10 +9,8 @@ categories: ios uitableview
 To enable the swipe to delete feature, one must implement this API:
 
 
-```
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-                                            forRowAtIndexPath:(NSIndexPath *)indexPath
-```
+``- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+                                            forRowAtIndexPath:(NSIndexPath *)indexPath``
 
 
 I can enable this feature, but I got this exception from this function

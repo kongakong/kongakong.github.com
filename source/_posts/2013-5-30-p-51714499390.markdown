@@ -6,7 +6,5 @@ comments: true
 categories: osx CocoaPods
 ---
 
-The podfile is for a osx 10.8 project. Here is the output from ```
-podfile install
-```
+The podfile is for a osx 10.8 project. Here is the output from ``podfile install``
 

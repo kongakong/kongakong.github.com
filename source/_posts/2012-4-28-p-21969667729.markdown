@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Follow-up on a previous 
-"
+title: "Follow-up on a previous"
 date: 2012-04-28 20:22
 comments: true
 categories: python setuptools distribute
@@ -16,16 +14,8 @@ It turns out on
 [http://packages.python.org/distribute/](Distribute’s site)
 
 
-```
-setuptools
-``` -> ```
-distribute
-```
+``setuptools`` -> ``distribute``
 
 
-```
-easy_install
-``` -> ```
-pip
-```
+``easy_install`` -> ``pip``
 

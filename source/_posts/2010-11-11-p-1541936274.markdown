@@ -24,12 +24,8 @@ categories:
 NSObject supports
 
 
-```
-- (void) encodeWithCoder:(NSCoder *) encoder;
-```
+``- (void) encodeWithCoder:(NSCoder *) encoder;``
 
 
-```
-- (id) initWithCoder:(NSCoder *) decoder;
-```
+``- (id) initWithCoder:(NSCoder *) decoder;``
 

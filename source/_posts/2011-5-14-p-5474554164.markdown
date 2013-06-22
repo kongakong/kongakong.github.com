@@ -1,16 +1,10 @@
 ---
 layout: post
-title: "
-Removing ```
-*.xcodeproj/project.xcworkspace/
-``` can reset the window/workspace settings in xcode 4
-"
+title: "Removing ``*.xcodeproj/project.xcworkspace/`` can reset the window/workspace settings in xcode 4"
 date: 2011-05-14 17:54
 comments: true
 categories: xcode4
 ---
 
-Removing ```
-*.xcodeproj/project.xcworkspace/
-``` can reset the window/workspace settings in xcode 4
+Removing ``*.xcodeproj/project.xcworkspace/`` can reset the window/workspace settings in xcode 4
 

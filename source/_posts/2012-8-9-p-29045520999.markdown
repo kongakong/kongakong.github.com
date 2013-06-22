@@ -6,7 +6,5 @@ comments: true
 categories: ios xocde4
 ---
 
-```
-UIViewController::setMoviePlayerController:
-``` is an undocumented API, yet it is used in one of the Apple sample project.
+``UIViewController::setMoviePlayerController:`` is an undocumented API, yet it is used in one of the Apple sample project.
 

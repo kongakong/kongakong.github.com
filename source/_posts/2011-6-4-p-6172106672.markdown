@@ -9,11 +9,7 @@ categories: c++ Effective C++ self-study
 _Example: _
 
 
-```
-operator*
-``` and ```
-operator+
-``` should return a new object instead of a reference. The latter approach will introduce problem such as memory leak
+``operator*`` and ``operator+`` should return a new object instead of a reference. The latter approach will introduce problem such as memory leak
 
 
 From 

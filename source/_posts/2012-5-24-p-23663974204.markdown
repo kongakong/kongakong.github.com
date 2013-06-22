@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Installing Ubuntu 12.04 server. 
-"
+title: "Installing Ubuntu 12.04 server."
 date: 2012-05-24 19:03
 comments: true
 categories: ubuntu
@@ -17,9 +15,5 @@ Used these options: encrypted home directory and LVM
 The installation is certainly more complicated than the desktop edition in the sense that it will expect the user to be able to answer certain technical questions. 
 
 
-Therefore, after the machine was rebooted, I did a ```
-apt-get update
-``` then ```
-apt-get install 
-``` the packages that I want to play with. Old school.
+Therefore, after the machine was rebooted, I did a ``apt-get update`` then ``apt-get install `` the packages that I want to play with. Old school.
 
