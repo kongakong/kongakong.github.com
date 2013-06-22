@@ -3,11 +3,18 @@ layout: post
 title: "To find out where homebrew keeps the files of a formula"
 date: 2013-05-07 20:00
 comments: true
-categories: 
+categories: osx homebrew
 ---
 
 … Simply follow the link.
 
 
 e.g.
+
+```
+
+ls -l `which erl`
+lrwxr-xr-x  1 antkong  admin  29 29 Apr 23:49 /usr/local/bin/erl -&gt; ../Cellar/erlang/R16B/bin/erl
+
+```
 

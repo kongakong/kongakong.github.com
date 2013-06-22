@@ -8,3 +8,13 @@ categories: lisp
 
 The core of lisp is just 7 functions:
 
+{% codeblock %}
+(quote x)
+(atom x)
+(eq x y)
+(cons x y)
+(cond (x y) (w z) (t q))
+(car x)
+(cdr x)
+
+{% endcodeblock %}

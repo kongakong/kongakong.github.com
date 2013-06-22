@@ -3,10 +3,10 @@ layout: post
 title: "Erlang 'bang' Operator"
 date: 2010-11-09 13:29
 comments: true
-categories: 
+categories: erlang
 ---
 
-The basic operator for sending a message is !, pronounced âbang,â and itâs used in the form âDestination ! Messageâ.
+The basic operator for sending a message is !, pronounced _bang_,and it's used in the form ``Destination ! Message``.
 
 
 - from *Erlang and OTP in Action*

@@ -8,3 +8,6 @@ categories: erlang
 
 Tell you the location of library files
 
+```
+code:lib_dir(xmerl).
+```

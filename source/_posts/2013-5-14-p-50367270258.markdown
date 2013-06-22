@@ -8,8 +8,12 @@ categories: python requests
 
 Since I have started using python since version 2.4, I have a lot of old die-hard habit. For one, I write exception handler like this
 
+``except Exception, e:``
+
 
 instead  of
+
+``except Exception as e:``
 
 
 The later is of course a better and more flexible style.
@@ -29,15 +33,46 @@ Why it throws an exception *AttributeError: ‘SimpleCookie’ object has no att
 
 OK, let’s import DefaultCookiePolicy. Then I got hit by a *missing domain attribute* exception. “Do I need to use a lower level Cookie class to set the domain?”, I wonder. Try switching to Cookie and it throw this exception
 
+{% codeblock lang:python %}
+
+Traceback (most recent call last):
+    ...
+    c = Cookie()
+TypeError: __init__() takes at least 17 arguments (1 given) 
+{% endcodeblock %}
 
 At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.
 
+
+{% codeblock lang:python %}
+    import urllib2
+    from cookielib import Cookie, CookieJar, DefaultCookiePolicy  
+    from Cookie import SimpleCookie        
+
+    policy = DefaultCookiePolicy(rfc2965=True)        
+
+    c = SimpleCookie()
+    c['secretkey'] = auth_token
+    cj = CookieJar(policy)
+    cj.set_cookie(c)
+
+    req = urllib2.Request("%s/postdata" % self.server_url)
+    proxyHandler = urllib2.ProxyHandler( {} )
+    defaultErrorHandler = urllib2.HTTPDefaultErrorHandler()
+    cookieHandler = urllib2.HTTPCookieProcessor(cj)
+    opener = urllib2.build_opener( proxyHandler, defaultErrorHandler, cookieHandler )
+    opener.open(req, data, 10000)
+{% endcodeblock %}
 
 Instead of continuing banging my head against a wall, I recall reading about ‘requests’ module. Let give it a go.
 
 
 Like magic, it is all I need. 2 lines.
 
+{% codeblock lang:python %}
+     import requests
+     requests.post(url, data, cookie=cookie, headers=headers)
+{% endcodeblock %}
 
 It just works. Well done, requests!
 

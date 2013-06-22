@@ -3,7 +3,7 @@ layout: post
 title: "NSIndexPath Idiom"
 date: 2010-12-31 19:44
 comments: true
-categories: 
+categories: objective-c 
 ---
 
 Create NSIndexPath with this Idiom

@@ -6,13 +6,20 @@ comments: true
 categories: homebrew
 ---
 
+```
 $ brew update
        error: Your local changes to the following files would be overwritten by  merge:
         Library/Formula/erlang.rb
       Please, commit your changes or stash them before you can merge.
       Aborting
       Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master
+```
 
 
 *Solution*
 
+```
+$ cd `brew --prefix`
+$ cd Cellar/erlang/
+$ git reset --hard HEAD
+```

@@ -3,7 +3,7 @@ layout: post
 title: "TpLink ADSL2 Modem woe"
 date: 2010-11-25 00:38
 comments: true
-categories: 
+categories: adsl2
 ---
 
 Turns out the modems have issue with TPG, and the problem can only be fixed by refreshing the firmware. But when I discovered it, I have already spent hours to isolate the problem.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "When it is a NSString, do ``copy`` in @property"
+title: "Use ``copy`` in @properta of type NSStringy"
 date: 2010-12-31 20:35
 comments: true
 categories: 

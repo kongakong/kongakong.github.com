@@ -6,9 +6,7 @@ comments: true
 categories: Emacs erlang
 ---
 
-erlware-mode is deprecated (
-
-[https://github.com/erlware-deprecated/erlware-mode](https://github.com/erlware-deprecated/erlware-mode)
+erlware-mode is deprecated ( [https://github.com/erlware-deprecated/erlware-mode](https://github.com/erlware-deprecated/erlware-mode)
 
 
 Use erlang-mode in erlang distribution instead

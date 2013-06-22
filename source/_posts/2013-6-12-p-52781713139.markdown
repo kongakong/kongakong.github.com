@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "*Note to self*"
+title: "Note to self"
 date: 2013-06-12 20:40
 comments: true
 categories: 
@@ -11,3 +11,6 @@ categories:
 
 iPhone sync backup can be found in this location:
 
+```
+~Library/Application Support/MobileSync
+```

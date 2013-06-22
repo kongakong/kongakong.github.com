@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "*pkgadd* is in ``/usr/sbin`` on the Solaris platform"
+title: plgadd in solaris
 date: 2010-11-17 00:23
 comments: true
-categories: 
+categories: solaris
 ---
 
 *pkgadd* is in ``/usr/sbin`` on the Solaris platform

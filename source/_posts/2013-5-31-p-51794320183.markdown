@@ -8,6 +8,9 @@ categories: Emacs osx
 
 When I start up emacs in shell, I got this error message:
 
+```
+Error in init file: Symbol's function definition is void: global-linum-mode
+```
 
 But my config file works fine with Aquamacs.
 

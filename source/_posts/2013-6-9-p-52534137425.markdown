@@ -8,3 +8,8 @@ categories: osx osx 10.8.4
 
 Weird error message of ``say`` in 10.8.4
 
+
+```
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+```

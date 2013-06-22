@@ -3,11 +3,11 @@ layout: post
 title: "Statistical Arbitrage"
 date: 2010-11-04 14:04
 comments: true
-categories: 
+categories: finance
 ---
 
 A portfolio of Stocks is constructed by buying previous under-performing stocks, and short-selling previous outperforming stocks by the same dollar amount.
 
 
-This quantitative equity market-neutral strategy is simple enough to yield analytically tractable expressions for its statistical properties, and realistic enough to illustrate many of the practical challenges of this particular part of the ï¬nancial industry, which has come to be known as âstatistical arbitrageâ or âstatarbâ.
+This quantitative equity market-neutral strategy is simple enough to yield analytically tractable expressions for its statistical properties, and realistic enough to illustrate many of the practical challenges of this particular part of the financial industry, which has come to be known as 'statistical arbitrage' or 'statarba'
 

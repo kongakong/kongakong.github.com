@@ -10,6 +10,13 @@ Just feel that python is easier for XML manipulation.
 
 
 e.g.
+```
+from lxml import etree
+f = open("digg-science-rss1.xml")
+tree  = etree.parse(f)
+tree.xpath(expr) 
+```
+
 
 
 Very concise.
@@ -17,3 +24,16 @@ Very concise.
 
 whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.
 
+```
+...
+      #xmlText{
+          parents = [{item,16},{channel,2},{rss,1}],
+          pos = 3,language = [],value = "\n   ",type = text},
+      #xmlElement{
+          name = link,expanded_name = link,nsinfo = [],
+          namespace = 
+              #xmlNamespace{
+                  default = [],
+                  nodes =
+...
+```
