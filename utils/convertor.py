@@ -114,11 +114,45 @@ def parse_file(fn):
 def handle_node(article_node, lines, metas):
     article_class = article_node.attrib['class']
     if article_class == 'quote':
-        return handle_quote_node(article_node, lines, metas)
+        return handle_quote_node(article_node, lines, metas)    
+    elif article_class == 'video':
+        return handle_video_node(article_node, lines, metas)
     elif article_class == 'link':
         return handle_link_node(article_node, lines, metas)
     else: # default
         return handle_normal_node(article_node, lines, metas)
+
+def handle_video_node(article_node, lines, metas):
+    for node in article_node.findall("./*"):
+        if node.tag == 'h2':
+            if node.text:
+                metas['title'] = node.text.replace("\"", "'")
+            handle_video_node(node, lines, metas)          
+        if node.tag == 'p': 
+            p_class = node.attrib.get('class', None)
+            if p_class == 'tags' and node.text:
+                metas['tags'] = node.text.replace("#", "")      
+            else:
+                if node.text:
+                    lines.append("\n%s\n" % node.text)
+                handle_video_node(node, lines, metas)
+        if node.tag == 'a':
+            if node.attrib.get('class', '') == 'llink':
+                continue
+            if 'www.ahwkong.com' in node.attrib['href']:
+                continue
+            if 'Original' in node.text:
+                vlink = node.attrib['href']
+                idx = vlink.index("v=")                
+                txt = "{%% youtube %s %%}" % (vlink[idx+2:])
+                lines.append(txt)
+            else:
+                lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+        if node.tag == 'span':
+            node_class = node.attrib.get('class', None)
+            if node_class == 'date':
+                metas['pub_date'] = node.text           
+
 
 def handle_quote_node(article_node, lines, metas):
     for node in article_node.findall("./*"):

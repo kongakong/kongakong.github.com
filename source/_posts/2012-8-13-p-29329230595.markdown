@@ -8,5 +8,4 @@ categories: mit MIT 6.001 Structure and Interpretation
 
 The importance of the idea of ``map``: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.
 
-[http://www.youtube.com/watch?v=2QgZVYI3tDs&t=22m0s](Original)
-
+{% youtube 2QgZVYI3tDs&t=22m0s %}

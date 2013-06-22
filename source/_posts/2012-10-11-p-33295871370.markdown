@@ -8,5 +8,4 @@ categories: lecture
 
 Bovine Spongiform Encephalopathy (BSE) aka Mad Cow Disease
 
-[http://www.youtube.com/watch?v=HUcvsEP6L_E](Original)
-
+{% youtube HUcvsEP6L_E %}

@@ -8,5 +8,4 @@ categories: music
 
 Libertango performed by Ikuko Kawai
 
-[http://www.youtube.com/watch?v=fgFLBu-BgY4](Original)
-
+{% youtube fgFLBu-BgY4 %}
