@@ -9,5 +9,5 @@ categories:
 Just learn another feature of objective-c: optional methods.
 
 
-Use keyword *@optional*> for declaration.
+Use keyword *@optional* for declaration.
 

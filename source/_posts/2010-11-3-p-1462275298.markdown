@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "
-The solaris installation issue I had is related to the kind of VM I have chosen in VBox. I have used normal Solaris instead of 
+The solaris installation issue I had is related to the kind of VM I have chosen in VBox. I have used normal Solaris instead of *Solaris 64bit*
 "
 date: 2010-11-03 02:34
 comments: true
 categories: 
 ---
 
-The solaris installation issue I had is related to the kind of VM I have chosen in VBox. I have used normal Solaris instead of 
+The solaris installation issue I had is related to the kind of VM I have chosen in VBox. I have used normal Solaris instead of *Solaris 64bit*
 
 
 After changing the VM type, the installation is done reasonably fast.
@@ -17,5 +17,6 @@ After changing the VM type, the installation is done reasonably fast.
 To install the guest addition, run
 
 
-```pkgadd -d 
+```
+pkgadd -d 
 

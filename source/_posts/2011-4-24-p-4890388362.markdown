@@ -6,7 +6,9 @@ comments: true
 categories: 
 ---
 
-Ran ```easy_install mercurial``` which in turns installed the egg in /Library/Python/2.6/site-packages
+Ran ```
+easy_install mercurial
+``` which in turns installed the egg in /Library/Python/2.6/site-packages
 
 
 Reasonably easy

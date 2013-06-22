@@ -1,19 +1,6 @@
 ---
 layout: post
-title: "
-Getting this error message
-
-```
-
-
-distuTILs.errors.DistuTILsPlatformError: $MACOSX_DEPLOYMENT_TARGET mismatch: now "10.4" but "10.6" during configure
-error return code from hg
-
-
-```
-
-Conflict of different versions of python?
-"
+title: "$MACOSX_DEPLOYMENT_TARGET mismatch "
 date: 2011-06-07 04:37
 comments: true
 categories: 
@@ -24,8 +11,10 @@ Getting this error message
 ```
 
 
+
 distuTILs.errors.DistuTILsPlatformError: $MACOSX_DEPLOYMENT_TARGET mismatch: now "10.4" but "10.6" during configure
 error return code from hg
+
 
 
 ```

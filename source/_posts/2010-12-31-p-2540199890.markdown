@@ -1,8 +1,6 @@
 ---
 layout: post
-title: "
-Create NSIndexPath with this Idiom
-"
+title: "NSIndexPath Idiom"
 date: 2010-12-31 19:44
 comments: true
 categories: 
@@ -11,5 +9,7 @@ categories:
 Create NSIndexPath with this Idiom
 
 
-```[NSIndexPath indexPathForRow: inSection:]```
+```
+[NSIndexPath indexPathForRow: inSection:]
+```
 

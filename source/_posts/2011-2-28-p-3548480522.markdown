@@ -11,5 +11,7 @@ categories:
 Trying out the core-plot example, then I hit this error:
 
 
-```error: There is no SDK with the name or path '~/Documents/Cocoa/core-plot.trunk/framework/macosx10.5'```
+```
+error: There is no SDK with the name or path '~/Documents/Cocoa/core-plot.trunk/framework/macosx10.5'
+```
 

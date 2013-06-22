@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "
-To ```cd()``` in erlang on MS window, one must escape the path separator properly.
+To ```
+cd()
+``` in erlang on MS window, one must escape the path separator properly.
 "
 date: 2011-05-12 21:27
 comments: true
 categories: erlang
 ---
 
-To ```cd()``` in erlang on MS window, one must escape the path separator properly.
+To ```
+cd()
+``` in erlang on MS window, one must escape the path separator properly.
 

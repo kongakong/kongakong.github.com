@@ -9,8 +9,8 @@ categories: c++ Effective C++ self-study
 To disallow an operation on your object class, you can
 
 
-1) declare the function as *private*
+1) declare the function as _private_
 
 
-2) do not provide the implementation (if called, caused link error. Prevent being *friended*)
+2) do not provide the implementation (if called, caused link error. Prevent being _friended_)
 

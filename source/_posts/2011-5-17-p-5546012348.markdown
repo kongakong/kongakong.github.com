@@ -1,14 +1,18 @@
 ---
 layout: post
 title: "
-Trying to add SplitViewController to ```self.window``` as a RootViewController. STILl not working. 
+Trying to add SplitViewController to ```
+self.window
+``` as a RootViewController. STILl not working. 
 "
 date: 2011-05-17 01:45
 comments: true
 categories: 
 ---
 
-Trying to add SplitViewController to ```self.window``` as a RootViewController. STILl not working. 
+Trying to add SplitViewController to ```
+self.window
+``` as a RootViewController. STILl not working. 
 
 
 Need to work on the XIB magic

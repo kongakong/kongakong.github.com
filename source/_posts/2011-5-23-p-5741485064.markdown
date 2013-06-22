@@ -1,12 +1,20 @@
 ---
 layout: post
 title: "
-```CGAffineTransformMakeRotation``` vs ``` CGAffineTransformRotate```
+```
+CGAffineTransformMakeRotation
+``` vs ```
+ CGAffineTransformRotate
+```
 "
 date: 2011-05-23 05:46
 comments: true
 categories: 
 ---
 
-```CGAffineTransformMakeRotation``` vs ``` CGAffineTransformRotate```
+```
+CGAffineTransformMakeRotation
+``` vs ```
+ CGAffineTransformRotate
+```
 

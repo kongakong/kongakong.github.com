@@ -6,7 +6,9 @@ comments: true
 categories: 
 ---
 
-There is a lot to like about ```lldb```
+There is a lot to like about ```
+lldb
+```
 
 
 A lot of useful features such as ‘auto completion’ in the shell and integration with Python.

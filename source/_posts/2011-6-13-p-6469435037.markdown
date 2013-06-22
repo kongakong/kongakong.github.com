@@ -6,5 +6,7 @@ comments: true
 categories: c++ Effective C++
 ---
 
-A ```template``` should be used to generate a collection of classes when the type of the objects does not affect the behavior of the class’s functions.
+A ```
+template
+``` should be used to generate a collection of classes when the type of the objects does not affect the behavior of the class’s functions.
 

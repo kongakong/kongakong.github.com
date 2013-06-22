@@ -17,5 +17,7 @@ Finally get it done by these steps:
 Then I have spent a bit of time to solve the problem I have encountered before: 
 
 
-Now I am woking on using static style table cells in a non-UITableViewController (Error:  ```Static table views are only valid when embedded in UITableViewController instances```). Gonna be bit tough to solve
+Now I am woking on using static style table cells in a non-UITableViewController (Error:  ```
+Static table views are only valid when embedded in UITableViewController instances
+```). Gonna be bit tough to solve
 

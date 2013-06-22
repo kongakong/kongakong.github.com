@@ -9,5 +9,6 @@ categories: emacs
 Find out the current emac.d location
 
 
-```C-H v init-user-file 
+```
+C-H v init-user-file 
 

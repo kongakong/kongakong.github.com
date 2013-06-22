@@ -24,10 +24,10 @@ It usually works great… unTIL you need something more than basic.
 Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…
 
 
-Why it throws an exception *AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’*>?
+Why it throws an exception *AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’*?
 
 
-OK, let’s import DefaultCookiePolicy. Then I got hit by a *missing domain attribute*> exception. “Do I need to use a lower level Cookie class to set the domain?”, I wonder. Try switching to Cookie and it throw this exception
+OK, let’s import DefaultCookiePolicy. Then I got hit by a *missing domain attribute* exception. “Do I need to use a lower level Cookie class to set the domain?”, I wonder. Try switching to Cookie and it throw this exception
 
 
 At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.

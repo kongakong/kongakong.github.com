@@ -6,7 +6,9 @@ comments: true
 categories: python3 virtualenv
 ---
 
-```virtualenv``` is now a built-in module in python 3.3. The best documentation so far seems to be the 
+```
+virtualenv
+``` is now a built-in module in python 3.3. The best documentation so far seems to be the 
 
 [http://www.python.org/dev/peps/pep-0405/](PEP 405)
 

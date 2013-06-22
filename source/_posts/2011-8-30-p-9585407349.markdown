@@ -5,7 +5,9 @@ Last warning.
 
 ```
 
+
 wx             : wxWidgets not found, wx will NOT be usable
+
 ```
 
 Probably no existing rpm for this. 
@@ -13,6 +15,7 @@ Probably no existing rpm for this.
 These yum commands fixed most of the warnings
 
 ```
+
 yum install ncurses
 yum install ncurses-devel
 yum install java-1.6.0-openjdk
@@ -21,6 +24,7 @@ yum install openssl-devel
 yum install java-1.6.0-openjdk-devel
 yum install unixODBC
 yum install unixODBC-devel
+
 ```
 "
 date: 2011-08-30 23:00
@@ -32,7 +36,9 @@ Last warning.
 
 ```
 
+
 wx             : wxWidgets not found, wx will NOT be usable
+
 ```
 
 Probably no existing rpm for this. 
@@ -40,6 +46,7 @@ Probably no existing rpm for this.
 These yum commands fixed most of the warnings
 
 ```
+
 yum install ncurses
 yum install ncurses-devel
 yum install java-1.6.0-openjdk
@@ -48,5 +55,6 @@ yum install openssl-devel
 yum install java-1.6.0-openjdk-devel
 yum install unixODBC
 yum install unixODBC-devel
+
 ```
 

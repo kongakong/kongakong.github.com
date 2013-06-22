@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "
-Installed *erlang* via *apt-get* in *Ubuntu 11.04*. Here is a list of dependency:
+Installed _erlang_ via _apt-get_ in _Ubuntu 11.04_. Here is a list of dependency:
 
 ```
+
 ~$ apt-get install erlang
 Reading package lists... Done
 Building dependency tree       
@@ -24,6 +25,7 @@ The following NEW packages will be installed:
   erlang-pman erlang-public-key erlang-reltool erlang-runtime-tools erlang-snmp erlang-src erlang-ssh erlang-ssl erlang-syntax-tools
   erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool erlang-xmerl libsctp1 lksctp-tools odbcinst
   odbcinst1debian2 tk tk8.4 unixodbc
+
 
 ```
 "
@@ -32,9 +34,10 @@ comments: true
 categories: 
 ---
 
-Installed *erlang* via *apt-get* in *Ubuntu 11.04*. Here is a list of dependency:
+Installed _erlang_ via _apt-get_ in _Ubuntu 11.04_. Here is a list of dependency:
 
 ```
+
 ~$ apt-get install erlang
 Reading package lists... Done
 Building dependency tree       
@@ -55,6 +58,7 @@ The following NEW packages will be installed:
   erlang-pman erlang-public-key erlang-reltool erlang-runtime-tools erlang-snmp erlang-src erlang-ssh erlang-ssl erlang-syntax-tools
   erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool erlang-xmerl libsctp1 lksctp-tools odbcinst
   odbcinst1debian2 tk tk8.4 unixodbc
+
 
 ```
 

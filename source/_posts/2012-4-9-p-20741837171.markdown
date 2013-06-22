@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "
-The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use 
-"
+title: "viewDidLoad"
 date: 2012-04-09 09:04
 comments: true
 categories: xcode objective-c ios
 ---
 
-The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use 
+The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use *viewDidLoad* to do additional work after the .xib is done loading. Otherwise we should use *loadView*.
 

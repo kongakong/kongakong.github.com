@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "
-```NSManagedObject::willTurnIntoFault```
+```
+NSManagedObject::willTurnIntoFault
+```
 "
 date: 2011-05-03 06:11
 comments: true
 categories: objective-c
 ---
 
-```NSManagedObject::willTurnIntoFault```
+```
+NSManagedObject::willTurnIntoFault
+```
 

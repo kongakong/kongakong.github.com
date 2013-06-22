@@ -9,26 +9,38 @@ categories:
 Usage:
 
 
-```NSBundle *bundle = [NSBundle mainBundle];```
+```
+NSBundle *bundle = [NSBundle mainBundle];
+```
 
 
-```NSString *imagePath = [bundle pathForResource:@"mug_shot" ofType:@"tiff"]```
+```
+NSString *imagePath = [bundle pathForResource:@"mug_shot" ofType:@"tiff"]
+```
 
 
-```NSImage *anImage = [[NSImage alloc] initWithContentsOfFile:imagePath];```
+```
+NSImage *anImage = [[NSImage alloc] initWithContentsOfFile:imagePath];
+```
 
 
-*Loading Code*>
+*Loading Code*
 
 
 Selectors:
 
 
-```load```
+```
+load
+```
 
 
-```principlaClass```
+```
+principlaClass
+```
 
 
-```classNamed```
+```
+classNamed
+```
 

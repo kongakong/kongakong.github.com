@@ -6,26 +6,30 @@ comments: true
 categories: 
 ---
 
-*NSArchiver*>
+*NSArchiver*
 
 
-*NSUnarchiver*>
+*NSUnarchiver*
 
 
-*NSKeyedArchiver*>
+*NSKeyedArchiver*
 
 
-*NSKeyedUnarchiver*>
+*NSKeyedUnarchiver*
 
 
-*NSPortCoder*>
+*NSPortCoder*
 
 
 NSObject supports
 
 
-```- (void) encodeWithCoder:(NSCoder *) encoder;```
+```
+- (void) encodeWithCoder:(NSCoder *) encoder;
+```
 
 
-```- (id) initWithCoder:(NSCoder *) decoder;```
+```
+- (id) initWithCoder:(NSCoder *) decoder;
+```
 

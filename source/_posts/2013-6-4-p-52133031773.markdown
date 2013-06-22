@@ -6,5 +6,7 @@ comments: true
 categories: objective-c tip
 ---
 
-Use ```lastPathComponent```
+Use ```
+lastPathComponent
+```
 

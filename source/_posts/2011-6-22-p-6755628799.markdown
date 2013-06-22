@@ -1,40 +1,72 @@
 ---
 layout: post
 title: "
-Tried to build *python* in *Solaris Express 11*.
+Tried to build _python_ in _Solaris Express 11_.
 
-Used ```pkg``` to install the ```gcc/g++```. 
+Used ```
+pkg
+``` to install the ```
+gcc/g++
+```. 
 
-and ```hg```. 
+and ```
+hg
+```. 
 
-Ran ```configure``` to generate the ```Makefile```.
+Ran ```
+configure
+``` to generate the ```
+Makefile
+```.
 
-After hitting ```make```, got this error message:
+After hitting ```
+make
+```, got this error message:
 
 ```
+
 math.h no such file or directory 
+
 ```
 
-Solved by running: ```pkg install header-math```
+Solved by running: ```
+pkg install header-math
+```
 "
 date: 2011-06-22 00:17
 comments: true
 categories: python solaris express
 ---
 
-Tried to build *python* in *Solaris Express 11*.
+Tried to build _python_ in _Solaris Express 11_.
 
-Used ```pkg``` to install the ```gcc/g++```. 
+Used ```
+pkg
+``` to install the ```
+gcc/g++
+```. 
 
-and ```hg```. 
+and ```
+hg
+```. 
 
-Ran ```configure``` to generate the ```Makefile```.
+Ran ```
+configure
+``` to generate the ```
+Makefile
+```.
 
-After hitting ```make```, got this error message:
+After hitting ```
+make
+```, got this error message:
 
 ```
+
 math.h no such file or directory 
+
 ```
 
-Solved by running: ```pkg install header-math```
+Solved by running: ```
+pkg install header-math
+```
 

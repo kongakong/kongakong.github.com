@@ -6,5 +6,9 @@ comments: true
 categories: python
 ---
 
-Pure python implementation of ``` odict ``` (âOrdered dictionaryâ) can be slow in term of performance. If performance is an issue, ```sqlalchemy.uTIL.OrderedDict ``` is a faster alternative
+Pure python implementation of ```
+ odict 
+``` (âOrdered dictionaryâ) can be slow in term of performance. If performance is an issue, ```
+sqlalchemy.uTIL.OrderedDict 
+``` is a faster alternative
 

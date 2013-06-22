@@ -6,8 +6,12 @@ comments: true
 categories: 
 ---
 
-Run ```/usr/libexec/locate.updatedb``` to update the locate database
+Run ```
+/usr/libexec/locate.updatedb
+``` to update the locate database
 
 
-It is different from just running ```updatedb``` in linux
+It is different from just running ```
+updatedb
+``` in linux
 

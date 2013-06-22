@@ -4,8 +4,10 @@ title: "
 Was getting ‘class has no selector alloc’ method error when I wrote 
 
 ```
+
 MyClass* obj;
 obj = [[MyClass alloc] init];
+
 ```
 
 It is because I did not make MyClass a subclass of NSObject
@@ -18,8 +20,10 @@ categories: objective-c
 Was getting ‘class has no selector alloc’ method error when I wrote 
 
 ```
+
 MyClass* obj;
 obj = [[MyClass alloc] init];
+
 ```
 
 It is because I did not make MyClass a subclass of NSObject

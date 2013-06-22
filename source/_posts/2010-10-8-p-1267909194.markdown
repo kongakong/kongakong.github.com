@@ -9,5 +9,7 @@ categories:
 One of the steps
 
 
-```./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework```
+```
+./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework
+```
 

@@ -1,10 +1,12 @@
 ---
 layout: post
 title: "
-My *Fedora* instance refused ssh connection. Needed to disable the iptable in order to get it working
+My _Fedora_ instance refused ssh connection. Needed to disable the iptable in order to get it working
 
 ```
+
 sudo service iptables stop
+
 ```
 "
 date: 2011-06-18 02:01
@@ -12,9 +14,11 @@ comments: true
 categories: linux fedora
 ---
 
-My *Fedora* instance refused ssh connection. Needed to disable the iptable in order to get it working
+My _Fedora_ instance refused ssh connection. Needed to disable the iptable in order to get it working
 
 ```
+
 sudo service iptables stop
+
 ```
 

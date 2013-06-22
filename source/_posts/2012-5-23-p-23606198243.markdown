@@ -5,7 +5,9 @@ Encountered this problem when trying to deploy app to the phone
 
 
 ```
+
 Code Sign error: Certificate identity 'iPhone Developer: Developer Name (1234HEX)' appears more than once in the keychain. The codesign tool requires there only be one.
+
 ```
 
 Clean up the Keychain and the problem is fixed
@@ -19,7 +21,9 @@ Encountered this problem when trying to deploy app to the phone
 
 
 ```
+
 Code Sign error: Certificate identity 'iPhone Developer: Developer Name (1234HEX)' appears more than once in the keychain. The codesign tool requires there only be one.
+
 ```
 
 Clean up the Keychain and the problem is fixed

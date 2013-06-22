@@ -9,5 +9,7 @@ categories:
 To access the main window
 
 
-```UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];```
+```
+UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+```
 

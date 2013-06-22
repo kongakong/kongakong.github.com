@@ -9,6 +9,7 @@ categories: gambit-scheme
 ```
 
 
+
 $ gsi
 Gambit v4.6.2
 
@@ -36,6 +37,7 @@ Gambit v4.6.2
 ,st  | ,(st X)  : Display current thread group, or X (thread/thread group)
 ,(v X)          : Start a REPL visiting X (proc/cont/thread)
 > ,q
+
 
 ```
 

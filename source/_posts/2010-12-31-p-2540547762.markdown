@@ -1,18 +1,24 @@
 ---
 layout: post
 title: "
-When it is a NSString, do ```copy``` in @property
+When it is a NSString, do ```
+copy
+``` in @property
 "
 date: 2010-12-31 20:35
 comments: true
 categories: 
 ---
 
-When it is a NSString, do ```copy``` in @property
+When it is a NSString, do ```
+copy
+``` in @property
 
 
 e.g.
 
 
-```@property (copy) NSString *info;```
+```
+@property (copy) NSString *info;
+```
 

@@ -1,15 +1,6 @@
 ---
 layout: post
-title: "
-Upgraded VirtualBox to 4.1.8r75467. When I start a vm I got an error message
-
-```
-$ VBoxManage startvm 7b2a72e2-08cd-483b-b594-fe27dff6974a --type headless
-Waiting for VM "7b2a72e2-08cd-483b-b594-fe27dff6974a" to power on...
-VBoxManage: error: No error info
-VBoxManage: error: Details: code NS_ERROR_CALL_FAILED (0x800706be), component ProgressProxy, interface IProgress, callee
-```
-"
+title: "VirtualBox upgrade"
 date: 2012-01-18 22:37
 comments: true
 categories: osx virtualbox
@@ -18,9 +9,11 @@ categories: osx virtualbox
 Upgraded VirtualBox to 4.1.8r75467. When I start a vm I got an error message
 
 ```
+
 $ VBoxManage startvm 7b2a72e2-08cd-483b-b594-fe27dff6974a --type headless
 Waiting for VM "7b2a72e2-08cd-483b-b594-fe27dff6974a" to power on...
 VBoxManage: error: No error info
 VBoxManage: error: Details: code NS_ERROR_CALL_FAILED (0x800706be), component ProgressProxy, interface IProgress, callee
+
 ```
 

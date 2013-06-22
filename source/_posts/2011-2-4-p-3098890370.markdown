@@ -6,10 +6,16 @@ comments: true
 categories: 
 ---
 
-This archetype does not generate the site module which causes problem when running ```mvn install```
+This archetype does not generate the site module which causes problem when running ```
+mvn install
+```
 
 
-And use ```archetype:generate``` instead of ```archetype:create```
+And use ```
+archetype:generate
+``` instead of ```
+archetype:create
+```
 
 
 Also somehow the project id is not set according to the command line options.

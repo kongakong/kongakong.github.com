@@ -11,8 +11,12 @@ First, to install, follow the instrument here:
 [http://stackoverflow.com/a/13718915/58129](http://stackoverflow.com/a/13718915/58129)
 
 
-You may then get a ```Could not reserve enough space for object heap``` exception. The following command line works for me:
+You may then get a ```
+Could not reserve enough space for object heap
+``` exception. The following command line works for me:
 
 
-```sbt -J-Xms256m -J-Xmx512m```
+```
+sbt -J-Xms256m -J-Xmx512m
+```
 

@@ -19,7 +19,9 @@ This is one such example:
 Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example “assesses” has the substring “sses” 2 times.
 
 
-It is a very simple question, but there is sTILl something new I learn: while  ```re.findall``` is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.
+It is a very simple question, but there is sTILl something new I learn: while  ```
+re.findall
+``` is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.
 
 
 My proposed solution is simply an improved version of OP’s code.

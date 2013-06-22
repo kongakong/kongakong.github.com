@@ -14,5 +14,7 @@ Finally I can bring up a login screen before the Split View in the ipad.
 Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.
 
 
-A better way is to let the btnLogin to send dissmissModalController to the ```[self parentViewController]```
+A better way is to let the btnLogin to send dissmissModalController to the ```
+[self parentViewController]
+```
 

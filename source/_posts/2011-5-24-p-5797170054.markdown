@@ -6,16 +6,22 @@ comments: true
 categories: erlang
 ---
 
-Wrote up a simple test module code (simply called ‘test’), inside which I defined a function ```mp```. It does some loan calculation given a loan amount, interest rate (*r*) and repayment periods (*n*).
+Wrote up a simple test module code (simply called ‘test’), inside which I defined a function ```
+mp
+```. It does some loan calculation given a loan amount, interest rate (_r_) and repayment periods (_n_).
 
 
 When I compile the module, I get this error message:
 
 
-```Warning: this expression will fail with a 'badarith' exception```
+```
+Warning: this expression will fail with a 'badarith' exception
+```
 
 
-Not really understand what is wrong, I proceed to run the code like so: ```test:mp(100000, 0.075/12.0, 30*12)```.
+Not really understand what is wrong, I proceed to run the code like so: ```
+test:mp(100000, 0.075/12.0, 30*12)
+```.
 
 
 Now I get another error message:
@@ -24,8 +30,15 @@ Now I get another error message:
 ```
 
 
-Turns out the function declaration is ```mp(B, r, n) ```.
+
+Turns out the function declaration is ```
+mp(B, r, n) 
+```.
 
 
-See the problem there? ```r``` and ```n``` are atoms! I forgot to use uppercase to denote they are actually input variables.
+See the problem there? ```
+r
+``` and ```
+n
+``` are atoms! I forgot to use uppercase to denote they are actually input variables.
 

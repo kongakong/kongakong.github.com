@@ -1,21 +1,17 @@
 ---
 layout: post
-title: "
-Install python 2.7 using brew. Brew also downloaded and installed ```distribute```
-
-```
-$ brew install python
-==> Installing python dependency: sqlite
-==> Downloading 
-"
+title: "Install python 2.7 using brew"
 date: 2012-04-30 20:21
 comments: true
 categories: 
 ---
 
-Install python 2.7 using brew. Brew also downloaded and installed ```distribute```
+Install python 2.7 using brew. Brew also downloaded and installed ```
+distribute
+```
 
 ```
+
 $ brew install python
 ==> Installing python dependency: sqlite
 ==> Downloading 

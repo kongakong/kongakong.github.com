@@ -6,8 +6,12 @@ comments: true
 categories: 
 ---
 
-In objective-c, if you have an variable of type ```id``` but you want to  call a certain method on it as if it an instance of a specific class, you can do it this way:
+In objective-c, if you have an variable of type ```
+id
+``` but you want to  call a certain method on it as if it an instance of a specific class, you can do it this way:
 
 
-Here is the definition of the ```TestDynamic``` class:
+Here is the definition of the ```
+TestDynamic
+``` class:
 

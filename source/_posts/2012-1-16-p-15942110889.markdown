@@ -5,8 +5,10 @@ Trying to build LibreOffice on osx. Encountered this error message:
 
 ```
 
+
 checking for Mozilla sources... checking for a169ab152209200a7bad29a275cb0333-seamonkey-1.1.14.source.tar.gz... will be fetched
 checking for MOZLIBREQ... configure: error: libIDL 0.6.3 or newer is needed to build Mozilla with Mac toolkit.
+
 
 ```
 "
@@ -19,8 +21,10 @@ Trying to build LibreOffice on osx. Encountered this error message:
 
 ```
 
+
 checking for Mozilla sources... checking for a169ab152209200a7bad29a275cb0333-seamonkey-1.1.14.source.tar.gz... will be fetched
 checking for MOZLIBREQ... configure: error: libIDL 0.6.3 or newer is needed to build Mozilla with Mac toolkit.
+
 
 ```
 

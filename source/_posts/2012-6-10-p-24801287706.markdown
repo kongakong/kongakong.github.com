@@ -7,6 +7,8 @@ categories: xcode4 ios
 ---
 
 ```
+
 [parentView bringSubviewToFront:childView];
+
 ```
 

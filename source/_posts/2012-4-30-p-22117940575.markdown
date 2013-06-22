@@ -11,12 +11,16 @@ For some reason I do not understand I had a very old version of easy_install in 
 
 ```
 
+
 $ ls -l /usr/local/bin/easy_install
 -rwxr-xr-x  1 root  wheel  364 28 Feb  2009 /usr/local/bin/easy_install
 
+
 ```
 
-The shebang of ```easy_install``` is sTILl pointing to a python 2.5 installation
+The shebang of ```
+easy_install
+``` is sTILl pointing to a python 2.5 installation
 
 
 

@@ -6,8 +6,14 @@ comments: true
 categories: java
 ---
 
-1. If there is lock condition in the ```try``` block``````
+1. If there is lock condition in the ```
+try```
+ block
+```
+```
 
 
-2. JVM is terminated (e.g. ```System.exit()``` before finally is executed
+2. JVM is terminated (e.g. ```
+System.exit()
+``` before finally is executed
 

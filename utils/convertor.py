@@ -7,6 +7,7 @@ import sys
 print (sys.version)
 
 import os
+from io import StringIO
 
 import lxml
 from lxml import etree
@@ -25,18 +26,35 @@ def lxmlwork():
     srcdir = j('/Users/antkong/octopress', 'localdata', 'anthonykong', 'posts')
     for f in os.listdir(srcdir):
         if f.endswith('html'):
-            preprocess_file(f)
             parse_file(j(srcdir, f))
 
 def preprocess_file(f):
-    pass
-
+    fbuff = open(f).read()
+    fbuff = fbuff.replace("<pre>", "```\n")
+    fbuff = fbuff.replace("</pre>", "\n```")
+    fbuff = fbuff.replace("<code>", "```\n")
+    fbuff = fbuff.replace("</code>", "\n```")
+    fbuff = fbuff.replace("Today I Learn", "TIL")
+    fbuff = fbuff.replace("til", "TIL")
+    fbuff = fbuff.replace("<strong>", "*")
+    fbuff = fbuff.replace("</strong>", "*")
+    fbuff = fbuff.replace("<em>", "*")
+    fbuff = fbuff.replace("</em>", "*")    
+    fbuff = fbuff.replace("<b>", "_")
+    fbuff = fbuff.replace("</b>", "_")
+    fbuff = fbuff.replace("<i>", "*")
+    fbuff = fbuff.replace("</i>", "*")    
+    fbuff = fbuff.replace("&lt;", "<")
+    fbuff = fbuff.replace("&gt;", ">")
+    return fbuff
 
 def parse_file(fn):
-    print "working on", fn
+    print ("working on " + fn)
+
+    fbuffer = preprocess_file(fn)
 
     parser = etree.HTMLParser()
-    t = etree.parse(fn, parser)
+    t = etree.parse(StringIO(fbuffer), parser)
     attricle_node = None
 
     attribs = []
@@ -75,20 +93,80 @@ def parse_file(fn):
      
     ofile = open(os.path.join(dest_dir, ofilename), "w")
     try:
-        print >>ofile, HEADER % meta
+        print(HEADER % meta, file=ofile)
     except UnicodeEncodeError:
-        print "meta issue", meta
+        print("meta issue %s" % meta)
         raise
     for l in lines:
         try:
-            print >>ofile, l
+            print (l, file=ofile)
         except UnicodeEncodeError:
-            print "line char problem", l
+            print ("line char problem %s" % l)
             raise
-            
+
     ofile.close()
 
 def handle_node(article_node, lines, metas):
+    article_class = article_node.attrib['class']
+    if article_class == 'quote':
+        return handle_quote_node(article_node, lines, metas)
+    elif article_class == 'link':
+        return handle_link_node(article_node, lines, metas)
+    else: # default
+        return handle_normal_node(article_node, lines, metas)
+
+def handle_quote_node(article_node, lines, metas):
+    for node in article_node.findall("./*"):
+        if node.tag == 'h2':
+            if node.text:
+                metas['title'] = node.text.replace("\"", "'")
+            handle_quote_node(node, lines, metas)
+        if node.tag == 'blockquote': 
+            #quotelines = []
+            handle_quote_node(node, lines, metas)
+        if node.tag == 'p': 
+            p_class = node.attrib.get('class', None)
+            if p_class == 'tags' and node.text:
+                metas['tags'] = node.text.replace("#", "")      
+            else:
+                if node.text:
+                    lines.append("\n%s\n" % node.text)
+                handle_normal_node(node, lines, metas)
+        if node.tag == 'a':
+            if node.attrib.get('class', '') == 'llink':
+                continue
+            if 'www.ahwkong.com' in node.attrib['href']:
+                continue
+            lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+            metas['title'] = 'Quote of the Day'
+        if node.tag == 'span':
+            node_class = node.attrib.get('class', None)
+            if node_class == 'date':
+                metas['pub_date'] = node.text
+
+def handle_link_node(article_node, lines, metas):
+    for node in article_node.findall("./*"):
+        if node.tag == 'h2':
+            if node.text:
+                metas['title'] = node.text.replace("\"", "'")
+            handle_link_node(node, lines, metas)
+        if node.tag == 'p': 
+            p_class = node.attrib.get('class', None)
+            if p_class == 'tags' and node.text:
+                metas['tags'] = node.text.replace("#", "")      
+            else:
+                if node.text:
+                    lines.append("\n%s\n" % node.text)
+                handle_normal_node(node, lines, metas)
+        if node.tag == 'a':
+            if node.attrib.get('class', '') == 'llink':
+                continue
+            if 'www.ahwkong.com' in node.attrib['href']:
+                continue
+            lines.append("[%s](%s)\n" % (node.attrib['href'], node.text))
+            metas['title'] = node.text.replace("\"", "'")
+
+def handle_normal_node(article_node, lines, metas):
     for node in article_node.findall("./*"):
         # assumes ...
         # h2 is the header
@@ -102,8 +180,9 @@ def handle_node(article_node, lines, metas):
             if p_class == 'tags' and node.text:
                 metas['tags'] = node.text.replace("#", "")      
             else:
-                lines.append("\n%s\n" % node.text)
-                handle_node(node, lines, metas)
+                if node.text:
+                    lines.append("\n%s\n" % node.text)
+                handle_normal_node(node, lines, metas)
         if node.tag == 'a':
             if node.attrib.get('class', '') == 'llink':
                 continue

@@ -8,7 +8,7 @@ categories: python windows x86_64
 [http://bugs.python.org/issue12267](http://bugs.python.org/issue12267)
 
 
-*Building Python on Windows - May skip VS2010*
+_Building Python on Windows - May skip VS2010_
 
 
 Brian Curtin submitted a patch to enable python 2.7 to compile using VS2010 for x64 target. The bug is rejected at the end because it might eventually move to VS2012

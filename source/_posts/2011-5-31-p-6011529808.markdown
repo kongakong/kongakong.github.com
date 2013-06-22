@@ -6,7 +6,9 @@ comments: true
 categories: 
 ---
 
-Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom ```delete``` will honor that guarantee
+Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom ```
+delete
+``` will honor that guarantee
 
 
 

@@ -6,6 +6,6 @@ comments: true
 categories: 
 ---
 
-*Root View*>: the pane on the left when iPad is in Landscape mode
-*Detail View*>: the main pane of display
+*Root View*: the pane on the left when iPad is in Landscape mode
+*Detail View*: the main pane of display
 

@@ -1,10 +1,6 @@
 ---
 layout: post
-title: "
-The normalization on the complex amplitudes means that the state of the
-system is a unit vector in a k dimensional complex vector space â called a
-Hilbert space.
-"
+title: "Normalization on the complex amplitudes"
 date: 2012-08-01 19:29
 comments: true
 categories: self-study quantum

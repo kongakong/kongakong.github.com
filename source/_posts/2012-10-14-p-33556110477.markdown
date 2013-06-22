@@ -14,7 +14,7 @@ Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘
 I proceeded to run it by using the ‘Run it…’. I expected to see ‘Run as Scala Application’ but the option was not there.
 
 
-Turns out it is my mistake. I need to extends the object from *App*>:
+Turns out it is my mistake. I need to extends the object from *App*:
 
 
 Then the option will appear (as shown here):

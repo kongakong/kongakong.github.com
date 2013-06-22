@@ -1,14 +1,6 @@
 ---
 layout: post
-title: "
-Getting this exception when trying the svmtrainer in pybrain 
-
-```
-
-raise ImportError("Cannot find LIBSVM installation. Make sure svm.py and svmc.* are in the PYTHONPATH!")
-
-```
-"
+title: "svmtrainer"
 date: 2012-05-16 22:01
 comments: true
 categories: python pybrain
@@ -18,7 +10,9 @@ Getting this exception when trying the svmtrainer in pybrain
 
 ```
 
+
 raise ImportError("Cannot find LIBSVM installation. Make sure svm.py and svmc.* are in the PYTHONPATH!")
+
 
 ```
 

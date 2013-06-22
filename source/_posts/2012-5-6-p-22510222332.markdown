@@ -7,6 +7,7 @@ categories: erlang
 ---
 
 ```
+
 $ erl
 Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe] [kernel-poll:false]
 
@@ -15,5 +16,6 @@ Eshell V5.8.5  (abort with ^G)
 ok
 2> os:getpid().
 "50615"
+
 ```
 

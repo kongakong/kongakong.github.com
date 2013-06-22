@@ -6,20 +6,26 @@ If I have removed a file by accident, and want to reinstate the file form a sour
 in subversion I will do
 
 ```
+
 svn update file
+
 ```
 
 
 in mercurial I will do
 
 ```
+
 hg revert file
+
 ```
 
 In git,
 
 ```
+
 git checkout file
+
 ```
 
 
@@ -36,20 +42,26 @@ If I have removed a file by accident, and want to reinstate the file form a sour
 in subversion I will do
 
 ```
+
 svn update file
+
 ```
 
 
 in mercurial I will do
 
 ```
+
 hg revert file
+
 ```
 
 In git,
 
 ```
+
 git checkout file
+
 ```
 
 

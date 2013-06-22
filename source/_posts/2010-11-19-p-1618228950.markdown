@@ -9,8 +9,12 @@ categories:
 MBP shutdown due to flat battery. Totally crashed VirtualBox.
 
 
-```Failed to access USB subsystem```
+```
+Failed to access USB subsystem
+```
 
 
-```Could not load the USB subsystem service (VERR_GENERAL_FAILURE)```
+```
+Could not load the USB subsystem service (VERR_GENERAL_FAILURE)
+```
 

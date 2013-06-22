@@ -11,5 +11,5 @@ categories: erlang
 erlang mode in emacs is very handy.
 
 
-*C-c C-k (erlang-compile)*> will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.
+*C-c C-k (erlang-compile)* will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.
 

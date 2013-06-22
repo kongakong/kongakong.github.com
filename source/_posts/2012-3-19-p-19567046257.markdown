@@ -1,20 +1,6 @@
 ---
 layout: post
-title: "
-The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application.
-
-```
-    @try {
-        CFGetTypeID(NULL);
-    }  @catch   (NSException * e) {
-            NSLog(@"Exception: %@", e);
-    }
-    @finally {
-            NSLog(@"finally");
-    }
-
-```
-"
+title: "EXC_BAD_ACCESS"
 date: 2012-03-19 20:30
 comments: true
 categories: objective-c
@@ -23,6 +9,7 @@ categories: objective-c
 The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application.
 
 ```
+
     @try {
         CFGetTypeID(NULL);
     }  @catch   (NSException * e) {
@@ -31,6 +18,7 @@ The catch block is not reachable, because CFGetTypeID does not throw exception. 
     @finally {
             NSLog(@"finally");
     }
+
 
 ```
 

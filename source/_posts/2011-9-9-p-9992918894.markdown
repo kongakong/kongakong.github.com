@@ -7,6 +7,7 @@ categories: couchdb osx
 ---
 
 ```
+
 $ brew install couchdb
 Warning: It appears you have MacPorts or Fink installed.
 Software installed with other package managers causes known problems for

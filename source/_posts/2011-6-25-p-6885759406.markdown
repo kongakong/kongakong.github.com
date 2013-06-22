@@ -4,12 +4,14 @@ title: "
 View the packet statistics on solaris
 
 ```
+
 $ netstat -f inet
 
 TCP: IPv4
    Local Address        Remote Address    Swind Send-Q Rwind Recv-Q    State
 -------------------- -------------------- ----- ------ ----- ------ -----------
 10.0.1.80.ssh        10.0.1.81.49180       524280      0 128872      0 ESTABLISHED
+
 ```
 "
 date: 2011-06-25 11:19
@@ -20,11 +22,13 @@ categories: solaris revision
 View the packet statistics on solaris
 
 ```
+
 $ netstat -f inet
 
 TCP: IPv4
    Local Address        Remote Address    Swind Send-Q Rwind Recv-Q    State
 -------------------- -------------------- ----- ------ ----- ------ -----------
 10.0.1.80.ssh        10.0.1.81.49180       524280      0 128872      0 ESTABLISHED
+
 ```
 

@@ -7,9 +7,11 @@ categories: osx lion
 ---
 
 ```
+
 $ gcc-4.2
 i686-apple-darwin11-gcc-4.2.1: no input files
 $ gcc
 i686-apple-darwin11-llvm-gcc-4.2: no input files
+
 ```
 

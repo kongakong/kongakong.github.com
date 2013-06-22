@@ -9,6 +9,7 @@ categories: lion osx
 Try to run ‘brew update’. Got this error:
 
 ```
+
 $ brew update
 
 Initialized empty Git repository in /usr/local/.git/

@@ -16,7 +16,11 @@ Taken from
 
 
 
-``` math``` module contains a ```sqrt``` function, but 
+```
+ math
+``` module contains a ```
+sqrt
+``` function, but 
 canât pass it as an argument.
 
 
@@ -27,6 +31,6 @@ Module functions arenât higher-order function.
 
 
 
-Instead, we can wrap it with a *fun*
+Instead, we can wrap it with a _fun_
 
 

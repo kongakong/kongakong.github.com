@@ -1,26 +1,34 @@
 ---
 layout: post
 title: "
-To start a *VirtualBox* VM instance in a ssh session, we can run this command
+To start a _VirtualBox_ VM instance in a ssh session, we can run this command
 ```
+
 
 VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type headless
 
+
 ```
 
-The key is the parameter ```--type headless```
+The key is the parameter ```
+--type headless
+```
 "
 date: 2011-06-30 21:41
 comments: true
 categories: virtualbox
 ---
 
-To start a *VirtualBox* VM instance in a ssh session, we can run this command
+To start a _VirtualBox_ VM instance in a ssh session, we can run this command
 ```
+
 
 VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type headless
 
+
 ```
 
-The key is the parameter ```--type headless```
+The key is the parameter ```
+--type headless
+```
 

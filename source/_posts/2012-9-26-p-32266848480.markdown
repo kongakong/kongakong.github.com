@@ -11,5 +11,7 @@ categories: git xcode osx
 Do not have git on my rebuilt MBP. Was about to hit ‘brew install git’. Then I realised: I already have git installed. It is part of XCode.
 
 
-So it is what I did: add the following line to ```.bash_rc```
+So it is what I did: add the following line to ```
+.bash_rc
+```
 

@@ -10,6 +10,7 @@ Message after a successful installation
 
 ```
 
+
 If this is your first install, automatically load on login with:
     mkdir -p ~/Library/LaunchAgents
     cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
@@ -22,6 +23,7 @@ If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
 
 Or start manually with:
     couchdb
+
 
 ```
 

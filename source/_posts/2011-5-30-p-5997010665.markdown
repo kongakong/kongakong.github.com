@@ -6,5 +6,5 @@ comments: true
 categories: self-study Effective C++ c++
 ---
 
-Advantage of *iostream*: type safety
+Advantage of _iostream_: type safety
 

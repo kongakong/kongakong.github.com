@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "
-Trying to compile *python 3.2* on *winxp* using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work. 
+Trying to compile _python 3.2_ on _winxp_ using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work. 
 "
 date: 2011-06-20 12:32
 comments: true
 categories: visual studio python
 ---
 
-Trying to compile *python 3.2* on *winxp* using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work. 
+Trying to compile _python 3.2_ on _winxp_ using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work. 
 
 
 Even the VS Express 2008 does not like the sln file.

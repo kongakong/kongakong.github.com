@@ -6,7 +6,9 @@ comments: true
 categories: ios coredata
 ---
 
-```The model used to open the store is incompatible with the one used to create the store```
+```
+The model used to open the store is incompatible with the one used to create the store
+```
 
 
 Delete the app from the iOS simulator whenever seeing this error message

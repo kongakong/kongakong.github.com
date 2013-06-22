@@ -9,5 +9,5 @@ categories:
 The basic operator for sending a message is !, pronounced âbang,â and itâs used in the form âDestination ! Messageâ.
 
 
-- from 
+- from *Erlang and OTP in Action*
 

@@ -6,5 +6,9 @@ comments: true
 categories: objective-c tip
 ---
 
-Use ```pathWithComponents``` or ```stringByAppendingString```
+Use ```
+pathWithComponents
+``` or ```
+stringByAppendingString
+```
 

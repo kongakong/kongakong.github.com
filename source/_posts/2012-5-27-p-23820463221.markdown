@@ -2,7 +2,9 @@
 layout: post
 title: "
 
-The debugger will stop at the ```UIApplicationMain``` line
+The debugger will stop at the ```
+UIApplicationMain
+``` line
 
 "
 date: 2012-05-27 07:46
@@ -11,7 +13,9 @@ categories:
 ---
 
 
-The debugger will stop at the ```UIApplicationMain``` line
+The debugger will stop at the ```
+UIApplicationMain
+``` line
 
 
 

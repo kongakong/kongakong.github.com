@@ -13,3 +13,10 @@ Just installed RVM.
 
 Message from RVM after installation:
 
+
+```
+  * To start using RVM you need to run `source /Users/antkong/.rvm/scripts/rvm`
+    in all your open shell windows, in rare cases you need to reopen all shell windows.
+
+```
+

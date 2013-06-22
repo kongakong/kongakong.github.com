@@ -7,8 +7,10 @@ categories: objective-c syntax
 ---
 
 ```
+
 @interface ClassName ( CategoryName ) 
+
 ```
 
-As a java/c++ programmer, my first instinct is that ** works as generic
+As a java/c++ programmer, my first instinct is that __ works as generic
 

@@ -8,8 +8,8 @@ categories: ios objective-c
 [http://stackoverflow.com/a/1210141/58129](Frame vs Bound)
 
 
-The *frame* of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.
+The _frame_ of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.
 
 
-The *bounds* of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).
+The _bounds_ of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).
 

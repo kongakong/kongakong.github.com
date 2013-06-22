@@ -1,19 +1,6 @@
 ---
 layout: post
-title: "
-A very simple test to compare g++ and clang++
-
-```
-$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
-cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
-```
-
-clang++ does not complaint at all
-
-```
-$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
-```
-"
+title: "g++ and clang++"
 date: 2011-08-06 14:28
 comments: true
 categories: 
@@ -22,13 +9,17 @@ categories:
 A very simple test to compare g++ and clang++
 
 ```
+
 $ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
 cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+
 ```
 
 clang++ does not complaint at all
 
 ```
+
 $ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+
 ```
 

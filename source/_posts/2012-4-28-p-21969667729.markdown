@@ -16,8 +16,16 @@ It turns out on
 [http://packages.python.org/distribute/](Distribute’s site)
 
 
-```setuptools``` -> ```distribute```
+```
+setuptools
+``` -> ```
+distribute
+```
 
 
-```easy_install``` -> ```pip```
+```
+easy_install
+``` -> ```
+pip
+```
 

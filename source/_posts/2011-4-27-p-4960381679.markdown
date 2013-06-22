@@ -1,14 +1,18 @@
 ---
 layout: post
 title: "
-A note-to-myself on ```release```
+A note-to-myself on ```
+release
+```
 "
 date: 2011-04-27 03:49
 comments: true
 categories: objective-c
 ---
 
-A note-to-myself on ```release```
+A note-to-myself on ```
+release
+```
 
 
 Do not release before the variable is in use

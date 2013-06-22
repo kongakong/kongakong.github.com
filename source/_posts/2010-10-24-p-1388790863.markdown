@@ -6,20 +6,26 @@ comments: true
 categories: 
 ---
 
-Another difference between Linux and OSX: no more *adduser*>. Use *dscl*> instead.
+Another difference between Linux and OSX: no more *adduser*. Use *dscl* instead.
 
 
 So, for example, in order to find out what groups are defined locally, we can run
 
 
-```dscl  localhost -list /Local/Default/Groups```
+```
+dscl  localhost -list /Local/Default/Groups
+```
 
 
 To add someone to a group, we should run
 
 
-```dscl . append /Groups/somegroup GroupMembership someuser```
+```
+dscl . append /Groups/somegroup GroupMembership someuser
+```
 
 
-Don't know where ```GroupMembership``` comes from. From documentation?
+Don't know where ```
+GroupMembership
+``` comes from. From documentation?
 

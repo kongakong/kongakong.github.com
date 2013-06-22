@@ -9,10 +9,13 @@ categories:
 ```
 
 
+
 ```
 
 
+
 ```
+
 
 
 Using laplacian smoothing with k = 1, we get the following values:
@@ -22,6 +25,7 @@ Now plugging the above values in formulas (1), (2) and (3) we get:
 
 
 ```
+
 
 
 From 

@@ -6,5 +6,9 @@ comments: true
 categories: 
 ---
 
-Yes, ```@synthesize``` should be within the ```@implementation``` block
+Yes, ```
+@synthesize
+``` should be within the ```
+@implementation
+``` block
 

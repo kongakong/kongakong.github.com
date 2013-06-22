@@ -9,5 +9,7 @@ categories:
 Part of the APIs to deal with shadow password file entry
 
 
-Other related function calls: ```spent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf```
+Other related function calls: ```
+spent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf
+```
 

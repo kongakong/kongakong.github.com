@@ -6,11 +6,11 @@ comments: true
 categories: 
 ---
 
-The *frame*> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.
+The *frame* property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.
 
 
-The *center*> property contains the known center point of the view in the superviewâs coordinate system.
+The *center* property contains the known center point of the view in the superviewâs coordinate system.
 
 
-The *bounds*> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst
+The *bounds* property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst
 

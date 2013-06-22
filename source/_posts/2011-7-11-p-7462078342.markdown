@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why do you need explicitly have the âselfâ argument into a Python method?"
+title: "Why do you need explicitly have the 'self' argument into a Python method?"
 date: 2011-07-11 05:00
 comments: true
 categories: python

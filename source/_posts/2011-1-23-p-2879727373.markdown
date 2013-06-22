@@ -6,5 +6,7 @@ comments: true
 categories: coredata ios
 ---
 
-```*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a fetch request with sort descriptors'```
+```
+*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a fetch request with sort descriptors'
+```
 

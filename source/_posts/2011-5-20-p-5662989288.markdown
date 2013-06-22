@@ -6,14 +6,16 @@ comments: true
 categories: erlang
 ---
 
-*$* followed by a character evaluates to the characterâs value
+_$_ followed by a character evaluates to the characterâs value
 
 ```
+
 
 
 3> $$.
 36
 4> $..
 46
+
 ```
 

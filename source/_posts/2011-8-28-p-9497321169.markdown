@@ -1,12 +1,24 @@
 ---
 layout: post
 title: "
-Try to use ```git``` on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a ```.gitignore``` myself, probably. Turns out there is a ```.gitignore``` in the repository. Glad need not to do this extra work
+Try to use ```
+git
+``` on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a ```
+.gitignore
+``` myself, probably. Turns out there is a ```
+.gitignore
+``` in the repository. Glad need not to do this extra work
 "
 date: 2011-08-28 20:56
 comments: true
 categories: python git
 ---
 
-Try to use ```git``` on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a ```.gitignore``` myself, probably. Turns out there is a ```.gitignore``` in the repository. Glad need not to do this extra work
+Try to use ```
+git
+``` on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a ```
+.gitignore
+``` myself, probably. Turns out there is a ```
+.gitignore
+``` in the repository. Glad need not to do this extra work
 

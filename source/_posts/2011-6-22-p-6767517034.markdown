@@ -1,20 +1,18 @@
 ---
 layout: post
-title: "
-Got this annoying error message when trying to compile latest python default branch in OSX:
-```
-$ make
-./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
-Traceback (most recent call last):
-  File "/usr/local/bin/hg", line 4, in 
-"
+title: "Annoying error message when trying to compile latest python default branch in OSX"
 date: 2011-06-22 07:22
 comments: true
 categories: osx python Mercurial
 ---
 
 Got this annoying error message when trying to compile latest python default branch in OSX:
+
+
+
+
 ```
+
 $ make
 ./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
 Traceback (most recent call last):

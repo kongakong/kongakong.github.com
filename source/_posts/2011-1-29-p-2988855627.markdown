@@ -9,8 +9,12 @@ categories:
 It turns out it is because of the following line of code:
 
 
-```NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);```
+```
+NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);
+```
 
 
-It should be ```%i``` because  *numberOfObjects*> returns an integer
+It should be ```
+%i
+``` because  *numberOfObjects* returns an integer
 

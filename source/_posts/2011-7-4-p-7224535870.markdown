@@ -14,5 +14,9 @@ Some useful vim trick
 :echo $HOME
 
 
-It is where you can put a ```.vimrc``` (or ```_vimrc``` in Windows)
+It is where you can put a ```
+.vimrc
+``` (or ```
+_vimrc
+``` in Windows)
 

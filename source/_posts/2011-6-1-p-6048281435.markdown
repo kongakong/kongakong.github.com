@@ -1,12 +1,16 @@
 ---
 layout: post
 title: "
-ANSI C supports ```const``` keyword in C99
+ANSI C supports ```
+const
+``` keyword in C99
 "
 date: 2011-06-01 07:42
 comments: true
 categories: 
 ---
 
-ANSI C supports ```const``` keyword in C99
+ANSI C supports ```
+const
+``` keyword in C99
 

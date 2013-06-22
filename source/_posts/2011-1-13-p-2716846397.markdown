@@ -14,10 +14,18 @@ Modal View screws up the SplitView after dismiss.
 Tried
 
 
-```if ([self modalViewController]) {```
-```return;```
-```}```
+```
+if ([self modalViewController]) {
+```
+```
+return;
+```
+```
+}
+```
 
 
-in ```willHideSplitView``` but it does not work
+in ```
+willHideSplitView
+``` but it does not work
 

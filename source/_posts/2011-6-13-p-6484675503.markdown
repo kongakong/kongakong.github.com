@@ -14,10 +14,12 @@ To query for a list of vm, do this:
 ```
 
 
+
 Once you have a list of vms, you can query each of them by
 
 
 ```
+
 
 
 It will only work if you run it as the same user that starts the vm instances

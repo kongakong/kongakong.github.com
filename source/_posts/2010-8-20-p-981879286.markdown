@@ -6,5 +6,5 @@ comments: true
 categories: 
 ---
 
-Xcode files are owned by *root*> and belongs to group *wheel*>.
+Xcode files are owned by *root* and belongs to group *wheel*.
 

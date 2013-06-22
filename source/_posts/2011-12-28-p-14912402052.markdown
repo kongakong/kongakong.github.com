@@ -9,8 +9,11 @@ categories: osx hg python
 9:06pm
 
 
-Tried to run ```hg```. Got this error:
+Tried to run ```
+hg
+```. Got this error:
 
 
 ```
+
 

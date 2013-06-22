@@ -4,11 +4,13 @@ title: "
 I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn
 
 ```
+
 $ svn info 
 dyld: Library not loaded: /usr/lib/libpq.5.dylib
   Referenced from: /usr/bin/svn
   Reason: image not found
 Trace/BPT trap: 5
+
 ```
 
 Run it in a new shell and the problem goes away.
@@ -21,11 +23,13 @@ categories: osx
 I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn
 
 ```
+
 $ svn info 
 dyld: Library not loaded: /usr/lib/libpq.5.dylib
   Referenced from: /usr/bin/svn
   Reason: image not found
 Trace/BPT trap: 5
+
 ```
 
 Run it in a new shell and the problem goes away.

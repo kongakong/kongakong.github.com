@@ -6,8 +6,12 @@ comments: true
 categories: osx diff
 ---
 
-CLI: ```opendiff```
+CLI: ```
+opendiff
+```
 
 
-GUI: ```FileMerge```
+GUI: ```
+FileMerge
+```
 

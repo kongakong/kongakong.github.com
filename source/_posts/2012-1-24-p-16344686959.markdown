@@ -18,7 +18,9 @@ However according to
 
 
 
-It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old ```avltree``` in elib.
+It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old ```
+avltree
+``` in elib.
 
 
 

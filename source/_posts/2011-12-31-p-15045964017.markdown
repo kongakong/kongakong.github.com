@@ -9,6 +9,7 @@ categories: osx brew erlang
 Tried to install erlang. Got this error message
 
 ```
+
 $ brew install erlang
 ==> Downloading 
 
