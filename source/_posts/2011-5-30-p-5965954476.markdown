@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Item 38:  Never redefine an inherited default parameter value"
+date: 2011-05-30 01:05
+comments: true
+categories: c++ effective c++ self-study
+---
+
+None
+
+
+Virtual functions are dynamically bound, but default parameters are statically bound. 
+
+
+It means that you may end up invoking a virtual function defined in a derived class but using a default parameter value from a base class
+

@@ -1,0 +1,23 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-06-07 04:49
+comments: true
+categories: osx brew md5sum
+---
+
+None
+
+
+To install command md5sum in brew, run 
+
+```
+
+    brew install md5sha1sum
+
+```
+
+Note the formula is not 
+

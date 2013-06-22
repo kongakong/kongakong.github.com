@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 32: Postpone variable definitions as long as possible"
+date: 2011-06-05 11:57
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+Because calling constructor is expensive
+

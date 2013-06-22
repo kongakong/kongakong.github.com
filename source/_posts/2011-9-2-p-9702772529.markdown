@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Brew update issue on Lion"
+date: 2011-09-02 21:41
+comments: true
+categories: lion osx
+---
+
+None
+
+
+Try to run ‘brew update’. Got this error:
+
+```
+$ brew update
+
+Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317, done.
+remote: Compressing objects: 100% (19213/19213), done.
+remote: Total 43317 (delta 26643), reused 38295 (delta 23498)
+Receiving objects: 100% (43317/43317), 5.93 MiB | 457 KiB/s, done.
+Resolving deltas: 100% (26643/26643), done.
+From 
+
+[http://github.com/mxcl/homebrew](http://github.com/mxcl/homebrew)
+
+[http://github.com/mxcl/homebrew.git](http://github.com/mxcl/homebrew.git)
+

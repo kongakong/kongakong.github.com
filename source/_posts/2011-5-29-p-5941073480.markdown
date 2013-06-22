@@ -1,0 +1,17 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-05-29 06:44
+comments: true
+categories: ios
+---
+
+None
+
+
+To find out what iOS device is attached to the system, we can try monitor 
+
+[http://developer.apple.com/library/ios/#featuredarticles/ExternalAccessoryPT/Articles/MonitoringEvents.html](Monitoring Accessory-Related Events)
+

@@ -1,0 +1,35 @@
+---
+layout: post
+title: "VirtualBox is so cool"
+date: 2011-06-25 12:03
+comments: true
+categories: virtualbox ubuntu
+---
+
+None
+
+
+
+I have started an instance of Ubuntu VM. 
+
+
+
+
+However I do not know the IP of this VM. The IP of the VM is assigned by the DHCP server. I could have logged into AirPort to find out, or just log in via the Ubuntu instance’s virtual screen. 
+
+
+
+
+But being a lazy bastard I would rather be able to find out this bit of information without leaving my shell (which has an active ssh session into the host PC)
+
+
+
+
+Then I discover this cool feature of 
+
+
+
+
+So it is what I did:
+
+

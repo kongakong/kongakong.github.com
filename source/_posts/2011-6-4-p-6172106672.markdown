@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Item 23:  Don't try to return a reference when you must return an object"
+date: 2011-06-04 20:55
+comments: true
+categories: c++ Effective C++ self-study
+---
+
+None
+
+
+None
+
+
+None
+
+
+None
+
+
+None
+
+
+From 
+
+[http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9](C++ FAQ)
+

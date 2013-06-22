@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Adding SSZipArchive to Podfile"
+date: 2013-05-30 20:00
+comments: true
+categories: osx CocoaPods
+---
+
+None
+
+
+The podfile is for a osx 10.8 project. Here is the output from 
+

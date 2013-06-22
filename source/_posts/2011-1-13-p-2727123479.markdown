@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Splash screen on iOS"
+date: 2011-01-13 20:22
+comments: true
+categories: 
+---
+
+None
+
+
+In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful.
+
+
+None
+
+[http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942](Source)
+

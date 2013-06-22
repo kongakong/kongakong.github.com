@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Item 30:  Avoid member functions that return non-const pointers or references to members less accessible than themselves"
+date: 2011-06-05 10:35
+comments: true
+categories: c++ Effective C++ self-study
+---
+
+None
+
+
+For example, one should try to avoid
+
+
+1. Returning a handle of a private member variable via public member functions
+
+
+2. Returning a pointer of a private function via public interface
+

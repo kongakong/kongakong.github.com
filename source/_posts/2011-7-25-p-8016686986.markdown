@@ -1,0 +1,16 @@
+---
+layout: post
+title: "TTBA"
+date: 2011-07-25 08:18
+comments: true
+categories: llvm
+---
+
+None
+
+
+Type based alias analysis
+
+
+LLVM Feature, enable by using -strict-aliasing
+

@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Item 43:  Use multiple inheritance judiciously"
+date: 2011-06-13 12:35
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+The deadly diamond shape inheritance relationship.
+
+
+That’s why Java uses multiple interface instead.
+

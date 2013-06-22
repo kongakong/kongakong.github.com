@@ -1,0 +1,18 @@
+---
+layout: post
+title: "gcc vs llvm-gcc on osx"
+date: 2012-01-13 22:33
+comments: true
+categories: osx lion
+---
+
+None
+
+
+```
+$ gcc-4.2
+i686-apple-darwin11-gcc-4.2.1: no input files
+$ gcc
+i686-apple-darwin11-llvm-gcc-4.2: no input files
+```
+

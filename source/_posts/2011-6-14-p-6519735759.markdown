@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 46:  Prefer compile-time and link-time errors to runtime errors"
+date: 2011-06-14 22:41
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+I suppose it is fairly straightforward: if we can take advantage of the static nature of the language, we should.
+

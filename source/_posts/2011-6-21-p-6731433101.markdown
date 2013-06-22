@@ -1,0 +1,18 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-06-21 05:51
+comments: true
+categories: python windows x86_64
+---
+
+None
+
+
+None
+
+
+Brian Curtin submitted a patch to enable python 2.7 to compile using VS2010 for x64 target. The bug is rejected at the end because it might eventually move to VS2012
+

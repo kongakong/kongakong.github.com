@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Get pid of the current process in erlang"
+date: 2012-05-06 21:41
+comments: true
+categories: erlang
+---
+
+None
+
+
+```
+$ erl
+Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe] [kernel-poll:false]
+
+Eshell V5.8.5  (abort with ^G)
+1> import(os).
+ok
+2> os:getpid().
+"50615"
+```
+

@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Emacs fu 2"
+date: 2013-04-30 07:12
+comments: true
+categories: Emacs erlang
+---
+
+None
+
+
+erlware-mode is deprecated (
+
+[https://github.com/erlware-deprecated/erlware-mode](https://github.com/erlware-deprecated/erlware-mode)
+
+
+Use erlang-mode in erlang distribution instead
+

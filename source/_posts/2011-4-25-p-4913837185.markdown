@@ -1,0 +1,21 @@
+---
+layout: post
+title: "More CG APIs: CGGeometry"
+date: 2011-04-25 11:34
+comments: true
+categories: objective-c
+---
+
+None
+
+
+CGGeometry documentation 
+
+[http://developer.apple.com/library/mac/#documentation/GraphicsImaging/Reference/CGGeometry/Reference/reference.html](here)
+
+
+e.g
+
+
+Getting Min, Mid, and Max Values
+

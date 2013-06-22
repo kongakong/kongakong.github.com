@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Item 10:  Write operator delete if you write operator new"
+date: 2011-05-31 06:38
+comments: true
+categories: 
+---
+
+None
+
+
+
+Rather self-explanatory.
+
+
+
+
+Two recommended checks:
+
+
+
+
+
+

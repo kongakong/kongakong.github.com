@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Singleton"
+date: 2012-07-08 20:08
+comments: true
+categories: 
+---
+
+None
+
+
+Quoted from 
+
+
+The Singleton pattern makes sure that a given class has always only one living instance in the application. This can be used, for example, when you want to restrict a resource access to one and only one memory context in the process. For instance, a database connector class can be a Singleton that deals with synchronization and manages its data in memory. It makes the assumption that no other instance is interacting with the database in the meantime.
+This pattern can simplify a lot the way concurrency is handled in an application. Utilities that provide application-wide functions are often declared as Singletons. For instance, in web applications, a class that is in charge of reserving a unique document ID would benefit from the Singleton pattern. There should be one and only one utility doing this job.
+
+
+Implementing the Singleton pattern is straightforward with the 
+

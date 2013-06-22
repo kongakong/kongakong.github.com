@@ -1,0 +1,30 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-05-26 19:47
+comments: true
+categories: ios segue storyboard
+---
+
+None
+
+
+None
+
+
+
+When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.
+
+
+
+
+The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue. 
+
+
+
+
+Once I change the segue type to ‘modal’, it works.
+
+

@@ -1,0 +1,27 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-05-24 19:03
+comments: true
+categories: ubuntu
+---
+
+None
+
+
+Installing Ubuntu 12.04 server. 
+
+
+Used these options: encrypted home directory and LVM
+
+
+The installation is certainly more complicated than the desktop edition in the sense that it will expect the user to be able to answer certain technical questions. 
+
+
+None
+
+
+Therefore, after the machine was rebooted, I did a 
+

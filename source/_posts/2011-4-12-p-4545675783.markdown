@@ -1,0 +1,17 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-04-12 14:17
+comments: true
+categories: objective-c
+---
+
+None
+
+
+Learn something interesting today:  
+
+[http://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/doc/uid/20000050-SW5](NSObject::resolveInstanceMethod:)
+

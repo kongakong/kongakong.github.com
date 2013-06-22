@@ -1,0 +1,19 @@
+---
+layout: post
+title: "My EXC_BAD_ACCESS mystery"
+date: 2011-01-29 16:42
+comments: true
+categories: 
+---
+
+None
+
+
+It turns out it is because of the following line of code:
+
+
+None
+
+
+It should be 
+

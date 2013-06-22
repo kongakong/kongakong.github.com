@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Very old easy_install"
+date: 2012-04-30 21:42
+comments: true
+categories: 
+---
+
+None
+
+
+For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries.
+
+
+```
+
+$ ls -l /usr/local/bin/easy_install
+-rwxr-xr-x  1 root  wheel  364 28 Feb  2009 /usr/local/bin/easy_install
+
+```
+
+The shebang of 
+

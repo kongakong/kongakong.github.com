@@ -1,0 +1,19 @@
+---
+layout: post
+title: "OSX terminal and .bashrc"
+date: 2013-06-08 21:20
+comments: true
+categories: bash osx
+---
+
+None
+
+
+When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.
+
+
+I added this to my .bash_profile to fix the problem:
+
+
+None
+

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "ImportError: No module named _ckernel"
+date: 2012-05-22 07:42
+comments: true
+categories: pyML python
+---
+
+None
+
+
+After installing pyML from source: 
+

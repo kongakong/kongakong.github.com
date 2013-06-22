@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Problem solved: compiling python 3.3 on osx"
+date: 2012-01-15 18:02
+comments: true
+categories: osx gcc python llvm
+---
+
+None
+
+
+
+It is a follow-up on 
+
+
+
+Turns out this problem has been reported to python bug database: 
+
+[http://bugs.python.org/issue13241](None)
+
+[http://bugs.python.org/issue13241](http://bugs.python.org/issue13241)
+
+
+
+The llvm gcc compiler that comes with XCode 4.x is causing the problem.
+
+
+
+
+Do 
+
+
+
+

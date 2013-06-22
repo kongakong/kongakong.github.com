@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Earn another experience point"
+date: 2011-05-24 20:12
+comments: true
+categories: erlang
+---
+
+None
+
+
+Wrote up a simple test module code (simply called ‘test’), inside which I defined a function 
+
+
+When I compile the module, I get this error message:
+
+
+None
+
+
+Not really understand what is wrong, I proceed to run the code like so: 
+
+
+Now I get another error message:
+
+
+None
+
+
+Turns out the function declaration is 
+
+
+See the problem there? 
+

@@ -1,0 +1,18 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-08-30 22:43
+comments: true
+categories: linux erlang
+---
+
+None
+
+
+Trying to build erlang on scientific linux. 
+
+
+Currently missing a number of libraries. Installing java-1.6.0-openjdk now for the jinterface
+

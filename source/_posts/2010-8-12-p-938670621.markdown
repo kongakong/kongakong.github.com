@@ -1,0 +1,19 @@
+---
+layout: post
+title: "iPhone 4 provisioning blue"
+date: 2010-08-12 07:03
+comments: true
+categories: 
+---
+
+None
+
+
+Keep getting this “no provisioned iphone OS device is connected’.
+
+
+In the Xcode Organiser it says, “The version of iPhone OS on XYZ does not match any of the versions of iPhone OS supported for development with this installation of the iPhone SDK”. Could it be the reason?
+
+
+Time to download the new SDK
+

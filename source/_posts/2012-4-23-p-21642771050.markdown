@@ -1,0 +1,40 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-04-23 22:01
+comments: true
+categories: hg repository self-study mercurial
+---
+
+None
+
+
+If I have removed a file by accident, and want to reinstate the file form a source code repository, then, 
+
+in subversion I will do
+
+```
+svn update file
+```
+
+
+in mercurial I will do
+
+```
+hg revert file
+```
+
+In git,
+
+```
+git checkout file
+```
+
+
+
+Reference:
+
+[http://hgbook.red-bean.com/read/mercurial-in-daily-use.html](mercurial )
+

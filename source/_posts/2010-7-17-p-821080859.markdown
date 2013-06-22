@@ -1,0 +1,16 @@
+---
+layout: post
+title: "glColor3f and OpenGL ES 2.0"
+date: 2010-07-17 08:38
+comments: true
+categories: 
+---
+
+None
+
+
+glColor3f is not available in OpenGL ES.
+
+
+Now I realised that OpenGL ES should be regarded as a standard in its own right, not a subset of the OpenGL.
+

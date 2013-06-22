@@ -1,0 +1,13 @@
+---
+layout: post
+title: "iOS and Bluetooth"
+date: 2010-07-26 21:41
+comments: true
+categories: 
+---
+
+None
+
+
+iOS does not let you to directly access most of the bluetooth APIs that are present in the OSX. You could use GameKit for peer to peer, but that’s.
+

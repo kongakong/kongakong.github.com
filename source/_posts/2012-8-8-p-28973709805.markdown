@@ -1,0 +1,18 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-08-08 19:53
+comments: true
+categories: 
+---
+
+None
+
+
+Got this error message in xcode
+
+
+It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem
+

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 16:  Assign to all data members in operator="
+date: 2011-06-02 21:08
+comments: true
+categories: 
+---
+
+None
+
+
+For a derived class, a way to achieve this is by reusing base class’s 
+

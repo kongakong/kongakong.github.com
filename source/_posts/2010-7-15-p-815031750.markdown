@@ -1,0 +1,22 @@
+---
+layout: post
+title: "KVO - Key Value Observation"
+date: 2010-07-15 22:37
+comments: true
+categories: s
+---
+
+None
+
+
+Use
+
+
+to register an observer to the observed object.
+
+
+Use
+
+
+to capture the fired, observing events.
+

@@ -1,0 +1,21 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-03-08 22:00
+comments: true
+categories: objective-c
+---
+
+None
+
+
+1) NSNumberFormatter 
+
+
+2) -[NSString integerValue], -[NSString floatValue]
+
+
+3) low level c function atof()
+

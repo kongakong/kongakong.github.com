@@ -1,0 +1,32 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-03-09 22:00
+comments: true
+categories: objective-c
+---
+
+None
+
+
+
+I have these buttons that for some reason will send message to two ‘slots’: one to the controller and the other to the responders.
+
+
+
+
+It doubles operation.
+
+
+
+
+I tried to remove the in the interface builder, but Xcode 4 just crashed
+
+
+
+
+Workaround: I remove the connections in the ‘assistent’ on the right hand side, then rewire the connection in the interface builder
+
+

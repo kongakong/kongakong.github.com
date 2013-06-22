@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Item 22:  Prefer pass-by-reference to pass-by-value"
+date: 2011-06-04 20:52
+comments: true
+categories: c++ Effective C++ self-study
+---
+
+None
+
+
+First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.
+
+
+Secondly, it avoids this kind of error:
+
+
+A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.
+

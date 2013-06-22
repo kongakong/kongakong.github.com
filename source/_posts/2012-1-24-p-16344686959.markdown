@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Installing JDEE for emacs: Problem with avltree"
+date: 2012-01-24 06:13
+comments: true
+categories: emacs osx version
+---
+
+None
+
+
+
+It means I am missing the elib library. 
+
+
+
+
+However according to 
+
+[http://www.gnu.org/software/elib/](GNU)
+
+
+
+It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old 
+
+
+
+Use brew to install the latest version of emacs
+
+

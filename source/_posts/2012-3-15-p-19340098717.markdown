@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Disappointed at MS powershell"
+date: 2012-03-15 22:05
+comments: true
+categories: powershell COM python
+---
+
+None
+
+
+My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.
+
+
+So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.
+
+
+Some COM calls to the excel workbook object just failed when it works fine in vbs or python  with win32com.
+
+
+The lack of string manipulation functions is not helping either, especially the completion comes from scripting languages like python.
+
+
+Powershell is probably a good tool to interface with .Net framework and to handle Windows admin task. But for me it is not a language of first choice.
+

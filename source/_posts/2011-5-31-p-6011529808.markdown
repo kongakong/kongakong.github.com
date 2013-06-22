@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 8:  Adhere to convention when writing operator new and operator delete"
+date: 2011-05-31 06:33
+comments: true
+categories: 
+---
+
+None
+
+
+Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom 
+

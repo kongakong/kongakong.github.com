@@ -1,0 +1,48 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-05-27 07:46
+comments: true
+categories: 
+---
+
+None
+
+
+
+The debugger will stop at the 
+
+
+
+It totally throws me off because nothing is wrong on that line.
+
+
+
+
+I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.
+
+
+
+
+But it did not fix the problem.
+
+
+
+
+Eventually I undo the last change I made, which is
+
+
+
+
+
+and it works again.
+
+
+
+
+
+Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.
+
+

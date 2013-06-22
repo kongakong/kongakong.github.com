@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Item 40:  Model 'has-a' or 'is-implemented-in-terms-of' through layering"
+date: 2011-06-13 06:09
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+Layering is known as composition, containment, and embedding.
+
+
+It represents a ‘has-a’ relationship
+

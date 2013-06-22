@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 19:  Differentiate among member functions, non-member functions, and friend functions"
+date: 2011-06-03 06:04
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t
+

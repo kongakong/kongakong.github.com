@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Item 39:  Avoid casts down the inheritance hierarchy"
+date: 2011-06-13 06:06
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+It touches on the topic of 
+
+
+First of all, downcasting itself is usually unnecessary in most situation where the virtual functions are suffice. 
+
+
+If it must be done, use 
+

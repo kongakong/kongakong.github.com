@@ -1,0 +1,16 @@
+---
+layout: post
+title: "subversion note 2"
+date: 2011-01-18 16:44
+comments: true
+categories: 
+---
+
+None
+
+
+To back out a changeset from your working copy (eg. 4321):
+
+
+Or multiple changesets:
+

@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Whenever you think you need urllib2, you actually need requests"
+date: 2013-05-14 07:21
+comments: true
+categories: python requests
+---
+
+None
+
+
+Since I have started using python since version 2.4, I have a lot of old die-hard habit. For one, I write exception handler like this
+
+
+instead  of
+
+
+The later is of course a better and more flexible style.
+
+
+So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.
+
+
+It usually works great… until you need something more than basic.
+
+
+Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…
+
+
+Why it throws an exception 
+
+
+OK, let’s import DefaultCookiePolicy. Then I got hit by a 
+
+
+At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.
+
+
+Instead of continuing banging my head against a wall, I recall reading about ‘requests’ module. Let give it a go.
+
+
+Like magic, it is all I need. 2 lines.
+
+
+It just works. Well done, requests!
+

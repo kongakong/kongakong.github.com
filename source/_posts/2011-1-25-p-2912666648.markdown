@@ -1,0 +1,15 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-01-25 08:00
+comments: true
+categories: ios coredata
+---
+
+None
+
+
+Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation
+

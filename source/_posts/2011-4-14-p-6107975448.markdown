@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Is there any condition where finally might not run in java?"
+date: 2011-04-14 20:04
+comments: true
+categories: java
+---
+
+None
+
+
+1. If there is lock condition in the 
+
+
+2. JVM is terminated (e.g. 
+

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Naming convention: -init, -new, -copy"
+date: 2011-04-13 18:39
+comments: true
+categories: objective-c
+---
+
+None
+
+
+Retain count = 1
+

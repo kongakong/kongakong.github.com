@@ -1,0 +1,17 @@
+---
+layout: post
+title: "
+None
+"
+date: 2013-06-07 20:40
+comments: true
+categories: 
+---
+
+None
+
+
+Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful: 
+
+[http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications](http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications)
+

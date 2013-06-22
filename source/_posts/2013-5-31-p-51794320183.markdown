@@ -1,0 +1,21 @@
+---
+layout: post
+title: "
+None
+"
+date: 2013-05-31 20:00
+comments: true
+categories: Emacs osx
+---
+
+None
+
+
+When I start up emacs in shell, I got this error message:
+
+
+But my config file works fine with Aquamacs.
+
+
+It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.
+

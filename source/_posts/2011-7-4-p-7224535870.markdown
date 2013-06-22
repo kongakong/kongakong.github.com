@@ -1,0 +1,21 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-07-04 21:00
+comments: true
+categories: vim
+---
+
+None
+
+
+Some useful vim trick
+
+
+:echo $HOME
+
+
+It is where you can put a 
+

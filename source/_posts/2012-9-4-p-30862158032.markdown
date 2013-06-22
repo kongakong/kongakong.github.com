@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Doing python programming on osx"
+date: 2012-09-04 19:33
+comments: true
+categories: python
+---
+
+None
+
+
+Saw this 
+
+[http://www.reddit.com/r/Python/comments/z16ap/switch_to_mac_for_python_programming/c60vbly](post)
+
+
+Basically, they are
+
+
+A main problem I had before is building scipy. Hopefully pythonbrew might fix this issue.
+

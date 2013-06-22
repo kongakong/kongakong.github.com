@@ -11,5 +11,10 @@ None
 
 Extremely useful for debugging which HSQL has caused database server exception
 
-
+```
+log4j.logger.org.hibernate.SQL=trace
+log4j.logger.org.hibernate.engine.query=trace
+log4j.logger.org.hibernate.type=trace
+log4j.logger.org.hibernate.jdbc=trace
+```
 

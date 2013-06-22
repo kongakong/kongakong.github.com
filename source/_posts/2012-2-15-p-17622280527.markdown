@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Objective-c protocol syntax"
+date: 2012-02-15 09:00
+comments: true
+categories: objective-c syntax
+---
+
+None
+
+
+```
+@interface ClassName ( CategoryName ) < protocol list >
+```
+
+As a java/c++ programmer, my first instinct is that 
+

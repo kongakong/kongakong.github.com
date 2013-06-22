@@ -1,0 +1,40 @@
+---
+layout: post
+title: "Problem: Cannot use 'push' segue between a UITableview cell and another controller"
+date: 2012-05-28 20:19
+comments: true
+categories: ios uiviewcontoller
+---
+
+None
+
+
+None
+
+
+The UITableViewController does not ‘live’ in a UINavigationController
+
+
+None
+
+
+Because I am using storyboard, the solution is slightly different from non-storyboard project.
+
+
+Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.
+
+
+To fix the problem, I have to 
+
+
+1) drag a UINavigationController in between the TabBarController and the First Custom Controller.
+
+
+2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller
+
+
+3) Add a relationship between the TabBarController and the new UINavigationController
+
+
+4) Add a relationship between the new UINavigationController and the new First Custom Controller
+

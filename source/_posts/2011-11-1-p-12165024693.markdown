@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "P(SPAM|"today is secret")"
+title: "P(SPAM|'today is secret')"
 date: 2011-11-01 04:25
 comments: true
 categories: 

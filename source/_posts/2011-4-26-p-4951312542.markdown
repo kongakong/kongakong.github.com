@@ -1,0 +1,13 @@
+---
+layout: post
+title: "UIView tag and viewWithTag"
+date: 2011-04-26 17:10
+comments: true
+categories: objective-c
+---
+
+None
+
+
+Bad idea to set tag to 0
+

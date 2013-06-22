@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Item 15:  Have operator= return a reference to *this"
+date: 2011-06-01 21:09
+comments: true
+categories: 
+---
+
+None
+
+
+
+A common error amongst new C++ programmers is to have
+
+
+
+Here is an example implementation:
+
+

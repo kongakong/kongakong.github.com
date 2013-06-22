@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Enabling STM in python"
+date: 2011-08-29 22:38
+comments: true
+categories: python stm
+---
+
+None
+
+
+This 
+
+[http://bugs.python.org/issue12850](python issue)
+
+
+I am surprised by how short the patch is.
+

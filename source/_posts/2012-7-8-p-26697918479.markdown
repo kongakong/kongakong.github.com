@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Creational pattern in python"
+date: 2012-07-08 00:39
+comments: true
+categories: python
+---
+
+None
+
+
+A creational pattern provides a particular instantiation mechanism. It can be a particular object factory or even a class factory. This is an important pattern in compiled languages such as C, since it is harder to generate types on-demand at run time.
+
+
+But this feature is built-in in Python, for instance the type built-in, which lets you define a new type by code:
+
+
+Classes and types are built-in factories
+

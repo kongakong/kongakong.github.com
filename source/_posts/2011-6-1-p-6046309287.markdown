@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 13: List members in an initialization list in the order in which they are declared"
+date: 2011-06-01 06:40
+comments: true
+categories: c++ Effective C++ self-study
+---
+
+None
+
+
+Because destructor cleans up in the reverse order.
+

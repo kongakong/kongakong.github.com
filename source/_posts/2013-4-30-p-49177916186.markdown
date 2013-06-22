@@ -1,0 +1,16 @@
+---
+layout: post
+title: "homebrew and erlang R16B"
+date: 2013-04-30 00:01
+comments: true
+categories: erlang homebrew
+---
+
+None
+
+
+Currently the version of erlang in homebrew is defaulted to version R15B03-1 even though a more recent version, R16B, is available.
+
+
+To install R16B, it is what I did:
+

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Item 1:  Prefer const and inline to #define"
+date: 2011-05-30 02:14
+comments: true
+categories: 
+---
+
+None
+
+
+Classic example of why sometimes macro is a bad idea:
+
+
+

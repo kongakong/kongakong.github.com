@@ -1,0 +1,15 @@
+---
+layout: post
+title: "How to wrap an exception in a custom exception with original stacktrace and re-raise?"
+date: 2012-03-07 22:00
+comments: true
+categories: 
+---
+
+None
+
+
+Here is an example:
+
+
+

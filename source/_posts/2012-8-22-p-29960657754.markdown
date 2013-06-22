@@ -1,0 +1,21 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-08-22 21:34
+comments: true
+categories: MD5sum
+---
+
+None
+
+
+It is extremely frustrating to use Windows. Any basic tool that you would expect a modern OS to have is absent in Windows. In a corporate environment a PC is locked down so it is not possible to download useful utilities at will. To use Windows productively is always a daily struggle.
+
+
+Today I want to find out a md5 checksum of a file in a Windows 7 PC. Of course, 
+
+
+Luckily python is available on this PC. So, I rolled my own 
+

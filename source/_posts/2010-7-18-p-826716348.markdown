@@ -1,0 +1,21 @@
+---
+layout: post
+title: "iOS and OpenGL ES"
+date: 2010-07-18 16:17
+comments: true
+categories: 
+---
+
+None
+
+
+As a newcomer on the iOS platform, it really takes a while to understand the support of the OpenGL ES standard on the iPhone/iPad platform.
+
+
+According to 
+
+[http://developer.apple.com/iphone/library/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/OpenGLESontheiPhone/OpenGLESontheiPhone.html#//apple_ref/doc/uid/TP40008793-CH101-SW1](the Apple doc)
+
+
+I suppose it means both ES 1.1 and 2.0 are supported by iPhone and iPad.
+

@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Item 23 revisited"
+date: 2011-06-05 11:42
+comments: true
+categories: 
+---
+
+None
+
+
+Revisiting 
+
+
+
+While the title sounds rather generic, the main content is about what is appropriate to return from various operator functions.
+
+
+
+
+SO has a more 
+
+[http://stackoverflow.com/questions/4421706/operator-overloading/4421729](in-depth treatment)
+
+
+
+In the case of binary operators, here is a good example of the function declaration/implementation:
+
+

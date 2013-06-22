@@ -1,0 +1,15 @@
+---
+layout: post
+title: "How to bring a subview to the front when you tap it?"
+date: 2012-06-10 17:11
+comments: true
+categories: xcode4 ios
+---
+
+None
+
+
+```
+[parentView bringSubviewToFront:childView];
+```
+

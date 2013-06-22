@@ -1,0 +1,34 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-09-01 20:44
+comments: true
+categories: osx mountain lion
+---
+
+None
+
+
+Doing a clean install of Mountain Lion.
+
+
+Basically all you need to know is contained in this 
+
+[http://apple.stackexchange.com/questions/60653/how-to-do-fresh-install-of-mountain-lion](Q&A)
+
+
+I decided to make a bootable usb thumb drive, following the instruction 
+
+[http://apple.stackexchange.com/a/60660/3428](here)
+
+
+However, when I used the Disk Utility to prepare the usb thumb drive, an error message ‘Could not Restore. Invalid Argument’ came up.
+
+
+Turns out the thumb drive works despite the error message.
+
+
+Now I am restoring my files from the time machine copy.
+

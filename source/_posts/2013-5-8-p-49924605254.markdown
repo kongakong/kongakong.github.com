@@ -1,0 +1,22 @@
+---
+layout: post
+title: "XPath, Python and Erlang"
+date: 2013-05-08 20:00
+comments: true
+categories: erlang python
+---
+
+None
+
+
+Just feel that python is easier for XML manipulation.
+
+
+e.g.
+
+
+Very concise.
+
+
+whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.
+

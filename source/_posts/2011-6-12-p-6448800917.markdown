@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Item 34:  Minimize compilation dependencies between files"
+date: 2011-06-12 20:00
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+There are three technique to make a header file more self-contained:
+
+
+1. 
+
+
+This will avoid the need of including a header file
+
+
+2. 
+
+
+Use forward declaration instead
+
+
+None
+
+
+None
+

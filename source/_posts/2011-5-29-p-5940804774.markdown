@@ -1,0 +1,27 @@
+---
+layout: post
+title: "Difference between setObject:forKey: and setValue:forKey: in  NSMutableDictionary"
+date: 2011-05-29 06:35
+comments: true
+categories: objective-c stackoverflow
+---
+
+None
+
+
+From 
+
+[http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653](SO)
+
+
+None
+
+
+None
+
+
+What adds to the confusion is that 
+
+
+So in a nutshell, use 
+

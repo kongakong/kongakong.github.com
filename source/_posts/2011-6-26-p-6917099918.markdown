@@ -1,0 +1,15 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-06-26 08:51
+comments: true
+categories: ldap nis
+---
+
+None
+
+
+Unlike an NIS server, an LDAP server cannot be its own client. In other words, a machine that is running as an LDAP server cannot be configured as an LDAP client.
+

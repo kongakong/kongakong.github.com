@@ -1,0 +1,27 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-10-14 19:30
+comments: true
+categories: scala scalaIDE
+---
+
+None
+
+
+Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code
+
+
+I proceeded to run it by using the ‘Run it…’. I expected to see ‘Run as Scala Application’ but the option was not there.
+
+
+Turns out it is my mistake. I need to extends the object from 
+
+
+Then the option will appear (as shown here):
+
+
+None
+

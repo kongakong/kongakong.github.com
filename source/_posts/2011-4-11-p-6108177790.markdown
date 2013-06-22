@@ -1,0 +1,30 @@
+---
+layout: post
+title: "JVM: Sizing the Generations"
+date: 2011-04-11 22:53
+comments: true
+categories: java jvm
+---
+
+None
+
+
+
+A few parameters:
+
+
+
+
+From 
+
+[http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html](Sun JVM Documentation)
+
+
+
+
+
+
+
+The proportion of the heap dedicated to the young generation: The bigger the young generation, the less often minor collections occur. However, for a bounded heap size a larger young generation implies a smaller tenured generation, which will increase the frequency of major collections. The optimal choice depends on the lifetime distribution of the objects allocated by the application.
+
+

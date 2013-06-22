@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Interface type cannot be statically allocated"
+date: 2012-05-27 12:26
+comments: true
+categories: xcode
+---
+
+None
+
+
+This code fragment
+```
+// item is a MPMediaItem
+NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+```
+
+causes 
+

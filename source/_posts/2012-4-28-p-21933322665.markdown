@@ -1,0 +1,22 @@
+---
+layout: post
+title: "pip, setuptools, easy_install and distribute"
+date: 2012-04-28 07:42
+comments: true
+categories: python3 setuptools pip
+---
+
+None
+
+
+Trying to install pip 1.1 for python3. 
+
+```
+$ python3 setup.py install
+Traceback (most recent call last):
+  File "setup.py", line 3, in 
+
+[http://pypi.python.org/pypi/setuptools](setuptools)
+
+[http://packages.python.org/distribute/](Distribute)
+

@@ -1,0 +1,18 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-05-18 19:42
+comments: true
+categories: objective-c nslog
+---
+
+None
+
+
+As a beginner of objective-C, from time to time I still get caught in incorrect format string used in NSLog.
+
+
+For example, I should use 
+

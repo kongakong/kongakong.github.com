@@ -1,0 +1,31 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-05-13 23:38
+comments: true
+categories: 
+---
+
+None
+
+
+
+Taken from 
+
+[http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf](Lecture 2)
+
+
+
+
+
+
+
+Module functions arenât higher-order function.
+
+
+
+
+Instead, we can wrap it with a 
+

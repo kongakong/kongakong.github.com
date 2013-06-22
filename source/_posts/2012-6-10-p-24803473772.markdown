@@ -1,0 +1,18 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-06-10 18:38
+comments: true
+categories: xcode4 ios
+---
+
+None
+
+
+Annoying. Cannot get the subview resized automatically, despite doing this:
+
+
+Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController
+

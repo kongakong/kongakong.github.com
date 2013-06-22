@@ -1,0 +1,40 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-06-16 22:17
+comments: true
+categories: virtualbox gcc g++ fedora
+---
+
+None
+
+
+
+Encountered 
+
+
+
+
+when trying to install the 
+
+
+
+As part of the error message, it clearly indicated which package (a kernel-devel package)  needs to be installed.
+
+
+
+
+Then it reports the gcc is not found. 
+
+
+
+Take a few reboot and reinstallation to get it right
+
+
+
+
+But Fedora is not working 100% in this VM environment. Sometimes part of the screen turns blue for no reason or when mouseover
+
+

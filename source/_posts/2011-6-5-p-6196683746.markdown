@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Item 31:  Never return a reference to a local object or to a dereferenced pointer initialized by new within the function"
+date: 2011-06-05 11:54
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+The first part is easy to understand: scope issue
+
+
+The second part is important because it will lead to memory leak. (Related to item 23 and operator overload)
+

@@ -1,0 +1,18 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-08-05 19:50
+comments: true
+categories: coredata objective-c ios
+---
+
+None
+
+
+Encountered this error when adding core data support to my ios project
+
+
+Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <AppName>-Prefix.pch
+

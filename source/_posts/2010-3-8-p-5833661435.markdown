@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Duration"
+date: 2010-03-08 16:12
+comments: true
+categories: self-study
+---
+
+None
+
+
+The duration formula reduces the bond in question down to a zero coupon bond equivalent. The result is measured in years. A 7% 30-year bond with a 7.2-year duration is expected to have the same volatility as a zero coupon bond maturing in 7.2 years. 
+
+
+Furthermore, the price is expected to change roughly 7.2% when interest rates change 100 bp.
+

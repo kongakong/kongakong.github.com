@@ -1,0 +1,40 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-05-03 21:40
+comments: true
+categories: osx lion virtualenv python
+---
+
+None
+
+
+Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.
+
+```
+
+gfortran:f77: scipy/sparse/linalg/eigen/arpack/ARPACK/FWRAPPERS/veclib_cabi_f.f
+
+ar: adding 50 object files to build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cgetv0.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaitr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnapps.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaup2.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneigh.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cngets.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+
+/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(csortc.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+```
+

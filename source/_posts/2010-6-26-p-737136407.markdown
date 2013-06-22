@@ -1,0 +1,25 @@
+---
+layout: post
+title: "NSLog"
+date: 2010-06-26 14:58
+comments: true
+categories: objective-c
+---
+
+None
+
+
+Objective-c/Apple platform is my new adventure.
+
+
+Step 0 is acquisition of a Apple machine.
+
+
+Step 1, obviously, is to get familiar with the IDE, Xcode.
+
+
+Step 2? I would say it is to be effective in searching and reading the documentation.
+
+
+That’s how NSLog becomes the title of the post: how could I find out all I need to know about the ‘format’ parameter efficiently?
+

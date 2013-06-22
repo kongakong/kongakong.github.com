@@ -1,0 +1,24 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-07-25 00:48
+comments: true
+categories: mssql mssql2000
+---
+
+None
+
+
+For MSSQL2000, a row cannot exceed the size of a page, which is 8KB - overhead i.e. 8060 bytes. 8KB is the size of a continuos disk space for storing, read and writing data. 
+
+
+None
+
+
+None
+
+
+None
+

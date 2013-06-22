@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Objective-c: Interface builder "
+date: 2010-11-11 21:34
+comments: true
+categories: 
+---
+
+None
+
+
+An object instance variable in Interface Builder is known as an outlet.
+
+
+Action methods must have an IBAction return type
+

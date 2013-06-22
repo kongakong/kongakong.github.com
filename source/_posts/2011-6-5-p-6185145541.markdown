@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Item 25:  Avoid overloading on a pointer and a numerical type"
+date: 2011-06-05 05:36
+comments: true
+categories: c++ Effective C++ self-study
+---
+
+None
+
+
+Some concepts:
+
+
+1. member function templates (c++ language construct)
+
+
+2. NullClass (useful while you are a caller of the function and want to avoid potential mistake)
+

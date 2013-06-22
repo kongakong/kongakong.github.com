@@ -1,0 +1,37 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-05-26 18:25
+comments: true
+categories: ios xcode storyboard
+---
+
+None
+
+
+
+Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.
+
+
+
+
+Since I did not start with a UITableViewController at the beginning, I was unable to connect a segway to an individual cell inside the table view. 
+
+
+
+
+Finally, by trial and error, I dragged a ‘Table View Cell’ object onto the UITableView. It is now displayed as ‘Prototype Cells’
+
+
+
+
+I can create an outgoing segway from this prototype cell. But now I am getting this error message
+
+
+
+
+
+It can be easily fixed by simply filling in the 
+

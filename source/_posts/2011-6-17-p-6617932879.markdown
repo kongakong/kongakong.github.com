@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Item 47:  Ensure that non-local static objects are initialized before they're used"
+date: 2011-06-17 20:51
+comments: true
+categories: c++ Effective C++
+---
+
+None
+
+
+Use Singleton pattern to manage non-local static object
+

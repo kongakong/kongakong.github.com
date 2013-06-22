@@ -1,0 +1,24 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-03-17 12:38
+comments: true
+categories: objective-c xcode4.3.1 appcode
+---
+
+None
+
+
+Getting this:  “Couldn’t register com.abc.MyApp with the bootstrap server. Error: unknown error code.” when trying to run a unit test in AppCode.
+
+
+The underlying Xcode version is 4.3.1
+
+
+The only way to resolve it is restarting the computer.
+
+
+I cannot even get magsafe to work. The magsafe is connected to the connector, but the battery icon is showing: “Not charging”. Something is a very wrong at the kenrel level.
+

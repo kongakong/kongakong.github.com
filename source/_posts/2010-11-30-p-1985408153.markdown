@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Base SDK Missing "
+date: 2010-11-30 22:19
+comments: true
+categories: 
+---
+
+None
+
+
+None
+
+
+From Project -> Edit Project Settings
+
+
+Choose Build tab
+
+
+Set ‘Base SDK’ to 
+

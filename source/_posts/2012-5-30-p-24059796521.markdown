@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Basic Collections in Objective-C"
+date: 2012-05-30 22:23
+comments: true
+categories: objective-c
+---
+
+None
+
+
+None
+
+[https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Arrays.html](Array)
+
+
+None
+
+[https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Dictionaries.html](Dictionary - NSMutableDictionary)
+
+
+None
+
+[https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Sets.html](NSSet)
+
+
+None
+
+[https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/index.html](Index Sets - NSIndexSet)
+

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Delete a row from UITableView"
+date: 2012-08-16 19:35
+comments: true
+categories: ios uitableview
+---
+
+None
+
+
+To enable the swipe to delete feature, one must implement this API:
+
+
+None
+
+
+I can enable this feature, but I got this exception from this function
+
+
+It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is still bound to the old data set and hence the internal inconsistency.
+

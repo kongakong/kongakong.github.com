@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Xcode 4 woe cont'd"
+date: 2011-03-05 05:07
+comments: true
+categories: 
+---
+
+None
+
+
+Still not getting it right. The new referenced project now appear twice in the parent project. Does it has anything to do with softlink?
+
+
+None
+

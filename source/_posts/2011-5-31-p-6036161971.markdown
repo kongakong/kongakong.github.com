@@ -1,0 +1,15 @@
+---
+layout: post
+title: "C++ Weirdness"
+date: 2011-05-31 23:05
+comments: true
+categories: 
+---
+
+None
+
+
+This calls the copy constructor
+
+
+

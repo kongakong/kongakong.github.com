@@ -1,0 +1,19 @@
+---
+layout: post
+title: "maven2 archetype:generate problem"
+date: 2011-02-04 14:42
+comments: true
+categories: 
+---
+
+None
+
+
+This archetype does not generate the site module which causes problem when running 
+
+
+And use 
+
+
+Also somehow the project id is not set according to the command line options.
+

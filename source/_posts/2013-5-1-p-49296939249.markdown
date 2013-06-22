@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Trying out cocoapods"
+date: 2013-05-01 06:45
+comments: true
+categories: cocoapods xcode4
+---
+
+None
+
+
+The installation failed at the end
+
+
+It failed because I did not install the command line tools in XCode. After installing the tool, the gem command ran fine.
+

@@ -1,0 +1,19 @@
+---
+layout: post
+title: "How to dismiss a modal view controller which is created by a segue in storyboard?"
+date: 2012-08-12 19:50
+comments: true
+categories: ios uiviewcontoller storyboard
+---
+
+None
+
+
+A way to dismiss a modal view controller is to link the button to an 
+
+
+But it does not work in storyboard anymore.
+
+
+This is the solution:
+

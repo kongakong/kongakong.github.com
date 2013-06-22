@@ -1,0 +1,21 @@
+---
+layout: post
+title: "This class is not key value coding-compliant for the key 'xyz'"
+date: 2012-07-29 18:38
+comments: true
+categories: ios NSUnknownKeyException
+---
+
+None
+
+
+I was playing with a 
+
+[http://www.mobisoftinfotech.com/blog/iphone/ios-tutorial-custom-speedometer-control/](Speedo Meter Demo)
+
+
+It turned out I added a control ‘test’, linked it to an IBOutlet and then removed the control. Since the link to IBOutlet is still in the IB file, hence the error.
+
+
+By right mouse click on the ‘Owner’ and remove the invalid link, it fixes the problem.
+

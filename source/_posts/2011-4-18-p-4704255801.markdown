@@ -1,0 +1,20 @@
+---
+layout: post
+title: "
+None
+"
+date: 2011-04-18 10:25
+comments: true
+categories: 
+---
+
+None
+
+
+Struggled with Jquery autocomplete for a few days. It turns out I was using an unsupported version from bassistance.de
+
+
+The autocomplete from  
+
+[http://jqueryui.com/](JQuery UI Project)
+

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Single quote is for something else in erlang"
+date: 2013-05-06 06:56
+comments: true
+categories: erlang python
+---
+
+None
+
+
+In python, single quote and double quote are pretty much interchangable. Not so in erlang.
+

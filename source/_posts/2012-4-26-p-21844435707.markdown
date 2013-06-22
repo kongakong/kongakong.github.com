@@ -1,0 +1,30 @@
+---
+layout: post
+title: "
+None
+"
+date: 2012-04-26 22:02
+comments: true
+categories: xcode osx gcc
+---
+
+None
+
+
+I think I finally understand what the problem is. 
+
+
+In previous version of Xcode (prior to 4.3), it will install the llvm-gcc and the ‘original’ gcc.
+
+
+gcc will invoke the llvm-gcc and gcc-4.2 will invoke the GNU gcc.
+
+
+However, since 4.3, these command line tools will not be installed by default. We can have the command line tools like svn, make and gcc installed by download the ‘command line tools for OSX’ in XCode.
+
+
+However, the package does not include GNU gcc. 
+
+
+It is the next problem I have to fix.
+

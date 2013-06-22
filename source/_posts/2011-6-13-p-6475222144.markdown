@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Item 42:  Use private inheritance judiciously"
+date: 2011-06-13 12:27
+comments: true
+categories: 
+---
+
+None
+
+
+To inherit the implementation but not the interface.
+
+Example:
+
+
+

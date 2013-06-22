@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Item 12: Prefer initialization to assignment in constructors"
+date: 2011-06-01 06:29
+comments: true
+categories: c++ Effective C++ self-study
+---
+
+None
+
+
+
+
+
+
+
+When there is a large number of data members of built-in types
+
+

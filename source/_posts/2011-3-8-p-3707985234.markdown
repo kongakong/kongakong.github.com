@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Xcode 4 woe III"
+date: 2011-03-08 08:21
+comments: true
+categories: 
+---
+
+None
+
+
+Added files to a wrong location in a project (basically above the project root node) and I cannot remove them (Delete option is disabled)
+
+
+Trying to hack the project file itself.
+

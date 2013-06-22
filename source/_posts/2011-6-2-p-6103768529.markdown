@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Installing couchdb using brew"
+date: 2011-06-02 20:32
+comments: true
+categories: couchdb erlang osx brew
+---
+
+None
+
+
+Message after a successful installation
+
+```
+
+If this is your first install, automatically load on login with:
+    mkdir -p ~/Library/LaunchAgents
+    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
+    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+
+Or start manually with:
+    couchdb
+
+```
+

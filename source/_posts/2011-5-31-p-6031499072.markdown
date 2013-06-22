@@ -1,0 +1,15 @@
+---
+layout: post
+title: "How to abort a maven build if checkstyle fails"
+date: 2011-05-31 17:50
+comments: true
+categories: 
+---
+
+None
+
+
+It is not entirely obvious in 
+
+[http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html](checkstyle maven plugin documentation)
+
