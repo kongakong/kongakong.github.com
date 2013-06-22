@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T19:22:02+10:00</updated>
+  <updated>2013-06-22T20:23:53+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,7 @@
     <link href="http://kongakong.github.io/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/"/>
     <updated>2013-06-22T16:27:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p><code>git status</code> says file is modified even if the file content is not changed</p>
 ]]></content>
   </entry>
   
