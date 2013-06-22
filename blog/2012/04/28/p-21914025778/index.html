@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Followup piece of - Timeline</title>
+  <title>Followup piece of my last gcc 4.2 problem - Timeline</title>
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Followup piece of https://github.com/kennethreitz/osx-gcc-installer
-">
+  <meta name="description" content="Followup piece of GNU gcc-4.2 issue on OSX 10.7. So I downloaded a gcc package from this location. Then run this command 1
+installer -pkg GCC-10.7. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">Followup Piece Of</h1>
+      <h1 class="entry-title">Followup Piece of My Last Gcc 4.2 Problem</h1>
     
     
       <p class="meta">
@@ -92,9 +92,19 @@
   </header>
 
 
-<div class="entry-content"><p>Followup piece of</p>
+<div class="entry-content"><p>Followup piece of <a href="http://blog.ahwkong.com/blog/2011/03/05/p-3654702901/">GNU gcc-4.2 issue on OSX 10.7</a>. So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. Then run this command</p>
 
-<p><a href="this%20location">https://github.com/kennethreitz/osx-gcc-installer</a></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>installer -pkg GCC-10.7.pkg -target /</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Problem solved. Now I can compile python3. For example,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>CC=gcc-4.2 ./configure
+</span><span class='line'>make && make install</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 

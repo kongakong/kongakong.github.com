@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gcc | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/gcc/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-23T09:17:45+10:00</updated>
+  <updated>2013-06-23T09:38:00+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,13 +14,20 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Followup piece of]]></title>
+    <title type="html"><![CDATA[Followup piece of my last gcc 4.2 problem]]></title>
     <link href="http://kongakong.github.io/blog/2012/04/28/p-21914025778/"/>
     <updated>2012-04-28T01:08:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2012/04/28/p-21914025778</id>
-    <content type="html"><![CDATA[<p>Followup piece of</p>
+    <content type="html"><![CDATA[<p>Followup piece of <a href="http://blog.ahwkong.com/blog/2011/03/05/p-3654702901/">GNU gcc-4.2 issue on OSX 10.7</a>. So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. Then run this command</p>
 
-<p><a href="this%20location">https://github.com/kennethreitz/osx-gcc-installer</a></p>
+<p><code>
+installer -pkg GCC-10.7.pkg -target /
+</code>
+Problem solved. Now I can compile python3. For example,
+<code>
+CC=gcc-4.2 ./configure
+make &amp;&amp; make install
+</code></p>
 ]]></content>
   </entry>
   
