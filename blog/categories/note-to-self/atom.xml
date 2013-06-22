@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: note-to-self | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/note-to-self/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T21:55:53+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[99% of blogs out there are not worth reading... including this one]]></title>
+    <link href="http://kongakong.github.io/blog/2010/10/21/p-1365438347/"/>
+    <updated>2010-10-21T21:55:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2010/10/21/p-1365438347</id>
+    <content type="html"><![CDATA[<p>If I start to document every software idea I ever have, this blog will feel like it is  maintained by a hyper-active twitter who need to blog every 30 sec.</p>
+
+<p>I shall remind myself of the dictum: <em>Idea is cheap. Implementation is all that counts</em></p>
+]]></content>
+  </entry>
+  
+</feed>

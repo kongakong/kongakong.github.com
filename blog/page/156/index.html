@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Solaris installation: STILl at 45%. SUNWwbapi
+  <meta name="description" content="OK, so nltk.download() will actually bring up a GUI downloader. Did not notice this, and waited for hour.
 ">
   
 
@@ -72,43 +72,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2010/10/26/p-1405815180/">Solaris Installation: STILl at 45%. SUNWwbapi</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-26T21:30:00+11:00" pubdate data-updated="true">Oct 26<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Solaris installation: STILl at 45%. SUNWwbapi</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2010/10/26/p-1405694431/">OK, So &#8220;nltk.download()&#8220; Will Actually Bring Up a GUI Downloader.</a></h1>
+      <h1 class="entry-title"><a href="/blog/2010/10/26/p-1405694431/">nltk.download()</a></h1>
     
     
       <p class="meta">
@@ -146,7 +110,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2010/10/26/p-1405099435/">Running Solaris 10 U9 Installation. The Progress Bar Has Stayed at 45% for a Very Long Time</a></h1>
+      <h1 class="entry-title"><a href="/blog/2010/10/26/p-1405099435/">Solaris 10 U9 Installation</a></h1>
     
     
       <p class="meta">
@@ -182,7 +146,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2010/10/25/p-1389628295/">&#8220;NIF&#8220; Stands for *Native Implementation Function* in Erlang</a></h1>
+      <h1 class="entry-title"><a href="/blog/2010/10/25/p-1389628295/">NIF in Erlang</a></h1>
     
     
       <p class="meta">
@@ -218,7 +182,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2010/10/24/p-1388888975/">Another Weird Problem With Sync’ing Ipad: When It Comes to Photo Sync, It Goes “You Do Not Have Enough Access Privileges to Sync This Ipad”.</a></h1>
+      <h1 class="entry-title"><a href="/blog/2010/10/24/p-1388888975/">iPad Photo Sync</a></h1>
     
     
       <p class="meta">
@@ -246,6 +210,52 @@
 <p>It turns out because of previous share connection problem, I have changed the login for share mapping. The permissions are therefore out of sync.</p>
 
 <p>Fixed by granting write permission to the group for the set of files</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/10/24/p-1388790863/">Dscl</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
+
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
+
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
 </div>
   
   
@@ -290,6 +300,14 @@
       </li>
     
   </ul>
+</section>
+<section>
+ <h1>Twitter</h1>
+ <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p></p>
 </section>
 
 

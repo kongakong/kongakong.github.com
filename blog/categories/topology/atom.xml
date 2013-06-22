@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: topology | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/topology/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T21:55:53+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[algtop3]]></title>
+    <link href="http://kongakong.github.io/blog/2010/12/02/p-2070147875/"/>
+    <updated>2010-12-02T22:24:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2010/12/02/p-2070147875</id>
+    <content type="html"><![CDATA[<p>Concept: Stereographic projection, Conformal, Angle (spread)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trifoil Knot and Mirrored Trifoil Knot]]></title>
+    <link href="http://kongakong.github.io/blog/2010/11/23/p-1657863512/"/>
+    <updated>2010-11-23T21:48:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2010/11/23/p-1657863512</id>
+    <content type="html"><![CDATA[<p>Concept of Equivalent and homomorphic.</p>
+]]></content>
+  </entry>
+  
+</feed>
