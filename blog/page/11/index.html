@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="“Python Epiphanies” by Stuart Williams ">
+  <meta name="description" content="Python Epiphanies by Stuart Williams ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,7 +94,7 @@
   </header>
 
 
-  <div class="entry-content"><p>“Python Epiphanies” by Stuart Williams</p>
+  <div class="entry-content"><p><em>Python Epiphanies</em> by Stuart Williams</p>
 
 <div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/Pi9NpxAvYSs "></iframe></div>
 
@@ -110,7 +110,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/09/26/p-32266848480/">Do Not Have Git on My Rebuilt MBP. Was About to Hit ‘brew Install Git’. Then I Realised: I Already Have Git Installed. It Is Part of XCode.</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/09/26/p-32266848480/">Was About to Hit ‘brew Install Git’. Then I Realised I&#8217;d Already Have Git Installed</a></h1>
     
     
       <p class="meta">
@@ -171,9 +171,10 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="The%20most%20cost-effective%20way%20to%20store%20a%20DNA%20sequence%20...%20is%20the%20DNA%20itself">http://www.youtube.com/watch?v=9SzwiZMSBeQ</a></p>
+  <div class="entry-content"><p>[The most cost-effective way to store a DNA sequence &hellip; is the DNA itself]
+(<a href="http://www.youtube.com/watch?v=9SzwiZMSBeQ">http://www.youtube.com/watch?v=9SzwiZMSBeQ</a>)</p>
 
-<p>DNA material, if stored in dark, cool and dry space, can survive thousand years. It is  a lot more cost-effective than storing the sequence on tapes, which needs to be rotated and maintained, and will degrade overtime. Proper storage of DNA can keep it in good condition for multiple  <em>epochs</em>.</p>
+<blockquote><p>DNA material, if stored in dark, cool and dry space, can survive thousand years. It is  a lot more cost-effective than storing the sequence on tapes, which needs to be rotated and maintained, and will degrade overtime. Proper storage of DNA can keep it in good condition for multiple  <em>epochs</em>.</p></blockquote>
 </div>
   
   
@@ -211,6 +212,14 @@
 
   <div class="entry-content"><p>This bit of code is trying to calculate a list of mid prices based on bid and ask prices</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def mids(self, bids, asks):
+</span><span class='line'>    f = lambda X, Y: (X is not None) and (Y  is not None) and (X+Y)/2 or None
+</span><span class='line'>    return [f(bid, ask) for bid, ask in zip(bids, asks)</span></code></pre></td></tr></table></div></figure>
+
+
 <p>It works fine unTIL one day there is a None in mids.</p>
 
 <p>The bid and ask of the corresponding item are both zero. We expect to see zero in the result.</p>
@@ -222,6 +231,12 @@
 <p>But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the ‘or’ part of the expression.</p>
 
 <p>A better to write the lambda:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>f = lambda X, Y:  (X+Y)/2.0 if (X is not None) and (Y  is not None)  else None</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -257,7 +272,7 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="Scala%20build%20tool">https://github.com/harrah/xsbt/wiki</a></p>
+  <div class="entry-content"><p><a href="https://github.com/harrah/xsbt/wiki">Scala build tool</a></p>
 </div>
   
   

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reading | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/reading/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-23T09:17:45+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Predictably Irrational]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/21/p-29890350340/"/>
+    <updated>2012-08-21T19:58:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/21/p-29890350340</id>
+    <content type="html"><![CDATA[<p>Reading</p>
+
+<p><a href="http://www.amazon.com/gp/product/006135323X/"> ‘Predictably Irrational’ </a>]</p>
+
+<p>I have heard many of his talks so I already have some good idea what his book is about. But it sTILl makes a very interesting read.</p>
+
+<p>First couple of chapters are about price anchoring.</p>
+
+<p>I suppose we can use it as a socio-psychological groundwork to explain why we have frequent financial crises.</p>
+
+<p>Okay, each financial crisis involves different markets and instruments. Each of them has unique background,  fundamentals and built-up. However, it always take a crisis-scale event for the underlying structural problem to be exposed and unwired itself. A crisis serves as a publicised event to readjust everyone’s anchoring of the value and returns of the financial assets that are under distress.</p>
+]]></content>
+  </entry>
+  
+</feed>

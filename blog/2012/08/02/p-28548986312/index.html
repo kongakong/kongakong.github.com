@@ -99,9 +99,79 @@
 
 <p>Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example “assesses” has the substring “sses” 2 times.</p>
 
-<p>It is a very simple question, but there is sTILl something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.</p>
+<p>It is a very simple question, but there is still something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.</p>
 
 <p>My proposed solution is simply an improved version of OP’s code.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
+</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">location</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">return</span> <span class="mi">0</span> <span class="c"># none whatsoever</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>                <span class="k">while</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">):</span>
+</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>                   <span class="k">if</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>                      <span class="k">break</span>
+</span><span class='line'>                   <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is a even shorter version which takes advantage of python’s flexible comparison syntax:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
+</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">)):</span>
+</span><span class='line'>                   <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 

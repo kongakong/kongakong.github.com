@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This bit of code is trying to calculate a list of mid prices based on bid and ask prices It works fine unTIL one day there is a None in mids. The bid &hellip;">
+  <meta name="description" content="This bit of code is trying to calculate a list of mid prices based on bid and ask prices 1
+2
+3
+def mids(self, bids, asks): f = lambda X, Y: (X is not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +96,14 @@
 
 <div class="entry-content"><p>This bit of code is trying to calculate a list of mid prices based on bid and ask prices</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def mids(self, bids, asks):
+</span><span class='line'>    f = lambda X, Y: (X is not None) and (Y  is not None) and (X+Y)/2 or None
+</span><span class='line'>    return [f(bid, ask) for bid, ask in zip(bids, asks)</span></code></pre></td></tr></table></div></figure>
+
+
 <p>It works fine unTIL one day there is a None in mids.</p>
 
 <p>The bid and ask of the corresponding item are both zero. We expect to see zero in the result.</p>
@@ -104,6 +115,12 @@
 <p>But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the ‘or’ part of the expression.</p>
 
 <p>A better to write the lambda:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>f = lambda X, Y:  (X+Y)/2.0 if (X is not None) and (Y  is not None)  else None</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 

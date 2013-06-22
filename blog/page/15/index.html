@@ -168,7 +168,7 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="%22Winner%20Take%20All:%20The%20Race%20for%20the%20World's%20Resources%22%20by%20Dambisa%20Moyo">http://www2.lse.ac.uk/publicEvents/events/2012/06/20120625t1830vOT.aspx</a></p>
+  <div class="entry-content"><p><a href="http://www2.lse.ac.uk/publicEvents/events/2012/06/20120625t1830vOT.aspx">&ldquo;Winner Take All: The Race for the World&rsquo;s Resources&rdquo; by Dambisa Moyo</a>]</p>
 </div>
   
   
@@ -205,6 +205,23 @@
 
 
   <div class="entry-content"><p>A way to generate random password in erlang</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="sc">$ </span><span class="n">erl</span>
+</span><span class='line'><span class="nv">Erlang</span> <span class="nv">R14B04</span> <span class="p">(</span><span class="n">erts</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span> <span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="p">[</span><span class="mi">64</span><span class="o">-</span><span class="n">bit</span><span class="p">]</span> <span class="p">[</span><span class="nn">smp</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="nn">rq</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="n">async</span><span class="o">-</span><span class="nn">threads</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="p">[</span><span class="n">hipe</span><span class="p">]</span> <span class="p">[</span><span class="n">kernel</span><span class="o">-</span><span class="nn">poll</span><span class="p">:</span><span class="n">false</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">Eshell</span> <span class="nv">V5</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span>  <span class="p">(</span><span class="n">abort</span> <span class="n">with</span> <span class="err">^</span><span class="nv">G</span><span class="p">)</span>
+</span><span class='line'><span class="mi">1</span><span class="o">&gt;</span> <span class="nn">base64</span><span class="p">:</span><span class="nf">encode_to_string</span><span class="p">(</span><span class="nn">crypto</span><span class="p">:</span><span class="nf">rand_bytes</span><span class="p">(</span><span class="mi">16</span><span class="p">)).</span>
+</span><span class='line'><span class="s">&quot;9d1L2K5ZYEyFEXCs+dVqfA==&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -242,12 +259,27 @@
 
   <div class="entry-content"><p>To enable the swipe to delete feature, one must implement this API:</p>
 
-<p>&#8220;&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+</span><span class='line'>                                            forRowAtIndexPath:(NSIndexPath *)indexPath``</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
-</code></pre>
 
 <p>I can enable this feature, but I got this exception from this function</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2012-08-11 22:30:46.286 app[76532:fb03] *** Terminating app due to uncaught exception
+</span><span class='line'> 'NSInternalInconsistencyException', reason: 'Invalid update: invalid number of rows in section 0.  
+</span><span class='line'>The number of rows contained in an existing section after the update (10) must be equal to the 
+</span><span class='line'>number of rows contained in that section before the update (10), plus or minus the number of rows 
+</span><span class='line'>inserted or deleted from that section (0 inserted, 1 deleted) and plus or minus the number of rows 
+</span><span class='line'>moved into or out of that section (0 moved in, 0 moved out).'</span></code></pre></td></tr></table></div></figure>
+
 
 <p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
 </div>

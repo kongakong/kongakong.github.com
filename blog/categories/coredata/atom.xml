@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coredata | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/coredata/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T23:00:22+10:00</updated>
+  <updated>2013-06-23T09:17:45+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,11 @@
     <id>http://kongakong.github.io/blog/2012/08/05/p-28758435068</id>
     <content type="html"><![CDATA[<p>Encountered this error when adding core data support to my ios project</p>
 
-<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the</p>
+<p><code>
+Receiver 'NSManagedObjectContext' for class message is a forward declaration.
+</code></p>
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
 ]]></content>
   </entry>
   

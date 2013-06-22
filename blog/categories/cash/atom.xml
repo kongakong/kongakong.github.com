@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cash | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/cash/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T23:00:22+10:00</updated>
+  <updated>2013-06-23T09:17:45+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -21,6 +21,25 @@
     <content type="html"><![CDATA[<p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
 
 <p><em>A:</em></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>contribution at age&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>[(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
 ]]></content>
   </entry>
   

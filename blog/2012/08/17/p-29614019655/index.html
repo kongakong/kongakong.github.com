@@ -9,8 +9,14 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A way to generate random password in erlang
-">
+  <meta name="description" content="A way to generate random password in erlang 1
+2
+3
+4
+5
+6
+$ erl
+Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +99,23 @@
 
 
 <div class="entry-content"><p>A way to generate random password in erlang</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="sc">$ </span><span class="n">erl</span>
+</span><span class='line'><span class="nv">Erlang</span> <span class="nv">R14B04</span> <span class="p">(</span><span class="n">erts</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span> <span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="p">[</span><span class="mi">64</span><span class="o">-</span><span class="n">bit</span><span class="p">]</span> <span class="p">[</span><span class="nn">smp</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="nn">rq</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="n">async</span><span class="o">-</span><span class="nn">threads</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="p">[</span><span class="n">hipe</span><span class="p">]</span> <span class="p">[</span><span class="n">kernel</span><span class="o">-</span><span class="nn">poll</span><span class="p">:</span><span class="n">false</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">Eshell</span> <span class="nv">V5</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span>  <span class="p">(</span><span class="n">abort</span> <span class="n">with</span> <span class="err">^</span><span class="nv">G</span><span class="p">)</span>
+</span><span class='line'><span class="mi">1</span><span class="o">&gt;</span> <span class="nn">base64</span><span class="p">:</span><span class="nf">encode_to_string</span><span class="p">(</span><span class="nn">crypto</span><span class="p">:</span><span class="nf">rand_bytes</span><span class="p">(</span><span class="mi">16</span><span class="p">)).</span>
+</span><span class='line'><span class="s">&quot;9d1L2K5ZYEyFEXCs+dVqfA==&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 

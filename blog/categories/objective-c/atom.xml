@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T23:00:22+10:00</updated>
+  <updated>2013-06-23T09:17:45+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -32,13 +32,35 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Got this error message in xcode]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/08/p-28973709805/"/>
+    <updated>2012-08-08T19:53:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/08/p-28973709805</id>
+    <content type="html"><![CDATA[<p>Got this error message in xcode</p>
+
+<p><code>
+*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get
+ a UITableView.'
+*** First throw call stack:
+</code></p>
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Encountered this error when adding core data support to my ios project]]></title>
     <link href="http://kongakong.github.io/blog/2012/08/05/p-28758435068/"/>
     <updated>2012-08-05T19:50:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2012/08/05/p-28758435068</id>
     <content type="html"><![CDATA[<p>Encountered this error when adding core data support to my ios project</p>
 
-<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the</p>
+<p><code>
+Receiver 'NSManagedObjectContext' for class message is a forward declaration.
+</code></p>
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
 ]]></content>
   </entry>
   
@@ -54,19 +76,6 @@
 <p><a href="NSSet">https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Sets.html</a></p>
 
 <p><a href="Index%20Sets%20-%20NSIndexSet">https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/index.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Frame vs Bound]]></title>
-    <link href="http://kongakong.github.io/blog/2012/05/28/p-23921458660/"/>
-    <updated>2012-05-28T19:29:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2012/05/28/p-23921458660</id>
-    <content type="html"><![CDATA[<p><a href="Frame%20vs%20Bound">http://stackoverflow.com/a/1210141/58129</a></p>
-
-<p>The <em>frame</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.</p>
-
-<p>The <em>bounds</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).</p>
 ]]></content>
   </entry>
   

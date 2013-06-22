@@ -9,7 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Got this error message in xcode It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView &hellip;">
+  <meta name="description" content="Got this error message in xcode 1
+2
+3
+4
+*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '- [ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +97,16 @@
 
 <div class="entry-content"><p>Got this error message in xcode</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+</span><span class='line'> a UITableView.'
+</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
+
+
 <p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
 </div>
 
@@ -118,6 +132,12 @@
 
 <time datetime="2012-08-08T19:53:00+10:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/objective-c/'>objective-c</a>
+  
+</span>
 
 
     </p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mac | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/mac/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-22T23:00:22+10:00</updated>
+  <updated>2013-06-23T09:17:45+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.]]></title>
+    <title type="html"><![CDATA[External Harddisk, Airport Extreme and Time Capsule]]></title>
     <link href="http://kongakong.github.io/blog/2012/09/07/p-31050185788/"/>
     <updated>2012-09-07T19:52:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2012/09/07/p-31050185788</id>
@@ -22,7 +22,7 @@
 
 <p>My last-gen MBP has a 320Gb harddisk and about 265Gb of data. I am too lazy to do an initial time machine backup via a ethernet cable.</p>
 
-<p>So over wifi and 10 hours later, the backup is sTILl less than half way through.</p>
+<p>So over wifi and 10 hours later, the backup is still less than half way through.</p>
 
 <p>I did not expect this scheme to work at all because my past research indicated that Apple/TimeMachine did not allow backup to network drive unless it is hosted by Time Capsule.</p>
 ]]></content>

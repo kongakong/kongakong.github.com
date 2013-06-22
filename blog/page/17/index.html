@@ -97,6 +97,22 @@
   <div class="entry-content"><p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
 
 <p><em>A:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># contribution at age
+</span><span class='line'>>>> [(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+</span><span class='line'>
+</span><span class='line'>>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -133,6 +149,22 @@
 
 
   <div class="entry-content"><p>Calculate regular payment based on rate, number of payment and PV</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def pmt(i, n, p):
+</span><span class='line'>    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> pmt(0.06, 120, 120000)
+</span><span class='line'>-7206.622591189367</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -206,6 +238,16 @@
 
   <div class="entry-content"><p>Got this error message in xcode</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+</span><span class='line'> a UITableView.'
+</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
+
+
 <p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
 </div>
   
@@ -243,6 +285,19 @@
 
 
   <div class="entry-content"><p>In ocaml, “let rec” defines a recursive function, for example:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="o">#</span> <span class="k">let</span> <span class="k">rec</span> <span class="n">ipow</span> <span class="n">n</span> <span class="n">m</span> <span class="o">=</span> <span class="k">if</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">ipow</span> <span class="n">n</span> <span class="o">(</span><span class="n">m</span> <span class="o">-</span><span class="mi">1</span><span class="o">);;</span>
+</span><span class='line'><span class="k">val</span> <span class="n">ipow</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">=</span> <span class="o">&lt;</span><span class="k">fun</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">#</span> <span class="n">ipow</span> <span class="mi">7</span> <span class="mi">8</span><span class="o">;;</span>
+</span><span class='line'><span class="o">-</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">5764801</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   

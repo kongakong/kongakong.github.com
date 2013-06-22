@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Calculate regular payment based on rate, number of payment and PV
-">
+  <meta name="description" content="Calculate regular payment based on rate, number of payment and PV 1
+2
+def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,22 @@
 
 
 <div class="entry-content"><p>Calculate regular payment based on rate, number of payment and PV</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def pmt(i, n, p):
+</span><span class='line'>    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> pmt(0.06, 120, 120000)
+</span><span class='line'>-7206.622591189367</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
@@ -117,6 +134,12 @@
 
 <time datetime="2012-08-10T19:58:00+10:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/python/'>python</a>
+  
+</span>
 
 
     </p>
