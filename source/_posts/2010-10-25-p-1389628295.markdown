@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "``NIF`` stands for *Native Implementation Function* in Erlang"
+title: NIF in erlang
 date: 2010-10-25 01:26
 comments: true
-categories: 
+categories: erlang
 ---
 
 ``NIF`` stands for *Native Implementation Function* in Erlang

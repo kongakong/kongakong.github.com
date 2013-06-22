@@ -3,7 +3,7 @@ layout: post
 title: "Objective-c: System processes"
 date: 2010-11-11 21:33
 comments: true
-categories: 
+categories: objective-c
 ---
 
 *NSProcess*

@@ -3,14 +3,12 @@ layout: post
 title: "postgresql memo"
 date: 2010-10-14 23:57
 comments: true
-categories: 
+categories: pgsql
 ---
 
-As a not-so-frequent user of psql, I really need a reminder on the commonly used commands
+I do not use pgsql a lot, so  I need to jot down a few ommonly used commands here:
 
+Use ``\connect <database name>`` to switch database
 
-Use ``\connect 
-
-
-The equivalent in MSSQL or Sybase will be ``use 
+The equivalent in MSSQL or Sybase will be ``use <database name> go`` 
 

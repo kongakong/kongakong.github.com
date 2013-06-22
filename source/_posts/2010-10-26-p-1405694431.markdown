@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "OK, so ``nltk.download()`` will actually bring up a GUI downloader."
+title: "nltk.download()"
 date: 2010-10-26 21:04
 comments: true
-categories: 
+categories: nltk
 ---
 
 OK, so ``nltk.download()`` will actually bring up a GUI downloader.

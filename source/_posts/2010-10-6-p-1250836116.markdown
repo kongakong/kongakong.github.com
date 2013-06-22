@@ -3,7 +3,7 @@ layout: post
 title: "ActiveMQ build error"
 date: 2010-10-06 07:42
 comments: true
-categories: 
+categories: activemq 
 ---
 
 Try to build it, but hit this error:

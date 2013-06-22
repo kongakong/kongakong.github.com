@@ -3,10 +3,10 @@ layout: post
 title: "-Wno-long-double"
 date: 2010-10-08 06:07
 comments: true
-categories: 
+categories: osx python
 ---
 
-Python 2.5.5 uses the -Wno-long-double c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6
+Python 2.5.5 uses the ``-Wno-long-double`` c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6
 
 
 Fixed the configure.in and rerun autoconf. Let's see if it will work.

@@ -3,7 +3,7 @@ layout: post
 title: "dscl"
 date: 2010-10-24 22:41
 comments: true
-categories: 
+categories: osx linux 
 ---
 
 Another difference between Linux and OSX: no more *adduser*. Use *dscl* instead.
@@ -12,7 +12,7 @@ Another difference between Linux and OSX: no more *adduser*. Use *dscl* instead.
 So, for example, in order to find out what groups are defined locally, we can run
 
 
-``dscl  localhost -list /Local/Default/Groups``
+``dscl localhost -list /Local/Default/Groups``
 
 
 To add someone to a group, we should run
