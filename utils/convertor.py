@@ -55,6 +55,7 @@ def parse_file(fn):
     handle_node(article_node, lines, meta)
 
     dest_dir = '/Users/antkong/octopress/source/_posts'
+    
     pub_date_str = meta.get('pub_date', None)
     pub_date = ''
     if pub_date_str:
@@ -62,11 +63,16 @@ def parse_file(fn):
         pub_date = datetime.strptime(pub_date_str, "%d/%m/%Y %H:%M:%S")
         meta['pub_date'] = pub_date.strftime("%Y-%m-%d %H:%M")
 
+    # work out the filename
     if pub_date:
         ofilename = "%s-%s-%s-%s.markdown" % (pub_date.year, pub_date.month, pub_date.day, meta['id'])
     else:
         ofilename = meta['id'] + ".markdown"
-    
+
+    # fix up title
+    if not meta['title']:
+        meta['title'] = lines[0] # take the first line
+     
     ofile = open(os.path.join(dest_dir, ofilename), "w")
     try:
         print >>ofile, HEADER % meta
@@ -89,7 +95,8 @@ def handle_node(article_node, lines, metas):
         # ignore class=llink
         # etree.dump(node)
         if node.tag == 'h2':
-            metas['title'] = node.text
+            if node.text:
+                metas['title'] = node.text.replace("\"", "'") 
         if node.tag == 'p': 
             p_class = node.attrib.get('class', None)
             if p_class == 'tags' and node.text:
