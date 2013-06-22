@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: setuptools | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/setuptools/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Follow-up on a previous]]></title>
+    <link href="http://kongakong.github.io/blog/2012/04/28/p-21969667729/"/>
+    <updated>2012-04-28T20:22:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/04/28/p-21969667729</id>
+    <content type="html"><![CDATA[<p>Follow-up on a previous</p>
+
+<p>It turns out on</p>
+
+<p><a href="Distribute%E2%80%99s%20site">http://packages.python.org/distribute/</a></p>
+
+<p><code>setuptools</code> &ndash;> <code>distribute</code></p>
+
+<p><code>easy_install</code> &ndash;> <code>pip</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[pip, setuptools, easy_install and distribute]]></title>
+    <link href="http://kongakong.github.io/blog/2012/04/28/p-21933322665/"/>
+    <updated>2012-04-28T07:42:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/04/28/p-21933322665</id>
+    <content type="html"><![CDATA[<p>Trying to install pip 1.1 for python3.</p>
+
+<p>```</p>
+
+<p>$ python3 setup.py install
+Traceback (most recent call last):
+  File &ldquo;setup.py&rdquo;, line 3, in</p>
+
+<p><a href="setuptools">http://pypi.python.org/pypi/setuptools</a></p>
+
+<p><a href="Distribute">http://packages.python.org/distribute/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

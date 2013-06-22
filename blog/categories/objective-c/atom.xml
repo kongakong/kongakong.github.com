@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: objective-c | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/objective-c/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Two ways to build file names]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/05/p-52212432857/"/>
+    <updated>2013-06-05T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/05/p-52212432857</id>
+    <content type="html"><![CDATA[<p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Basename-equivalent in Objective-C]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/04/p-52133031773/"/>
+    <updated>2013-06-04T21:20:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/04/p-52133031773</id>
+    <content type="html"><![CDATA[<p>Use <code>lastPathComponent</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Encountered this error when adding core data support to my ios project]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/05/p-28758435068/"/>
+    <updated>2012-08-05T19:50:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/05/p-28758435068</id>
+    <content type="html"><![CDATA[<p>Encountered this error when adding core data support to my ios project</p>
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Basic Collections in Objective-C]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/30/p-24059796521/"/>
+    <updated>2012-05-30T22:23:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/30/p-24059796521</id>
+    <content type="html"><![CDATA[<p><a href="Array">https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Arrays.html</a></p>
+
+<p><a href="Dictionary%20-%20NSMutableDictionary">https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Dictionaries.html</a></p>
+
+<p><a href="NSSet">https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/Sets.html</a></p>
+
+<p><a href="Index%20Sets%20-%20NSIndexSet">https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Collections/Articles/index.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Frame vs Bound]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/28/p-23921458660/"/>
+    <updated>2012-05-28T19:29:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/28/p-23921458660</id>
+    <content type="html"><![CDATA[<p><a href="Frame%20vs%20Bound">http://stackoverflow.com/a/1210141/58129</a></p>
+
+<p>The <em>frame</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.</p>
+
+<p>The <em>bounds</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).</p>
+]]></content>
+  </entry>
+  
+</feed>

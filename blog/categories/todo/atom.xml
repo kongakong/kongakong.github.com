@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ToDo | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/todo/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Reading list:]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/07/p-22582856414/"/>
+    <updated>2012-05-07T21:42:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/07/p-22582856414</id>
+    <content type="html"><![CDATA[<p>Reading list:</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Pareto_frontier#Pareto_frontier">http://en.wikipedia.org/wiki/Pareto_frontier#Pareto_frontier</a></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Multi-objective_optimization">http://en.wikipedia.org/wiki/Multi-objective_optimization</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[http://wwwsearch.sourceforge.net/mechanize/]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/20/p-6712502628/"/>
+    <updated>2011-06-20T14:05:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/20/p-6712502628</id>
+    <content type="html"><![CDATA[<p><a href="http://wwwsearch.sourceforge.net/mechanize/">http://wwwsearch.sourceforge.net/mechanize/</a></p>
+
+<p><code>mechanize</code> is available for python and ruby. May want to check this out later</p>
+]]></content>
+  </entry>
+  
+</feed>

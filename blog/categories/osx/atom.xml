@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: osx | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[dyld: library not loaded]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/22/dyld-library-not-loaded/"/>
+    <updated>2013-06-22T15:55:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/22/dyld-library-not-loaded</id>
+    <content type="html"><![CDATA[<p><code>
+dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKit
+  Referenced from: /Users/antkong/Library/Developer/Xcode/DerivedData/ebookreader-gplhzhssjudwymcrqpmxxokvhqvn/Build/Products/Debug/ebookreader.app/Contents/MacOS/ebookreader
+  Reason: image not found
+</code></p>
+
+<p>Is it going to be <a href="http://lists.apple.com/archives/xcode-users/2008/May/msg00647.html">the answer</a>?</p>
+
+<blockquote><p>I have found a fix by getting to know what @rpath means. It is a tag placed in the generation of an executable&rsquo;s binary format indicating alternate paths to look for dependencies (including other libraries). By setting the build option &ldquo;runpath search paths&rdquo; to the developer frameworks directory, the executable looks in this place for the sen testing library at run time.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Weird error message of ``say`` in 10.8.4]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/09/p-52534137425/"/>
+    <updated>2013-06-09T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/09/p-52534137425</id>
+    <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Weird error message of ``say`` in 10.8.4]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/09/p-52534137425/"/>
+    <updated>2013-06-09T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/09/p-52534137425</id>
+    <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSX terminal and .bashrc]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/08/p-52453247211/"/>
+    <updated>2013-06-08T21:20:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/08/p-52453247211</id>
+    <content type="html"><![CDATA[<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.</p>
+
+<p>I added this to my .bash_profile to fix the problem:</p>
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[When I start up emacs in shell, I got this error message:]]></title>
+    <link href="http://kongakong.github.io/blog/2013/05/31/p-51794320183/"/>
+    <updated>2013-05-31T20:00:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/05/31/p-51794320183</id>
+    <content type="html"><![CDATA[<p>When I start up emacs in shell, I got this error message:</p>
+
+<p>But my config file works fine with Aquamacs.</p>
+
+<p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
+]]></content>
+  </entry>
+  
+</feed>

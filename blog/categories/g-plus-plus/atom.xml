@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: g++ | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/g-plus-plus/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Encountered]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/16/p-6585419098/"/>
+    <updated>2011-06-16T22:17:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/16/p-6585419098</id>
+    <content type="html"><![CDATA[<p>Encountered</p>
+
+<p>when trying to install the <code>Guest Additions</code> into the Fedora 15 VM instance in VirtualBox.</p>
+
+<p>As part of the error message, it clearly indicated which package (a kernel-devel package)  needs to be installed.</p>
+
+<p>Then it reports the gcc is not found. <code>yum install gcc g++</code> seems to take care of this problem.</p>
+
+<p>Take a few reboot and reinstallation to get it right</p>
+
+<p>But Fedora is not working 100% in this VM environment. Sometimes part of the screen turns blue for no reason or when mouseover</p>
+]]></content>
+  </entry>
+  
+</feed>

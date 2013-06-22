@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: navigationItem | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/navigationitem/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Finally figure out the back button title not set issue.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/06/12/p-24942635911/"/>
+    <updated>2012-06-12T17:06:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/06/12/p-24942635911</id>
+    <content type="html"><![CDATA[<p>Finally figure out the back button title not set issue.</p>
+
+<p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
+]]></content>
+  </entry>
+  
+</feed>

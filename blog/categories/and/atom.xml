@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: and | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/and/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The importance of the idea of ``map``: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/13/p-29329230595/"/>
+    <updated>2012-08-13T19:42:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/13/p-29329230595</id>
+    <content type="html"><![CDATA[<p>The importance of the idea of <code>map</code>: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.</p>
+
+<p><a href="Original">http://www.youtube.com/watch?v=2QgZVYI3tDs&amp;t=22m0s</a></p>
+]]></content>
+  </entry>
+  
+</feed>

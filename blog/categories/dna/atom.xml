@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dna | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/dna/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A _telomere _is a region of repetitive DNA sequence at the end of a chromosome, which protects the end of the chromosome from deterioration or from fusion with neighbouring chromosomes.]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/16/p-6580226297/"/>
+    <updated>2011-06-16T15:57:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/16/p-6580226297</id>
+    <content type="html"><![CDATA[<p>A <em>telomere </em>is a region of repetitive DNA sequence at the end of a chromosome, which protects the end of the chromosome from deterioration or from fusion with neighbouring chromosomes.</p>
+]]></content>
+  </entry>
+  
+</feed>

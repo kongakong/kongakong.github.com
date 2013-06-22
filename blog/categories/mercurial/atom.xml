@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mercurial | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/mercurial/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Seems like it is a solution to the problem I described]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/22/p-6767669302/"/>
+    <updated>2011-06-22T07:27:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/22/p-6767669302</id>
+    <content type="html"><![CDATA[<p>Seems like it is a solution to the problem I described</p>
+
+<p><a href="python%20bug%20database">http://bugs.python.org/issue11808</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Annoying error message when trying to compile latest python default branch in OSX]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/22/p-6767517034/"/>
+    <updated>2011-06-22T07:22:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/22/p-6767517034</id>
+    <content type="html"><![CDATA[<p>Got this annoying error message when trying to compile latest python default branch in OSX:</p>
+
+<p>```</p>
+
+<p>$ make
+./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
+Traceback (most recent call last):
+  File &ldquo;/usr/local/bin/hg&rdquo;, line 4, in</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[_svn update _is again split into two stage process in _hg_:]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/22/p-6767377183/"/>
+    <updated>2011-06-22T07:18:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/22/p-6767377183</id>
+    <content type="html"><![CDATA[<p><em>svn update </em>is again split into two stage process in <em>hg</em>:</p>
+
+<p>```</p>
+
+<p>hg pull
+hg update</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA['svn info' in hg]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/22/p-6766810226/"/>
+    <updated>2011-06-22T07:01:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/22/p-6766810226</id>
+    <content type="html"><![CDATA[<p>In <em>hg</em> you have to use two commands to extract info similar to <em>svn</em>.</p>
+
+<p>```</p>
+
+<p>$ hg tip
+changeset:   70656:3301a01071f9
+tag:         tip
+user:        Martin v. LÃ¶wis</p>
+]]></content>
+  </entry>
+  
+</feed>

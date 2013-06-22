@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nslog | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/nslog/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NSLog]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/18/p-23283499949/"/>
+    <updated>2012-05-18T19:42:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/18/p-23283499949</id>
+    <content type="html"><![CDATA[<p>As a beginner of objective-C, from time to time I sTILl get caught in incorrect format string used in NSLog.</p>
+
+<p>For example, I should use <code>%f</code> for float and <code>%@</code> for NSNumber. If I used %@ instead for float, obj-c will throw exception.</p>
+]]></content>
+  </entry>
+  
+</feed>

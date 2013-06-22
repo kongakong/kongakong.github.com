@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: virtualenv | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/virtualenv/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[VirtualEnv and Python 3.3]]></title>
+    <link href="http://kongakong.github.io/blog/2012/11/13/p-35580336669/"/>
+    <updated>2012-11-13T07:02:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2012/11/13/p-35580336669</id>
+    <content type="html"><![CDATA[<p><code>virtualenv</code> is now a built-in module in python 3.3. The best documentation so far seems to be the</p>
+
+<p><a href="PEP%20405">http://www.python.org/dev/peps/pep-0405/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I do not usually run “source activate” before running the python runtime in a virtualenv env. However it seems to work OK without.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/21/p-23439824442/"/>
+    <updated>2012-05-21T07:44:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/21/p-23439824442</id>
+    <content type="html"><![CDATA[<p>I do not usually run “source activate” before running the python runtime in a virtualenv env. However it seems to work OK without.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[It is a follow-up on an]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/04/p-22378145113/"/>
+    <updated>2012-05-04T21:32:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/04/p-22378145113</id>
+    <content type="html"><![CDATA[<p>It is a follow-up on an</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/03/p-22316283422/"/>
+    <updated>2012-05-03T21:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/03/p-22316283422</id>
+    <content type="html"><![CDATA[<p>Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.</p>
+
+<p>```</p>
+
+<p>gfortran:f77: scipy/sparse/linalg/eigen/arpack/ARPACK/FWRAPPERS/veclib_cabi_f.f</p>
+
+<p>ar: adding 50 object files to build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cgetv0.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaitr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnapps.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaup2.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneigh.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cngets.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(csortc.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

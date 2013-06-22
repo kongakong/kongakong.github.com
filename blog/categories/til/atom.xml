@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: TIL | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/til/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage - a scarce resource - to its citizens.]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/06/p-52292736599/"/>
+    <updated>2013-06-06T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/06/p-52292736599</id>
+    <content type="html"><![CDATA[<p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to its citizens.</p>
+
+<p>From</p>
+
+<p><a href="Wikipedia">http://en.wikipedia.org/wiki/Oregon_Health_Plan</a></p>
+
+<p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The most cost-effective way to store a DNA sequence ... is the DNA itself]]></title>
+    <link href="http://kongakong.github.io/blog/2012/09/23/p-32107367444/"/>
+    <updated>2012-09-23T16:20:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/09/23/p-32107367444</id>
+    <content type="html"><![CDATA[<p><a href="The%20most%20cost-effective%20way%20to%20store%20a%20DNA%20sequence%20...%20is%20the%20DNA%20itself">http://www.youtube.com/watch?v=9SzwiZMSBeQ</a></p>
+
+<p>DNA material, if stored in dark, cool and dry space, can survive thousand years. It is  a lot more cost-effective than storing the sequence on tapes, which needs to be rotated and maintained, and will degrade overtime. Proper storage of DNA can keep it in good condition for multiple  <em>epochs</em>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Put the events into historical perspective]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/15/p-29473317348/"/>
+    <updated>2012-08-15T19:48:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/15/p-29473317348</id>
+    <content type="html"><![CDATA[<p>Leonardo da Vinci, who was forty years old when Columbus discovered America, died in 1519 at sixty-seven. Just two years earlier, in 1517, Martin Luther had posted his Ninety-five Theses on a church door in Wittenberg, launching the Protestant Reformation the same year Ferdinand Magellan had set sail from Spain, aspiring to circumnavigate the earth.</p>
+
+<p>Quoted from</p>
+
+<p><a href="*Math%20and%20the%20Mona%20Lisa:%20The%20Art%20and%20Science%20of%20Leonardo%20da%20Vinci*">http://www.amazon.com/gp/product/1588341712/ref=as_li_ss_tl?ie=UTF8&amp;tag=heaprcom05-20&amp;linkCode=as2&amp;camp=217145&amp;creativeASIN=1588341712</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS 5 added a remote virtual interface (RVI) facility that lets you use Mac OS X packet trace programs to capture traces from an iOS device.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/07/20/p-27619704546/"/>
+    <updated>2012-07-20T19:55:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/07/20/p-27619704546</id>
+    <content type="html"><![CDATA[<p>iOS 5 added a remote virtual interface (RVI) facility that lets you use Mac OS X packet trace programs to capture traces from an iOS device.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Petrine Doctrine]]></title>
+    <link href="http://kongakong.github.io/blog/2012/07/17/p-27399935153/"/>
+    <updated>2012-07-17T19:54:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/07/17/p-27399935153</id>
+    <content type="html"><![CDATA[<p>The belief that Saint Peter was given special authority by Christ that has since passed on to each Pope. The Archbishop of Rome (i.e. the Pope) was in direct apostolic lineage back to Saint Peter</p>
+]]></content>
+  </entry>
+  
+</feed>

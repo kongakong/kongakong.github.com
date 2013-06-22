@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: otool | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/otool/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Just installed ``otx``, an OSS implementation of ``otool``]]></title>
+    <link href="http://kongakong.github.io/blog/2012/01/04/p-15289689582/"/>
+    <updated>2012-01-04T20:45:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2012/01/04/p-15289689582</id>
+    <content type="html"><![CDATA[<p>Just installed <code>otx</code>, an OSS implementation of <code>otool</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Seems like I have polluted my python installation a little bit. There are two python2.6]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/07/p-6255855120/"/>
+    <updated>2011-06-07T05:06:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/07/p-6255855120</id>
+    <content type="html"><![CDATA[<p>Seems like I have polluted my python installation a little bit. There are two python2.6</p>
+
+<p>```</p>
+
+<p>mbp002:cpython $ md5sum /usr/bin/python
+e3a892c8511d5086b485aeb7e9700672  /usr/bin/python
+mbp002:cpython $ md5sum /opt/local/bin/python
+defb6eacf7bf552bef7c4033e685ec13  /opt/local/bin/python</p>
+
+<p>mbp002:cpython $ otool -L /usr/bin/python
+/usr/bin/python:</p>
+
+<pre><code>/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 550.29.0)
+/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
+</code></pre>
+
+<p>mbp002:cpython $ otool -L /opt/local/bin/python
+/opt/local/bin/python:</p>
+
+<pre><code>/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
+</code></pre>
+
+<p>```</p>
+
+<p><code>/usr/bin/python</code> comes from original osx distribution. The framework version is probably built by me just for the sake of building python.</p>
+
+<p>```</p>
+
+<p>mbp002:cpython $ ls -l /opt/local/bin/python
+lrwxr-xr-x  1 root  admin  18 24 May  2010 /opt/local/bin/python &ndash;> /usr/bin/python2.6
+mbp002:cpython $ ls -l /usr/bin/python2.6
+lrwxr-xr-x  1 root  wheel  75  5 May  2010 /usr/bin/python2.6 &ndash;> ../../System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6</p>
+
+<p>```</p>
+
+<p>I will probably take out the symlink of <code>/opt/local/bin/python</code> to see if it fixes my python build problem.</p>
+]]></content>
+  </entry>
+  
+</feed>

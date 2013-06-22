@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: joke | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/joke/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[I don’t tell lawyer jokes. Lawyers don’t think they’re funny and everyone else doesn’t think they’re jokes.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/04/29/p-22042600973/"/>
+    <updated>2012-04-29T21:43:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/04/29/p-22042600973</id>
+    <content type="html"><![CDATA[<p>I don’t tell lawyer jokes. Lawyers don’t think they’re funny and everyone else doesn’t think they’re jokes.</p>
+
+<p>Lawyer joke</p>
+]]></content>
+  </entry>
+  
+</feed>

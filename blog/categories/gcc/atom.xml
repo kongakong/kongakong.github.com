@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gcc | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/gcc/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Followup piece of]]></title>
+    <link href="http://kongakong.github.io/blog/2012/04/28/p-21914025778/"/>
+    <updated>2012-04-28T01:08:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/04/28/p-21914025778</id>
+    <content type="html"><![CDATA[<p>Followup piece of</p>
+
+<p><a href="this%20location">https://github.com/kennethreitz/osx-gcc-installer</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I think I finally understand what the problem is.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/04/26/p-21844435707/"/>
+    <updated>2012-04-26T22:02:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/04/26/p-21844435707</id>
+    <content type="html"><![CDATA[<p>I think I finally understand what the problem is.</p>
+
+<p>In previous version of Xcode (prior to 4.3), it will install the llvm-gcc and the ‘original’ gcc.</p>
+
+<p>gcc will invoke the llvm-gcc and gcc-4.2 will invoke the GNU gcc.</p>
+
+<p>However, since 4.3, these command line tools will not be installed by default. We can have the command line tools like svn, make and gcc installed by download the ‘command line tools for OSX’ in XCode.</p>
+
+<p>However, the package does not include GNU gcc.</p>
+
+<p>It is the next problem I have to fix.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Problem solved: compiling python 3.3 on osx]]></title>
+    <link href="http://kongakong.github.io/blog/2012/01/15/p-15874914919/"/>
+    <updated>2012-01-15T18:02:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2012/01/15/p-15874914919</id>
+    <content type="html"><![CDATA[<p>It is a follow-up on</p>
+
+<p>Turns out this problem has been reported to python bug database:</p>
+
+<p><a href="None">http://bugs.python.org/issue13241</a></p>
+
+<p><a href="http://bugs.python.org/issue13241">http://bugs.python.org/issue13241</a></p>
+
+<p>The llvm gcc compiler that comes with XCode 4.x is causing the problem.</p>
+
+<p>Do</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What is going on?]]></title>
+    <link href="http://kongakong.github.io/blog/2012/01/04/p-15288901020/"/>
+    <updated>2012-01-04T09:00:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2012/01/04/p-15288901020</id>
+    <content type="html"><![CDATA[<p>```</p>
+
+<p>$ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
+Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams
+Traceback (most recent call last):
+  File &ldquo;/Users/antkong/wd/python.project/cpython/Lib/io.py&rdquo;, line 60, in</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Encountered]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/16/p-6585419098/"/>
+    <updated>2011-06-16T22:17:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/16/p-6585419098</id>
+    <content type="html"><![CDATA[<p>Encountered</p>
+
+<p>when trying to install the <code>Guest Additions</code> into the Fedora 15 VM instance in VirtualBox.</p>
+
+<p>As part of the error message, it clearly indicated which package (a kernel-devel package)  needs to be installed.</p>
+
+<p>Then it reports the gcc is not found. <code>yum install gcc g++</code> seems to take care of this problem.</p>
+
+<p>Take a few reboot and reinstallation to get it right</p>
+
+<p>But Fedora is not working 100% in this VM environment. Sometimes part of the screen turns blue for no reason or when mouseover</p>
+]]></content>
+  </entry>
+  
+</feed>

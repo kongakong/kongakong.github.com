@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="
+">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/blog/page/106">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development cabin log</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/04/p-6172703837/">Item 24: Choose Carefully Between Function Overloading and Parameter Defaulting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T21:39:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/04/p-6172106672/">Item 23: Don&#8217;t Try to Return a Reference When You Must Return an Object</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T20:55:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>_Example: _</p>
+
+<p><code>operator*</code> and <code>operator+</code> should return a new object instead of a reference. The latter approach will introduce problem such as memory leak</p>
+
+<p>From</p>
+
+<p><a href="C++%20FAQ">http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/04/p-6172071952/">Item 22: Prefer Pass-by-reference to Pass-by-value</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T20:52:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.</p>
+
+<p>Secondly, it avoids this kind of error:</p>
+
+<p>A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/03/p-6115767038/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-03T06:04:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/03/p-6115016559/">Item 21: Use Const Whenever Possible</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-03T05:40:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/107/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/105/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/19/using-octopress/">Using Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM.</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

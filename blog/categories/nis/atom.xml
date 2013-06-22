@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nis | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/nis/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NIS vs LDAP]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/26/p-6917099918/"/>
+    <updated>2011-06-26T08:51:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/26/p-6917099918</id>
+    <content type="html"><![CDATA[<p>Unlike an NIS server, an LDAP server cannot be its own client. In other words, a machine that is running as an LDAP server cannot be configured as an LDAP client.</p>
+]]></content>
+  </entry>
+  
+</feed>

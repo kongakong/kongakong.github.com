@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: code | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[XCode 4.1 does not play too well with ‘Full screen’ mode. If I connect an iPhone to the MBP, the Xcode will show a dialog box to ask me if I want to capture the latest iOS. The dialog box appears in the Organiser windows, but it is totally inaccessible. (You can see between the gap of two desktop when doing three-fingers swipe)]]></title>
+    <link href="http://kongakong.github.io/blog/2011/08/03/p-8427413963/"/>
+    <updated>2011-08-03T23:49:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/08/03/p-8427413963</id>
+    <content type="html"><![CDATA[<p>XCode 4.1 does not play too well with ‘Full screen’ mode. If I connect an iPhone to the MBP, the Xcode will show a dialog box to ask me if I want to capture the latest iOS. The dialog box appears in the Organiser windows, but it is totally inaccessible. (You can see between the gap of two desktop when doing three-fingers swipe)</p>
+]]></content>
+  </entry>
+  
+</feed>

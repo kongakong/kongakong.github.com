@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: syndrome | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/syndrome/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Guillain-Barre syndrome]]></title>
+    <link href="http://kongakong.github.io/blog/2012/02/25/p-18244215731/"/>
+    <updated>2012-02-25T22:30:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2012/02/25/p-18244215731</id>
+    <content type="html"><![CDATA[<p><a href="Guillain%C3%A2%C2%80%C2%93Barr%C3%83%C2%A9%20syndrome">http://en.wikipedia.org/wiki/Guillain%E2%80%93Barr%C3%A9_syndrome</a></p>
+
+<p>Franklin Roosevelt might not have caught polio after all. The crippling happened when he was 39 years old. It is not typical of a polio infection. It is more likely to be ‘GuillainâBarrÃ© syndrome’, a kind of neuro disorder.</p>
+]]></content>
+  </entry>
+  
+</feed>

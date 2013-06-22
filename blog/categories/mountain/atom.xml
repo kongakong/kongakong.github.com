@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mountain | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/mountain/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Doing a clean install of Mountain Lion.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/09/01/p-30646969056/"/>
+    <updated>2012-09-01T20:44:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/09/01/p-30646969056</id>
+    <content type="html"><![CDATA[<p>Doing a clean install of Mountain Lion.</p>
+
+<p>Basically all you need to know is contained in this</p>
+
+<p><a href="Q&amp;A">http://apple.stackexchange.com/questions/60653/how-to-do-fresh-install-of-mountain-lion</a></p>
+
+<p>I decided to make a bootable usb thumb drive, following the instruction</p>
+
+<p><a href="here">http://apple.stackexchange.com/a/60660/3428</a></p>
+
+<p>However, when I used the Disk UTILity to prepare the usb thumb drive, an error message ‘Could not Restore. Invalid Argument’ came up.</p>
+
+<p>Turns out the thumb drive works despite the error message.</p>
+
+<p>Now I am restoring my files from the time machine copy.</p>
+]]></content>
+  </entry>
+  
+</feed>

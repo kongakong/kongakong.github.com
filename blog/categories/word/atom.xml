@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: word | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/word/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Biannual vs biennial]]></title>
+    <link href="http://kongakong.github.io/blog/2012/04/06/p-20566131314/"/>
+    <updated>2012-04-06T12:45:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/04/06/p-20566131314</id>
+    <content type="html"><![CDATA[<p>Whenever I come across people saying “Biannual means once every two years,” I have an urge to correct them :&ndash;)</p>
+
+<p><a href="None">http://xkcd.com/386</a></p>
+
+<p>Biannual actually means twice every year. Biennial is word for “once every two years”.</p>
+
+<p>It is so confusing I prefer to use semiannual instead of biannual.</p>
+]]></content>
+  </entry>
+  
+</feed>

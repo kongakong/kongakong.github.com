@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="Item 29 is to adress situations in which the holder of a handle (a pointer or reference to the internal data representation) can circumvent the const &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/blog/page/105">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development cabin log</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6191932419/">Item 29: Avoid Returning &#8216;Handles&#8217; to Internal Data</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T09:18:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Item 29 is to adress situations in which the holder of a handle (a pointer or reference to the internal data representation) can circumvent  the <code>const</code> semantic by making modification to the underlying data via the handle.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To disallow an operation on your object class, you can</p>
+
+<p>1) declare the function as <em>private</em></p>
+
+<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6189159712/">Item 28: Partition the Global Namespace</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T07:47:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Don’t think anyone will seriously argue against the usefulness of namespace.</p>
+
+<p>It is also mentioned that we can use <code>struct</code> to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6186209686/">Item 26: Guard Against Potential Ambiguity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T06:10:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Compiler cannot decide:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6185145541/">Item 25: Avoid Overloading on a Pointer and a Numerical Type</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T05:36:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some concepts:</p>
+
+<ol>
+<li><p>member function templates (c++ language construct)</p></li>
+<li><p>NullClass (useful while you are a caller of the function and want to avoid potential mistake)</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/106/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/104/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/19/using-octopress/">Using Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM.</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

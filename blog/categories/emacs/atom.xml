@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Emacs | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[When I start up emacs in shell, I got this error message:]]></title>
+    <link href="http://kongakong.github.io/blog/2013/05/31/p-51794320183/"/>
+    <updated>2013-05-31T20:00:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/05/31/p-51794320183</id>
+    <content type="html"><![CDATA[<p>When I start up emacs in shell, I got this error message:</p>
+
+<p>But my config file works fine with Aquamacs.</p>
+
+<p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs fu 2]]></title>
+    <link href="http://kongakong.github.io/blog/2013/04/30/p-49203298223/"/>
+    <updated>2013-04-30T07:12:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/04/30/p-49203298223</id>
+    <content type="html"><![CDATA[<p>erlware-mode is deprecated (</p>
+
+<p><a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
+
+<p>Use erlang-mode in erlang distribution instead</p>
+]]></content>
+  </entry>
+  
+</feed>

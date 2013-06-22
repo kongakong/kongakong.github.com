@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: java | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Easiest way to set up JAVA_HOME in OSX]]></title>
+    <link href="http://kongakong.github.io/blog/2012/12/06/p-37258221019/"/>
+    <updated>2012-12-06T00:15:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2012/12/06/p-37258221019</id>
+    <content type="html"><![CDATA[<p>No more guesswork.</p>
+
+<p>End result:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[switch statement requires all the case labels to be constant at compile time]]></title>
+    <link href="http://kongakong.github.io/blog/2011/10/31/p-12121817265/"/>
+    <updated>2011-10-31T04:26:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2011/10/31/p-12121817265</id>
+    <content type="html"><![CDATA[<p><a href="switch%20statement%20requires%20all%20the%20case%20labels%20to%20be%20constant%20at%20compile%20time">http://tools.android.com/tips/non-constant-fields</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[To turn on SQL tracing in Hibernate ]]></title>
+    <link href="http://kongakong.github.io/blog/2011/09/12/p-10124153751/"/>
+    <updated>2011-09-12T22:52:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/09/12/p-10124153751</id>
+    <content type="html"><![CDATA[<p>Extremely useful for debugging which HSQL has caused database server exception</p>
+
+<p>```</p>
+
+<p>log4j.logger.org.hibernate.SQL=trace
+log4j.logger.org.hibernate.engine.query=trace
+log4j.logger.org.hibernate.type=trace
+log4j.logger.org.hibernate.jdbc=trace</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Java 1.7 preview edition on OSX]]></title>
+    <link href="http://kongakong.github.io/blog/2011/09/10/p-10011448975/"/>
+    <updated>2011-09-10T09:17:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/09/10/p-10011448975</id>
+    <content type="html"><![CDATA[<p>At first I thought I installed it wrong. The Java version number is:</p>
+
+<p>```</p>
+
+<p>$ java -version
+java version &ldquo;1.6.0_27&rdquo;
+Java&trade; SE Runtime Environment (build 1.6.0_27-b07-393-11M3511)
+Java HotSpot&trade; 64-Bit Server VM (build 20.2-b06-393, mixed mode)</p>
+
+<p>```</p>
+
+<p>According to the release note, it is the one.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lambda in Java]]></title>
+    <link href="http://kongakong.github.io/blog/2011/09/09/p-9991195593/"/>
+    <updated>2011-09-09T20:45:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/09/09/p-9991195593</id>
+    <content type="html"><![CDATA[<p>Java will</p>
+
+<p><a href="adopt%20the%20lambda%20syntax%20of%20c#">http://mail.openjdk.java.net/pipermail/lambda-dev/2011-September/003936.html</a></p>
+]]></content>
+  </entry>
+  
+</feed>

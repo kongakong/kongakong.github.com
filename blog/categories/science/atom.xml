@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: science | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/science/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Algebraic data type]]></title>
+    <link href="http://kongakong.github.io/blog/2012/07/29/p-28257805067/"/>
+    <updated>2012-07-29T19:58:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/07/29/p-28257805067</id>
+    <content type="html"><![CDATA[<p><a href="Algebraic%20data%20type">http://en.wikipedia.org/wiki/Algebraic_data_type</a></p>
+
+<p>Algebraic data type is a kind of composite type, i.e. a type formed by combining other types. Two common classes of algebraic type are product types and sum types</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Liskov substitution principle]]></title>
+    <link href="http://kongakong.github.io/blog/2011/05/25/p-5815038508/"/>
+    <updated>2011-05-25T09:41:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/05/25/p-5815038508</id>
+    <content type="html"><![CDATA[<p><a href="Liskov%20Principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a></p>
+]]></content>
+  </entry>
+  
+</feed>

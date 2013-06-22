@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: regular | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/regular/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Regular Polyhedra]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/20/p-29820755141/"/>
+    <updated>2012-08-20T19:45:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/20/p-29820755141</id>
+    <content type="html"><![CDATA[<p>The regular polyhedra are the four-sided tetrahedron, the six-sided cube, the eight-sided octahedron, the twelve-sided dodecahedron, and the twenty-sided icosahedron. Although all five types had been identified by Pythagoras two hundred years before Plato was born, they are nonetheless collectively known asplatonic solids, named in honor of Plato by the geometer Euclid.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: uitableview | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/uitableview/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Delete a row from UITableView]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/16/p-29544259150/"/>
+    <updated>2012-08-16T19:35:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/16/p-29544259150</id>
+    <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
+
+<p>``&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
+
+<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
+</code></pre>
+
+<p>I can enable this feature, but I got this exception from this function</p>
+
+<p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
+]]></content>
+  </entry>
+  
+</feed>

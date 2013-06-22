@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cs11 | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/cs11/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[C++: Required Class Operations]]></title>
+    <link href="http://kongakong.github.io/blog/2011/05/31/p-6035862177/"/>
+    <updated>2011-05-31T22:47:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/05/31/p-6035862177</id>
+    <content type="html"><![CDATA[<p>Related to</p>
+
+<p>C++ requires that all classes must provide certain operations</p>
+
+<p>If you donât provide them, the compiler will make them up by following some simple rules. This can lead to problems</p>
+
+<p><a href="cs11%20lecture%202">http://www.cs.caltech.edu/courses/cs11/material/cpp/donnie/lectures/cs11-cpp-lec2.pdf</a></p>
+]]></content>
+  </entry>
+  
+</feed>

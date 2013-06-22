@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ios | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Added SSToolkit to my Podfile and got this message. Don’t know what it means…]]></title>
+    <link href="http://kongakong.github.io/blog/2013/05/29/p-51633107176/"/>
+    <updated>2013-05-29T20:00:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/05/29/p-51633107176</id>
+    <content type="html"><![CDATA[<p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Delete a row from UITableView]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/16/p-29544259150/"/>
+    <updated>2012-08-16T19:35:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/16/p-29544259150</id>
+    <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
+
+<p>``&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
+
+<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
+</code></pre>
+
+<p>I can enable this feature, but I got this exception from this function</p>
+
+<p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to dismiss a modal view controller which is created by a segue in storyboard?]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/12/p-29256890594/"/>
+    <updated>2012-08-12T19:50:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/12/p-29256890594</id>
+    <content type="html"><![CDATA[<p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
+
+<p>But it does not work in storyboard anymore.</p>
+
+<p>This is the solution:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UIViewController::setMoviePlayerController]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/09/p-29045520999/"/>
+    <updated>2012-08-09T19:56:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/09/p-29045520999</id>
+    <content type="html"><![CDATA[<p><code>UIViewController::setMoviePlayerController:</code> is an undocumented API, yet it is used in one of the Apple sample project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Encountered this error when adding core data support to my ios project]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/05/p-28758435068/"/>
+    <updated>2012-08-05T19:50:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/05/p-28758435068</id>
+    <content type="html"><![CDATA[<p>Encountered this error when adding core data support to my ios project</p>
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: requests | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/requests/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Whenever you think you need urllib2, you actually need requests]]></title>
+    <link href="http://kongakong.github.io/blog/2013/05/14/p-50367270258/"/>
+    <updated>2013-05-14T07:21:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/05/14/p-50367270258</id>
+    <content type="html"><![CDATA[<p>Since I have started using python since version 2.4, I have a lot of old die-hard habit. For one, I write exception handler like this</p>
+
+<p>instead  of</p>
+
+<p>The later is of course a better and more flexible style.</p>
+
+<p>So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.</p>
+
+<p>It usually works great… unTIL you need something more than basic.</p>
+
+<p>Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…</p>
+
+<p>Why it throws an exception <em>AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’</em>?</p>
+
+<p>OK, let’s import DefaultCookiePolicy. Then I got hit by a <em>missing domain attribute</em> exception. “Do I need to use a lower level Cookie class to set the domain?”, I wonder. Try switching to Cookie and it throw this exception</p>
+
+<p>At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.</p>
+
+<p>Instead of continuing banging my head against a wall, I recall reading about ‘requests’ module. Let give it a go.</p>
+
+<p>Like magic, it is all I need. 2 lines.</p>
+
+<p>It just works. Well done, requests!</p>
+]]></content>
+  </entry>
+  
+</feed>

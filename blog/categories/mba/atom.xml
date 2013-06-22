@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mba | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/mba/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Book Air]]></title>
+    <link href="http://kongakong.github.io/blog/2011/07/20/p-7842567277/"/>
+    <updated>2011-07-20T23:18:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/07/20/p-7842567277</id>
+    <content type="html"><![CDATA[<p>Looks like a very sweet deal this time.</p>
+
+<p>Slightly disappointed with only 4GB RAM max.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: self | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/self/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[“_Get rid of self:_ I think this has been addressed in the responses; it’s not as easy as you’d think, and there are important advantages to the uniform interpretation of methods as “just functions that get called in a funky way”. In Ruby, everything is a method, or an anonymous block, and there are no “free functions”. Python uses the complimentary approach, treating functions as first-class citizens. Both approaches are complete; they are however incompatible, and you can’t easily morph one into the other. (Personally, I find that the criticm of explicit self has about as much merit as the criticism of Python’s use of whitespace.)”]]></title>
+    <link href="http://kongakong.github.io/blog/2011/07/11/p-7462218961/"/>
+    <updated>2011-07-11T05:04:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/07/11/p-7462218961</id>
+    <content type="html"><![CDATA[<p>“<em>Get rid of self:</em> I think this has been addressed in the responses; it’s not as easy as you’d think, and there are important advantages to the uniform interpretation of methods as “just functions that get called in a funky way”. In Ruby, everything is a method, or an anonymous block, and there are no “free functions”. Python uses the complimentary approach, treating functions as first-class citizens. Both approaches are complete; they are however incompatible, and you can’t easily morph one into the other. (Personally, I find that the criticm of explicit self has about as much merit as the criticism of Python’s use of whitespace.)”</p>
+
+<p><a href="Guido%20van%20Rossum">http://www.artima.com/weblogs/viewpost.jsp?thread=214325</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Esc-option triggers code completion in xcode]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/05/p-6206909472/"/>
+    <updated>2011-06-05T19:07:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/05/p-6206909472</id>
+    <content type="html"><![CDATA[<p>Esc-option triggers code completion in xcode</p>
+]]></content>
+  </entry>
+  
+</feed>

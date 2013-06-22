@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: google-fu | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/google-fu/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-22T19:22:02+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Google search intext: operator]]></title>
+    <link href="http://kongakong.github.io/blog/2012/08/05/p-28755939075/"/>
+    <updated>2012-08-05T18:24:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/08/05/p-28755939075</id>
+    <content type="html"><![CDATA[<p><a href="Google%20search%20intext:%20operator">http://www.powersearchingwithgoogle.com/class?class=3&amp;lesson=5</a></p>
+]]></content>
+  </entry>
+  
+</feed>
