@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="like to quote Peters’ Zen of Python. “Explicit is better than implicit.” In Java and C++, ‘this.’ can be deduced, except when you have variable names &hellip;">
+  <meta name="description" content="I think this has been addressed in the responses; it’s not as easy as you’d think, and there are important advantages to the uniform interpretation &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,44 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/07/11/p-7462218961/">Get Rid of Self</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-11T05:04:00+10:00" pubdate data-updated="true">Jul 11<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>I think this has been addressed in the responses; it’s not as easy as you’d think, and there are important advantages to the uniform interpretation of methods as “just functions that get called in a funky way”. In Ruby, everything is a method, or an anonymous block, and there are no “free functions”. Python uses the complimentary approach, treating functions as first-class citizens. Both approaches are complete; they are however incompatible, and you can’t easily morph one into the other. (Personally, I find that the criticm of explicit self has about as much merit as the criticism of Python’s use of whitespace.)”</p></blockquote>
+
+<p><a href="Guido%20van%20Rossum">http://www.artima.com/weblogs/viewpost.jsp?thread=214325</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2011/07/11/p-7462078342/">Why Do You Need Explicitly Have the &#8216;Self&#8217; Argument Into a Python Method?</a></h1>
     
     
@@ -94,17 +132,15 @@
   </header>
 
 
-  <div class="entry-content"><p>like to quote Peters’ Zen of Python. “Explicit is better than implicit.”</p>
+  <div class="entry-content"><blockquote><p>I like to quote Peters’ Zen of Python. &ldquo;Explicit is better than implicit.&rdquo;</p>
 
-<p>In Java and C++, ‘this.’ can be deduced, except when you have variable names that make it impossible to deduce. So you sometimes need it and sometimes don’t.</p>
+<p>I In Java and C++, <code>this</code> can be deduced, except when you have variable names that make it impossible to deduce. So you sometimes need it and sometimes don’t.</p>
 
-<p>Python elects to make things like this explicit rather than based on a rule.</p>
+<p>I Python elects to make things like this explicit rather than based on a rule.</p>
 
-<p>Additionally, since nothing is implied or assumed, parts of the implementation are exposed. self.<strong>class</strong>, self.<strong>dict</strong> and other “internal” structures are available in an obvious way.</p>
+<p>I Additionally, since nothing is implied or assumed, parts of the implementation are exposed. <code>self.__class__</code>, <code>self.__dict__</code> and other &ldquo;internal&rdquo; structures are available in an obvious way.</p></blockquote>
 
-<p>by</p>
-
-<p><a href="S.%20Lott">http://stackoverflow.com/questions/68282/why-do-you-need-explicitly-have-the-self-argument-into-a-python-method/68324#68324</a></p>
+<p>by <a href="http://stackoverflow.com/questions/68282/why-do-you-need-explicitly-have-the-self-argument-into-a-python-method/68324#68324">S. Lott</a>]</p>
 </div>
   
   
@@ -224,42 +260,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/07/07/p-7339945823/">Cannot Get Preview of Html or Dvi to Work in _Lyx_. It Complaints About &#8220;LaTeX Error: Unknown Graphics Extension: .ps.&#8220;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-07-07T22:32:00+10:00" pubdate data-updated="true">Jul 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Cannot get preview of html or dvi to work in <em>Lyx</em>. It complaints about <code>LaTeX Error: Unknown graphics extension: .ps.</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/86/">&larr; Older</a>
@@ -277,6 +277,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a>
       </li>
     
@@ -290,10 +294,6 @@
     
       <li class="post">
         <a href="/blog/2013/06/19/using-octopress/">Using Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/12/p-52782958923/">Just Installed RVM</a>
       </li>
     
   </ul>

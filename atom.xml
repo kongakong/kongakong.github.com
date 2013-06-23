@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-23T16:18:41+10:00</updated>
+  <updated>2013-06-23T17:25:36+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Good and Bad of Octopress]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/23/good-and-bad-of-octopress/"/>
+    <updated>2013-06-23T16:53:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/23/good-and-bad-of-octopress</id>
+    <content type="html"><![CDATA[<p>After used octopress for a couple of days seriously as a blogging platform, this is a list of good and bad I feel about the platform:</p>
+
+<p>First a list of bad</p>
+
+<p>1) It takes time to build and release changes. Whenever I release a new post, I need to regenerate the site and then commit the changes to the github. There is usually some delay between the commit and the appearance of the new post on the site.</p>
+
+<p>2) With Octopress I think I will tend not to post spontaneously/impulsive as I was before with Tumblr. It is because I will not be able to write and post unless I am near my PC.</p>
+
+<p>The goods:</p>
+
+<p>1) The Octopress framework is very flexible. Anyone can write up any plugin in ruby to enhance the platform or add a new feature</p>
+
+<p>2) I get to use my favorite editor <code>vim</code></p>
+
+<p>3) Writing programming topic is painful in Tumblr. It is more enjoyable to do it in Octopress</p>
+
+<p>4) I get to  keep my the primary material &ndash; all blog posts, customisation and pictures etc are created and verison-controlled on my PC in the first place..</p>
+
+<p>5) Since it takes time to build and release the blog, the up side is that I will tend to post thing that is worth writing about, instead of instagram-ish entities that are only there because it is convenientto do so on a mobile phone.</p>
+
+<p>What I need now is a decent way to spell check in vim/emacs.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git status says file is modified even if...]]></title>
@@ -84,7 +113,7 @@
 
 <p>I am happy with tumblr after these many years, but writing programming related topic is not really enjoyable due to lack of support of syntax highlight etc.</p>
 
-<p>Happy with the markdown support in Octopress so far.</p>
+<p>The markdown support in Octopress is very good</p>
 ]]></content>
   </entry>
   
@@ -301,25 +330,6 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
     <content type="html"><![CDATA[<p>Don’t know how widely is this xml schema is used</p>
 
 <p><a href="http://purl.org/dc/elements/1.1/">http://purl.org/dc/elements/1.1/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Drone Warfare]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/02/p-51959897403/"/>
-    <updated>2013-06-02T21:00:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/02/p-51959897403</id>
-    <content type="html"><![CDATA[<p>This is a public lecture by investigative journalist/activist Jeremy Scahill:</p>
-
-<p><a href="https://www.commonwealthclub.org/node/65484">https://www.commonwealthclub.org/node/65484</a></p>
-
-<p>Very chilling account of the impact of drone warfare on the targeted population as well as the democratic values of USA.</p>
-
-<p>From another perspective, here is an interview of General Norton Schwartz:</p>
-
-<p><a href="http://www.uctv.tv/shows/The-Air-Force-in-the-Twenty-First-Century-with-General-Norton-Schwartz-Conversations-with-History-25072">http://www.uctv.tv/shows/The-Air-Force-in-the-Twenty-First-Century-with-General-Norton-Schwartz-Conversations-with-History-25072</a></p>
-
-<p>Harry put the drone warfare question to him near the end of interview.</p>
 ]]></content>
   </entry>
   
