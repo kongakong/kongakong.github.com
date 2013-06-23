@@ -219,9 +219,16 @@
   </header>
 
 
-  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.</p>
+  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
 
-<p>I added this to my .bash_profile to fix the problem:</p>
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p><code>-s</code> here means if the file exists and not of size 0</p>
 </div>

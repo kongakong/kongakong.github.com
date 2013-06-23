@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bash | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/bash/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-23T09:38:00+10:00</updated>
+  <updated>2013-06-23T15:04:24+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,9 +18,15 @@
     <link href="http://kongakong.github.io/blog/2013/06/08/p-52453247211/"/>
     <updated>2013-06-08T21:20:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2013/06/08/p-52453247211</id>
-    <content type="html"><![CDATA[<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.</p>
+    <content type="html"><![CDATA[<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
 
-<p>I added this to my .bash_profile to fix the problem:</p>
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
+
+<p>```</p>
+
+<p>[[ -s ~/.bashrc ]] &amp;&amp; source ~/.bashrc</p>
+
+<p>```</p>
 
 <p><code>-s</code> here means if the file exists and not of size 0</p>
 ]]></content>
