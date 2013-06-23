@@ -8,3 +8,15 @@ categories:
 
 Dfa class interface:
 
+
+{% codeblock lang:python %}
+class DFA:
+    def __init__(...):
+    def predict(self, input):
+    def noViableAlt(self, s, input):
+    def error(self, nvae):
+    def specialStateTransition(self, s, input):
+    def getDescription(self):
+    def unpack(cls, string):
+{% endcodeblock %}
+
