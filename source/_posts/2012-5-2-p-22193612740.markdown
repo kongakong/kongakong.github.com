@@ -1,20 +1,23 @@
 ---
 layout: post
-title: "Trying to install scipy in ubuntu. Ran ``pip install scipy``"
+title: "Installing scipy in ubuntu"
 date: 2012-05-02 00:49
 comments: true
 categories: ubuntu python scipy
+conversion: done
 ---
 
 Trying to install scipy in ubuntu. Ran ``pip install scipy``
 
 
 ```
+numpy.distutils.system_info.BlasNotFoundError:
 
+    Blas (http://www.netlib.org/blas/) libraries not found.
 
-numpy.distuTILs.system_info.BlasNotFoundError:
+    Directories to search for the libraries can be specified in the
 
-    Blas (
+    numpy/distutils/site.cfg file (section [blas]) or by setting
 
-[http://www.netlib.org/blas/](http://www.netlib.org/blas/)
-
+    the BLAS environment variable.
+```
