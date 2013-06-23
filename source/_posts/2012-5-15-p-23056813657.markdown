@@ -3,16 +3,36 @@ layout: post
 title: "Slicing magic "
 date: 2012-05-15 07:01
 comments: true
-categories: 
+categories: python
+conversion: done
 ---
 
 
-Original post: 
-
-[http://stackoverflow.com/a/9858902/58129](http://stackoverflow.com/a/9858902/58129)
-
+Original post: [http://stackoverflow.com/a/9858902/58129](http://stackoverflow.com/a/9858902/58129) 
 
 
 Given this
 
+{% codeblock lang:python %}
+>>> a  = array([[1,2,3,4], [5,6,7,8], [9, 10,11,12]])
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+{% endcodeblock %}
+
+You can use the following code to extract data in the first and second column as such
+
+{% codeblock lang:python %}
+>>> list1 = a[:,0]
+>>> list1
+array([1, 5, 9])
+>>> list1 = a[:,1]
+>>> list1
+array([ 2,  6, 10])
+
+{% endcodeblock %}
+
+Slicing documentation: [http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing](
+http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing)
 

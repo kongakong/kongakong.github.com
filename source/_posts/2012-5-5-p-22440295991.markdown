@@ -1,12 +1,17 @@
 ---
 layout: post
-title: "A follow up on my"
+title: "Solution to the pip scipy problem"
 date: 2012-05-05 21:34
 comments: true
 categories: scipy osx lion pip python
 ---
 
-A follow up on my 
+A follow up on my  last pip scipy woe. I think it is my answer:
 
 [http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy](http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy)
 
+```
+brew install gfortran
+pip install -e git+https://github.com/scipy/scipy#egg=scipy-dev
+
+```

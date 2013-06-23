@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "It is not looking good. The new Xcode installation hang. It stops to alert me to close iTune. But after it is closed the alert stay. I killed the installer but the alert window is sTILl there."
+title: Xcode installation woe
 date: 2011-08-03 06:39
 comments: true
-categories: osx
+categories: osx xcode
 ---
 
-It is not looking good. The new Xcode installation hang. It stops to alert me to close iTune. But after it is closed the alert stay. I killed the installer but the alert window is sTILl there.
+It is not looking good. The new Xcode installation hang. It stops to alert me to close iTune. But after it is closed the alert stay. I killed the installer but the alert window is still there.
 

@@ -3,10 +3,35 @@ layout: post
 title: "The pip cannot install scipy properly."
 date: 2012-05-03 22:21
 comments: true
-categories: 
+categories: pip scipy
+conversion: done
 ---
 
 The pip cannot install scipy properly. 
 
+```
+
+mport pybrain
+Traceback (most recent call last):
+  File "", line 1, in 
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/__init__.py", line 1, in 
+    from structure.__init__ import *
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/__init__.py", line 2, in 
+    from modules.__init__ import *
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/__init__.py", line 2, in 
+    from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py", line 11, in 
+    from pybrain.tools.functions import sigmoid, sigmoidPrime
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py", line 4, in 
+    from scipy.linalg import inv, det, svd
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/__init__.py", line 115, in 
+    from misc import *
+  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py", line 3, in 
+    import fblas
+ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:
+    /Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+
+
+```
 
 
