@@ -4,7 +4,8 @@ title: "odict"
 date: 2012-05-18 19:42
 comments: true
 categories: python
+conversion: done
 ---
 
-Pure python implementation of `` odict `` (âOrdered dictionaryâ) can be slow in term of performance. If performance is an issue, ``sqlalchemy.uTIL.OrderedDict `` is a faster alternative
+Pure python implementation of `` odict `` ("Ordered dictionary") can be slow in term of performance. If performance is an issue, ``sqlalchemy.util.OrderedDict `` is a faster alternative
 

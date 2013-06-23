@@ -4,13 +4,17 @@ title: "Some useful vim trick"
 date: 2011-07-04 21:00
 comments: true
 categories: vim
+conversion: done
 ---
 
 Some useful vim trick
 
 
+```
 :echo $HOME
-
+:echo $VIM
+:echo $VIMRUNTIME
+```
 
 It is where you can put a ``.vimrc`` (or ``_vimrc`` in Windows)
 

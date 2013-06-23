@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code"
+title: "Scala IDE"
 date: 2012-10-14 19:30
 comments: true
 categories: scala scalaIDE
@@ -8,12 +8,32 @@ categories: scala scalaIDE
 
 Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code
 
+{% codeblock lang:scala %}
+package greeter
+
+object helloworld {
+    println("hello, world")
+}
+
+{% endcodeblock %}
+
 
 I proceeded to run it by using the ‘Run it…’. I expected to see ‘Run as Scala Application’ but the option was not there.
 
 
 Turns out it is my mistake. I need to extends the object from *App*:
 
+{% codeblock lang:scala %}
+package greeter
+
+object helloworld extends App{
+    println("hello, world")
+}
+
+{% endcodeblock %}
+
+
 
 Then the option will appear (as shown here):
 
+{% img center /images/tumblr_mbvkaxoK7w1qb37bm.jpg %}

@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Got ``Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'``"
+title: "NSInvalidArgumentException"
 date: 2011-01-10 00:40
 comments: true
 categories: 
+conversion: done
 ---
 
 Got ``Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'``

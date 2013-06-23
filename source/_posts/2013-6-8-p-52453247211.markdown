@@ -4,13 +4,18 @@ title: "OSX terminal and .bashrc"
 date: 2013-06-08 21:20
 comments: true
 categories: bash osx
+conversion: done
 ---
 
-When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file.
+When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.
 
+To solve it, I added this to my .bash_profile to fix the problem:
 
-I added this to my .bash_profile to fix the problem:
+```
 
+[[ -s ~/.bashrc ]] && source ~/.bashrc
+
+```
 
 ``-s`` here means if the file exists and not of size 0
 

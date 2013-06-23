@@ -8,7 +8,7 @@ conversion: done
 ---
 
 
-Followup piece of [GNU gcc-4.2 issue on OSX 10.7](blog/2012/04/26/p-21844435707/). So I downloaded a gcc package from [ this location](https://github.com/kennethreitz/osx-gcc-installer). Then run this command
+Followup piece of [GNU gcc-4.2 issue on OSX 10.7](/blog/2012/04/26/p-21844435707/). So I downloaded a gcc package from [ this location](https://github.com/kennethreitz/osx-gcc-installer). Then run this command
 
 ```
 installer -pkg GCC-10.7.pkg -target /
