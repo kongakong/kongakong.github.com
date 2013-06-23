@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>A follow up on my - Timeline</title>
+  <title>Solution to the pip scipy problem - Timeline</title>
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A follow up on my http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy
-">
+  <meta name="description" content="A follow up on my last pip scipy woe. I think it is my answer: http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">A Follow Up on My</h1>
+      <h1 class="entry-title">Solution to the Pip Scipy Problem</h1>
     
     
       <p class="meta">
@@ -92,9 +91,16 @@
   </header>
 
 
-<div class="entry-content"><p>A follow up on my</p>
+<div class="entry-content"><p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
 
 <p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install gfortran
+</span><span class='line'>pip install -e git+https://github.com/scipy/scipy#egg=scipy-dev
+</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 

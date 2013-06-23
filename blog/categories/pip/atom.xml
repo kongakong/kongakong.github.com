@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pip | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/pip/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-23T15:20:52+10:00</updated>
+  <updated>2013-06-23T15:54:33+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,13 +14,75 @@
 
   
   <entry>
-    <title type="html"><![CDATA[A follow up on my]]></title>
+    <title type="html"><![CDATA[Solution to the pip scipy problem]]></title>
     <link href="http://kongakong.github.io/blog/2012/05/05/p-22440295991/"/>
     <updated>2012-05-05T21:34:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2012/05/05/p-22440295991</id>
-    <content type="html"><![CDATA[<p>A follow up on my</p>
+    <content type="html"><![CDATA[<p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
 
 <p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<p>```
+brew install gfortran
+pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https://github.com/scipy/scipy#egg=scipy-dev</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The pip cannot install scipy properly.]]></title>
+    <link href="http://kongakong.github.io/blog/2012/05/03/p-22317238609/"/>
+    <updated>2012-05-03T22:21:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/05/03/p-22317238609</id>
+    <content type="html"><![CDATA[<p>The pip cannot install scipy properly.</p>
+
+<p>```</p>
+
+<p>mport pybrain
+Traceback (most recent call last):
+  File &ldquo;&rdquo;, line 1, in
+  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/<strong>init</strong>.py&rdquo;, line 1, in</p>
+
+<pre><code>from structure.__init__ import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/<strong>init</strong>.py&rdquo;, line 2, in</p>
+
+<pre><code>from modules.__init__ import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/<strong>init</strong>.py&rdquo;, line 2, in</p>
+
+<pre><code>from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py&rdquo;, line 11, in</p>
+
+<pre><code>from pybrain.tools.functions import sigmoid, sigmoidPrime
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py&rdquo;, line 4, in</p>
+
+<pre><code>from scipy.linalg import inv, det, svd
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/<strong>init</strong>.py&rdquo;, line 115, in</p>
+
+<pre><code>from misc import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py&rdquo;, line 3, in</p>
+
+<pre><code>import fblas
+</code></pre>
+
+<p>ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:</p>
+
+<pre><code>/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+</code></pre>
+
+<p>```</p>
 ]]></content>
   </entry>
   
