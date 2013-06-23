@@ -24,7 +24,7 @@ The goods:
 
 4) I get to  keep my the primary material - All blog posts, theme customisation and pictures etc are created and verison-controlled on my PC in the first place.
 
-5) Since it takes time to build and release the blog, the up-side is that I will post subjects that is worth writing about, instead of instagram-ish entities that are only there because it is convenient to pick a picture and post on a mobile phone.
+5) Since it takes time to build and release the blog, the up-side is that I will post subjects that is worth writing about, instead of instagram-ish entries that are only there because it is convenient to pick a picture and post on a mobile phone.
 
 What I need now is a decent way to spell-check in vim/emacs.
 
