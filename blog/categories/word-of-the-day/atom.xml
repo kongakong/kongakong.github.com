@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Word_of_the_day | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/word-of-the-day/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-23T16:18:41+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[chillax]]></title>
+    <link href="http://kongakong.github.io/blog/2012/06/17/p-25291127139/"/>
+    <updated>2012-06-17T23:59:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2012/06/17/p-25291127139</id>
+    <content type="html"><![CDATA[<p>chillax</p>
+]]></content>
+  </entry>
+  
+</feed>

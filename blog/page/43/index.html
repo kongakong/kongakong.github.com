@@ -171,11 +171,41 @@
   </header>
 
 
-  <div class="entry-content"><p>Original post:</p>
-
-<p><a href="http://stackoverflow.com/a/9858902/58129">http://stackoverflow.com/a/9858902/58129</a></p>
+  <div class="entry-content"><p>Original post: <a href="http://stackoverflow.com/a/9858902/58129">http://stackoverflow.com/a/9858902/58129</a></p>
 
 <p>Given this</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>  <span class="o">=</span> <span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]])</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</span><span class='line'><span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+</span><span class='line'>       <span class="p">[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+</span><span class='line'>       <span class="p">[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can use the following code to extract data in the first and second column as such</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span>
+</span><span class='line'><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span>
+</span><span class='line'><span class="n">array</span><span class="p">([</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Slicing documentation: <a href="http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing">http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing</a></p>
 </div>
   
   
@@ -247,15 +277,15 @@
   </header>
 
 
-  <div class="entry-content"><p>While the book, Kafka’s The Trial, is sTILl open, digitally nonetheless, I have taken a literary detour and finished the book “Shakespeare” by Bill Bryon.</p>
+  <div class="entry-content"><p>While the book, Kafka’s The Trial, is still open, digitally nonetheless, I have taken a literary detour and finished the book “Shakespeare” by Bill Bryon.</p>
 
 <p>Very interesting read.</p>
 
-<p>There is not much known about William Shakespeare historically. There is simply not many documentation about him or his family. Despite this, Bill Bryon is sTILl able to write a fascinating account of the time and era Shakespeare lived, in particular the often plague-ridden city, London, in around 1590 to 1620.</p>
+<p>There is not much known about William Shakespeare historically. There is simply not many documentation about him or his family. Despite this, Bill Bryon is still able to write a fascinating account of the time and era Shakespeare lived, in particular the often plague-ridden city, London, in around 1590 to 1620.</p>
 
 <p>The reign of Elizabeth and James II, the swing between Protestantism and Catholicism in England, Gunpowder Plot happened in this period.</p>
 
-<p>William Shakespeare died in 1616. Ming Dynasty ended in 1644. (They are totally irrelevant. I just like to compare what is going on in the other side of the world)</p>
+<p>William Shakespeare died in 1616. Ming Dynasty ended in 1644. (They are totally irrelevant. I just like to compare what is happening on the other side of the world)</p>
 
 <p>Actually it is rather interesting that while theatre and plays are all the rage in Shakespearean time, Chinese opera also reached its height in development in Ming dynasty. Since then the costume in Chinese opera are set in Ming era, despite the explicit ban of previous dynasty’s fashion by the Qing court.</p>
 
