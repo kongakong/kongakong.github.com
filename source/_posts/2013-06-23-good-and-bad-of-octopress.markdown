@@ -10,9 +10,9 @@ After used octopress for a couple of days seriously as a blogging platform, this
 
 First a list of bad
 
-1) It takes time to build and release changes. Whenever I release a new post, I need to regenerate the site and then commit the changes to the github. There is usually some delay between the commit and the appearance of the new post on the site.
+1) It takes time to build and release changes. Whenever I release a new post, I need to regenerate the site (takes up to several minutes for about 850 posts at the time of writing) and then commit the changes to the github. And then there is usually some delay between the commit and the final appearance of the new post on the site.
 
-2) With Octopress I think I will tend not to post spontaneously/impulsive as I was before with Tumblr. It is because I will not be able to write and post unless I am near my PC.
+2) With Octopress I will tend not to post spontaneously/impulsive as I was before with Tumblr. It is because I will not be able to write and post with Octopress unless I am near my PC. Tumblr is, on the other hand, a web-based service and they have native apps on mobile platforms too.
 
 The goods:
 
@@ -22,7 +22,7 @@ The goods:
 
 3) Writing programming topic is painful in Tumblr. It is more enjoyable to do it in Octopress
 
-4) I get to  keep my the primary material - all blog posts, customisation and pictures etc are created and verison-controlled on my PC in the first place..
+4) I get to  keep my the primary material - All blog posts, theme customisation and pictures etc are created and verison-controlled on my PC in the first place.
 
 5) Since it takes time to build and release the blog, the up side is that I will tend to post thing that is worth writing about, instead of instagram-ish entities that are only there because it is convenientto do so on a mobile phone.
 
