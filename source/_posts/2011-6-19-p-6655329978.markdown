@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Installed _erlang_ via _apt-get_ in _Ubuntu 11.04_. Here is a list of dependency:"
+title: "Installing erlang via apt-get in Ubuntu 11.04"
 date: 2011-06-19 00:33
 comments: true
-categories: 
+categories: erlang
+conversion: done
 ---
 
 Installed _erlang_ via _apt-get_ in _Ubuntu 11.04_. Here is a list of dependency:

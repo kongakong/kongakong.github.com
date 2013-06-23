@@ -1,12 +1,20 @@
 ---
 layout: post
-title: "Followup piece of"
+title: "Followup piece of my last gcc 4.2 problem"
 date: 2012-04-28 01:08
 comments: true
 categories: osx gnu-gcc gcc python3 python
+conversion: done
 ---
 
-Followup piece of 
 
-[https://github.com/kennethreitz/osx-gcc-installer]( this location)
+Followup piece of [GNU gcc-4.2 issue on OSX 10.7](blog/2012/04/26/p-21844435707/). So I downloaded a gcc package from [ this location](https://github.com/kennethreitz/osx-gcc-installer). Then run this command
 
+```
+installer -pkg GCC-10.7.pkg -target /
+```
+Problem solved. Now I can compile python3. For example,
+```
+CC=gcc-4.2 ./configure
+make && make install
+```
