@@ -1,15 +1,16 @@
 ---
 layout: post
-title: "Learn something new today:"
+title: KVO
 date: 2011-04-11 04:17
 comments: true
 categories: objective-c
+conversion: done
 ---
 
-Learn something new today: 
-
-[http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/KeyValueObserving/KeyValueObserving.html](KVO)
-
-
 KVO: Key value observation. Related to Notification.
+
+[Dcoumentation is here:](http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/KeyValueObserving/KeyValueObserving.html)
+
+
+
 

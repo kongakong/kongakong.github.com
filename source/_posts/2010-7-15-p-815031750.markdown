@@ -8,12 +8,17 @@ categories: s
 
 Use
 
+{% codeblock lang:objective-c %}
+addObserver:forKeyPath:options:context: 
+{% endcodeblock %}
 
 to register an observer to the observed object.
 
 
 Use
-
+{% codeblock lang:objective-c %}
+observeValueForKeyPath:ofObject:change:context:
+{% endcodeblock %}
 
 to capture the fired, observing events.
 

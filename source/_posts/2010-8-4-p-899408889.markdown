@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Sydney. July. Frost."
+title: "Frost in July"
 date: 2010-08-04 06:15
 comments: true
-categories: 
+categories: photo
 ---
+
+{% img left /images/tumblr_l6ley4u25E1qbpfzr.jpg %}
 
 Sydney. July. Frost.
 

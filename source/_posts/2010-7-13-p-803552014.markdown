@@ -3,11 +3,15 @@ layout: post
 title: "Changing __MYCOMPANYNAME__ in Xcode template"
 date: 2010-07-13 07:40
 comments: true
-categories: objective-c
+categories: objective-c xcode
+conversion: done
 ---
 
 So, it is the answer:
 
+```
+defaults write com.apple.Xcode PBXCustomTemplateMacroDefinitions -dict ORGANIZATIONNAME "your company name"
+```
 
 Someone suggested that changing the Me Card in the Address Book will have the same effect. Does not work for me though.
 
