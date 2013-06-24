@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: first_responder | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/first-responder/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-24T20:35:30+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NSDocument and First Responder]]></title>
+    <link href="http://kongakong.github.io/blog/2013/06/07/p-52371654734/"/>
+    <updated>2013-06-07T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/06/07/p-52371654734</id>
+    <content type="html"><![CDATA[<p>Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful:</p>
+
+<p>[<a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications</a>)[<a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications</a>]</p>
+]]></content>
+  </entry>
+  
+</feed>
