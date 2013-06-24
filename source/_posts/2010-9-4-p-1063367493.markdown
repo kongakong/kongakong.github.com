@@ -3,7 +3,7 @@ layout: post
 title: "NSArray is immutable"
 date: 2010-09-04 20:17
 comments: true
-categories: 
+categories: objective-c 
 ---
 
 Need to use *NSImmutableArray* if we want to dynamically change the content of an array
