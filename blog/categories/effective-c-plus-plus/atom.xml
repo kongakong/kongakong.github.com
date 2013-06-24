@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Effective_C++ | Timeline]]></title>
+  <link href="http://kongakong.github.io/blog/categories/effective-c-plus-plus/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-06-25T01:11:52+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Item 50:  Improve your understanding of C++]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/18/p-6621581139/"/>
+    <updated>2011-06-18T00:40:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/18/p-6621581139</id>
+    <content type="html"><![CDATA[<p>The final item.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Item 49:  Familiarize yourself with the standard library]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/18/p-6621512115/"/>
+    <updated>2011-06-18T00:37:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/18/p-6621512115</id>
+    <content type="html"><![CDATA[<p>Pretty obvious I suppose…</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Item 47:  Ensure that non-local static objects are initialized before they're used]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/17/p-6617932879/"/>
+    <updated>2011-06-17T20:51:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/17/p-6617932879</id>
+    <content type="html"><![CDATA[<p>Use Singleton pattern to manage non-local static object</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Item 48:  Pay attention to compiler warnings]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/14/p-6520198204/"/>
+    <updated>2011-06-14T23:13:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/14/p-6520198204</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Item 46:  Prefer compile-time and link-time errors to runtime errors]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/14/p-6519735759/"/>
+    <updated>2011-06-14T22:41:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/14/p-6519735759</id>
+    <content type="html"><![CDATA[<p>I suppose it is fairly straightforward: if we can take advantage of the static nature of the language, we should.</p>
+]]></content>
+  </entry>
+  
+</feed>

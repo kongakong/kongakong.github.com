@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Summary: Virtual functions must be members. If f needs to be virtual, make it a member function of C.
-">
+  <meta name="description" content="Summary: Virtual functions must be members. If f needs to be virtual, make it a member function of C. operator>> and operator&lt;&lt; are never &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,6 +58,7 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -98,6 +98,12 @@
   <div class="entry-content"><p>Summary:</p>
 
 <p><em>Virtual functions</em> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p><em>operator>></em> and <em>operator&lt;&lt;</em> are never members. If f is operator» or operator«, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
 </div>
   
   
@@ -295,7 +301,7 @@
 </section>
 <section>
   <h1>About Me</h1>
-  <p></p>
+  <p>Python Developer</p>
 </section>
 
 

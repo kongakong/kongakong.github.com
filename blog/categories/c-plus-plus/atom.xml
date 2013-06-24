@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: C++ | Timeline]]></title>
+  <title><![CDATA[Category: c++ | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/c-plus-plus/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-24T21:49:59+10:00</updated>
+  <updated>2013-06-25T01:11:52+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Moving onto “More Effective C++”]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/18/p-6621895244/"/>
+    <updated>2011-06-18T00:56:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/18/p-6621895244</id>
+    <content type="html"><![CDATA[<p>Moving onto “More Effective C++”</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Item 50:  Improve your understanding of C++]]></title>
@@ -41,20 +50,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Item 48:  Pay attention to compiler warnings]]></title>
-    <link href="http://kongakong.github.io/blog/2011/06/14/p-6520198204/"/>
-    <updated>2011-06-14T23:13:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2011/06/14/p-6520198204</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Item 46:  Prefer compile-time and link-time errors to runtime errors]]></title>
-    <link href="http://kongakong.github.io/blog/2011/06/14/p-6519735759/"/>
-    <updated>2011-06-14T22:41:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2011/06/14/p-6519735759</id>
-    <content type="html"><![CDATA[<p>I suppose it is fairly straightforward: if we can take advantage of the static nature of the language, we should.</p>
+    <title type="html"><![CDATA[RAII stands for]]></title>
+    <link href="http://kongakong.github.io/blog/2011/06/17/p-6617312821/"/>
+    <updated>2011-06-17T20:01:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2011/06/17/p-6617312821</id>
+    <content type="html"><![CDATA[<p>RAII stands for</p>
+
+<p><a href="Resource%20Acquisition%20Is%20Initialization">http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization</a></p>
 ]]></content>
   </entry>
   
