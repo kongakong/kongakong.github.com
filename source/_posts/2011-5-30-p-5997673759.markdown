@@ -3,7 +3,7 @@ layout: post
 title: "Item 3: Prefer new and delete to malloc and free"
 date: 2011-05-30 21:05
 comments: true
-categories: Effective C++ c++ self-study
+categories: Effective_C++ c++ self-study
 ---
 
 The problem with malloc and free: they don’t know about constructors and destructors

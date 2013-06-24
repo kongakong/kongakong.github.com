@@ -3,7 +3,7 @@ layout: post
 title: "Item 30:  Avoid member functions that return non-const pointers or references to members less accessible than themselves"
 date: 2011-06-05 10:35
 comments: true
-categories: c++ Effective C++ self-study
+categories: Effective_C++ c++ self-study
 ---
 
 For example, one should try to avoid

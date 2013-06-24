@@ -3,8 +3,13 @@ layout: post
 title: "Item 36:  Differentiate between inheritance of interface and inheritance of implementation"
 date: 2011-06-12 21:59
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 The purpose of declaring a ``_pure virtual function_`` is to have derived classes inherit a function interface only
 
+The purpose of declaring a simple ``_virtual function_`` is to have derived classes inherit a function interface as well as a default implementation.
+
+
+The purpose of declaring a ``_nonvirtual function_`` is to have derived classes inherit a function interface as well as a mandatory implementation.

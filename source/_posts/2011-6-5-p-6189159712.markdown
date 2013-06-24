@@ -3,7 +3,8 @@ layout: post
 title: "Item 28:  Partition the global namespace"
 date: 2011-06-05 07:47
 comments: true
-categories: c++ Effective C++ self-study
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 Don’t think anyone will seriously argue against the usefulness of namespace.

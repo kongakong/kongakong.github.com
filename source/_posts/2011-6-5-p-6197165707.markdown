@@ -3,7 +3,7 @@ layout: post
 title: "Item 33:  Use inlining judiciously"
 date: 2011-06-05 12:09
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
 ---
 
 Hopefully we do not need to worry too much about this item anymore, because most problems covered by it are due to older compilers that are not compilant to the later c++ standard of ‘outlined inliner’ (i.e. what to do when a compiler chooses not to inline a function for whatever reason)

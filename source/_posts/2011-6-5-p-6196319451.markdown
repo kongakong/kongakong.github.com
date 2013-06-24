@@ -3,10 +3,10 @@ layout: post
 title: "Item 23 revisited"
 date: 2011-06-05 11:42
 comments: true
-categories: 
+categories: Effective_C++ c++ self-study
 ---
 
-Revisiting 
+Revisiting [Item 23: Don't Try to Return a Reference When You Must Return an Object](/blog/2011/06/04/p-6172106672)
 
 
 
@@ -17,10 +17,26 @@ While the title sounds rather generic, the main content is about what is appropr
 
 SO has a more 
 
-[http://stackoverflow.com/questions/4421706/operator-overloading/4421729](in-depth treatment)
+[in-depth treatment](http://stackoverflow.com/questions/4421706/operator-overloading/4421729)
 
 
 
 In the case of binary operators, here is a good example of the function declaration/implementation:
 
+{% codeblock lang:c++ %}
+class X { 
+  X& operator+=(const X& rhs) 
+  {
+    // actual addition of rhs to *this 
+    return *this;
+  }
+}; 
+inline X operator+(X lhs, const X& rhs)
+{
+  lhs += rhs;
+  return lhs;
+} 
+}; 
+{% endcodeblock %}
 
+Note the parameter lhs is passed into ``operator+`` via copying.

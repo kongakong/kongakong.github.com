@@ -3,5 +3,6 @@ layout: post
 title: "Item 24:  Choose carefully between function overloading and parameter defaulting"
 date: 2011-06-04 21:39
 comments: true
-categories: c++ Effective C++ self-study
+categories: Effective_C++ c++ self-study
+conversion: done
 ---

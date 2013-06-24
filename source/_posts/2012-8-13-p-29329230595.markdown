@@ -3,7 +3,7 @@ layout: post
 title: "The importance of the idea of 'map'"
 date: 2012-08-13 19:42
 comments: true
-categories: mit "MIT 6.001 Structure and Interpretation"
+categories: mit MIT_6.001_Structure_and_Interpretation
 ---
 
 > The importance of the idea of 'map': you stop thinking about control structure. And you start to think about operation on the aggregate, the list.

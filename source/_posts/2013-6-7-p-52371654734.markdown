@@ -8,5 +8,5 @@ categories: osx first_responder
 
 Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful: 
 
-[http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications)[http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications]
+[Connecting Menu Items in Document Based Applications](http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications)
 

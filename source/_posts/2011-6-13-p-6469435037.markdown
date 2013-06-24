@@ -3,7 +3,8 @@ layout: post
 title: "Item 41:  Differentiate between inheritance and templates"
 date: 2011-06-13 09:28
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 A ``template`` should be used to generate a collection of classes when the type of the objects does not affect the behavior of the class’s functions.

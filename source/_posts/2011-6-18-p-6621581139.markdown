@@ -3,7 +3,8 @@ layout: post
 title: "Item 50:  Improve your understanding of C++"
 date: 2011-06-18 00:40
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 The final item.

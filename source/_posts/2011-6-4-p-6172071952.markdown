@@ -3,7 +3,7 @@ layout: post
 title: "Item 22:  Prefer pass-by-reference to pass-by-value"
 date: 2011-06-04 20:52
 comments: true
-categories: c++ Effective C++ self-study
+categories: Effective_C++ c++ self-study
 ---
 
 First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.

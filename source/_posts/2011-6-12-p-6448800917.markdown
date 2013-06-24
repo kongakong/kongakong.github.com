@@ -3,7 +3,7 @@ layout: post
 title: "Item 34:  Minimize compilation dependencies between files"
 date: 2011-06-12 20:00
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
 ---
 
 There are three technique to make a header file more self-contained:
@@ -19,4 +19,7 @@ This will avoid the need of including a header file
 
 
 Use forward declaration instead
+
+
+Probably useful technique if the scale of the c++ project warrants it?
 

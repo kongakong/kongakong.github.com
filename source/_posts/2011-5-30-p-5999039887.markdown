@@ -3,11 +3,12 @@ layout: post
 title: "Item 6:  Use delete on pointer members in destructors"
 date: 2011-05-30 22:33
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
 ---
 
 Summary:
 
-
+* deleting a null pointer is always safe
+* Do not delete a pointer that was passed into a class in the first place
 
 

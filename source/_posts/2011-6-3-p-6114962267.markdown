@@ -3,5 +3,5 @@ layout: post
 title: "Item 20:  Avoid data members in the public interface"
 date: 2011-06-03 05:38
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
 ---

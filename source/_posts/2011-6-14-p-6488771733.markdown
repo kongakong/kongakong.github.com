@@ -3,7 +3,7 @@ layout: post
 title: "Item 45:  Know what functions C++ silently writes and calls"
 date: 2011-06-14 01:05
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
 ---
 
 If you don’t declare them yourself, c++ compilers will declare their own versions of a_ copy constructor_, an_ assignment operator_, a _destructor_, and a pair of _address-of operators_. If the class does not declare any constructors, the compilers will declare a _default constructor_ too.

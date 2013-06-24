@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Item 2:  Prefer "
+title: "Item 2:  Prefer <iostream> to <stdio.h>"
 date: 2011-05-30 20:20
 comments: true
-categories: self-study Effective C++ c++
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 Advantage of _iostream_: type safety
 
+iostream vs iostream.h: isostream has its own namespace.

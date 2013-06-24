@@ -3,16 +3,22 @@ layout: post
 title: "Item 23:  Don't try to return a reference when you must return an object"
 date: 2011-06-04 20:55
 comments: true
-categories: c++ Effective C++ self-study
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
-_Example: _
+_Example:_
 
 
 ``operator*`` and ``operator+`` should return a new object instead of a reference. The latter approach will introduce problem such as memory leak
 
 
+_Additional note:_
+
+
+Avoid overloading short-circuiting operators: x || y or x && y. The overloaded versions of these do not short-circuit — they evaluate both operands even if the left-hand operand “determines” the outcome, so that confuses users.
+
 From 
 
-[http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9](C++ FAQ)
+[C++ FAQ](http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9)
 

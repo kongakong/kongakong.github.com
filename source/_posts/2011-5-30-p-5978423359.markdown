@@ -3,7 +3,8 @@ layout: post
 title: "Item 19:  Differentiate among member functions, non-member functions, and friend functions"
 date: 2011-05-30 07:47
 comments: true
-categories: Effective C++ c++ self-study
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 Summary:
@@ -11,6 +12,13 @@ Summary:
 
 _Virtual functions_ must be members. If f needs to be virtual, make it a member function of C.
 
+*operator>>* and *operator<<* are never members. If f is operator» or operator«, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.
+
+
+Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.
+
+
+Everything else should be a member function. If none of the other cases apply, make f a member function of C.
 
   
 

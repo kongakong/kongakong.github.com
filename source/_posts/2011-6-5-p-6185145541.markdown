@@ -3,7 +3,8 @@ layout: post
 title: "Item 25:  Avoid overloading on a pointer and a numerical type"
 date: 2011-06-05 05:36
 comments: true
-categories: c++ Effective C++ self-study
+categories: Effective_C++ c++ self-study
+conversion: done
 ---
 
 Some concepts:

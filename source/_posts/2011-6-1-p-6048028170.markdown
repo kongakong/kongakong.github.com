@@ -3,7 +3,7 @@ layout: post
 title: "Item 14:  Make sure base classes have virtual destructors"
 date: 2011-06-01 07:34
 comments: true
-categories: c++ Effective C++
+categories: Effective_C++ c++ self-study
 ---
 
 The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual destructor , the results are *undefined*
