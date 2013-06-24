@@ -4,7 +4,7 @@
   <title><![CDATA[Category: nltk | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/nltk/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-24T20:55:08+10:00</updated>
+  <updated>2013-06-24T21:20:45+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,7 @@
     <id>http://kongakong.github.io/blog/2010/10/29/p-1424460143</id>
     <content type="html"><![CDATA[<p>From</p>
 
-<p><a href="Chapter%202">http://nltk.googlecode.com/svn/trunk/doc/book/ch02.html</a></p>
+<p><a href="http://nltk.googlecode.com/svn/trunk/doc/book/ch02.html">Chapter 2</a></p>
 
 <ul>
 <li>Accessing Text Corpora: such as Brown and Reuter</li>
@@ -43,6 +43,17 @@
 <li>Some functions are not available by default, but must be accessed using Python’s import statement.</li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[nltk (1)]]></title>
+    <link href="http://kongakong.github.io/blog/2010/10/28/p-1423124719/"/>
+    <updated>2010-10-28T23:17:00+11:00</updated>
+    <id>http://kongakong.github.io/blog/2010/10/28/p-1423124719</id>
+    <content type="html"><![CDATA[<p>Important tools/concept in</p>
+
+<p><a href="http://nltk.googlecode.com/svn/trunk/doc/book/ch01.html">Chapter 1 </a></p>
 ]]></content>
   </entry>
   
@@ -75,7 +86,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[nltk]]></title>
+    <title type="html"><![CDATA[nltk setup]]></title>
     <link href="http://kongakong.github.io/blog/2010/10/24/p-1385207169/"/>
     <updated>2010-10-24T12:07:00+11:00</updated>
     <id>http://kongakong.github.io/blog/2010/10/24/p-1385207169</id>
