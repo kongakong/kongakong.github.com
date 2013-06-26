@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-26T21:29:05+10:00</updated>
+  <updated>2013-06-26T22:07:28+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -137,13 +137,17 @@
     <id>http://kongakong.github.io/blog/2013/05/08/p-49924605254</id>
     <content type="html"><![CDATA[<p>Just feel that python is easier for XML manipulation.</p>
 
-<p>e.g.
-<code>
-from lxml import etree
-f = open("digg-science-rss1.xml")
-tree  = etree.parse(f)
-tree.xpath(expr)
-</code></p>
+<p>e.g.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">digg</span><span class="o">-</span><span class="n">science</span><span class="o">-</span><span class="n">rss1</span><span class="o">.</span><span class="n">xml</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
+</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Very concise.</p>
 
