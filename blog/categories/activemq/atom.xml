@@ -4,7 +4,7 @@
   <title><![CDATA[Category: activemq | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/activemq/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-25T01:26:36+10:00</updated>
+  <updated>2013-06-26T21:29:05+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[On unix like systems, _ActiveMQ_ is running on port 61616]]></title>
+    <title type="html"><![CDATA[On unix like systems, ActiveMQ is running on port 61616]]></title>
     <link href="http://kongakong.github.io/blog/2011/06/18/p-6622672762/"/>
     <updated>2011-06-18T01:31:00+10:00</updated>
     <id>http://kongakong.github.io/blog/2011/06/18/p-6622672762</id>
