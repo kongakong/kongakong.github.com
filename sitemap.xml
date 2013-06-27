@@ -3202,7 +3202,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2013/04/30/p-49203298223/</loc>
-        <lastmod>2013-06-22T22:07:23+10:00</lastmod>
+        <lastmod>2013-06-28T00:26:25+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2013/05/01/p-49296939249/</loc>
@@ -3254,7 +3254,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2013/05/31/p-51794320183/</loc>
-        <lastmod>2013-06-22T22:32:09+10:00</lastmod>
+        <lastmod>2013-06-28T00:26:49+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2013/06/01/p-51873320799/</loc>
@@ -3347,12 +3347,18 @@
         <lastmod>2013-06-23T21:05:03+10:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://kongakong.github.io/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/
+        </loc>
+        <lastmod>2013-06-28T00:33:00+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-06-26T22:32:27+10:00</lastmod>
+        <lastmod>2013-06-28T00:33:00+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-06-26T22:32:27+10:00</lastmod>
+        <lastmod>2013-06-28T00:33:00+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3360,6 +3366,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-06-26T22:32:27+10:00</lastmod>
+        <lastmod>2013-06-28T00:33:00+10:00</lastmod>
     </url>
 </urlset>

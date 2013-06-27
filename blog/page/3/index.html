@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Morgan Stanley uses AFS for application deployment with good results.
-">
+  <meta name="description" content="When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +66,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/08/p-52453247211/">OSX Terminal and .bashrc</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-08T21:20:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
+
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -240,52 +286,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/06/p-52292736599/">Health System in Oregon</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-06T20:40:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to its citizens.</p>
-
-<p>From</p>
-
-<p><a href="http://en.wikipedia.org/wiki/Oregon_Health_Plan">Wikipedia</a></p>
-
-<blockquote><p>New enrollment in the program was closed from mid-2004 until early
-2008, when a lottery-based system was introduced. Tens of thousands
-of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockquote>
-
-<p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -303,6 +303,10 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
       </li>
     
@@ -316,10 +320,6 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
     
       <li class="post">
         <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/19/using-octopress/">Using Octopress</a>
       </li>
     
   </ul>

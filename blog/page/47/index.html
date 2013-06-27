@@ -9,8 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Install python 2.7 using brew. Brew also downloaded and installed distribute &#8220;` $ brew install python
-==> Installing python dependency: sqlite &hellip;">
+  <meta name="description" content="For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries. 1
+2
+3
+4
+5 $ ls -l /usr/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +70,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/30/p-22117940575/">Very Old Easy_install</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-30T21:42:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>$ ls -l /usr/local/bin/easy_install
+</span><span class='line'>-rwxr-xr-x  1 root  wheel  364 28 Feb  2009 /usr/local/bin/easy_install
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The shebang of <code>easy_install</code> is sTILl pointing to a python 2.5 installation</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -230,42 +284,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/29/p-22027054462/">Updating Virtual Box to Version 4.1.14</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-29T13:56:00+10:00" pubdate data-updated="true">Apr 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Updating Virtual box to version 4.1.14</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/48/">&larr; Older</a>
@@ -283,6 +301,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
       </li>
     
@@ -296,10 +318,6 @@
     
       <li class="post">
         <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/19/using-octopress/">Using Octopress</a>
       </li>
     
   </ul>
