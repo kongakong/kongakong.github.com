@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Erlang Mailing List - String as List 2 - Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="Zvi responded to Christian S&rsquo;s &ldquo;recommended large text mass handling modules&rdquo;. He said, if for efficiency we represent a string as &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/blog/2008/02/19/3796997893852752275">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/tags">Tags</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Erlang Mailing List - String as List 2</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T04:09:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span><span class="lDACoc"> responded to </span></span><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S</span></span><span class="HcCDpe"><span class="lDACoc">&rsquo;s &ldquo;recommended large text mass handling modules&rdquo;. He said, if for efficiency we  represent  a string as binary, the code will become too verbose. For example,</span></span><br /><blockquote style="font-style: italic;"><span class="HcCDpe"><span class="lDACoc"></span></span><ul><li> &lt;&lt;&ldquo;ABC&rdquo;>>, instead of &ldquo;ABC&rdquo;</li><li> &lt;<s1 s2="" bytes="">&lt; </s1> S1 / bytes, S2 / bytes <s1 s2="" bytes="">>> instead of S1++S2</s1></li><li> using file:delete(binary_to_list(Filename)) instead of file:delete(Filename)</li><li> xmerl and erlsom parse into lists and not binaries</li></ul></blockquote><div id="1fhc" class="ArwC7c ckChnd"><span class="HcCDpe"><span email="dustin.whitney@gmail.com" class="EP8xU" style="color: rgb(185, 0, 56);">Dustin Whitney</span></span> concurred the verboseness, and recommend a new string type.<span class="HcCDpe"><span email="vychodil.hynek@gmail.com" class="EP8xU" style="color: rgb(132, 102, 0);"></span><span class="lDACoc"><br /><br /></span></span><span class="HcCDpe"><span email="bjorn@erix.ericsson.se" class="EP8xU" style="color: rgb(51, 0, 153);">Bjorn Gustavsson</span></span> responded to eariler <span class="HcCDpe"><span class="lDACoc"></span></span><span class="HcCDpe"><span email="kevin@scaldeferri.com" class="EP8xU" style="color: rgb(204, 0, 96);">Kevin Scaldeferri</span></span>&rsquo;s opinion on list inefficiency. He suggested, in the case of appending:<br /><blockquote style="font-style: italic;"><br />&ldquo;You can append by building a deep list and only flatten it at the end.<br /><br />  NewString = [AListOfChars|AnotherListOfChars]<br /><div id="1fi4" class="ArwC7c ckChnd"><br />or<br />  NewString = [AListOfChars,ACharacter]<br /><br />Or you can simply do a recursion (not tail-recursion) and use<br />the &lsquo;++&rsquo; operator. That will be efficient, because the recursion will<br />ensure that the &lsquo;++&rsquo; operators are executed in a right-to-left order.&rdquo;</div></blockquote><div id="1fi4" class="ArwC7c ckChnd"><br /><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S  </span></span>suggested an alternative to one of <span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span><span class="lDACoc">&rsquo;s string-as-binary example (&ldquo;</span></span>  &lt;<s1 s2="" bytes="">&lt;  </s1> S1 / bytes, S2 / bytes >> <s1 s2="" bytes=""> instead of S1++S2&rdquo;)<span class="HcCDpe"><span class="lDACoc">:<br /></span></span><br /></s1><blockquote style="font-style: italic;">&ldquo;[S1,S2] and then do iolist_to_binary/1 if you need it flat.&rdquo;</blockquote><br />Then focus of discussion shifted to a tool called Leex for a while.<br /><br /><span class="HcCDpe"><span email="ok@cs.otago.ac.nz" class="EP8xU" style="color: rgb(121, 6, 25);">Richard A. O&#8217;Keefe </span></span>weighted in and expressed his opinion on a number of issues.<br /><br />First of all, the String as list should not be dismissed as &ldquo;historical reason&rdquo; only:<br /><blockquote><br /><span style="font-style: italic;">&ldquo;it is simplicity (the preferred</span><br /><span style="font-style: italic;">sequence type in Erlang is lists, and strings are just sequences of</span><br /><span style="font-style: italic;">characters), power (because any time someone defines a function on</span><br /><span style="font-style: italic;">lists you get to use it on strings, and there are <em>lots</em> of useful</span><br /><span style="font-style: italic;">list functions), and processing efficiency (because working down</span><br /><span style="font-style: italic;">one character at a time doesn&rsquo;t require allocating <em>any</em> new storage,</span><br /><span style="font-style: italic;">not even for slices).&rdquo;</span></blockquote>He suggested the following rule of thumb for text handling<br /><blockquote style="font-style: italic;"><br />&ldquo;The guiding rule is<br />&ndash; if you just want to hold onto a string for a while, use a binary<br />&ndash; if you want to build or process a string, use a list (possibly in<br />Erlang a deep list).<br />&ndash; if you want to represent something that has structure, and you want<br />your program to be aware of that structure, turn it into a<br />structured<br />data value and work with it in that form.&rdquo;</blockquote>and some myth-busting on appending string performance issue:<br /><blockquote style="font-style: italic;"><br />&ldquo;Right, this is not efficient.  But it is spectacularly<br />inefficient in programming languages with more conventional<br />representations.<br />It is O(n**2).  For example,<br />  x = &rdquo;&ldquo;<br />  for (i = 1; i &lt;= 100000; i++) x = x &#8220;a&rdquo;  just took 30.5 seconds in awk on my machine, 62.2 seconds in Perl, and a massive 631 seconds in Java.  That was using gcj; I lost patience with the Sun SDK and killed it.  (AWK faster than Java?  Yes, it often is.) Building the same string in Erlang using        loop(100000, &ldquo;&rdquo;) where        loop(0, S) &ndash;> lists:reverse(S);<br />  loop(N, S) &ndash;> loop(N-1, &ldquo;a&rdquo;++S).<br />takes 0.15 second on the same machine.&ldquo;</blockquote><br /><span class="HcCDpe"><span email="masklinn@masklinn.net" class="EP8xU" style="color: rgb(121, 6, 25);">Masklinn</span>  <span class="lDACoc">pointed out later that Java benchmark is off because the example is not using StringBuffer.<br /></span></span><br />End of Part 2<br /><br /></div></div><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);"><br /></span></span></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T04:09:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/erlang/'>erlang</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kongakong.github.io/blog/2008/02/19/3796997893852752275/" data-via="kongakong" data-counturl="http://kongakong.github.io/blog/2008/02/19/3796997893852752275/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2008/02/19/263759057007670019/" title="Previous Post: Erlang Mailing List - String as List 1">&laquo; Erlang Mailing List - String as List 1</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2008/02/19/5839983411439621941/" title="Next Post: Erlang Mailing List - String as List 3">Erlang Mailing List - String as List 3 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If...</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+ <h1>Twitter</h1>
+ <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

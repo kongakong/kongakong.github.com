@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="Unit testing One of a few important lessons I learn from Java development is the importance of unit test. It is of course not a silver bullet to the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/blog/page/169">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/tags">Tags</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/05/10/4108877290533417868/">The Importance of Being Nosy (Nosetests, Really)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-10T04:04:00+10:00" pubdate data-updated="true">May 10<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><span style="font-weight: bold;">Unit testing </span><br /><br />One of a few important lessons I learn from Java development is the importance of unit test. It is of course not a silver bullet to the software reliability/quality problem, but the consequence not adopting it can only be more dire.<br /><br />I used only <a href="http://www.junit.org/">JUnit </a>to implement unit tests in Java (Since JUnit is &ldquo;good enough&rdquo;, I never explore the alternative framework <a href="http://testng.org/doc/index.html">TestNG</a>.). Actually, problems in writing unit tests usually have very little to do with the frameworks themselves, but more with:<br /><br /><span style="font-weight: bold;">A</span>. The legacy code base you want to test against. For example, if the existing code base design is not modular enough, you have to go through some refactoring process to make unit testing possible. It is not the kind of luxury we can afford very often.<br /><br /><span style="font-weight: bold;">B.</span> Mock objects. <a href="http://www.easymock.org/">EasyMock</a> has made mocking a dependency easier, but maintaining the mock object codes still requires considerable effort.<br /><br /><span style="font-weight: bold;">Unit testing and Python</span><br /><br />I think unit testing is even more important for Python programmers.<br /><br />Since everything happens in runtime for Python, errors in your scripts, no matter syntactical or logical, will not be caught until you actually execute the line of code where the bug lives<em>.<br /><br />On top of it, a majority of commercial/in-house software contains so many features. The sheer number of possible combination of the execution pathways means thorough manual testing is simply unattainable, if not unrealistic.<br /><br />If at the end of the day, a production issue in your python software arises and it turns out to be &ldquo;incorrect indentation&rdquo;, the managers and users will look down on you pretty hard (&ldquo;Did you really test it?&rdquo;). Unit test + coverage tools can help us to avoid these kind of situation.<br /><br />Besides, unit tests can be used to safeguard corner cases and exceptional conditions. For financial applications, one of those commonly-seen mistakes is that a program fails to perform properly when a certain event (e.g. rollover) happens on a public holiday. With unit testing, we can subject the relevant codes to different combination of date and instruments, so we can make sure it will, for instance, calculate accrual correctly no matter what.<br /><br />Comparing Java, I find it easier to do unit testing in Python because, with Python&rsquo;s &ldquo;Duck Typing&rdquo; capability, we do not have to worry about maintaining mock objects at all. Whenever you need to mimic a dependency&rsquo;s behavior, just write a dummy class with just enough attributes/methods the testee expects. End of story.<br /><br />No more record and play APIs, as in EasyMock.<br /><br /><span style="font-weight: bold;">Nosetests makes it easy </span><br /><br />So, you can understand why I am so glad to find <a href="http://www.somethingaboutorange.com/mrl/projects/nose/">nose</a>. Nosetests is, in a nutshell, a unit test discovery tool. It can traverse down a python source code directory and pick up classes that extends <a href="http://docs.python.org/lib/testcase-objects.html">unittest.Testcase</a>, <a href="http://docs.python.org/lib/module-doctest.html">doc test</a>, and any classes/methods that follow the <a href="http://www.somethingaboutorange.com/mrl/projects/nose/#writing-tests">default naming convention</a>. I can now mix any testing styles depending on the task at hand.<br /><br />I usually use the following parameters with nosetests:<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&mdash;verbosity=3 &mdash;with-doctest -s &mdash;exe<br /><br /></code></pre><br />&ldquo;&mdash;exe&rdquo; is necessary because in <a href="http://www.cygwin.com/">cygwin</a>, my primary development environment, py files are usually set to be &ldquo;executable&rdquo;.<br /><br /><span style="font-weight: bold;">Feedback</span><br /><br />Do you have any tips and idea on unit testing/software quality assurance to share? Feel free.<br /><br /><br /><br /></em> It is not entirely true. If you want to catch syntactic error before run-time, you can use the <a href="http://docs.python.org/lib/module-compiler.html">compiler </a>module to parse each py file individually. It is useful when you try to refactor by renaming modules/variables using tools like sed. This allows to make sure the regex does not do anything stupid with your code.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/05/02/4938064958000018731/">I Would Hardly Use the &#8220;Success Stories&#8221; as the Au&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-02T07:55:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I would hardly use the &ldquo;success stories&rdquo; as the authoritative list of companies that use Python.<BR/><BR/>I&rsquo;m the CTO of a large hedge fund and our development platform is primarily Python. And while we are by no means a large firm (in terms of head count), I have been seeing more and more resumes in the finance world of people using Python at large financial firms.<BR/><BR/>As Python is not a &ldquo;mainstream&rdquo; language, I think it comes in the back door at organizations so you won&rsquo;t always see it in job postings or other public references. That doesn&rsquo;t mean it&rsquo;s not used.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/04/16/1587152077115150667/">Python in the Corporate World</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-16T00:39:00+10:00" pubdate data-updated="true">Apr 16<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Python is used widely in academia, open source projects and start-up. However, when it comes to the corporate world,   it seems to me it is not making a lot of inroad. At least this is true in the finance industry, which I am more familiar with.<br /><br />A quick check on the python.org&rsquo;s <a href="http://www.python.org/about/success/">success stories</a>, only two companies are listed as Fortune 500, and none of them is in the finance.<br /><br />Occasionally there are ads looking for people with python skill in the financial sector, but the positions are usually of support or operation nature, not application development.<br /><br />From first glimpse, it is a classic chicken-and-egg problem: there is not enough skillful python programmers out there to fill the jobs, it is difficult to start new projects in python. However, if python programming job market is weak, there is little incentives for students or programmers to pick up this non-mainstream language.<br /><br />But there is something more than just supply-demand. I believe a common perception that, somehow, dynamic scripting languages are <span style="font-style: italic;">not for large scale projects</span> and is <span style="font-style: italic;">difficult to maintain</span> also make people shy away from using Python.<br /><br />The <span style="font-style: italic;">not for large scale projects</span> argument is a not too hard to counter. We just need to find some good examples of high visibility. For example, <a href="http://groups.google.com/">Google Groups</a> and <a href="http://www.selenic.com/mercurial/wiki/">mercurial.</a><br /><br />However, there may not be a clean-cut answer to the question of maintainability. First of all, we have a generation of programmers who have used to statically typed languages and their accomplishing IDEs (such as Java and Eclipse). To this group of audience, the idea that one can build a full-fledged application using just API documentation, command line tools and vi/emacs is beyond imagination. It is easy to conclude that, without IDE support, it is difficult to refactor the code base, which is an essential step in keeping the application in good heath.<br /><br />Secondly past experience may still leave a bad taste. If you have done maintenance of legacy applications written in perl, some of them could make you feel like you have just visited a programmer&rsquo;s hell. Cryptic code and inconsistent style are everywhere. (But it&rsquo;d still be way better than tcl. Luckily I have not come across any such programs yet). This bad memory certainly make people think twice before embracing dynamic scripting language in general, Python in particular.<br /><br />A disclaimer I must make: what I wrote above is based on my experience only, and your organization may be free of the above issues, especially if yours is relatively smaller in scale (so it is relatively easier to innovate) or relatively young (so there are less legacy applications). But today in most of the giant, multinational financial institutions that inspire to be a &ldquo;financial supermarket&rdquo; for all, the decision markers, especially the &ldquo;professional manager&rdquo; type, have a total different mind-set. First of all they will not be benefited much, personally, by giving green light to the use of non-mainstream technology/language that <span style="font-style: italic;">promise </span>better result and higher productivity. On the other hand, they have everything to lose if the brave decision does not deliver.  Java (or C# if it is a MS Window shop) is always a safe bet, even though it means one need an army of programmers to get thing done. In essence, it is an <a href="http://en.wikipedia.org/wiki/Principal-agent_problem">agency problem</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/04/09/8010693451801110862/">Common Questions About Working as a Python Developer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-09T13:02:00+10:00" pubdate data-updated="true">Apr 9<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I haven&rsquo;t posted much recently because I am starting a new job. It is the third time I switched language. Now, I am officially a Python Developer. Hurray!<br /><br />Since I have always kept myself busy by constantly picking up new computer languages, I know a dozen of odd and exotic languages. Therefore, after I landed on this job, I am surprised by some &ldquo;interesting&rdquo; questions about Python that people asked. And these people are no amateur. They are C or Java developers by profession.<br /><br />Here are the questions:<br /><br /><span style="font-weight: bold; font-style: italic;">1) What is Python?</span><br /><br /><blockquote>Well, it is a dynamic scripting language. A good overview <a href="http://www.python.org/about/">here</a>.<br /><br />To emphasize that it is a <span style="font-style: italic;">real </span>programming language, I&rsquo;d also add that Python is used very <span style="font-style: italic;">extensively </span>within Google.<br /><br /></blockquote><br /><span style="font-weight: bold; font-style: italic;">2) Isn&rsquo;t Python an very old language?</span><br /><br /><blockquote>Oh, this question makes me feel like I am the last Eyak speaker!<br /><br />Python appeared in 1991 when the creator <a href="http://www.python.org/%7Eguido/">Guido van Rossum</a> released it to the public. It is actually a very young language.<br /><br />Let&rsquo;s compare other still active languages and the time of first appearance:<br /><br /><br /><span style="font-weight: bold;">Ruby</span> &ndash; 1995<br /><span style="font-weight: bold;">Java</span> &ndash; 1995<br /><span style="font-weight: bold;">Visual Basic</span> (VB4 to VB.Net) &ndash; 1995<br /><span style="font-weight: bold;">Lua</span> &ndash; 1993<br /><br /><span style="font-weight: bold;">Perl </span>&ndash; 1987<br /><span style="font-weight: bold;">Erlang</span> &ndash; 1987<br /><span style="font-weight: bold;">C++</span> &ndash; 1983<br /><br /><span style="font-weight: bold;">C </span>&ndash; 1972<br /><span style="font-weight: bold;">Cobol</span> &ndash; 1959<br /><span style="font-weight: bold;">Fortran</span> &ndash; 1957<br /><br />The debut of Python is a rather recent event in the history of computer language chronologically.<br /><br />But another meaning implied by &lsquo;Old&rsquo; is related to the vitality or dynamism of the language. A low public profile seems to indicates there is not much going on in this language.<br /><br />It is entirely a matter of perception.<br /><br />To me, python never feels old. The language is continuously improving and evolving. The community is healthy and the members on the mailing list are friendly, helpful and intelligent. The language users are willing to embrace <a href="http://www.python.org/dev/peps/pep-3000">changes</a> to make Python better.<br /><br />It is in stark contrast with Java. The discussion of the <span style="font-style: italic;">Closure</span> has highlighted the inertia of the Java language.<br /><br />But don&rsquo;t get me wrong: in other arena of Java eco-system, there are still a lot of energy and innovation such as <a href="http://openjdk.java.net/">OpenJDK</a>. OpenJDK may even eventually force the hand of Microsoft to open-source their CLR. (Hopefully)<br /></blockquote><br /><span style="font-weight: bold; font-style: italic;">3) Is Python more powerful than Java?<br /></span><br /><blockquote>Wow, it is a <a href="http://en.wikipedia.org/wiki/Flamebait">dangerous questions</a>! My <a href="http://en.wikipedia.org/wiki/Political_correctness">PC</a> answer is: they are designed for different tasks, and each of them have their distinct advantages in the problem domain that these languages are created to serve.<br /><br />Besides, everyone has their own notion of Powerfulness. We will end up comparing orange to apple.<br /><br />For me, power is only one of the consideration. Python&rsquo;s readability is another attractive feature. While Python cannot stop a programmer from writing cryptic code, at least it spares you the eyesore caused by bizarre programming styles that some &lsquo;gifted&rsquo; programmers use.<br /><br /></blockquote><span style="font-weight: bold; font-style: italic;">4) Isn&rsquo;t Python dead?<br /><br /></span><blockquote><span>The news of Python&rsquo;s death is largely exaggerated.<br /><br /><br /></span><br /><br /></blockquote><span style="font-style: italic;">Postscript</span>:<br /><span style="font-weight: bold; font-style: italic;"></span><br /><ul><li>I think the latest announcement of <a href="http://code.google.com/appengine">Google App Engine</a> will make a wider audience aware of Python and how good it is.<br /><br /></li><li>Lately a lot of innovation in programming languages (groovy, python and erlang for example) have an European root. Is it a sign that US has under-invested in research in both public and private sections?</li></ul></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/03/26/7802974804856594000/">Draft</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-26T01:19:00+11:00" pubdate data-updated="true">Mar 26<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><br />
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/170/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/168/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+ <h1>Twitter</h1>
+ <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+</section>
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-28T00:33:24+10:00</updated>
+  <updated>2013-06-29T19:58:32+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,7 +22,7 @@
 
 <p>When I tried to indent a block of python code using the menu item &lsquo;Python&rsquo; &ndash;> &lsquo;Shift Region Right&rsquo;, I got this error message <code>Symbol's function defintion is void: py-shit-right</code></p>
 
-<p>So instead of using the menu option, I just use <code>C-c &gt;</code> to take of it.</p>
+<p>So instead of using the menu option, I just use <code>C-c &gt;</code> to take care of it.</p>
 ]]></content>
   </entry>
   
