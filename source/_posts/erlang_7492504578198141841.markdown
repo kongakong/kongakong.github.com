@@ -1,9 +1,0 @@
----
-layout: post
-title: Erlang syntax 2 - Pattern matching and assignment
-date:  2007-09-14T17:45:00.001+10:00
-comments: true
-categories: erlang
-meta: 
----
-I think it is probably a typical experience for any beginner of Erlang: The equal sign in Erlang actually works differently comparing most other imperative mainstream application.  I were a little bit surprised when I first realized the subtle difference.<br /><br /><br />In erlang, the equal sign is actually an pattern matching  operator.  For example,<br /><br /><span style="font-family:courier new;">[H|T] = [0, 1, 2, 3, 4]</span><br /><br />In the case, H is actually matched with the head of the list [0..4]. Although it effectively initialised the values of variable H and T, it is fundamentally a different concept.<br /><br />Another application of this language feature is that it serves as a mean to enforce assertion. For example,<br /><br /><span style="font-family: courier new;">ok = module:func().</span><br /><br />If func return an atom <span style="font-weight: bold;">failure</span> instead of <span style="font-weight: bold;">ok</span>, an exception will be automatically generated.<br /><br />Isn't it neat?
