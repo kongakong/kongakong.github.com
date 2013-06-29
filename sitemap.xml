@@ -6,7 +6,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2007/09/14/1589380066274908176/</loc>
-        <lastmod>2013-06-29T19:52:44+10:00</lastmod>
+        <lastmod>2013-06-29T20:38:07+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2007/09/14/7492504578198141841/</loc>
@@ -14,7 +14,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2007/11/30/1863063009982204384/</loc>
-        <lastmod>2013-06-29T19:52:44+10:00</lastmod>
+        <lastmod>2013-06-29T20:44:42+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2008/01/11/2642626887724082510/</loc>
@@ -106,7 +106,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2008/05/10/4108877290533417868/</loc>
-        <lastmod>2013-06-29T19:52:44+10:00</lastmod>
+        <lastmod>2013-06-29T20:57:45+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2008/05/11/8223543480784387429/</loc>
@@ -1850,7 +1850,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2011/07/23/p-7957631954/</loc>
-        <lastmod>2013-06-22T20:19:57+10:00</lastmod>
+        <lastmod>2013-06-29T20:48:20+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2011/07/24/p-8000829902/</loc>
@@ -2710,7 +2710,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/05/24/p-23669802351/</loc>
-        <lastmod>2013-06-29T19:56:10+10:00</lastmod>
+        <lastmod>2013-06-29T20:18:47+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/05/25/p-23690153155/</loc>
@@ -2718,7 +2718,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/05/25/p-23694702384/</loc>
-        <lastmod>2013-06-29T19:56:38+10:00</lastmod>
+        <lastmod>2013-06-29T20:19:01+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/05/25/p-23730125189/</loc>
@@ -3182,7 +3182,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/08/21/p-29890350340/</loc>
-        <lastmod>2013-06-25T00:35:49+10:00</lastmod>
+        <lastmod>2013-06-29T20:15:08+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/08/22/p-29960657754/</loc>
@@ -3286,7 +3286,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/11/18/p-35977135674/</loc>
-        <lastmod>2013-06-22T20:19:55+10:00</lastmod>
+        <lastmod>2013-06-29T20:52:49+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2012/12/02/p-37006859461/</loc>
@@ -3430,7 +3430,7 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2013/06/09/p-52534137425/</loc>
-        <lastmod>2013-06-29T19:47:08+10:00</lastmod>
+        <lastmod>2013-06-29T20:49:03+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/2013/06/10/p-52620998556/</loc>
@@ -3473,12 +3473,16 @@
         <lastmod>2013-06-29T17:35:30+10:00</lastmod>
     </url>
     <url>
+        <loc>http://kongakong.github.io/blog/2013/06/29/keep-vi-swp-file-in-tmp/</loc>
+        <lastmod>2013-06-29T21:09:09+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-06-29T20:08:28+10:00</lastmod>
+        <lastmod>2013-06-29T21:09:09+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-06-29T20:08:28+10:00</lastmod>
+        <lastmod>2013-06-29T21:09:09+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3486,6 +3490,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-06-29T20:08:28+10:00</lastmod>
+        <lastmod>2013-06-29T21:09:09+10:00</lastmod>
     </url>
 </urlset>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Revisiting Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object While the title sounds rather generic, the main content is &hellip;">
+  <meta name="description" content="The first part is easy to understand: scope issue The second part is important because it will lead to memory leak. (Related to item 23 and operator &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6196683746/">Item 31: Never Return a Reference to a Local Object or to a Dereferenced Pointer Initialized by New Within the Function</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:54:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The first part is easy to understand: scope issue</p>
+
+<p>The second part is important because it will lead to memory leak. (Related to item 23 and operator overload)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -260,44 +298,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6189159712/">Item 28: Partition the Global Namespace</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T07:47:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Don’t think anyone will seriously argue against the usefulness of namespace.</p>
-
-<p>It is also mentioned that we can use <code>struct</code> to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/106/">&larr; Older</a>
@@ -315,6 +315,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/06/29/keep-vi-swp-file-in-tmp/">Keep Vi Swp File in Tmp</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
@@ -328,10 +332,6 @@
     
       <li class="post">
         <a href="/blog/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a>
       </li>
     
   </ul>

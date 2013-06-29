@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ubuntu | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-06-29T20:12:46+10:00</updated>
+  <updated>2013-06-29T21:09:35+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,7 +22,7 @@
 
 <p>Then you’ll need to create a virtualenv and activate it. For details see</p>
 
-<p><a href="the%20python%20doc">http://docs.python.org/3/library/venv.html</a></p>
+<p><a href="http://docs.python.org/3/library/venv.html">the python doc</a></p>
 
 <p>Since I want to install packages using pip, I proceed to install distribute.</p>
 
