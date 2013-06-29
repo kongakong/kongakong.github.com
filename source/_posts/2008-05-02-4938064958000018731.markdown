@@ -1,0 +1,9 @@
+---
+layout: post
+title: I would hardly use the "success stories" as the au...
+date:  2008-05-02 07:55
+comments: true
+categories: erlang
+meta: 
+---
+I would hardly use the "success stories" as the authoritative list of companies that use Python.<BR/><BR/>I'm the CTO of a large hedge fund and our development platform is primarily Python. And while we are by no means a large firm (in terms of head count), I have been seeing more and more resumes in the finance world of people using Python at large financial firms.<BR/><BR/>As Python is not a "mainstream" language, I think it comes in the back door at organizations so you won't always see it in job postings or other public references. That doesn't mean it's not used.

@@ -1,0 +1,9 @@
+---
+layout: post
+title: Little Erlange Exercise 1
+date:  2008-01-11 13:05
+comments: true
+categories: erlang
+meta: 
+---
+Problem definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=1">Euler Problem 1</a><br /><br />Python version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br />print reduce(lambda x, y : x + y,<br /> filter(lambda x: x % 3 == 0 or x % 5 == 0,<br /> range(1, 1001)))<br /><br /></pre><br /><br />Erlang version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br /><code><br />-module(p1).<br />-export([pr_sum/0]). %% print sum<br /><br />pr_sum() -><br />      L = lists:seq(1, 1000),<br />      L1 = [ X ||X <- L, (X rem 3) == 0 orelse (X rem 5) == 0],<br />      sum(L1). <br /><br />sum(L) -> sum(L, 0).<br />sum([], Acc) -> Acc;<br />sum([H|T], Acc) -> sum(T, Acc + H).<br /></code></pre>
