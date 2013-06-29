@@ -8,15 +8,17 @@ categories: objective-c
 
 Usage:
 
+{% codeblock lang:objective-c %}
 
-``NSBundle *bundle = [NSBundle mainBundle];``
-
-
-``NSString *imagePath = [bundle pathForResource:@"mug_shot" ofType:@"tiff"]``
+NSBundle *bundle = [NSBundle mainBundle];
 
 
-``NSImage *anImage = [[NSImage alloc] initWithContentsOfFile:imagePath];``
+NSString *imagePath = [bundle pathForResource:@"mug_shot" ofType:@"tiff"]
 
+
+NSImage *anImage = [[NSImage alloc] initWithContentsOfFile:imagePath];
+
+{% endcodeblock %}
 
 *Loading Code*
 

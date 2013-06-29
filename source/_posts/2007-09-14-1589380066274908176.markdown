@@ -6,4 +6,21 @@ comments: true
 categories: erlang
 meta: 
 ---
-<table style="color: rgb(51, 255, 51);font-family:courier new;background-color: rgb(0, 0, 0);"><br /><tr><td><br />1> (list_to_atom("erlang")):(list_to_atom("now"))().<br /></td></tr><br /><tr><td><br />{1189,752160,276431}<br /></td></tr><br /></table><br /><br /></span><br />This is equivalent to<br /><br /><table style="color: rgb(51, 255, 51);font-family:courier new;background-color: rgb(0, 0, 0);"><br /><tr><td><br />1> erlang:now().<br /></td></tr><br /></table><br /><br />Very interesting syntax.
+{% codeblock lang:erlang %}
+1> (list_to_atom(“erlang”)):(list_to_atom(“now”))().
+{1189,752160,276431}
+
+{% endcodeblock %}
+
+
+This is equivalent to
+
+
+
+
+{% codeblock %}
+1> erlang:now().
+{% endcodeblock %}
+
+
+Very interesting syntax.

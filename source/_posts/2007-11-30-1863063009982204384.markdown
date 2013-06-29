@@ -3,7 +3,7 @@ layout: post
 title: erlang daemon mode
 date:  2007-11-30 05:08
 comments: true
-categories: erlang
+categories: self-study erlang joe_armstrong
 meta: 
 ---
--noshell<br />-detached<br />-heart<br /><a href="http://www.sics.se/%7Ejoe/tutorials/web_server/web_server.html#m2" target="_blank">http://www.sics.se/~joe<wbr>/tutorials/web_server/web<wbr>_server.html#m2</a>
+[A webserver daemon](http://www.sics.se/~joe/tutorials/web_server/web_server.html)

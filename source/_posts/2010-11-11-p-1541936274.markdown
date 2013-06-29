@@ -3,7 +3,7 @@ layout: post
 title: "Objective-c: Archiving Objects"
 date: 2010-11-11 21:29
 comments: true
-categories: 
+categories: objective-c 
 ---
 
 *NSArchiver*
@@ -23,9 +23,10 @@ categories:
 
 NSObject supports
 
+```
+- (void) encodeWithCoder:(NSCoder *) encoder;
 
-``- (void) encodeWithCoder:(NSCoder *) encoder;``
 
-
-``- (id) initWithCoder:(NSCoder *) decoder;``
+- (id) initWithCoder:(NSCoder *) decoder;
+```
 

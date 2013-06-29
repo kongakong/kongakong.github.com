@@ -3,7 +3,8 @@ layout: post
 title: "How to set up virtualenv and use pip in python 3.3"
 date: 2012-11-18 20:44
 comments: true
-categories: ubuntu python3 Pip
+categories: ubuntu python3 pip
+conversion: done
 ---
 
 First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)
@@ -11,7 +12,7 @@ First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I
 
 Then you’ll need to create a virtualenv and activate it. For details see 
 
-[http://docs.python.org/3/library/venv.html](the python doc)
+[the python doc](http://docs.python.org/3/library/venv.html)
 
 
 Since I want to install packages using pip, I proceed to install distribute.
