@@ -3,7 +3,7 @@ layout: post
 title: "Emacs fu 2"
 date: 2013-04-30 07:12
 comments: true
-categories: Emacs erlang
+categories: emacs erlang
 ---
 
 erlware-mode is deprecated ( [https://github.com/erlware-deprecated/erlware-mode](https://github.com/erlware-deprecated/erlware-mode)

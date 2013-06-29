@@ -1,0 +1,9 @@
+---
+layout: post
+title: erlang daemon mode
+date:  2007-11-30T05:08:00.001+11:00
+comments: true
+categories: erlang
+meta: 
+---
+-noshell<br />-detached<br />-heart<br /><a href="http://www.sics.se/%7Ejoe/tutorials/web_server/web_server.html#m2" target="_blank">http://www.sics.se/~joe<wbr>/tutorials/web_server/web<wbr>_server.html#m2</a>

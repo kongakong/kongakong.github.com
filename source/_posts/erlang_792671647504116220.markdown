@@ -1,0 +1,9 @@
+---
+layout: post
+title: Erlang - Parallel Programming without Pain
+date:  2008-05-29T09:58:00.002+10:00
+comments: true
+categories: erlang
+meta: 
+---
+Joe Armstong's <a href="http://www.infoq.com/presentations/erlang-software-for-a-concurrent-world">Lecture </a>on InfoQ. Must watch.

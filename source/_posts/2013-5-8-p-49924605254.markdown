@@ -4,18 +4,20 @@ title: "XPath, Python and Erlang"
 date: 2013-05-08 20:00
 comments: true
 categories: erlang python
+conversion: done
 ---
 
 Just feel that python is easier for XML manipulation.
 
 
 e.g.
-```
+
+{% codeblock lang:python %}
 from lxml import etree
 f = open("digg-science-rss1.xml")
 tree  = etree.parse(f)
 tree.xpath(expr) 
-```
+{% endcodeblock %}
 
 
 
