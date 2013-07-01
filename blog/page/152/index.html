@@ -234,9 +234,17 @@
 
 <p>NSObject supports</p>
 
-<p><code>- (void) encodeWithCoder:(NSCoder *) encoder;</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- (void) encodeWithCoder:(NSCoder *) encoder;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>- (id) initWithCoder:(NSCoder *) decoder;</span></code></pre></td></tr></table></div></figure>
 
-<p><code>- (id) initWithCoder:(NSCoder *) decoder;</code></p>
+
+
 </div>
   
   
@@ -274,11 +282,22 @@
 
   <div class="entry-content"><p>Usage:</p>
 
-<p><code>NSBundle *bundle = [NSBundle mainBundle];</code></p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSBundle</span> <span class="o">*</span><span class="n">bundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">imagePath</span> <span class="o">=</span> <span class="p">[</span><span class="n">bundle</span> <span class="nl">pathForResource:</span><span class="s">@&quot;mug_shot&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;tiff&quot;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSImage</span> <span class="o">*</span><span class="n">anImage</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSImage</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithContentsOfFile:</span><span class="n">imagePath</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<p><code>NSString *imagePath = [bundle pathForResource:@"mug_shot" ofType:@"tiff"]</code></p>
-
-<p><code>NSImage *anImage = [[NSImage alloc] initWithContentsOfFile:imagePath];</code></p>
 
 <p><em>Loading Code</em></p>
 
