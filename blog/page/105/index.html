@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The first part is easy to understand: scope issue The second part is important because it will lead to memory leak. (Related to item 23 and operator &hellip;">
+  <meta name="description" content="Because calling constructor is expensive
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6196784167/">Item 32: Postpone Variable Definitions as Long as Possible</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:57:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Because calling constructor is expensive</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -258,46 +295,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To disallow an operation on your object class, you can</p>
-
-<p>1) declare the function as <em>private</em></p>
-
-<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/106/">&larr; Older</a>
@@ -315,6 +312,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages/">Simple Script to Convert Blogger Posts to Github Pages</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/06/29/keep-vi-swp-file-in-tmp/">Keep Vi Swp File in Tmp</a>
       </li>
     
@@ -328,10 +329,6 @@
     
       <li class="post">
         <a href="/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a>
       </li>
     
   </ul>
