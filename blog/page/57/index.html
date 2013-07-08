@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Dived into Microsoft Powershell (v1.0) for a few days, and I start to like this tool. It is very versaTILe and useful. The REPL command line &hellip;">
+  <meta name="description" content="Finally finished the book, “Winston’s War: Churchill, 1940-1945” by Max Hastings
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,7 +59,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -66,6 +66,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/13/p-19231539841/">Finally Finished the Book, “Winston’s War: Churchill, 1940-1945” by Max Hastings</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-13T22:00:00+11:00" pubdate data-updated="true">Mar 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally finished the book, “Winston’s War: Churchill, 1940-1945” by Max Hastings</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -225,53 +261,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/06/p-18843112135/">Was Getting ‘class Has No Selector Alloc’ Method Error When I Wrote</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T22:00:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Was getting ‘class has no selector alloc’ method error when I wrote</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>MyClass* obj;
-</span><span class='line'>obj = [[MyClass alloc] init];
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is because I did not make MyClass a subclass of NSObject</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/58/">&larr; Older</a>
@@ -289,6 +278,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -304,16 +297,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

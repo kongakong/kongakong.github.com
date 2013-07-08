@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a fetch &hellip;">
+  <meta name="description" content="The model used to open the store is incompatible with the one used to create the store Delete the app from the iOS simulator whenever seeing this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,7 +58,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -66,6 +65,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/24/p-2907806178/">Core Data 3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-24T21:39:00+11:00" pubdate data-updated="true">Jan 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>The model used to open the store is incompatible with the one used to create the store</code></p>
+
+<p>Delete the app from the iOS simulator whenever seeing this error message</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -213,44 +250,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/01/18/p-2807506716/">Subversion Note 2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-18T16:44:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To back out a changeset from your working copy (eg. 4321):</p>
-
-<p>Or multiple changesets:</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/146/">&larr; Older</a>
@@ -268,6 +267,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -283,16 +286,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

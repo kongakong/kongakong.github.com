@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Lord Stern on climate change in LSE (23/2) ">
+  <meta name="description" content="Was getting ‘class has no selector alloc’ method error when I wrote 1
+2
+3 MyClass* obj;
+obj = [[MyClass alloc] init]; It is because I did not make &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,7 +61,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -66,6 +68,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/06/p-18843112135/">Was Getting ‘class Has No Selector Alloc’ Method Error When I Wrote</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T22:00:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Was getting ‘class has no selector alloc’ method error when I wrote</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>MyClass* obj;
+</span><span class='line'>obj = [[MyClass alloc] init];
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I did not make MyClass a subclass of NSObject</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -224,42 +273,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/03/p-18650017261/">Do Custom Initialisation in ViewDidLoad of a ViewController</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-03T16:59:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do custom initialisation in ViewDidLoad of a ViewController</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/59/">&larr; Older</a>
@@ -277,6 +290,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -292,16 +309,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

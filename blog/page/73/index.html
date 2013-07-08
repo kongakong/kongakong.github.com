@@ -9,8 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="If you command-click the title bar of Preview, the directory stack will show up
-">
+  <meta name="description" content="Extremely useful for debugging which HSQL has caused database server exception 1
+2
+3
+4
+5 log4j.logger.org.hibernate.SQL=trace
+log4j.logger.org. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,7 +63,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -67,6 +70,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/12/p-10124153751/">To Turn on SQL Tracing in Hibernate</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-12T22:52:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Extremely useful for debugging which HSQL has caused database server exception</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>log4j.logger.org.hibernate.SQL=trace
+</span><span class='line'>log4j.logger.org.hibernate.engine.query=trace
+</span><span class='line'>log4j.logger.org.hibernate.type=trace
+</span><span class='line'>log4j.logger.org.hibernate.jdbc=trace
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -235,44 +289,6 @@ Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/09/09/p-9991195593/">Lambda in Java</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-09T20:45:00+10:00" pubdate data-updated="true">Sep 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Java will</p>
-
-<p><a href="adopt%20the%20lambda%20syntax%20of%20c#">http://mail.openjdk.java.net/pipermail/lambda-dev/2011-September/003936.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/74/">&larr; Older</a>
@@ -290,6 +306,10 @@ Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -305,16 +325,25 @@ Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

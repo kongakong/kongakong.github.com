@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I am just thinking: if the same fate befalls me, will I have the inner strength like Bauby? Besides, I need an iPad app that can follow my eye &hellip;">
+  <meta name="description" content="Encountered this objective-c compilation error: property with ‘weak’ attribute must be of object type ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,7 +58,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -66,6 +65,45 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/20/p-17941533096/">Encountered This Objective-c Compilation Error:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-20T22:16:00+11:00" pubdate data-updated="true">Feb 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Encountered this objective-c compilation error:</p>
+
+<pre><code>property with ‘weak’ attribute must be of object type
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -220,44 +258,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/10/p-17365473643/">There Is Nothing So Practical as a Good Theory</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-10T19:56:00+11:00" pubdate data-updated="true">Feb 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There is nothing so practical as a good theory</p>
-
-<p><a href="Kurt%20Lewin">http://en.wikipedia.org/wiki/Kurt_Lewin</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/63/">&larr; Older</a>
@@ -275,6 +275,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -290,16 +294,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

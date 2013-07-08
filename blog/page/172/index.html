@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Just think it may be worthwhile to commit it in writing for sharing.In summary, my decision is only partially based on the technical merit or &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,7 +58,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -67,6 +65,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/02/06/8866917822435065934/">Why I Choose to Learn Erlang?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-06T06:02:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just think it may be worthwhile to commit it in writing for sharing.<br /><br />In summary, my decision is only partially based on the technical merit or language features.<br /><br />First take a look back at year 2001. Motivated by the desire to find a better, more reliable way to develop software, I learned and switched to Linux platform in this year. For anyone serious in learning unix family OS,  <span style="font-style: italic;">bash</span>, <span style="font-style: italic;">awk</span>, <span style="font-style: italic;">sed </span>and <span style="font-style: italic;">perl </span>scripting are literally the &ldquo;basic dance steps&rdquo;.<br /><br />Then I moved on to Python (see my first blog if you have plenty of time to waste :&ndash;) ).<br /><br />Now fast forward a few years. From Python, I soon learn about these big names such as <a href="http://www.python.org/%7Eguido/">Guido van Rossum</a> and <a href="http://norvig.com/">Peter Norvig</a> etc, and for some reasons, stumbled upon  <a href="http://www.paulgraham.com/">Paul Graham</a> and his famous essays.<br /><br />One of his famous idea on computer language is: there are reasons why some languages are superior than other languages, and Lisp <span style="font-style: italic;">is </span>the most powerful among them. (Alright, I made the assertion for him, he probably never really put it exactly this way. Did he?)<br /><br />So, convinced by the argument that a language is key to a programmer&rsquo;s productivity, I decided to give Lisp a try. The syntax, or the lack of it, is indeed a challenge, but the concept of &ldquo;code is data, data is code&rdquo; is very powerful. <a href="http://www.gigamonkeys.com/book/macros-standard-control-constructs.html">Macros</a> and <a href="http://www.gigamonkeys.com/book/object-reorientation-generic-functions.html">CLOS </a>are effective techniques in Lisp programming.<br /><br />Fortunately there are a lot of resource.<br /><br />Actually I should put it this way: &ldquo;too much resource&rdquo;.<br /><br />Indeed, if you look at variety in the implementations of mainstream Lisp, and its derivative, Scheme, you will find these choices: Common lisp (clisp), CMUCL (CMU lisp), Kawa (Scheme on JVM), PLT Scheme, Scheme 48 etc&hellip; The list goes on and on.<br /><br />It is the common phenomena of *nix world: the Fragmentation.<br /><br />As a result, for any partitioner in commercial software world, it becomes a hard problem: given limited free time for self-study, we are confronted with these choices:<br /><ul><li>which language (Lisp or Scheme)?</li><li>which version (R5RS or R6RS or some subset, in the case of Scheme)?</li><li>which implementation of the language (the usual portability vs power/library issue)?</li></ul>It makes my research long and tedious. If I bet on a wrong horse, I will lose a lot of valuable time, right? What if I am in a middle of a project and encounter a bug in the lisp/scheme interpreter I am using, will there be adequate community support? What if&hellip;<br /><br />Does the risks justify the potential gain from the use of Lisp/Scheme?<br /><br />Then I discovered Erlang.<br /><br />The following reasons make me think, form my particular situation and career need, Erlang is probably the safest  bet (or most cost-effective investment):<br /><br /><ul><li>It has all the beauty and expressiveness of a functional language</li><li>You gain concurrency for free (built-in support in syntax and kernel)<br /></li><li>You gain fault tolerance for free</li><li>You gain distributed processing for free</li><li>The language and library are robust and battle-tested in demanding Telecom industry.</li><li>It does not suffer from the implementation fragmentation of Lisp/Scheme.</li><li>The language evolution is well controlled (by Ericsson)<br /></li></ul>It is a pragmatic choice from a software builder&rsquo;s point of view.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -212,42 +246,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/01/31/8422387224070078892/">Little Erlang Exercise 4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-31T21:37:00+11:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=4">Euler Problem 4</a><br /><br />Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet handy.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />A palindromic number reads the same both ways. The largest palindrome<br />made from the product of two 2-digit numbers is 9009 = 91 x 99.<br /><br />Find the largest palindrome made from the product of two 3-digit numbers.<br />&rdquo;&ldquo;&rdquo;<br /><br />def isPalindromic(Num):<br />  &ldquo;&rdquo;&ldquo;<br />    For string reversal, pls check this url:<br /><br />      <a href="http://www.python.org/doc/2.3.5/whatsnew/section-slices.html">http://www.python.org/doc/2.3.5/whatsnew/section-slices.html</a><br /><br />  &rdquo;&ldquo;&rdquo;<br />  N = str(Num)<br />  l = len(N)<br />  div, mod = divmod(l, 2)<br />  if mod == 1: # odd<br />    fh = N[0:l/2]<br />    sh = N[1+l/2:]<br />    # print &ldquo;%s %s&rdquo; % (fh, sh)<br />  else:<br />    fh = N[0:l/2]<br />    sh = N[l/2:]<br />  return fh == sh[::-1]<br /><br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />  g = [ x * y for x in xrange(100, 999) for y in xrange(100, 999) ]<br />  print max(filter(lambda x: isPalindromic(x), g))<br /><br /><br /></code></pre><br /><br />Here comes an erlang version. In this rare occasion, erlang runs faster than python. It is probably because, first of all, the list comprehension I used in erlang produces a smaller list. Secondly the test of palindromic is more straightforward in the erlang version. <br /><br />I will revisit the python version, later, when I get a bit more time.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p4).<br />-export([findLargestProduct/0]).<br /><br />isPalindromic(N) when is_list(N) &ndash;><br />  N == lists:reverse(N).<br /><br />findLargestProduct() &ndash;><br />  List = [X * Y || X &lt;&ndash; lists:seq(100, 999),<br />                   Y &lt;&ndash; lists:seq(100, 999),<br />                   isPalindromic(integer_to_list(X * Y))],<br />  lists:max(List).<br /><br /><br /><br /></code><br /></pre></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/173/">&larr; Older</a>
@@ -265,6 +263,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -280,16 +282,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

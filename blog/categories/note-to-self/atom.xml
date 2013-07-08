@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: note-to-self | Timeline]]></title>
+  <title><![CDATA[Category: note_to_self | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/note-to-self/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-06T08:33:37+10:00</updated>
+  <updated>2013-07-08T21:56:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,22 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Esc-option triggers code completion in xcode]]></title>
-    <link href="http://kongakong.github.io/blog/2011/06/05/p-6206909472/"/>
-    <updated>2011-06-05T19:07:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2011/06/05/p-6206909472</id>
-    <content type="html"><![CDATA[<p>Esc-option triggers code completion in xcode</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[99% of blogs out there are not worth reading... including this one]]></title>
-    <link href="http://kongakong.github.io/blog/2010/10/21/p-1365438347/"/>
-    <updated>2010-10-21T21:55:00+11:00</updated>
-    <id>http://kongakong.github.io/blog/2010/10/21/p-1365438347</id>
-    <content type="html"><![CDATA[<p>If I start to document every software idea I ever have, this blog will feel like it is  maintained by a hyper-active twitter who need to blog every 30 sec.</p>
+    <title type="html"><![CDATA[Switch and enum in Objective-c]]></title>
+    <link href="http://kongakong.github.io/blog/2013/07/08/switch-and-enum-in-objective-c/"/>
+    <updated>2013-07-08T21:30:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/07/08/switch-and-enum-in-objective-c</id>
+    <content type="html"><![CDATA[<blockquote><p>Do not implement a default case in switch statements that handle enumerated types. This helps if you add to the enumeration, because the compiler will warn that the switch does not handle all the values.</p></blockquote>
 
-<p>I shall remind myself of the dictum: <em>Idea is cheap. Implementation is all that counts</em></p>
+<p>from <a href="http://www.informit.com/articles/article.aspx?p=2080040&amp;seqNum=5">Matt Galloway</a></p>
 ]]></content>
   </entry>
   

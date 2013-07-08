@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-06T08:33:37+10:00</updated>
+  <updated>2013-07-08T21:56:22+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Switch and enum in Objective-c]]></title>
+    <link href="http://kongakong.github.io/blog/2013/07/08/switch-and-enum-in-objective-c/"/>
+    <updated>2013-07-08T21:30:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/07/08/switch-and-enum-in-objective-c</id>
+    <content type="html"><![CDATA[<blockquote><p>Do not implement a default case in switch statements that handle enumerated types. This helps if you add to the enumeration, because the compiler will warn that the switch does not handle all the values.</p></blockquote>
+
+<p>from <a href="http://www.informit.com/articles/article.aspx?p=2080040&amp;seqNum=5">Matt Galloway</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby quirk?]]></title>
@@ -546,17 +557,6 @@
 of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockquote>
 
 <p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A word in your ear: Rhyming slang]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/05/p-52213593051/"/>
-    <updated>2013-06-05T21:20:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/05/p-52213593051</id>
-    <content type="html"><![CDATA[<p><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></p>
-
-<p>‘Apple and Pear’ means ‘upstair’. Fun.</p>
 ]]></content>
   </entry>
   

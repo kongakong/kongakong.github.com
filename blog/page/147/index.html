@@ -9,10 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Modal View screws up the SplitView after dismiss. Tried if ([self modalViewController]) {
-return;
-} in willHideSplitView but it does not work
-">
+  <meta name="description" content="In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful. http &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -61,7 +58,6 @@ return;
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -69,6 +65,44 @@ return;
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/01/13/p-2727123479/">Splash Screen on iOS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T20:22:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful.</p>
+
+<p><a href="Source">http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -228,42 +262,6 @@ return;
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/01/07/p-2623149828/">Cannot Get UISplitViewController to Rotate. Very Frustrated</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-07T01:05:00+11:00" pubdate data-updated="true">Jan 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Cannot get UISplitViewController to rotate. Very frustrated</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/148/">&larr; Older</a>
@@ -281,6 +279,10 @@ return;
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -296,16 +298,25 @@ return;
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

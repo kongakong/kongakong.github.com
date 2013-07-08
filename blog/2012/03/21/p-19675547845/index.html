@@ -58,7 +58,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -96,7 +95,7 @@
 
 <p><em>Example</em>: In a letter from Clementine to Winston, on 27 June 1940,</p>
 
-<p>“Besides you won’t get the best results by irascibility &amp; rudeness. They will either breed either dislike or a slave mentality.</p>
+<p>“Besides you won’t get the best results by irascibility &amp; rudeness. They will either breed either dislike or a slave mentality.&#8221;</p>
 </div>
 
 
@@ -124,7 +123,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/war/'>War</a>, <a class='category' href='/blog/categories/winstons/'>Winston's</a>, <a class='category' href='/blog/categories/word/'>Word</a>, <a class='category' href='/blog/categories/day/'>day</a>, <a class='category' href='/blog/categories/of/'>of</a>, <a class='category' href='/blog/categories/the/'>the</a>
+    <a class='category' href='/blog/categories/winstons-war/'>Winston's_War</a>, <a class='category' href='/blog/categories/word-of-the-day/'>Word_of_the_day</a>
   
 </span>
 
@@ -160,6 +159,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -175,16 +178,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

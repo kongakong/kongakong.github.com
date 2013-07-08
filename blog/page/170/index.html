@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Python is used widely in academia, open source projects and start-up. However, when it comes to the corporate world, it seems to me it is not making &hellip;">
+  <meta name="description" content="I would hardly use the &ldquo;success stories&rdquo; as the authoritative list of companies that use Python.I&rsquo;m the CTO of a large hedge fund &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -58,7 +58,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -66,6 +65,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/05/02/4938064958000018731/">I Would Hardly Use the &#8220;Success Stories&#8221; as the Au&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-02T07:55:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I would hardly use the &ldquo;success stories&rdquo; as the authoritative list of companies that use Python.<BR/><BR/>I&rsquo;m the CTO of a large hedge fund and our development platform is primarily Python. And while we are by no means a large firm (in terms of head count), I have been seeing more and more resumes in the finance world of people using Python at large financial firms.<BR/><BR/>As Python is not a &ldquo;mainstream&rdquo; language, I think it comes in the back door at organizations so you won&rsquo;t always see it in job postings or other public references. That doesn&rsquo;t mean it&rsquo;s not used.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -213,42 +248,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2008/02/19/5839983411439621941/">Erlang Mailing List - String as List 3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-19T08:15:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is the last installment of the digest of the topic of &ldquo;String as List&rdquo;.<br /><span class="HcCDpe"><span email="hasan.veldstra@gmail.com" class="EP8xU" style="color: rgb(204, 0, 96);"><br />Hasan Veldstra</span></span> opined that lack of library support make string operation difficult. He was working on an Erlang Unicode string library based on ICU (<a href="http://www.icu-project.org/" target="_blank"><a href="http://www.icu-project.org/">http://www.icu-project.org/</a></a>) for the past week, and expected to release an alpha version soon.<br /><br /><span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span>  <span class="lDACoc"></span></span>suggested that in the case of 64 bit implementation of Erlang, a &ldquo;String as list&rdquo; representation is wasteful.<br /><br /><span class="HcCDpe"><span email="ok@cs.otago.ac.nz" class="EP8xU" style="color: rgb(121, 6, 25);">Richard A. O&#8217;Keefe </span> seems to be annoyed by this suggestion (and other comment on Lisp machine), and advocated that if space is a concern, the programmer can use an alternative representation such as binary.<br /></span><br /><span class="HcCDpe"><span email="rvirding@gmail.com" class="EP8xU" style="color: rgb(200, 137, 0);">Robert Virding </span></span>clarify the leex (function token/2 and token/3) is re-entrant. However, yecc is not and must be fed with a completed list of token.<br /><br /><span class="HcCDpe"><span email="dmitriid@gmail.com" class="EP8xU" style="color: rgb(121, 6, 25);">Dmitrii &lsquo;Mamut&rsquo; Dimandt </span> </span>gave an example of why &ldquo;string as list&rdquo; is bad idea, because:<br /><blockquote style="font-style: italic;"><br />&ldquo;This is only true for ASCII text. Non-ASCII gets screwed up badly.<br /><br />lists:reverse(&#8220;text&rdquo;)     %% gives you &ldquo;text&rdquo;<br />lists:reverse(&ldquo;текст&rdquo;)  %% Russian for text becomes [130,209,129,209,186,208,181<div bgcolor="#ffffff" text="#000000"><wbr>,208,130,209] which is clearly not I wanted&#8221;</div></blockquote><div bgcolor="#ffffff" text="#000000"><br /></div>  <span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S</span>  <span class="lDACoc">has a solution to this problem:<br /><br /></span></span><blockquote style="font-style: italic;">&ldquo;This is what you should have in your list:<br />1> Text = [16#442, 16#435, 16#43a, 16#441, 16#442].<br />[1090,1077,1082,1089,1090]<br /><br />You can convert it to utf8 for output<br /><br />2> xmerl_ucs:to_utf8(Text).<br />[209,130,208,181,208,186,209<div id="1fvf" class="ArwC7c ckChnd"><wbr>,129,209,130]<br /><br />And you can reverse it and convert that to utf8.<br /><br />3> xmerl_ucs:to_utf8(lists<wbr>:reverse(Text)).<br />[209,130,209,129,208,186,208<wbr>,181,209,130]&rdquo;<br /></div></blockquote><div id="1fvf" class="ArwC7c ckChnd"><br />A positive message from <span class="HcCDpe"><span email="bjorn@erix.ericsson.se" class="EP8xU" style="color: rgb(51, 0, 153);">Bjorn Gustavsson</span></span>. He confirmed that is possible to use lists of Unicode characters easily. In Wings 3D, he have implemented a limited support for Unicode.<br /><br /><span class="HcCDpe"><span email="erlang@gmail.com" class="EP8xU" style="color: rgb(0, 131, 145);">Joe Armstrong</span></span> weighted in on 19 Feb. He suggested &ldquo;One problem with strings unicode, regexps etc. is how you input the string.&rdquo;. He proposed several new syntax to capture regex or xml string.<br /><br />Basically from this point onward the thread has shifted gear into forward looking mood. The discussion now focused on the best way to represent a string in Erlang.<br /><br /><br /></div></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/171/">&larr; Older</a>
@@ -266,6 +265,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -281,16 +284,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>

@@ -9,8 +9,22 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying to pip install numpy on ubuntu, and got this: 1
-2 SystemError: Cannot compile 'Python.h'. Perhaps you need to install python-dev|python-devel. ">
+  <meta name="description" content="./bin/pip install scipy failed. It is a dependency of pybrain 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16 ... ranlib: archive member: build/temp.macosx-10 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -59,7 +73,6 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/tags">Tags</a></li>
 </ul>
 
 </nav>
@@ -67,6 +80,79 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/02/p-22251177837/">Scipy and Pybrain</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T21:33:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>./bin/pip install scipy</code> failed. It is a dependency of pybrain</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zvout.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(clahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(dlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(slahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(veclib_cabi_f.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>error: Command "ranlib build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a" failed with exit status 1
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -265,58 +351,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/30/p-22116078999/">Install Python 2.7 Using Brew</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-30T20:21:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Install python 2.7 using brew. Brew also downloaded and installed <code>distribute</code></p>
-
-<p>&#8220;`</p>
-
-<p>$ brew install python
-==> Installing python dependency: sqlite
-==> Downloading</p>
-
-<p><a href="http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz">http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz</a></p>
-
-<p><a href="http://ftpmirror.gnu.org/gdbm/gdbm-1.10.tar.gz">http://ftpmirror.gnu.org/gdbm/gdbm-1.10.tar.gz</a></p>
-
-<p><a href="http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2">http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2</a></p>
-
-<p><a href="http://pypi.python.org/packages/source/d/distribute/distribute-0.6.24.tar.gz">http://pypi.python.org/packages/source/d/distribute/distribute-0.6.24.tar.gz</a></p>
-
-<p><a href="https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python">https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/48/">&larr; Older</a>
@@ -334,6 +368,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/06/ruby-quirk/">Ruby Quirk?</a>
       </li>
     
@@ -349,16 +387,25 @@
         <a href="/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a>
-      </li>
-    
   </ul>
 </section>
+
 <section>
- <h1>Twitter</h1>
- <a class="twitter-timeline" href="https://twitter.com/kongakong" >@kongakong</a>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
 </section>
+
 <section>
   <h1>About Me</h1>
   <p>Python Developer</p>
