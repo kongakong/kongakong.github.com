@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content=" Missing libtoolize in OSX. Looking for solution Jan 2nd, 2013 osx ">
+	<meta name="description" content="First, to install, follow the instrument here: http://stackoverflow.com/a/13718915/58129 You may then get a Could not reserve enough space for &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +78,94 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/04/17/p-48145048805/">
+		
+			Using Sbt in Ubuntu</a>
+	</h2>
+	<div class="entry-content">
+		<p>First, to install, follow the instrument here:</p>
+
+<p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
+
+<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
+
+<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-17T07:18:00+10:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/sbt/'>sbt</a>, <a class='category' href='/blog/categories/scala/'>scala</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/18/p-43309281489/">
+		
+			Native Client: See Only &#8216;Status: Creating Embed: Newlib&#8217; in Chrome</a>
+	</h2>
+	<div class="entry-content">
+		<p>It is because I have turned on the flag ‘Native Client GDB-based debugging’. It is not compatible with nexe that are linked with newlib.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-18T01:00:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/client/'>client</a>, <a class='category' href='/blog/categories/native/'>native</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -203,92 +291,6 @@
 
 
 	<a class='category' href='/blog/categories/xcode/'>xcode</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/12/02/p-37006859461/">
-		
-			What Is Portable Native Client?</a>
-	</h2>
-	<div class="entry-content">
-		<p><a href="What%20is%20Portable%20Native%20Client?">http://www.chromium.org/nativeclient/pnacl/building-and-testing-portable-native-client</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T15:33:00+11:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/11/18/p-35977135674/">
-		
-			How to Set Up Virtualenv and Use Pip in Python 3.3</a>
-	</h2>
-	<div class="entry-content">
-		<p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
-
-<p>Then you’ll need to create a virtualenv and activate it. For details see</p>
-
-<p><a href="http://docs.python.org/3/library/venv.html">the python doc</a></p>
-
-<p>Since I want to install packages using pip, I proceed to install distribute.</p>
-
-<p><a href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-18T20:44:00+11:00" pubdate data-updated="true">Nov 18<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/pip/'>pip</a>, <a class='category' href='/blog/categories/python3/'>python3</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
 
 
 </div>

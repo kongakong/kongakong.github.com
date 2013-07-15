@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content=" Virtual functions are dynamically bound, but default parameters are statically bound Jun 13th, 2011 Effective_C++, c++, self-study ">
+	<meta name="description" content="It touches on the topic of downcasting (cast a derived class to its base class) First of all, downcasting itself is usually unnecessary in most &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +78,94 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2011/06/13/p-6463175755/">
+		
+			Item 39: Avoid Casts Down the Inheritance Hierarchy</a>
+	</h2>
+	<div class="entry-content">
+		<p>It touches on the topic of <code>downcasting</code> (cast a derived class to its base class)</p>
+
+<p>First of all, downcasting itself is usually unnecessary in most situation where the virtual functions are suffice.</p>
+
+<p>If it must be done, use <code>dynamic_cast</code>. It will return null if cast is unsuccessful</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-13T06:06:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/blog/categories/c-plus-plus/'>c++</a>, <a class='category' href='/blog/categories/self-study/'>self-study</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2011/06/13/p-6462484863/">
+		
+			OpenRTB</a>
+	</h2>
+	<div class="entry-content">
+		<p><a href="http://openrtb.info/mobile/">OpenRTB</a>]</p>
+
+<p>RTB stands for &ldquo;Real-Time Bidding&rdquo;</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-13T05:44:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/sharing/'>sharing</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -195,104 +283,6 @@
 
 
 <time datetime="2011-06-12T21:59:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/blog/categories/c-plus-plus/'>c++</a>, <a class='category' href='/blog/categories/self-study/'>self-study</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2011/06/12/p-6449793506/">
-		
-			Item 35: Make Sure Public Inheritance Models &#8216;Isa&#8217;</a>
-	</h2>
-	<div class="entry-content">
-		<p>OO design principle</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-12T21:16:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/blog/categories/c-plus-plus/'>c++</a>, <a class='category' href='/blog/categories/self-study/'>self-study</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2011/06/12/p-6448800917/">
-		
-			Item 34: Minimize Compilation Dependencies Between Files</a>
-	</h2>
-	<div class="entry-content">
-		<p>There are three technique to make a header file more self-contained:</p>
-
-<ol>
-<li><code>Avoid using objects when object references and pointers will do</code></li>
-</ol>
-
-
-<p>This will avoid the need of including a header file</p>
-
-<ol>
-<li><code>Don't _#include_ header files in your header files unless your headers won't compile without them</code></li>
-</ol>
-
-
-<p>Use forward declaration instead</p>
-
-<p>Probably useful technique if the scale of the c++ project warrants it?</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-12T20:00:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time></div>
 	<div class="tags">
 
 

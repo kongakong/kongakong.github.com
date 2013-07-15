@@ -7,7 +7,10 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above. The root cause &hellip;">
+	<meta name="description" content="This code fragment 1
+2
+3 // item is a MPMediaItem
+NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL]; causes Interface type cannot be &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +81,109 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/27/p-23836233379/">
+		
+			Interface Type Cannot Be Statically Allocated</a>
+	</h2>
+	<div class="entry-content">
+		<p>This code fragment</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>// item is a MPMediaItem
+</span><span class='line'>NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>causes <code>Interface type cannot be statically allocated</code></p>
+
+<p>But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T12:26:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/xcode/'>xcode</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/05/27/p-23820463221/">
+		
+			The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a>
+	</h2>
+	<div class="entry-content">
+		<p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
+
+<p>It totally throws me off because nothing is wrong on that line.</p>
+
+<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
+
+<p>But it did not fix the problem.</p>
+
+<p>Eventually I undo the last change I made, which is</p>
+
+<p>and it works again.</p>
+
+<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -218,101 +324,6 @@
 
 
 	<a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/storyboard/'>storyboard</a>, <a class='category' href='/blog/categories/xcode/'>xcode</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/05/26/p-23769825268/">
-		
-			Can You Spot the Problem Here?</a>
-	</h2>
-	<div class="entry-content">
-		<p>Can you spot the problem here?</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T12:00:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/05/26/p-23757431150/">
-		
-			Hit a EXC_BAD_ACCESS Exception.</a>
-	</h2>
-	<div class="entry-content">
-		<p>Hit a EXC_BAD_ACCESS exception.</p>
-
-<p>In the lldb, I tried to interrogate some internal variable, but no success.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>(lldb) p [lessons count]
-</span><span class='line'>error: no known method '-count'; cast the message send to the method's return type
-</span><span class='line'>error: 1 errors parsing expression
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T08:37:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/xcode/'>xcode</a>
 
 
 </div>
