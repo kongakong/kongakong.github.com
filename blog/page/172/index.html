@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea &hellip;">
+	<meta name="description" content="There is this interesting article, China’s Class Divide, by Daniel A. Bell in NT Times. Here is a brief summary of the content.&ldquo;Tsinghua is &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,12 +83,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2008/02/19/263759057007670019/">
+		<a href="/blog/2008/05/26/jst_5744986608096758320/">
 		
-			Erlang Mailing List - String as List 1</a>
+			Wrong Question?</a>
 	</h2>
 	<div class="entry-content">
-		<p>A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea and insight into Erlang were poured into this discussion. I simply want to write down some interesting technical points in this blog as a digest, as a reference. <em><br /><br />It all started with a question from <span class="HcCDpe"><span email="tsuraan@gmail.com" class="EP8xU" style="color: rgb(0, 104, 28);">tsuraan</span>:<br /><br /></span><blockquote style="font-style: italic;">&ldquo;Why does erlang internally represent strings as lists?&rdquo;</blockquote><br />First response from <span class="HcCDpe"><span email="masklinn@masklinn.net" class="EP8xU" style="color: rgb(121, 6, 25);">Masklinn</span><span class="lDACoc">, and actually many other contributors share the same idea:<br /></span></span><blockquote style="font-style: italic;"><span class="HcCDpe"><span class="lDACoc"><br /></span></span>&ldquo;A lot of functional languages represent strings as lists rather than<br />arrays because lists are their basic collection datatype, and this allows the use of all the list-related functions on strings.&rdquo;</blockquote><br /><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S </span> put it in a shorter phrase: &ldquo;historical reason&rdquo;. As he pointed out, &ldquo;internal&rdquo; is not right word in the question because string was not a special type or abstraction built on top of list. A string is a list.<br /><br />He then suggested the following module for handling large text:<br /></span><br /><blockquote><span style="font-style: italic;">&ldquo;&ndash; binaries (features representation that is 1:1 with the character</span><br /><span style="font-style: italic;">encoding itself, now also (R12B) with efficient scanning and</span><br /><span style="font-style: italic;">tail-construction)</span><br /><span style="font-style: italic;">&ndash; iolists (features cheap concatenation of large texts)</span><br /><span style="font-style: italic;">&ndash; list of words and a word-dictionary (features quicker scanning of words, efficient storage too)&rdquo;</span><span class="HcCDpe"><br /></span></blockquote><span class="HcCDpe"><span class="lDACoc">Then </span></span><span class="HcCDpe"><span email="kevin@scaldeferri.com" class="EP8xU" style="color: rgb(204, 0, 96);">Kevin Scaldeferri </span></span><span class="HcCDpe"><span class="lDACoc">throws in a different point: list is not a good representation because<br /><br /></span></span><blockquote><span style="font-style: italic;" class="HcCDpe"><span class="lDACoc">&ldquo;</span></span><span style="font-style: italic;">First off, I append to strings a lot more than I prepend to them.  Yeah, I</span><br /><span style="font-style: italic;"> could work with reversed strings, but that&rsquo;s a hack to deal with using the </span><br /><span style="font-style: italic;">wrong data type.  Plus, I probably prefix match more often than suffix matching</span><br /><span style="font-style: italic;">(although this is less lopsided than append vs. prepend) &hellip;&rdquo;</span><br /></blockquote><br />Now we have a diversion, <span class="HcCDpe"><span email="vlm@lionet.info" class="EP8xU" style="color: rgb(0, 131, 145);">Lev Walkin </span></span>responded to earlier Robert&rsquo;s post about that list is an ideal string representation because it can easily accommodate UTF-16 and UTF-32.<br /><br /><blockquote><span style="font-style: italic;">&ldquo;Small correction: UTF-16 and UTF-32 are practically dead, you certainly</span><br /><span style="font-style: italic;">need to think in terms of UTF-8 nowadays.&rdquo;</span><br /><br /><br /></blockquote><span class="HcCDpe">Now we are going to have several threads going on under the same thread subject. Let&rsquo;s get to it in my next blog. But for now I will ignore UTF-8 vs UTF16/32 discussions in order to focus on Erlang features.<br /><br />End of Part 1<br /><span class="lDACoc"></span></span><br /><span style="font-size:85%;"></em> It is about summarization, so quote will be edited liberally for clarity, rather than reproduced word for word.<br /></span></p>
+		<p>There is this interesting article, <a href="http://www.nytimes.com/2008/05/21/opinion/21bell.html?ex=1369108800&amp;en=848705a0fc854fa7&amp;ei=5124&amp;partner=permalink&amp;exprod=permalink">China’s Class Divide</a>, by Daniel A. Bell in NT Times. Here is a brief summary of the content.<br /><br /><blockquote><span style="font-size:180%;"><span style="font-weight: bold;">&ldquo;T</span></span>singhua   is one of China’s most prestigious universities and it is known for its   politically conservative orientation. President Hu Jintao is an alumnus, and   most of my colleagues are Communist Party members, as are many of my students.    <p>Yet the atmosphere is anything but conservative. The most popular lecturers   tend to be the ones who openly criticize contemporary China. In private,   students are quick to express frustration at Internet censorship and official   propaganda. In class, student questions are often critical to the point that I   need to introduce some “pro-government” views for balance. </p>  <p>Shortly after the uprisings in Tibet in March, I happened to lecture on   Locke’s idea of constitutional democracy. A student asked if the “right to   rebel” would justify the use of violence by Tibetans fighting for independence.   In the interest of class time, I had to shut off the discussion. The next week   we discussed Isaiah Berlin’s concept of freedom. Once again, I was forced   into the strange position of cutting off debate before it got out of hand. </p>  <p>After the Sichuan earthquake, I was due to lecture on John Rawls’s   theory of justice. I tried hard to think   of an example that the students could grapple with. </p>  <p>Finally I came up with a good one (or so I thought). According to Rawls, the   state should give first consideration to the worst-off members of the   community. But which “community” matters? Do the state’s obligations extend   outside national boundaries? For example, the cyclone in Burma caused more   deaths than the Chinese earthquake. Should China help the victims of the   Burmese cyclone, even if it means less aid for the rescue mission in China? </p>  <p>When I finished, the class went unexpectedly silent, to the point that I   could feel a certain amount of hostility. Finally a student said that of course   the Chinese government should help the Chinese first. But why, I said? Another   student said, it’s obvious, the victims are Chinese. “But why, why?” I asked,   somewhat impatiently. Give me some reasons. </p>  <p>Some students spoke up. There is no global institution that could distribute   aid in accordance with Rawls’s principles of justice. The Chinese people pay   taxes to the Chinese state, so the state has special obligations to them. The   Chinese state couldn’t do much for the Burmese people even if it wanted to. </p>  <p>I responded that the Burmese government is truly awful, blocking aid to its   own people, and that the Chinese government could have some influence on it. The bell rang. In the past, the ever-polite students would clap in   appreciation before leaving. This time, there was no applause.</p>  <p>When I got home, I realized that I had trodden on sensitive territory.   Chinese TV has been filled with scenes of death and devastation, of Chinese   soldiers wading through mud and gore to help the victims. Every conversation is   prefaced with concern about the victims. I sent an e-mail message to the class   apologizing for the “wrong-headed” example.</p>  <p>A student wrote back saying, “It is not a wrong-headed example; we just have   clear and strong identification.” That seems to go to the heart of what went   wrong. It’s perfectly natural to care about people closer to home, especially   in times of disaster.<span style="font-size:180%;"><span style="font-weight: bold;">&rdquo;</span></span></p></blockquote><br /><p>I think while the questions is worthy of critical examination and scholarly discussion, the timing of raising it in the class cannot be worse. It is as if asking a class of American students why USA foreign policy caused the hostility from aboard right after 9/11. I don&rsquo;t think there are many of us who are capable to deal with the weight of the question rationally.<br /></p>This question, I think, also highlights a difference in the Eastern and Western moral values: In the East, as exemplified by Confucius&rsquo;s teaching,  the care for others are radiated from an individual along the axis of the distance of relationship. An individual is expected to care for himself and his family first, then his country, and lastly the universe. (修身,齊家,治國,平天下 &ndash; <span style="font-style: italic;">&ldquo;Cultivate yourself, Maintain your family fair, Make your country peaceful and prosperous, Bring eternal peace to the World&rdquo;</span> )<br /><br />The Western moral value is strongly influenced by the Christian faith.  The value is deeply rooted in the culture and manifested as belief in <span style="font-style: italic;">Universal Values</span> such as Human Right, even though more and more European, and to a certain extend, American, are turning their back to organized religions,<br /><br />In China, A similar view has been taught by Confucius&rsquo;s contemporary rival school, <a href="http://en.wikipedia.org/wiki/Mohism">Mohism</a>. Confucius has refuted this as  preposterous because he did not believe one can love a stranger as much as one can love his parent.</p>
 
 		
 		
@@ -108,12 +108,8 @@
   
 
 
-<time datetime="2008-02-19T03:30:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time></div>
+<time datetime="2008-05-26T09:00:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2008</time></div>
 	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/erlang/'>erlang</a>
-
 
 </div>
 	
@@ -124,13 +120,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2008/02/18/9011218246315898500/">
+		<a href="/blog/2008/05/25/jst_6954309565474299420/">
 		
-			Draftttt</a>
+			Investment Survival Note 7 - Sound Accounting for Investors</a>
 	</h2>
 	<div class="entry-content">
-		<br />
-
+		<p>As an investor it is important to do proper accounting to keep track of  the P/L of his/her holdings. Ideally the holding should be marked to market frequently if not monthly. All cost and income should be recorded. It helps an investor to have a realistic picture of the health of  his/her investment.<br /><br />An investor should also maintain a reserve account which sets aside cash for tax on realised and unrealised profit.<br /><br />The book was first written in 1936, so, I reckon, it did require work and discipline for average do-it-yourself investors to keep track of P/L back in those days. Today, with all these online resources such as Yahoo Finance, it is a lot easier to do so. <br /> <br /><br />Quick link to <a style="font-style: italic;" type="amzn" asin="0471132977">The Battle for Investment Survival</a>  by Gerald M. Loeb</p>
 
 		
 		
@@ -150,12 +145,8 @@
   
 
 
-<time datetime="2008-02-18T22:06:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2008</time></div>
+<time datetime="2008-05-25T06:00:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2008</time></div>
 	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/erlang/'>erlang</a>
-
 
 </div>
 	
@@ -166,12 +157,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2008/02/12/4297189587515149228/">
+		<a href="/blog/2008/05/24/jst_4896780664629829060/">
 		
-			Paradox in Software I</a>
+			Go and Life</a>
 	</h2>
 	<div class="entry-content">
-		<p>There are many paradox in software.<br /><br />The first paradox I can think of is the misconception of &ldquo;ease of use&rdquo;.<br /><br />Some technology, on first glance, very easy to use. Two mouse clicks and one &ldquo;Ctrl-S&rdquo;, the outcome is saved into a file and job is done.<br /><br />However, it is <span style="font-style: italic;">hard </span>actually.<br /><br />I am not a Zen master. Please let me explain.<br /><br />As in any statement, the meaning depends on the context and situation.<br /><br />In a sense point-and-click  help you<br /><br /></p>
+		<p><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_j_Rnsthw-6Y/SDb47zu6FWI/AAAAAAAAAJM/Z1Z9JX56aRM/s1600-h/go_and_life.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer;" src="http://2.bp.blogspot.com/_j_Rnsthw-6Y/SDb47zu6FWI/AAAAAAAAAJM/Z1Z9JX56aRM/s200/go_and_life.jpg" alt="" id="BLOGGER_PHOTO_ID_5203620125856109922" border="0" /></a><br /><br /><span style="font-size:180%;"><span style="font-weight: bold;">G</span></span>o is an ancient Chinese board game. I always want to learn more about it, but never really have the time until recently.<br /><br />The more I understand Go, the more I appreciate the beauty of the game.<br /><br />The basic move is extremely simple: If you want to capture an enemy, just place sufficient numbers of your pieces surrounding the target such that they are completely cut off from their kind, then they become your PoW.<br /><br />In order to win, a player must occupy a bigger territory than his/her opponents at the end of the game.<br /><br />However, I can assure you that you cannot achieve this goal by simply just battling your enemy  out.<br /><br />In fact, focusing too much on winning individual battles may end up costing you the ultimate victory.  Simply put, since it usually takes more pieces to take over enemy land, if you spend your resources (i.e. pieces) to warring, instead of territory building, you may risk not occupying enough land. Battles should only be a mean to secure your territory or weaken your opponent, not an end in itself.<br /><br />How does it related to life? Well, sometimes don&rsquo;t we focus too much on immediate, short-term gain (akin to capturing enemy pieces in Go), and forget our bigger pictures in life?</p>
 
 		
 		
@@ -191,12 +182,8 @@
   
 
 
-<time datetime="2008-02-12T05:10:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2008</time></div>
+<time datetime="2008-05-24T01:34:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2008</time></div>
 	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/erlang/'>erlang</a>
-
 
 </div>
 	
@@ -207,12 +194,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2008/02/06/8866917822435065934/">
+		<a href="/blog/2008/05/24/jst_536247201141529408/">
 		
-			Why I Choose to Learn Erlang?</a>
+			Investment Survival Note 6 - Speculation and Investment</a>
 	</h2>
 	<div class="entry-content">
-		<p>Just think it may be worthwhile to commit it in writing for sharing.<br /><br />In summary, my decision is only partially based on the technical merit or language features.<br /><br />First take a look back at year 2001. Motivated by the desire to find a better, more reliable way to develop software, I learned and switched to Linux platform in this year. For anyone serious in learning unix family OS,  <span style="font-style: italic;">bash</span>, <span style="font-style: italic;">awk</span>, <span style="font-style: italic;">sed </span>and <span style="font-style: italic;">perl </span>scripting are literally the &ldquo;basic dance steps&rdquo;.<br /><br />Then I moved on to Python (see my first blog if you have plenty of time to waste :&ndash;) ).<br /><br />Now fast forward a few years. From Python, I soon learn about these big names such as <a href="http://www.python.org/%7Eguido/">Guido van Rossum</a> and <a href="http://norvig.com/">Peter Norvig</a> etc, and for some reasons, stumbled upon  <a href="http://www.paulgraham.com/">Paul Graham</a> and his famous essays.<br /><br />One of his famous idea on computer language is: there are reasons why some languages are superior than other languages, and Lisp <span style="font-style: italic;">is </span>the most powerful among them. (Alright, I made the assertion for him, he probably never really put it exactly this way. Did he?)<br /><br />So, convinced by the argument that a language is key to a programmer&rsquo;s productivity, I decided to give Lisp a try. The syntax, or the lack of it, is indeed a challenge, but the concept of &ldquo;code is data, data is code&rdquo; is very powerful. <a href="http://www.gigamonkeys.com/book/macros-standard-control-constructs.html">Macros</a> and <a href="http://www.gigamonkeys.com/book/object-reorientation-generic-functions.html">CLOS </a>are effective techniques in Lisp programming.<br /><br />Fortunately there are a lot of resource.<br /><br />Actually I should put it this way: &ldquo;too much resource&rdquo;.<br /><br />Indeed, if you look at variety in the implementations of mainstream Lisp, and its derivative, Scheme, you will find these choices: Common lisp (clisp), CMUCL (CMU lisp), Kawa (Scheme on JVM), PLT Scheme, Scheme 48 etc&hellip; The list goes on and on.<br /><br />It is the common phenomena of *nix world: the Fragmentation.<br /><br />As a result, for any partitioner in commercial software world, it becomes a hard problem: given limited free time for self-study, we are confronted with these choices:<br /><ul><li>which language (Lisp or Scheme)?</li><li>which version (R5RS or R6RS or some subset, in the case of Scheme)?</li><li>which implementation of the language (the usual portability vs power/library issue)?</li></ul>It makes my research long and tedious. If I bet on a wrong horse, I will lose a lot of valuable time, right? What if I am in a middle of a project and encounter a bug in the lisp/scheme interpreter I am using, will there be adequate community support? What if&hellip;<br /><br />Does the risks justify the potential gain from the use of Lisp/Scheme?<br /><br />Then I discovered Erlang.<br /><br />The following reasons make me think, form my particular situation and career need, Erlang is probably the safest  bet (or most cost-effective investment):<br /><br /><ul><li>It has all the beauty and expressiveness of a functional language</li><li>You gain concurrency for free (built-in support in syntax and kernel)<br /></li><li>You gain fault tolerance for free</li><li>You gain distributed processing for free</li><li>The language and library are robust and battle-tested in demanding Telecom industry.</li><li>It does not suffer from the implementation fragmentation of Lisp/Scheme.</li><li>The language evolution is well controlled (by Ericsson)<br /></li></ul>It is a pragmatic choice from a software builder&rsquo;s point of view.</p>
+		<p>The author reiterated his view that why investing for dividend and interest income doom to fail. His feeling is if someone aims to double his net worth might, he at least has a chance to succeed and retain his capital or even make a good profit out of it.<br /><br />However, trying to double the money return requires a lot of hard work.<br /><br /><br /><span style="font-style: italic;"> Quick link to </span><span><a type="amzn" asin="0471132977">The Battle for Investment Survival</a></span><span style="font-style: italic;"><a type="amzn" asin="0471132977"><br /></a> by Gerald M. Loeb</span></p>
 
 		
 		
@@ -232,12 +219,8 @@
   
 
 
-<time datetime="2008-02-06T06:02:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2008</time></div>
+<time datetime="2008-05-24T01:04:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2008</time></div>
 	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/erlang/'>erlang</a>
-
 
 </div>
 	
@@ -248,12 +231,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2008/02/04/4268682979256812423/">
+		<a href="/blog/2008/05/22/6667541505586480474/">
 		
-			A Dream</a>
+			My First Mac and Virtual Box Experience</a>
 	</h2>
 	<div class="entry-content">
-		
+		<p>I am officially a Mac convert.<br /><br />Still learning how to survive on one mouse button and use these fn, control, option and command keys. But so far so good. My MBP experience is absolutely positive.<br /><br />Before the purchase, I was slightly worried about if I may pay too much for a fine GUI. After last few days of hand-on experience, I think, as many MBP users has attested, the premium is well worth it.<br /><br />I, in particular, appreciate the BSD root of Mac OSX.  Whenever I cannot use the Mac OSX GUI to get thing done, I can always fall back to command line alternatives.<br /><br />Vista is a staggering failure of MS Corp in every sense (I have used Vista for a year). As Paul Graham puts it, Microsoft has <a href="http://www.paulgraham.com/microsoft.html">ceased to be relevant</a>. They still have market share, but it is a market share going to erode fast, under the attacks of Sun, Linux and FOSS. The unwillingness to waste any more time on Vista is my prime motivation to switch.<br /><br />The very first application I have downloaded is the <a href="http://www.virtualbox.org/">VirtualBox</a>. Basically within seconds I can start a new virtual instance of Ubuntu 8.04 beta. By default I can only <span style="font-weight: bold;">ssh</span> into the box via NAT. Will need to do some research to see how to get bridging done in Mac OSX.<br /><br />The second application I tried is, not surprisingly, <a href="http://www.blacktree.com/">QuickSliver</a>, an utility that warranted an hour of <a href="http://www.youtube.com/watch?v=d4LkTstvUL4">Google Tech Talk</a>.</p>
 
 		
 		
@@ -273,7 +256,7 @@
   
 
 
-<time datetime="2008-02-04T22:28:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2008</time></div>
+<time datetime="2008-05-22T01:09:00+10:00" pubdate data-updated="true">May 22<span>nd</span>, 2008</time></div>
 	<div class="tags">
 
 

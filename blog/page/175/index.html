@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="I think it is probably a typical experience for any beginner of Erlang: The equal sign in Erlang actually works differently comparing most other &hellip;">
+	<meta name="description" content="By happenstance I picked up the book &ldquo;Using the Wall Street Journal&rdquo; (5th Ed.) by Michael B. Lehmann. This book has been sitting idly on &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -83,12 +83,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2007/09/14/7492504578198141841/">
+		<a href="/blog/2008/04/11/jst_5812432802597208604/">
 		
-			Erlang Syntax 2 - Pattern Matching and Assignment</a>
+			Time Travel</a>
 	</h2>
 	<div class="entry-content">
-		<p>I think it is probably a typical experience for any beginner of Erlang: The equal sign in Erlang actually works differently comparing most other imperative mainstream application.  I were a little bit surprised when I first realized the subtle difference.<br /><br /><br />In erlang, the equal sign is actually an pattern matching  operator.  For example,<br /><br /><span style="font-family:courier new;">[H|T] = [0, 1, 2, 3, 4]</span><br /><br />In the case, H is actually matched with the head of the list [0..4]. Although it effectively initialised the values of variable H and T, it is fundamentally a different concept.<br /><br />Another application of this language feature is that it serves as a mean to enforce assertion. For example,<br /><br /><span style="font-family: courier new;">ok = module:func().</span><br /><br />If func return an atom <span style="font-weight: bold;">failure</span> instead of <span style="font-weight: bold;">ok</span>, an exception will be automatically generated.<br /><br />Isn&rsquo;t it neat?</p>
+		<p>By happenstance I picked up the book &ldquo;<a type="amzn" asin="0071416641">Using the Wall Street Journal</a>&rdquo; (5th Ed.) by Michael B. Lehmann. This book has been sitting idly on my bookshelves, gathering dust, for a very, very long time.<br /><br />On p. 99, there is a reprint of a news story published on 30, Jan 1995. In which it reported,<br /><br /><blockquote style="font-style: italic;"><span style="font-weight: bold;">Greenspan Defends Moves</span><br /><br />The Fed has been criticised for raising interest rates before seeing any evidence of worsening inflation, but Fed Chairman Alan Greenspan replied in remarks prepared for delivery over the weekend: &ldquo;If we have waited until inflation had become evident, it would have been too late.&rdquo;</blockquote><br />A lot has been changed since then.</p>
 
 		
 		
@@ -108,7 +108,44 @@
   
 
 
-<time datetime="2007-09-14T17:45:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2007</time></div>
+<time datetime="2008-04-11T21:43:00+10:00" pubdate data-updated="true">Apr 11<span>th</span>, 2008</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2008/04/09/8010693451801110862/">
+		
+			Common Questions About Working as a Python Developer</a>
+	</h2>
+	<div class="entry-content">
+		<p>I haven&rsquo;t posted much recently because I am starting a new job. It is the third time I switched language. Now, I am officially a Python Developer. Hurray!<br /><br />Since I have always kept myself busy by constantly picking up new computer languages, I know a dozen of odd and exotic languages. Therefore, after I landed on this job, I am surprised by some &ldquo;interesting&rdquo; questions about Python that people asked. And these people are no amateur. They are C or Java developers by profession.<br /><br />Here are the questions:<br /><br /><span style="font-weight: bold; font-style: italic;">1) What is Python?</span><br /><br /><blockquote>Well, it is a dynamic scripting language. A good overview <a href="http://www.python.org/about/">here</a>.<br /><br />To emphasize that it is a <span style="font-style: italic;">real </span>programming language, I&rsquo;d also add that Python is used very <span style="font-style: italic;">extensively </span>within Google.<br /><br /></blockquote><br /><span style="font-weight: bold; font-style: italic;">2) Isn&rsquo;t Python an very old language?</span><br /><br /><blockquote>Oh, this question makes me feel like I am the last Eyak speaker!<br /><br />Python appeared in 1991 when the creator <a href="http://www.python.org/%7Eguido/">Guido van Rossum</a> released it to the public. It is actually a very young language.<br /><br />Let&rsquo;s compare other still active languages and the time of first appearance:<br /><br /><br /><span style="font-weight: bold;">Ruby</span> &ndash; 1995<br /><span style="font-weight: bold;">Java</span> &ndash; 1995<br /><span style="font-weight: bold;">Visual Basic</span> (VB4 to VB.Net) &ndash; 1995<br /><span style="font-weight: bold;">Lua</span> &ndash; 1993<br /><br /><span style="font-weight: bold;">Perl </span>&ndash; 1987<br /><span style="font-weight: bold;">Erlang</span> &ndash; 1987<br /><span style="font-weight: bold;">C++</span> &ndash; 1983<br /><br /><span style="font-weight: bold;">C </span>&ndash; 1972<br /><span style="font-weight: bold;">Cobol</span> &ndash; 1959<br /><span style="font-weight: bold;">Fortran</span> &ndash; 1957<br /><br />The debut of Python is a rather recent event in the history of computer language chronologically.<br /><br />But another meaning implied by &lsquo;Old&rsquo; is related to the vitality or dynamism of the language. A low public profile seems to indicates there is not much going on in this language.<br /><br />It is entirely a matter of perception.<br /><br />To me, python never feels old. The language is continuously improving and evolving. The community is healthy and the members on the mailing list are friendly, helpful and intelligent. The language users are willing to embrace <a href="http://www.python.org/dev/peps/pep-3000">changes</a> to make Python better.<br /><br />It is in stark contrast with Java. The discussion of the <span style="font-style: italic;">Closure</span> has highlighted the inertia of the Java language.<br /><br />But don&rsquo;t get me wrong: in other arena of Java eco-system, there are still a lot of energy and innovation such as <a href="http://openjdk.java.net/">OpenJDK</a>. OpenJDK may even eventually force the hand of Microsoft to open-source their CLR. (Hopefully)<br /></blockquote><br /><span style="font-weight: bold; font-style: italic;">3) Is Python more powerful than Java?<br /></span><br /><blockquote>Wow, it is a <a href="http://en.wikipedia.org/wiki/Flamebait">dangerous questions</a>! My <a href="http://en.wikipedia.org/wiki/Political_correctness">PC</a> answer is: they are designed for different tasks, and each of them have their distinct advantages in the problem domain that these languages are created to serve.<br /><br />Besides, everyone has their own notion of Powerfulness. We will end up comparing orange to apple.<br /><br />For me, power is only one of the consideration. Python&rsquo;s readability is another attractive feature. While Python cannot stop a programmer from writing cryptic code, at least it spares you the eyesore caused by bizarre programming styles that some &lsquo;gifted&rsquo; programmers use.<br /><br /></blockquote><span style="font-weight: bold; font-style: italic;">4) Isn&rsquo;t Python dead?<br /><br /></span><blockquote><span>The news of Python&rsquo;s death is largely exaggerated.<br /><br /><br /></span><br /><br /></blockquote><span style="font-style: italic;">Postscript</span>:<br /><span style="font-weight: bold; font-style: italic;"></span><br /><ul><li>I think the latest announcement of <a href="http://code.google.com/appengine">Google App Engine</a> will make a wider audience aware of Python and how good it is.<br /><br /></li><li>Lately a lot of innovation in programming languages (groovy, python and erlang for example) have an European root. Is it a sign that US has under-invested in research in both public and private sections?</li></ul></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-09T13:02:00+10:00" pubdate data-updated="true">Apr 9<span>th</span>, 2008</time></div>
 	<div class="tags">
 
 
@@ -124,27 +161,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2007/09/14/1589380066274908176/">
+		<a href="/blog/2008/04/03/jst_503634003260142971/">
 		
-			Erlang Syntax 1</a>
+			Investment Survival Note 3 - Is There an Ideal Investment?</a>
 	</h2>
 	<div class="entry-content">
-		
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">1</span><span class="o">&gt;</span> <span class="p">(</span><span class="nb">list_to_atom</span><span class="p">(</span><span class="err">“</span><span class="n">erlang</span><span class="err">”</span><span class="p">)):(</span><span class="nb">list_to_atom</span><span class="p">(</span><span class="err">“</span><span class="n">now</span><span class="err">”</span><span class="p">))().</span>
-</span><span class='line'><span class="p">{</span><span class="mi">1189</span><span class="p">,</span><span class="mi">752160</span><span class="p">,</span><span class="mi">276431</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is equivalent to</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>1> erlang:now().</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Very interesting syntax.</p>
+		<p><span style="font-style: italic; font-weight: bold; color: rgb(102, 0, 0);"></span>From the Auther&rsquo;s point of view, an ideal investment vechicle is one that will repay income and principle in units of the same purchasing power as was originally invested. As far as we know, this kind of investment does not exist.<br /><br />To quote,<br /><blockquote style="font-style: italic;"><br />&ldquo;It is not hard to see why it should be merely a theoretical formula. Nothing is safe; nothing is sure in any field of life. Specifically the wealth of the world does not increased fast enough to allow payment of compound interest or pyraminding of profits on existing &#8220;invested captial&rdquo;. Every so often adjustment are made partly through bankruptcies and other scaling down of obligations and partly through deprecation. And it&rsquo;s all as old as the hills.&ldquo;</blockquote><br /><br />I find this passage specially relevant to the current sub-prime crisis. An triple A rating from a rating agency is never a guarantee of performance.<br /><br /><br /><br /><span><span style="font-size:85%;"><span style="font-style: italic;"> Quick link to </span><a style="font-style: italic; font-weight: bold;" type="amzn" asin="0471132977">The Battle for Investment Survival</a><span style="font-style: italic;"> by Gerald M. Loeb</span></span><br /></span></p>
 
 		
 		
@@ -164,12 +186,8 @@
   
 
 
-<time datetime="2007-09-14T17:44:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2007</time></div>
+<time datetime="2008-04-03T07:04:00+11:00" pubdate data-updated="true">Apr 3<span>rd</span>, 2008</time></div>
 	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/erlang/'>erlang</a>
-
 
 </div>
 	
@@ -180,12 +198,12 @@
     <article class="post">
 	<h2 class="title">
 		
-		<a href="/blog/2007/08/12/7037644796722456275/">
+		<a href="/blog/2008/03/29/jst_4951399862197140197/">
 		
-			Prologue</a>
+			Investment Survival Note 2 - Speculative Attitude Essential</a>
 	</h2>
 	<div class="entry-content">
-		<p>The last time I got excited about a programming language was around 5 years ago when I started to learn a scripting language called <a href="http://python.org/">Python</a>. At that point of time, I were looking for a language that is easier to use than <a href="http://www.blogger.com/www.perl.org">Perl</a>. Don&rsquo;t get me wrong: Perl is still great for throw-away scripting. Its regular-expression is indispensable tool. But to do OO development in perl is simply too painful for me.<br /><br />To me, Python is &lsquo;Perl done right&rsquo;. It has the power of Perl, yet more readable and programmable. The use of space to indicate scope is simply a brilliant idea, despite feels a bit odd to begin with. By taking away some individual &lsquo;freedom&rsquo; in this regard, it gives the whole community the advantage of uniformity of coding style. This actually makes Python an ideal language for enterprise environment, because,  unlike other scripting languages, Python programmers tends to write code in consistent Pythonic style. No more unmaintainable cryptic Perl or Tcl scripts.<br /><br />Python also introduces the idea of <span style="font-weight: bold;">Lambda Function  </span>and <span style="font-weight: bold;">Closure</span> to me. Without me knowing, I have picked up some functional programming concept!<br /><br />Functional programming is no alien to me. I have done Miranda in my first year of computer science, but I were not impressed at that time. I simply did not get it then. (Besides, it seemed to me that none got paid for doing FP professionally, so there is even less incentive to master the concepts)<br /><br />Now, I have come a full cycle. This year I &ldquo;discovered&rdquo; the language <a href="http://erlang.org/">Erlang</a>. After reading the concepts behind the language design and implementation, I am totally in awe. The impact is as if some mystical figure suddenly showed up and told me the answer of a riddle of which I have searching for an answer for years in wilderness.<br /><br />So, hopefully in this blog I can share with the public my (hopefully weekly) progress in mastering this new language, erlang, and along the way, my feeling/idea about Erlang, Python and Java. (Hence the title of this blog)</p>
+		<p>If investment is as simple as just buying something for income, then compound interest should be suffice for this purpose. For example, if the Medici family had set aside $100,000 in a fund for 5% compound interest return, its 1933 value will be a staggering $517,000,000,000,000,000!<br /><br />But there are a lot of threat to the preservation of capital: war, political change, new technical breakthrough, to name a few. As a result, only a handful of poeple can turn a profit from investment. Actually, for those who lost a portion of their purchasing power, they have done a lot better than most in the market.<br /><br />Therefore , the author urged the readers to set a <span style="font-style: italic;">very high</span> goal in their investment. The investors should aim at return so high such that it can cover the average loss sustained in the overall investment activities. The loss can be a consequence of, for example, poor investment decision, the effects of exchange rate changes, and unexpected closing position due to change in circumstances etc.<br /><br /><br /><br /><span><span style="font-size:85%;"><span style="font-style: italic;"> Quick link to </span><a style="font-style: italic; font-weight: bold;" type="amzn" asin="0471132977">The Battle for Investment Survival</a><span style="font-style: italic;"> by Gerald M. Loeb</span></span></span></p>
 
 		
 		
@@ -205,12 +223,45 @@
   
 
 
-<time datetime="2007-08-12T23:27:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2007</time></div>
+<time datetime="2008-03-29T09:07:00+11:00" pubdate data-updated="true">Mar 29<span>th</span>, 2008</time></div>
 	<div class="tags">
 
+</div>
+	
+</div>
+</article>
 
-	<a class='category' href='/blog/categories/erlang/'>erlang</a>
 
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2008/03/26/jst_693623897590855339/">
+		
+			Investment Survival Note 1 - It Requires Knowledge, Experience and Flair</a>
+	</h2>
+	<div class="entry-content">
+		<p><span style="font-style: italic; font-weight: bold; color: rgb(102, 0, 0);"></span><span style="color: rgb(0, 0, 0);">Unlike rules in the engineering disciplines that may stay true years after </span><span style="color: rgb(0, 0, 0);">we left colleges</span><span style="color: rgb(0, 0, 0);">, there is no universal rule in security valuation. Market values of stocks are influenced by too many factors.</span><span style="color: rgb(0, 0, 0);"><br /><br />However, to &ldquo;Man on the street&rdquo;, he always believe, to the contrary, it is easy to make money. He is ill-equipped and unprepared. He take advises from brokers and dealers, and traded as instructed. If he loses, he loses so quickly that he believe he can recover from it just as fast.<br /><br />It is almost impossible to beat the market consistently, even by the professional, but &ldquo;Man on the street&rdquo; believes that nothing is as easy to making money from the stock market. He is destined to lose.<br /><br />If so, why should we still invest in stock market? Stock market provides unparalleled liquidity and frequent valuation of the stock. At low cost, one can quickly realised profit or cut loss. It is the virtue of a stock market. We should learn to avoid pitfall and wishful thinking, and take advantages of what the market mechanism has to offer.<br /><br />At the end, the author asserts,<br /><br /></span><blockquote>  <p style="margin-bottom: 0cm;"><span style="font-style: italic;"><span style="font-weight: bold; color: rgb(255, 102, 0);">&ldquo;</span>Therefore, the more one learns about them, the more chance he has to preserve something. It is like anything else in life. Only a few amass fortunes. Only a few become really competent professional man or achieve real success in any line of endeavor.<span style="font-weight: bold; color: rgb(255, 102, 0);">&rdquo;</span></span></p> </blockquote><br /><br /><span><span style="font-size: 85%;"><span style="font-style: italic;"> Quick link to </span><a target="_blank" href="http://www.amazon.com/gp/product/0471132977?ie=UTF8&amp;tag=thoonvarsub-20&amp;link_code=wql&amp;camp=212361&amp;creative=380601">The Battle for Investment Survival</a><span style="font-style: italic;"> by Gerald M. Loeb</span></span></span></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-26T00:11:00+11:00" pubdate data-updated="true">Mar 26<span>th</span>, 2008</time></div>
+	<div class="tags">
 
 </div>
 	
@@ -221,6 +272,8 @@
     
         <a href="/blog/page/174/" class="prev">Prev</a>
     
+    
+        <a href="/blog/page/176/" class="next">Next</a>
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
 </nav></div>
