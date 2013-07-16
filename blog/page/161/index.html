@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Python 2.5.5 uses the -Wno-long-double c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6 Fixed the configure.in and rerun &hellip;">
+	<meta name="description" content="Seeing a lot of warning: 'struct winsize' declared inside parameter list Eventually failed at ./Modules/posixmodule.c Fixed by using forward &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +78,53 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2010/10/08/p-1264649679/">
+		
+			&#8216;Struct Winsize&#8217; Declared Inside Parameter List</a>
+	</h2>
+	<div class="entry-content">
+		<p>Seeing a lot of</p>
+
+<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
+
+<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
+
+<p>Fixed by using forward declaration</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T08:52:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/c/'>c</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -237,45 +284,6 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
 
 
 <time datetime="2010-09-20T13:26:00+10:00" pubdate data-updated="true">Sep 20<span>th</span>, 2010</time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2010/09/14/p-1119099362/">
-		
-			EXC_BAD_ACCESS Resolved</a>
-	</h2>
-	<div class="entry-content">
-		<p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
-
-<p>It is probably a wrong conclusion, but commenting out the line works.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time></div>
 	<div class="tags">
 
 </div>

@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency. Secondly, it avoids this kind of &hellip;">
+	<meta name="description" content="Example: operator* and operator+ should return a new object instead of a reference. The latter approach will introduce problem such as memory leak &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +78,57 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2011/06/04/p-6172106672/">
+		
+			Item 23: Don&#8217;t Try to Return a Reference When You Must Return an Object</a>
+	</h2>
+	<div class="entry-content">
+		<p><em>Example:</em></p>
+
+<p><code>operator*</code> and <code>operator+</code> should return a new object instead of a reference. The latter approach will introduce problem such as memory leak</p>
+
+<p><em>Additional note:</em></p>
+
+<p>Avoid overloading short-circuiting operators: x || y or x &amp;&amp; y. The overloaded versions of these do not short-circuit — they evaluate both operands even if the left-hand operand “determines” the outcome, so that confuses users.</p>
+
+<p>From</p>
+
+<p><a href="http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9">C++ FAQ</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T20:55:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/blog/categories/c-plus-plus/'>c++</a>, <a class='category' href='/blog/categories/self-study/'>self-study</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -237,43 +288,6 @@
 
 	<a class='category' href='/blog/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/blog/categories/c-plus-plus/'>c++</a>, <a class='category' href='/blog/categories/self-study/'>self-study</a>
 
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2011/06/03/p-6108828433/">
-		
-			C Trick Question</a>
-	</h2>
-	<div class="entry-content">
-		<p>Why doesn’t it compile?</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-03T01:22:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time></div>
-	<div class="tags">
 
 </div>
 	

@@ -7,7 +7,9 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content=" UIViewController::setMoviePlayerController: is an undocumented API, yet it is used in one of the Apple sample project. Aug 9th, 2012 ios, xocde4 ">
+	<meta name="description" content="Calculate regular payment based on rate, number of payment and PV 1
+2
+def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +80,63 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2012/08/10/p-29116896037/">
+		
+			Calculate Regular Payment Based on Rate, Number of Payment and PV</a>
+	</h2>
+	<div class="entry-content">
+		<p>Calculate regular payment based on rate, number of payment and PV</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def pmt(i, n, p):
+</span><span class='line'>    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> pmt(0.06, 120, 120000)
+</span><span class='line'>-7206.622591189367</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-10T19:58:00+10:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/python/'>python</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -257,53 +316,6 @@
 
 
 	<a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/sharing/'>sharing</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2012/08/05/p-28758435068/">
-		
-			Encountered This Error When Adding Core Data Support to My Ios Project</a>
-	</h2>
-	<div class="entry-content">
-		<p>Encountered this error when adding core data support to my ios project</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Receiver 'NSManagedObjectContext' for class message is a forward declaration.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-05T19:50:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/coredata/'>coredata</a>, <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/objective-c/'>objective-c</a>
 
 
 </div>

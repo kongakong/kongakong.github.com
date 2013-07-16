@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-15T23:21:41+10:00</updated>
+  <updated>2013-07-16T21:17:47+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pong and pang in erlang]]></title>
+    <link href="http://kongakong.github.io/blog/2013/07/16/erlang-and-pang/"/>
+    <updated>2013-07-16T08:00:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/07/16/erlang-and-pang</id>
+    <content type="html"><![CDATA[<p>I know it is quite clever to use &lsquo;pang&rsquo; to indciate the process does not exist. However both responses (&lsquo;pong&rsquo; and &lsquo;pang&rsquo;) just look too similar to each other if the terminal app uses a certain kind of font. Don&rsquo;t think i would enjoy it under stress in an operation/support situation.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">exist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
+</span><span class='line'><span class="n">pong</span>
+</span><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">notexist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
+</span><span class='line'><span class="n">pang</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A useful Sybase tool]]></title>
@@ -583,17 +605,6 @@
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[NSDocument and First Responder]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/07/p-52371654734/"/>
-    <updated>2013-06-07T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/07/p-52371654734</id>
-    <content type="html"><![CDATA[<p>Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful:</p>
-
-<p><a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">Connecting Menu Items in Document Based Applications</a></p>
 ]]></content>
   </entry>
   
