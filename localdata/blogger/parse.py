@@ -1,81 +1,60 @@
 import xml.dom.minidom
 from xml.dom import Node
+import re
 
 list_text = []
 
-def handleNode(feeds):
+def handle_node(feeds):
     for f in feeds:
-        # print f.nodeName 
         for sf in f.childNodes:
-            # print ">>>", sf.nodeType
             if sf.nodeType == Node.ELEMENT_NODE:
-                handleNode(sf.childNodes)
+                handle_node(sf.childNodes)
             elif sf.nodeType == Node.TEXT_NODE:
-                #print "%s >>\t%s" % (sf.parentNode.nodeName, sf.data)
                 list_text.append((sf.parentNode.nodeName, sf.data))
-                handleNode(sf.childNodes)
+                handle_node(sf.childNodes)
             else:
-                #print sf.nodeName, sf.data, sf.nodeValue
-                handleNode(sf.childNodes)
-
+                handle_node(sf.childNodes)
 
 TMPL="""---
 layout: post
 title: %(title)s
 date:  %(date)s
 comments: true
-categories: erlang
+categories: opinion
 meta: 
 ---
 """
-
-
-def main():
-    lp = parsexml()
-    genpost(lp)
     
-def genpost(list_of_post):
-    for p in list_of_post:
-        if 'blog-1420318032431335295.post' not in p['id']:
-            print ("skipping %s" % p['id'])
-            continue
-        if 'Template: From Java to Erlang via Python' in p['title']:
-            continue
-        pd = p['published']
+def gen_post(list_of_post):
+    for post in list_of_post:
+        post_id = post['id']
+        m = re.match(".*tag:blogger.com.*blog-\d*.settings.*", post_id)
+        if m:
+            continue # do not process
+        m = re.match(".*tag:blogger.com.*blog-\d*.layout.*", post_id)
+        if m:
+            continue # do not process
+        pd = post['published']
         pdd = pd[0:10]
         pdt = pd[11:16]
-        fn = p['id'].split("-")[-1]
-        f = open(pdd + "-" + fn +".markdown", "w")
-        f.write (TMPL % {'title':p['title'], 'date':pdd + " " + pdt, 'id':p['id']})
+        fn = post['id'].split("-")[-1]
+        f = open(pdd + "-jst_" + fn +".markdown", "w")
+        f.write (TMPL % {'title':post.get('title', 'N/A'), 'date':pdd + " " + pdt, 'id':post['id']})
         try:
-            f.write (p.get('content', ''))
+            f.write (post.get('content', ''))
         except:
-            print("error with %s, %s" % (p['title'], fn))
+            print("error with %s, %s" % (post['title'], fn))
         f.close()
 
-def parsexml():
-    # print "here!"
-    
-    ifile = open('blog-06-26-2013.xml')
+def parse_xml():
+    ifile = open('just-thought-blog-07-16-2013.xml') # change input file here
 
     dom = xml.dom.minidom.parseString(ifile.read())
 
-    # print dom
-
     nodes = dom.childNodes
-    handleNode(nodes)
-
-    # info discovery
-    # print list_text[0:7]
-
-    # keyset = set()
-    # for l in list_text:
-    #    keyset.add(l[0])
-    # print keyset
+    handle_node(nodes)
 
     list_post = []
-
-    num_id = 0
     last_id = None
     tmp = {}
     for k, v in list_text:
@@ -92,19 +71,12 @@ def parsexml():
         if k == 'email': tmp['email'] = v
         if k == 'content': tmp['content'] = v
         if k == 'published': tmp['published'] = v
-            
-        #if k == 'id':
-        #    print v
-        #    num_id += 1
-        #else:
-        #    print "\t", v
-
-    #print len(list_text), num_id
-    #print list_post[10]
-    #print list_post[11]
-    #print list_post[12]
 
     return list_post
+
+def main():
+    posts = parse_xml()
+    gen_post(posts)
 
 if __name__ == "__main__":
     main()
