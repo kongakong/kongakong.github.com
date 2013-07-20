@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://kongakong.github.io/blog/categories/erlang/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-16T22:26:35+10:00</updated>
+  <updated>2013-07-20T11:43:54+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[MFA]]></title>
+    <link href="http://kongakong.github.io/blog/2013/07/17/mfa/"/>
+    <updated>2013-07-17T08:31:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/07/17/mfa</id>
+    <content type="html"><![CDATA[<p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[global:send_message]]></title>
+    <link href="http://kongakong.github.io/blog/2013/07/17/global-send-message/"/>
+    <updated>2013-07-17T08:31:00+10:00</updated>
+    <id>http://kongakong.github.io/blog/2013/07/17/global-send-message</id>
+    <content type="html"><![CDATA[<p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
+
+<p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[pong and pang in erlang]]></title>
@@ -57,57 +77,6 @@
 <p><code>
 code:lib_dir(xmerl).
 </code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[XPath, Python and Erlang]]></title>
-    <link href="http://kongakong.github.io/blog/2013/05/08/p-49924605254/"/>
-    <updated>2013-05-08T20:00:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/05/08/p-49924605254</id>
-    <content type="html"><![CDATA[<p>Just feel that python is easier for XML manipulation.</p>
-
-<p>e.g.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
-</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">digg</span><span class="o">-</span><span class="n">science</span><span class="o">-</span><span class="n">rss1</span><span class="o">.</span><span class="n">xml</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;)</span>
-</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Very concise.</p>
-
-<p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
-
-<p>```
-&hellip;</p>
-
-<pre><code>  #xmlText{
-      parents = [{item,16},{channel,2},{rss,1}],
-      pos = 3,language = [],value = "\n   ",type = text},
-  #xmlElement{
-      name = link,expanded_name = link,nsinfo = [],
-      namespace = 
-          #xmlNamespace{
-              default = [],
-              nodes =
-</code></pre>
-
-<p>&hellip;
-```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Single quote is for something else in erlang]]></title>
-    <link href="http://kongakong.github.io/blog/2013/05/06/p-49716537787/"/>
-    <updated>2013-05-06T06:56:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/05/06/p-49716537787</id>
-    <content type="html"><![CDATA[<p>In python, single quote and double quote are pretty much interchangable. Not so in erlang.</p>
 ]]></content>
   </entry>
   

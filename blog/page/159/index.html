@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content=" There is a 10 user limit in the afp protocol! An unexpected, unpleasant surprise. Switched file sharing to smb Oct 24th, 2010 afp, osx ">
+	<meta name="description" content="Another difference between Linux and OSX: no more adduser. Use dscl instead. So, for example, in order to find out what groups are defined locally, &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,6 +78,98 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2010/10/24/p-1388790863/">
+		
+			Dscl</a>
+	</h2>
+	<div class="entry-content">
+		<p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
+
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
+
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/osx/'>osx</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2010/10/24/p-1388761712/">
+		
+			MBP and SMB</a>
+	</h2>
+	<div class="entry-content">
+		<p>Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:34:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/osx/'>osx</a>, <a class='category' href='/blog/categories/samba/'>samba</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -201,94 +293,6 @@
 
 
 	<a class='category' href='/blog/categories/note-to-self/'>note-to-self</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2010/10/20/p-1357321396/">
-		
-			Reading iOS Documentation on KVC</a>
-	</h2>
-	<div class="entry-content">
-		<p><em>KVC</em> stands for Key-Value Coding</p>
-
-<p>It is time to seriously engage the documentation</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-20T18:45:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/objective-c/'>objective-c</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2010/10/20/p-1355924543/">
-		
-			Ditto</a>
-	</h2>
-	<div class="entry-content">
-		<p>Learn something new today</p>
-
-<p>There is a <code>ditto</code> command in BSD for replication of a directory</p>
-
-<p>Never come across it in linux before.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-20T14:14:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/bsd/'>BSD</a>, <a class='category' href='/blog/categories/til/'>TIL</a>, <a class='category' href='/blog/categories/linux/'>linux</a>
 
 
 </div>
