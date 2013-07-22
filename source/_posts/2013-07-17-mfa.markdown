@@ -1,0 +1,9 @@
+---
+layout: post
+title: "MFA"
+date: 2013-07-17 08:31
+comments: true
+categories: erlang
+---
+
+You can simply refer a Module/Function/Argument tuple as **MFA**
