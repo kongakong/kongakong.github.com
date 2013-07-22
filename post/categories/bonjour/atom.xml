@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bonjour | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/bonjour/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bonjour]]></title>
+    <link href="http://kongakong.github.io/post/2011/07/16/p-7666544291/"/>
+    <updated>2011-07-16T09:14:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/07/16/p-7666544291</id>
+    <content type="html"><![CDATA[<p>Installed Apple Bonjour on Windows 7 and instantly I can resolve the mac computer names live in my local LAN.</p>
+]]></content>
+  </entry>
+  
+</feed>

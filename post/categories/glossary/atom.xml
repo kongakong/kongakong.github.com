@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: glossary | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/glossary/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[IAN: Indexed Amortizing Notes]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/28/p-9455015711/"/>
+    <updated>2011-08-28T00:14:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/28/p-9455015711</id>
+    <content type="html"><![CDATA[<p>IAN: Indexed Amortizing Notes</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: erlang | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/erlang/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MFA]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/17/mfa/"/>
+    <updated>2013-07-17T08:31:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/17/mfa</id>
+    <content type="html"><![CDATA[<p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[global:send_message]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/17/global-send-message/"/>
+    <updated>2013-07-17T08:31:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/17/global-send-message</id>
+    <content type="html"><![CDATA[<p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
+
+<p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[pong and pang in erlang]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/16/erlang-and-pang/"/>
+    <updated>2013-07-16T08:00:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/16/erlang-and-pang</id>
+    <content type="html"><![CDATA[<p>I know it is quite clever to use &lsquo;pang&rsquo; to indciate the process does not exist. However both responses (&lsquo;pong&rsquo; and &lsquo;pang&rsquo;) just look too similar to each other if the terminal app uses a certain kind of font. Don&rsquo;t think i would enjoy it under stress in an operation/support situation.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">exist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
+</span><span class='line'><span class="n">pong</span>
+</span><span class='line'><span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">notexist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
+</span><span class='line'><span class="n">pang</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[erlang mode in emacs is very handy.]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/01/p-51873320799/"/>
+    <updated>2013-06-01T20:30:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/01/p-51873320799</id>
+    <content type="html"><![CDATA[<p>erlang mode in emacs is very handy.</p>
+
+<p><em>C-c C-k (erlang-compile)</em> will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Useful erlang function]]></title>
+    <link href="http://kongakong.github.io/post/2013/05/09/p-50003419743/"/>
+    <updated>2013-05-09T20:00:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/05/09/p-50003419743</id>
+    <content type="html"><![CDATA[<p>Tell you the location of library files</p>
+
+<p><code>
+code:lib_dir(xmerl).
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pyml | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/pyml/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Installing pyML by running ``python setup.py install``]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/21/p-23473129679/"/>
+    <updated>2012-05-21T19:36:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/21/p-23473129679</id>
+    <content type="html"><![CDATA[<p>Installing pyML by running <code>python setup.py install</code></p>
+
+<p>But I do not think it is going to fly because, for example,</p>
+
+<p>````</p>
+
+<p>/usr/bin/llvm-gcc -fno-strict-aliasing -O3 -w -pipe -march=core2 -msse4 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/usr/local/bin/../Cellar/python/2.7.2/include/python2.7 -c PyML/containers/ext/Kernel.cpp -o build/temp.macosx-10.4-x86_64-2.7/PyML/containers/ext/Kernel.o</p>
+
+<p>It is using llvm-gcc instead of gcc-4.2 (the GUN compiler)</p>
+]]></content>
+  </entry>
+  
+</feed>

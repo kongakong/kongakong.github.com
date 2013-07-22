@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pgsql | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/pgsql/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[postgresql memo]]></title>
+    <link href="http://kongakong.github.io/post/2010/10/14/p-1312897866/"/>
+    <updated>2010-10-14T23:57:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2010/10/14/p-1312897866</id>
+    <content type="html"><![CDATA[<p>I do not use pgsql a lot, so  I need to jot down a few ommonly used commands here:</p>
+
+<p>Use <code>\connect &lt;database name&gt;</code> to switch database</p>
+
+<p>The equivalent in MSSQL or Sybase will be <code>use &lt;database name&gt; go</code></p>
+]]></content>
+  </entry>
+  
+</feed>

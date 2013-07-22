@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tcp/ip | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/tcp-slash-ip/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The five layers of the TCP/IP layering model are listed here:]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/25/p-6899143672/"/>
+    <updated>2011-06-25T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/25/p-6899143672</id>
+    <content type="html"><![CDATA[<p>The five layers of the TCP/IP layering model are listed here:</p>
+]]></content>
+  </entry>
+  
+</feed>

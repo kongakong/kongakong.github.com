@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: online_education | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/online-education/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Human Behavioral Biology by Robert Sapolsky ]]></title>
+    <link href="http://kongakong.github.io/post/2012/09/10/p-31263644336/"/>
+    <updated>2012-09-10T19:52:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/09/10/p-31263644336</id>
+    <content type="html"><![CDATA[<p><em>Human Behavioral Biology</em> by</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Robert_Sapolsky">Robert Spalosky</a></p>
+
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/NNnIGh9g6fA "></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

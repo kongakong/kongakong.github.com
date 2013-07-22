@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-20T11:43:54+10:00</updated>
+  <updated>2013-07-22T21:11:42+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[MFA]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/17/mfa/"/>
+    <link href="http://kongakong.github.io/post/2013/07/17/mfa/"/>
     <updated>2013-07-17T08:31:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/17/mfa</id>
+    <id>http://kongakong.github.io/post/2013/07/17/mfa</id>
     <content type="html"><![CDATA[<p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[global:send_message]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/17/global-send-message/"/>
+    <link href="http://kongakong.github.io/post/2013/07/17/global-send-message/"/>
     <updated>2013-07-17T08:31:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/17/global-send-message</id>
+    <id>http://kongakong.github.io/post/2013/07/17/global-send-message</id>
     <content type="html"><![CDATA[<p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
 
 <p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
@@ -35,9 +35,9 @@
   
   <entry>
     <title type="html"><![CDATA[pong and pang in erlang]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/16/erlang-and-pang/"/>
+    <link href="http://kongakong.github.io/post/2013/07/16/erlang-and-pang/"/>
     <updated>2013-07-16T08:00:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/16/erlang-and-pang</id>
+    <id>http://kongakong.github.io/post/2013/07/16/erlang-and-pang</id>
     <content type="html"><![CDATA[<p>I know it is quite clever to use &lsquo;pang&rsquo; to indciate the process does not exist. However both responses (&lsquo;pong&rsquo; and &lsquo;pang&rsquo;) just look too similar to each other if the terminal app uses a certain kind of font. Don&rsquo;t think i would enjoy it under stress in an operation/support situation.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -57,9 +57,9 @@
   
   <entry>
     <title type="html"><![CDATA[A useful Sybase tool]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/15/a-useful-sybase-tool/"/>
+    <link href="http://kongakong.github.io/post/2013/07/15/a-useful-sybase-tool/"/>
     <updated>2013-07-15T23:08:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/15/a-useful-sybase-tool</id>
+    <id>http://kongakong.github.io/post/2013/07/15/a-useful-sybase-tool</id>
     <content type="html"><![CDATA[<p><code>defncopy</code> is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development tools such as <a href="http://www.aquafold.com/aquadatastudio.html">Aqua Data Studio</a></p>
 
 <p>This utility comes with Sybase distribution. Here is its usage:</p>
@@ -115,9 +115,9 @@
   
   <entry>
     <title type="html"><![CDATA[More blog maintenance]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/12/more-blog-maintenance/"/>
+    <link href="http://kongakong.github.io/post/2013/07/12/more-blog-maintenance/"/>
     <updated>2013-07-12T20:50:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/12/more-blog-maintenance</id>
+    <id>http://kongakong.github.io/post/2013/07/12/more-blog-maintenance</id>
     <content type="html"><![CDATA[<p>Found some good resource&hellip;</p>
 
 <p><a href="http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/">http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/</a></p>
@@ -130,9 +130,9 @@
   
   <entry>
     <title type="html"><![CDATA[Switch and enum in Objective-c]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/08/switch-and-enum-in-objective-c/"/>
+    <link href="http://kongakong.github.io/post/2013/07/08/switch-and-enum-in-objective-c/"/>
     <updated>2013-07-08T21:30:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/08/switch-and-enum-in-objective-c</id>
+    <id>http://kongakong.github.io/post/2013/07/08/switch-and-enum-in-objective-c</id>
     <content type="html"><![CDATA[<blockquote><p>Do not implement a default case in switch statements that handle enumerated types. This helps if you add to the enumeration, because the compiler will warn that the switch does not handle all the values.</p></blockquote>
 
 <p>from <a href="http://www.informit.com/articles/article.aspx?p=2080040&amp;seqNum=5">Matt Galloway</a></p>
@@ -141,9 +141,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby quirk?]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/06/ruby-quirk/"/>
+    <link href="http://kongakong.github.io/post/2013/07/06/ruby-quirk/"/>
     <updated>2013-07-06T08:06:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/06/ruby-quirk</id>
+    <id>http://kongakong.github.io/post/2013/07/06/ruby-quirk</id>
     <content type="html"><![CDATA[<p>Have absolutely zero knowledge of Ruby, although I am planning to learn more about this langauge since I started using Octopress.</p>
 
 <p>Came across this code snippet in <a href="https://twitter.com/garybernhardt/status/352864696547803136">this tweet</a></p>
@@ -186,9 +186,9 @@
   
   <entry>
     <title type="html"><![CDATA[Simple script to convert Blogger posts to Github pages]]></title>
-    <link href="http://kongakong.github.io/blog/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages/"/>
+    <link href="http://kongakong.github.io/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages/"/>
     <updated>2013-07-03T00:32:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages</id>
+    <id>http://kongakong.github.io/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages</id>
     <content type="html"><![CDATA[<p>I wanted to convert my old blogs on Blogger to markdown files in Github Pages. I went to the Blogger settings and exported my blog. The result was a xml file. The xml file from Google is not easy to parse. As far as I know there is no documentation on the structure of the xml file.</p>
 
 <p>After some trial and error, I have come up with this script that can parse the xml file and emit the contents in a set of markdown files:</p>
@@ -366,9 +366,9 @@
   
   <entry>
     <title type="html"><![CDATA[keep vi swp file in tmp]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/29/keep-vi-swp-file-in-tmp/"/>
+    <link href="http://kongakong.github.io/post/2013/06/29/keep-vi-swp-file-in-tmp/"/>
     <updated>2013-06-29T21:02:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/29/keep-vi-swp-file-in-tmp</id>
+    <id>http://kongakong.github.io/post/2013/06/29/keep-vi-swp-file-in-tmp</id>
     <content type="html"><![CDATA[<p><code>vi</code> is my editor of choice when I need to do some quick editing.</p>
 
 <p>When vi edits a file, it will usally create a <code>swp</code> file for recovery purpose. Usually it causes no problem.</p>
@@ -395,9 +395,9 @@
   
   <entry>
     <title type="html"><![CDATA[Problem with shifting python code right in emacs]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs/"/>
+    <link href="http://kongakong.github.io/post/2013/06/28/problem-with-shifting-python-code-right-in-emacs/"/>
     <updated>2013-06-28T00:27:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/28/problem-with-shifting-python-code-right-in-emacs</id>
+    <id>http://kongakong.github.io/post/2013/06/28/problem-with-shifting-python-code-right-in-emacs</id>
     <content type="html"><![CDATA[<p>I am using Aquamacs Emacs which is built on emacs 23.3.50.1.</p>
 
 <p>When I tried to indent a block of python code using the menu item &lsquo;Python&rsquo; &ndash;> &lsquo;Shift Region Right&rsquo;, I got this error message <code>Symbol's function defintion is void: py-shit-right</code></p>
@@ -408,9 +408,9 @@
   
   <entry>
     <title type="html"><![CDATA[Good and Bad of Octopress]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/23/good-and-bad-of-octopress/"/>
+    <link href="http://kongakong.github.io/post/2013/06/23/good-and-bad-of-octopress/"/>
     <updated>2013-06-23T16:53:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/23/good-and-bad-of-octopress</id>
+    <id>http://kongakong.github.io/post/2013/06/23/good-and-bad-of-octopress</id>
     <content type="html"><![CDATA[<p>After used octopress for a couple of days seriously as a blogging platform, this is a list of good and bad I feel about the platform:</p>
 
 <p>First a list of bad</p>
@@ -437,18 +437,18 @@
   
   <entry>
     <title type="html"><![CDATA[git status says file is modified even if...]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/"/>
+    <link href="http://kongakong.github.io/post/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/"/>
     <updated>2013-06-22T16:27:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot</id>
+    <id>http://kongakong.github.io/post/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot</id>
     <content type="html"><![CDATA[<p><code>git status</code> says file is modified even if the file content is not changed</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[dyld: library not loaded]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/22/dyld-library-not-loaded/"/>
+    <link href="http://kongakong.github.io/post/2013/06/22/dyld-library-not-loaded/"/>
     <updated>2013-06-22T15:55:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/22/dyld-library-not-loaded</id>
+    <id>http://kongakong.github.io/post/2013/06/22/dyld-library-not-loaded</id>
     <content type="html"><![CDATA[<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -465,9 +465,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to install beautifulsoup in python3]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/20/beautifulsoup4/"/>
+    <link href="http://kongakong.github.io/post/2013/06/20/beautifulsoup4/"/>
     <updated>2013-06-20T08:14:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/20/beautifulsoup4</id>
+    <id>http://kongakong.github.io/post/2013/06/20/beautifulsoup4</id>
     <content type="html"><![CDATA[<p>This will fail immediately</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -499,9 +499,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using Octopress]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/19/using-octopress/"/>
+    <link href="http://kongakong.github.io/post/2013/06/19/using-octopress/"/>
     <updated>2013-06-19T06:09:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/19/using-octopress</id>
+    <id>http://kongakong.github.io/post/2013/06/19/using-octopress</id>
     <content type="html"><![CDATA[<p>Octopress really makes blogging on github easy.</p>
 
 <p>I am happy with tumblr after these many years, but writing programming related topic is not really enjoyable due to lack of support of syntax highlight etc.</p>
@@ -512,9 +512,9 @@
   
   <entry>
     <title type="html"><![CDATA[Just installed RVM]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/12/p-52782958923/"/>
+    <link href="http://kongakong.github.io/post/2013/06/12/p-52782958923/"/>
     <updated>2013-06-12T21:20:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/12/p-52782958923</id>
+    <id>http://kongakong.github.io/post/2013/06/12/p-52782958923</id>
     <content type="html"><![CDATA[<p>Just installed RVM.</p>
 
 <p>Message from RVM after installation:</p>
@@ -531,9 +531,9 @@
   
   <entry>
     <title type="html"><![CDATA[Note to self]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/12/p-52781713139/"/>
+    <link href="http://kongakong.github.io/post/2013/06/12/p-52781713139/"/>
     <updated>2013-06-12T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/12/p-52781713139</id>
+    <id>http://kongakong.github.io/post/2013/06/12/p-52781713139</id>
     <content type="html"><![CDATA[<p><em>Note to self</em></p>
 
 <p>iPhone sync backup can be found in this location:</p>
@@ -546,9 +546,9 @@
   
   <entry>
     <title type="html"><![CDATA[In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/10/p-52620998556/"/>
+    <link href="http://kongakong.github.io/post/2013/06/10/p-52620998556/"/>
     <updated>2013-06-10T21:44:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/10/p-52620998556</id>
+    <id>http://kongakong.github.io/post/2013/06/10/p-52620998556</id>
     <content type="html"><![CDATA[<p>In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:</p>
 
 <p><a href="Interview%20with%20Glenn%20Greenwald">http://www.youtube.com/watch?v=-qlFjrgGqVA</a></p>
@@ -559,9 +559,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weird error message of 'say' in 10.8.4]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/09/p-52534137425/"/>
+    <link href="http://kongakong.github.io/post/2013/06/09/p-52534137425/"/>
     <updated>2013-06-09T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/09/p-52534137425</id>
+    <id>http://kongakong.github.io/post/2013/06/09/p-52534137425</id>
     <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -574,9 +574,9 @@
   
   <entry>
     <title type="html"><![CDATA[OSX terminal and .bashrc]]></title>
-    <link href="http://kongakong.github.io/blog/2013/06/08/p-52453247211/"/>
+    <link href="http://kongakong.github.io/post/2013/06/08/p-52453247211/"/>
     <updated>2013-06-08T21:20:00+10:00</updated>
-    <id>http://kongakong.github.io/blog/2013/06/08/p-52453247211</id>
+    <id>http://kongakong.github.io/post/2013/06/08/p-52453247211</id>
     <content type="html"><![CDATA[<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
 
 <p>To solve it, I added this to my .bash_profile to fix the problem:</p>

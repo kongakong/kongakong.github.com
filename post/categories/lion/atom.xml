@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lion | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/lion/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Doing a clean install of Mountain Lion.]]></title>
+    <link href="http://kongakong.github.io/post/2012/09/01/p-30646969056/"/>
+    <updated>2012-09-01T20:44:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/09/01/p-30646969056</id>
+    <content type="html"><![CDATA[<p>Doing a clean install of Mountain Lion.</p>
+
+<p>Basically all you need to know is contained in this</p>
+
+<p><a href="Q&amp;A">http://apple.stackexchange.com/questions/60653/how-to-do-fresh-install-of-mountain-lion</a></p>
+
+<p>I decided to make a bootable usb thumb drive, following the instruction</p>
+
+<p><a href="here">http://apple.stackexchange.com/a/60660/3428</a></p>
+
+<p>However, when I used the Disk UTILity to prepare the usb thumb drive, an error message ‘Could not Restore. Invalid Argument’ came up.</p>
+
+<p>Turns out the thumb drive works despite the error message.</p>
+
+<p>Now I am restoring my files from the time machine copy.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[brew install google-go]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/05/p-22441352771/"/>
+    <updated>2012-05-05T22:19:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/05/p-22441352771</id>
+    <content type="html"><![CDATA[<p>```</p>
+
+<p>$ brew install google-go
+/usr/local/bin/hg
+==> Cloning</p>
+
+<p><a href="http://go.googlecode.com/hg/">http://go.googlecode.com/hg/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solution to the pip scipy problem]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/05/p-22440295991/"/>
+    <updated>2012-05-05T21:34:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/05/p-22440295991</id>
+    <content type="html"><![CDATA[<p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
+
+<p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<p>```
+brew install gfortran
+pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https://github.com/scipy/scipy#egg=scipy-dev</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/03/p-22316283422/"/>
+    <updated>2012-05-03T21:40:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/03/p-22316283422</id>
+    <content type="html"><![CDATA[<p>Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.</p>
+
+<p>```</p>
+
+<p>gfortran:f77: scipy/sparse/linalg/eigen/arpack/ARPACK/FWRAPPERS/veclib_cabi_f.f</p>
+
+<p>ar: adding 50 object files to build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cgetv0.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaitr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnapps.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaup2.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneigh.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cngets.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(csortc.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[gcc vs llvm-gcc on osx]]></title>
+    <link href="http://kongakong.github.io/post/2012/01/13/p-15771046267/"/>
+    <updated>2012-01-13T22:33:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/01/13/p-15771046267</id>
+    <content type="html"><![CDATA[<p>```</p>
+
+<p>$ gcc-4.2
+i686-apple-darwin11-gcc-4.2.1: no input files
+$ gcc
+i686-apple-darwin11-llvm-gcc-4.2: no input files</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: objective-c | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/objective-c/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Switch and enum in Objective-c]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/08/switch-and-enum-in-objective-c/"/>
+    <updated>2013-07-08T21:30:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/08/switch-and-enum-in-objective-c</id>
+    <content type="html"><![CDATA[<blockquote><p>Do not implement a default case in switch statements that handle enumerated types. This helps if you add to the enumeration, because the compiler will warn that the switch does not handle all the values.</p></blockquote>
+
+<p>from <a href="http://www.informit.com/articles/article.aspx?p=2080040&amp;seqNum=5">Matt Galloway</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Two ways to build file names]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/05/p-52212432857/"/>
+    <updated>2013-06-05T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/05/p-52212432857</id>
+    <content type="html"><![CDATA[<p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Basename-equivalent in Objective-C]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/04/p-52133031773/"/>
+    <updated>2013-06-04T21:20:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/04/p-52133031773</id>
+    <content type="html"><![CDATA[<p>Use <code>lastPathComponent</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Got this error message in xcode]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/08/p-28973709805/"/>
+    <updated>2012-08-08T19:53:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/08/p-28973709805</id>
+    <content type="html"><![CDATA[<p>Got this error message in xcode</p>
+
+<p><code>
+*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get
+ a UITableView.'
+*** First throw call stack:
+</code></p>
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Encountered this error when adding core data support to my ios project]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/05/p-28758435068/"/>
+    <updated>2012-08-05T19:50:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/05/p-28758435068</id>
+    <content type="html"><![CDATA[<p>Encountered this error when adding core data support to my ios project</p>
+
+<p><code>
+Receiver 'NSManagedObjectContext' for class message is a forward declaration.
+</code></p>
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
+]]></content>
+  </entry>
+  
+</feed>

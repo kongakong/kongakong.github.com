@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: virtualbox | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/virtualbox/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Updating Virtual box to version 4.1.14]]></title>
+    <link href="http://kongakong.github.io/post/2012/04/29/p-22027054462/"/>
+    <updated>2012-04-29T13:56:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/04/29/p-22027054462</id>
+    <content type="html"><![CDATA[<p>Updating Virtual box to version 4.1.14</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VirtualBox upgrade]]></title>
+    <link href="http://kongakong.github.io/post/2012/01/18/p-16058064684/"/>
+    <updated>2012-01-18T22:37:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/01/18/p-16058064684</id>
+    <content type="html"><![CDATA[<p>Upgraded VirtualBox to 4.1.8r75467. When I start a vm I got an error message</p>
+
+<p>```</p>
+
+<p>$ VBoxManage startvm 7b2a72e2-08cd-483b-b594-fe27dff6974a &mdash;type headless
+Waiting for VM &ldquo;7b2a72e2-08cd-483b-b594-fe27dff6974a&rdquo; to power on&hellip;
+VBoxManage: error: No error info
+VBoxManage: error: Details: code NS_ERROR_CALL_FAILED (0x800706be), component ProgressProxy, interface IProgress, callee</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[To start a _VirtualBox_ VM instance in a ssh session, we can run this command]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/30/p-7078929929/"/>
+    <updated>2011-06-30T21:41:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/30/p-7078929929</id>
+    <content type="html"><![CDATA[<p>To start a <em>VirtualBox</em> VM instance in a ssh session, we can run this command
+```</p>
+
+<p>VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 &mdash;type headless</p>
+
+<p>```</p>
+
+<p>The key is the parameter <code>--type headless</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[VirtualBox is so cool]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/25/p-6887207400/"/>
+    <updated>2011-06-25T12:03:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/25/p-6887207400</id>
+    <content type="html"><![CDATA[<p>I have started an instance of Ubuntu VM.</p>
+
+<p>However I do not know the IP of this VM. The IP of the VM is assigned by the DHCP server. I could have logged into AirPort to find out, or just log in via the Ubuntu instance’s virtual screen.</p>
+
+<p>But being a lazy bastard I would rather be able to find out this bit of information without leaving my shell (which has an active ssh session into the host PC)</p>
+
+<p>Then I discover this cool feature of <em>VirtualBox</em>: <code>guestcontrol</code></p>
+
+<p>So it is what I did:</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/19/p-6672342143/"/>
+    <updated>2011-06-19T11:04:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/19/p-6672342143</id>
+    <content type="html"><![CDATA[<p>Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.</p>
+
+<p>Select ‘Enable IO APIC’ gets rid of the warning message.</p>
+]]></content>
+  </entry>
+  
+</feed>

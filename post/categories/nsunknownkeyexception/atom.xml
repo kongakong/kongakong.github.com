@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NSUnknownKeyException | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/nsunknownkeyexception/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[This class is not key value coding-compliant for the key 'xyz']]></title>
+    <link href="http://kongakong.github.io/post/2012/07/29/p-28255736183/"/>
+    <updated>2012-07-29T18:38:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/07/29/p-28255736183</id>
+    <content type="html"><![CDATA[<p>I was playing with a</p>
+
+<p><a href="Speedo%20Meter%20Demo">http://www.mobisoftinfotech.com/blog/iphone/ios-tutorial-custom-speedometer-control/</a></p>
+
+<p>It turned out I added a control ‘test’, linked it to an IBOutlet and then removed the control. Since the link to IBOutlet is sTILl in the IB file, hence the error.</p>
+
+<p>By right mouse click on the ‘Owner’ and remove the invalid link, it fixes the problem.</p>
+]]></content>
+  </entry>
+  
+</feed>

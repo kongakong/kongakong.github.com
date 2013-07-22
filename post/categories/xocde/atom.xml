@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: xocde | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/xocde/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[After reinstalling Xcode 4.3, I lost the gcc-4.2.]]></title>
+    <link href="http://kongakong.github.io/post/2012/04/24/p-21710844399/"/>
+    <updated>2012-04-24T22:02:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/04/24/p-21710844399</id>
+    <content type="html"><![CDATA[<p>After reinstalling Xcode 4.3, I lost the gcc-4.2.</p>
+
+<p>Installing the command line tools component did not fix it.</p>
+
+<p>May need to run “brew install</p>
+]]></content>
+  </entry>
+  
+</feed>

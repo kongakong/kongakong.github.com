@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: solaris | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/solaris/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[_ufsdump_ - incremental file system dump]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/29/p-7043322527/"/>
+    <updated>2011-06-29T23:15:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/29/p-7043322527</id>
+    <content type="html"><![CDATA[<p><em>ufsdump</em> &ndash; incremental file system dump</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[``/etc/inet/netmasks`` is the official SVr4 name of the netmasks]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/26/p-6917164282/"/>
+    <updated>2011-06-26T08:53:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/26/p-6917164282</id>
+    <content type="html"><![CDATA[<p><code>/etc/inet/netmasks</code> is the official SVr4 name of the netmasks</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[View the packet statistics on solaris]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/25/p-6885759406/"/>
+    <updated>2011-06-25T11:19:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/25/p-6885759406</id>
+    <content type="html"><![CDATA[<p>View the packet statistics on solaris</p>
+
+<p>```</p>
+
+<p>$ netstat -f inet</p>
+
+<p>TCP: IPv4
+   Local Address        Remote Address    Swind Send-Q Rwind Recv-Q    State</p>
+
+<hr />
+
+<p>10.0.1.80.ssh        10.0.1.81.49180       524280      0 128872      0 ESTABLISHED</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The _python_ build on _solaris express_ is a partial success. Here is part of the output message:]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/22/p-6755732384/"/>
+    <updated>2011-06-22T00:22:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/22/p-6755732384</id>
+    <content type="html"><![CDATA[<p>The <em>python</em> build on <em>solaris express</em> is a partial success. Here is part of the output message:</p>
+
+<p>```</p>
+
+<p>Python build finished, but the necessary bits to build these modules were not found:
+_gdbm              ossaudiodev                      <br/>
+To find the necessary bits, look in setup.py in detect_modules() for the module&rsquo;s name.</p>
+
+<p>Failed to build these modules:
+<em>curses            </em>curses_panel</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tried to build _python_ in _Solaris Express 11_.]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/22/p-6755628799/"/>
+    <updated>2011-06-22T00:17:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/22/p-6755628799</id>
+    <content type="html"><![CDATA[<p>Tried to build <em>python</em> in <em>Solaris Express 11</em>.</p>
+
+<p>Used <code>pkg</code> to install the <code>gcc/g++</code>.</p>
+
+<p>and <code>hg</code>.</p>
+
+<p>Ran <code>configure</code> to generate the <code>Makefile</code>.</p>
+
+<p>After hitting <code>make</code>, got this error message:</p>
+
+<p>```</p>
+
+<p>math.h no such file or directory</p>
+
+<p>```</p>
+
+<p>Solved by running: <code>pkg install header-math</code></p>
+]]></content>
+  </entry>
+  
+</feed>

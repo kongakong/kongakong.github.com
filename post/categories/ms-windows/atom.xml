@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ms-windows | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/ms-windows/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sleep(-1) actually means something in Windows]]></title>
+    <link href="http://kongakong.github.io/post/2011/07/02/p-7153080630/"/>
+    <updated>2011-07-02T20:27:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/07/02/p-7153080630</id>
+    <content type="html"><![CDATA[<p>Learn about this from a</p>
+
+<p><a href="python%20bug%20discussion">http://bugs.python.org/issue12459</a></p>
+
+<p>When you call <code>sleep(-1)</code>) in Windows, it means sleep infinitely. Possible use case is to put an application in sleep unTIL waken up by signal.</p>
+
+<p>Seems like only Windows do that.</p>
+]]></content>
+  </entry>
+  
+</feed>

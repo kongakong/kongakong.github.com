@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bash | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/bash/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OSX terminal and .bashrc]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/08/p-52453247211/"/>
+    <updated>2013-06-08T21:20:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/08/p-52453247211</id>
+    <content type="html"><![CDATA[<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
+
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
+
+<p>```</p>
+
+<p>[[ -s ~/.bashrc ]] &amp;&amp; source ~/.bashrc</p>
+
+<p>```</p>
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Just learn something new (to me) about bash:]]></title>
+    <link href="http://kongakong.github.io/post/2012/01/04/p-15289562682/"/>
+    <updated>2012-01-04T20:37:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/01/04/p-15289562682</id>
+    <content type="html"><![CDATA[<p>Just learn something new (to me) about bash:</p>
+
+<p>1) Anonymous function</p>
+
+<p>2) local (to subroutine) variable</p>
+]]></content>
+  </entry>
+  
+</feed>

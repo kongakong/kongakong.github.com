@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: appcode | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/appcode/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting this:  “Couldn’t register com.abc.MyApp with the bootstrap server. Error: unknown error code.” when trying to run a unit test in AppCode.]]></title>
+    <link href="http://kongakong.github.io/post/2012/03/17/p-19427183922/"/>
+    <updated>2012-03-17T12:38:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/03/17/p-19427183922</id>
+    <content type="html"><![CDATA[<p>Getting this:  “Couldn’t register com.abc.MyApp with the bootstrap server. Error: unknown error code.” when trying to run a unit test in AppCode.</p>
+
+<p>The underlying Xcode version is 4.3.1</p>
+
+<p>The only way to resolve it is restarting the computer.</p>
+
+<p>I cannot even get magsafe to work. The magsafe is connected to the connector, but the battery icon is showing: “Not charging”. Something is a very wrong at the kenrel level.</p>
+]]></content>
+  </entry>
+  
+</feed>

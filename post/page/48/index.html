@@ -1,0 +1,414 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Timeline</title>
+	<meta name="author" content="Anthony Kong">
+
+	
+	<meta name="description" content="./bin/pip install scipy failed. It is a dependency of pybrain 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16 ... ranlib: archive member: build/temp.macosx- &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Timeline</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:kongakong.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/anthony.hw.kong@gmail.com?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/kongakong" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/kongakong" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:kongakong.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/05/02/p-22251177837/">
+		
+			Scipy and Pybrain</a>
+	</h2>
+	<div class="entry-content">
+		<p><code>./bin/pip install scipy</code> failed. It is a dependency of pybrain</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>...
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zvout.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(clahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(dlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(slahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(veclib_cabi_f.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
+</span><span class='line'>
+</span><span class='line'>error: Command "ranlib build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a" failed with exit status 1
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T21:33:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/osx/'>osx</a>, <a class='category' href='/post/categories/scipy/'>scipy</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/05/02/p-22252177628/">
+		
+			Trying to &#8220;pip Install Numpy&#8220; on Ubuntu, and Got This:</a>
+	</h2>
+	<div class="entry-content">
+		<p>Trying to <code>pip install numpy</code> on ubuntu, and got this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>SystemError: Cannot compile 'Python.h'. Perhaps you need to install python-dev|python-devel.
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T21:22:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/numpy/'>numpy</a>, <a class='category' href='/post/categories/pip/'>pip</a>, <a class='category' href='/post/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/05/02/p-22193612740/">
+		
+			Installing Scipy in Ubuntu</a>
+	</h2>
+	<div class="entry-content">
+		<p>Trying to install scipy in ubuntu. Ran <code>pip install scipy</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>numpy.distutils.system_info.BlasNotFoundError:
+</span><span class='line'>
+</span><span class='line'>    Blas (http://www.netlib.org/blas/) libraries not found.
+</span><span class='line'>
+</span><span class='line'>    Directories to search for the libraries can be specified in the
+</span><span class='line'>
+</span><span class='line'>    numpy/distutils/site.cfg file (section [blas]) or by setting
+</span><span class='line'>
+</span><span class='line'>    the BLAS environment variable.</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T00:49:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/python/'>python</a>, <a class='category' href='/post/categories/scipy/'>scipy</a>, <a class='category' href='/post/categories/ubuntu/'>ubuntu</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/05/01/p-22189295387/">
+		
+			Install Virtualenv</a>
+	</h2>
+	<div class="entry-content">
+		<p>For my setup (<code>python</code> from <code>brew</code>), I should run this to install virtualenv</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>/usr/local/share/python/pip install  virtualenv
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-01T22:31:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/04/30/p-22117940575/">
+		
+			Very Old Easy_install</a>
+	</h2>
+	<div class="entry-content">
+		<p>For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>$ ls -l /usr/local/bin/easy_install
+</span><span class='line'>-rwxr-xr-x  1 root  wheel  364 28 Feb  2009 /usr/local/bin/easy_install
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The shebang of <code>easy_install</code> is sTILl pointing to a python 2.5 installation</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-30T21:42:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/post/page/47/" class="prev">Prev</a>
+    
+    
+        <a href="/post/page/49/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
+
+    Anthony Kong
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

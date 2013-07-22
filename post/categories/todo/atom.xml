@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: TODO | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/todo/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[More blog maintenance]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/12/more-blog-maintenance/"/>
+    <updated>2013-07-12T20:50:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/12/more-blog-maintenance</id>
+    <content type="html"><![CDATA[<p>Found some good resource&hellip;</p>
+
+<p><a href="http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/">http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/</a></p>
+
+<p><a href="http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times">http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times</a></p>
+
+<p><a href="http://decodize.com/html/moving-from-wordpress-to-octopress/">http://decodize.com/html/moving-from-wordpress-to-octopress/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

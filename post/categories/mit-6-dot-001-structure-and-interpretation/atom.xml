@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MIT_6.001_Structure_and_Interpretation | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/mit-6-dot-001-structure-and-interpretation/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The importance of the idea of 'map']]></title>
+    <link href="http://kongakong.github.io/post/2012/08/13/p-29329230595/"/>
+    <updated>2012-08-13T19:42:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/13/p-29329230595</id>
+    <content type="html"><![CDATA[<blockquote><p>The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.</p></blockquote>
+
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/2QgZVYI3tDs&amp;t=22m0s "></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

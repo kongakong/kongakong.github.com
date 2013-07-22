@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sybase-12.5 | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/sybase-12-dot-5/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[http://superuser.com/questions/306009/sybase-how-to-add-a-connection-definition-to-ase-isql]]></title>
+    <link href="http://kongakong.github.io/post/2011/07/05/p-7262489717/"/>
+    <updated>2011-07-05T23:34:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/07/05/p-7262489717</id>
+    <content type="html"><![CDATA[<p><a href="http://superuser.com/questions/306009/sybase-how-to-add-a-connection-definition-to-ase-isql">http://superuser.com/questions/306009/sybase-how-to-add-a-connection-definition-to-ase-isql</a></p>
+
+<p>Answered my own question about Sybase and ASE isql</p>
+]]></content>
+  </entry>
+  
+</feed>

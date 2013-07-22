@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: activemq | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/activemq/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[On unix like systems, ActiveMQ is running on port 61616]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/18/p-6622672762/"/>
+    <updated>2011-06-18T01:31:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/18/p-6622672762</id>
+    <content type="html"><![CDATA[<p>On unix like systems, <em>ActiveMQ</em> is running on port 61616</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ActiveMQ build error]]></title>
+    <link href="http://kongakong.github.io/post/2010/10/06/p-1250836116/"/>
+    <updated>2010-10-06T07:42:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2010/10/06/p-1250836116</id>
+    <content type="html"><![CDATA[<p>Try to build it, but hit this error:</p>
+
+<p><code>The system is out of resources.
+Consult the following stack trace for details.
+java.lang.OutOfMemoryError: Java heap space</code></p>
+]]></content>
+  </entry>
+  
+</feed>

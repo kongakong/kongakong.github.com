@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: emacs | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/emacs/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Problem with shifting python code right in emacs]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/28/problem-with-shifting-python-code-right-in-emacs/"/>
+    <updated>2013-06-28T00:27:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/28/problem-with-shifting-python-code-right-in-emacs</id>
+    <content type="html"><![CDATA[<p>I am using Aquamacs Emacs which is built on emacs 23.3.50.1.</p>
+
+<p>When I tried to indent a block of python code using the menu item &lsquo;Python&rsquo; &ndash;> &lsquo;Shift Region Right&rsquo;, I got this error message <code>Symbol's function defintion is void: py-shit-right</code></p>
+
+<p>So instead of using the menu option, I just use <code>C-c &gt;</code> to take care of it.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[When I start up emacs in shell, I got this error message:]]></title>
+    <link href="http://kongakong.github.io/post/2013/05/31/p-51794320183/"/>
+    <updated>2013-05-31T20:00:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/05/31/p-51794320183</id>
+    <content type="html"><![CDATA[<p>When I start up emacs in shell, I got this error message:</p>
+
+<p><code>
+Error in init file: Symbol's function definition is void: global-linum-mode
+</code></p>
+
+<p>But my config file works fine with Aquamacs.</p>
+
+<p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs fu 2]]></title>
+    <link href="http://kongakong.github.io/post/2013/04/30/p-49203298223/"/>
+    <updated>2013-04-30T07:12:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/04/30/p-49203298223</id>
+    <content type="html"><![CDATA[<p>erlware-mode is deprecated ( <a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
+
+<p>Use erlang-mode in erlang distribution instead</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Emacs fu 1]]></title>
+    <link href="http://kongakong.github.io/post/2013/04/27/p-48953372171/"/>
+    <updated>2013-04-27T07:17:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/04/27/p-48953372171</id>
+    <content type="html"><![CDATA[<p>Find out the current emac.d location</p>
+
+<p><code>C-H v init-user-file &lt;RET&gt;</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing JDEE for emacs: Problem with avltree]]></title>
+    <link href="http://kongakong.github.io/post/2012/01/24/p-16344686959/"/>
+    <updated>2012-01-24T06:13:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/01/24/p-16344686959</id>
+    <content type="html"><![CDATA[<p>It means I am missing the elib library.</p>
+
+<p>However according to</p>
+
+<p><a href="GNU">http://www.gnu.org/software/elib/</a></p>
+
+<p>It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old <code>avltree</code> in elib.</p>
+
+<p>Use brew to install the latest version of emacs</p>
+]]></content>
+  </entry>
+  
+</feed>

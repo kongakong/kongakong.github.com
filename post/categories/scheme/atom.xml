@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: scheme | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/scheme/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Having some simple fun with gambit-scheme]]></title>
+    <link href="http://kongakong.github.io/post/2012/06/11/p-24873216853/"/>
+    <updated>2012-06-11T17:05:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/06/11/p-24873216853</id>
+    <content type="html"><![CDATA[<p>Having some simple fun with gambit-scheme</p>
+]]></content>
+  </entry>
+  
+</feed>

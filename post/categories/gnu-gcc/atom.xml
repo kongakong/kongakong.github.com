@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gnu-gcc | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/gnu-gcc/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Followup piece of my last gcc 4.2 problem]]></title>
+    <link href="http://kongakong.github.io/post/2012/04/28/p-21914025778/"/>
+    <updated>2012-04-28T01:08:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/04/28/p-21914025778</id>
+    <content type="html"><![CDATA[<p>Followup piece of <a href="/blog/2012/04/26/p-21844435707/">GNU gcc-4.2 issue on OSX 10.7</a>. So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. Then run this command</p>
+
+<p><code>
+installer -pkg GCC-10.7.pkg -target /
+</code>
+Problem solved. Now I can compile python3. For example,
+<code>
+CC=gcc-4.2 ./configure
+make &amp;&amp; make install
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

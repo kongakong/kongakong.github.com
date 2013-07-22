@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ocaml | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/ocaml/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The more I know about about oCaml, the more interesting it appears to me.]]></title>
+    <link href="http://kongakong.github.io/post/2012/07/30/p-28328299005/"/>
+    <updated>2012-07-30T19:25:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/07/30/p-28328299005</id>
+    <content type="html"><![CDATA[<p>The more I know about about oCaml, the more interesting it appears to me.</p>
+
+<p>The inferred static type system is really interesting. It is clearly ahead of many other languages.The only other language I know that has similar feature is Scala.</p>
+]]></content>
+  </entry>
+  
+</feed>

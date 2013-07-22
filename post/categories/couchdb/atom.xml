@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: couchdb | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/couchdb/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[brew install couchdb]]></title>
+    <link href="http://kongakong.github.io/post/2011/09/09/p-9992918894/"/>
+    <updated>2011-09-09T22:40:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/09/09/p-9992918894</id>
+    <content type="html"><![CDATA[<p>```</p>
+
+<p>$ brew install couchdb
+Warning: It appears you have MacPorts or Fink installed.
+Software installed with other package managers causes known problems for
+Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
+==> Downloading</p>
+
+<p><a href="http://www.apache.org/dyn/closer.cgi?path=couchdb/1.1.0/apache-couchdb-1.1.0.tar.gz">http://www.apache.org/dyn/closer.cgi?path=couchdb/1.1.0/apache-couchdb-1.1.0.tar.gz</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing couchdb using brew]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/02/p-6103768529/"/>
+    <updated>2011-06-02T20:32:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/02/p-6103768529</id>
+    <content type="html"><![CDATA[<p>Message after a successful installation</p>
+
+<p>```</p>
+
+<p>If this is your first install, automatically load on login with:</p>
+
+<pre><code>mkdir -p ~/Library/LaunchAgents
+cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+</code></pre>
+
+<p>If this is an upgrade and you already have the org.apache.couchdb.plist loaded:</p>
+
+<pre><code>launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+</code></pre>
+
+<p>Or start manually with:</p>
+
+<pre><code>couchdb
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

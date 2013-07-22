@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: COM | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/com/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Disappointed at MS powershell]]></title>
+    <link href="http://kongakong.github.io/post/2012/03/15/p-19340098717/"/>
+    <updated>2012-03-15T22:05:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/03/15/p-19340098717</id>
+    <content type="html"><![CDATA[<p>My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.</p>
+
+<p>So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.</p>
+
+<p>Some COM calls to the excel workbook object just failed when it works fine in vbs or python  with win32com.</p>
+
+<p>The lack of string manipulation functions is not helping either, especially the completion comes from scripting languages like python.</p>
+
+<p>Powershell is probably a good tool to interface with .Net framework and to handle Windows admin task. But for me it is not a language of first choice.</p>
+]]></content>
+  </entry>
+  
+</feed>

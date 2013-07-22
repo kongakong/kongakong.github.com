@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: libreoffice | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/libreoffice/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trying to build LibreOffice on osx. Encountered this error message:]]></title>
+    <link href="http://kongakong.github.io/post/2012/01/16/p-15942110889/"/>
+    <updated>2012-01-16T22:15:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/01/16/p-15942110889</id>
+    <content type="html"><![CDATA[<p>Trying to build LibreOffice on osx. Encountered this error message:</p>
+
+<p>```</p>
+
+<p>checking for Mozilla sources&hellip; checking for a169ab152209200a7bad29a275cb0333-seamonkey-1.1.14.source.tar.gz&hellip; will be fetched
+checking for MOZLIBREQ&hellip; configure: error: libIDL 0.6.3 or newer is needed to build Mozilla with Mac toolkit.</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: afs | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/afs/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[AFS]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/08/p-52451932662/"/>
+    <updated>2013-06-08T20:40:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/08/p-52451932662</id>
+    <content type="html"><![CDATA[<p>Morgan Stanley uses <a href="http://en.wikipedia.org/wiki/Andrew_File_System">AFS</a> for application deployment with good results.</p>
+]]></content>
+  </entry>
+  
+</feed>

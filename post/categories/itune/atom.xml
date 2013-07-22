@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: itune | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/itune/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[To free up harddisk space on mac...]]></title>
+    <link href="http://kongakong.github.io/post/2012/04/27/p-21908450030/"/>
+    <updated>2012-04-27T22:02:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/04/27/p-21908450030</id>
+    <content type="html"><![CDATA[<p>Go into <code>
+iTunes -&gt; preferences -&gt; devices
+</code> to remove multiple backups of your iOS devices</p>
+
+<p>I recovered about 5Gb space.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[99c silence track on iTune]]></title>
+    <link href="http://kongakong.github.io/post/2011/07/20/p-7843157990/"/>
+    <updated>2011-07-20T23:50:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/07/20/p-7843157990</id>
+    <content type="html"><![CDATA[<p><a href="99c%20silence%20track%20on%20iTune">http://news.cnet.com/2100-1041_3-5154202.html</a></p>
+
+<p>It is an old news  (2004) but I only heard of it today.</p>
+]]></content>
+  </entry>
+  
+</feed>

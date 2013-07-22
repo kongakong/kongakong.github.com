@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: weiqi | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/weiqi/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Go scoring rule]]></title>
+    <link href="http://kongakong.github.io/post/2010/12/02/p-2066457362/"/>
+    <updated>2010-12-02T13:45:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2010/12/02/p-2066457362</id>
+    <content type="html"><![CDATA[<p>Black has to score this much to win:</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mn | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/mn/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changed a controller to be a subclass of UITableViewController and got this]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/21/p-23475900705/"/>
+    <updated>2012-05-21T21:51:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/21/p-23475900705</id>
+    <content type="html"><![CDATA[<p>Changed a controller to be a subclass of UITableViewController and got this</p>
+
+<p>I skipped a few steps. After I did the following</p>
+
+<p>1) Change the view class to UITableVIew</p>
+
+<p>2) Connect the view to the ‘view’ slot of the Controller</p>
+
+<p>3) Connect the view’s datasource and delegate to the Controller.</p>
+
+<p>the runtime exception is gone.</p>
+]]></content>
+  </entry>
+  
+</feed>

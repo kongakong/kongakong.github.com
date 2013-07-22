@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lecture | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/lecture/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Steven Pinker: Linguistics as a Window to Understanding the Brain]]></title>
+    <link href="http://kongakong.github.io/post/2012/10/23/p-34100874247/"/>
+    <updated>2012-10-23T02:36:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/10/23/p-34100874247</id>
+    <content type="html"><![CDATA[<p>Steven Pinker: Linguistics as a Window to Understanding the Brain</p>
+
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/Q-B_ONJIEcE "></iframe></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bovine Spongiform Encephalopathy (BSE) aka Mad Cow Disease]]></title>
+    <link href="http://kongakong.github.io/post/2012/10/11/p-33295871370/"/>
+    <updated>2012-10-11T00:02:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/10/11/p-33295871370</id>
+    <content type="html"><![CDATA[<p>Bovine Spongiform Encephalopathy (BSE) aka Mad Cow Disease</p>
+
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/HUcvsEP6L_E "></iframe></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lord Stern on climate change in LSE (23/2)]]></title>
+    <link href="http://kongakong.github.io/post/2012/03/05/p-18786500332/"/>
+    <updated>2012-03-05T22:00:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/03/05/p-18786500332</id>
+    <content type="html"><![CDATA[<p>Lord Stern on climate change in LSE (23/2)</p>
+
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/HTDdZ0mEtOI "></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

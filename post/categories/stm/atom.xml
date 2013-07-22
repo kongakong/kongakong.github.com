@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: stm | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/stm/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Enabling STM in python]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/29/p-9543635958/"/>
+    <updated>2011-08-29T22:38:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/29/p-9543635958</id>
+    <content type="html"><![CDATA[<p>This</p>
+
+<p><a href="python%20issue">http://bugs.python.org/issue12850</a></p>
+
+<p>I am surprised by how short the patch is.</p>
+]]></content>
+  </entry>
+  
+</feed>

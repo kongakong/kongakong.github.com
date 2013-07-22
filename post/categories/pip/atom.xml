@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pip | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/pip/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to set up virtualenv and use pip in python 3.3]]></title>
+    <link href="http://kongakong.github.io/post/2012/11/18/p-35977135674/"/>
+    <updated>2012-11-18T20:44:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/11/18/p-35977135674</id>
+    <content type="html"><![CDATA[<p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
+
+<p>Then you’ll need to create a virtualenv and activate it. For details see</p>
+
+<p><a href="http://docs.python.org/3/library/venv.html">the python doc</a></p>
+
+<p>Since I want to install packages using pip, I proceed to install distribute.</p>
+
+<p><a href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Solution to the pip scipy problem]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/05/p-22440295991/"/>
+    <updated>2012-05-05T21:34:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/05/p-22440295991</id>
+    <content type="html"><![CDATA[<p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
+
+<p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<p>```
+brew install gfortran
+pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https://github.com/scipy/scipy#egg=scipy-dev</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The pip cannot install scipy properly.]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/03/p-22317238609/"/>
+    <updated>2012-05-03T22:21:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/03/p-22317238609</id>
+    <content type="html"><![CDATA[<p>The pip cannot install scipy properly.</p>
+
+<p>```</p>
+
+<p>mport pybrain
+Traceback (most recent call last):
+  File &ldquo;&rdquo;, line 1, in
+  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/<strong>init</strong>.py&rdquo;, line 1, in</p>
+
+<pre><code>from structure.__init__ import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/<strong>init</strong>.py&rdquo;, line 2, in</p>
+
+<pre><code>from modules.__init__ import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/<strong>init</strong>.py&rdquo;, line 2, in</p>
+
+<pre><code>from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py&rdquo;, line 11, in</p>
+
+<pre><code>from pybrain.tools.functions import sigmoid, sigmoidPrime
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py&rdquo;, line 4, in</p>
+
+<pre><code>from scipy.linalg import inv, det, svd
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/<strong>init</strong>.py&rdquo;, line 115, in</p>
+
+<pre><code>from misc import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py&rdquo;, line 3, in</p>
+
+<pre><code>import fblas
+</code></pre>
+
+<p>ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:</p>
+
+<pre><code>/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trying to ``pip install numpy`` on ubuntu, and got this:]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/02/p-22252177628/"/>
+    <updated>2012-05-02T21:22:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/02/p-22252177628</id>
+    <content type="html"><![CDATA[<p>Trying to <code>pip install numpy</code> on ubuntu, and got this:</p>
+
+<p>```</p>
+
+<p>SystemError: Cannot compile &lsquo;Python.h&rsquo;. Perhaps you need to install python-dev|python-devel.</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[pip, setuptools, easy_install and distribute]]></title>
+    <link href="http://kongakong.github.io/post/2012/04/28/p-21933322665/"/>
+    <updated>2012-04-28T07:42:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/04/28/p-21933322665</id>
+    <content type="html"><![CDATA[<p>Trying to install pip 1.1 for python3.</p>
+
+<p>```</p>
+
+<p>$ python3 setup.py install
+Traceback (most recent call last):
+  File &ldquo;setup.py&rdquo;, line 3, in</p>
+
+<p><a href="setuptools">http://pypi.python.org/pypi/setuptools</a></p>
+
+<p><a href="Distribute">http://packages.python.org/distribute/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

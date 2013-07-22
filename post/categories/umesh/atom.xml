@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Umesh | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/umesh/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Geometrical interpretation of Qubit]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/03/p-28620996702/"/>
+    <updated>2012-08-03T19:33:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/03/p-28620996702</id>
+    <content type="html"><![CDATA[<p>Geometrical interpretation of Qubit</p>
+
+<p><em>From the ‘Quantum Mechanics’ by Professor Umesh Vazirani, UCLA via Coursera.org</em></p>
+]]></content>
+  </entry>
+  
+</feed>

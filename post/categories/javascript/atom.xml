@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: javascript | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[There is no _insertAfter_ in JavaScript]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/15/p-23100334227/"/>
+    <updated>2012-05-15T22:20:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/15/p-23100334227</id>
+    <content type="html"><![CDATA[<p>There is no <em>insertAfter</em> in JavaScript</p>
+]]></content>
+  </entry>
+  
+</feed>

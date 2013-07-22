@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: libsvm | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/libsvm/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[libsvm]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/17/p-23224948404/"/>
+    <updated>2012-05-17T21:47:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/17/p-23224948404</id>
+    <content type="html"><![CDATA[<p>Trying to install the software downloaded from the <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">source</a></p>
+]]></content>
+  </entry>
+  
+</feed>

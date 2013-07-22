@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: adsl2 | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/adsl2/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[TpLink ADSL2 Modem woe]]></title>
+    <link href="http://kongakong.github.io/post/2010/11/25/p-1669311225/"/>
+    <updated>2010-11-25T00:38:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2010/11/25/p-1669311225</id>
+    <content type="html"><![CDATA[<p>Turns out the modems have issue with TPG, and the problem can only be fixed by refreshing the firmware. But when I discovered it, I have already spent hours to isolate the problem.</p>
+
+<p>Most people reports instant “plug-and-play” experience. It is probably because the currently available retail units are of more recent version and already have the firmware sorted out. Not my case. I ordered the modem online.</p>
+]]></content>
+  </entry>
+  
+</feed>

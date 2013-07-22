@@ -1,0 +1,170 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>When answer is Excel, it is probably not - Timeline</title>
+	<meta name="author" content="Anthony Kong">
+
+	
+	<meta name="description" content="In financial industry, passing files around is sTILl the most common method for data transfer. You may use ftp, sftp, scp or whatever fancy tools the &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Timeline</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:kongakong.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/anthony.hw.kong@gmail.com?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/kongakong" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/kongakong" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:kongakong.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">When Answer Is Excel, It Is Probably Not</h2>
+	<div class="entry-content"><p>In financial industry, passing files around is sTILl the most common method for data transfer.</p>
+
+<p>You may use ftp, sftp, scp or whatever fancy tools the corporate mandates, but at the end of the day it is about getting the file from system A to system B.</p>
+
+<p>The advantage is obvious: It is simple and easy to understand. Any transfer failure can be quickly recovered (such as network failure). Anyone can open the file for inspection, verification and reconciliation.</p>
+
+<p>There are also many ways to stuff up the files. Upgrade of database server is a good example.</p>
+
+<p>Database upgrades sometimes change the ordering of data in a result set. If the generation of a file is based on a database query and yet the query itself does not use any explicit <em>order by</em> clause, the outcome is at the mercy of the database implementation.</p>
+
+<p>Normally in this situation, some people will suggest to use Excel to fix the file. The overall process will be: Download the problematic file to a local PC. Fire up Excel. Open the file. Sort. Save. Upload to the server. Rerun the batch.</p>
+
+<p>If your server is a Windows server, I would have nothing to say about this process. But if the batch jobs and the files live on a unix/linux server, you are doing it wrong.</p>
+
+<p>In unix you should use a combination of <code>sort</code>, <code>uniq</code>, <code>sed</code>, <code>sed</code> (any appropriate unix commands) and file redirection to get the job done.</p>
+
+<p>The benefits:</p>
+
+<p>1) Re-runnable: same fix can be easily applied to different files at different time.</p>
+
+<p>2) History: easy to find out what have been done to the data</p>
+
+<p>3) Incremental improvement: additional fix can be added to existing script quickly.</p>
+
+<p>4) Fast: since scripting avoids human error, it will always be faster to run despite higher cost upfront to write and test a script.</p>
+
+<p>Resist the suggestion to use Excel.</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-06T18:50:00+11:00" pubdate data-updated="true">Oct 6<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+		
+		
+	</div>
+	
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
+
+    Anthony Kong
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/linux/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[erlang’s `` configure`` sTILl reports these components as missing:]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/30/p-9585200763/"/>
+    <updated>2011-08-30T22:49:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/30/p-9585200763</id>
+    <content type="html"><![CDATA[<p>erlang’s <code>configure</code> sTILl reports these components as missing:
+```</p>
+
+<p>crypto         : No usable OpenSSL found
+jinterface     : No Java compiler found
+odbc           : ODBC library &ndash; link check failed
+ssh            : No usable OpenSSL found
+ssl            : No usable OpenSSL found</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Trying to build erlang on scientific linux.]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/30/p-9585102499/"/>
+    <updated>2011-08-30T22:43:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/30/p-9585102499</id>
+    <content type="html"><![CDATA[<p>Trying to build erlang on scientific linux.</p>
+
+<p>Currently missing a number of libraries. Installing java-1.6.0-openjdk now for the jinterface</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[comm]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/27/p-9448858352/"/>
+    <updated>2011-08-27T17:49:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/27/p-9448858352</id>
+    <content type="html"><![CDATA[<p>Every now and then I sTILl discover some unix command that I did not know before but is very useful. For example, <code>comm</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[``gcc`` on Scientific Linux is 4.4.5. The latest stable is 4.6.1.]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/20/p-9158815320/"/>
+    <updated>2011-08-20T17:53:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/20/p-9158815320</id>
+    <content type="html"><![CDATA[<p><code>gcc</code> on Scientific Linux is 4.4.5. The latest stable is 4.6.1.</p>
+
+<p>Not too far behind.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[[http://www.scientificlinux.org/](Scientific Linux )]]></title>
+    <link href="http://kongakong.github.io/post/2011/08/20/p-9155192863/"/>
+    <updated>2011-08-20T15:22:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/08/20/p-9155192863</id>
+    <content type="html"><![CDATA[<p><a href="Scientific%20Linux">http://www.scientificlinux.org/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

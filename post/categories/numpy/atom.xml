@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: numpy | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/numpy/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trying to ``pip install numpy`` on ubuntu, and got this:]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/02/p-22252177628/"/>
+    <updated>2012-05-02T21:22:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/02/p-22252177628</id>
+    <content type="html"><![CDATA[<p>Trying to <code>pip install numpy</code> on ubuntu, and got this:</p>
+
+<p>```</p>
+
+<p>SystemError: Cannot compile &lsquo;Python.h&rsquo;. Perhaps you need to install python-dev|python-devel.</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

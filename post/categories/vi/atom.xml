@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: vi | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/vi/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[keep vi swp file in tmp]]></title>
+    <link href="http://kongakong.github.io/post/2013/06/29/keep-vi-swp-file-in-tmp/"/>
+    <updated>2013-06-29T21:02:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/06/29/keep-vi-swp-file-in-tmp</id>
+    <content type="html"><![CDATA[<p><code>vi</code> is my editor of choice when I need to do some quick editing.</p>
+
+<p>When vi edits a file, it will usally create a <code>swp</code> file for recovery purpose. Usually it causes no problem.</p>
+
+<p>But apparently octopress does not work when there is temporry file in the <code>post</code> directory. Rake will emit</p>
+
+<p><code>
+rake aborted!
+No such file or directory - public/_posts/.2013-06-29-example.markdown.swp
+</code></p>
+
+<p>and then bailed.</p>
+
+<p>I added
+<code>
+set backupdir=~/tmp
+</code>
+to my .vimrc. Hopefully it will prevent this problem from happening again.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[vi on black background does not work with MBP under sun]]></title>
+    <link href="http://kongakong.github.io/post/2010/10/20/p-1355753091/"/>
+    <updated>2010-10-20T13:48:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2010/10/20/p-1355753091</id>
+    <content type="html"><![CDATA[<p><code>vi</code> on black background does not work with MBP under sun.</p>
+
+<p>Change the terminal background color to white, it is much better</p>
+]]></content>
+  </entry>
+  
+</feed>

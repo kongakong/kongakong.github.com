@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rant | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/rant/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iMac woe]]></title>
+    <link href="http://kongakong.github.io/post/2012/09/16/p-31619891652/"/>
+    <updated>2012-09-16T09:42:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/09/16/p-31619891652</id>
+    <content type="html"><![CDATA[<p>This 27” iMac brings me endless issue.</p>
+
+<p>When I first bought it, it got recalled right away.</p>
+
+<p>I have to take a cab to and from the apple store because it is too hard to find parking in the CBD near the Apple Store. Have to move this heavy beast up and down to get to the genius bar.</p>
+
+<p>From then on there is a lot of stability issue.</p>
+
+<p>I am trying to upgrade it to Mountain Lion today.</p>
+
+<p>My previous attempts on Macbook air and Macbook Pro are very smooth.</p>
+
+<p>But not on this iMac.</p>
+
+<p>For days, I cannot download the Mountain Lion installer to Launder.</p>
+
+<p>Fine.</p>
+
+<p>Prepared an mountain lion OSX thumb drive and boot it up. Cannot run installer because it cannot download components for installation!</p>
+
+<p>Should never buy an iMac. Look stunning but really unreliable. Should have bough a mac mini + display instead. At least it will make it easier to visit a Genius Bar when there is a trouble.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Timeline</title>
+	<meta name="author" content="Anthony Kong">
+
+	
+	<meta name="description" content="For example, one should try to avoid Returning a handle of a private member variable via public member functions
+Returning a pointer of a private &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Timeline</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:kongakong.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/anthony.hw.kong@gmail.com?rel=author" title="Google+">Google+</a>
+		
+		
+		<a class="twitter" href="http://twitter.com/kongakong" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/kongakong" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:kongakong.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/06/05/p-6194235311/">
+		
+			Item 30: Avoid Member Functions That Return Non-const Pointers or References to Members Less Accessible Than Themselves</a>
+	</h2>
+	<div class="entry-content">
+		<p>For example, one should try to avoid</p>
+
+<ol>
+<li><p>Returning a handle of a private member variable via public member functions</p></li>
+<li><p>Returning a pointer of a private function via public interface</p></li>
+</ol>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T10:35:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/post/categories/c-plus-plus/'>c++</a>, <a class='category' href='/post/categories/self-study/'>self-study</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/06/05/p-6191932419/">
+		
+			Item 29: Avoid Returning &#8216;Handles&#8217; to Internal Data</a>
+	</h2>
+	<div class="entry-content">
+		<p>Item 29 is to adress situations in which the holder of a handle (a pointer or reference to the internal data representation) can circumvent  the <code>const</code> semantic by making modification to the underlying data via the handle.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T09:18:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/post/categories/c-plus-plus/'>c++</a>, <a class='category' href='/post/categories/self-study/'>self-study</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/06/05/p-6189322999/">
+		
+			Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a>
+	</h2>
+	<div class="entry-content">
+		<p>To disallow an operation on your object class, you can</p>
+
+<p>1) declare the function as <em>private</em></p>
+
+<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/post/categories/c-plus-plus/'>c++</a>, <a class='category' href='/post/categories/self-study/'>self-study</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/06/05/p-6189159712/">
+		
+			Item 28: Partition the Global Namespace</a>
+	</h2>
+	<div class="entry-content">
+		<p>Don’t think anyone will seriously argue against the usefulness of namespace.</p>
+
+<p>It is also mentioned that we can use <code>struct</code> to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T07:47:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/effective-c-plus-plus/'>Effective_C++</a>, <a class='category' href='/post/categories/c-plus-plus/'>c++</a>, <a class='category' href='/post/categories/self-study/'>self-study</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/06/05/p-6186209686/">
+		
+			Item 26: Guard Against Potential Ambiguity</a>
+	</h2>
+	<div class="entry-content">
+		<p>Compiler cannot decide:</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T06:10:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+<nav id="pagenavi">
+    
+        <a href="/post/page/106/" class="prev">Prev</a>
+    
+    
+        <a href="/post/page/108/" class="next">Next</a>
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
+
+    Anthony Kong
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

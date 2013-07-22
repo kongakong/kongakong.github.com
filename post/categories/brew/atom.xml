@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: brew | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/brew/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What is going on? Need to find out how to override the mirror url.]]></title>
+    <link href="http://kongakong.github.io/post/2012/10/14/p-33555499567/"/>
+    <updated>2012-10-14T19:36:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2012/10/14/p-33555499567</id>
+    <content type="html"><![CDATA[<p>What is going on? Need to find out how to override the mirror url.</p>
+
+<p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
+
+<p><a href="http://apache.mirror.uber.com.au/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://apache.mirror.uber.com.au/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
+
+<p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSX cflags]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/22/p-23515012853/"/>
+    <updated>2012-05-22T11:01:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/22/p-23515012853</id>
+    <content type="html"><![CDATA[<p>OSX cflags</p>
+
+<p>``</p>
+
+<p>vs brew cflags</p>
+
+<p>``</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Brew symlink exception]]></title>
+    <link href="http://kongakong.github.io/post/2011/12/31/p-15045964017/"/>
+    <updated>2011-12-31T09:01:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2011/12/31/p-15045964017</id>
+    <content type="html"><![CDATA[<p>Tried to install erlang. Got this error message</p>
+
+<p>```</p>
+
+<p>$ brew install erlang
+==> Downloading</p>
+
+<p><a href="https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz">https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[port vs brew]]></title>
+    <link href="http://kongakong.github.io/post/2011/12/28/p-14912930755/"/>
+    <updated>2011-12-28T21:37:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2011/12/28/p-14912930755</id>
+    <content type="html"><![CDATA[<p>Remove <code>port</code> for now to try out <code>brew</code></p>
+
+<p>Personally <code>port</code> is simple enough. Let see if brew can exceed the bar set by MacPort</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[To install command md5sum in brew, run]]></title>
+    <link href="http://kongakong.github.io/post/2011/06/07/p-6255384955/"/>
+    <updated>2011-06-07T04:49:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/06/07/p-6255384955</id>
+    <content type="html"><![CDATA[<p>To install command md5sum in brew, run</p>
+
+<p>```</p>
+
+<pre><code>brew install md5sha1sum
+</code></pre>
+
+<p>```</p>
+
+<p>Note the formula is not <code>md5sum</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>

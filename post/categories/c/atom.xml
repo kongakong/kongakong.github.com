@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: c | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/c/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA['struct winsize' declared inside parameter list]]></title>
+    <link href="http://kongakong.github.io/post/2010/10/08/p-1264649679/"/>
+    <updated>2010-10-08T08:52:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2010/10/08/p-1264649679</id>
+    <content type="html"><![CDATA[<p>Seeing a lot of</p>
+
+<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
+
+<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
+
+<p>Fixed by using forward declaration</p>
+]]></content>
+  </entry>
+  
+</feed>

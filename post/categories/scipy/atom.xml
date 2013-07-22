@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: scipy | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/scipy/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Solution to the pip scipy problem]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/05/p-22440295991/"/>
+    <updated>2012-05-05T21:34:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/05/p-22440295991</id>
+    <content type="html"><![CDATA[<p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
+
+<p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<p>```
+brew install gfortran
+pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https://github.com/scipy/scipy#egg=scipy-dev</a></p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The pip cannot install scipy properly.]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/03/p-22317238609/"/>
+    <updated>2012-05-03T22:21:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/03/p-22317238609</id>
+    <content type="html"><![CDATA[<p>The pip cannot install scipy properly.</p>
+
+<p>```</p>
+
+<p>mport pybrain
+Traceback (most recent call last):
+  File &ldquo;&rdquo;, line 1, in
+  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/<strong>init</strong>.py&rdquo;, line 1, in</p>
+
+<pre><code>from structure.__init__ import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/<strong>init</strong>.py&rdquo;, line 2, in</p>
+
+<pre><code>from modules.__init__ import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/<strong>init</strong>.py&rdquo;, line 2, in</p>
+
+<pre><code>from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py&rdquo;, line 11, in</p>
+
+<pre><code>from pybrain.tools.functions import sigmoid, sigmoidPrime
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py&rdquo;, line 4, in</p>
+
+<pre><code>from scipy.linalg import inv, det, svd
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/<strong>init</strong>.py&rdquo;, line 115, in</p>
+
+<pre><code>from misc import *
+</code></pre>
+
+<p>  File &ldquo;/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py&rdquo;, line 3, in</p>
+
+<pre><code>import fblas
+</code></pre>
+
+<p>ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:</p>
+
+<pre><code>/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[scipy and pybrain]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/02/p-22251177837/"/>
+    <updated>2012-05-02T21:33:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/02/p-22251177837</id>
+    <content type="html"><![CDATA[<p><code>./bin/pip install scipy</code> failed. It is a dependency of pybrain</p>
+
+<p>```</p>
+
+<p>&hellip;</p>
+
+<p>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zvout.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(clahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(dlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(slahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(veclib_cabi_f.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)</p>
+
+<p>error: Command &ldquo;ranlib build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a&rdquo; failed with exit status 1</p>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing scipy in ubuntu]]></title>
+    <link href="http://kongakong.github.io/post/2012/05/02/p-22193612740/"/>
+    <updated>2012-05-02T00:49:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/05/02/p-22193612740</id>
+    <content type="html"><![CDATA[<p>Trying to install scipy in ubuntu. Ran <code>pip install scipy</code></p>
+
+<p>```
+numpy.distutils.system_info.BlasNotFoundError:</p>
+
+<pre><code>Blas (http://www.netlib.org/blas/) libraries not found.
+
+Directories to search for the libraries can be specified in the
+
+numpy/distutils/site.cfg file (section [blas]) or by setting
+
+the BLAS environment variable.
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ios | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/ios/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-07-22T21:11:42+10:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SSToolkit]]></title>
+    <link href="http://kongakong.github.io/post/2013/05/29/p-51633107176/"/>
+    <updated>2013-05-29T20:00:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/05/29/p-51633107176</id>
+    <content type="html"><![CDATA[<p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
+
+<p><code>
+[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Delete a row from UITableView]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/16/p-29544259150/"/>
+    <updated>2012-08-16T19:35:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/16/p-29544259150</id>
+    <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>I can enable this feature, but I got this exception from this function</p>
+
+<p><code>
+2012-08-11 22:30:46.286 app[76532:fb03] *** Terminating app due to uncaught exception
+ 'NSInternalInconsistencyException', reason: 'Invalid update: invalid number of rows in section 0.  
+The number of rows contained in an existing section after the update (10) must be equal to the
+number of rows contained in that section before the update (10), plus or minus the number of rows
+inserted or deleted from that section (0 inserted, 1 deleted) and plus or minus the number of rows
+moved into or out of that section (0 moved in, 0 moved out).'
+</code></p>
+
+<p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to dismiss a modal view controller which is created by a segue in storyboard?]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/12/p-29256890594/"/>
+    <updated>2012-08-12T19:50:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/12/p-29256890594</id>
+    <content type="html"><![CDATA[<p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>But it does not work in storyboard anymore.</p>
+
+<p>This is the solution:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UIViewController::setMoviePlayerController]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/09/p-29045520999/"/>
+    <updated>2012-08-09T19:56:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/09/p-29045520999</id>
+    <content type="html"><![CDATA[<p><code>UIViewController::setMoviePlayerController:</code> is an undocumented API, yet it is used in one of the Apple sample project.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Got this error message in xcode]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/08/p-28973709805/"/>
+    <updated>2012-08-08T19:53:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/08/p-28973709805</id>
+    <content type="html"><![CDATA[<p>Got this error message in xcode</p>
+
+<p><code>
+*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get
+ a UITableView.'
+*** First throw call stack:
+</code></p>
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
+]]></content>
+  </entry>
+  
+</feed>
