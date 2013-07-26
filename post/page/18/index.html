@@ -7,9 +7,14 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="To enable the swipe to delete feature, one must implement this API: 1
+	<meta name="description" content="A way to generate random password in erlang 1
 2
-- (void)tableView:(UITableView *)tableView commitEditingStyle:( &hellip;">
+3
+4
+5
+6
+$ erl
+Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -83,6 +88,64 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/08/17/p-29614019655/">
+		
+			A Way to Generate Random Password in Erlang</a>
+	</h2>
+	<div class="entry-content">
+		<p>A way to generate random password in erlang</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="sc">$ </span><span class="n">erl</span>
+</span><span class='line'><span class="nv">Erlang</span> <span class="nv">R14B04</span> <span class="p">(</span><span class="n">erts</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span> <span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="p">[</span><span class="mi">64</span><span class="o">-</span><span class="n">bit</span><span class="p">]</span> <span class="p">[</span><span class="nn">smp</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="nn">rq</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="n">async</span><span class="o">-</span><span class="nn">threads</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="p">[</span><span class="n">hipe</span><span class="p">]</span> <span class="p">[</span><span class="n">kernel</span><span class="o">-</span><span class="nn">poll</span><span class="p">:</span><span class="n">false</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">Eshell</span> <span class="nv">V5</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span>  <span class="p">(</span><span class="n">abort</span> <span class="n">with</span> <span class="err">^</span><span class="nv">G</span><span class="p">)</span>
+</span><span class='line'><span class="mi">1</span><span class="o">&gt;</span> <span class="nn">base64</span><span class="p">:</span><span class="nf">encode_to_string</span><span class="p">(</span><span class="nn">crypto</span><span class="p">:</span><span class="nf">rand_bytes</span><span class="p">(</span><span class="mi">16</span><span class="p">)).</span>
+</span><span class='line'><span class="s">&quot;9d1L2K5ZYEyFEXCs+dVqfA==&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-17T19:45:00+10:00" pubdate data-updated="true">Aug 17<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/erlang/'>erlang</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -339,50 +402,6 @@
 
 <time datetime="2012-08-14T19:50:00+10:00" pubdate data-updated="true">Aug 14<span>th</span>, 2012</time></div>
 	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/08/13/p-29329230595/">
-		
-			The Importance of the Idea of &#8216;Map&#8217;</a>
-	</h2>
-	<div class="entry-content">
-		<blockquote><p>The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.</p></blockquote>
-
-<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/2QgZVYI3tDs&t=22m0s "></iframe></div>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-13T19:42:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/mit-6-dot-001-structure-and-interpretation/'>MIT_6.001_Structure_and_Interpretation</a>, <a class='category' href='/post/categories/mit/'>mit</a>
-
 
 </div>
 	

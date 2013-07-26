@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-26T19:55:22+10:00</updated>
+  <updated>2013-07-26T21:45:41+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Concurrency and Parallelism]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism/"/>
+    <updated>2013-07-26T21:41:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism</id>
+    <content type="html"><![CDATA[<blockquote><p>One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you express things that are independent, as independent executions and parallelism is about running two things at the same time. They are not the same idea and a lot of people confuse them, they think they are the same thing, but concurrency and parallelism are best thought of as a different idea. You can write beautiful concurrent programs with no parallelism whatsoever and you can also write extremely parallel programs that are not remotely concurrent. Concurrency is a model, parallelism is a result &ndash; maybe that&rsquo;s the best way to say it.</p></blockquote>
+
+<p>- Rob Pike</p>
+
+<p>Source: <a href="http://www.infoq.com/interviews/pike-concurrency">Infoq</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MFA]]></title>
@@ -569,26 +582,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
 </span><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OSX terminal and .bashrc]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/08/p-52453247211/"/>
-    <updated>2013-06-08T21:20:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/08/p-52453247211</id>
-    <content type="html"><![CDATA[<p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
-
-<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>-s</code> here means if the file exists and not of size 0</p>
 ]]></content>
   </entry>
   

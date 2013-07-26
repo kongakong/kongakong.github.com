@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="I did not know that after implemented a NSFetchResultController, I sTILl need to programmatically fetch the data and then call the table view to &hellip;">
+	<meta name="description" content="It turns out it is because of the following line of code: NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]); It should be %i because &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,47 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/01/29/p-2988855627/">
+		
+			My EXC_BAD_ACCESS Mystery</a>
+	</h2>
+	<div class="entry-content">
+		<p>It turns out it is because of the following line of code:</p>
+
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <em>numberOfObjects</em> returns an integer</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T16:42:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -230,47 +271,6 @@
 
 <time datetime="2011-01-26T07:19:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time></div>
 	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2011/01/25/p-2912666648/">
-		
-			Can Store Data Into the Core Data Sqllite Database, but Cannot Read It Back Into View Controller. Need More Investigation</a>
-	</h2>
-	<div class="entry-content">
-		<p>Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-25T08:00:00+11:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/coredata/'>coredata</a>, <a class='category' href='/post/categories/ios/'>ios</a>
-
 
 </div>
 	

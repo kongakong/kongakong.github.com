@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-26T19:55:22+10:00</updated>
+  <updated>2013-07-26T21:45:41+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Concurrency and Parallelism]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism/"/>
+    <updated>2013-07-26T21:41:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism</id>
+    <content type="html"><![CDATA[<blockquote><p>One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you express things that are independent, as independent executions and parallelism is about running two things at the same time. They are not the same idea and a lot of people confuse them, they think they are the same thing, but concurrency and parallelism are best thought of as a different idea. You can write beautiful concurrent programs with no parallelism whatsoever and you can also write extremely parallel programs that are not remotely concurrent. Concurrency is a model, parallelism is a result &ndash; maybe that&rsquo;s the best way to say it.</p></blockquote>
+
+<p>- Rob Pike</p>
+
+<p>Source: <a href="http://www.infoq.com/interviews/pike-concurrency">Infoq</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[MFA]]></title>
@@ -64,19 +77,6 @@
     <content type="html"><![CDATA[<p>erlang mode in emacs is very handy.</p>
 
 <p><em>C-c C-k (erlang-compile)</em> will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Useful erlang function]]></title>
-    <link href="http://kongakong.github.io/post/2013/05/09/p-50003419743/"/>
-    <updated>2013-05-09T20:00:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/05/09/p-50003419743</id>
-    <content type="html"><![CDATA[<p>Tell you the location of library files</p>
-
-<p><code>
-code:lib_dir(xmerl).
-</code></p>
 ]]></content>
   </entry>
   
