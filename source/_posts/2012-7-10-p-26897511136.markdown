@@ -8,3 +8,17 @@ categories:
 
 For a 2-dim array, axis 0 is the y-axis and 1 is the x-axis
 
+{% codeblock lang:python %}
+
+>>> b = numpy.random.random(9)
+>>> b.resize(3,3)
+>>> b
+array([[ 0.87004074,  0.96632953,  0.23284793],
+       [ 0.51685093,  0.28653961,  0.10544557],
+       [ 0.06448447,  0.62316361,  0.93653307]])
+>>> numpy.sum(b, axis=0)
+array([ 1.45137614,  1.87603274,  1.27482656])
+>>> numpy.sum(b, axis=1)
+array([ 2.06921819,  0.90883611,  1.62418114])
+
+{% endcodeblock %}

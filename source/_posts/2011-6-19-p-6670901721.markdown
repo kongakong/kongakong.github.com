@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Just learn that _Fedora_ uses ``inittab`` to control ``runlevel`` no more"
+title: "Fedora does not use inittab to control runlevel any more"
 date: 2011-06-19 10:10
 comments: true
 categories: fedora

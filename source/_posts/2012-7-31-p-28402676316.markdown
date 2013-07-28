@@ -8,3 +8,15 @@ categories:
 
 New python beginner tends to do this
 
+{% codeblock lang:python %}
+a = [] 
+a.append(1)
+a.append(2)
+a.append(3)
+{% endcodeblock %}
+
+It is not a mistake per-se, but definitely a very clumsy style.
+
+{% codeblock %}
+a = [1, 2, 3]
+{% endcodeblock %}
