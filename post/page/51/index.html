@@ -7,7 +7,8 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Go into iTunes -&gt; preferences -&gt; devices to remove multiple backups of your iOS devices I recovered about 5Gb space. Apr 27th, 2012 ios, itune &hellip;">
+	<meta name="description" content="Followup piece of GNU gcc-4.2 issue on OSX 10.7. So I downloaded a gcc package from this location. Then run this command 1
+installer -pkg GCC-10.7. &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +82,59 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/04/28/p-21914025778/">
+		
+			Followup Piece of My Last Gcc 4.2 Problem</a>
+	</h2>
+	<div class="entry-content">
+		<p>Followup piece of <a href="/blog/2012/04/26/p-21844435707/">GNU gcc-4.2 issue on OSX 10.7</a>. So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. Then run this command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>installer -pkg GCC-10.7.pkg -target /</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Problem solved. Now I can compile python3. For example,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>CC=gcc-4.2 ./configure
+</span><span class='line'>make && make install</span></code></pre></td></tr></table></div></figure>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-28T01:08:00+10:00" pubdate data-updated="true">Apr 28<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/gcc/'>gcc</a>, <a class='category' href='/post/categories/gnu-gcc/'>gnu-gcc</a>, <a class='category' href='/post/categories/osx/'>osx</a>, <a class='category' href='/post/categories/python/'>python</a>, <a class='category' href='/post/categories/python3/'>python3</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -363,51 +417,6 @@ iTunes -&gt; preferences -&gt; devices
 
 
 	<a class='category' href='/post/categories/powershell/'>powershell</a>, <a class='category' href='/post/categories/solarise/'>solarise</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/04/24/p-21710844399/">
-		
-			After Reinstalling Xcode 4.3, I Lost the gcc-4.2.</a>
-	</h2>
-	<div class="entry-content">
-		<p>After reinstalling Xcode 4.3, I lost the gcc-4.2.</p>
-
-<p>Installing the command line tools component did not fix it.</p>
-
-<p>May need to run “brew install</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-24T22:02:00+10:00" pubdate data-updated="true">Apr 24<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/xocde/'>xocde</a>
 
 
 </div>

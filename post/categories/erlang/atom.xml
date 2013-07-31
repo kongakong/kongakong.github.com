@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-07-28T20:37:05+10:00</updated>
+  <updated>2013-08-01T06:39:17+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Different Type of Database Models]]></title>
+    <link href="http://kongakong.github.io/post/2013/07/29/different-type-of-database/"/>
+    <updated>2013-07-29T08:08:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/07/29/different-type-of-database</id>
+    <content type="html"><![CDATA[<p>I find this summary in <a href="http://littleriakbook.com/">Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo;</a> book  very concise and useful.</p>
+
+<ol>
+<li><p><strong>Relational</strong> Traditional databases usually use SQL to model and query data. They are useful for data which can be stored in a highly structured schema, yet require lexible querying. Scaling a relational database (RDBMS) traditionally occurs by more powerful hardware (vertical growth).</p>
+
+<p>Examples: PostgreSQL, MySQL, Oracle</p></li>
+<li><p><strong>Graph</strong> These exist for dataighly interconnected data. They excel in modeling complex relationships between nodes, and many implementations can handle multiple billions of nodes and relationships (or edges and vertices). I tend to include triplestores and object DBs as specialized variants.</p>
+
+<p> Examples: Neo4j, Graphbase, IniniteGraph</p></li>
+<li><p><strong>Document</strong> Document datastores model hierarchical values called documents, represented in formats such as JSON or XML, and do not enforce a document schema. They generally support distributing across multiple servers (horizontal growth).</p>
+
+<p> Examples: CouchDB, MongoDB, Couchbase</p></li>
+<li><p><strong>Columnar</strong> Popularized by Google’s BigTable, this form of database exists to scale across mul- tiple servers, and groups similar data into column families. Column values can be individually versioned and managed, though families are deined in advance, not unlike RDBMS schemas.</p>
+
+<p> Examples: HBase, Cassandra, BigTable 4</p></li>
+<li><p><strong>Key/Value</strong> Key/Value, or KV stores, are conceptually like hashtables, where values are stored and accessed by an immutable key. They range from single-server varieties like Memcached used for high-speed caching, to multi-datacenter distributed systems like Riak Enterprise.</p>
+
+<p> Examples: Riak, Redis, Voldemort</p></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Concurrency and Parallelism]]></title>
@@ -66,17 +94,6 @@
 </span><span class='line'><span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">notexist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
 </span><span class='line'><span class="n">pang</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[erlang mode in emacs is very handy.]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/01/p-51873320799/"/>
-    <updated>2013-06-01T20:30:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/01/p-51873320799</id>
-    <content type="html"><![CDATA[<p>erlang mode in emacs is very handy.</p>
-
-<p><em>C-c C-k (erlang-compile)</em> will start a erlang process in a separate windows and compile the script. I do not need to switch between editor and shell all the time now.</p>
 ]]></content>
   </entry>
   

@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Zvi responded to Christian S&rsquo;s &ldquo;recommended large text mass handling modules&rdquo;. He said, if for efficiency we represent a string as &hellip;">
+	<meta name="description" content="This is the last installment of the digest of the topic of &ldquo;String as List&rdquo;.Hasan Veldstra opined that lack of library support make &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,47 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2008/02/19/5839983411439621941/">
+		
+			Erlang Mailing List - String as List 3</a>
+	</h2>
+	<div class="entry-content">
+		<p>This is the last installment of the digest of the topic of &ldquo;String as List&rdquo;.<br /><span class="HcCDpe"><span email="hasan.veldstra@gmail.com" class="EP8xU" style="color: rgb(204, 0, 96);"><br />Hasan Veldstra</span></span> opined that lack of library support make string operation difficult. He was working on an Erlang Unicode string library based on ICU (<a href="http://www.icu-project.org/" target="_blank"><a href="http://www.icu-project.org/">http://www.icu-project.org/</a></a>) for the past week, and expected to release an alpha version soon.<br /><br /><span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span>  <span class="lDACoc"></span></span>suggested that in the case of 64 bit implementation of Erlang, a &ldquo;String as list&rdquo; representation is wasteful.<br /><br /><span class="HcCDpe"><span email="ok@cs.otago.ac.nz" class="EP8xU" style="color: rgb(121, 6, 25);">Richard A. O&#8217;Keefe </span> seems to be annoyed by this suggestion (and other comment on Lisp machine), and advocated that if space is a concern, the programmer can use an alternative representation such as binary.<br /></span><br /><span class="HcCDpe"><span email="rvirding@gmail.com" class="EP8xU" style="color: rgb(200, 137, 0);">Robert Virding </span></span>clarify the leex (function token/2 and token/3) is re-entrant. However, yecc is not and must be fed with a completed list of token.<br /><br /><span class="HcCDpe"><span email="dmitriid@gmail.com" class="EP8xU" style="color: rgb(121, 6, 25);">Dmitrii &lsquo;Mamut&rsquo; Dimandt </span> </span>gave an example of why &ldquo;string as list&rdquo; is bad idea, because:<br /><blockquote style="font-style: italic;"><br />&ldquo;This is only true for ASCII text. Non-ASCII gets screwed up badly.<br /><br />lists:reverse(&#8220;text&rdquo;)     %% gives you &ldquo;text&rdquo;<br />lists:reverse(&ldquo;текст&rdquo;)  %% Russian for text becomes [130,209,129,209,186,208,181<div bgcolor="#ffffff" text="#000000"><wbr>,208,130,209] which is clearly not I wanted&#8221;</div></blockquote><div bgcolor="#ffffff" text="#000000"><br /></div>  <span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S</span>  <span class="lDACoc">has a solution to this problem:<br /><br /></span></span><blockquote style="font-style: italic;">&ldquo;This is what you should have in your list:<br />1> Text = [16#442, 16#435, 16#43a, 16#441, 16#442].<br />[1090,1077,1082,1089,1090]<br /><br />You can convert it to utf8 for output<br /><br />2> xmerl_ucs:to_utf8(Text).<br />[209,130,208,181,208,186,209<div id="1fvf" class="ArwC7c ckChnd"><wbr>,129,209,130]<br /><br />And you can reverse it and convert that to utf8.<br /><br />3> xmerl_ucs:to_utf8(lists<wbr>:reverse(Text)).<br />[209,130,209,129,208,186,208<wbr>,181,209,130]&rdquo;<br /></div></blockquote><div id="1fvf" class="ArwC7c ckChnd"><br />A positive message from <span class="HcCDpe"><span email="bjorn@erix.ericsson.se" class="EP8xU" style="color: rgb(51, 0, 153);">Bjorn Gustavsson</span></span>. He confirmed that is possible to use lists of Unicode characters easily. In Wings 3D, he have implemented a limited support for Unicode.<br /><br /><span class="HcCDpe"><span email="erlang@gmail.com" class="EP8xU" style="color: rgb(0, 131, 145);">Joe Armstrong</span></span> weighted in on 19 Feb. He suggested &ldquo;One problem with strings unicode, regexps etc. is how you input the string.&rdquo;. He proposed several new syntax to capture regex or xml string.<br /><br />Basically from this point onward the thread has shifted gear into forward looking mood. The discussion now focused on the best way to represent a string in Erlang.<br /><br /><br /></div></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T08:15:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/erlang/'>erlang</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -236,47 +277,6 @@
 
 
 <time datetime="2008-02-18T22:06:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2008</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/erlang/'>erlang</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2008/02/12/4297189587515149228/">
-		
-			Paradox in Software I</a>
-	</h2>
-	<div class="entry-content">
-		<p>There are many paradox in software.<br /><br />The first paradox I can think of is the misconception of &ldquo;ease of use&rdquo;.<br /><br />Some technology, on first glance, very easy to use. Two mouse clicks and one &ldquo;Ctrl-S&rdquo;, the outcome is saved into a file and job is done.<br /><br />However, it is <span style="font-style: italic;">hard </span>actually.<br /><br />I am not a Zen master. Please let me explain.<br /><br />As in any statement, the meaning depends on the context and situation.<br /><br />In a sense point-and-click  help you<br /><br /></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-12T05:10:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2008</time></div>
 	<div class="tags">
 
 
