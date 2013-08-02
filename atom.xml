@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-08-01T06:39:17+10:00</updated>
+  <updated>2013-08-03T09:10:00+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Luck and Skill]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/01/luck-and-skill/"/>
+    <updated>2013-08-01T08:23:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/01/luck-and-skill</id>
+    <content type="html"><![CDATA[<blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
+payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
+sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
+lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
+number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
+
+<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Different Type of Database Models]]></title>
@@ -582,19 +597,6 @@
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>~Library/Application Support/MobileSync</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/10/p-52620998556/"/>
-    <updated>2013-06-10T21:44:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/10/p-52620998556</id>
-    <content type="html"><![CDATA[<p>In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:</p>
-
-<p><a href="Interview%20with%20Glenn%20Greenwald">http://www.youtube.com/watch?v=-qlFjrgGqVA</a></p>
-
-<p><a href="%E2%80%98Deep%20State%E2%80%99%20-%20Interview%20with%20Professor%20Peter%20Dale%20Scott">http://youtu.be/CBGgxU27kJA</a></p>
 ]]></content>
   </entry>
   
