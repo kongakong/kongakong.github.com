@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="There are many paradox in software and the industry.Paradox number one is &ldquo;easiness&rdquo;: Some technology is on first glance very easy to &hellip;">
+	<meta name="description" content="Problem Definition: Euler Problem 5I am rather happy with this python version because I can basically get it done in about 15 min in total. Some &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,88 +81,6 @@
 		
 	
 	<div id="content" class="inner">
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2008/02/03/6517396113425090422/">
-		
-			Paradox in Software I</a>
-	</h2>
-	<div class="entry-content">
-		<p>There are many paradox in software and the industry.<br /><br />Paradox number one is &ldquo;easiness&rdquo;: Some technology is on first glance very easy to use, but once they are put into daily work, it may turn out is be an absolute productivity black hole.<br /><br />As if I am a Zen master but I am not.<br /><br />MS Window is a good example. It is simple to install. It is simple to use. All you have to know is to point and click. So, if it is easy to use, it should make our everyday tasks easy.<br /><br />However, especially when it comes to the domain of Enterprise computing, this is simply  not true. <br /><br />More often than not, user in an commerical setting</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-03T15:22:00+11:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2008</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/erlang/'>erlang</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2008/02/02/3625411911597323714/">
-		
-			Little Erlang Exercise 6</a>
-	</h2>
-	<div class="entry-content">
-		<p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=6">Euler Problem 6</a><br /><br />This problem is very straight-forward.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />The sum of the squares of the first ten natural numbers is,<br />1+ 2<sup>2</sup> + &hellip; + 10<sup>2</sup> = 385<br /><br />The square of the sum of the first ten natural numbers is,<br />(1 + 2 + &hellip; + 10)<sup>2</sup> = 55 = 3025<br /><br />Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 &ndash; 385 = 2640.<br /><br />Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.<br />&rdquo;&ldquo;&rdquo;<br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />  Max = 100<br />  SumOfSquare = sum([pow(X, 2) for X in xrange(1, Max + 1)])<br />  SquareOfSum = pow(sum([X for X in xrange(1, Max + 1)]), 2)<br />  print &ldquo;%d&rdquo; % (SquareOfSum &ndash; SumOfSquare)<br /><br /><br /></code></pre><br /><br />Here is the corresponding erlang version.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />-module(p6).<br />-export([find_diff/1]).<br /><br />find_diff(Max)&ndash;><br />  SumOfSq = lists:foldl(fun (X, Y) &ndash;> X + Y end, 0, [X*X || X &lt;&ndash; lists:seq(1, Max)]),<br />  SqOfSum = math:pow(<br />              lists:foldl(fun (X, Y) &ndash;> X + Y end, 0, [X || X &lt;&ndash; lists:seq(1, Max)]),<br />              2),<br />  SqOfSum &ndash; SumOfSq.<br /><br /></code></pre><br /><br />Basically, both python and erlang offer very powerful list comprehension syntax.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-02T17:56:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2008</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/erlang/'>erlang</a>
-
-
-</div>
-	
-</div>
-</article>
 
 
     <article class="post">
@@ -276,6 +194,88 @@
 
 
 <time datetime="2008-01-29T22:09:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2008</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/erlang/'>erlang</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2008/01/28/4378235237955649537/">
+		
+			Idea A</a>
+	</h2>
+	<div class="entry-content">
+		
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-28T21:12:00+11:00" pubdate data-updated="true">Jan 28<span>th</span>, 2008</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/erlang/'>erlang</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2008/01/26/1984766282269043435/">
+		
+			Little Erlang Exercise 2</a>
+	</h2>
+	<div class="entry-content">
+		<p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=2">Euler Problem 2</a><br /><br />In order to solve this problem in python, I have used the yield keyword to implements a generator to provide a sequence of Fibonacci&rsquo;s numbers. I think I can do a better work in using list comprehension in the main routine to filter and add up the even numbers, but the current version is basically good enough.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code>&ldquo;&rdquo;&ldquo;<br /><br />Euler 2<br /><br />Each new term in the Fibonacci sequence is generated by adding the previous two terms.<br />By starting with 1 and 2, the first 10 terms will be:<br /><br />1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &hellip;<br /><br />Find the sum of all the even-valued terms in the sequence which<br />do not exceed one million.<br /><br /><br />&rdquo;&ldquo;&rdquo;<br />def gen_fib_seq():<br />a = 1<br />b = 2<br />yield a<br />yield b<br />try:<br /> while 1:<br />   c = a + b<br />   a, b = b, c<br />   yield c<br />except StopIteration:<br /> pass<br /><br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />b = 0<br />onemillion = 1000000<br />for x in gen_fib_seq():<br /> if x % 2 == 0:<br />   if b + x &lt; onemillion:<br />     b = b + x<br />   else:<br />     break<br />print b<br /><br /><br /></code></pre><br /><br /><br /><br />The erlang turns out to be even simpler than I thought. First of all, because every object or operation can be abstracted as a process, I do not need special keyword &lsquo;yield&rsquo; to create a special object &ndash; generator. Furthermore the guard clause of  function <span style="font-weight: bold;">acc </span>remove the need to put in any &lsquo;if&rsquo; or &lsquo;break&rsquo; to do, for example, the even number testing as in the python version.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code>-module(p2).<br />-export([main/0]).<br /><br />start() &ndash;&gt; spawn(fun() &ndash;&gt; fib(0, 1) end).<br /><br />fib(N, M) &ndash;&gt;<br />receive<br /> {Pid, next} &ndash;&gt;<br />   Pid ! {self(), N + M},<br />   fib(M, N+ M)<br />end.<br /><br />get_next_fib(Pid) &ndash;&gt;<br />Pid ! {self(), next},<br />receive<br /> {<em>, N} &ndash;&gt;<br />   %% io:format(&ldquo;~p~n&rdquo;, [N])<br />   N<br />end.<br /><br />%% accumulator<br />acc(N, Pid, Acc) when (N rem 2) =:= 1 &ndash;&gt;<br /> N1 = get_next_fib(Pid),<br /> acc(N1, Pid, Acc);<br />acc(N, Pid, Acc) when N + Acc &lt; 1000000 &ndash;&gt;<br /> N1 = get_next_fib(Pid),<br /> acc(N1, Pid, Acc + N);<br />acc(</em>, _, Acc) &ndash;&gt;<br /> Acc.<br /><br /><br />%%%<br />%%% Program main()<br />%%%<br />main() &ndash;&gt;<br /> Pid = start(),<br /> Acc = acc(1, Pid, 0),<br /> Acc.<br /><br /><br /></code></pre></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-26T14:22:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2008</time></div>
 	<div class="tags">
 
 
