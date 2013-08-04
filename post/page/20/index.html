@@ -7,9 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Calculate regular payment based on rate, number of payment and PV 1
-2
-def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip;">
+	<meta name="description" content="Q: Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -83,6 +81,65 @@ def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/08/11/p-29187540494/">
+		
+			Calculate Cash Flows in Python</a>
+	</h2>
+	<div class="entry-content">
+		<p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
+
+<p><em>A:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># contribution at age
+</span><span class='line'>>>> [(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+</span><span class='line'>
+</span><span class='line'>>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-11T19:54:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/cash/'>cash</a>, <a class='category' href='/post/categories/flow/'>flow</a>, <a class='category' href='/post/categories/python/'>python</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -279,47 +336,6 @@ def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip
 
 <time datetime="2012-08-07T19:59:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2012</time></div>
 	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/08/06/p-28828938592/">
-		
-			Wat</a>
-	</h2>
-	<div class="entry-content">
-		<p><a href="https://www.destroyallsoftware.com/talks/wat/">Wat</a>]</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-06T19:45:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/programming/'>programming</a>, <a class='category' href='/post/categories/sharing/'>sharing</a>
-
 
 </div>
 	

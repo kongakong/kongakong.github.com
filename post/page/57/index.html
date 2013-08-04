@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content=" Example: It is often remarked that Churchill had acolytes, but few intimates. Mar 18th, 2012 Winston&#8217;s_War, Word_of_the_day ">
+	<meta name="description" content="The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application. &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,72 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/03/19/p-19567046257/">
+		
+			EXC_BAD_ACCESS</a>
+	</h2>
+	<div class="entry-content">
+		<p>The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>    @try {
+</span><span class='line'>        CFGetTypeID(NULL);
+</span><span class='line'>    }  @catch   (NSException * e) {
+</span><span class='line'>            NSLog(@"Exception: %@", e);
+</span><span class='line'>    }
+</span><span class='line'>    @finally {
+</span><span class='line'>            NSLog(@"finally");
+</span><span class='line'>    }
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-19T20:30:00+11:00" pubdate data-updated="true">Mar 19<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/objective-c/'>objective-c</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -247,55 +313,6 @@
 
 
 	<a class='category' href='/post/categories/winstons-war/'>Winston&#8217;s_War</a>, <a class='category' href='/post/categories/word-of-the-day/'>Word_of_the_day</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/03/15/p-19340098717/">
-		
-			Disappointed at MS Powershell</a>
-	</h2>
-	<div class="entry-content">
-		<p>My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.</p>
-
-<p>So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.</p>
-
-<p>Some COM calls to the excel workbook object just failed when it works fine in vbs or python  with win32com.</p>
-
-<p>The lack of string manipulation functions is not helping either, especially the completion comes from scripting languages like python.</p>
-
-<p>Powershell is probably a good tool to interface with .Net framework and to handle Windows admin task. But for me it is not a language of first choice.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-15T22:05:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/com/'>COM</a>, <a class='category' href='/post/categories/powershell/'>powershell</a>, <a class='category' href='/post/categories/python/'>python</a>
 
 
 </div>
