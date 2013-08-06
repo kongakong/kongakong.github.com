@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Git tip 1"
+date: 2013-08-03 21:21
+comments: true
+categories: git 
+---
+
+
+By default git uses 'less' as a pager. You can disable it by 
+
+
+{% codeblock %}
+git --no-pager diff
+
+{% endcodeblock %}
