@@ -4,7 +4,7 @@
   <title><![CDATA[Category: antlr | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/antlr/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-08-06T21:22:40+10:00</updated>
+  <updated>2013-08-06T22:15:20+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,19 +20,31 @@
     <id>http://kongakong.github.io/post/2012/07/26/p-28046614623</id>
     <content type="html"><![CDATA[<p>Dfa class interface:</p>
 
-<p>{% codeblock lang:python %}
-class DFA:</p>
-
-<pre><code>def __init__(...):
-def predict(self, input):
-def noViableAlt(self, s, input):
-def error(self, nvae):
-def specialStateTransition(self, s, input):
-def getDescription(self):
-def unpack(cls, string):
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">DFA</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">noViableAlt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nvae</span><span class="p">):</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">specialStateTransition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">getDescription</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">unpack</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

@@ -7,9 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Modal View screws up the SplitView after dismiss. Tried if ([self modalViewController]) {
-return;
-} in willHideSplitView but it does not work Jan &hellip;">
+	<meta name="description" content="Finally I can bring up a login screen before the Split View in the ipad. Previously I was doing it wrong. I have the button btnLogin action to get a &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -83,6 +81,86 @@ return;
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/01/16/p-2759634210/">
+		
+			Finally I Can Bring Up a Login Screen Before the Split View in the Ipad.</a>
+	</h2>
+	<div class="entry-content">
+		<p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-16T00:27:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2011/01/13/p-2727123479/">
+		
+			Splash Screen on iOS</a>
+	</h2>
+	<div class="entry-content">
+		<p>In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful.</p>
+
+<p><a href="Source">http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T20:22:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -198,84 +276,6 @@ return;
 
 
 <time datetime="2011-01-10T00:40:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2011/01/09/p-2658426192/">
-		
-			Some Note on Frame vs Bounds</a>
-	</h2>
-	<div class="entry-content">
-		<p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
-
-<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
-
-<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time></div>
-	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2011/01/07/p-2623149828/">
-		
-			Cannot Get UISplitViewController to Rotate. Very Frustrated</a>
-	</h2>
-	<div class="entry-content">
-		<p>Cannot get UISplitViewController to rotate. Very frustrated</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-07T01:05:00+11:00" pubdate data-updated="true">Jan 7<span>th</span>, 2011</time></div>
 	<div class="tags">
 
 </div>

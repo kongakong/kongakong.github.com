@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-08-04T13:29:52+10:00</updated>
+  <updated>2013-08-06T22:15:20+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,17 +14,82 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Simple Swap Calculation]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/04/simple-swap-calculation/"/>
+    <updated>2013-08-04T17:34:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/04/simple-swap-calculation</id>
+    <content type="html"><![CDATA[<p><strong>Question</strong>: Today is 1st of January. The residual maturity of a swap is 9 months. The notional
+ principal is $1,000. You receive 3% fixed semiannual payments and pay semiannual
+ cash flows based on the 6-month Libor rate on March 31st and September 30th.
+ Next payment is based on Libor at 5%. The current term structure is
+ R(0, 0.25) = 4% and R(0, 0.75) = 5%.</p>
+
+<p>Find the value of the fixed leg, floating leg and the swap.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">swap</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">example1</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Fixed</span> <span class="o">=</span> <span class="n">example1_fixedleg</span><span class="p">(),</span>
+</span><span class='line'>    <span class="nv">Floating</span> <span class="o">=</span> <span class="n">example1_floatingleg</span><span class="p">(),</span>
+</span><span class='line'>    <span class="p">{</span><span class="nv">Fixed</span><span class="p">,</span> <span class="nv">Floating</span><span class="p">,</span> <span class="nv">Fixed</span><span class="o">-</span><span class="nv">Floating</span><span class="p">}.</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">example1_fixedleg</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>        <span class="mi">50</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">03</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1050</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">03</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">example1_floatingleg</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>        <span class="c">%% 25 is 1000 * 5% * 1/2</span>
+</span><span class='line'>        <span class="mi">25</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">04</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Answer</strong>: {1076.6104451243634,1012.6326158166382,63.97782930772519}</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git tip 1]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/03/git-tip-1/"/>
+    <updated>2013-08-03T21:21:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/03/git-tip-1</id>
+    <content type="html"><![CDATA[<p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Why we should love repost]]></title>
     <link href="http://kongakong.github.io/post/2013/08/02/why-we-should-love-repost/"/>
     <updated>2013-08-02T23:05:00+10:00</updated>
     <id>http://kongakong.github.io/post/2013/08/02/why-we-should-love-repost</id>
-    <content type="html"><![CDATA[<p>Maybe &lsquo;love&rsquo; is strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
+    <content type="html"><![CDATA[<p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
 
 <p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
 
 <p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
 
-<p>I start to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
+<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
 
 <p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
 ]]></content>
@@ -566,38 +631,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span> /usr/local/bin/pip3 install beautifulsoup4
 </span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using Octopress]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/19/using-octopress/"/>
-    <updated>2013-06-19T06:09:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/19/using-octopress</id>
-    <content type="html"><![CDATA[<p>Octopress really makes blogging on github easy.</p>
-
-<p>I am happy with tumblr after these many years, but writing programming related topic is not really enjoyable due to lack of support of syntax highlight etc.</p>
-
-<p>The markdown support in Octopress is very good</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Just installed RVM]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/12/p-52782958923/"/>
-    <updated>2013-06-12T21:20:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/12/p-52782958923</id>
-    <content type="html"><![CDATA[<p>Just installed RVM.</p>
-
-<p>Message from RVM after installation:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>* To start using RVM you need to run `source /Users/antkong/.rvm/scripts/rvm`
-</span><span class='line'>    in all your open shell windows, in rare cases you need to reopen all shell windows.</span></code></pre></td></tr></table></div></figure>
-
-
 
 ]]></content>
   </entry>
