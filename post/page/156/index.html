@@ -7,14 +7,14 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="NSSet
-NSArray
-NSMutableArray
-NSSet
-NSCountedSet
-NSMutableSet NSDictionary
-NSEnumerator NSNumber NSData any data type
-NSMutableData Nov 11th, 2010 &hellip;">
+	<meta name="description" content="Usage: 1
+2
+3
+4
+5
+6
+7
+NSBundle *bundle = [NSBundle mainBundle]; NSString *imagePath = [bundle pathForResource:@&quot;mug_shot&quot; ofType:@&quot; &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -88,6 +88,117 @@ NSMutableData Nov 11th, 2010 &hellip;">
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2010/11/11/p-1541924619/">
+		
+			Objective-c: Bundle and Resource Management</a>
+	</h2>
+	<div class="entry-content">
+		<p>Usage:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSBundle</span> <span class="o">*</span><span class="n">bundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">imagePath</span> <span class="o">=</span> <span class="p">[</span><span class="n">bundle</span> <span class="nl">pathForResource:</span><span class="s">@&quot;mug_shot&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;tiff&quot;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSImage</span> <span class="o">*</span><span class="n">anImage</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSImage</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithContentsOfFile:</span><span class="n">imagePath</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Loading Code</em></p>
+
+<p>Selectors:</p>
+
+<p><code>load</code></p>
+
+<p><code>principlaClass</code></p>
+
+<p><code>classNamed</code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:27:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/objective-c/'>objective-c</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2010/11/11/p-1541919052/">
+		
+			Objective-c: Working With Files</a>
+	</h2>
+	<div class="entry-content">
+		<p><em>NSFileManager</em></p>
+
+<p><em>NSFileHandle</em></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:26:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/objective-c/'>objective-c</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -224,95 +335,6 @@ NSMutableData Nov 11th, 2010 &hellip;">
 
 
 	<a class='category' href='/post/categories/objective-c/'>objective-c</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2010/11/09/p-1521227799/">
-		
-			Erlang &#8216;Bang&#8217; Operator</a>
-	</h2>
-	<div class="entry-content">
-		<p>The basic operator for sending a message is !, pronounced <em>bang</em>,and it&rsquo;s used in the form <code>Destination ! Message</code>.</p>
-
-<ul>
-<li>from <em>Erlang and OTP in Action</em></li>
-</ul>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-09T13:29:00+11:00" pubdate data-updated="true">Nov 9<span>th</span>, 2010</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/erlang/'>erlang</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2010/11/04/p-1476214420/">
-		
-			Statistical Arbitrage</a>
-	</h2>
-	<div class="entry-content">
-		<p>A portfolio of Stocks is constructed by buying previous under-performing stocks, and short-selling previous outperforming stocks by the same dollar amount.</p>
-
-<p>This quantitative equity market-neutral strategy is simple enough to yield analytically tractable expressions for its statistical properties, and realistic enough to illustrate many of the practical challenges of this particular part of the financial industry, which has come to be known as &lsquo;statistical arbitrage&rsquo; or &lsquo;statarba&rsquo;</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-04T14:04:00+11:00" pubdate data-updated="true">Nov 4<span>th</span>, 2010</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/finance/'>finance</a>
 
 
 </div>

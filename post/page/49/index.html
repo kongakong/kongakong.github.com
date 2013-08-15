@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Apparently my first attempt to run ‘./bin/pip install scipy’ in virtualenv on OSX lion has failed with bunch of error messages. But second run just &hellip;">
+	<meta name="description" content=" It is a follow-up on an May 4th, 2012 pybrain, python, ubuntu, virtualenv ">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,135 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/05/04/p-22378145113/">
+		
+			It Is a Follow-up on An</a>
+	</h2>
+	<div class="entry-content">
+		<p>It is a follow-up on an</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-04T21:32:00+10:00" pubdate data-updated="true">May 4<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/pybrain/'>pybrain</a>, <a class='category' href='/post/categories/python/'>python</a>, <a class='category' href='/post/categories/ubuntu/'>ubuntu</a>, <a class='category' href='/post/categories/virtualenv/'>virtualenv</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/05/03/p-22317238609/">
+		
+			The Pip Cannot Install Scipy Properly.</a>
+	</h2>
+	<div class="entry-content">
+		<p>The pip cannot install scipy properly.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>mport pybrain
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "", line 1, in 
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/__init__.py", line 1, in 
+</span><span class='line'>    from structure.__init__ import *
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/__init__.py", line 2, in 
+</span><span class='line'>    from modules.__init__ import *
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/__init__.py", line 2, in 
+</span><span class='line'>    from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py", line 11, in 
+</span><span class='line'>    from pybrain.tools.functions import sigmoid, sigmoidPrime
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py", line 4, in 
+</span><span class='line'>    from scipy.linalg import inv, det, svd
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/__init__.py", line 115, in 
+</span><span class='line'>    from misc import *
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py", line 3, in 
+</span><span class='line'>    import fblas
+</span><span class='line'>ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:
+</span><span class='line'>    /Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-03T22:21:00+10:00" pubdate data-updated="true">May 3<span>rd</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/pip/'>pip</a>, <a class='category' href='/post/categories/scipy/'>scipy</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -296,113 +425,6 @@
 
 	<a class='category' href='/post/categories/numpy/'>numpy</a>, <a class='category' href='/post/categories/pip/'>pip</a>, <a class='category' href='/post/categories/ubuntu/'>ubuntu</a>
 
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/05/02/p-22193612740/">
-		
-			Installing Scipy in Ubuntu</a>
-	</h2>
-	<div class="entry-content">
-		<p>Trying to install scipy in ubuntu. Ran <code>pip install scipy</code></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>numpy.distutils.system_info.BlasNotFoundError:
-</span><span class='line'>
-</span><span class='line'>    Blas (http://www.netlib.org/blas/) libraries not found.
-</span><span class='line'>
-</span><span class='line'>    Directories to search for the libraries can be specified in the
-</span><span class='line'>
-</span><span class='line'>    numpy/distutils/site.cfg file (section [blas]) or by setting
-</span><span class='line'>
-</span><span class='line'>    the BLAS environment variable.</span></code></pre></td></tr></table></div></figure>
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T00:49:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/python/'>python</a>, <a class='category' href='/post/categories/scipy/'>scipy</a>, <a class='category' href='/post/categories/ubuntu/'>ubuntu</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/05/01/p-22189295387/">
-		
-			Install Virtualenv</a>
-	</h2>
-	<div class="entry-content">
-		<p>For my setup (<code>python</code> from <code>brew</code>), I should run this to install virtualenv</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>/usr/local/share/python/pip install  virtualenv
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-01T22:31:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2012</time></div>
-	<div class="tags">
 
 </div>
 	

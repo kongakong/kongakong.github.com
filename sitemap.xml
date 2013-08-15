@@ -3680,15 +3680,25 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/post/2013/08/04/simple-swap-calculation/</loc>
-        <lastmod>2013-08-07T07:17:30+10:00</lastmod>
+        <lastmod>2013-08-08T19:22:30+10:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://kongakong.github.io/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/
+        </loc>
+        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/08/11/var-in-r/</loc>
+        <lastmod>2013-08-16T04:50:02+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-08-07T07:17:30+10:00</lastmod>
+        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-08-07T07:17:30+10:00</lastmod>
+        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3696,6 +3706,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-08-07T07:17:30+10:00</lastmod>
+        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
     </url>
 </urlset>
