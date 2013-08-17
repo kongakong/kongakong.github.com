@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TIL | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/til/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-08-16T05:14:13+10:00</updated>
+  <updated>2013-08-17T11:32:57+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn something about /tmp on OSX today]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/"/>
+    <updated>2013-08-12T11:02:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today</id>
+    <content type="html"><![CDATA[<p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
+
+<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Health system in Oregon]]></title>
@@ -63,15 +74,6 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
     <updated>2012-07-20T19:55:00+10:00</updated>
     <id>http://kongakong.github.io/post/2012/07/20/p-27619704546</id>
     <content type="html"><![CDATA[<p>iOS 5 added a remote virtual interface (RVI) facility that lets you use Mac OS X packet trace programs to capture traces from an iOS device.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Petrine Doctrine]]></title>
-    <link href="http://kongakong.github.io/post/2012/07/17/p-27399935153/"/>
-    <updated>2012-07-17T19:54:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/07/17/p-27399935153</id>
-    <content type="html"><![CDATA[<p>The belief that Saint Peter was given special authority by Christ that has since passed on to each Pope. The Archbishop of Rome (i.e. the Pope) was in direct apostolic lineage back to Saint Peter</p>
 ]]></content>
   </entry>
   

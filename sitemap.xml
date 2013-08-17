@@ -3693,12 +3693,18 @@
         <lastmod>2013-08-16T04:50:02+10:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/
+        </loc>
+        <lastmod>2013-08-17T11:32:42+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
+        <lastmod>2013-08-17T11:32:42+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
+        <lastmod>2013-08-17T11:32:42+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3706,6 +3712,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-08-16T05:13:59+10:00</lastmod>
+        <lastmod>2013-08-17T11:32:42+10:00</lastmod>
     </url>
 </urlset>
