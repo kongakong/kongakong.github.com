@@ -3,7 +3,7 @@ layout: post
 title: "Simple Swap Calculation"
 date: 2013-08-04 17:34
 comments: true
-categories: erlang swap
+categories: erlang swap zero_coupon_method
 ---
 
 
@@ -27,13 +27,16 @@ example1() ->
     {Fixed, Floating, Fixed-Floating}.
 
 example1_fixedleg() ->
-    50 / math:pow(1+0.03, 1/4) + 1050/math:pow(1+0.03, 3/4).
+    30 / math:pow(1+0.04, 1/4) + 1030/math:pow(1+0.05, 3/4).
 
 example1_floatingleg() ->
-    %% 25 is 1000 * 5% * 1/2
-    25 / math:pow(1+0.04, 1/4) + 1000/math:pow(1+0.05, 1/4).
+    % 25 - next floating cash-flow payment 
+    % 1000 - the notional as if it is a zero-coupon bond
+    25 / math:pow(1+0.05, 1/4) + 1000/math:pow(1+0.05, 1/4).
+    
+
 
 {% endcodeblock %}
 
 
-**Answer**: {1076.6104451243634,1012.6326158166382,63.97782930772519}
+**Answer**: {1022.6981406074298,1012.5734611086509,10.124679498778846} 
