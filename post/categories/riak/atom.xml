@@ -4,7 +4,7 @@
   <title><![CDATA[Category: riak | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/riak/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-08-17T18:09:58+10:00</updated>
+  <updated>2013-08-25T19:07:34+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[riak allow-multi]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/15/riak-allow-multi/"/>
+    <updated>2013-08-15T01:04:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/15/riak-allow-multi</id>
+    <content type="html"><![CDATA[<p>I could not create a write conflict situation.</p>
+
+<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
+
+<p>Here is the command line:</p>
+
+<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to make riak listen to IP other than localhost]]></title>

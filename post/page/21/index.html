@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Q: Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. &hellip;">
+	<meta name="description" content="The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,115 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/08/13/p-29329230595/">
+		
+			The Importance of the Idea of &#8216;Map&#8217;</a>
+	</h2>
+	<div class="entry-content">
+		<blockquote><p>The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.</p></blockquote>
+
+<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/2QgZVYI3tDs&t=22m0s "></iframe></div>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-13T19:42:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/mit-6-dot-001-structure-and-interpretation/'>MIT_6.001_Structure_and_Interpretation</a>, <a class='category' href='/post/categories/mit/'>mit</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/08/12/p-29256890594/">
+		
+			How to Dismiss a Modal View Controller Which Is Created by a Segue in Storyboard?</a>
+	</h2>
+	<div class="entry-content">
+		<p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But it does not work in storyboard anymore.</p>
+
+<p>This is the solution:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-12T19:50:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/ios/'>ios</a>, <a class='category' href='/post/categories/storyboard/'>storyboard</a>, <a class='category' href='/post/categories/uiviewcontoller/'>uiviewcontoller</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -233,109 +342,6 @@
 
 	<a class='category' href='/post/categories/ios/'>ios</a>, <a class='category' href='/post/categories/xocde4/'>xocde4</a>
 
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/08/08/p-28973709805/">
-		
-			Got This Error Message in Xcode</a>
-	</h2>
-	<div class="entry-content">
-		<p>Got this error message in xcode</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
-</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
-</span><span class='line'> a UITableView.'
-</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-08T19:53:00+10:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/ios/'>ios</a>, <a class='category' href='/post/categories/objective-c/'>objective-c</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/08/07/p-28901315549/">
-		
-			In Ocaml, “let Rec” Defines a Recursive Function, for Example:</a>
-	</h2>
-	<div class="entry-content">
-		<p>In ocaml, “let rec” defines a recursive function, for example:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="o">#</span> <span class="k">let</span> <span class="k">rec</span> <span class="n">ipow</span> <span class="n">n</span> <span class="n">m</span> <span class="o">=</span> <span class="k">if</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">ipow</span> <span class="n">n</span> <span class="o">(</span><span class="n">m</span> <span class="o">-</span><span class="mi">1</span><span class="o">);;</span>
-</span><span class='line'><span class="k">val</span> <span class="n">ipow</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">=</span> <span class="o">&lt;</span><span class="k">fun</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">#</span> <span class="n">ipow</span> <span class="mi">7</span> <span class="mi">8</span><span class="o">;;</span>
-</span><span class='line'><span class="o">-</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">5764801</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-07T19:59:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2012</time></div>
-	<div class="tags">
 
 </div>
 	

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-08-17T18:09:58+10:00</updated>
+  <updated>2013-08-25T19:07:34+10:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[riak allow-multi]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/15/riak-allow-multi/"/>
+    <updated>2013-08-15T01:04:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/15/riak-allow-multi</id>
+    <content type="html"><![CDATA[<p>I could not create a write conflict situation.</p>
+
+<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
+
+<p>Here is the command line:</p>
+
+<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress's Liquid Exception]]></title>
+    <link href="http://kongakong.github.io/post/2013/08/13/octopresss-liquid-exception/"/>
+    <updated>2013-08-13T18:47:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2013/08/13/octopresss-liquid-exception</id>
+    <content type="html"><![CDATA[<p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
+
+<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
+</code></pre>
+
+<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to make riak listen to IP other than localhost]]></title>
@@ -120,28 +150,6 @@
 <p> Examples: Riak, Redis, Voldemort</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Concurrency and Parallelism]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism/"/>
-    <updated>2013-07-26T21:41:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism</id>
-    <content type="html"><![CDATA[<blockquote><p>One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you express things that are independent, as independent executions and parallelism is about running two things at the same time. They are not the same idea and a lot of people confuse them, they think they are the same thing, but concurrency and parallelism are best thought of as a different idea. You can write beautiful concurrent programs with no parallelism whatsoever and you can also write extremely parallel programs that are not remotely concurrent. Concurrency is a model, parallelism is a result &ndash; maybe that&rsquo;s the best way to say it.</p></blockquote>
-
-<p>- Rob Pike</p>
-
-<p>Source: <a href="http://www.infoq.com/interviews/pike-concurrency">Infoq</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[MFA]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/17/mfa/"/>
-    <updated>2013-07-17T08:31:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/17/mfa</id>
-    <content type="html"><![CDATA[<p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
 ]]></content>
   </entry>
   

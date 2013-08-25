@@ -7,7 +7,11 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content=" Apr 30th, 2012 ">
+	<meta name="description" content="For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries. 1
+2
+3
+4
+5 $ ls -l /usr &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +85,111 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/04/30/p-22117940575/">
+		
+			Very Old Easy_install</a>
+	</h2>
+	<div class="entry-content">
+		<p>For some reason I do not understand I had a very old version of easy_install in /usr/local/bin which I use for brew binaries.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>$ ls -l /usr/local/bin/easy_install
+</span><span class='line'>-rwxr-xr-x  1 root  wheel  364 28 Feb  2009 /usr/local/bin/easy_install
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The shebang of <code>easy_install</code> is sTILl pointing to a python 2.5 installation</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-30T21:42:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2012/04/30/p-22116078999/">
+		
+			Install Python 2.7 Using Brew</a>
+	</h2>
+	<div class="entry-content">
+		<p>Install python 2.7 using brew. Brew also downloaded and installed <code>distribute</code></p>
+
+<p>&#8220;`</p>
+
+<p>$ brew install python
+==> Installing python dependency: sqlite
+==> Downloading</p>
+
+<p><a href="http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz">http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz</a></p>
+
+<p><a href="http://ftpmirror.gnu.org/gdbm/gdbm-1.10.tar.gz">http://ftpmirror.gnu.org/gdbm/gdbm-1.10.tar.gz</a></p>
+
+<p><a href="http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2">http://www.python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2</a></p>
+
+<p><a href="http://pypi.python.org/packages/source/d/distribute/distribute-0.6.24.tar.gz">http://pypi.python.org/packages/source/d/distribute/distribute-0.6.24.tar.gz</a></p>
+
+<p><a href="https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python">https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python</a></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-30T20:21:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2012</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -193,345 +302,6 @@
 
 <time datetime="2012-04-29T20:21:00+10:00" pubdate data-updated="true">Apr 29<span>th</span>, 2012</time></div>
 	<div class="tags">
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/04/29/p-22027054462/">
-		
-			Updating Virtual Box to Version 4.1.14</a>
-	</h2>
-	<div class="entry-content">
-		<p>Updating Virtual box to version 4.1.14</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-29T13:56:00+10:00" pubdate data-updated="true">Apr 29<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/virtualbox/'>virtualbox</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2012/04/28/p-21971423940/">
-		
-			Byte-compiling Error</a>
-	</h2>
-	<div class="entry-content">
-		<p>Had  a bunch of byte-compiling error when running <code>python3 distribute_setup.py</code></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-<span class='line-number'>102</span>
-<span class='line-number'>103</span>
-<span class='line-number'>104</span>
-<span class='line-number'>105</span>
-<span class='line-number'>106</span>
-<span class='line-number'>107</span>
-<span class='line-number'>108</span>
-<span class='line-number'>109</span>
-<span class='line-number'>110</span>
-<span class='line-number'>111</span>
-<span class='line-number'>112</span>
-<span class='line-number'>113</span>
-<span class='line-number'>114</span>
-<span class='line-number'>115</span>
-<span class='line-number'>116</span>
-<span class='line-number'>117</span>
-<span class='line-number'>118</span>
-<span class='line-number'>119</span>
-<span class='line-number'>120</span>
-<span class='line-number'>121</span>
-<span class='line-number'>122</span>
-<span class='line-number'>123</span>
-<span class='line-number'>124</span>
-<span class='line-number'>125</span>
-<span class='line-number'>126</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/easy_install.py to easy_install.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/pkg_resources.py to pkg_resources.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/pkg_resources.py", line 45
-</span><span class='line'>    def _bypass_ensure_directory(name, mode=0777):
-</span><span class='line'>                                               ^
-</span><span class='line'>SyntaxError: invalid token
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/__init__.py to __init__.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/archive_uTIL.py to archive_uTIL.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/__init__.py to __init__.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/alias.py to alias.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/alias.py", line 12
-</span><span class='line'>    if arg.split()[arg]:
-</span><span class='line'>                   ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_egg.py to bdist_egg.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_egg.py", line 410
-</span><span class='line'>    if safe is None or bool(safe)flag:
-</span><span class='line'>                                  ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_rpm.py to bdist_rpm.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/bdist_wininst.py to bdist_wininst.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/build_ext.py to build_ext.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/build_py.py to build_py.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/develop.py to develop.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/easy_install.py to easy_install.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/easy_install.py", line 195
-</span><span class='line'>    print 'distribute %s' % get_distribution('distribute').version
-</span><span class='line'>                        ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/egg_info.py to egg_info.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install.py to install.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_egg_info.py to install_egg_info.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_lib.py to install_lib.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_scripts.py to install_scripts.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/install_scripts.py", line 52
-</span><span class='line'>    chmod(target,0755)
-</span><span class='line'>                    ^
-</span><span class='line'>SyntaxError: invalid token
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/register.py to register.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/rotate.py to rotate.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/saveopts.py to saveopts.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/sdist.py to sdist.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/setopt.py to setopt.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/test.py to test.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload.py to upload.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload.py", line 158
-</span><span class='line'>    raise AssertionError, "unsupported schema "+schema
-</span><span class='line'>                        ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload_docs.py to upload_docs.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/command/upload_docs.py", line 160
-</span><span class='line'>    except socket.error, e:
-</span><span class='line'>                       ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/depends.py to depends.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/depends.py", line 39
-</span><span class='line'>    str(version)"unknown" and version &gt;= self.requested_version
-</span><span class='line'>                 ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/dist.py to dist.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/dist.py", line 103
-</span><span class='line'>    except ValueError, e:
-</span><span class='line'>                     ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/extension.py to extension.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/package_index.py to package_index.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/package_index.py", line 355
-</span><span class='line'>    if cs.hexdigest()info[4:]:
-</span><span class='line'>                      ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/sandbox.py to sandbox.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/sandbox.py", line 35
-</span><span class='line'>    except SystemExit, v:
-</span><span class='line'>                     ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/script template (dev).py to script template (dev).cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/script template.py to script template.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/__init__.py to __init__.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/doctest.py to doctest.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/doctest.py", line 370
-</span><span class='line'>    raise TypeError, 'Expected a module: %r' % module
-</span><span class='line'>                   ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/server.py to server.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_build_ext.py to test_build_ext.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_develop.py to test_develop.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_develop.py", line 76
-</span><span class='line'>    except DistuTILsError, e:
-</span><span class='line'>                         ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_easy_install.py to test_easy_install.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_packageindex.py to test_packageindex.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_packageindex.py", line 17
-</span><span class='line'>    except Exception, v:
-</span><span class='line'>                    ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_resources.py to test_resources.cpython-33.pyc
-</span><span class='line'>  File "/Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_resources.py", line 640
-</span><span class='line'>    except ImportError, e:
-</span><span class='line'>                      ^
-</span><span class='line'>SyntaxError: invalid syntax
-</span><span class='line'>
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_sandbox.py to test_sandbox.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/setuptools/tests/test_upload_docs.py to test_upload_docs.cpython-33.pyc
-</span><span class='line'>byte-compiling /Users/antkong/local/lib/python3.3/site-packages/site.py to site.cpython-33.pyc
-</span><span class='line'>running install_egg_info
-</span><span class='line'>Writing /Users/antkong/local/lib/python3.3/site-packages/distribute-0.6.26-py3.3.egg-info
-</span><span class='line'>After install bootstrap.
-</span><span class='line'>Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools-0.6c11-py3.3.egg-info
-</span><span class='line'>Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools.pth
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-28T21:41:00+10:00" pubdate data-updated="true">Apr 28<span>th</span>, 2012</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/distribute/'>distribute</a>, <a class='category' href='/post/categories/python3/'>python3</a>
-
 
 </div>
 	

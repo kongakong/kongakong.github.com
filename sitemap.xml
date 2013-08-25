@@ -3699,12 +3699,20 @@
         <lastmod>2013-08-17T11:32:42+10:00</lastmod>
     </url>
     <url>
+        <loc>http://kongakong.github.io/post/2013/08/13/octopresss-liquid-exception/</loc>
+        <lastmod>2013-08-25T08:38:09+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/08/15/riak-allow-multi/</loc>
+        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-08-17T18:09:48+10:00</lastmod>
+        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-08-17T18:09:48+10:00</lastmod>
+        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3712,6 +3720,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-08-17T18:09:48+10:00</lastmod>
+        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
     </url>
 </urlset>

@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="Problem Definition: Euler Problem 2In order to solve this problem in python, I have used the yield keyword to implements a generator to provide a &hellip;">
+	<meta name="description" content="Problem Definition: Euler Problem 3Obviously, these scripts did not actually implement the solution. The problem statement required to pick the &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,88 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2008/01/29/5132302946249986477/">
+		
+			Little Erlang Exercise 3</a>
+	</h2>
+	<div class="entry-content">
+		<p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=3">Euler Problem 3</a><br /><br />Obviously, these scripts did not actually implement the solution. The problem statement required to pick the largest factor, but I just realized I had not done it.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br /><br />The prime factors of 13195 are 5, 7, 13 and 29.<br /><br />What is the largest prime factor of the number 317584931803?<br /><br />&rdquo;&ldquo;&rdquo;<br /><br />import sys<br /><br />primes = []<br /><br />def isprime(N):<br />  &ldquo;&rdquo;&ldquo;<br />    Original version use xrange, but caused<br /><br />    "OverflowException: long int too large to convert to int&rdquo;<br /><br />    when taking in a large number<br />   <br />    So, I have to use while loop to replace &ldquo;for i in xrange(2, N):&rdquo;<br /><br />    And in order to speed up the process, the prime calculation result<br />    is cached<br />  &ldquo;&rdquo;&ldquo;<br />  global primes<br /><br />  # we have already tested it<br />  if N in primes:<br />    return True<br /><br />  # use the prime results first <br />  for i in primes:<br />    if (N % i) == 0:<br />      return False<br /><br />  # now computation is required<br />  maxprime = 2<br />  if len(primes) > 0:<br />    maxprime = primes[-1]<br /><br />  i = maxprime + 1<br />  while i &lt; N:<br />    if (N % i) == 0:<br />      return False<br />    i = i + 1<br /><br />  primes.append(N)<br />  return True<br /><br /><br />def factorise(N):<br />  &rdquo;&ldquo;&rdquo;<br />    to factorise a integer<br />    <br />  &ldquo;&rdquo;&ldquo;<br />  # short cut<br />  global primes<br />  res = []<br /><br />  if N in primes:<br />    res.append(N)<br />    return res<br /><br />  # original algorithm<br />  idx = 2<br />  while idx &lt;= N:<br />    if isprime(idx):<br />      div, mod = divmod(N, idx)<br />      if mod == 0:<br />        res.append(idx) <br />        res.extend(factorise(div))<br />        break<br />    idx = idx + 1<br />  return res      <br /><br />if <strong>name</strong> == &rdquo;<strong>main</strong>&ldquo;:  <br />  print factorise(int(sys.argv[1]))<br /><br /><br /></code></pre><br /><br /><br /><br />Here comes the erlang version. There is some performance issue with this version. hopefully I would have some free time soon to improve the algorithm.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p3).<br />-export([isprime/1, factorise/1]).<br /><br />%%<br />%% prime means it is not divisible by any numbers other than 1 and itself.<br />%%<br />isprime(1) &ndash;><br /> false;<br /><br />isprime(2) &ndash;><br /> true;<br /><br />isprime(N) when N > 2 &ndash;><br /> Pid = self(),<br /> C = lists:seq(2, N &ndash; 1),<br /> process_flag(trap_exit, true),<br /> lists:map(fun(Div) &ndash;><br />               spawn_link(fun() &ndash;><br />                   test_if_divisible(Pid, N, Div)<br />                   end)<br />               end, C),<br /> isprime_poll(length&copy;).<br /><br /><br />%%<br />%% Message loop: to listen and receive message from voters<br />%%<br />isprime_poll(0) &ndash;><br /> true;<br />isprime_poll(NumVote) &ndash;><br /> receive<br />   {nondivisible, <em>} &ndash;><br />       isprime_poll(NumVote &ndash; 1);<br />   {divisible, </em>} &ndash;><br />       clean_mailbox(),<br />       false<br /> end.<br /><br />%%<br />%% To clear away any messages in mailbox<br />%%<br />clean_mailbox() &ndash;><br /> receive<br />   _ &ndash;><br />     clean_mailbox()<br />   after 0 &ndash;> ok<br /> end.<br /><br />%%<br />%%<br />%%<br />test_if_divisible(Pid, N, Div) &ndash;><br /> case N rem Div of<br />   0 &ndash;> Pid ! {divisible, Div};<br />   _ &ndash;> Pid ! {nondivisible, Div}<br /> end.<br /><br />%%%<br />%%% To factorise an integer &ndash; wrappers<br />%%%<br />factorise(N) when is_list(N) &ndash;><br />   N1 = string:to_integer(N),<br />   factorise(N1, 2, []);<br /><br />factorise(N) &ndash;><br />   factorise(N, 2, []).<br /><br />%%%<br />%%% To factorise an integer<br />%%%<br />factorise(N, Factor, Result) when Factor &lt; N+1  &ndash;><br /> case isprime(Factor) of<br />   true &ndash;><br />     if<br />       (N rem Factor) == 0 &ndash;><br />         %% io:format("Residual is 0 by Factor ~p~n&rdquo;, [Factor]),<br />         factorise(N div Factor, 2, [Factor|Result]);<br />       true &ndash;><br />         factorise(N, Factor + 1, Result)<br />     end;<br />   false &ndash;><br />       factorise(N, Factor + 1, Result)<br /> end;<br /><br />factorise(<em>, </em>, Result) &ndash;><br /> R = lists:reverse(Result),<br /> %% io:format(&ldquo;~p~n&rdquo;, [R]),<br /> R.<br /><br /></code></pre></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-29T22:09:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2008</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/erlang/'>erlang</a>
+
+
+</div>
+	
+</div>
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2008/01/28/4378235237955649537/">
+		
+			Idea A</a>
+	</h2>
+	<div class="entry-content">
+		
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-28T21:12:00+11:00" pubdate data-updated="true">Jan 28<span>th</span>, 2008</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/erlang/'>erlang</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -199,88 +281,6 @@
 
 
 	<a class='category' href='/post/categories/erlang/'>erlang</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2008/01/11/jst_7368608015436447918/">
-		
-			France and Deregulation</a>
-	</h2>
-	<div class="entry-content">
-		<p>Very obviously, the martial status and love life of Sarkozy is taking the limelight, and mainstream media basically treat this story as if it belongs to entertainment section.<br /><br />Oh, well, that&rsquo;s why mainstream media is mainstream, isn&rsquo;t it?<br /><br />So, when I learn about the reform Sarkozy has brought to France, I was a bit surprised. News like this basically escape me, a news junkie.<br /><br />The following are some example:<br /><br /><ul><li>Abolished the 35 work hours/week restriction. On top of this, a worker does not have to pay tax on the income resulted from his/her overtime. Employer is also only required to pay a lesser contribution to pension and health care levy for the overtime payment.</li></ul><br /><ul><li>Simplify the tax laws: for some lower income family, a bill is passed so that a ceiling, 50%, is imposed on they have to pay to government. This does not include just income tax alone, but also covering various government fee and charge.</li></ul><br /><ul><li>Bills passed to weaken Union power</li></ul><br /><ul><li>Actively encourage the R&amp;D via financial incentive</li></ul><br /><span style="font-style: italic;">(It is reported by </span><span style="font-style: italic;">Bloomberg on the Economy</span><span style="font-style: italic;"> Podcast &ndash; Interview with </span><a style="font-style: italic;" href="http://media.bloomberg.com/bb/avfile/BBRECON/vrs30YCrvv3s.mp3">Philippe Farve</a><span style="font-style: italic;">, 21 Dec 07 )</span><br /><br />It seems like it is going to be a Generational Change in France. In the all these hype of BRIC (Bazil, Russia, India and China), people probably is not aware that Europe actually has a balanced and increasing vibrant economy.<br /><br />Next to do: get some quantitative data to verify the above view.</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T02:55:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/opinion/'>opinion</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2007/12/05/jst_8125965922181438969/">
-		
-			Have It Both Ways</a>
-	</h2>
-	<div class="entry-content">
-		<p>Just had a chat with a colleague the other day. He was watching the BoC (Bank of China) Stock. My colleague said the stock price was depressed due to its involvement  in the sub-prime market. A spokesperson of the bank said they are in it because their traders are &ldquo;inexperienced&rdquo;.<br /><br />I cannot help but laugh! &ldquo;Inexperienced&rdquo;? You really can&rsquo;t have it both way: when you are making money, you are the smartest person on the world. All the profit are the result of your vision, insight, education, risking-taking spirit, understanding of market and sophistication. But when the tide turns against you, &ldquo;Oops, ya know, this thing is kinda new to me&rdquo;. Yet handsome bonus is still waiting for you at the end of the year, like usual.<br /><br />It does not make sense to me. You should not have it both ways.<br /><br /><span style="font-style: italic;">(*What my colleague said is not fact checked)<br />(Writing in a slightly sarcastic mode)<br /></span></p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-12-05T06:16:00+11:00" pubdate data-updated="true">Dec 5<span>th</span>, 2007</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/opinion/'>opinion</a>
 
 
 </div>
