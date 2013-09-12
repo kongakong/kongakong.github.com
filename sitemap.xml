@@ -3707,12 +3707,16 @@
         <lastmod>2013-08-25T19:07:22+10:00</lastmod>
     </url>
     <url>
+        <loc>http://kongakong.github.io/post/2013/09/12/riak-content-type/</loc>
+        <lastmod>2013-09-12T22:30:15+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
+        <lastmod>2013-09-12T22:30:15+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
+        <lastmod>2013-09-12T22:30:15+10:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3720,6 +3724,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-08-25T19:07:22+10:00</lastmod>
+        <lastmod>2013-09-12T22:30:15+10:00</lastmod>
     </url>
 </urlset>

@@ -7,7 +7,7 @@
 	<meta name="author" content="Anthony Kong">
 
 	
-	<meta name="description" content="I could not create a write conflict situation. It turns out it is because I did not set the allow_multi property Here is the command line: curl -i - &hellip;">
+	<meta name="description" content="The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta rel="cannonical" href="www.ahwkong.com"
@@ -81,6 +81,54 @@
 		
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/post/2013/09/12/riak-content-type/">
+		
+			Riak Content Type</a>
+	</h2>
+	<div class="entry-content">
+		<p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
+
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):
+&ndash; application/octet-stream &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.
+&ndash; application/vnd.<company name>.<useful type name here> &ndash; a vendor-specific type, which you can create yourself
+&ndash; application/vnd.<company name>.<useful type name here>.v<version number> &ndash; another vendor-specific type, which supports versioning.</p>
+
+<p>Source: by Sam Elliott in the mailing list</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-12T22:28:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/post/categories/riak/'>riak</a>
+
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
@@ -253,49 +301,6 @@
 
 
 	<a class='category' href='/post/categories/r/'>R</a>
-
-
-</div>
-	
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/">
-		
-			How to Make Riak Listen to IP Other Than Localhost</a>
-	</h2>
-	<div class="entry-content">
-		<p>By default a riak node will only listen to 127.0.0.1.</p>
-
-<p>Replace 127.0.0.1 with the host IP in app.config will solve this issue</p>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-09T18:53:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/post/categories/erlang/'>erlang</a>, <a class='category' href='/post/categories/riak/'>riak</a>
 
 
 </div>
