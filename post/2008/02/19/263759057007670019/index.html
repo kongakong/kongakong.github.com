@@ -1,93 +1,78 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Erlang Mailing List - String as List 1 - Timeline</title>
-	<meta name="author" content="Anthony Kong">
+  <meta charset="utf-8">
+  <title>Erlang Mailing List - String as List 1 - Timeline</title>
+  <meta name="author" content="Anthony Kong">
 
-	
-	<meta name="description" content="A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea &hellip;">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta rel="cannonical" href="www.ahwkong.com"
+  
+  <meta name="description" content="A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea &hellip;">
+  
 
-	<link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.png" rel="shortcut icon">
-	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/post/2008/02/19/263759057007670019">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
 </head>
 
-
-<body>
-	<header id="header" class="inner"><h1><a href="/">Timeline</a></h1>
-<nav id="main-nav"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</nav>
-<nav id="mobile-nav">
-	<div class="alignleft menu">
-		<a class="button">Menu</a>
-		<div class="container"><ul class="main">
-	<li><a href="/">Blog</a></li>
-	<li><a href="/blog/archives">Archives</a></li>
-</ul>
-</div>
-	</div>
-	<div class="alignright search">
-		<a class="button"></a>
-		<div class="container">
-			<form action="http://google.com/search" method="get">
-				<input type="text" name="q" results="0">
-				<input type="hidden" name="q" value="site:kongakong.github.io">
-			</form>
-		</div>
-	</div>
-</nav>
-<nav id="sub-nav" class="alignright">
-	<div class="social">
-		
-		
-		<a class="google" href="https://plus.google.com/107508522522146376690?rel=author" title="Google+">Google+</a>
-		
-		
-		<a class="twitter" href="http://twitter.com/kongakong" title="Twitter">Twitter</a>
-		
-		
-		<a class="github" href="https://github.com/kongakong" title="GitHub">GitHub</a>
-		
-    
-		
-		
-		
-		
-		
-		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
-		
-    
-	</div>
-	<form class="search" action="http://google.com/search" method="get">
-		<input class="alignright" type="text" name="q" results="0">
-		<input type="hidden" name="q" value="site:kongakong.github.io">
-	</form>
-</nav>
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
 
 </header>
-	
-		
-	
-	<div id="content" class="inner"><article class="post">
-	<h2 class="title">Erlang Mailing List - String as List 1</h2>
-	<div class="entry-content"><p>A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea and insight into Erlang were poured into this discussion. I simply want to write down some interesting technical points in this blog as a digest, as a reference. <em><br /><br />It all started with a question from <span class="HcCDpe"><span email="tsuraan@gmail.com" class="EP8xU" style="color: rgb(0, 104, 28);">tsuraan</span>:<br /><br /></span><blockquote style="font-style: italic;">&ldquo;Why does erlang internally represent strings as lists?&rdquo;</blockquote><br />First response from <span class="HcCDpe"><span email="masklinn@masklinn.net" class="EP8xU" style="color: rgb(121, 6, 25);">Masklinn</span><span class="lDACoc">, and actually many other contributors share the same idea:<br /></span></span><blockquote style="font-style: italic;"><span class="HcCDpe"><span class="lDACoc"><br /></span></span>&ldquo;A lot of functional languages represent strings as lists rather than<br />arrays because lists are their basic collection datatype, and this allows the use of all the list-related functions on strings.&rdquo;</blockquote><br /><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S </span> put it in a shorter phrase: &ldquo;historical reason&rdquo;. As he pointed out, &ldquo;internal&rdquo; is not right word in the question because string was not a special type or abstraction built on top of list. A string is a list.<br /><br />He then suggested the following module for handling large text:<br /></span><br /><blockquote><span style="font-style: italic;">&ldquo;&ndash; binaries (features representation that is 1:1 with the character</span><br /><span style="font-style: italic;">encoding itself, now also (R12B) with efficient scanning and</span><br /><span style="font-style: italic;">tail-construction)</span><br /><span style="font-style: italic;">&ndash; iolists (features cheap concatenation of large texts)</span><br /><span style="font-style: italic;">&ndash; list of words and a word-dictionary (features quicker scanning of words, efficient storage too)&rdquo;</span><span class="HcCDpe"><br /></span></blockquote><span class="HcCDpe"><span class="lDACoc">Then </span></span><span class="HcCDpe"><span email="kevin@scaldeferri.com" class="EP8xU" style="color: rgb(204, 0, 96);">Kevin Scaldeferri </span></span><span class="HcCDpe"><span class="lDACoc">throws in a different point: list is not a good representation because<br /><br /></span></span><blockquote><span style="font-style: italic;" class="HcCDpe"><span class="lDACoc">&ldquo;</span></span><span style="font-style: italic;">First off, I append to strings a lot more than I prepend to them.  Yeah, I</span><br /><span style="font-style: italic;"> could work with reversed strings, but that&rsquo;s a hack to deal with using the </span><br /><span style="font-style: italic;">wrong data type.  Plus, I probably prefix match more often than suffix matching</span><br /><span style="font-style: italic;">(although this is less lopsided than append vs. prepend) &hellip;&rdquo;</span><br /></blockquote><br />Now we have a diversion, <span class="HcCDpe"><span email="vlm@lionet.info" class="EP8xU" style="color: rgb(0, 131, 145);">Lev Walkin </span></span>responded to earlier Robert&rsquo;s post about that list is an ideal string representation because it can easily accommodate UTF-16 and UTF-32.<br /><br /><blockquote><span style="font-style: italic;">&ldquo;Small correction: UTF-16 and UTF-32 are practically dead, you certainly</span><br /><span style="font-style: italic;">need to think in terms of UTF-8 nowadays.&rdquo;</span><br /><br /><br /></blockquote><span class="HcCDpe">Now we are going to have several threads going on under the same thread subject. Let&rsquo;s get to it in my next blog. But for now I will ignore UTF-8 vs UTF16/32 discussions in order to focus on Erlang features.<br /><br />End of Part 1<br /><span class="lDACoc"></span></span><br /><span style="font-size:85%;"></em> It is about summarization, so quote will be edited liberally for clarity, rather than reproduced word for word.<br /></span></p>
-</div>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
 
-
-<div class="meta">
-	<div class="date">
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Erlang Mailing List - String as List 1</h1>
+    
+    
+      <p class="meta">
+        
 
 
 
@@ -99,47 +84,174 @@
   
 
 
-<time datetime="2008-02-19T03:30:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time></div>
-	<div class="tags">
+<time datetime="2008-02-19T03:30:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
 
 
-	<a class='category' href='/post/categories/erlang/'>erlang</a>
-
-
+<div class="entry-content"><p>A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea and insight into Erlang were poured into this discussion. I simply want to write down some interesting technical points in this blog as a digest, as a reference. <em><br /><br />It all started with a question from <span class="HcCDpe"><span email="tsuraan@gmail.com" class="EP8xU" style="color: rgb(0, 104, 28);">tsuraan</span>:<br /><br /></span><blockquote style="font-style: italic;">&ldquo;Why does erlang internally represent strings as lists?&rdquo;</blockquote><br />First response from <span class="HcCDpe"><span email="masklinn@masklinn.net" class="EP8xU" style="color: rgb(121, 6, 25);">Masklinn</span><span class="lDACoc">, and actually many other contributors share the same idea:<br /></span></span><blockquote style="font-style: italic;"><span class="HcCDpe"><span class="lDACoc"><br /></span></span>&ldquo;A lot of functional languages represent strings as lists rather than<br />arrays because lists are their basic collection datatype, and this allows the use of all the list-related functions on strings.&rdquo;</blockquote><br /><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S </span> put it in a shorter phrase: &ldquo;historical reason&rdquo;. As he pointed out, &ldquo;internal&rdquo; is not right word in the question because string was not a special type or abstraction built on top of list. A string is a list.<br /><br />He then suggested the following module for handling large text:<br /></span><br /><blockquote><span style="font-style: italic;">&ldquo;&ndash; binaries (features representation that is 1:1 with the character</span><br /><span style="font-style: italic;">encoding itself, now also (R12B) with efficient scanning and</span><br /><span style="font-style: italic;">tail-construction)</span><br /><span style="font-style: italic;">&ndash; iolists (features cheap concatenation of large texts)</span><br /><span style="font-style: italic;">&ndash; list of words and a word-dictionary (features quicker scanning of words, efficient storage too)&rdquo;</span><span class="HcCDpe"><br /></span></blockquote><span class="HcCDpe"><span class="lDACoc">Then </span></span><span class="HcCDpe"><span email="kevin@scaldeferri.com" class="EP8xU" style="color: rgb(204, 0, 96);">Kevin Scaldeferri </span></span><span class="HcCDpe"><span class="lDACoc">throws in a different point: list is not a good representation because<br /><br /></span></span><blockquote><span style="font-style: italic;" class="HcCDpe"><span class="lDACoc">&ldquo;</span></span><span style="font-style: italic;">First off, I append to strings a lot more than I prepend to them.  Yeah, I</span><br /><span style="font-style: italic;"> could work with reversed strings, but that&rsquo;s a hack to deal with using the </span><br /><span style="font-style: italic;">wrong data type.  Plus, I probably prefix match more often than suffix matching</span><br /><span style="font-style: italic;">(although this is less lopsided than append vs. prepend) &hellip;&rdquo;</span><br /></blockquote><br />Now we have a diversion, <span class="HcCDpe"><span email="vlm@lionet.info" class="EP8xU" style="color: rgb(0, 131, 145);">Lev Walkin </span></span>responded to earlier Robert&rsquo;s post about that list is an ideal string representation because it can easily accommodate UTF-16 and UTF-32.<br /><br /><blockquote><span style="font-style: italic;">&ldquo;Small correction: UTF-16 and UTF-32 are practically dead, you certainly</span><br /><span style="font-style: italic;">need to think in terms of UTF-8 nowadays.&rdquo;</span><br /><br /><br /></blockquote><span class="HcCDpe">Now we are going to have several threads going on under the same thread subject. Let&rsquo;s get to it in my next blog. But for now I will ignore UTF-8 vs UTF16/32 discussions in order to focus on Erlang features.<br /><br />End of Part 1<br /><span class="lDACoc"></span></span><br /><span style="font-size:85%;"></em> It is about summarization, so quote will be edited liberally for clarity, rather than reproduced word for word.<br /></span></p>
 </div>
-	
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T03:30:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/post/categories/erlang/'>erlang</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kongakong.github.io/post/2008/02/19/263759057007670019/" data-via="kongakong" data-counturl="http://kongakong.github.io/post/2008/02/19/263759057007670019/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/post/2008/02/19/jst_3633103838496682609/" title="Previous Post: Oversocialnetworkisation">&laquo; Oversocialnetworkisation</a>
+      
+      
+        <a class="basic-alignment right" href="/post/2008/02/19/3796997893852752275/" title="Next Post: Erlang Mailing List - String as List 2">Erlang Mailing List - String as List 2 &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-		
-		
-		<a class="addthis_button_tweet"></a>
-		
-		
-		<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-		
-		
-	</div>
-	
-</div>
-
 
 </div>
-	<footer id="footer" class="inner">Copyright &copy; 2013
 
-    Anthony Kong
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/08/15/riak-allow-multi/">riak allow-multi</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress's Liquid Exception</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn something about /tmp on OSX today</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/08/11/var-in-r/">var in R</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
+</section>
+
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/107508522522146376690?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
 
 </footer>
-	<script src="/javascripts/slash.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
+  
 
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
 
 
 
