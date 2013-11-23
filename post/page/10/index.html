@@ -255,25 +255,15 @@ dtrace &hellip;">
 			Whenever You Think You Need Urllib2, You Actually Need Requests</a>
 	</h2>
 	<div class="entry-content">
-		<p>Since I have started using python since version 2.4, I have a lot of old die-hard habit. For one, I write exception handler like this</p>
+		<p>So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.</p>
 
-<p><code>except Exception, e:</code></p>
-
-<p>instead  of</p>
-
-<p><code>except Exception as e:</code></p>
-
-<p>The later is of course a better and more flexible style.</p>
-
-<p>So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.</p>
-
-<p>It usually works great… unTIL you need something more than basic.</p>
+<p>It usually works great… until you need something more than basic.</p>
 
 <p>Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…</p>
 
 <p>Why it throws an exception <em>AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’</em>?</p>
 
-<p>OK, let’s import DefaultCookiePolicy. Then I got hit by a <em>missing domain attribute</em> exception. “Do I need to use a lower level Cookie class to set the domain?”, I wonder. Try switching to Cookie and it throw this exception</p>
+<p>OK, let&rsquo;s import DefaultCookiePolicy. Then I got hit by a <em>missing domain attribute</em> exception. &ldquo;Do I need to use a lower level Cookie class to set the domain?&rdquo;, I wonder. Try switching to Cookie and it throw this exception</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
