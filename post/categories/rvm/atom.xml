@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rvm | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/rvm/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-11-27T20:54:19+11:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rvm install problem]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/27/rvm-install/"/>
+    <updated>2013-11-27T20:24:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/27/rvm-install</id>
+    <content type="html"><![CDATA[<p>At first the &lsquo;rvm install ruby-1.9.3-p484&rsquo; did not work on OSX. The extra &lsquo;&mdash;with-gcc=clang&rsquo; parameter fixed the issue</p>
+]]></content>
+  </entry>
+  
+</feed>
