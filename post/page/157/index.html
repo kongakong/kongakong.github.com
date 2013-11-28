@@ -9,14 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Usage: 1
+  <meta name="description" content="NSArchiver NSUnarchiver NSKeyedArchiver NSKeyedUnarchiver NSPortCoder NSObject supports 1
 2
 3
 4
-5
-6
-7
-NSBundle *bundle = [NSBundle mainBundle]; NSString *imagePath = [bundle pathForResource:@&quot;mug_shot&quot; ofType:@&quot;tiff &hellip;">
+- (void) encodeWithCoder:(NSCoder *) encoder; - (id) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +69,64 @@ NSBundle *bundle = [NSBundle mainBundle]; NSString *imagePath = [bundle pathForR
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541936274/">Objective-c: Archiving Objects</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:29:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>NSArchiver</em></p>
+
+<p><em>NSUnarchiver</em></p>
+
+<p><em>NSKeyedArchiver</em></p>
+
+<p><em>NSKeyedUnarchiver</em></p>
+
+<p><em>NSPortCoder</em></p>
+
+<p>NSObject supports</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- (void) encodeWithCoder:(NSCoder *) encoder;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>- (id) initWithCoder:(NSCoder *) decoder;</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -265,42 +320,6 @@ NSBundle *bundle = [NSBundle mainBundle]; NSString *imagePath = [bundle pathForR
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/11/10/p-1533666302/">Objective-c: Autorelease</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-10T23:39:00+11:00" pubdate data-updated="true">Nov 10<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Adds the object to the current autorelease pool. This allows you to release your interest in an object without immediately causing the retain count to reach 0. When the autorelease pool is itself released, it sends the release message to every object it contains. This is most useful when you want to pass the object to another object as a return value and won’t have the opportunity to release the object later by yourself.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/158/">&larr; Older</a>
@@ -318,6 +337,10 @@ NSBundle *bundle = [NSBundle mainBundle]; NSString *imagePath = [bundle pathForR
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: isa is deprecated</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/27/rvm-install/">rvm install problem</a>
       </li>
     
@@ -331,10 +354,6 @@ NSBundle *bundle = [NSBundle mainBundle]; NSString *imagePath = [bundle pathForR
     
       <li class="post">
         <a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn something about /tmp on OSX today</a>
       </li>
     
   </ul>
