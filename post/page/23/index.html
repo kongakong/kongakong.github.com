@@ -9,8 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Wat]
-">
+  <meta name="description" content="In ocaml, “let rec” defines a recursive function, for example: 1
+2
+3
+4
+# let rec ipow n m = if m = 0 then 1 else n * ipow n (m -1);;
+val ipow : int &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +70,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/07/p-28901315549/">In Ocaml, “let Rec” Defines a Recursive Function, for Example:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-07T19:59:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In ocaml, “let rec” defines a recursive function, for example:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="o">#</span> <span class="k">let</span> <span class="k">rec</span> <span class="n">ipow</span> <span class="n">n</span> <span class="n">m</span> <span class="o">=</span> <span class="k">if</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">ipow</span> <span class="n">n</span> <span class="o">(</span><span class="n">m</span> <span class="o">-</span><span class="mi">1</span><span class="o">);;</span>
+</span><span class='line'><span class="k">val</span> <span class="n">ipow</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">=</span> <span class="o">&lt;</span><span class="k">fun</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">#</span> <span class="n">ipow</span> <span class="mi">7</span> <span class="mi">8</span><span class="o">;;</span>
+</span><span class='line'><span class="o">-</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">5764801</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -217,48 +270,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/04/p-28690806918/">Trying to Retrofit Coredata Into an iOS Tabbed Application. Kind of Painful.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-04T19:22:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying to retrofit coredata into an iOS Tabbed application. Kind of painful.</p>
-
-<p>Finally get it done by these steps:</p>
-
-<p>Then I have spent a bit of time to solve the problem I have encountered before:</p>
-
-<p>Now I am woking on using static style table cells in a non-UITableViewController (Error:  <code>Static table views are only valid when embedded in UITableViewController instances</code>). Gonna be bit tough to solve</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/24/">&larr; Older</a>
@@ -276,6 +287,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: isa is deprecated</a>
       </li>
     
@@ -289,10 +304,6 @@
     
       <li class="post">
         <a href="/post/2013/08/15/riak-allow-multi/">riak allow-multi</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a>
       </li>
     
   </ul>
