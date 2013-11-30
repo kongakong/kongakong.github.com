@@ -4,7 +4,7 @@
   <title><![CDATA[Category: R | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/r/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-11-30T20:47:36+11:00</updated>
+  <updated>2013-11-30T21:17:31+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -29,16 +29,12 @@
     <id>http://kongakong.github.io/post/2012/09/27/p-32374610695</id>
     <content type="html"><![CDATA[<p>Simple R vector</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;p>x  x
-</span><span class='line'> [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
-</span><span class='line'> [16] 16 17 18 19 20</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
+<p>{% codeblock %}</p>
+
+<blockquote><p>x  x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+ [16] 16 17 18 19 20
+{% endcodeblock %}</p></blockquote>
 
 <p>[1] means the index of the element in the resultant vector</p>
 ]]></content>
