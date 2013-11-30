@@ -93,10 +93,14 @@
 
 <div class="entry-content"><p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
 
-<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):
-&ndash; application/octet-stream &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.
-&ndash; application/vnd.<company name>.<useful type name here> &ndash; a vendor-specific type, which you can create yourself
-&ndash; application/vnd.<company name>.<useful type name here>.v<version number> &ndash; another vendor-specific type, which supports versioning.</p>
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
+
+<ul>
+<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
+</ul>
+
 
 <p>Source: by Sam Elliott in the mailing list</p>
 </div>
@@ -165,6 +169,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
       </li>
     
@@ -178,10 +186,6 @@
     
       <li class="post">
         <a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/08/15/riak-allow-multi/">riak allow-multi</a>
       </li>
     
   </ul>

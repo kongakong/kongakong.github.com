@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: md5sum | Timeline]]></title>
+  <title><![CDATA[Category: MD5sum | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/md5sum/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-11-30T21:17:31+11:00</updated>
+  <updated>2013-11-30T22:29:37+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,20 +14,15 @@
 
   
   <entry>
-    <title type="html"><![CDATA[To install command md5sum in brew, run]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/07/p-6255384955/"/>
-    <updated>2011-06-07T04:49:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/07/p-6255384955</id>
-    <content type="html"><![CDATA[<p>To install command md5sum in brew, run</p>
+    <title type="html"><![CDATA[It is frustrating to use Windows]]></title>
+    <link href="http://kongakong.github.io/post/2012/08/22/p-29960657754/"/>
+    <updated>2012-08-22T21:34:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2012/08/22/p-29960657754</id>
+    <content type="html"><![CDATA[<p>It is extremely frustrating to use Windows. Any basic tool that you would expect a modern OS to have is absent in Windows. In a corporate environment a PC is locked down so it is not possible to download useful uTILities at will. To use Windows productively is always a daily struggle.</p>
 
-<p>```</p>
+<p>Today I want to find out a md5 checksum of a file in a Windows 7 PC. Of course, <code>md5sum</code> is nowhere in sight.</p>
 
-<pre><code>brew install md5sha1sum
-</code></pre>
-
-<p>```</p>
-
-<p>Note the formula is not <code>md5sum</code>.</p>
+<p>Luckily python is available on this PC. So, I rolled my own <code>md5sum</code>:</p>
 ]]></content>
   </entry>
   

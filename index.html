@@ -9,40 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Despite this wall of warnings, numpy seems to work fine 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34 &hellip;">
+  <meta name="description" content="Wanted to make a custom podspec to fix the JSONKit compilation error, as mentioned here Made a first cut and wanted to do a sanity check. At first it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +65,94 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/30/pod-spec-lint/">Pod Spec Lint</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-30T21:26:00+11:00" pubdate data-updated="true">Nov 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to make a custom podspec to fix the JSONKit compilation error, as mentioned <a href="http://www.ahwkong.com/post/2013/11/28/jsonkit-isa-is-deprecated/">here</a></p>
+
+<p>Made a first cut and wanted to do a sanity check. At first it did not look good.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>
+</span><span class='line'>[!] Unable to find a spec named `/Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec'.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are several issues here:</p>
+
+<ul>
+<li>the pod lint does not take a file parameter</li>
+<li>the pod runtime expects the spec file to use file extension <code>podspec</code>.</li>
+</ul>
+
+
+<p>Fixed the above and committed the code change. Now I got these error messages:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint
+</span><span class='line'>
+</span><span class='line'> -> JSONKit (1.6)
+</span><span class='line'>    - WARN  | Git sources should specify a tag.
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture x86_64
+</span><span class='line'>    - NOTE  | [xcodebuild]  JSONKit/JSONKit.m:2600:77: warning: bitmasking for introspection of Objective-C object pointers is strongly discouraged [-Wdeprecated-objc-pointer-introspection]
+</span><span class='line'>    - WARN  | Unable to find a license file
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7s
+</span><span class='line'>
+</span><span class='line'>Analyzed 1 podspec.
+</span><span class='line'>
+</span><span class='line'>[!] The spec did not pass validation.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Need to work on the two warnings</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2509,7 +2564,7 @@
   </header>
 
 
-  <div class="entry-content"><p>At first the &lsquo;rvm install ruby-1.9.3-p484&rsquo; did not work on OSX. The extra &lsquo;&mdash;with-gcc=clang&rsquo; parameter fixed the issue</p>
+  <div class="entry-content"><p>At first the <code>rvm install ruby-1.9.3-p484</code> did not work on OSX. The extra <code>--with-gcc=clang</code> parameter fixed the issue</p>
 </div>
   
   
@@ -2547,55 +2602,16 @@
 
   <div class="entry-content"><p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
 
-<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):
-&ndash; application/octet-stream &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.
-&ndash; application/vnd.<company name>.<useful type name here> &ndash; a vendor-specific type, which you can create yourself
-&ndash; application/vnd.<company name>.<useful type name here>.v<version number> &ndash; another vendor-specific type, which supports versioning.</p>
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
+
+<ul>
+<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
+</ul>
+
 
 <p>Source: by Sam Elliott in the mailing list</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/15/riak-allow-multi/">Riak Allow-multi</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-15T01:04:00+10:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I could not create a write conflict situation.</p>
-
-<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
-
-<p>Here is the command line:</p>
-
-<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
-</code></pre>
 </div>
   
   
@@ -2618,6 +2634,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
       </li>
     
@@ -2631,10 +2651,6 @@
     
       <li class="post">
         <a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/08/15/riak-allow-multi/">riak allow-multi</a>
       </li>
     
   </ul>

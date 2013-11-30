@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-11-30T21:15:32+11:00</updated>
+  <updated>2013-11-30T22:29:37+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,67 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pod spec lint]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/30/pod-spec-lint/"/>
+    <updated>2013-11-30T21:26:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/30/pod-spec-lint</id>
+    <content type="html"><![CDATA[<p>Wanted to make a custom podspec to fix the JSONKit compilation error, as mentioned <a href="http://www.ahwkong.com/post/2013/11/28/jsonkit-isa-is-deprecated/">here</a></p>
+
+<p>Made a first cut and wanted to do a sanity check. At first it did not look good.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>
+</span><span class='line'>[!] Unable to find a spec named `/Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec'.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are several issues here:</p>
+
+<ul>
+<li>the pod lint does not take a file parameter</li>
+<li>the pod runtime expects the spec file to use file extension <code>podspec</code>.</li>
+</ul>
+
+
+<p>Fixed the above and committed the code change. Now I got these error messages:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint
+</span><span class='line'>
+</span><span class='line'> -> JSONKit (1.6)
+</span><span class='line'>    - WARN  | Git sources should specify a tag.
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture x86_64
+</span><span class='line'>    - NOTE  | [xcodebuild]  JSONKit/JSONKit.m:2600:77: warning: bitmasking for introspection of Objective-C object pointers is strongly discouraged [-Wdeprecated-objc-pointer-introspection]
+</span><span class='line'>    - WARN  | Unable to find a license file
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7s
+</span><span class='line'>
+</span><span class='line'>Analyzed 1 podspec.
+</span><span class='line'>
+</span><span class='line'>[!] The spec did not pass validation.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Need to work on the two warnings</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[easy_install numpy]]></title>
@@ -2346,7 +2407,7 @@
     <link href="http://kongakong.github.io/post/2013/11/27/rvm-install/"/>
     <updated>2013-11-27T20:24:00+11:00</updated>
     <id>http://kongakong.github.io/post/2013/11/27/rvm-install</id>
-    <content type="html"><![CDATA[<p>At first the &lsquo;rvm install ruby-1.9.3-p484&rsquo; did not work on OSX. The extra &lsquo;&mdash;with-gcc=clang&rsquo; parameter fixed the issue</p>
+    <content type="html"><![CDATA[<p>At first the <code>rvm install ruby-1.9.3-p484</code> did not work on OSX. The extra <code>--with-gcc=clang</code> parameter fixed the issue</p>
 ]]></content>
   </entry>
   
@@ -2357,10 +2418,14 @@
     <id>http://kongakong.github.io/post/2013/09/12/riak-content-type</id>
     <content type="html"><![CDATA[<p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
 
-<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):
-&ndash; application/octet-stream &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.
-&ndash; application/vnd.<company name>.<useful type name here> &ndash; a vendor-specific type, which you can create yourself
-&ndash; application/vnd.<company name>.<useful type name here>.v<version number> &ndash; another vendor-specific type, which supports versioning.</p>
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
+
+<ul>
+<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
+</ul>
+
 
 <p>Source: by Sam Elliott in the mailing list</p>
 ]]></content>
@@ -2666,21 +2731,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[More blog maintenance]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/12/more-blog-maintenance/"/>
-    <updated>2013-07-12T20:50:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/12/more-blog-maintenance</id>
-    <content type="html"><![CDATA[<p>Found some good resource&hellip;</p>
-
-<p><a href="http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/">http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/</a></p>
-
-<p><a href="http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times">http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times</a></p>
-
-<p><a href="http://decodize.com/html/moving-from-wordpress-to-octopress/">http://decodize.com/html/moving-from-wordpress-to-octopress/</a></p>
 ]]></content>
   </entry>
   

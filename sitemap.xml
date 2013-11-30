@@ -3708,11 +3708,11 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/post/2013/09/12/riak-content-type/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2013-11-30T22:15:05+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/post/2013/11/27/rvm-install/</loc>
-        <lastmod>2013-11-27T20:53:58+11:00</lastmod>
+        <lastmod>2013-11-30T22:13:52+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/post/2013/11/28/jsonkit-isa-is-deprecated/</loc>
@@ -3723,12 +3723,16 @@
         <lastmod>2013-11-30T21:09:54+11:00</lastmod>
     </url>
     <url>
+        <loc>http://kongakong.github.io/post/2013/11/30/pod-spec-lint/</loc>
+        <lastmod>2013-11-30T22:29:24+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-11-30T21:09:54+11:00</lastmod>
+        <lastmod>2013-11-30T22:29:24+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-11-30T21:09:54+11:00</lastmod>
+        <lastmod>2013-11-30T22:29:24+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3736,6 +3740,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-11-30T21:09:54+11:00</lastmod>
+        <lastmod>2013-11-30T22:29:24+11:00</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: pod | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/pod/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-11-30T22:29:37+11:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[pod spec lint]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/30/pod-spec-lint/"/>
+    <updated>2013-11-30T21:26:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/30/pod-spec-lint</id>
+    <content type="html"><![CDATA[<p>Wanted to make a custom podspec to fix the JSONKit compilation error, as mentioned <a href="http://www.ahwkong.com/post/2013/11/28/jsonkit-isa-is-deprecated/">here</a></p>
+
+<p>Made a first cut and wanted to do a sanity check. At first it did not look good.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>[!] Unable to find a spec named `/Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec'.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>There are several issues here:</p>
+
+<ul>
+<li>the pod lint does not take a file parameter</li>
+<li>the pod runtime expects the spec file to use file extension <code>podspec</code>.</li>
+</ul>
+
+
+<p>Fixed the above and committed the code change. Now I got these error messages:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ pod spec lint&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p> &ndash;> JSONKit (1.6)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>- WARN  | Git sources should specify a tag.
+</span><span class='line'>- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture x86_64
+</span><span class='line'>- NOTE  | [xcodebuild]  JSONKit/JSONKit.m:2600:77: warning: bitmasking for introspection of Objective-C object pointers is strongly discouraged [-Wdeprecated-objc-pointer-introspection]
+</span><span class='line'>- WARN  | Unable to find a license file
+</span><span class='line'>- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7
+</span><span class='line'>- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7s
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Analyzed 1 podspec.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>[!] The spec did not pass validation.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Need to work on the two warnings</p>
+]]></content>
+  </entry>
+  
+</feed>
