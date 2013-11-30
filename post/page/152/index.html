@@ -9,7 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];
+  <meta name="description" content="Modal View screws up the SplitView after dismiss. Tried if ([self modalViewController]) {
+return;
+} in willHideSplitView but it does not work
 ">
   
 
@@ -66,6 +68,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
+
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -210,44 +256,6 @@
 
 
   <div class="entry-content"><p>Cannot get UISplitViewController to rotate. Very frustrated</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/04/p-2586930582/">iOS Idiom 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-04T10:28:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To access the main window</p>
-
-<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
 </div>
   
   

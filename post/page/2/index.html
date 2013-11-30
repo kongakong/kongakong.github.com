@@ -108,6 +108,52 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/11/27/get-image-file-size/">Get Image File Size</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-27T07:28:00+11:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
+
+<p>e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ identify source/images/grab.png 
+</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a></h1>
     
     
@@ -227,44 +273,6 @@
 </code></pre>
 
 <p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn Something About /tmp on OSX Today</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-12T11:02:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
-
-<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
 </div>
   
   

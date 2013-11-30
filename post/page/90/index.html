@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Thinking about how to introduce the functool.partial function in python to non-python programmers.
+  <meta name="description" content="Trivial, unrealistic example of the application of partial()
 ">
   
 
@@ -66,6 +66,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/07/15/p-7648679705/">Trivial, Unrealistic Example of the Application of &#8220; Partial()&#8220;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-15T21:36:00+10:00" pubdate data-updated="true">Jul 15<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trivial, unrealistic example of the application of <code>partial()</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -206,50 +242,6 @@
   <div class="entry-content"><blockquote><p>I think this has been addressed in the responses; it’s not as easy as you’d think, and there are important advantages to the uniform interpretation of methods as “just functions that get called in a funky way”. In Ruby, everything is a method, or an anonymous block, and there are no “free functions”. Python uses the complimentary approach, treating functions as first-class citizens. Both approaches are complete; they are however incompatible, and you can’t easily morph one into the other. (Personally, I find that the criticm of explicit self has about as much merit as the criticism of Python’s use of whitespace.)”</p></blockquote>
 
 <p><a href="Guido%20van%20Rossum">http://www.artima.com/weblogs/viewpost.jsp?thread=214325</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/07/11/p-7462078342/">Why Do You Need Explicitly Have the &#8216;Self&#8217; Argument Into a Python Method?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-07-11T05:00:00+10:00" pubdate data-updated="true">Jul 11<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>I like to quote Peters’ Zen of Python. &ldquo;Explicit is better than implicit.&rdquo;</p>
-
-<p>I In Java and C++, <code>this</code> can be deduced, except when you have variable names that make it impossible to deduce. So you sometimes need it and sometimes don’t.</p>
-
-<p>I Python elects to make things like this explicit rather than based on a rule.</p>
-
-<p>I Additionally, since nothing is implied or assumed, parts of the implementation are exposed. <code>self.__class__</code>, <code>self.__dict__</code> and other &ldquo;internal&rdquo; structures are available in an obvious way.</p></blockquote>
-
-<p>by <a href="http://stackoverflow.com/questions/68282/why-do-you-need-explicitly-have-the-self-argument-into-a-python-method/68324#68324">S. Lott</a>]</p>
 </div>
   
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-01T07:13:01+11:00</updated>
+  <updated>2013-12-01T07:32:26+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -2470,6 +2470,25 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Get image file size]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/27/get-image-file-size/"/>
+    <updated>2013-11-27T07:28:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/27/get-image-file-size</id>
+    <content type="html"><![CDATA[<p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
+
+<p>e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ identify source/images/grab.png 
+</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Riak Content Type]]></title>
     <link href="http://kongakong.github.io/post/2013/09/12/riak-content-type/"/>
     <updated>2013-09-12T22:28:00+10:00</updated>
@@ -2698,17 +2717,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
     <updated>2013-07-17T08:31:00+10:00</updated>
     <id>http://kongakong.github.io/post/2013/07/17/mfa</id>
     <content type="html"><![CDATA[<p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[global:send_message]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/17/global-send-message/"/>
-    <updated>2013-07-17T08:31:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/17/global-send-message</id>
-    <content type="html"><![CDATA[<p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
-
-<p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
 ]]></content>
   </entry>
   

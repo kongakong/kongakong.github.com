@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-01T07:13:01+11:00</updated>
+  <updated>2013-12-01T07:32:26+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -4176,13 +4176,26 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Learn something about /tmp on OSX today]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/"/>
-    <updated>2013-08-12T11:02:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today</id>
-    <content type="html"><![CDATA[<p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
+    <title type="html"><![CDATA[Get image file size]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/27/get-image-file-size/"/>
+    <updated>2013-11-27T07:28:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/27/get-image-file-size</id>
+    <content type="html"><![CDATA[<p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
 
-<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
+<p>e.g.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ identify source/images/grab.png
+</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
