@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-11-30T22:29:37+11:00</updated>
+  <updated>2013-12-01T07:13:01+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[easy_install scipy problem]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/30/easy-install-scipy-problem/"/>
+    <updated>2013-11-30T23:22:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/30/easy-install-scipy-problem</id>
+    <content type="html"><![CDATA[<p>No luck with scipy so far</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ easy_install scipy
+</span><span class='line'>Searching for scipy
+</span><span class='line'>Reading &lt;a href="https://pypi.python.org/simple/scipy/">https://pypi.python.org/simple/scipy/&lt;/a>
+</span><span class='line'>Best match: scipy 0.13.1
+</span><span class='line'>Downloading &lt;a href="https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916">https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916&lt;/a>
+</span><span class='line'>Processing scipy-0.13.1.zip
+</span><span class='line'>Writing /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/setup.cfg
+</span><span class='line'>Running scipy-0.13.1/setup.py -q bdist_egg &mdash;dist-dir /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/egg-dist-tmp-vWQr5z
+</span><span class='line'>Running from scipy source directory.
+</span><span class='line'>Splitting linalg.interpolative Fortran source files
+</span><span class='line'>/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy-1.8.0-py2.7-macosx-10.9-x86_64.egg/numpy/distutils/system_info.py:507: UserWarning:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>UMFPACK sparse solver (http://www.cise.ufl.edu/research/sparse/umfpack/)
+</span><span class='line'>not found. Directories to search for the libraries can be specified in the
+</span><span class='line'>numpy/distutils/site.cfg file (section [umfpack]) or by setting
+</span><span class='line'>the UMFPACK environment variable.
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  warnings.warn(self.notfounderror.&lt;strong>doc&lt;/strong>)
+</span><span class='line'>error: None&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[pod spec lint]]></title>
@@ -4111,6 +4165,17 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[SystemUIServerApp]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/28/systemuiserver-app/"/>
+    <updated>2013-11-28T23:14:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/28/systemuiserver-app</id>
+    <content type="html"><![CDATA[<p>What is this about?</p>
+
+<p><img class="center" src="/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Learn something about /tmp on OSX today]]></title>
     <link href="http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/"/>
     <updated>2013-08-12T11:02:00+10:00</updated>
@@ -4118,37 +4183,6 @@
     <content type="html"><![CDATA[<p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
 
 <p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dyld: library not loaded]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/22/dyld-library-not-loaded/"/>
-    <updated>2013-06-22T15:55:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/22/dyld-library-not-loaded</id>
-    <content type="html"><![CDATA[<p><code>
-dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKit
-  Referenced from: /Users/antkong/Library/Developer/Xcode/DerivedData/ebookreader-gplhzhssjudwymcrqpmxxokvhqvn/Build/Products/Debug/ebookreader.app/Contents/MacOS/ebookreader
-  Reason: image not found
-</code></p>
-
-<p>Is it going to be <a href="http://lists.apple.com/archives/xcode-users/2008/May/msg00647.html">the answer</a>?</p>
-
-<blockquote><p>I have found a fix by getting to know what @rpath means. It is a tag placed in the generation of an executable&rsquo;s binary format indicating alternate paths to look for dependencies (including other libraries). By setting the build option &ldquo;runpath search paths&rdquo; to the developer frameworks directory, the executable looks in this place for the sen testing library at run time.</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Weird error message of 'say' in 10.8.4]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/09/p-52534137425/"/>
-    <updated>2013-06-09T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/09/p-52534137425</id>
-    <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
-
-<p><code>
-MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
-MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
-</code></p>
 ]]></content>
   </entry>
   

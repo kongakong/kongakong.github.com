@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Just found an old receipt for 4 GB RAM I purchased on 12 Aug 2009. It was for my last Mac Book Pro (pre-unibody model). It costed me A$220. And about &hellip;">
+  <meta name="description" content="I have started an instance of Ubuntu VM. However I do not know the IP of this VM. The IP of the VM is assigned by the DHCP server. I could have &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,105 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/25/p-6887207400/">VirtualBox Is So Cool</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-25T12:03:00+10:00" pubdate data-updated="true">Jun 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have started an instance of Ubuntu VM.</p>
+
+<p>However I do not know the IP of this VM. The IP of the VM is assigned by the DHCP server. I could have logged into AirPort to find out, or just log in via the Ubuntu instance’s virtual screen.</p>
+
+<p>But being a lazy bastard I would rather be able to find out this bit of information without leaving my shell (which has an active ssh session into the host PC)</p>
+
+<p>Then I discover this cool feature of <em>VirtualBox</em>: <code>guestcontrol</code></p>
+
+<p>So it is what I did:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/25/p-6885759406/">View the Packet Statistics on Solaris</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-25T11:19:00+10:00" pubdate data-updated="true">Jun 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>View the packet statistics on solaris</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ netstat -f inet
+</span><span class='line'>
+</span><span class='line'>TCP: IPv4
+</span><span class='line'>   Local Address        Remote Address    Swind Send-Q Rwind Recv-Q    State
+</span><span class='line'>-------------------- -------------------- ----- ------ ----- ------ -----------
+</span><span class='line'>10.0.1.80.ssh        10.0.1.81.49180       524280      0 128872      0 ESTABLISHED
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -182,87 +281,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767669302/">Seems Like It Is a Solution to the Problem I Described</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-22T07:27:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Seems like it is a solution to the problem I described</p>
-
-<p><a href="python%20bug%20database">http://bugs.python.org/issue11808</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767517034/">Annoying Error Message When Trying to Compile Latest Python Default Branch in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-22T07:22:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this annoying error message when trying to compile latest python default branch in OSX:</p>
-
-<p>&#8220;`</p>
-
-<p>$ make
-./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
-Traceback (most recent call last):
-  File &ldquo;/usr/local/bin/hg&rdquo;, line 4, in</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/97/">&larr; Older</a>
@@ -280,6 +298,10 @@ Traceback (most recent call last):
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
       </li>
     
@@ -288,15 +310,11 @@ Traceback (most recent call last):
       </li>
     
       <li class="post">
+        <a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: isa is deprecated</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/27/rvm-install/">rvm install problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a>
       </li>
     
   </ul>

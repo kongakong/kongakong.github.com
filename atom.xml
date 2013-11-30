@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-11-30T22:29:37+11:00</updated>
+  <updated>2013-12-01T07:13:01+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[easy_install scipy problem]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/30/easy-install-scipy-problem/"/>
+    <updated>2013-11-30T23:22:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/30/easy-install-scipy-problem</id>
+    <content type="html"><![CDATA[<p>No luck with scipy so far</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ easy_install scipy
+</span><span class='line'>Searching for scipy
+</span><span class='line'>Reading https://pypi.python.org/simple/scipy/
+</span><span class='line'>Best match: scipy 0.13.1
+</span><span class='line'>Downloading https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916
+</span><span class='line'>Processing scipy-0.13.1.zip
+</span><span class='line'>Writing /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/setup.cfg
+</span><span class='line'>Running scipy-0.13.1/setup.py -q bdist_egg --dist-dir /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/egg-dist-tmp-vWQr5z
+</span><span class='line'>Running from scipy source directory.
+</span><span class='line'>Splitting linalg.interpolative Fortran source files
+</span><span class='line'>/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy-1.8.0-py2.7-macosx-10.9-x86_64.egg/numpy/distutils/system_info.py:507: UserWarning: 
+</span><span class='line'>    UMFPACK sparse solver (http://www.cise.ufl.edu/research/sparse/umfpack/)
+</span><span class='line'>    not found. Directories to search for the libraries can be specified in the
+</span><span class='line'>    numpy/distutils/site.cfg file (section [umfpack]) or by setting
+</span><span class='line'>    the UMFPACK environment variable.
+</span><span class='line'>  warnings.warn(self.notfounderror.__doc__)
+</span><span class='line'>error: None</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[pod spec lint]]></title>
@@ -2390,6 +2437,17 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[SystemUIServerApp]]></title>
+    <link href="http://kongakong.github.io/post/2013/11/28/systemuiserver-app/"/>
+    <updated>2013-11-28T23:14:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/11/28/systemuiserver-app</id>
+    <content type="html"><![CDATA[<p>What is this about?</p>
+
+<p><img class="center" src="http://kongakong.github.io/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[JSONKit: isa is deprecated]]></title>
     <link href="http://kongakong.github.io/post/2013/11/28/jsonkit-isa-is-deprecated/"/>
     <updated>2013-11-28T07:45:00+11:00</updated>
@@ -2651,86 +2709,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
     <content type="html"><![CDATA[<p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
 
 <p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[pong and pang in erlang]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/16/erlang-and-pang/"/>
-    <updated>2013-07-16T08:00:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/16/erlang-and-pang</id>
-    <content type="html"><![CDATA[<p>I know it is quite clever to use &lsquo;pang&rsquo; to indciate the process does not exist. However both responses (&lsquo;pong&rsquo; and &lsquo;pang&rsquo;) just look too similar to each other if the terminal app uses a certain kind of font. Don&rsquo;t think i would enjoy it under stress in an operation/support situation.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">exist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
-</span><span class='line'><span class="n">pong</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">notexist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
-</span><span class='line'><span class="n">pang</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A useful Sybase tool]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/15/a-useful-sybase-tool/"/>
-    <updated>2013-07-15T23:08:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/15/a-useful-sybase-tool</id>
-    <content type="html"><![CDATA[<p><code>defncopy</code> is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development tools such as <a href="http://www.aquafold.com/aquadatastudio.html">Aqua Data Studio</a></p>
-
-<p>This utility comes with Sybase distribution. Here is its usage:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ defncopy
-</span><span class='line'> 
-</span><span class='line'>defncopy Syntax Error
-</span><span class='line'>Usage: defncopy
-</span><span class='line'>    [-v]
-</span><span class='line'>    [-W]
-</span><span class='line'>    [-X]
-</span><span class='line'>    [-a &lt;display_charset&gt;]
-</span><span class='line'>    [-I &lt;interfaces_file&gt;]
-</span><span class='line'>    [-J [&lt;client_charset&gt;]]
-</span><span class='line'>    [-K &lt;keytab_file&gt;]
-</span><span class='line'>    [-P &lt;password&gt;]
-</span><span class='line'>    [-R &lt;remote_server_principal&gt;]
-</span><span class='line'>    [-S [&lt;server_name&gt;]]
-</span><span class='line'>    [-U &lt;user_name&gt;]
-</span><span class='line'>    [-V &lt;security_options&gt;]
-</span><span class='line'>    [-Z &lt;security_mechanism&gt;]
-</span><span class='line'>    [-z &lt;language&gt;]
-</span><span class='line'>    { in &lt;file_name&gt; &lt;database_name&gt; |
-</span><span class='line'>      out &lt;file_name&gt; &lt;database_name&gt; [&lt;owner&gt;.]&lt;object_name&gt;
-</span><span class='line'>          [[&lt;owner&gt;.]&lt;object_name&gt;...] }
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   

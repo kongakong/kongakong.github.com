@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Problem Definition: Euler Problem 3Obviously, these scripts did not actually implement the solution. The problem statement required to pick the &hellip;">
+  <meta name="description" content="Problem Definition: Euler Problem 5I am rather happy with this python version because I can basically get it done in about 15 min in total. Some &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,78 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/02/01/2545374392026607944/">Little Erlang Exercise 5</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-01T23:17:00+11:00" pubdate data-updated="true">Feb 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=5">Euler Problem 5</a><br /><br />I am rather happy with this python version because I can basically get it done in about 15 min in total. Some useful primitives have been developed in module p3 (See my previous post, <a href="http://www.blogger.com/2008/01/little-erlange-exercise-3_29.html">little erlang exercise 3</a>)<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.<br /><br />What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?<br />&rdquo;&ldquo;&rdquo;<br /><br /><br />from p3 import isprime, factorise<br /><br />def product(x, y):<br /> return x * y<br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br /> factors = dict()<br /> for l in [factorise(i) for i in xrange(2, 21)]:<br />     tmp = dict()<br />     # count them<br />     for n in l:<br />         tmp[n] = 1 + tmp.get(n, 0)<br />     # reguster the max frequency of factor<br />     for k, v in tmp.items():<br />         factors[k] = max(factors.get(k, 0), v)<br /><br /> print reduce(product, [pow(k, v) for k,v in factors.items()])<br /><br /></code></pre><br /><br />However, the erlang version took me a considerable time to complete. The problem is mainly to switch from a procedural mindset to a functional mindset.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p5).<br />-import(p3).<br />-export([main/0, get_factor_freq_lst/1]).<br /><br />%% run this to print the result<br />main() &ndash;><br />  L = [ p3:factorise(X) || X &lt;&ndash; lists:seq(1, 20)],   <br />  io:format(&ldquo;~f~n&rdquo;, [product(get_factor_freq(L))]).   <br /><br />get_factor_freq(L) &ndash;><br />  Dict = dict:new(),<br />  get_factor_freq(L, Dict).<br /><br />%% spec: H, T are list of list of number<br />%% e.g. [ [N1, N1, N2&hellip;], [N1, N2&hellip;], &hellip;]<br />get_factor_freq([H|T], Dict) &ndash;><br />  Dist = get_factor_freq_lst(H),<br />  D1 = dict:from_list(Dist),<br />  D2 = dict:merge(fun(K, X, Y) &ndash;> update_if_bigger(K, X, Y) end, D1, Dict),<br />  get_factor_freq(T, D2);<br />get_factor_freq([], Dict) &ndash;><br />  dict:to_list(Dict).  %% has to convert to list<br /><br />%% Aux function<br />update_if_bigger(<em>, Initial, NewValue) when Initial &lt; NewValue &ndash;><br />  NewValue;<br />update_if_bigger(</em>, Initial, _) &ndash;><br />  Initial.<br /><br />%% This function assumes the list is sorted<br />%% This function is to delinate a list of number<br />%% into a list of {Key, Frequency}<br />get_factor_freq_lst([A|T]) when is_integer(A) &ndash;><br />  get_factor_freq_lst([{A, 1}|T]);<br />get_factor_freq_lst([{A, N}, A|T]) when is_integer(A) &ndash;><br />  get_factor_freq_lst([{A, N + 1}|T]);<br />get_factor_freq_lst([{A, N}, B|T]) when is_integer(A), is_integer(B), A /= B &ndash;><br />  get_factor_freq_lst([{B, 1}|T] ++ [{A, N}] );<br />get_factor_freq_lst(L) &ndash;><br />  L.<br /><br />%% find the product of a list of tuple {Base, Power)<br />product(L) &ndash;><br />  product(L, 1).<br />product([], Sum) &ndash;><br />  Sum;<br />product([{Base, Power}|T], Sum) &ndash;><br />  product(T, Sum * math:pow(Base, Power)).<br /><br /><br /></code></pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/31/8422387224070078892/">Little Erlang Exercise 4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-31T21:37:00+11:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=4">Euler Problem 4</a><br /><br />Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet handy.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />A palindromic number reads the same both ways. The largest palindrome<br />made from the product of two 2-digit numbers is 9009 = 91 x 99.<br /><br />Find the largest palindrome made from the product of two 3-digit numbers.<br />&rdquo;&ldquo;&rdquo;<br /><br />def isPalindromic(Num):<br />  &ldquo;&rdquo;&ldquo;<br />    For string reversal, pls check this url:<br /><br />      <a href="http://www.python.org/doc/2.3.5/whatsnew/section-slices.html">http://www.python.org/doc/2.3.5/whatsnew/section-slices.html</a><br /><br />  &rdquo;&ldquo;&rdquo;<br />  N = str(Num)<br />  l = len(N)<br />  div, mod = divmod(l, 2)<br />  if mod == 1: # odd<br />    fh = N[0:l/2]<br />    sh = N[1+l/2:]<br />    # print &ldquo;%s %s&rdquo; % (fh, sh)<br />  else:<br />    fh = N[0:l/2]<br />    sh = N[l/2:]<br />  return fh == sh[::-1]<br /><br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />  g = [ x * y for x in xrange(100, 999) for y in xrange(100, 999) ]<br />  print max(filter(lambda x: isPalindromic(x), g))<br /><br /><br /></code></pre><br /><br />Here comes an erlang version. In this rare occasion, erlang runs faster than python. It is probably because, first of all, the list comprehension I used in erlang produces a smaller list. Secondly the test of palindromic is more straightforward in the erlang version. <br /><br />I will revisit the python version, later, when I get a bit more time.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p4).<br />-export([findLargestProduct/0]).<br /><br />isPalindromic(N) when is_list(N) &ndash;><br />  N == lists:reverse(N).<br /><br />findLargestProduct() &ndash;><br />  List = [X * Y || X &lt;&ndash; lists:seq(100, 999),<br />                   Y &lt;&ndash; lists:seq(100, 999),<br />                   isPalindromic(integer_to_list(X * Y))],<br />  lists:max(List).<br /><br /><br /><br /></code><br /></pre></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -174,79 +246,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/01/11/4096780570486567751/">Little Erlange Exercise 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T13:05:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Problem definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=1">Euler Problem 1</a><br /><br />Python version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br />print reduce(lambda x, y : x + y,<br /> filter(lambda x: x % 3 == 0 or x % 5 == 0,<br /> range(1, 1001)))<br /><br /></pre><br /><br />Erlang version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br /><code><br />-module(p1).<br />-export([pr_sum/0]). %% print sum<br /><br />pr_sum() &ndash;><br />      L = lists:seq(1, 1000),<br />      L1 = [ X ||X &lt;&ndash; L, (X rem 3) == 0 orelse (X rem 5) == 0],<br />      sum(L1). <br /><br />sum(L) &ndash;> sum(L, 0).<br />sum([], Acc) &ndash;> Acc;<br />sum([H|T], Acc) &ndash;> sum(T, Acc + H).<br /></code></pre></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/01/11/2642626887724082510/">Little Erlang Exercise 1 (Template)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T11:55:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><table style="color: rgb(51, 255, 51);font-family:courier new;background-color: rgb(0, 0, 0);"><br /><tr><td><br /></td></tr><br /></table>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/185/">&larr; Older</a>
@@ -264,6 +263,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
       </li>
     
@@ -272,15 +275,11 @@
       </li>
     
       <li class="post">
+        <a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: isa is deprecated</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/27/rvm-install/">rvm install problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a>
       </li>
     
   </ul>
