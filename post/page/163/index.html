@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.
-">
+  <meta name="description" content="Another weird problem with sync’ing ipad: When it comes to photo sync, it goes “You do not have enough access privileges to sync this ipad”. It turns &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,92 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388888975/">iPad Photo Sync</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T23:03:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another weird problem with sync’ing ipad: When it comes to photo sync, it goes “You do not have enough access privileges to sync this ipad”.</p>
+
+<p>It turns out because of previous share connection problem, I have changed the login for share mapping. The permissions are therefore out of sync.</p>
+
+<p>Fixed by granting write permission to the group for the set of files</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388790863/">Dscl</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
+
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
+
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -179,82 +264,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/21/p-1365438347/">99% of Blogs Out There Are Not Worth Reading&#8230; Including This One</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-21T21:55:00+11:00" pubdate data-updated="true">Oct 21<span>st</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If I start to document every software idea I ever have, this blog will feel like it is  maintained by a hyper-active twitter who need to blog every 30 sec.</p>
-
-<p>I shall remind myself of the dictum: <em>Idea is cheap. Implementation is all that counts</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1357321396/">Reading iOS Documentation on KVC</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-20T18:45:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>KVC</em> stands for Key-Value Coding</p>
-
-<p>It is time to seriously engage the documentation</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/164/">&larr; Older</a>
@@ -272,6 +281,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/02/grab/">Grab</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
       </li>
     
@@ -281,14 +298,6 @@
     
       <li class="post">
         <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: isa is deprecated</a>
       </li>
     
   </ul>

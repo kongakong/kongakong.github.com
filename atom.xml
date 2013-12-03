@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-01T07:32:26+11:00</updated>
+  <updated>2013-12-03T23:18:06+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NSInvalidArgumentException when using count]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/03/nsinvalidargumentexception/"/>
+    <updated>2013-12-03T22:04:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/03/nsinvalidargumentexception</id>
+    <content type="html"><![CDATA[<p>Oops.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-03 22:01:10.281 Questions[50951:70b] -[NSNull count]: unrecognized selector sent to instance 0x101cb4b40
+</span><span class='line'>2013-12-03 22:01:10.311 Questions[50951:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[NSNull count]: unrecognized selector sent to instance 0x101cb4b40'</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution:</strong></p>
+
+<p>Check if the target is indeed an array</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if ([anObject isKindOfClass:[NSArray class]]) { // Add a check here
+</span><span class='line'>    NSInteger count = [anObject count];
+</span><span class='line'>    ...
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Grab]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/02/grab/"/>
+    <updated>2013-12-02T08:10:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/02/grab</id>
+    <content type="html"><![CDATA[<p>The built-in screen capture app grab&hellip; Why it only allows saving in tiff format?</p>
+
+<p><img class="center" src="http://kongakong.github.io/images/grab.png" width="460" height="175" title="" ></p>
+
+<p>Severly reduce its usefulness</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[easy_install scipy problem]]></title>
@@ -2695,28 +2739,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
 <p> Examples: Riak, Redis, Voldemort</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Concurrency and Parallelism]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism/"/>
-    <updated>2013-07-26T21:41:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/26/concurrency-and-parallelism</id>
-    <content type="html"><![CDATA[<blockquote><p>One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you express things that are independent, as independent executions and parallelism is about running two things at the same time. They are not the same idea and a lot of people confuse them, they think they are the same thing, but concurrency and parallelism are best thought of as a different idea. You can write beautiful concurrent programs with no parallelism whatsoever and you can also write extremely parallel programs that are not remotely concurrent. Concurrency is a model, parallelism is a result &ndash; maybe that&rsquo;s the best way to say it.</p></blockquote>
-
-<p>- Rob Pike</p>
-
-<p>Source: <a href="http://www.infoq.com/interviews/pike-concurrency">Infoq</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[MFA]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/17/mfa/"/>
-    <updated>2013-07-17T08:31:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/17/mfa</id>
-    <content type="html"><![CDATA[<p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
 ]]></content>
   </entry>
   

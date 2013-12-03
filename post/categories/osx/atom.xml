@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-01T07:32:26+11:00</updated>
+  <updated>2013-12-03T23:18:06+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NSInvalidArgumentException when using count]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/03/nsinvalidargumentexception/"/>
+    <updated>2013-12-03T22:04:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/03/nsinvalidargumentexception</id>
+    <content type="html"><![CDATA[<p>Oops.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-03 22:01:10.281 Questions[50951:70b] &ndash;[NSNull count]: unrecognized selector sent to instance 0x101cb4b40
+</span><span class='line'>2013-12-03 22:01:10.311 Questions[50951:70b] *** Terminating app due to uncaught exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&ndash;[NSNull count]: unrecognized selector sent to instance 0x101cb4b40&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>Solution:</strong></p>
+
+<p>Check if the target is indeed an array</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if ([anObject isKindOfClass:[NSArray class]]) { // Add a check here&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>NSInteger count = [anObject count];
+</span><span class='line'>...
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[easy_install scipy problem]]></title>
@@ -4172,30 +4209,6 @@
     <content type="html"><![CDATA[<p>What is this about?</p>
 
 <p><img class="center" src="/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Get image file size]]></title>
-    <link href="http://kongakong.github.io/post/2013/11/27/get-image-file-size/"/>
-    <updated>2013-11-27T07:28:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/11/27/get-image-file-size</id>
-    <content type="html"><![CDATA[<p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
-
-<p>e.g.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ identify source/images/grab.png
-</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

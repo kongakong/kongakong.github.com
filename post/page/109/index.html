@@ -9,13 +9,24 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Getting this error message 1
+  <meta name="description" content="Seems like I have polluted my python installation a little bit. There are two python2.6 1
 2
 3
 4
 5
 6
-7 distuTILs.errors.DistuTILsPlatformError: $MACOSX_DEPLOYMENT_TARGET mismatch: now "10.4" but "10.6" during &hellip;">
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18 mbp002:cpython &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +82,153 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/07/p-6255855120/">Seems Like I Have Polluted My Python Installation a Little Bit. There Are Two python2.6</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-07T05:06:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Seems like I have polluted my python installation a little bit. There are two python2.6</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>mbp002:cpython $ md5sum /usr/bin/python
+</span><span class='line'>e3a892c8511d5086b485aeb7e9700672  /usr/bin/python
+</span><span class='line'>mbp002:cpython $ md5sum /opt/local/bin/python
+</span><span class='line'>defb6eacf7bf552bef7c4033e685ec13  /opt/local/bin/python
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>mbp002:cpython $ otool -L /usr/bin/python
+</span><span class='line'>/usr/bin/python:
+</span><span class='line'>  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 550.29.0)
+</span><span class='line'>  /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
+</span><span class='line'>mbp002:cpython $ otool -L /opt/local/bin/python
+</span><span class='line'>/opt/local/bin/python:
+</span><span class='line'>  /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 125.2.0)
+</span><span class='line'>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>/usr/bin/python</code> comes from original osx distribution. The framework version is probably built by me just for the sake of building python.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>mbp002:cpython $ ls -l /opt/local/bin/python
+</span><span class='line'>lrwxr-xr-x  1 root  admin  18 24 May  2010 /opt/local/bin/python -&gt; /usr/bin/python2.6
+</span><span class='line'>mbp002:cpython $ ls -l /usr/bin/python2.6
+</span><span class='line'>lrwxr-xr-x  1 root  wheel  75  5 May  2010 /usr/bin/python2.6 -&gt; ../../System/Library/Frameworks/Python.framework/Versions/2.6/bin/python2.6
+</span><span class='line'>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I will probably take out the symlink of <code>/opt/local/bin/python</code> to see if it fixes my python build problem.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/07/p-6255384955/">To Install Command Md5sum in Brew, Run</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-07T04:49:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To install command md5sum in brew, run</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    brew install md5sha1sum
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note the formula is not <code>md5sum</code>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -205,80 +363,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6208462046/">_JVMTI_ Stands For</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T20:57:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>JVMTI</em> stands for</p>
-
-<p><a href="JVM%20Tool%20Interface">http://publib.boulder.ibm.com/infocenter/javasdk/v6r0/index.jsp?topic=/com.ibm.java.doc.diagnostics.60/html/jvmti.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6206909472/">Esc-option Triggers Code Completion in Xcode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T19:07:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Esc-option triggers code completion in xcode</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/110/">&larr; Older</a>
@@ -296,6 +380,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/02/grab/">Grab</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
       </li>
     
@@ -305,14 +397,6 @@
     
       <li class="post">
         <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: isa is deprecated</a>
       </li>
     
   </ul>
