@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Qubits
-">
+  <meta name="description" content="Sometimes it is quite fun to answer some questions in Stackoverflow: you can help someone seeking answer and you may also learn a new thing or two &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,198 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/02/p-28548986312/">Sometimes It Is Quite Fun to Answer Some Questions in Stackoverflow: You Can Help Someone Seeking Answer and You May Also Learn a New Thing or Two Yourself in the Process.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T19:57:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sometimes it is quite fun to answer some questions in Stackoverflow: you can help someone seeking answer and you may also learn a new thing or two yourself in the process.</p>
+
+<p>This is one such example:</p>
+
+<p><a href="http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.">http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.</a></p>
+
+<p>Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example “assesses” has the substring “sses” 2 times.</p>
+
+<p>It is a very simple question, but there is still something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.</p>
+
+<p>My proposed solution is simply an improved version of OP’s code.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
+</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">location</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">return</span> <span class="mi">0</span> <span class="c"># none whatsoever</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>                <span class="k">while</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">):</span>
+</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>                   <span class="k">if</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>                      <span class="k">break</span>
+</span><span class='line'>                   <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is a even shorter version which takes advantage of python’s flexible comparison syntax:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
+</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">)):</span>
+</span><span class='line'>                   <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/01/p-28477385810/">Dirac&#8217;s Ket Notation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-01T20:01:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Dirac&rsquo;s ket notation.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Bra-ket_notation]">Details here</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/01/p-28476372839/">Normalization on the Complex Amplitudes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-01T19:29:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The normalization on the complex amplitudes means that the state of the
+system is a unit vector in a k dimensional complex vector space &mdash; called a
+Hilbert space.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -139,135 +330,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/31/p-28402676316/">Common Python Beginner Mistake (3) - Use of Append</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-31T19:35:00+10:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>New python beginner tends to do this</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is not a mistake per-se, but definitely a very clumsy style.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [1, 2, 3]</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/30/p-28329341852/">Base Class Stream API</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-30T20:00:00+10:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Base class stream API</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/30/p-28328299005/">The More I Know About About oCaml, the More Interesting It Appears to Me.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-30T19:25:00+10:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The more I know about about oCaml, the more interesting it appears to me.</p>
-
-<p>The inferred static type system is really interesting. It is clearly ahead of many other languages.The only other language I know that has similar feature is Scala.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/28/">&larr; Older</a>
@@ -285,23 +347,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/02/grab/">Grab</a>
       </li>
     
   </ul>

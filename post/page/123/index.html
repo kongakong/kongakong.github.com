@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="initialize is a class method which will be called before any other method is called on a class. Alternatively use a function with attribute (( &hellip;">
+  <meta name="description" content="Virtual functions are dynamically bound, but default parameters are statically bound. It means that you may end up invoking a virtual function &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,116 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5965954476/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T01:05:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Virtual functions are dynamically bound, but default parameters are statically bound.</p>
+
+<p>It means that you may end up invoking a virtual function defined in a derived class but using a default parameter value from a base class</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961968377/">[http://en.wikipedia.org/wiki/Alexander%27s_Star](Alexander’s Star)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T21:48:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Alexander%E2%80%99s%20Star">http://en.wikipedia.org/wiki/Alexander%27s_Star</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -140,132 +250,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5940804774/">Difference Between setObject:forKey: And setValue:forKey: In NSMutableDictionary</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T06:35:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From</p>
-
-<p><a href="SO">http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653</a></p>
-
-<p><em>setValue:forKey:</em> is part of the <em>NSKeyValueCoding</em> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <em>setValue:forKey:</em> is implemented in classes other than NSDictionary.</p>
-
-<p><em>setObject:forKey:</em> is<em> NSMutableDictionary</em>’s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It’s somewhat of a coincidence that the signatures are so similar.</p>
-
-<p>What adds to the confusion is that <em>NSMutableDictionary</em>’s implementation of setValue:forKey: is equivalent to<em> setObject:forKey:</em> in most cases. In other classes, _setValue:forKey: _ changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a ‘@’ character — in which case it modifies member variables.</p>
-
-<p>So in a nutshell, use _setObject:forKey: _ when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/28/p-5898731686/">Boby Guard Technique</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-28T01:21:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Boby guard technique</p>
-
-<p>1) Side-by-side/hand holding/hand on shoulder</p>
-
-<p>2) From behind (palm strike or knee back attack + head turn)</p>
-
-<p>3) From side</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/27/p-5886593746/">Stupid Mistake</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-27T12:52:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My app crashed for no reason.</p>
-
-<p>Turns out I did it</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/124/">&larr; Older</a>
@@ -283,23 +267,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/02/grab/">Grab</a>
       </li>
     
   </ul>

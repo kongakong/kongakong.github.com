@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brew | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/brew/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-04T22:37:48+11:00</updated>
+  <updated>2013-12-05T06:25:02+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to install pygame in osx]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx/"/>
+    <updated>2013-12-04T22:52:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx</id>
+    <content type="html"><![CDATA[<p>These are steps for installing pygame into OSX Maverick</p>
+
+<ul>
+<li><p><code>brew install sdl sdl_image sdl_mixer sdl_ttf  portmidi</code></p></li>
+<li><p>Download and install <code>XQuartz</code>. It is a dependency of package <code>smpeg</code></p></li>
+<li><p>Install <code>smpegl</code></p></li>
+</ul>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>brew tap homebrew/headonly
+</span><span class='line'>brew install --HEAD smpeg
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ul>
+<li><p>Use pip to install pygame: <code>pip install hg+http://bitbucket.org/pygame/pygame</code></p></li>
+<li><p>Use <code>python -m pygame.tests</code> for test</p></li>
+</ul>
+
+
+<p>(This is based on the bug report <a href="https://bitbucket.org/pygame/pygame/issue/82/homebrew-on-leopard-fails-to-install">here</a>)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[easy_install scipy problem]]></title>
@@ -110,17 +149,6 @@
 ==> Downloading</p>
 
 <p><a href="https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz">https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[port vs brew]]></title>
-    <link href="http://kongakong.github.io/post/2011/12/28/p-14912930755/"/>
-    <updated>2011-12-28T21:37:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2011/12/28/p-14912930755</id>
-    <content type="html"><![CDATA[<p>Remove <code>port</code> for now to try out <code>brew</code></p>
-
-<p>Personally <code>port</code> is simple enough. Let see if brew can exceed the bar set by MacPort</p>
 ]]></content>
   </entry>
   

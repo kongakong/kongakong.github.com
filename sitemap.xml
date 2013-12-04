@@ -3763,12 +3763,26 @@
         <lastmod>2013-12-04T20:06:46+11:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://kongakong.github.io/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/
+        </loc>
+        <lastmod>2013-12-04T22:47:19+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/12/04/test-pygame-installation/</loc>
+        <lastmod>2013-12-05T06:18:43+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx/</loc>
+        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-12-04T20:06:46+11:00</lastmod>
+        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-12-04T20:06:46+11:00</lastmod>
+        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3776,6 +3790,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-12-04T20:06:46+11:00</lastmod>
+        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
     </url>
 </urlset>

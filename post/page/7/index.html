@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Have absolutely zero knowledge of Ruby, although I am planning to learn more about this langauge since I started using Octopress. Came across this &hellip;">
+  <meta name="description" content="defncopy is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,171 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/15/a-useful-sybase-tool/">A Useful Sybase Tool</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-15T23:08:00+10:00" pubdate data-updated="true">Jul 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>defncopy</code> is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development tools such as <a href="http://www.aquafold.com/aquadatastudio.html">Aqua Data Studio</a></p>
+
+<p>This utility comes with Sybase distribution. Here is its usage:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ defncopy
+</span><span class='line'> 
+</span><span class='line'>defncopy Syntax Error
+</span><span class='line'>Usage: defncopy
+</span><span class='line'>    [-v]
+</span><span class='line'>    [-W]
+</span><span class='line'>    [-X]
+</span><span class='line'>    [-a &lt;display_charset&gt;]
+</span><span class='line'>    [-I &lt;interfaces_file&gt;]
+</span><span class='line'>    [-J [&lt;client_charset&gt;]]
+</span><span class='line'>    [-K &lt;keytab_file&gt;]
+</span><span class='line'>    [-P &lt;password&gt;]
+</span><span class='line'>    [-R &lt;remote_server_principal&gt;]
+</span><span class='line'>    [-S [&lt;server_name&gt;]]
+</span><span class='line'>    [-U &lt;user_name&gt;]
+</span><span class='line'>    [-V &lt;security_options&gt;]
+</span><span class='line'>    [-Z &lt;security_mechanism&gt;]
+</span><span class='line'>    [-z &lt;language&gt;]
+</span><span class='line'>    { in &lt;file_name&gt; &lt;database_name&gt; |
+</span><span class='line'>      out &lt;file_name&gt; &lt;database_name&gt; [&lt;owner&gt;.]&lt;object_name&gt;
+</span><span class='line'>          [[&lt;owner&gt;.]&lt;object_name&gt;...] }
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/12/more-blog-maintenance/">More Blog Maintenance</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-12T20:50:00+10:00" pubdate data-updated="true">Jul 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Found some good resource&hellip;</p>
+
+<p><a href="http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/">http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/</a></p>
+
+<p><a href="http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times">http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times</a></p>
+
+<p><a href="http://decodize.com/html/moving-from-wordpress-to-octopress/">http://decodize.com/html/moving-from-wordpress-to-octopress/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/08/switch-and-enum-in-objective-c/">Switch and Enum in Objective-c</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-08T21:30:00+10:00" pubdate data-updated="true">Jul 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Do not implement a default case in switch statements that handle enumerated types. This helps if you add to the enumeration, because the compiler will warn that the switch does not handle all the values.</p></blockquote>
+
+<p>from <a href="http://www.informit.com/articles/article.aspx?p=2080040&amp;seqNum=5">Matt Galloway</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -345,158 +510,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/29/keep-vi-swp-file-in-tmp/">Keep Vi Swp File in Tmp</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-29T21:02:00+10:00" pubdate data-updated="true">Jun 29<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>vi</code> is my editor of choice when I need to do some quick editing.</p>
-
-<p>When vi edits a file, it will usally create a <code>swp</code> file for recovery purpose. Usually it causes no problem.</p>
-
-<p>But apparently octopress does not work when there is temporry file in the <code>post</code> directory. Rake will emit</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake aborted!
-</span><span class='line'>No such file or directory - public/_posts/.2013-06-29-example.markdown.swp</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and then bailed.</p>
-
-<p>I added</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set backupdir=~/tmp</span></code></pre></td></tr></table></div></figure>
-
-
-<p>to my .vimrc. Hopefully it will prevent this problem from happening again.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-28T00:27:00+10:00" pubdate data-updated="true">Jun 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am using Aquamacs Emacs which is built on emacs 23.3.50.1.</p>
-
-<p>When I tried to indent a block of python code using the menu item &lsquo;Python&rsquo; &ndash;> &lsquo;Shift Region Right&rsquo;, I got this error message <code>Symbol's function defintion is void: py-shit-right</code></p>
-
-<p>So instead of using the menu option, I just use <code>C-c &gt;</code> to take care of it.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-23T16:53:00+10:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After used octopress for a couple of days seriously as a blogging platform, this is a list of good and bad I feel about the platform:</p>
-
-<p>First a list of bad</p>
-
-<p>1) It takes time to build and release changes. Whenever I release a new post, I need to regenerate the site (takes up to several minutes for about 850 posts at the time of writing) and then commit the changes to the github. And then there is usually some delay between the commit and the final appearance of the new post on the site.</p>
-
-<p>2) With Octopress I will tend not to post spontaneously/impulsively as I was with Tumblr. It is because I will not be able to write and post with Octopress unless I am near my PC. Tumblr is, on the other hand, a web-based service and they have native apps on mobile platforms too. So I tend to post more on tumblr.</p>
-
-<p>The goods:</p>
-
-<p>1) The Octopress framework is very flexible. Anyone can write up any plugin in ruby to enhance the platform or add a new feature</p>
-
-<p>2) I get to use my favorite editor <code>vim</code></p>
-
-<p>3) Writing programming topic is painful in Tumblr. It is more enjoyable to do it in Octopress</p>
-
-<p>4) I get to  keep my the primary material &ndash; All blog posts, theme customisation and pictures etc are created and verison-controlled on my PC in the first place.</p>
-
-<p>5) Since it takes time to build and release the blog, the up-side is that I will post subjects that is worth writing about, instead of instagram-ish entries that are only there because it is convenient to pick a picture and post on a mobile phone.</p>
-
-<p>What I need now is a decent way to spell-check in vim/emacs.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/8/">&larr; Older</a>
@@ -514,23 +527,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/02/grab/">Grab</a>
       </li>
     
   </ul>

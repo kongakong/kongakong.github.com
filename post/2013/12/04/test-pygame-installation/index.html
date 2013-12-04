@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>testing pygame installation - Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="There are some failures and errors: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/post/2013/12/04/test-pygame-installation">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Testing Pygame Installation</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-04T22:50:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>There are some failures and errors:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ python -m pygame.tests 
+</span><span class='line'>skipping pygame.tests._movie_test (tag 'subprocess_ignore')
+</span><span class='line'>skipping pygame.tests.cdrom_test (tag 'interactive')
+</span><span class='line'>skipping pygame.tests.midi_test (tag 'interactive')
+</span><span class='line'>skipping pygame.tests.movie_test (tag 'subprocess_ignore')
+</span><span class='line'>skipping pygame.tests.scrap_test (tag 'subprocess_ignore')
+</span><span class='line'>loading pygame.tests.base_test
+</span><span class='line'>loading pygame.tests.blit_test
+</span><span class='line'>loading pygame.tests.bufferproxy_test
+</span><span class='line'>loading pygame.tests.camera_test
+</span><span class='line'>loading pygame.tests.color_test
+</span><span class='line'>loading pygame.tests.compat_test
+</span><span class='line'>loading pygame.tests.cursors_test
+</span><span class='line'>loading pygame.tests.display_test
+</span><span class='line'>loading pygame.tests.draw_test
+</span><span class='line'>loading pygame.tests.event_test
+</span><span class='line'>loading pygame.tests.fastevent_test
+</span><span class='line'>loading pygame.tests.font_test
+</span><span class='line'>loading pygame.tests.freetype_test
+</span><span class='line'>loading pygame.tests.ftfont_test
+</span><span class='line'>loading pygame.tests.gfxdraw_test
+</span><span class='line'>loading pygame.tests.image__save_gl_surface_test
+</span><span class='line'>loading pygame.tests.image_test
+</span><span class='line'>loading pygame.tests.imageext_test
+</span><span class='line'>loading pygame.tests.joystick_test
+</span><span class='line'>loading pygame.tests.key_test
+</span><span class='line'>loading pygame.tests.mask_test
+</span><span class='line'>loading pygame.tests.math_test
+</span><span class='line'>loading pygame.tests.mixer_music_test
+</span><span class='line'>loading pygame.tests.mixer_test
+</span><span class='line'>loading pygame.tests.mouse_test
+</span><span class='line'>loading pygame.tests.overlay_test
+</span><span class='line'>loading pygame.tests.pixelarray_test
+</span><span class='line'>loading pygame.tests.pixelcopy_test
+</span><span class='line'>loading pygame.tests.rect_test
+</span><span class='line'>loading pygame.tests.rwobject_test
+</span><span class='line'>loading pygame.tests.sndarray_test
+</span><span class='line'>loading pygame.tests.sprite_test
+</span><span class='line'>loading pygame.tests.surface_test
+</span><span class='line'>loading pygame.tests.surfarray_test
+</span><span class='line'>loading pygame.tests.surflock_test
+</span><span class='line'>loading pygame.tests.sysfont_test
+</span><span class='line'>loading pygame.tests.threads_test
+</span><span class='line'>loading pygame.tests.time_test
+</span><span class='line'>loading pygame.tests.transform_test
+</span><span class='line'>...................................................................................................................................................F........................................................FF...........................................................................................................E.F..........................................................................................................................................................................................................................................................................................................E............................................................
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: FreeTypeFontTest.test_freetype_Font_get_rect
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/freetype_test.py", line 434, in test_freetype_Font_get_rect
+</span><span class='line'>    self.assertNotEqual(size_utf16[0], size_utf32[0]);
+</span><span class='line'>AssertionError: -1 == -1
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: ImageModuleTest.testLoadPNG
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 82, in testLoadPNG
+</span><span class='line'>    self.assertEquals(pixel_x1_y1, greyish_pixel)
+</span><span class='line'>AssertionError: (109, 120, 129, 140) != (110, 120, 130, 140)
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: ImageModuleTest.testSavePNG
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 141, in testSavePNG
+</span><span class='line'>    self.assertEquals(pixels_as_tuples[0], reddish_pixel)
+</span><span class='line'>AssertionError: (0, 215, 0, 255) != (215, 0, 0, 255)
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>ERROR: MixerMusicModuleTest.test_load
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_music_test.py", line 45, in test_load
+</span><span class='line'>    pygame.mixer.music.load(umusfn)
+</span><span class='line'>error: Unrecognized music format
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: MixerModuleTest.test_array_keyword
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 336, in test_array_keyword
+</span><span class='line'>    self._test_array_argument(format, a, c == channels)
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 349, in _test_array_argument
+</span><span class='line'>    (format, a.dtype))
+</span><span class='line'>AssertionError: Raised ValueError: Format -8, dtype int32
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>ERROR: SurfaceTypeTest.test_image_convert_bug_131
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/surface_test.py", line 682, in test_image_convert_bug_131
+</span><span class='line'>    self.assertEquals( im.get_palette(),  ((0, 0, 0, 255), (255, 255, 255, 255)) )
+</span><span class='line'>error: Surface has no palette to get
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Ran 675 tests in 66.985s
+</span><span class='line'>
+</span><span class='line'>FAILED (failures=4, errors=2)</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-04T22:50:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/post/categories/osx/'>osx</a>, <a class='category' href='/post/categories/pygame/'>pygame</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kongakong.github.io/post/2013/12/04/test-pygame-installation/" data-via="kongakong" data-counturl="http://kongakong.github.io/post/2013/12/04/test-pygame-installation/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/" title="Previous Post: pip install pygame warning/error messages">&laquo; pip install pygame warning/error messages</a>
+      
+      
+        <a class="basic-alignment right" href="/post/2013/12/04/how-to-install-pygame-in-osx/" title="Next Post: How to install pygame in osx">How to install pygame in osx &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
+</section>
+
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/107508522522146376690?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

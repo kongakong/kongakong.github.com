@@ -9,8 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="&#8220;` $ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
-Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams &hellip;">
+  <meta name="description" content="I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn 1
+2
+3
+4
+5
+6 $ svn info dyld: Library not loaded &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +70,135 @@ Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams &
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/10/p-15568925380/">I Must Have Done Something Silly With the DYLD_LIBRARY_PATH. This Is an Error I Got When Running Svn</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-10T03:01:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ svn info 
+</span><span class='line'>dyld: Library not loaded: /usr/lib/libpq.5.dylib
+</span><span class='line'>  Referenced from: /usr/bin/svn
+</span><span class='line'>  Reason: image not found
+</span><span class='line'>Trace/BPT trap: 5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run it in a new shell and the problem goes away.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289689582/">Just Installed &#8220;otx&#8220;, an OSS Implementation of &#8220;otool&#8220;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T20:45:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just installed <code>otx</code>, an OSS implementation of <code>otool</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289562682/">Just Learn Something New (to Me) About Bash:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T20:37:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just learn something new (to me) about bash:</p>
+
+<p>1) Anonymous function</p>
+
+<p>2) local (to subroutine) variable</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -151,114 +284,6 @@ Traceback (most recent call last):
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/30/p-15022191238/">How to Retrieve Session Information of a @WebMethod Call in Spring Framework</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-30T22:03:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/29/p-14937137581/">Design Pattern in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-29T09:01:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Design%20Pattern%20in%20Python">http://dpip.testingperspective.com/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/29/p-14932261293/">My Python 3.3 Compilation Ends in This</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-29T07:26:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>&#8220;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/74/">&larr; Older</a>
@@ -276,23 +301,23 @@ Traceback (most recent call last):
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/02/grab/">Grab</a>
       </li>
     
   </ul>

@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="One of the steps ./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework
-">
+  <meta name="description" content="I do not use pgsql a lot, so I need to jot down a few ommonly used commands here: Use \connect &lt;database name&gt; to switch database The &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,118 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/14/p-1312897866/">Postgresql Memo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-14T23:57:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I do not use pgsql a lot, so  I need to jot down a few ommonly used commands here:</p>
+
+<p>Use <code>\connect &lt;database name&gt;</code> to switch database</p>
+
+<p>The equivalent in MSSQL or Sybase will be <code>use &lt;database name&gt; go</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/11/p-1290729286/">Successfully Compiled and Built Python 2.5.5 on Osx 10.6</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-11T22:45:00+11:00" pubdate data-updated="true">Oct 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>But there is no <code>ncurse</code> lib</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/11/p-1290583685/">Reading Framework Documentation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-11T22:02:00+11:00" pubdate data-updated="true">Oct 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A bit lost in OSX documentation. So many interesting thing to learn</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -147,122 +258,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/08/p-1263713208/">-Wno-long-double</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-08T06:07:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Python 2.5.5 uses the <code>-Wno-long-double</code> c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6</p>
-
-<p>Fixed the configure.in and rerun autoconf. Let&rsquo;s see if it will work.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/06/p-1250836116/">ActiveMQ Build Error</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-06T07:42:00+11:00" pubdate data-updated="true">Oct 6<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Try to build it, but hit this error:</p>
-
-<p><code>The system is out of resources.
-Consult the following stack trace for details.
-java.lang.OutOfMemoryError: Java heap space</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/22/p-1163578480/">Hit a Persistence Related Exception</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-22T08:38:00+10:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>The model used to open the store is incompatible with the one used to create the store</code></p>
-
-<p>Killed the main thread</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/167/">&larr; Older</a>
@@ -280,23 +275,23 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/02/grab/">Grab</a>
       </li>
     
   </ul>
