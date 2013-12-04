@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="http://en.wikipedia.org/wiki/Alexander%27s_Star
+  <meta name="description" content="Classic example of why sometimes macro is a bad idea:
 ">
   
 
@@ -66,6 +66,116 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5967914767/">Item 1: Prefer Const and Inline to #define</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T02:14:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Classic example of why sometimes macro is a bad idea:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5966779736/">The _explicit_ Keyword in C++ Is Used to Declare Explicit Constructors. Explicit Constructors Are Constructors That Cannot Take Part in an Implicit Conversion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T01:35:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <em>explicit</em> keyword in C++ is used to declare explicit constructors. Explicit constructors are constructors that cannot take part in an implicit conversion</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5965954476/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T01:05:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Virtual functions are dynamically bound, but default parameters are statically bound.</p>
+
+<p>It means that you may end up invoking a virtual function defined in a derived class but using a default parameter value from a base class</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -139,126 +249,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5942654011/">_initialize_ Is a Class Method Which Will Be Called Before Any Other Method Is Called on a Class. Alternatively Use a Function With ___attribute__ ((Constructor))_</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T07:39:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>initialize</em> is a class method which will be called before any other method is called on a class. Alternatively use a function with <em><strong>attribute</strong> ((constructor))</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5941073480/">To Find Out What iOS Device Is Attached to the System, We Can Try Monitor</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T06:44:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To find out what iOS device is attached to the system, we can try monitor</p>
-
-<p><a href="Monitoring%20Accessory-Related%20Events">http://developer.apple.com/library/ios/#featuredarticles/ExternalAccessoryPT/Articles/MonitoringEvents.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5940804774/">Difference Between setObject:forKey: And setValue:forKey: In NSMutableDictionary</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T06:35:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From</p>
-
-<p><a href="SO">http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653</a></p>
-
-<p><em>setValue:forKey:</em> is part of the <em>NSKeyValueCoding</em> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <em>setValue:forKey:</em> is implemented in classes other than NSDictionary.</p>
-
-<p><em>setObject:forKey:</em> is<em> NSMutableDictionary</em>’s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It’s somewhat of a coincidence that the signatures are so similar.</p>
-
-<p>What adds to the confusion is that <em>NSMutableDictionary</em>’s implementation of setValue:forKey: is equivalent to<em> setObject:forKey:</em> in most cases. In other classes, _setValue:forKey: _ changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a ‘@’ character — in which case it modifies member variables.</p>
-
-<p>So in a nutshell, use _setObject:forKey: _ when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/123/">&larr; Older</a>
@@ -276,23 +266,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/02/grab/">Grab</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
       </li>
     
   </ul>

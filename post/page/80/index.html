@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="There is a bit of speculation going on in Hong Kong about who could be the next CE (Chief Executive, equivalent to Governor in the colonial time). A &hellip;">
+  <meta name="description" content="Apple announced on the openJDK mailing list the availability of the developer preview of “Java for Mac OS X 10.7 Update 1”
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,116 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/09/09/p-9991186528/">Apple and OpenJDK</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-09T20:44:00+10:00" pubdate data-updated="true">Sep 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Apple announced on the openJDK mailing list the availability of the developer preview of “Java for Mac OS X 10.7 Update 1”</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/09/07/p-9898871014/">Lldb</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-07T10:48:00+10:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There is a lot to like about <code>lldb</code></p>
+
+<p>A lot of useful features such as ‘auto completion’ in the shell and integration with Python.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/09/07/p-9898870525/">Question to Self: Python and Xcode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-07T10:48:00+10:00" pubdate data-updated="true">Sep 7<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Question to self: Can I use <code>Xcode</code> to read/manage CPython code?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -142,183 +253,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/09/02/p-9702772529/">Brew Update Issue on Lion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-02T21:41:00+10:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Try to run ‘brew update’. Got this error:</p>
-
-<p>&#8220;`</p>
-
-<p>$ brew update</p>
-
-<p>Initialized empty Git repository in /usr/local/.git/
-remote: Counting objects: 43317, done.
-remote: Compressing objects: 100% (19213/19213), done.
-remote: Total 43317 (delta 26643), reused 38295 (delta 23498)
-Receiving objects: 100% (43317/43317), 5.93 MiB | 457 KiB/s, done.
-Resolving deltas: 100% (26643/26643), done.
-From</p>
-
-<p><a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a></p>
-
-<p><a href="http://github.com/mxcl/homebrew.git">http://github.com/mxcl/homebrew.git</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585407349/">Last Warning.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-30T23:00:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Last warning.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Probably no existing rpm for this.</p>
-
-<p>These yum commands fixed most of the warnings</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>yum install ncurses
-</span><span class='line'>yum install ncurses-devel
-</span><span class='line'>yum install java-1.6.0-openjdk
-</span><span class='line'>yum install libssh2-devel 
-</span><span class='line'>yum install openssl-devel
-</span><span class='line'>yum install java-1.6.0-openjdk-devel
-</span><span class='line'>yum install unixODBC
-</span><span class='line'>yum install unixODBC-devel
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585200763/">Erlang’s &#8220; Configure&#8220; sTILl Reports These Components as Missing:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-30T22:49:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>erlang’s <code>configure</code> sTILl reports these components as missing:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>crypto         : No usable OpenSSL found
-</span><span class='line'>jinterface     : No Java compiler found
-</span><span class='line'>odbc           : ODBC library - link check failed
-</span><span class='line'>ssh            : No usable OpenSSL found
-</span><span class='line'>ssl            : No usable OpenSSL found
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/81/">&larr; Older</a>
@@ -336,23 +270,23 @@ From</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/02/grab/">Grab</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
       </li>
     
   </ul>

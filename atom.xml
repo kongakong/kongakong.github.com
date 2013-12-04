@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-03T23:18:06+11:00</updated>
+  <updated>2013-12-04T22:37:48+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,223 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[power consumption of erlang compilation]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/04/power-consumption-of-erlang-compilation/"/>
+    <updated>2013-12-04T07:58:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/04/power-consumption-of-erlang-compilation</id>
+    <content type="html"><![CDATA[<p>Only cost 2% of battery power of my MacBookPro. Not bad at all</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[osx specific error with erlang compilation]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/04/osx-specific-error-with-erlang-compilation/"/>
+    <updated>2013-12-04T07:53:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/04/osx-specific-error-with-erlang-compilation</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gcc  -Werror=return-type  -m32 -g  -O3 -fomit-frame-pointer -I/Users/antkong/wd/erl/build/otp_src_R16B02/erts/x86_64-apple-darwin13.0.1   -D_XOPEN_SOURCE -DERTS_SMP -DHAVE_CONFIG_H -Wall -Wstrict-prototypes -Wmissing-prototypes -Wdeclaration-after-statement -DUSE_THREADS -D_THREAD_SAFE -D_REENTRANT -DPOSIX_THREADS   -Ix86_64-apple-darwin13.0.1/opt/smp -Ibeam -Isys/unix -Isys/common -Ix86_64-apple-darwin13.0.1 -Izlib  -Ipcre -Ihipe -I../include -I../include/x86_64-apple-darwin13.0.1 -I../include/internal -I../include/internal/x86_64-apple-darwin13.0.1 -c beam/beam_emu.c -o obj/x86_64-apple-darwin13.0.1/opt/smp/beam_emu.o
+</span><span class='line'>beam/beam_emu.c:4718:6: warning: 'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+</span><span class='line'>     ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'>     ^
+</span><span class='line'>beam/beam_emu.c:4689:29: note: expanded from macro 'ERTS_NO_FPE_ERROR'
+</span><span class='line'>#  define ERTS_NO_FPE_ERROR ERTS_FP_ERROR
+</span><span class='line'>                            ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro 'ERTS_FP_ERROR'
+</span><span class='line'>#define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&(p)->fp_exception, f, A)
+</span><span class='line'>                                        ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro '__ERTS_FP_ERROR'
+</span><span class='line'>#  define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}
+</span><span class='line'>                                                  ^
+</span><span class='line'>/usr/include/math.h:718:12: note: 'finite' declared here
+</span><span class='line'>extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);
+</span><span class='line'>           ^
+</span><span class='line'>beam/beam_emu.c:4727:6: warning: 'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+</span><span class='line'>     ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'>     ^
+</span><span class='line'>beam/beam_emu.c:4689:29: note: expanded from macro 'ERTS_NO_FPE_ERROR'
+</span><span class='line'>#  define ERTS_NO_FPE_ERROR ERTS_FP_ERROR
+</span><span class='line'>                            ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro 'ERTS_FP_ERROR'
+</span><span class='line'>#define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&(p)->fp_exception, f, A)
+</span><span class='line'>                                        ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro '__ERTS_FP_ERROR'
+</span><span class='line'>#  define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}
+</span><span class='line'>                                                  ^
+</span><span class='line'>/usr/include/math.h:718:12: note: 'finite' declared here
+</span><span class='line'>extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);
+</span><span class='line'>           ^
+</span><span class='line'>beam/beam_emu.c:4736:6: warning: 'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+</span><span class='line'>     ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'>     ^
+</span><span class='line'>beam/beam_emu.c:4689:29: note: expanded from macro 'ERTS_NO_FPE_ERROR'
+</span><span class='line'>#  define ERTS_NO_FPE_ERROR ERTS_FP_ERROR
+</span><span class='line'>                            ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro 'ERTS_FP_ERROR'
+</span><span class='line'>#define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&(p)->fp_exception, f, A)
+</span><span class='line'>                                        ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro '__ERTS_FP_ERROR'
+</span><span class='line'>#  define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}
+</span><span class='line'>                                                  ^
+</span><span class='line'>/usr/include/math.h:718:12: note: 'finite' declared here
+</span><span class='line'>extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);
+</span><span class='line'>           ^
+</span><span class='line'>beam/beam_emu.c:4745:6: warning: 'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+</span><span class='line'>     ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'>     ^
+</span><span class='line'>beam/beam_emu.c:4689:29: note: expanded from macro 'ERTS_NO_FPE_ERROR'
+</span><span class='line'>#  define ERTS_NO_FPE_ERROR ERTS_FP_ERROR
+</span><span class='line'>                            ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro 'ERTS_FP_ERROR'
+</span><span class='line'>#define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&(p)->fp_exception, f, A)
+</span><span class='line'>                                        ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro '__ERTS_FP_ERROR'
+</span><span class='line'>#  define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}
+</span><span class='line'>                                                  ^
+</span><span class='line'>/usr/include/math.h:718:12: note: 'finite' declared here
+</span><span class='line'>extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);
+</span><span class='line'>           ^
+</span><span class='line'>beam/beam_emu.c:4754:6: warning: 'finite' is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]
+</span><span class='line'>     ERTS_NO_FPE_ERROR(c_p, fb(Arg(1)), goto fbadarith);
+</span><span class='line'>     ^
+</span><span class='line'>beam/beam_emu.c:4689:29: note: expanded from macro 'ERTS_NO_FPE_ERROR'
+</span><span class='line'>#  define ERTS_NO_FPE_ERROR ERTS_FP_ERROR
+</span><span class='line'>                            ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro 'ERTS_FP_ERROR'
+</span><span class='line'>#define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&(p)->fp_exception, f, A)
+</span><span class='line'>                                        ^
+</span><span class='line'>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro '__ERTS_FP_ERROR'
+</span><span class='line'>#  define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}
+</span><span class='line'>                                                  ^
+</span><span class='line'>/usr/include/math.h:718:12: note: 'finite' declared here
+</span><span class='line'>extern int finite(double) __OSX_AVAILABLE_BUT_DEPRECATED(__MAC_10_0, __MAC_10_9, __IPHONE_NA, __IPHONE_NA);</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Building erlang R16B02]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/04/building-erlang-r16b02/"/>
+    <updated>2013-12-04T07:50:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/04/building-erlang-r16b02</id>
+    <content type="html"><![CDATA[<p>Got this at the end of configure</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*********************************************************************
+</span><span class='line'>**********************  APPLICATIONS INFORMATION  *******************
+</span><span class='line'>*********************************************************************
+</span><span class='line'>
+</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
+</span><span class='line'>
+</span><span class='line'>*********************************************************************
+</span><span class='line'>*********************************************************************
+</span><span class='line'>**********************  DOCUMENTATION INFORMATION  ******************
+</span><span class='line'>*********************************************************************
+</span><span class='line'>
+</span><span class='line'>documentation  : 
+</span><span class='line'>                 fop is missing.
+</span><span class='line'>                 Using fakefop to generate placeholder PDF files.
+</span><span class='line'>
+</span><span class='line'>*********************************************************************</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NSInvalidArgumentException when using count]]></title>
@@ -2678,66 +2895,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Why we should love repost]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/02/why-we-should-love-repost/"/>
-    <updated>2013-08-02T23:05:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/02/why-we-should-love-repost</id>
-    <content type="html"><![CDATA[<p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
-
-<p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
-
-<p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
-
-<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
-
-<p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Luck and Skill]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/01/luck-and-skill/"/>
-    <updated>2013-08-01T08:23:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/01/luck-and-skill</id>
-    <content type="html"><![CDATA[<blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
-payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
-sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
-lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
-number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
-
-<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Different Type of Database Models]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/29/different-type-of-database/"/>
-    <updated>2013-07-29T08:08:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/29/different-type-of-database</id>
-    <content type="html"><![CDATA[<p>I find this summary in <a href="http://littleriakbook.com/">Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo;</a> book  very concise and useful.</p>
-
-<ol>
-<li><p><strong>Relational</strong> Traditional databases usually use SQL to model and query data. They are useful for data which can be stored in a highly structured schema, yet require lexible querying. Scaling a relational database (RDBMS) traditionally occurs by more powerful hardware (vertical growth).</p>
-
-<p>Examples: PostgreSQL, MySQL, Oracle</p></li>
-<li><p><strong>Graph</strong> These exist for dataighly interconnected data. They excel in modeling complex relationships between nodes, and many implementations can handle multiple billions of nodes and relationships (or edges and vertices). I tend to include triplestores and object DBs as specialized variants.</p>
-
-<p> Examples: Neo4j, Graphbase, IniniteGraph</p></li>
-<li><p><strong>Document</strong> Document datastores model hierarchical values called documents, represented in formats such as JSON or XML, and do not enforce a document schema. They generally support distributing across multiple servers (horizontal growth).</p>
-
-<p> Examples: CouchDB, MongoDB, Couchbase</p></li>
-<li><p><strong>Columnar</strong> Popularized by Google’s BigTable, this form of database exists to scale across mul- tiple servers, and groups similar data into column families. Column values can be individually versioned and managed, though families are deined in advance, not unlike RDBMS schemas.</p>
-
-<p> Examples: HBase, Cassandra, BigTable 4</p></li>
-<li><p><strong>Key/Value</strong> Key/Value, or KV stores, are conceptually like hashtables, where values are stored and accessed by an immutable key. They range from single-server varieties like Memcached used for high-speed caching, to multi-datacenter distributed systems like Riak Enterprise.</p>
-
-<p> Examples: Riak, Redis, Voldemort</p></li>
-</ol>
 
 ]]></content>
   </entry>

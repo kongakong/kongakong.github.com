@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Revisiting Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object While the title sounds rather generic, the main content is &hellip;">
+  <meta name="description" content="Hopefully we do not need to worry too much about this item anymore, because most problems covered by it are due to older compilers that are not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,116 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6197165707/">Item 33: Use Inlining Judiciously</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T12:09:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hopefully we do not need to worry too much about this item anymore, because most problems covered by it are due to older compilers that are not compilant to the later c++ standard of ‘outlined inliner’ (i.e. what to do when a compiler chooses not to inline a function for whatever reason)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196784167/">Item 32: Postpone Variable Definitions as Long as Possible</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:57:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Because calling constructor is expensive</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196683746/">Item 31: Never Return a Reference to a Local Object or to a Dereferenced Pointer Initialized by New Within the Function</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:54:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The first part is easy to understand: scope issue</p>
+
+<p>The second part is important because it will lead to memory leak. (Related to item 23 and operator overload)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -183,120 +293,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6191932419/">Item 29: Avoid Returning &#8216;Handles&#8217; to Internal Data</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T09:18:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Item 29 is to adress situations in which the holder of a handle (a pointer or reference to the internal data representation) can circumvent  the <code>const</code> semantic by making modification to the underlying data via the handle.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To disallow an operation on your object class, you can</p>
-
-<p>1) declare the function as <em>private</em></p>
-
-<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189159712/">Item 28: Partition the Global Namespace</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T07:47:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Don’t think anyone will seriously argue against the usefulness of namespace.</p>
-
-<p>It is also mentioned that we can use <code>struct</code> to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/112/">&larr; Older</a>
@@ -314,23 +310,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/02/grab/">Grab</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
       </li>
     
   </ul>

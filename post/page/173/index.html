@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Objective-c/Apple platform is my new adventure. Step 0 is acquisition of a Apple machine. Step 1, obviously, is to get familiar with the IDE, Xcode. &hellip;">
+  <meta name="description" content="After some simple programming exercises, I think I am getting more comfortable with the language and IDE. Hopefully it is the last OO/procedural &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,116 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/07/06/p-774087319/">Learning Obj-c</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-06T07:17:00+10:00" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After some simple programming exercises, I think I am getting more comfortable with the language and IDE.</p>
+
+<p>Hopefully it is the last OO/procedural language I will care to learn. In this school of language, one has to spend too much time to learn syntax and gotcha.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/07/01/p-756245960/">Cinch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-01T14:00:00+10:00" pubdate data-updated="true">Jul 1<span>st</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Using cinch to simplify the resizing windows in OSX. I probably do not need the more advanced features as found in SizeUp and Divvy.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/06/30/p-753650737/">@property and @synthesize</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-30T22:54:00+10:00" pubdate data-updated="true">Jun 30<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Learning @property and @synthesize</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -146,178 +256,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/05/18/p-6200019099/">DAO vs DTO</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-05-18T21:33:00+10:00" pubdate data-updated="true">May 18<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>DAO is a class that usually has the CRUD operations like save, update, delete.</p>
-
-<p>Whereas the DTO is just an object that holds data. It is really a glorified JavaBean with instance variables and setter and getters. Usually it is the DTO that is passed to the save method of a DAO.</p>
-
-<p><a href="coderanch">http://www.coderanch.com/t/99834/patterns/difference-between-DTO-DAO</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/04/20/p-5817277931/">Reuters RIC Codes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-20T10:41:00+10:00" pubdate data-updated="true">Apr 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>Call Month                      Put Month
-</span><span class='line'>January         A               January         M
-</span><span class='line'>February        B               February        N
-</span><span class='line'>March           C               March           O
-</span><span class='line'>April           D               April           P
-</span><span class='line'>May             E               May             Q
-</span><span class='line'>June            F               June            R
-</span><span class='line'>July            G               July            S
-</span><span class='line'>August          H               August          T
-</span><span class='line'>September       I               September       U
-</span><span class='line'>October         J               October         V
-</span><span class='line'>November        K               November        W
-</span><span class='line'>December        L               December        X
-</span><span class='line'>
-</span><span class='line'>futures chain RIC codes -
-</span><span class='line'>January         F
-</span><span class='line'>February        G
-</span><span class='line'>March           H
-</span><span class='line'>April           J
-</span><span class='line'>May             K
-</span><span class='line'>June            M
-</span><span class='line'>July            N
-</span><span class='line'>August          Q
-</span><span class='line'>September       U
-</span><span class='line'>October         V
-</span><span class='line'>November        X
-</span><span class='line'>December        Z</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/04/07/p-5834251040/">How to Interpret a Quote for FRA?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-04-07T22:11:00+10:00" pubdate data-updated="true">Apr 7<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>US$ 3x9 &ndash; 3.25/3.50%p.a. </strong></p>
-
-<p>means deposit interest starting 3 months from now for 6 month is 3.25% and borrowing interest rate starting 3 months from now for 6 month is 3.50%.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/174/">&larr; Older</a>
@@ -335,23 +273,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/building-erlang-r16b02/">Building erlang R16B02</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException when using count</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/02/grab/">Grab</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/easy-install-scipy-problem/">easy_install scipy problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/30/pod-spec-lint/">pod spec lint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/11/29/easy-install-numpy/">easy_install numpy</a>
       </li>
     
   </ul>
