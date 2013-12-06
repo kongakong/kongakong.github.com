@@ -3774,15 +3774,25 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx/</loc>
-        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
+        <lastmod>2013-12-05T21:06:35+11:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://kongakong.github.io/post/2013/12/05/assignment-statement-in-lua-vs-python/
+        </loc>
+        <lastmod>2013-12-07T00:26:56+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/12/05/aquamacs-crashed-in-maverick/</loc>
+        <lastmod>2013-12-05T19:30:01+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
+        <lastmod>2013-12-07T00:26:56+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
+        <lastmod>2013-12-07T00:26:56+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3790,6 +3800,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-12-05T06:23:39+11:00</lastmod>
+        <lastmod>2013-12-07T00:26:56+11:00</lastmod>
     </url>
 </urlset>

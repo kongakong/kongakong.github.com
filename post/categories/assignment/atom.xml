@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: assignment | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/assignment/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-12-07T07:06:09+11:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Assignment statement in Lua vs Python]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/05/assignment-statement-in-lua-vs-python/"/>
+    <updated>2013-12-05T07:19:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/05/assignment-statement-in-lua-vs-python</id>
+    <content type="html"><![CDATA[<p>Given <code>a</code> is an array of  <code>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</code></p>
+
+<p>and this bit of code</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>i = 3
+</span><span class='line'>i, a[i] = i+1, 20&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>In lua, <code>a</code> will become</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{1, 1, 1, 20, 1, 1, 1, 1, 1, 1}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Whereas in python it will become</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>a
+</span><span class='line'>[1, 1, 1, 1, 20, 1, 1, 1, 1, 1]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
+
+<p>And it is a non-issue in erlang because it does not support mutable variable</p>
+]]></content>
+  </entry>
+  
+</feed>

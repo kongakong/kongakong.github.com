@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="http://www.chromium.org/nativeclient/pnacl/building-and-testing-portable-native-client
-">
+  <meta name="description" content="No more guesswork. 1
+export JAVA_HOME=$(/usr/libexec/java_home) End result: 1
+JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,96 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/12/06/p-37258221019/">Easiest Way to Set Up JAVA_HOME in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-06T00:15:00+11:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>No more guesswork.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=$(/usr/libexec/java_home)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>End result:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/12/03/p-37050868937/">XCode Linker Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-03T06:44:00+11:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>An old project was created for iOS 5. When trying to re-run it, I got these error messages</p>
+
+<p>Do not recall this kind of trouble before with iOS upgrade.</p>
+
+<p>Set the ‘Deployment Target’ to iOS6, clean and rebuilt but it did not work.</p>
+
+<p>AVFoundation Framework is actually dropped out from “Link Binary with Libraries” section. Re-adding the framework fixes the issue.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -185,87 +276,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/10/23/p-34100874247/">Steven Pinker: Linguistics as a Window to Understanding the Brain</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-23T02:36:00+11:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Steven Pinker: Linguistics as a Window to Understanding the Brain</p>
-
-<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/Q-B_ONJIEcE "></iframe></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/10/14/p-33555499567/">What Is Going on? Need to Find Out How to Override the Mirror Url.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-14T19:36:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>What is going on? Need to find out how to override the mirror url.</p>
-
-<p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
-
-<p><a href="http://apache.mirror.uber.com.au/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://apache.mirror.uber.com.au/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
-
-<p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/18/">&larr; Older</a>
@@ -283,6 +293,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/05/aquamacs-crashed-in-maverick/">Aquamacs crashed in maverick</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/05/assignment-statement-in-lua-vs-python/">Assignment statement in Lua vs Python</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
       </li>
     
@@ -292,14 +310,6 @@
     
       <li class="post">
         <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
       </li>
     
   </ul>

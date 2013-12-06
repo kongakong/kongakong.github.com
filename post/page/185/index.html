@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In an ABC&rsquo;s podcast, Dr Paul Woolley gave an speech on Financial Sector Dysfunctionality. Indeed, witnessing series of financial stuff-up&rsquo &hellip;">
+  <meta name="description" content="When I write this blog, I fully expect this information, given the exponential growing digital archive storage, will be kept for prosperity eternally &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,79 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/02/19/jst_3633103838496682609/">Oversocialnetworkisation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T03:01:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I write this blog, I fully expect this information, given the exponential growing digital archive storage, will be kept for prosperity eternally.<br /><br />As long as we can capture all these information in digital form of which, I can assure you, this tiny article is already in, then you, my dear reader, will always be capable of reaching this article, as long as you are so determined to know something about me.<br /><br />The problem is: now since we remember so well, we are losing the ability to <span style="font-style: italic;">forgive and forget</span>.<br /><br />For example, some people made mistakes. Some people made mistakes occasionally, some people made mistakes all too often. We probably do not want to give forgiveness to perpetual liers, but we also should not dwell on one&rsquo;s bad move, which could be a result of poor judgment or simply circumstantial.<br /><br />But today, every records are digitized. We can crosschecked records in A against records in B. Past stories no longer faded into oblivion with time.<br /><br />As if they are trapped in a perpetual time capsule whose accessibility,  paradoxically, is just a mouse click away.<br /><br />A new generation of offenders now are the all-reaching social networks. It expands, it keeps tracks, it feeds on your personal information. Your misdeeds, once made public, by your own hands or not, will be instantly available to the World, and can never be retracted.<br /><br />Your friend and your acquaintance will  never forget too.<br /><br />Those who watched will remember, those who had not will attempt to find out, those forgot can search to refresh the memory.<br /><br />How will this impact human collective EQ is yet to be seen.<br /><br />But I am glad this gives me a legitimate excuse to create a new word: <span style="font-style: italic;">Oversocialnetworkisation</span>.<br /><br /><span style="font-style: italic;">(The only worry is: the above &ldquo;manifesto&rdquo; makes me sound a bit like the </span><a style="font-style: italic;" href="http://en.wikipedia.org/wiki/Theodore_Kaczynski">Unibomder</a><span style="font-style: italic;">&hellip;)<br /><br /></span></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/02/18/9011218246315898500/">Draftttt</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-18T22:06:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><br />
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -174,78 +247,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/02/02/3625411911597323714/">Little Erlang Exercise 6</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-02T17:56:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=6">Euler Problem 6</a><br /><br />This problem is very straight-forward.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />The sum of the squares of the first ten natural numbers is,<br />1+ 2<sup>2</sup> + &hellip; + 10<sup>2</sup> = 385<br /><br />The square of the sum of the first ten natural numbers is,<br />(1 + 2 + &hellip; + 10)<sup>2</sup> = 55 = 3025<br /><br />Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 &ndash; 385 = 2640.<br /><br />Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.<br />&rdquo;&ldquo;&rdquo;<br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />  Max = 100<br />  SumOfSquare = sum([pow(X, 2) for X in xrange(1, Max + 1)])<br />  SquareOfSum = pow(sum([X for X in xrange(1, Max + 1)]), 2)<br />  print &ldquo;%d&rdquo; % (SquareOfSum &ndash; SumOfSquare)<br /><br /><br /></code></pre><br /><br />Here is the corresponding erlang version.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />-module(p6).<br />-export([find_diff/1]).<br /><br />find_diff(Max)&ndash;><br />  SumOfSq = lists:foldl(fun (X, Y) &ndash;> X + Y end, 0, [X*X || X &lt;&ndash; lists:seq(1, Max)]),<br />  SqOfSum = math:pow(<br />              lists:foldl(fun (X, Y) &ndash;> X + Y end, 0, [X || X &lt;&ndash; lists:seq(1, Max)]),<br />              2),<br />  SqOfSum &ndash; SumOfSq.<br /><br /></code></pre><br /><br />Basically, both python and erlang offer very powerful list comprehension syntax.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/02/01/2545374392026607944/">Little Erlang Exercise 5</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-01T23:17:00+11:00" pubdate data-updated="true">Feb 1<span>st</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=5">Euler Problem 5</a><br /><br />I am rather happy with this python version because I can basically get it done in about 15 min in total. Some useful primitives have been developed in module p3 (See my previous post, <a href="http://www.blogger.com/2008/01/little-erlange-exercise-3_29.html">little erlang exercise 3</a>)<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.<br /><br />What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?<br />&rdquo;&ldquo;&rdquo;<br /><br /><br />from p3 import isprime, factorise<br /><br />def product(x, y):<br /> return x * y<br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br /> factors = dict()<br /> for l in [factorise(i) for i in xrange(2, 21)]:<br />     tmp = dict()<br />     # count them<br />     for n in l:<br />         tmp[n] = 1 + tmp.get(n, 0)<br />     # reguster the max frequency of factor<br />     for k, v in tmp.items():<br />         factors[k] = max(factors.get(k, 0), v)<br /><br /> print reduce(product, [pow(k, v) for k,v in factors.items()])<br /><br /></code></pre><br /><br />However, the erlang version took me a considerable time to complete. The problem is mainly to switch from a procedural mindset to a functional mindset.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p5).<br />-import(p3).<br />-export([main/0, get_factor_freq_lst/1]).<br /><br />%% run this to print the result<br />main() &ndash;><br />  L = [ p3:factorise(X) || X &lt;&ndash; lists:seq(1, 20)],   <br />  io:format(&ldquo;~f~n&rdquo;, [product(get_factor_freq(L))]).   <br /><br />get_factor_freq(L) &ndash;><br />  Dict = dict:new(),<br />  get_factor_freq(L, Dict).<br /><br />%% spec: H, T are list of list of number<br />%% e.g. [ [N1, N1, N2&hellip;], [N1, N2&hellip;], &hellip;]<br />get_factor_freq([H|T], Dict) &ndash;><br />  Dist = get_factor_freq_lst(H),<br />  D1 = dict:from_list(Dist),<br />  D2 = dict:merge(fun(K, X, Y) &ndash;> update_if_bigger(K, X, Y) end, D1, Dict),<br />  get_factor_freq(T, D2);<br />get_factor_freq([], Dict) &ndash;><br />  dict:to_list(Dict).  %% has to convert to list<br /><br />%% Aux function<br />update_if_bigger(<em>, Initial, NewValue) when Initial &lt; NewValue &ndash;><br />  NewValue;<br />update_if_bigger(</em>, Initial, _) &ndash;><br />  Initial.<br /><br />%% This function assumes the list is sorted<br />%% This function is to delinate a list of number<br />%% into a list of {Key, Frequency}<br />get_factor_freq_lst([A|T]) when is_integer(A) &ndash;><br />  get_factor_freq_lst([{A, 1}|T]);<br />get_factor_freq_lst([{A, N}, A|T]) when is_integer(A) &ndash;><br />  get_factor_freq_lst([{A, N + 1}|T]);<br />get_factor_freq_lst([{A, N}, B|T]) when is_integer(A), is_integer(B), A /= B &ndash;><br />  get_factor_freq_lst([{B, 1}|T] ++ [{A, N}] );<br />get_factor_freq_lst(L) &ndash;><br />  L.<br /><br />%% find the product of a list of tuple {Base, Power)<br />product(L) &ndash;><br />  product(L, 1).<br />product([], Sum) &ndash;><br />  Sum;<br />product([{Base, Power}|T], Sum) &ndash;><br />  product(T, Sum * math:pow(Base, Power)).<br /><br /><br /></code></pre></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/186/">&larr; Older</a>
@@ -263,6 +264,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/05/aquamacs-crashed-in-maverick/">Aquamacs crashed in maverick</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/05/assignment-statement-in-lua-vs-python/">Assignment statement in Lua vs Python</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
       </li>
     
@@ -272,14 +281,6 @@
     
       <li class="post">
         <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
       </li>
     
   </ul>

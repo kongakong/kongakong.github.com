@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Python 2.5.5 uses the -Wno-long-double c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6 Fixed the configure.in and rerun &hellip;">
+  <meta name="description" content="One of the steps ./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,86 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1267909194/">Overcoming Compilation Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T18:40:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of the steps</p>
+
+<p><code>./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1264649679/">&#8216;Struct Winsize&#8217; Declared Inside Parameter List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T08:52:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Seeing a lot of</p>
+
+<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
+
+<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
+
+<p>Fixed by using forward declaration</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -182,81 +263,6 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/20/p-1153892343/">Terminology in SplitView</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-20T13:26:00+10:00" pubdate data-updated="true">Sep 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Root View</em>: the pane on the left when iPad is in Landscape mode
-<em>Detail View</em>: the main pane of display</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1119099362/">EXC_BAD_ACCESS Resolved</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
-
-<p>It is probably a wrong conclusion, but commenting out the line works.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/168/">&larr; Older</a>
@@ -274,6 +280,14 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/05/aquamacs-crashed-in-maverick/">Aquamacs crashed in maverick</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/05/assignment-statement-in-lua-vs-python/">Assignment statement in Lua vs Python</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
       </li>
     
@@ -283,14 +297,6 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
     
       <li class="post">
         <a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">pip install pygame warning/error messages</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">power consumption of erlang compilation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">osx specific error with erlang compilation</a>
       </li>
     
   </ul>
