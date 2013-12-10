@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-10T23:28:37+11:00</updated>
+  <updated>2013-12-11T06:49:35+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ivar error message: Autosynthesized property 'delegate' will use synthesized instance variable '_delegate', not existing instance variable 'delegate']]></title>
+    <link href="http://kongakong.github.io/post/2013/12/11/ivar-error-message/"/>
+    <updated>2013-12-11T06:28:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/11/ivar-error-message</id>
+    <content type="html"><![CDATA[<p><em>(Sourced from Stackoverflow here <a href="http://stackoverflow.com/a/14184752/58129">http://stackoverflow.com/a/14184752/58129</a>)</em></p>
+
+<p>The most idiomatic way to handle this situation is simply to remove your <code>delegate</code> ivar declaration.  If you were using your <code>delegate</code> ivar, you should use the implicit ivar <code>_delegate</code> instead.</p>
+
+<p><strong>Why does this work?</strong></p>
+
+<p>As of <a href="http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/ObjCAvailabilityIndex/">Xcode 4.4 (LLVM Compiler 4.0)</a>, instance variables and accessor methods are synthesized automatically for a property <em>if the <code>@synthesize</code> directive is not used explicitly for that property</em>.  As <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Apple&rsquo;s documentation on encapsulation</a> states</p>
+
+<blockquote><p>By default, [&hellip;] accessor methods are synthesized automatically for you by the compiler, so you don’t need to do anything other than declare the property using @property in the class interface.</p></blockquote>
+
+<p>The ivar that is used for a property (which is gotten and set by the automatically synthesized property accessor methods) is named <code>_&lt;propertyName&gt;</code> (i.e. the ivar&rsquo;s name is the property&rsquo;s name prefixed with an underscore).</p>
+
+<p>In this case the property name is <code>delegate</code>, so the the ivar that is used is <code>_delegate</code>.  This is already happening in your code.  When you call <code>-delegate</code> and <code>-setDelegate:</code>, this ivar <code>_delegate</code> will be gotten and set.</p>
+
+<p>However, you&rsquo;ve also declared your own ivar <code>delegate</code>.  Of course, the ivar you explicitly declared (<code>delegate</code>) will not be gotten and set by the instance methods <code>-delegate</code> and <code>-setDelegate:</code> since the automatically synthesized ivar (<code>_delegate</code>) is being gotten and set.  However, (almost always&mdash;if it wasn&rsquo;t, your code is ambiguous) your intent was for your ivar <code>delegate</code> to be the thing that your property&rsquo;s accessors would get and set.  Luckily, the compiler is clever enough to notice what you&rsquo;ve done, and that&rsquo;s why it is emitting this warning:</p>
+
+<blockquote><p>warning: autosynthesized property &lsquo;delegate&rsquo; will use synthesized instance variable &lsquo;_delegate&rsquo;, not existing instance variable &lsquo;delegate&rsquo; [-Wobjc-autosynthesis-property-ivar-name-match]</p></blockquote>
+
+<p>It&rsquo;s telling you that your property <code>delegate</code> will use the automatically synthesized ivar <code>_delegate</code> rather than the ivar that you explicitly declared, <code>delegate</code>.</p>
+
+<p>So if you simply delete your <code>delegate</code> ivar, the compiler will stop emitting this warning.  If you were using the <code>delegate</code> ivar directly (not through the property), start using <code>_delegate</code> instead.</p>
+
+<hr />
+
+<p>A minor variation on this option is to explicitly declare the same ivar (<code>_delegate</code>) that the automatic synthesis of the <code>delegate</code> property is creating.  You can do this by replacing</p>
+
+<pre><code>@interface TheClass : TheSuperclass
+{
+    //...
+    id&lt;TheDelegateProtocol&gt; delegate
+    //...
+}
+@end
+</code></pre>
+
+<p>with</p>
+
+<pre><code>@interface TheClass : TheSuperclass
+{
+    //...
+    id&lt;TheDelegateProtocol&gt; _delegate
+    //...
+}
+@end
+</code></pre>
+
+<p>This works because automatic synthesis of a property will always use an ivar whose name is the property&rsquo;s name prefixed with an underscore.  If no such ivar exists, the ivar will be generated.  If it does exist, it will be used.</p>
+
+<hr />
+
+<p>If instead you would prefer that your property&rsquo;s accessors set and get your ivar <code>delegate</code> you can add an <code>@synthesize</code> directive to your class' <code>@implementation</code> to tell the compiler to do just this:</p>
+
+<pre><code>@implementation TheClass
+//...
+@synthesize delegate = delegate;
+//...
+@end
+</code></pre>
+
+<p>The line <code>@synthesize delegate = delegate;</code> tells the compiler to use the ivar <code>delegate</code> (the right hand of the assignment) in the accessors for the property <code>delegate</code> (the left hand side of the assignment).</p>
+
+<p>You can also omit the right hand side of the <code>@synthesize</code> assignment and just write</p>
+
+<pre><code>@implementation TheClass
+//...
+@synthesize delegate;
+//...
+@end
+</code></pre>
+
+<p>This works because a property with a manual <code>@synthesize</code> which does not explicitly specify the ivar to be gotten and set by its accessors (such as <code>@synthesize delegate;</code>) will use an ivar with the same name as the property, NOT prefixed by an underscore.  This has to do with backwards compatibility.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NSInvalidArgumentException when using count]]></title>
@@ -76,24 +155,6 @@
     <updated>2013-06-04T21:20:00+10:00</updated>
     <id>http://kongakong.github.io/post/2013/06/04/p-52133031773</id>
     <content type="html"><![CDATA[<p>Use <code>lastPathComponent</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Got this error message in xcode]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/08/p-28973709805/"/>
-    <updated>2012-08-08T19:53:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/08/p-28973709805</id>
-    <content type="html"><![CDATA[<p>Got this error message in xcode</p>
-
-<p><code>
-*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
-[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get
- a UITableView.'
-*** First throw call stack:
-</code></p>
-
-<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
 ]]></content>
   </entry>
   

@@ -9,13 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Supposedly it is the clang used by Xcode 4.1. 1
+  <meta name="description" content="A very simple test to compare g++ and clang++ 1
 2
-3
-4
-5 $ clang -v
-Apple clang version 2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
-Target: &hellip;">
+3 $ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+cc1plus: warning: command &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +68,62 @@ Target: &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8544970346/">G++ and Clang++</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:28:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A very simple test to compare g++ and clang++</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span><span class='line'>cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>clang++ does not complaint at all</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -231,42 +284,6 @@ Target: &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396862778/">Finally Killed the _perl_ Job That Owns the Alert Window. Killed the Parent _uninstalld_ (?) Process Too</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:43:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Finally killed the <em>perl</em> job that owns the alert window. Killed the parent <em>uninstalld</em>  (?) process too</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/87/">&larr; Older</a>
@@ -284,6 +301,10 @@ Target: &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/11/ivar-error-message/">ivar error message: Autosynthesized property &#8216;delegate&#8217; will use synthesized instance variable &#8216;_delegate&#8217;, not existing instance variable &#8216;delegate&#8217;</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/09/discount-margin-of-frn/">Discount Margin of FRN</a>
       </li>
     
@@ -297,10 +318,6 @@ Target: &hellip;">
     
       <li class="post">
         <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
       </li>
     
   </ul>
