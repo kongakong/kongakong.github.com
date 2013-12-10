@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Discount Margin of FRN - Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="&#8216;Discount Margin&#8217; (frn.erl) download 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+-module(frn). -export([discount_margin/4, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Discount Margin of FRN</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-09T23:45:00+11:00" pubdate data-updated="true">Dec 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><figure class='code'><figcaption><span>&#8216;Discount Margin&#8217;   (frn.erl)</span> <a href='/downloads/code/erlang/frn.erl'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">frn</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">discount_margin</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">discount_margin</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">test</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">% Simple margin = ((M − Pd ) / (100 × T) )+ Mq</span>
+</span><span class='line'><span class="c">% </span>
+</span><span class='line'><span class="c">% where</span>
+</span><span class='line'><span class="c">% Pd = the dirty price, or P plus the accrued interest AI </span>
+</span><span class='line'><span class="c">% M = the par value</span>
+</span><span class='line'><span class="c">% T = the number of years from settlement to maturity </span>
+</span><span class='line'><span class="c">% Mq = the quoted margin</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c">% A positive simple margin signifies that the FRN’s yield is higher than that of a comparable money market security.</span>
+</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">DirtyPrice</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="p">(</span><span class="nv">ParValue</span> <span class="o">-</span> <span class="nv">DirtyPrice</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">100</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="nv">Years</span><span class="p">)</span> <span class="o">+</span> <span class="nv">QuotedMargin</span><span class="p">.</span>
+</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span><span class="p">,</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span> <span class="o">+</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nf">test</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">).</span> <span class="c">% 0.0502</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-09T23:45:00+11:00" pubdate data-updated="true">Dec 9<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/post/categories/frn/'>FRN</a>, <a class='category' href='/post/categories/discountr-margin/'>discountr _margin</a>, <a class='category' href='/post/categories/erlang/'>erlang</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn/" data-via="kongakong" data-counturl="http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/post/2013/12/05/aquamacs-crashed-in-maverick/" title="Previous Post: Aquamacs crashed in maverick">&laquo; Aquamacs crashed in maverick</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/post/2013/12/09/discount-margin-of-frn/">Discount Margin of FRN</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/05/aquamacs-crashed-in-maverick/">Aquamacs crashed in maverick</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/05/assignment-statement-in-lua-vs-python/">Assignment statement in Lua vs Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to install pygame in osx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/04/test-pygame-installation/">testing pygame installation</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
+</section>
+
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/107508522522146376690?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

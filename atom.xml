@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-07T07:06:09+11:00</updated>
+  <updated>2013-12-10T23:28:37+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Discount Margin of FRN]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn/"/>
+    <updated>2013-12-09T23:45:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>&#8216;Discount Margin&#8217;   (frn.erl)</span> <a href='http://kongakong.github.io/downloads/code/erlang/frn.erl'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">frn</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">discount_margin</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">discount_margin</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">test</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">% Simple margin = ((M − Pd ) / (100 × T) )+ Mq</span>
+</span><span class='line'><span class="c">% </span>
+</span><span class='line'><span class="c">% where</span>
+</span><span class='line'><span class="c">% Pd = the dirty price, or P plus the accrued interest AI </span>
+</span><span class='line'><span class="c">% M = the par value</span>
+</span><span class='line'><span class="c">% T = the number of years from settlement to maturity </span>
+</span><span class='line'><span class="c">% Mq = the quoted margin</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c">% A positive simple margin signifies that the FRN’s yield is higher than that of a comparable money market security.</span>
+</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">DirtyPrice</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="p">(</span><span class="nv">ParValue</span> <span class="o">-</span> <span class="nv">DirtyPrice</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">100</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="nv">Years</span><span class="p">)</span> <span class="o">+</span> <span class="nv">QuotedMargin</span><span class="p">.</span>
+</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span><span class="p">,</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span> <span class="o">+</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nf">test</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">).</span> <span class="c">% 0.0502</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aquamacs crashed in maverick]]></title>
@@ -4836,20 +4891,6 @@
 
 <pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Octopress's Liquid Exception]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/13/octopresss-liquid-exception/"/>
-    <updated>2013-08-13T18:47:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/13/octopresss-liquid-exception</id>
-    <content type="html"><![CDATA[<p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
-
-<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
-</code></pre>
-
-<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
 ]]></content>
   </entry>
   
