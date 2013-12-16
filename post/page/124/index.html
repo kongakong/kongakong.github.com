@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Classic example of why sometimes macro is a bad idea:
-">
+  <meta name="description" content="Summary: Virtual functions must be members. If f needs to be virtual, make it a member function of C. operator>> and operator&lt;&lt; are never &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5978423359/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T07:47:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Summary:</p>
+
+<p><em>Virtual functions</em> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p><em>operator>></em> and <em>operator&lt;&lt;</em> are never members. If f is operator» or operator«, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -213,42 +256,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/125/">&larr; Older</a>
@@ -266,6 +273,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/16/cannot-init-a-class-object/">cannot init a class object</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/16/uiscrollview-and-contnetsize/">UIScrollView and contentSize</a>
       </li>
     
@@ -279,10 +290,6 @@
     
       <li class="post">
         <a href="/post/2013/12/11/ivar-error-message/">ivar error message: Autosynthesized property &#8216;delegate&#8217; will use synthesized instance variable &#8216;_delegate&#8217;, not existing instance variable &#8216;delegate&#8217;</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/09/discount-margin-of-frn/">Discount Margin of FRN</a>
       </li>
     
   </ul>

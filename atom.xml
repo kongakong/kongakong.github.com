@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-16T17:01:03+11:00</updated>
+  <updated>2013-12-16T20:43:35+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[cannot init a class object]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object/"/>
+    <updated>2013-12-16T20:39:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object</id>
+    <content type="html"><![CDATA[<p>Got this exception</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** +[MyClass&lt;0x100084d80> init]: cannot init a class object.'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I mistakenly written</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>instead of</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[UIScrollView and contentSize]]></title>
@@ -4999,19 +5028,6 @@
     <content type="html"><![CDATA[<p>What is this about?</p>
 
 <p><img class="center" src="http://kongakong.github.io/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[JSONKit: isa is deprecated]]></title>
-    <link href="http://kongakong.github.io/post/2013/11/28/jsonkit-isa-is-deprecated/"/>
-    <updated>2013-11-28T07:45:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/11/28/jsonkit-isa-is-deprecated</id>
-    <content type="html"><![CDATA[<p>Got a lot of compiler errors when compiling the JSONKit for an iOS7 project.</p>
-
-<p><img class="center" src="http://kongakong.github.io/images/ios_jsonkit_isa_error.png"></p>
-
-<p>Answer is here: <a href="http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated">http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated</a></p>
 ]]></content>
   </entry>
   
