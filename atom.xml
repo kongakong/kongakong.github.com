@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-16T20:43:35+11:00</updated>
+  <updated>2013-12-16T22:31:31+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -21,10 +21,12 @@
     <content type="html"><![CDATA[<p>Got this exception</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** +[MyClass&lt;0x100084d80> init]: cannot init a class object.'</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] *** Terminating app due to uncaught 
+</span><span class='line'>exception 'NSInvalidArgumentException', reason: '*** +[MyClass&lt;0x100084d80> init]: cannot init a class object.'</span></code></pre></td></tr></table></div></figure>
 
 
-<p>It is because I mistakenly written</p>
+<p>It is because I have mistakenly written</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
@@ -63,15 +65,32 @@
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="err"> (</span><span class="ni">void</span><span class="p">)</span><span class="nn">connectionDidFinishLoading</span><span class="p">:(</span><span class="nv">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="n">connection</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectionDidFinishLoading:</span><span class="p">(</span><span class="n">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="nv">connection</span>
 </span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="nv">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="nv">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
-</span><span class='line'>                            <span class="nn">initWithParseOptions</span><span class="p">:</span><span class="nv">JKParseOptionNone</span><span class="p">];</span>
-</span><span class='line'>    <span class="nv">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nn">objectWithData</span><span class="p">:</span><span class="n">receivedData</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>                            <span class="nl">initWithParseOptions:</span><span class="n">JKParseOptionNone</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nl">objectWithData:</span><span class="n">receivedData</span><span class="p">];</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>It is probably a wrong way to handle the incoming json data.</p>
+<p>and then I tried to convert the json data with this function:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="n">voide</span><span class="p">)</span> <span class="nf">convertJSONData:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">json</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">enumerator</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span> <span class="n">objectEnumerator</span><span class="p">];</span>
+</span><span class='line'>    <span class="kt">id</span> <span class="n">anObject</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">anObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">enumerator</span> <span class="n">nextObject</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// test for anObject class and handle accordingly</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is probably not an efficient way to handle the incoming json data.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: idea | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/idea/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-16T20:43:35+11:00</updated>
+  <updated>2013-12-16T22:31:31+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -25,6 +25,15 @@
 <p>London’s police have not said whether they found such a device. But on December 7th they announced that no further action would be taken and that their inquiry was over. The three suspects, who were on bail, are now free to leave Britain. The Times newspaper reported that because the high-tech scanner didn’t interfere with the ball or roulette wheel, the gamblers had not broken the law.”</p>
 
 <p>It will not be hard to implement in Android or iOS these days, I suppose? :&ndash;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A fun idea]]></title>
+    <link href="http://kongakong.github.io/post/2011/04/18/p-4711913957/"/>
+    <updated>2011-04-18T15:24:00+10:00</updated>
+    <id>http://kongakong.github.io/post/2011/04/18/p-4711913957</id>
+    <content type="html"><![CDATA[<p>A fun idea: why not do something to drive objective-c runtime system using erlang?</p>
 ]]></content>
   </entry>
   

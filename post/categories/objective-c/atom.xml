@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-16T20:43:35+11:00</updated>
+  <updated>2013-12-16T22:31:31+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[cannot init a class object]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object/"/>
+    <updated>2013-12-16T20:39:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object</id>
+    <content type="html"><![CDATA[<p>Got this exception</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] &lt;strong>&lt;em> Terminating app due to uncaught
+</span><span class='line'>exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&lt;/em>&lt;/strong> +[MyClass&lt;0x100084d80> init]: cannot init a class object.&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>It is because I have mistakenly written</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>instead of</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UIScrollView and contentSize]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize/"/>
+    <updated>2013-12-16T10:42:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize</id>
+    <content type="html"><![CDATA[<p>Common mistake in using <code>UIScrollView</code>: did not set the <code>contentSize</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Incorrect way to use JSONKit?]]></title>
@@ -29,18 +68,42 @@
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="nn">connectionDidFinishLoading</span><span class="p">:(</span><span class="nv">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="n">connection</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">connectionDidFinishLoading:</span><span class="p">(</span><span class="n">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="n">connection</span>
 </span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="nv">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
-</span><span class='line'>                        <span class="nn">initWithParseOptions</span><span class="p">:</span><span class="nv">JKParseOptionNone</span><span class="p">];</span>
-</span><span class='line'><span class="nv">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nn">objectWithData</span><span class="p">:</span><span class="n">receivedData</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>                        <span class="nl">initWithParseOptions:</span><span class="n">JKParseOptionNone</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nl">objectWithData:</span><span class="n">receivedData</span><span class="p">];</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>It is probably a wrong way to handle the incoming json data.</p>
+<p>and then I tried to convert the json data with this function:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="n">voide</span><span class="p">)</span> <span class="nl">convertJSONData:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">json</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">enumerator</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span> <span class="n">objectEnumerator</span><span class="p">];</span>
+</span><span class='line'><span class="kt">id</span> <span class="n">anObject</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="p">(</span><span class="n">anObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">enumerator</span> <span class="n">nextObject</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// test for anObject class and handle accordingly</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>It is probably not an efficient way to handle the incoming json data.</p>
 ]]></content>
   </entry>
   
@@ -200,54 +263,6 @@
 </code></pre>
 
 <p>This works because a property with a manual <code>@synthesize</code> which does not explicitly specify the ivar to be gotten and set by its accessors (such as <code>@synthesize delegate;</code>) will use an ivar with the same name as the property, NOT prefixed by an underscore.  This has to do with backwards compatibility.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[NSInvalidArgumentException when using count]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/03/nsinvalidargumentexception/"/>
-    <updated>2013-12-03T22:04:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/03/nsinvalidargumentexception</id>
-    <content type="html"><![CDATA[<p>Oops.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-03 22:01:10.281 Questions[50951:70b] &ndash;[NSNull count]: unrecognized selector sent to instance 0x101cb4b40
-</span><span class='line'>2013-12-03 22:01:10.311 Questions[50951:70b] *** Terminating app due to uncaught exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&ndash;[NSNull count]: unrecognized selector sent to instance 0x101cb4b40&rsquo;&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><strong>Solution:</strong></p>
-
-<p>Check if the target is indeed an array</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if ([anObject isKindOfClass:[NSArray class]]) { // Add a check here&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>NSInteger count = [anObject count];
-</span><span class='line'>...
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Switch and enum in Objective-c]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/08/switch-and-enum-in-objective-c/"/>
-    <updated>2013-07-08T21:30:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/08/switch-and-enum-in-objective-c</id>
-    <content type="html"><![CDATA[<blockquote><p>Do not implement a default case in switch statements that handle enumerated types. This helps if you add to the enumeration, because the compiler will warn that the switch does not handle all the values.</p></blockquote>
-
-<p>from <a href="http://www.informit.com/articles/article.aspx?p=2080040&amp;seqNum=5">Matt Galloway</a></p>
 ]]></content>
   </entry>
   
