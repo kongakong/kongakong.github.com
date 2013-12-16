@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://kongakong.github.io/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-11T06:49:35+11:00</updated>
+  <updated>2013-12-16T17:01:03+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[UIScrollView and contentSize]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize/"/>
+    <updated>2013-12-16T10:42:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize</id>
+    <content type="html"><![CDATA[<p>Common mistake in using <code>UIScrollView</code>: did not set the <code>contentSize</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Incorrect way to use JSONKit?]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit/"/>
+    <updated>2013-12-13T06:42:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
+    <content type="html"><![CDATA[<p>At the beginning I use the following code to decode a JSON string:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="err"> (</span><span class="ni">void</span><span class="p">)</span><span class="nn">connectionDidFinishLoading</span><span class="p">:(</span><span class="nv">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="n">connection</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="nv">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="nv">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>                            <span class="nn">initWithParseOptions</span><span class="p">:</span><span class="nv">JKParseOptionNone</span><span class="p">];</span>
+</span><span class='line'>    <span class="nv">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nn">objectWithData</span><span class="p">:</span><span class="n">receivedData</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is probably a wrong way to handle the incoming json data.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JSONKit exception]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/12/jsonkit-exception/"/>
+    <updated>2013-12-12T06:59:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/12/jsonkit-exception</id>
+    <content type="html"><![CDATA[<p>Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector  <code>objectFromJSONString</code>. It is my misunderstanding of how the JSONKit APIs are used</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-12 02:05:11.989 Questions[9190:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[JKArray objectFromJSONString]: unrecognized selector sent to instance 0x109318370'
+</span><span class='line'>*** First throw call stack:
+</span><span class='line'>(
+</span><span class='line'>  0   CoreFoundation                      0x0000000101b59795 __exceptionPreprocess + 165
+</span><span class='line'>  1   libobjc.A.dylib                     0x00000001018bc991 objc_exception_throw + 43
+</span><span class='line'>  2   CoreFoundation                      0x0000000101beabad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
+</span><span class='line'>  3   CoreFoundation                      0x0000000101b4b09d ___forwarding___ + 973
+</span><span class='line'>  4   CoreFoundation                      0x0000000101b4ac48 _CF_forwarding_prep_0 + 120
+</span><span class='line'>  5   Questions                           0x0000000100003b14 -[QueQuestionManager convertJsonIntoQuestionnaire:] + 804
+</span><span class='line'>  6   Questions                           0x000000010000404b -[QueQuestionManager connectionDidFinishLoading:] + 203
+</span><span class='line'>  7   Foundation                          0x0000000100467e9b __65-[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:]_block_invoke + 48
+</span><span class='line'>  8   Foundation                          0x000000010031b6ab -[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:] + 210
+</span><span class='line'>  9   Foundation                          0x000000010031b5bc -[NSURLConnectionInternal _withActiveConnectionAndDelegate:] + 69
+</span><span class='line'>  10  CFNetwork                           0x000000010347a777 ___ZN27URLConnectionClient_Classic26_delegate_didFinishLoadingEU13block_pointerFvvE_block_invoke + 107
+</span><span class='line'>  11  CFNetwork                           0x0000000103478942 ___ZN27URLConnectionClient_Classic18_withDelegateAsyncEPKcU13block_pointerFvP16_CFURLConnectionPK33CFURLConnectionClientCurrent_VMaxE_block_invoke_2 + 84
+</span><span class='line'>  12  CFNetwork                           0x00000001034bbf74 ___ZNK17CoreSchedulingSet13_performAsyncEPKcU13block_pointerFvvE_block_invoke + 25
+</span><span class='line'>  13  CoreFoundation                      0x0000000101b00114 CFArrayApplyFunction + 68
+</span><span class='line'>  14  CFNetwork                           0x00000001033ebbeb _ZN19RunloopBlockContext7performEv + 115
+</span><span class='line'>  15  CFNetwork                           0x00000001033eba31 _ZN17MultiplexerSource7performEv + 247
+</span><span class='line'>  16  CFNetwork                           0x00000001033eb854 _ZN17MultiplexerSource8_performEPv + 72
+</span><span class='line'>  17  CoreFoundation                      0x0000000101ae8ec1 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+</span><span class='line'>  18  CoreFoundation                      0x0000000101ae8792 __CFRunLoopDoSources0 + 242
+</span><span class='line'>  19  CoreFoundation                      0x0000000101b0461f __CFRunLoopRun + 767
+</span><span class='line'>  20  CoreFoundation                      0x0000000101b03f33 CFRunLoopRunSpecific + 467
+</span><span class='line'>  21  GraphicsServices                    0x000000010382f3a0 GSEventRunModal + 161
+</span><span class='line'>  22  UIKit                               0x0000000100987043 UIApplicationMain + 1010
+</span><span class='line'>  23  Questions                           0x0000000100003653 main + 115
+</span><span class='line'>  24  libdyld.dylib                       0x00000001021e85fd start + 1
+</span><span class='line'>)
+</span><span class='line'>libc++abi.dylib: terminating with uncaught exception of type NSException</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ivar error message: Autosynthesized property 'delegate' will use synthesized instance variable '_delegate', not existing instance variable 'delegate']]></title>
@@ -4906,54 +5012,6 @@
 <p><img class="center" src="http://kongakong.github.io/images/ios_jsonkit_isa_error.png"></p>
 
 <p>Answer is here: <a href="http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated">http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[rvm install problem]]></title>
-    <link href="http://kongakong.github.io/post/2013/11/27/rvm-install/"/>
-    <updated>2013-11-27T20:24:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/11/27/rvm-install</id>
-    <content type="html"><![CDATA[<p>At first the <code>rvm install ruby-1.9.3-p484</code> did not work on OSX. The extra <code>--with-gcc=clang</code> parameter fixed the issue</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Get image file size]]></title>
-    <link href="http://kongakong.github.io/post/2013/11/27/get-image-file-size/"/>
-    <updated>2013-11-27T07:28:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/11/27/get-image-file-size</id>
-    <content type="html"><![CDATA[<p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
-
-<p>e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ identify source/images/grab.png 
-</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Riak Content Type]]></title>
-    <link href="http://kongakong.github.io/post/2013/09/12/riak-content-type/"/>
-    <updated>2013-09-12T22:28:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/09/12/riak-content-type</id>
-    <content type="html"><![CDATA[<p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
-
-<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
-
-<ul>
-<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
-<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
-<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
-</ul>
-
-
-<p>Source: by Sam Elliott in the mailing list</p>
 ]]></content>
   </entry>
   

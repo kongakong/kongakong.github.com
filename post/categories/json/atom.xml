@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: json | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/json/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-12-16T17:01:03+11:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Incorrect way to use JSONKit?]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit/"/>
+    <updated>2013-12-13T06:42:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
+    <content type="html"><![CDATA[<p>At the beginning I use the following code to decode a JSON string:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="n">void</span><span class="p">)</span><span class="nn">connectionDidFinishLoading</span><span class="p">:(</span><span class="nv">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="n">connection</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="nv">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>                        <span class="nn">initWithParseOptions</span><span class="p">:</span><span class="nv">JKParseOptionNone</span><span class="p">];</span>
+</span><span class='line'><span class="nv">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nn">objectWithData</span><span class="p">:</span><span class="n">receivedData</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>It is probably a wrong way to handle the incoming json data.</p>
+]]></content>
+  </entry>
+  
+</feed>
