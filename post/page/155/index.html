@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful. http &hellip;">
+  <meta name="description" content="Finally I can bring up a login screen before the Split View in the ipad. Previously I was doing it wrong. I have the button btnLogin action to get a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/16/p-2759634210/">Finally I Can Bring Up a Login Screen Before the Split View in the Ipad.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-16T00:27:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -222,46 +262,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/09/p-2658426192/">Some Note on Frame vs Bounds</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
-
-<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
-
-<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/156/">&larr; Older</a>
@@ -279,6 +279,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/16/cannot-init-a-class-object/">cannot init a class object</a>
       </li>
     
@@ -292,10 +296,6 @@
     
       <li class="post">
         <a href="/post/2013/12/12/jsonkit-exception/">JSONKit exception</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/11/ivar-error-message/">ivar error message: Autosynthesized property &#8216;delegate&#8217; will use synthesized instance variable &#8216;_delegate&#8217;, not existing instance variable &#8216;delegate&#8217;</a>
       </li>
     
   </ul>

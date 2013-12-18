@@ -4,7 +4,7 @@
   <title><![CDATA[Category: public | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/public/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-16T22:31:31+11:00</updated>
+  <updated>2013-12-18T23:20:07+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,7 @@
     <id>http://kongakong.github.io/post/2012/03/05/p-18786500332</id>
     <content type="html"><![CDATA[<p>Lord Stern on climate change in LSE (23/2)</p>
 
-<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/HTDdZ0mEtOI "></iframe></div></p>
+<p>{% youtube HTDdZ0mEtOI %}</p>
 ]]></content>
   </entry>
   

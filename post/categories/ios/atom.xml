@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-16T22:31:31+11:00</updated>
+  <updated>2013-12-18T23:20:07+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,32 +14,76 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Using NSURLConnection to read json data]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/18/using-nsurlconnection-to-read-json-data/"/>
+    <updated>2013-12-18T22:34:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/18/using-nsurlconnection-to-read-json-data</id>
+    <content type="html"><![CDATA[<p>My code is not good at all for the following reasons:</p>
+
+<ul>
+<li><p>The NSURLConnection retrieves data synchronously</p></li>
+<li><p>The decoding of JSON is not neat. A strong code smell</p></li>
+</ul>
+
+
+<h3>Synchronous network call</h3>
+
+<p>In the viewDidLoad method of my ViewController</p>
+
+<p>{% codeblock lang:objective-c %}
+&ndash;(BOOL) readJSON {</p>
+
+<pre><code>NSError *error;
+NSURLResponse *response;
+
+receivedData = [NSMutableData data];
+
+NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:_server_url]];
+NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+
+if (theConnection) {
+    NSData *result = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:&amp;response error:&amp;error];
+    NSDictionary* json = [result objectFromJSONDataWithParseOptions:(JKParseOptionNone)];
+    [self convertJsonIntoMyData:json];
+    return TRUE;
+} else {
+    return FALSE;
+}
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
+
+<h3>Decoding of JSON data</h3>
+
+<p>I used a lot of enumerators to walk through dictionaries and arrays at different level. It makes future changes to the JSON schema or objective-c object model difficult.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[cannot init a class object]]></title>
     <link href="http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object/"/>
     <updated>2013-12-16T20:39:00+11:00</updated>
     <id>http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object</id>
     <content type="html"><![CDATA[<p>Got this exception</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] &lt;strong>&lt;em> Terminating app due to uncaught
-</span><span class='line'>exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&lt;/em>&lt;/strong> +[MyClass&lt;0x100084d80> init]: cannot init a class object.&rsquo;&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock  %}
+2013-12-16 17:35:59.976 MyProject[41964:70b] <strong><em> Terminating app due to uncaught
+exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;</em></strong> +[MyClass<0x100084d80> init]: cannot init a class object.&rsquo;</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>It is because I have mistakenly written</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c  %}
+[[MyClass init] alloc];
+{% endcodeblock %}</p>
 
 <p>instead of</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c  %}
+[[MyClass alloc] init];
+{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
@@ -72,18 +116,13 @@
     <id>http://kongakong.github.io/post/2012/08/16/p-29544259150</id>
     <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
+
+<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>I can enable this feature, but I got this exception from this function</p>
 
@@ -97,51 +136,6 @@ moved into or out of that section (0 moved in, 0 moved out).'
 </code></p>
 
 <p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to dismiss a modal view controller which is created by a segue in storyboard?]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/12/p-29256890594/"/>
-    <updated>2012-08-12T19:50:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/12/p-29256890594</id>
-    <content type="html"><![CDATA[<p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>But it does not work in storyboard anymore.</p>
-
-<p>This is the solution:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
