@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Just installed RVM. Message from RVM after installation: 1
-2
-* To start using RVM you need to run `source /Users/antkong/.rvm/scripts/rvm` in all &hellip;">
+  <meta name="description" content="After used octopress for a couple of days seriously as a blogging platform, this is a list of good and bad I feel about the platform: First a list of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,7 +71,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/12/p-52782958923/">Just Installed RVM</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/23/good-and-bad-of-octopress/">Good and Bad of Octopress</a></h1>
     
     
       <p class="meta">
@@ -89,24 +87,116 @@
   
 
 
-<time datetime="2013-06-12T21:20:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2013</time>
+<time datetime="2013-06-23T16:53:00+10:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Just installed RVM.</p>
+  <div class="entry-content"><p>After used octopress for a couple of days seriously as a blogging platform, this is a list of good and bad I feel about the platform:</p>
 
-<p>Message from RVM after installation:</p>
+<p>First a list of bad</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p>1) It takes time to build and release changes. Whenever I release a new post, I need to regenerate the site (takes up to several minutes for about 850 posts at the time of writing) and then commit the changes to the github. And then there is usually some delay between the commit and the final appearance of the new post on the site.</p>
+
+<p>2) With Octopress I will tend not to post spontaneously/impulsively as I was with Tumblr. It is because I will not be able to write and post with Octopress unless I am near my PC. Tumblr is, on the other hand, a web-based service and they have native apps on mobile platforms too. So I tend to post more on tumblr.</p>
+
+<p>The goods:</p>
+
+<p>1) The Octopress framework is very flexible. Anyone can write up any plugin in ruby to enhance the platform or add a new feature</p>
+
+<p>2) I get to use my favorite editor <code>vim</code></p>
+
+<p>3) Writing programming topic is painful in Tumblr. It is more enjoyable to do it in Octopress</p>
+
+<p>4) I get to  keep my the primary material &ndash; All blog posts, theme customisation and pictures etc are created and verison-controlled on my PC in the first place.</p>
+
+<p>5) Since it takes time to build and release the blog, the up-side is that I will post subjects that is worth writing about, instead of instagram-ish entries that are only there because it is convenient to pick a picture and post on a mobile phone.</p>
+
+<p>What I need now is a decent way to spell-check in vim/emacs.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-22T16:27:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>git status</code> says file is modified even if the file content is not changed</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-22T15:55:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>* To start using RVM you need to run `source /Users/antkong/.rvm/scripts/rvm`
-</span><span class='line'>    in all your open shell windows, in rare cases you need to reopen all shell windows.</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKit
+</span><span class='line'>  Referenced from: /Users/antkong/Library/Developer/Xcode/DerivedData/ebookreader-gplhzhssjudwymcrqpmxxokvhqvn/Build/Products/Debug/ebookreader.app/Contents/MacOS/ebookreader
+</span><span class='line'>  Reason: image not found</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Is it going to be <a href="http://lists.apple.com/archives/xcode-users/2008/May/msg00647.html">the answer</a>?</p>
 
+<blockquote><p>I have found a fix by getting to know what @rpath means. It is a tag placed in the generation of an executable&rsquo;s binary format indicating alternate paths to look for dependencies (including other libraries). By setting the build option &ldquo;runpath search paths&rdquo; to the developer frameworks directory, the executable looks in this place for the sen testing library at run time.</p></blockquote>
 </div>
   
   
@@ -119,7 +209,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/12/p-52781713139/">Note to Self</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a></h1>
     
     
       <p class="meta">
@@ -135,149 +225,79 @@
   
 
 
-<time datetime="2013-06-12T20:40:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2013</time>
+<time datetime="2013-06-20T08:14:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>Note to self</em></p>
+  <div class="entry-content"><p>This will fail immediately</p>
 
-<p>iPhone sync backup can be found in this location:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>~Library/Application Support/MobileSync</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/10/p-52620998556/">In Light of the NSA PRISM Scandal, I Recommend These Two Videos From ‘Conversation With History’ Series:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-10T21:44:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:</p>
-
-<p><a href="Interview%20with%20Glenn%20Greenwald">http://www.youtube.com/watch?v=-qlFjrgGqVA</a></p>
-
-<p><a href="%E2%80%98Deep%20State%E2%80%99%20-%20Interview%20with%20Professor%20Peter%20Dale%20Scott">http://youtu.be/CBGgxU27kJA</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/09/p-52534137425/">Weird Error Message of &#8216;Say&#8217; in 10.8.4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-09T20:40:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Weird error message of <code>say</code> in 10.8.4</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
-</span><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/08/p-52453247211/">OSX Terminal and .bashrc</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-08T21:20:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
-
-<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>  /usr/local/bin/easy_install3 BeautifulSoup
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><code>-s</code> here means if the file exists and not of size 0</p>
+<p>with error message</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  File <span class="s2">&quot;/usr/local/Cellar/python3/3.3.0/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/distribute-0.6.28-py3.3.egg/setuptools/sandbox.py&quot;</span>, line 33, in &lt;lambda&gt;
+</span><span class='line'>    <span class="o">)</span>.read<span class="o">()</span>, <span class="s2">&quot;setup.py&quot;</span>, <span class="s1">&#39;exec&#39;</span><span class="o">)</span>,
+</span><span class='line'>  File <span class="s2">&quot;setup.py&quot;</span>, line 22
+</span><span class='line'>    print <span class="s2">&quot;Unit tests have failed!&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is the right way</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span> /usr/local/bin/pip3 install beautifulsoup4
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/19/using-octopress/">Using Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-19T06:09:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Octopress really makes blogging on github easy.</p>
+
+<p>I am happy with tumblr after these many years, but writing programming related topic is not really enjoyable due to lack of support of syntax highlight etc.</p>
+
+<p>The markdown support in Octopress is very good</p>
 </div>
   
   
@@ -302,23 +322,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

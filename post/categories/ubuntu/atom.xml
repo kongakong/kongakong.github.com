@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ubuntu | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-24T19:12:45+11:00</updated>
+  <updated>2013-12-24T21:29:32+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,43 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[mach problem]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/mach-problem/"/>
-    <updated>2013-12-24T08:27:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/mach-problem</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
-</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: &lt;strong>&lt;em> Could not find autoconf 2.13.  Stop.
-</span><span class='line'> 0:00.15 make: &lt;/em>&lt;/strong> [build] Error 2
-</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>it comes from this check of  mozilla-central/client.mk</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>try to find autoconf 2.13 &ndash; discard errors from &lsquo;which&rsquo;&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>MacOS X 10.4 sends &ldquo;no autoconf*&rdquo; errors to stdout, discard those via grep&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;p>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v &lsquo;^no autoconf&rsquo; | head -1)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
+    <title type="html"><![CDATA[Mach problem: Failed at Unified_cpp_2]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/24/failed-at-unified-cpp-2/"/>
+    <updated>2013-12-24T21:24:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/24/failed-at-unified-cpp-2</id>
+    <content type="html"><![CDATA[<p>Failed at this point</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -63,75 +31,125 @@
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
-</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
-</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
-</span><span class='line'> 0:00.26 make[1]: &lt;strong>&lt;em> [/home/antkong/wd/mozilla-central/configure] Error 1
-</span><span class='line'> 0:00.26 make: &lt;/em>&lt;/strong> [build] Error 2
-</span><span class='line'> 0:00.27 0 compiler warnings present.&lt;/p>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p> 8:57.00 {standard input}: Assembler messages:
+</span><span class='line'> 8:57.17 {standard input}:104313: Warning: end of file not at end of a line; newline inserted
+</span><span class='line'> 8:57.17 {standard input}:104921: Error: unknown pseudo-op: `.lvl'
+</span><span class='line'> 8:57.18 {standard input}: Error: open CFI at the end of file; missing .cfi_endproc directive
+</span><span class='line'> 8:57.18 c++: internal compiler error: Killed (program cc1plus)
+</span><span class='line'> 8:57.18 Please submit a full bug report,
+</span><span class='line'> 8:57.19 with preprocessed source if appropriate.
+</span><span class='line'> 8:57.19 See &lt;file:///usr/share/doc/gcc-4.8/README.Bugs> for instructions.
+</span><span class='line'> 8:57.19
+</span><span class='line'> 8:57.19 In the directory  /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/js/src
+</span><span class='line'> 8:57.19 The following command failed to execute properly:
+</span><span class='line'> 8:57.19 c++ -o Unified_cpp_2.o -c -I../../dist/system_wrappers_js -include /home/antkong/wd/mozilla-central/js/src/config/gcc_hidden.h -DENABLE_PARALLEL_JS -DENABLE_BINARYDATA -DEXPORT_JS_API -DJS_HAS_CTYPES -DDLL_PREFIX=&ldquo;lib&rdquo; -DDLL_SUFFIX=&ldquo;.so&rdquo; -DMOZ_GLUE_IN_PROGRAM -DNO_NSPR_10_SUPPORT -DUSE_ZLIB -I/home/antkong/wd/mozilla-central/js/src -I. -Ictypes/libffi/include -I/home/antkong/wd/mozilla-central/js/src/../../mfbt/double-conversion -I/home/antkong/wd/mozilla-central/js/src/../../intl/icu/source/common -I/home/antkong/wd/mozilla-central/js/src/../../intl/icu/source/i18n -I../../dist/include -I/home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/include/nspr -I/home/antkong/wd/mozilla-central/js/src -fPIC -DMOZILLA_CLIENT -include ./js-confdefs.h -MD -MP -MF .deps/Unified_cpp_2.o.pp -Wall -Wpointer-arith -Woverloaded-virtual -Werror=return-type -Wtype-limits -Wempty-body -Werror=conversion-null -Wsign-compare -Wno-invalid-offsetof -Wcast-align -fno-rtti -fno-exceptions -fno-math-errno -std=gnu++0x -pthread -pipe -DNDEBUG -DTRIMMED -g -O3 -freorder-blocks -fomit-frame-pointer -DUSE_SYSTEM_MALLOC=1 -DENABLE_ASSEMBLER=1 -DENABLE_JIT=1 /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/js/src/Unified_cpp_2.cpp&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mach problem: Could not compile basic X program]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/24/could-not-compile-basic-x-program/"/>
+    <updated>2013-12-24T20:51:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/24/could-not-compile-basic-x-program</id>
+    <content type="html"><![CDATA[<p>Here is the full error message:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory&lt;/p>
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><strong>Solution</strong>: install autoconf-2.13</p>
+<p><strong>Solution</strong>: <code>sudo  apt-get install libxt-dev</code></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to set up virtualenv and use pip in python 3.3]]></title>
-    <link href="http://kongakong.github.io/post/2012/11/18/p-35977135674/"/>
-    <updated>2012-11-18T20:44:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/11/18/p-35977135674</id>
-    <content type="html"><![CDATA[<p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
+    <title type="html"><![CDATA[Mach problem: gstreamer backend]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/24/gstreamer-backend/"/>
+    <updated>2013-12-24T20:49:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/24/gstreamer-backend</id>
+    <content type="html"><![CDATA[<p>This is the full error message:</p>
 
-<p>Then you’ll need to create a virtualenv and activate it. For details see</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25
+</span><span class='line'> 0:09.25                       gstreamer-app-0.10
+</span><span class='line'> 0:09.25                       gstreamer-plugins-base-0.10
+</span><span class='line'> 0:09.25 configure: error: gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with &mdash;disable-gstreamer
+</span><span class='line'> 0:09.26 &lt;strong>&lt;em> Fix above errors and then restart with\
+</span><span class='line'> 0:09.26                &ldquo;/usr/bin/make -f client.mk build&rdquo;
+</span><span class='line'> 0:09.26 make[2]: &lt;/em>&lt;/strong> [configure] Error 1
+</span><span class='line'> 0:09.26 make[1]: &lt;strong>&lt;em> [obj-x86_64-unknown-linux-gnu/Makefile] Error 2
+</span><span class='line'> 0:09.26 make: &lt;/em>&lt;/strong> [build] Error 2
+</span><span class='line'> 0:09.27 0 compiler warnings present.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><a href="http://docs.python.org/3/library/venv.html">the python doc</a></p>
-
-<p>Since I want to install packages using pip, I proceed to install distribute.</p>
-
-<p><a href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></p>
+<p><strong>Solution</strong>: <code>sudo apt-get install -y libgstreamer-plugins-base0.10-dev</code></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Installing Ubuntu 12.04 server.]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/24/p-23663974204/"/>
-    <updated>2012-05-24T19:03:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/24/p-23663974204</id>
-    <content type="html"><![CDATA[<p>Installing Ubuntu 12.04 server.</p>
+    <title type="html"><![CDATA[Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/"/>
+    <updated>2013-12-24T19:38:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met</id>
+    <content type="html"><![CDATA[<p>Full error message:</p>
 
-<p>Used these options: encrypted home directory and LVM</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:08.11 configure: error: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>The installation is certainly more complicated than the desktop edition in the sense that it will expect the user to be able to answer certain technical questions.</p>
-
-<p>Therefore, after the machine was rebooted, I did a <code>apt-get update</code> then <code>apt-get install</code> the packages that I want to play with. Old school.</p>
+<p><strong>Solution</strong>:  <code>sudo apt-get install libgtk2.0-dev</code></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[It is a follow-up on an]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/04/p-22378145113/"/>
-    <updated>2012-05-04T21:32:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/04/p-22378145113</id>
-    <content type="html"><![CDATA[<p>It is a follow-up on an</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Trying to ``pip install numpy`` on ubuntu, and got this:]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/02/p-22252177628/"/>
-    <updated>2012-05-02T21:22:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/02/p-22252177628</id>
-    <content type="html"><![CDATA[<p>Trying to <code>pip install numpy</code> on ubuntu, and got this:</p>
+    <title type="html"><![CDATA[Mach problem: C++ compiler cannot create executables]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/"/>
+    <updated>2013-12-24T19:19:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
+    <content type="html"><![CDATA[<p>Got this error when I ran <code>mach build</code>:</p>
 
-<p>```</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>configure: error: installation or configuration problem: C++ compiler cannot create executables.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>SystemError: Cannot compile &lsquo;Python.h&rsquo;. Perhaps you need to install python-dev|python-devel.</p>
-
-<p>```</p>
+<p><strong>Solution</strong>: install g++</p>
 ]]></content>
   </entry>
   

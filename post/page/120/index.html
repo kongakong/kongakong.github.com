@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="ANSI C supports const keyword in C99
+  <meta name="description" content="Example:
 ">
   
 
@@ -72,7 +72,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048281435/">ANSI C Supports &#8220;const&#8220; Keyword in C99</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073811670/">Fill a Popover With a Tableview</a></h1>
     
     
       <p class="meta">
@@ -88,14 +88,14 @@
   
 
 
-<time datetime="2011-06-01T07:42:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-02T01:42:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>ANSI C supports <code>const</code> keyword in C99</p>
+  <div class="entry-content"><p>Example:</p>
 </div>
   
   
@@ -108,7 +108,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048028170/">Item 14: Make Sure Base Classes Have Virtual Destructors</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073241354/">Null Pointer in Different Languages</a></h1>
     
     
       <p class="meta">
@@ -124,14 +124,16 @@
   
 
 
-<time datetime="2011-06-01T07:34:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-02T01:14:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual destructor , the results are <em>undefined</em></p>
+  <div class="entry-content"><p>Each programming language calls it differently: nil, null, none etc… Let’s do a revision.</p>
+
+<p><em>Objective-c</em></p>
 </div>
   
   
@@ -144,7 +146,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046791916/">iPhone Buttons</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6069047203/">Using Const With Reference Arguments</a></h1>
     
     
       <p class="meta">
@@ -160,18 +162,14 @@
   
 
 
-<time datetime="2011-06-01T06:56:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-01T21:18:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Library:</p>
-
-<p><a href="Jeff%20LaMarche%E2%80%99s%20programmatic%20gradient%20buttons">http://code.google.com/p/iphonegradientbuttons/</a></p>
-
-<p><a href="From%20%E2%80%9CCocoa%20is%20My%20GirlFriend%E2%80%9D">http://www.cimgf.com/2010/01/28/fun-with-uibuttons-and-core-animation-layers/</a></p>
+  <div class="entry-content"><p>_Rule of thumb: _</p>
 </div>
   
   
@@ -184,7 +182,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046309287/">Item 13: List Members in an Initialization List in the Order in Which They Are Declared</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6069023423/">Assignment Operator Is Right-associative</a></h1>
     
     
       <p class="meta">
@@ -200,43 +198,7 @@
   
 
 
-<time datetime="2011-06-01T06:40:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Because destructor cleans up in the reverse order.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-01T21:17:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
@@ -244,6 +206,44 @@
 
 
   <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6068911247/">Item 15: Have Operator= Return a Reference to *this</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T21:09:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A common error amongst new C++ programmers is to have<em> operator=</em> return void, a decision that seems reasonable unTIL you realize it prevents chains of assignment.</p>
+
+<p>Here is an example implementation:</p>
 </div>
   
   
@@ -268,23 +268,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

@@ -9,7 +9,39 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For some reason I cannot set the title of the backBarButtonItem of navigationItem programmatically. I can only set it in the InterfaceBuilder. Also &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31 $ gsi
+Gambit v4.6.2 &gt; ,? ,? : Summary of comma commands
+,h &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,7 +103,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/11/p-24875240027/">For Some Reason I Cannot Set the Title of the &#8220;backBarButtonItem&#8220; of &#8220;navigationItem&#8220; Programmatically. I Can Only Set It in the InterfaceBuilder.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/16/p-25216266931/">Gambit Scheme Built-in Help</a></h1>
     
     
       <p class="meta">
@@ -87,119 +119,7 @@
   
 
 
-<time datetime="2012-06-11T18:33:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For some reason I cannot set the title of the <code>backBarButtonItem</code> of <code>navigationItem</code> programmatically. I can only set it in the InterfaceBuilder.</p>
-
-<p>Also it must be done in the controller that initiates the page transition</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/11/p-24873216853/">Having Some Simple Fun With Gambit-scheme</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-11T17:05:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Having some simple fun with gambit-scheme</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/10/p-24803473772/">Annoying. Cannot Get the Subview Resized Automatically, Despite Doing This:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-10T18:38:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Annoying. Cannot get the subview resized automatically, despite doing this:</p>
-
-<p>Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/10/p-24801287706/">How to Bring a Subview to the Front When You Tap It?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-10T17:11:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
+<time datetime="2012-06-16T18:40:00+10:00" pubdate data-updated="true">Jun 16<span>th</span>, 2012</time>
         
       </p>
     
@@ -208,8 +128,66 @@
 
   <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>[parentView bringSubviewToFront:childView];
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>$ gsi
+</span><span class='line'>Gambit v4.6.2
+</span><span class='line'>
+</span><span class='line'>&gt; ,? 
+</span><span class='line'>,?              : Summary of comma commands
+</span><span class='line'>,h   | ,(h X)   : Help on procedure of last error or procedure/macro named X
+</span><span class='line'>,q              : Terminate the process
+</span><span class='line'>,qt             : Terminate the current thread
+</span><span class='line'>,t              : Jump to toplevel REPL
+</span><span class='line'>,d              : Jump to enclosing REPL
+</span><span class='line'>,c   | ,(c X)   : Continue the computation with stepping off
+</span><span class='line'>,s   | ,(s X)   : Continue the computation with stepping on (step)
+</span><span class='line'>,l   | ,(l X)   : Continue the computation with stepping on (leap)
+</span><span class='line'>,N              : Move to specific continuation frame (N&gt;=0)
+</span><span class='line'>,N+  | ,N-      : Move forward/backward by N continuation frames (N&gt;=0)
+</span><span class='line'>,+   | ,-       : Like ,1+ and ,1-
+</span><span class='line'>,++  | ,--      : Like ,N+ and ,N- with N = nb. of frames at head of backtrace
+</span><span class='line'>,y              : Display one-line summary of current frame
+</span><span class='line'>,i              : Display procedure attached to current frame
+</span><span class='line'>,b   | ,(b X)   : Display backtrace of current continuation or X (cont/thread)
+</span><span class='line'>,be  | ,(be X)  : Like ,b and ,(b X) but also display environment
+</span><span class='line'>,bed | ,(bed X) : Like ,be and ,(be X) but also display dynamic environment
+</span><span class='line'>,e   | ,(e X)   : Display environment of current frame or X (proc/cont/thread)
+</span><span class='line'>,ed  | ,(ed X)  : Like ,e and ,(e X) but also display dynamic environment
+</span><span class='line'>,st  | ,(st X)  : Display current thread group, or X (thread/thread group)
+</span><span class='line'>,(v X)          : Start a REPL visiting X (proc/cont/thread)
+</span><span class='line'>&gt; ,q
+</span><span class='line'>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -226,7 +204,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/09/p-24744300898/">Rational Trigonometry</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/16/p-25214174626/">Chales Dicken and USA</a></h1>
     
     
       <p class="meta">
@@ -242,16 +220,130 @@
   
 
 
-<time datetime="2012-06-09T23:58:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2012</time>
+<time datetime="2012-06-16T17:10:00+10:00" pubdate data-updated="true">Jun 16<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="Rational%20Trigonometry">http://en.wikipedia.org/wiki/Rational_trigonometry</a></p>
+  <div class="entry-content"><p>It is my very simple, naive understanding of the love-hate relationship Chales Dicken and USA: Initially Americans like Chales Dicken because of his works. When Chales first visited USA, the host threw a lavish ball for him. However as tour went on, Chales was upset by the lack of idealism in American politics and the mannerism of the people he met. At the end, he fell out with America when he realised the privacy of his novels in USA has costed him a hugh sum of lost income. He wrote of USA in a very negative light after he was back in England. It took years before the relationship was mended.</p>
+</div>
+  
+  
 
-<p>Forget distance and angle</p>
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/14/p-25088277061/">Hopefully It Is a Solution to My Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-14T23:04:00+10:00" pubdate data-updated="true">Jun 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Hopefully%20it%20is%20a%20solution%20to%20my%20problem">https://discussions.apple.com/thread/3766710?start=0&amp;tstart=0</a></p>
+
+<p>iMac hang for no reason. In Console I can see a dump of GPU debug info. Some people suspect it is the photo screen saver issue &ndash; it cannot handle video in the photo library.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24944720490/">Most Important Layout Related Logic Are Inside MyMovieViewController in the MediaPlayer_iPhone Example</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T18:24:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Most important layout related logic are inside MyMovieViewController in the MediaPlayer_iPhone example</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24942635911/">Finally Figure Out the Back Button Title Not Set Issue.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T17:06:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally figure out the back button title not set issue.</p>
+
+<p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
 </div>
   
   
@@ -276,23 +368,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I am going to court next week. I have been selected for jury duty. It is kind of insane case: Six thousand ants dressed up as rice and robbed a &hellip;">
+  <meta name="description" content="For some reason I cannot set the title of the backBarButtonItem of navigationItem programmatically. I can only set it in the InterfaceBuilder. Also &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,7 +71,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/06/p-24534423672/">Quote of the Day</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/11/p-24875240027/">For Some Reason I Cannot Set the Title of the &#8220;backBarButtonItem&#8220; of &#8220;navigationItem&#8220; Programmatically. I Can Only Set It in the InterfaceBuilder.</a></h1>
     
     
       <p class="meta">
@@ -87,16 +87,16 @@
   
 
 
-<time datetime="2012-06-06T21:43:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
+<time datetime="2012-06-11T18:33:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>I am going to court next week. I have been selected for jury duty. It is kind of insane case: Six thousand ants dressed up as rice and robbed a Chinese restaurant. I don’t think they did it. I know a few of them and they won’t do anything like that</p></blockquote>
+  <div class="entry-content"><p>For some reason I cannot set the title of the <code>backBarButtonItem</code> of <code>navigationItem</code> programmatically. I can only set it in the InterfaceBuilder.</p>
 
-<p>- Steven Wright</p>
+<p>Also it must be done in the controller that initiates the page transition</p>
 </div>
   
   
@@ -109,7 +109,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/05/p-24465550078/">Apparently I Am Not the Only Who Mistook Emma Stone for Linsay Lohan.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/11/p-24873216853/">Having Some Simple Fun With Gambit-scheme</a></h1>
     
     
       <p class="meta">
@@ -125,14 +125,14 @@
   
 
 
-<time datetime="2012-06-05T21:13:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2012</time>
+<time datetime="2012-06-11T17:05:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Apparently I am not the only who mistook Emma Stone for Linsay Lohan.</p>
+  <div class="entry-content"><p>Having some simple fun with gambit-scheme</p>
 </div>
   
   
@@ -145,7 +145,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/05/p-24423629594/">Pasta With Shrimp and Broccoli in a Nice Garlic Pesto</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/10/p-24803473772/">Annoying. Cannot Get the Subview Resized Automatically, Despite Doing This:</a></h1>
     
     
       <p class="meta">
@@ -161,18 +161,16 @@
   
 
 
-<time datetime="2012-06-05T07:17:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2012</time>
+<time datetime="2012-06-10T18:38:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>When everything is cooked, throw them all together in a pan, mix, and serve</p>
+  <div class="entry-content"><p>Annoying. Cannot get the subview resized automatically, despite doing this:</p>
 
-<p>(</p>
-
-<p><a href="source">http://www.reddit.com/r/tonightsdinner/comments/uk9c2/pasta_with_shrimp_and_broccoli_in_a_nice_garlic/</a></p>
+<p>Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController</p>
 </div>
   
   
@@ -185,7 +183,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/02/p-24202482392/">Did a ‘git Commit .’ but Did Not Realised the Commit Has Failed.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/10/p-24801287706/">How to Bring a Subview to the Front When You Tap It?</a></h1>
     
     
       <p class="meta">
@@ -201,16 +199,21 @@
   
 
 
-<time datetime="2012-06-02T03:26:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2012</time>
+<time datetime="2012-06-10T17:11:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Did a ‘git commit .’ but did not realised the commit has failed.</p>
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[parentView bringSubviewToFront:childView];
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Then I did a ‘git checkout -b next_jira’ and I lost all my changes… Nice.</p>
+
+
 </div>
   
   
@@ -223,7 +226,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/31/p-24121526195/">MPMoviePlayerViewController</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/09/p-24744300898/">Rational Trigonometry</a></h1>
     
     
       <p class="meta">
@@ -239,14 +242,16 @@
   
 
 
-<time datetime="2012-05-31T19:15:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+<time datetime="2012-06-09T23:58:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Wanted to use <code>MPMoviePlayerViewController</code> but really don’t know how to use <code>initWithContentURL</code> in the context of <code>prepareForSegue</code></p>
+  <div class="entry-content"><p><a href="Rational%20Trigonometry">http://en.wikipedia.org/wiki/Rational_trigonometry</a></p>
+
+<p>Forget distance and angle</p>
 </div>
   
   
@@ -271,23 +276,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

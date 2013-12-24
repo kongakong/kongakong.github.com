@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="ptree is available in Solaris but not in OSX
+  <meta name="description" content="Run /usr/libexec/locate.updatedb to update the locate database It is different from just running updatedb in linux
 ">
   
 
@@ -72,7 +72,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/11/17/p-1591060031/">Ptree</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/11/23/p-1658278877/">Locate and Updatedb in OSX</a></h1>
     
     
       <p class="meta">
@@ -88,14 +88,16 @@
   
 
 
-<time datetime="2010-11-17T00:22:00+11:00" pubdate data-updated="true">Nov 17<span>th</span>, 2010</time>
+<time datetime="2010-11-23T23:10:00+11:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>ptree</em> is available in Solaris but not in OSX</p>
+  <div class="entry-content"><p>Run <code>/usr/libexec/locate.updatedb</code> to update the locate database</p>
+
+<p>It is different from just running <code>updatedb</code> in linux</p>
 </div>
   
   
@@ -108,7 +110,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/11/16/p-1584176038/">NSView and NSControl</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/11/23/p-1657863512/">Trifoil Knot and Mirrored Trifoil Knot</a></h1>
     
     
       <p class="meta">
@@ -124,14 +126,14 @@
   
 
 
-<time datetime="2010-11-16T09:03:00+11:00" pubdate data-updated="true">Nov 16<span>th</span>, 2010</time>
+<time datetime="2010-11-23T21:48:00+11:00" pubdate data-updated="true">Nov 23<span>rd</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>self-study target: <code>NSVIew</code> and <code>NSControl</code></p>
+  <div class="entry-content"><p>Concept of Equivalent and homomorphic.</p>
 </div>
   
   
@@ -144,7 +146,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541956118/">Objective-c: Interface Builder</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/11/22/p-1636645047/">Platonic Solid</a></h1>
     
     
       <p class="meta">
@@ -160,16 +162,14 @@
   
 
 
-<time datetime="2010-11-11T21:34:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+<time datetime="2010-11-22T00:10:00+11:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>An object instance variable in Interface Builder is known as an outlet.</p>
-
-<p>Action methods must have an IBAction return type</p>
+  <div class="entry-content"><p><em>Platonic solid</em> are Tetrahedron, Cube (or hexahedron), Octahedron, Dodecahedron  and Icosahedron</p>
 </div>
   
   
@@ -182,7 +182,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541953050/">Objective-c: System Processes</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/11/19/p-1618228950/">Crash</a></h1>
     
     
       <p class="meta">
@@ -198,24 +198,18 @@
   
 
 
-<time datetime="2010-11-11T21:33:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+<time datetime="2010-11-19T23:23:00+11:00" pubdate data-updated="true">Nov 19<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>NSProcess</em></p>
+  <div class="entry-content"><p>MBP shutdown due to flat battery. Totally crashed VirtualBox.</p>
 
-<p><em>NSTask</em></p>
+<p><code>Failed to access USB subsystem</code></p>
 
-<p><em>NSThread</em></p>
-
-<p><em>NSLock</em></p>
-
-<p><em>NSRecursiveLock</em></p>
-
-<p><em>NSConditionLock</em></p>
+<p><code>Could not load the USB subsystem service (VERR_GENERAL_FAILURE)</code></p>
 </div>
   
   
@@ -228,7 +222,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541948032/">Objective-c: Notification</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/11/17/p-1591063715/">Plgadd in Solaris</a></h1>
     
     
       <p class="meta">
@@ -244,20 +238,14 @@
   
 
 
-<time datetime="2010-11-11T21:32:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+<time datetime="2010-11-17T00:23:00+11:00" pubdate data-updated="true">Nov 17<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>NSNotificationCenter</em></p>
-
-<p><em>NSNotification</em></p>
-
-<p><code>addObserver:selector:name:object</code></p>
-
-<p>Objects that have registered with the notification center are responsible for removing themselves when they no longer wish to receive notifications or when being destroyed. It is particularly important to remove an observer object in the object’s dealloc method, since the notification center does not retain observers. If you do not remove objects before they are destroyed, the notification center will attempt to send messages to objects that no longer exist, resulting in a runtime exception</p>
+  <div class="entry-content"><p><em>pkgadd</em> is in <code>/usr/sbin</code> on the Solaris platform</p>
 </div>
   
   
@@ -282,23 +270,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

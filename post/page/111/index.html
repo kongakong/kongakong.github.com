@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Virtual functions are dynamically bound, but default parameters are statically bound
+  <meta name="description" content="To inherit the implementation but not the interface. Example:
 ">
   
 
@@ -72,7 +72,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/13/p-6461712369/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6475222144/">Item 42: Use Private Inheritance Judiciously</a></h1>
     
     
       <p class="meta">
@@ -88,14 +88,16 @@
   
 
 
-<time datetime="2011-06-13T05:19:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+<time datetime="2011-06-13T12:27:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Virtual functions are dynamically bound, but default parameters are statically bound</p>
+  <div class="entry-content"><p>To inherit the implementation but not the interface.</p>
+
+<p>Example:</p>
 </div>
   
   
@@ -108,7 +110,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/13/p-6461660818/">Item 37: Never Redefine an Inherited Nonvirtual Function</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6469435037/">Item 41: Differentiate Between Inheritance and Templates</a></h1>
     
     
       <p class="meta">
@@ -124,14 +126,14 @@
   
 
 
-<time datetime="2011-06-13T05:18:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+<time datetime="2011-06-13T09:28:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Lead to difference in behavior if a derived class is casted to its base class. Not advised.</p>
+  <div class="entry-content"><p>A <code>template</code> should be used to generate a collection of classes when the type of the objects does not affect the behavior of the class’s functions.</p>
 </div>
   
   
@@ -144,7 +146,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6450378712/">Item 36: Differentiate Between Inheritance of Interface and Inheritance of Implementation</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6463253620/">Item 40: Model &#8216;Has-a&#8217; or &#8216;Is-implemented-in-terms-of&#8217; Through Layering</a></h1>
     
     
       <p class="meta">
@@ -160,18 +162,16 @@
   
 
 
-<time datetime="2011-06-12T21:59:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
+<time datetime="2011-06-13T06:09:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The purpose of declaring a <code>_pure virtual function_</code> is to have derived classes inherit a function interface only</p>
+  <div class="entry-content"><p>Layering is known as composition, containment, and embedding.</p>
 
-<p>The purpose of declaring a simple <code>_virtual function_</code> is to have derived classes inherit a function interface as well as a default implementation.</p>
-
-<p>The purpose of declaring a <code>_nonvirtual function_</code> is to have derived classes inherit a function interface as well as a mandatory implementation.</p>
+<p>It represents a ‘has-a’ relationship</p>
 </div>
   
   
@@ -184,7 +184,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6449793506/">Item 35: Make Sure Public Inheritance Models &#8216;Isa&#8217;</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6463175755/">Item 39: Avoid Casts Down the Inheritance Hierarchy</a></h1>
     
     
       <p class="meta">
@@ -200,14 +200,18 @@
   
 
 
-<time datetime="2011-06-12T21:16:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
+<time datetime="2011-06-13T06:06:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>OO design principle</p>
+  <div class="entry-content"><p>It touches on the topic of <code>downcasting</code> (cast a derived class to its base class)</p>
+
+<p>First of all, downcasting itself is usually unnecessary in most situation where the virtual functions are suffice.</p>
+
+<p>If it must be done, use <code>dynamic_cast</code>. It will return null if cast is unsuccessful</p>
 </div>
   
   
@@ -220,7 +224,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6448800917/">Item 34: Minimize Compilation Dependencies Between Files</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6462484863/">OpenRTB</a></h1>
     
     
       <p class="meta">
@@ -236,30 +240,16 @@
   
 
 
-<time datetime="2011-06-12T20:00:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
+<time datetime="2011-06-13T05:44:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>There are three technique to make a header file more self-contained:</p>
+  <div class="entry-content"><p><a href="http://openrtb.info/mobile/">OpenRTB</a>]</p>
 
-<ol>
-<li><code>Avoid using objects when object references and pointers will do</code></li>
-</ol>
-
-
-<p>This will avoid the need of including a header file</p>
-
-<ol>
-<li><code>Don't _#include_ header files in your header files unless your headers won't compile without them</code></li>
-</ol>
-
-
-<p>Use forward declaration instead</p>
-
-<p>Probably useful technique if the scale of the c++ project warrants it?</p>
+<p>RTB stands for &ldquo;Real-Time Bidding&rdquo;</p>
 </div>
   
   
@@ -284,23 +274,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

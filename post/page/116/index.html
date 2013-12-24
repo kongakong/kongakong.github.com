@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Some concepts: member function templates (c++ language construct)
-NullClass (useful while you are a caller of the function and want to avoid &hellip;">
+  <meta name="description" content="For example, one should try to avoid Returning a handle of a private member variable via public member functions
+Returning a pointer of a private &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,7 +72,7 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6185145541/">Item 25: Avoid Overloading on a Pointer and a Numerical Type</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6194235311/">Item 30: Avoid Member Functions That Return Non-const Pointers or References to Members Less Accessible Than Themselves</a></h1>
     
     
       <p class="meta">
@@ -88,18 +88,18 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
   
 
 
-<time datetime="2011-06-05T05:36:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+<time datetime="2011-06-05T10:35:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Some concepts:</p>
+  <div class="entry-content"><p>For example, one should try to avoid</p>
 
 <ol>
-<li><p>member function templates (c++ language construct)</p></li>
-<li><p>NullClass (useful while you are a caller of the function and want to avoid potential mistake)</p></li>
+<li><p>Returning a handle of a private member variable via public member functions</p></li>
+<li><p>Returning a pointer of a private function via public interface</p></li>
 </ol>
 
 </div>
@@ -114,7 +114,7 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172703837/">Item 24: Choose Carefully Between Function Overloading and Parameter Defaulting</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6191932419/">Item 29: Avoid Returning &#8216;Handles&#8217; to Internal Data</a></h1>
     
     
       <p class="meta">
@@ -130,14 +130,14 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
   
 
 
-<time datetime="2011-06-04T21:39:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+<time datetime="2011-06-05T09:18:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>Item 29 is to adress situations in which the holder of a handle (a pointer or reference to the internal data representation) can circumvent  the <code>const</code> semantic by making modification to the underlying data via the handle.</p>
 </div>
   
   
@@ -150,7 +150,7 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172106672/">Item 23: Don&#8217;t Try to Return a Reference When You Must Return an Object</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
     
     
       <p class="meta">
@@ -166,24 +166,18 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
   
 
 
-<time datetime="2011-06-04T20:55:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>Example:</em></p>
+  <div class="entry-content"><p>To disallow an operation on your object class, you can</p>
 
-<p><code>operator*</code> and <code>operator+</code> should return a new object instead of a reference. The latter approach will introduce problem such as memory leak</p>
+<p>1) declare the function as <em>private</em></p>
 
-<p><em>Additional note:</em></p>
-
-<p>Avoid overloading short-circuiting operators: x || y or x &amp;&amp; y. The overloaded versions of these do not short-circuit — they evaluate both operands even if the left-hand operand “determines” the outcome, so that confuses users.</p>
-
-<p>From</p>
-
-<p><a href="http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9">C++ FAQ</a></p>
+<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
 </div>
   
   
@@ -196,7 +190,7 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172071952/">Item 22: Prefer Pass-by-reference to Pass-by-value</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189159712/">Item 28: Partition the Global Namespace</a></h1>
     
     
       <p class="meta">
@@ -212,18 +206,16 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
   
 
 
-<time datetime="2011-06-04T20:52:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+<time datetime="2011-06-05T07:47:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.</p>
+  <div class="entry-content"><p>Don’t think anyone will seriously argue against the usefulness of namespace.</p>
 
-<p>Secondly, it avoids this kind of error:</p>
-
-<p>A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.</p>
+<p>It is also mentioned that we can use <code>struct</code> to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.</p>
 </div>
   
   
@@ -236,7 +228,7 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/03/p-6115767038/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6186209686/">Item 26: Guard Against Potential Ambiguity</a></h1>
     
     
       <p class="meta">
@@ -252,14 +244,14 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
   
 
 
-<time datetime="2011-06-03T06:04:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
+<time datetime="2011-06-05T06:10:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t</p>
+  <div class="entry-content"><p>Compiler cannot decide:</p>
 </div>
   
   
@@ -284,23 +276,23 @@ NullClass (useful while you are a caller of the function and want to avoid &hell
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

@@ -72,7 +72,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105625669/">Item 18: Strive for Class Interfaces That Are Complete and Minimal</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6115016559/">Item 21: Use Const Whenever Possible</a></h1>
     
     
       <p class="meta">
@@ -88,7 +88,7 @@
   
 
 
-<time datetime="2011-06-02T22:28:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T05:40:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
@@ -108,7 +108,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105544979/">Item 17: Check for Assignment to Self in Operator=</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6114962267/">Item 20: Avoid Data Members in the Public Interface</a></h1>
     
     
       <p class="meta">
@@ -124,14 +124,14 @@
   
 
 
-<time datetime="2011-06-02T22:23:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T05:38:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>By pointer,</p>
+  <div class="entry-content">
 </div>
   
   
@@ -144,7 +144,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6104327299/">Item 16: Assign to All Data Members in Operator=</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6108828433/">C Trick Question</a></h1>
     
     
       <p class="meta">
@@ -160,14 +160,14 @@
   
 
 
-<time datetime="2011-06-02T21:08:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T01:22:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>For a derived class, a way to achieve this is by reusing base class’s <code>=</code> operator:</p>
+  <div class="entry-content"><p>Why doesn’t it compile?</p>
 </div>
   
   
@@ -180,7 +180,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103900919/">Dalai Farmer (Bill Bailey)</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6107440181/">How to Do Lazy Loading With NSURLConnection</a></h1>
     
     
       <p class="meta">
@@ -196,16 +196,14 @@
   
 
 
-<time datetime="2011-06-02T20:40:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T00:09:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is just a little joke in one episode of QI (Series 5, Episode 4), but there is already a webpage about</p>
-
-<p><a href="it">http://uncyclopedia.wikia.com/wiki/Dalai_Farmer</a></p>
+  <div class="entry-content"><p><a href="How%20to%20do%20Lazy%20Loading%20with%20NSURLConnection">http://www.cocoanetics.com/2011/05/and-now-lazy-loading-with-nsurlconnection/</a></p>
 </div>
   
   
@@ -218,7 +216,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103768529/">Installing Couchdb Using Brew</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6107123844/">Compile This and Run&#8230;</a></h1>
     
     
       <p class="meta">
@@ -234,49 +232,18 @@
   
 
 
-<time datetime="2011-06-02T20:32:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-02T23:52:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Message after a successful installation</p>
+  <div class="entry-content"><p>Compile this and run,</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>If this is your first install, automatically load on login with:
-</span><span class='line'>    mkdir -p ~/Library/LaunchAgents
-</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
-</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>
-</span><span class='line'>If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
-</span><span class='line'>    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
-</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>
-</span><span class='line'>Or start manually with:
-</span><span class='line'>    couchdb
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
+<p>&#8220;`</p>
 
-
-
+<h1>include</h1>
 </div>
   
   
@@ -301,23 +268,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
       <li class="post">
-        <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
+        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>
