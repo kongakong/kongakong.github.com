@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Recession is now being discussed again.I vaguely remembered that there was an academic study of the correlation between number of published news &hellip;">
+  <meta name="description" content="Just had a chat with a colleague the other day. He was watching the BoC (Bank of China) Stock. My colleague said the stock price was depressed due to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,165 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2007/12/05/jst_8125965922181438969/">Have It Both Ways</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-05T06:16:00+11:00" pubdate data-updated="true">Dec 5<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just had a chat with a colleague the other day. He was watching the BoC (Bank of China) Stock. My colleague said the stock price was depressed due to its involvement  in the sub-prime market. A spokesperson of the bank said they are in it because their traders are &ldquo;inexperienced&rdquo;.<br /><br />I cannot help but laugh! &ldquo;Inexperienced&rdquo;? You really can&rsquo;t have it both way: when you are making money, you are the smartest person on the world. All the profit are the result of your vision, insight, education, risking-taking spirit, understanding of market and sophistication. But when the tide turns against you, &ldquo;Oops, ya know, this thing is kinda new to me&rdquo;. Yet handsome bonus is still waiting for you at the end of the year, like usual.<br /><br />It does not make sense to me. You should not have it both ways.<br /><br /><span style="font-style: italic;">(*What my colleague said is not fact checked)<br />(Writing in a slightly sarcastic mode)<br /></span></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2007/11/30/1863063009982204384/">Erlang Daemon Mode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-30T05:08:00+11:00" pubdate data-updated="true">Nov 30<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.sics.se/~joe/tutorials/web_server/web_server.html">A webserver daemon</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2007/09/14/7492504578198141841/">Erlang Syntax 2 - Pattern Matching and Assignment</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-09-14T17:45:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I think it is probably a typical experience for any beginner of Erlang: The equal sign in Erlang actually works differently comparing most other imperative mainstream application.  I were a little bit surprised when I first realized the subtle difference.<br /><br /><br />In erlang, the equal sign is actually an pattern matching  operator.  For example,<br /><br /><span style="font-family:courier new;">[H|T] = [0, 1, 2, 3, 4]</span><br /><br />In the case, H is actually matched with the head of the list [0..4]. Although it effectively initialised the values of variable H and T, it is fundamentally a different concept.<br /><br />Another application of this language feature is that it serves as a mean to enforce assertion. For example,<br /><br /><span style="font-family: courier new;">ok = module:func().</span><br /><br />If func return an atom <span style="font-weight: bold;">failure</span> instead of <span style="font-weight: bold;">ok</span>, an exception will be automatically generated.<br /><br />Isn&rsquo;t it neat?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2007/09/14/1589380066274908176/">Erlang Syntax 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-09-14T17:44:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">1</span><span class="o">&gt;</span> <span class="p">(</span><span class="nb">list_to_atom</span><span class="p">(</span><span class="err">“</span><span class="n">erlang</span><span class="err">”</span><span class="p">)):(</span><span class="nb">list_to_atom</span><span class="p">(</span><span class="err">“</span><span class="n">now</span><span class="err">”</span><span class="p">))().</span>
+</span><span class='line'><span class="p">{</span><span class="mi">1189</span><span class="p">,</span><span class="mi">752160</span><span class="p">,</span><span class="mi">276431</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is equivalent to</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1> erlang:now().</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Very interesting syntax.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2007/09/05/jst_5793707205484828184/">The R-word</a></h1>
     
     
@@ -102,119 +261,9 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2007/09/05/jst_1656724050813809440/">House of Cards</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-09-05T22:24:00+10:00" pubdate data-updated="true">Sep 5<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><span>Some high-profile resignations:</span></p>
-
-
-<br /><br /><p><span style="font-weight: bold;">Michael Brown</span> of FEMA resigned on 12 Sep, 2005<br /></p><p><span style="font-weight: bold;">John Bolton</span>, UN Ambassador, 4 Dec, 2006</p><p><span style="font-weight: bold;">Donald Rumsfeld</span>&#8217;s resignation took effect on 18 Dec, 2006</p><span style="font-weight: bold;">Pual Wolfowitz</span>, World Bank, 30 Jun 2007<span style="font-size:-1;"><b></b><br /><br /></span><span style="font-weight: bold;">Karl Rove </span>left the White House on 31 August, 2007.<br /><br /><span style="font-weight: bold;">Alberto Gonzales</span>&#8217;s resignation will be effective on 17 September, 2007.<br /><br />These are the people President Bush trusts and believes to have done a helluva job.<br /><br />Without a doubt, Bush administration has become a lame duck government.<br /><br />And, where is Dick Cheney in all these? In this sense, he is very smart: he is able to pull off the Iraq war but yet seemingly immune to any political trouble.
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2007/08/20/jst_1651840925203213181/">Unfolding of Events (Subprime Market)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-08-20T02:15:00+10:00" pubdate data-updated="true">Aug 20<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The Fed has cut down the discount rate by half a percent last Friday (17 Aug). We can see it as a move of FRB (Federal Reserve Board) to allow those financial institutes in trouble to have access to liquidity without yielding to demand for a board Fed Rate cut. &ldquo;The money-changers must accept some kind of haircut and should not expect bail-out&rdquo; seems to be the signal of the move.<br /><br />Probably as long as no major financial institutes go belly up, we can say the crisis is contained within the financial sector? But then, it is a very narrow definition of containment. Like Daniel Gross of Slate.com said, if containment of Cold War was as effective as this one, we will all be speaking Russian and farming collectively. A recession is inevitable.<br /><br />NY Times has this piece of <a href="http://www.nytimes.com/2007/08/19/business/19credit.html?_r=1&hp&amp;oref=slogin">reporting</a> on the subject. One theme in this articles is &ldquo;somehow, the best brains in the Wall Street just did not see it coming&rdquo;. Yeah, Ken Lay did not know anything about accounting in Enron either.<br /><br />More plausible explanations are the following:<br /><ol><li>Of each of these well-known financial power houses, the role of research departments to traders are like the &ldquo;fair and balanced&rdquo; Fox news to the Republican party. Research reports from these Wall Street firms are the smoke and mirror in their proprietary trading and M&amp;A activities. Long gone are the days when (some) researchers can write about their honest opinion. Therefore obviously the research departments said very little about the riskiness of the subprime market.</li><li>Traders in hedge fund and their counterparties in the financial powerhouses, who profited immensely from the paper profit from these subprime securities, simply do not have the will nor incentive to do the right thing. If the trend in the market is to buy these secularization products on leverage in order to make that outrageous return, why not follow the flow? At least one has to be in the game to show that he/she is <span style="font-style: italic;">professional</span>. After all, it is the management fee/brokerage fee these fund managers and deal maker care about. Repercussion that may surface five years from now? It cannot be quantified as a number on P/L anyway, so no one care.</li><li>It is of absolutely <span style="font-style: italic;">no one</span>&rsquo;s interest to forestall a bubble. No Fed chairman or regulatory bodies will do it. When the time is good, any proactive measure will be perceived as &lsquo;spoil the party&rsquo;. When thing turns sour and the Fed have to engineer a rescue, the players just have to sit back, play dumb and blame the market. Ultimately, the financial institutions will be very likely be bailed out by Fed; Fund managers and broker have already pocketed their bonus in good years; Fed chairman emerges the Hero.</li></ol>Point 2 highlights an issue in the current financial markets: the lack of diversity. After years of consolidation, smaller players are simply gone. An investment idea can now spread across this industry like an<a href="http://www.abc.net.au/landline/stories/s316294.htm"> fungi infection in a banana plantation</a>. The financial strength and simple-mindedness of the investment community will be a root cause to more stupid yet severe financial crises in years to come. Maybe more can be said on this subject.<br /><br />An<a href="http://www.federalreserve.gov/boarddocs/Speeches/2004/20040521/default.htm"> article </a> by Edward M. Gramlich of FRB on Subprime.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2007/08/12/7037644796722456275/">Prologue</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-08-12T23:27:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The last time I got excited about a programming language was around 5 years ago when I started to learn a scripting language called <a href="http://python.org/">Python</a>. At that point of time, I were looking for a language that is easier to use than <a href="http://www.blogger.com/www.perl.org">Perl</a>. Don&rsquo;t get me wrong: Perl is still great for throw-away scripting. Its regular-expression is indispensable tool. But to do OO development in perl is simply too painful for me.<br /><br />To me, Python is &lsquo;Perl done right&rsquo;. It has the power of Perl, yet more readable and programmable. The use of space to indicate scope is simply a brilliant idea, despite feels a bit odd to begin with. By taking away some individual &lsquo;freedom&rsquo; in this regard, it gives the whole community the advantage of uniformity of coding style. This actually makes Python an ideal language for enterprise environment, because,  unlike other scripting languages, Python programmers tends to write code in consistent Pythonic style. No more unmaintainable cryptic Perl or Tcl scripts.<br /><br />Python also introduces the idea of <span style="font-weight: bold;">Lambda Function  </span>and <span style="font-weight: bold;">Closure</span> to me. Without me knowing, I have picked up some functional programming concept!<br /><br />Functional programming is no alien to me. I have done Miranda in my first year of computer science, but I were not impressed at that time. I simply did not get it then. (Besides, it seemed to me that none got paid for doing FP professionally, so there is even less incentive to master the concepts)<br /><br />Now, I have come a full cycle. This year I &ldquo;discovered&rdquo; the language <a href="http://erlang.org/">Erlang</a>. After reading the concepts behind the language design and implementation, I am totally in awe. The impact is as if some mystical figure suddenly showed up and told me the answer of a riddle of which I have searching for an answer for years in wilderness.<br /><br />So, hopefully in this blog I can share with the public my (hopefully weekly) progress in mastering this new language, erlang, and along the way, my feeling/idea about Erlang, Python and Java. (Hence the title of this blog)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/post/page/191/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -229,23 +278,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/24/mach-problem/">mach problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to do a multi-line string in objective-c</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/19/ownership-rule-exception/">ownership rule exception</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/19/tdd-in-objective-c/">Need to write a proper unit test in objective-c</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to read json data</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/16/cannot-init-a-class-object/">cannot init a class object</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/16/uiscrollview-and-contnetsize/">UIScrollView and contentSize</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/13/incorrect-way-to-use-jsonkit/">Incorrect way to use JSONKit?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/12/jsonkit-exception/">JSONKit exception</a>
       </li>
     
   </ul>

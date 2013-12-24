@@ -3814,15 +3814,33 @@
         <loc>
             http://kongakong.github.io/post/2013/12/18/using-nsurlconnection-to-read-json-data/
         </loc>
-        <lastmod>2013-12-18T23:18:37+11:00</lastmod>
+        <lastmod>2013-12-19T07:10:29+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c/</loc>
+        <lastmod>2013-12-19T07:19:29+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/12/19/ownership-rule-exception/</loc>
+        <lastmod>2013-12-19T07:28:53+11:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://kongakong.github.io/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/
+        </loc>
+        <lastmod>2013-12-24T19:10:14+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://kongakong.github.io/post/2013/12/24/mach-problem/</loc>
+        <lastmod>2013-12-24T16:56:08+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/blog/archives/</loc>
-        <lastmod>2013-12-18T23:18:37+11:00</lastmod>
+        <lastmod>2013-12-24T19:10:14+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/</loc>
-        <lastmod>2013-12-18T23:18:37+11:00</lastmod>
+        <lastmod>2013-12-24T19:10:14+11:00</lastmod>
     </url>
     <url>
         <loc>http://kongakong.github.io/robots.txt</loc>
@@ -3830,6 +3848,6 @@
     </url>
     <url>
         <loc>http://kongakong.github.io/tags/</loc>
-        <lastmod>2013-12-18T23:18:37+11:00</lastmod>
+        <lastmod>2013-12-24T19:10:14+11:00</lastmod>
     </url>
 </urlset>

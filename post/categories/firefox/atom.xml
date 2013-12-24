@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: firefox | Timeline]]></title>
+  <link href="http://kongakong.github.io/post/categories/firefox/atom.xml" rel="self"/>
+  <link href="http://kongakong.github.io/"/>
+  <updated>2013-12-24T19:12:45+11:00</updated>
+  <id>http://kongakong.github.io/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mach problem]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/24/mach-problem/"/>
+    <updated>2013-12-24T08:27:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/24/mach-problem</id>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
+</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: &lt;strong>&lt;em> Could not find autoconf 2.13.  Stop.
+</span><span class='line'> 0:00.15 make: &lt;/em>&lt;/strong> [build] Error 2
+</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>it comes from this check of  mozilla-central/client.mk</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>try to find autoconf 2.13 &ndash; discard errors from &lsquo;which&rsquo;&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>MacOS X 10.4 sends &ldquo;no autoconf*&rdquo; errors to stdout, discard those via grep&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v &lsquo;^no autoconf&rsquo; | head -1)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
+</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
+</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
+</span><span class='line'> 0:00.26 make[1]: &lt;strong>&lt;em> [/home/antkong/wd/mozilla-central/configure] Error 1
+</span><span class='line'> 0:00.26 make: &lt;/em>&lt;/strong> [build] Error 2
+</span><span class='line'> 0:00.27 0 compiler warnings present.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><strong>Solution</strong>: install autoconf-2.13</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://kongakong.github.io/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-18T23:20:07+11:00</updated>
+  <updated>2013-12-24T19:12:45+11:00</updated>
   <id>http://kongakong.github.io/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,101 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to do a multi-line string in objective-c]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/"/>
+    <updated>2013-12-19T07:33:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c</id>
+    <content type="html"><![CDATA[<p>Here is an example:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;{</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="err">\</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
+</span><span class='line'><span class="s">&quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ownership rule exception]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/19/ownership-rule-exception/"/>
+    <updated>2013-12-19T07:26:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/19/ownership-rule-exception</id>
+    <content type="html"><![CDATA[<p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
+
+<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Need to write a proper unit test in objective-c]]></title>
+    <link href="http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c/"/>
+    <updated>2013-12-19T07:12:00+11:00</updated>
+    <id>http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c</id>
+    <content type="html"><![CDATA[<p>It is my first attempt at testing my JSON handling code:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">testReadingJSON</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">QueQuestionManager</span><span class="o">*</span> <span class="n">qm</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QueQuestionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">qm</span><span class="p">.</span><span class="n">server_url</span> <span class="o">=</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;http://localhost:8777/&quot;</span><span class="o">&gt;</span><span class="nl">http:</span><span class="c1">//localhost:8777/&lt;/a&gt;&amp;rdquo;;</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">qm</span> <span class="n">readQuestionnaire</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&gt;&gt;</span> <span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">qm</span><span class="p">.</span><span class="n">questionnaire</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Needless to say it is pretty bad, for the following reasons:</p>
+
+<ul>
+<li><p>It has an external dependency of a local server. It is strictly speaking not a unit test</p></li>
+<li><p>The code does not work. It is likely because the run loop is not started when the unit test runs</p></li>
+</ul>
+
+
+<p>My TODO:</p>
+
+<ul>
+<li><p>Refactor the above code to be a proper unit test</p></li>
+<li><p>Use functional testing framework to implement the above test</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using NSURLConnection to read json data]]></title>
@@ -28,31 +123,53 @@
 
 <h3>Synchronous network call</h3>
 
-<p>In the viewDidLoad method of my ViewController</p>
+<p>Next step: rewrite the below code to asynchronous mode.</p>
 
-<p>{% codeblock lang:objective-c %}
-&ndash;(BOOL) readJSON {</p>
+<p>In the viewDidLoad method of my ViewController, I called the following method:</p>
 
-<pre><code>NSError *error;
-NSURLResponse *response;
-
-receivedData = [NSMutableData data];
-
-NSURLRequest *theRequest=[NSURLRequest requestWithURL:[NSURL URLWithString:_server_url]];
-NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-
-if (theConnection) {
-    NSData *result = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:&amp;response error:&amp;error];
-    NSDictionary* json = [result objectFromJSONDataWithParseOptions:(JKParseOptionNone)];
-    [self convertJsonIntoMyData:json];
-    return TRUE;
-} else {
-    return FALSE;
-}
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="kt">BOOL</span><span class="p">)</span> <span class="n">readJSON</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
+</span><span class='line'><span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">receivedData</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableData</span> <span class="n">data</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">theRequest</span><span class="o">=</span><span class="p">[</span><span class="n">NSURLRequest</span> <span class="nl">requestWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="n">_server_url</span><span class="p">]];</span>
+</span><span class='line'><span class="n">NSURLConnection</span> <span class="o">*</span><span class="n">theConnection</span><span class="o">=</span><span class="p">[[</span><span class="n">NSURLConnection</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithRequest:</span><span class="n">theRequest</span> <span class="nl">delegate:</span><span class="n">self</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">theConnection</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSData</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLConnection</span> <span class="nl">sendSynchronousRequest:</span><span class="n">theRequest</span> <span class="nl">returningResponse:</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">response</span> <span class="nl">error:</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">error</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSDictionary</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span> <span class="nl">objectFromJSONDataWithParseOptions:</span><span class="p">(</span><span class="n">JKParseOptionNone</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">convertJsonIntoMyData:</span><span class="n">json</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">TRUE</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nb">FALSE</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Decoding of JSON data</h3>
 
@@ -67,75 +184,26 @@ if (theConnection) {
     <id>http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object</id>
     <content type="html"><![CDATA[<p>Got this exception</p>
 
-<p>{% codeblock  %}
-2013-12-16 17:35:59.976 MyProject[41964:70b] <strong><em> Terminating app due to uncaught
-exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;</em></strong> +[MyClass<0x100084d80> init]: cannot init a class object.&rsquo;</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] &lt;strong>&lt;em> Terminating app due to uncaught
+</span><span class='line'>exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&lt;/em>&lt;/strong> +[MyClass&lt;0x100084d80> init]: cannot init a class object.&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>It is because I have mistakenly written</p>
 
-<p>{% codeblock lang:objective-c  %}
-[[MyClass init] alloc];
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>instead of</p>
 
-<p>{% codeblock lang:objective-c  %}
-[[MyClass alloc] init];
-{% endcodeblock %}</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[UIScrollView and contentSize]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize/"/>
-    <updated>2013-12-16T10:42:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize</id>
-    <content type="html"><![CDATA[<p>Common mistake in using <code>UIScrollView</code>: did not set the <code>contentSize</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SSToolkit]]></title>
-    <link href="http://kongakong.github.io/post/2013/05/29/p-51633107176/"/>
-    <updated>2013-05-29T20:00:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/05/29/p-51633107176</id>
-    <content type="html"><![CDATA[<p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
-
-<p><code>
-[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Delete a row from UITableView]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/16/p-29544259150/"/>
-    <updated>2012-08-16T19:35:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/16/p-29544259150</id>
-    <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
-
-<p>{% codeblock %}
-&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
-
-<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
-</code></pre>
-
-<p>{% endcodeblock %}</p>
-
-<p>I can enable this feature, but I got this exception from this function</p>
-
-<p><code>
-2012-08-11 22:30:46.286 app[76532:fb03] *** Terminating app due to uncaught exception
- 'NSInternalInconsistencyException', reason: 'Invalid update: invalid number of rows in section 0.  
-The number of rows contained in an existing section after the update (10) must be equal to the
-number of rows contained in that section before the update (10), plus or minus the number of rows
-inserted or deleted from that section (0 inserted, 1 deleted) and plus or minus the number of rows
-moved into or out of that section (0 moved in, 0 moved out).'
-</code></p>
-
-<p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
