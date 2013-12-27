@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: nslog | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/nslog/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/nslog/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[NSLog]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/18/p-23283499949/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/18/p-23283499949/"/>
     <updated>2012-05-18T19:42:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/18/p-23283499949</id>
+    <id>http://www.ahwkong.com/post/2012/05/18/p-23283499949</id>
     <content type="html"><![CDATA[<p>As a beginner of objective-C, from time to time I sTILl get caught in incorrect format string used in NSLog.</p>
 
 <p>For example, I should use <code>%f</code> for float and <code>%@</code> for NSNumber. If I used %@ instead for float, obj-c will throw exception.</p>

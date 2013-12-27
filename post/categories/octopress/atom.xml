@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: octopress | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[keep vi swp file in tmp]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/29/keep-vi-swp-file-in-tmp/"/>
+    <link href="http://www.ahwkong.com/post/2013/06/29/keep-vi-swp-file-in-tmp/"/>
     <updated>2013-06-29T21:02:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/29/keep-vi-swp-file-in-tmp</id>
+    <id>http://www.ahwkong.com/post/2013/06/29/keep-vi-swp-file-in-tmp</id>
     <content type="html"><![CDATA[<p><code>vi</code> is my editor of choice when I need to do some quick editing.</p>
 
 <p>When vi edits a file, it will usally create a <code>swp</code> file for recovery purpose. Usually it causes no problem.</p>

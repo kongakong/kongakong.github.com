@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Winton's_War | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/wintons-war/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/wintons-war/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Development of Beam Guidance in WWII]]></title>
-    <link href="http://kongakong.github.io/post/2012/03/19/p-19568553378/"/>
+    <link href="http://www.ahwkong.com/post/2012/03/19/p-19568553378/"/>
     <updated>2012-03-19T22:00:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/03/19/p-19568553378</id>
+    <id>http://www.ahwkong.com/post/2012/03/19/p-19568553378</id>
     <content type="html"><![CDATA[<p>This <a href="http://en.wikipedia.org/wiki/Reginald_Victor_Jones#Beam_guidance">episode</a>]
 showed Churchill at his best: accessible, imaginative, penetrating, decisive and always suggestible about technological innovation.</p>
 ]]></content>

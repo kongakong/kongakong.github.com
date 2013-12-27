@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: aquamacs | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/aquamacs/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/aquamacs/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Aquamacs crashed in maverick]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/05/aquamacs-crashed-in-maverick/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/05/aquamacs-crashed-in-maverick/"/>
     <updated>2013-12-05T19:28:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/05/aquamacs-crashed-in-maverick</id>
+    <id>http://www.ahwkong.com/post/2013/12/05/aquamacs-crashed-in-maverick</id>
     <content type="html"><![CDATA[<p>Keep crasing when I try to use the &lsquo;Open File&hellip;&rsquo; dialog</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

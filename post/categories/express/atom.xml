@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: express | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/express/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/express/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The _python_ build on _solaris express_ is a partial success. Here is part of the output message:]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/22/p-6755732384/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/22/p-6755732384/"/>
     <updated>2011-06-22T00:22:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/22/p-6755732384</id>
+    <id>http://www.ahwkong.com/post/2011/06/22/p-6755732384</id>
     <content type="html"><![CDATA[<p>The <em>python</em> build on <em>solaris express</em> is a partial success. Here is part of the output message:</p>
 
 <p>```</p>
@@ -35,9 +35,9 @@ To find the necessary bits, look in setup.py in detect_modules() for the module&
   
   <entry>
     <title type="html"><![CDATA[Tried to build _python_ in _Solaris Express 11_.]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/22/p-6755628799/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/22/p-6755628799/"/>
     <updated>2011-06-22T00:17:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/22/p-6755628799</id>
+    <id>http://www.ahwkong.com/post/2011/06/22/p-6755628799</id>
     <content type="html"><![CDATA[<p>Tried to build <em>python</em> in <em>Solaris Express 11</em>.</p>
 
 <p>Used <code>pkg</code> to install the <code>gcc/g++</code>.</p>
@@ -60,9 +60,9 @@ To find the necessary bits, look in setup.py in detect_modules() for the module&
   
   <entry>
     <title type="html"><![CDATA[Now let’s try install _erlang_ on _Solaris Express_:]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/19/p-6685804647/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/19/p-6685804647/"/>
     <updated>2011-06-19T21:47:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/19/p-6685804647</id>
+    <id>http://www.ahwkong.com/post/2011/06/19/p-6685804647</id>
     <content type="html"><![CDATA[<p>Now let’s try install <em>erlang</em> on <em>Solaris Express</em>:</p>
 
 <p>```</p>
@@ -92,18 +92,18 @@ Image State Update Phase                         2/2</p>
   
   <entry>
     <title type="html"><![CDATA[_gksu_  - a GTK+ su frontend]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/19/p-6684058002/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/19/p-6684058002/"/>
     <updated>2011-06-19T19:37:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/19/p-6684058002</id>
+    <id>http://www.ahwkong.com/post/2011/06/19/p-6684058002</id>
     <content type="html"><![CDATA[<p><em>gksu</em>  &ndash; a GTK+ su frontend</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/19/p-6672342143/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/19/p-6672342143/"/>
     <updated>2011-06-19T11:04:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/19/p-6672342143</id>
+    <id>http://www.ahwkong.com/post/2011/06/19/p-6672342143</id>
     <content type="html"><![CDATA[<p>Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.</p>
 
 <p>Select ‘Enable IO APIC’ gets rid of the warning message.</p>

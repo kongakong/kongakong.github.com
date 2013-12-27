@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: maven | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/maven/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/maven/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[What is going on? Need to find out how to override the mirror url.]]></title>
-    <link href="http://kongakong.github.io/post/2012/10/14/p-33555499567/"/>
+    <link href="http://www.ahwkong.com/post/2012/10/14/p-33555499567/"/>
     <updated>2012-10-14T19:36:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/10/14/p-33555499567</id>
+    <id>http://www.ahwkong.com/post/2012/10/14/p-33555499567</id>
     <content type="html"><![CDATA[<p>What is going on? Need to find out how to override the mirror url.</p>
 
 <p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>

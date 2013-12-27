@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: python3 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/python3/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/python3/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to set up virtualenv and use pip in python 3.3]]></title>
-    <link href="http://kongakong.github.io/post/2012/11/18/p-35977135674/"/>
+    <link href="http://www.ahwkong.com/post/2012/11/18/p-35977135674/"/>
     <updated>2012-11-18T20:44:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/11/18/p-35977135674</id>
+    <id>http://www.ahwkong.com/post/2012/11/18/p-35977135674</id>
     <content type="html"><![CDATA[<p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
 
 <p>Then you’ll need to create a virtualenv and activate it. For details see</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[VirtualEnv and Python 3.3]]></title>
-    <link href="http://kongakong.github.io/post/2012/11/13/p-35580336669/"/>
+    <link href="http://www.ahwkong.com/post/2012/11/13/p-35580336669/"/>
     <updated>2012-11-13T07:02:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/11/13/p-35580336669</id>
+    <id>http://www.ahwkong.com/post/2012/11/13/p-35580336669</id>
     <content type="html"><![CDATA[<p><code>virtualenv</code> is now a built-in module in python 3.3. The best documentation so far seems to be the</p>
 
 <p><a href="PEP%20405">http://www.python.org/dev/peps/pep-0405/</a></p>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[byte-compiling error]]></title>
-    <link href="http://kongakong.github.io/post/2012/04/28/p-21971423940/"/>
+    <link href="http://www.ahwkong.com/post/2012/04/28/p-21971423940/"/>
     <updated>2012-04-28T21:41:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/04/28/p-21971423940</id>
+    <id>http://www.ahwkong.com/post/2012/04/28/p-21971423940</id>
     <content type="html"><![CDATA[<p>Had  a bunch of byte-compiling error when running <code>python3 distribute_setup.py</code></p>
 
 <p>```</p>
@@ -226,9 +226,9 @@ Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools.pth</p>
   
   <entry>
     <title type="html"><![CDATA[pip, setuptools, easy_install and distribute]]></title>
-    <link href="http://kongakong.github.io/post/2012/04/28/p-21933322665/"/>
+    <link href="http://www.ahwkong.com/post/2012/04/28/p-21933322665/"/>
     <updated>2012-04-28T07:42:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/04/28/p-21933322665</id>
+    <id>http://www.ahwkong.com/post/2012/04/28/p-21933322665</id>
     <content type="html"><![CDATA[<p>Trying to install pip 1.1 for python3.</p>
 
 <p>```</p>
@@ -245,9 +245,9 @@ Traceback (most recent call last):
   
   <entry>
     <title type="html"><![CDATA[Followup piece of my last gcc 4.2 problem]]></title>
-    <link href="http://kongakong.github.io/post/2012/04/28/p-21914025778/"/>
+    <link href="http://www.ahwkong.com/post/2012/04/28/p-21914025778/"/>
     <updated>2012-04-28T01:08:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/04/28/p-21914025778</id>
+    <id>http://www.ahwkong.com/post/2012/04/28/p-21914025778</id>
     <content type="html"><![CDATA[<p>Followup piece of <a href="/blog/2012/04/26/p-21844435707/">GNU gcc-4.2 issue on OSX 10.7</a>. So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. Then run this command</p>
 
 <p><code>

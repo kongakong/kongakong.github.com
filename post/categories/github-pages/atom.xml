@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: github_pages | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/github-pages/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/github-pages/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Simple script to convert Blogger posts to Github pages]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages/"/>
+    <link href="http://www.ahwkong.com/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages/"/>
     <updated>2013-07-03T00:32:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages</id>
+    <id>http://www.ahwkong.com/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages</id>
     <content type="html"><![CDATA[<p>I wanted to convert my old blogs on Blogger to markdown files in Github Pages. I went to the Blogger settings and exported my blog. The result was a xml file. The xml file from Google is not easy to parse. As far as I know there is no documentation on the structure of the xml file.</p>
 
 <p>After some trial and error, I have come up with this script that can parse the xml file and emit the contents in a set of markdown files:</p>

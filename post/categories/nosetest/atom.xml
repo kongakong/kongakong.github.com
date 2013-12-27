@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: nosetest | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/nosetest/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/nosetest/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Importance of Being Nosy (Nosetests, Really)]]></title>
-    <link href="http://kongakong.github.io/post/2008/05/10/4108877290533417868/"/>
+    <link href="http://www.ahwkong.com/post/2008/05/10/4108877290533417868/"/>
     <updated>2008-05-10T04:04:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2008/05/10/4108877290533417868</id>
+    <id>http://www.ahwkong.com/post/2008/05/10/4108877290533417868</id>
     <content type="html"><![CDATA[<p><span style="font-weight: bold;">Unit testing </span><br /><br />One of a few important lessons I learn from Java development is the importance of unit test. It is of course not a silver bullet to the software reliability/quality problem, but the consequence not adopting it can only be more dire.<br /><br />I used only <a href="http://www.junit.org/">JUnit </a>to implement unit tests in Java (Since JUnit is &ldquo;good enough&rdquo;, I never explore the alternative framework <a href="http://testng.org/doc/index.html">TestNG</a>.). Actually, problems in writing unit tests usually have very little to do with the frameworks themselves, but more with:<br /><br /><span style="font-weight: bold;">A</span>. The legacy code base you want to test against. For example, if the existing code base design is not modular enough, you have to go through some refactoring process to make unit testing possible. It is not the kind of luxury we can afford very often.<br /><br /><span style="font-weight: bold;">B.</span> Mock objects. <a href="http://www.easymock.org/">EasyMock</a> has made mocking a dependency easier, but maintaining the mock object codes still requires considerable effort.<br /><br /><span style="font-weight: bold;">Unit testing and Python</span><br /><br />I think unit testing is even more important for Python programmers.<br /><br />Since everything happens in runtime for Python, errors in your scripts, no matter syntactical or logical, will not be caught until you actually execute the line of code where the bug lives.</p>
 
 <br/><br/>

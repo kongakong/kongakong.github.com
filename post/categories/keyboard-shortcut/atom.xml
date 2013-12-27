@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: keyboard-shortcut | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/keyboard-shortcut/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/keyboard-shortcut/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Command-E to quick search; Command-G for repeat in-file search]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/25/p-25845648421/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/25/p-25845648421/"/>
     <updated>2012-06-25T20:09:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/25/p-25845648421</id>
+    <id>http://www.ahwkong.com/post/2012/06/25/p-25845648421</id>
     <content type="html"><![CDATA[<p>Command-E to quick search; Command-G for repeat in-file search</p>
 ]]></content>
   </entry>

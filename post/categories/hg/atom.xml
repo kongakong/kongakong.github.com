@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hg | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/hg/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/hg/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[If I have removed a file by accident, and want to reinstate the file form a source code repository, then...]]></title>
-    <link href="http://kongakong.github.io/post/2012/04/23/p-21642771050/"/>
+    <link href="http://www.ahwkong.com/post/2012/04/23/p-21642771050/"/>
     <updated>2012-04-23T22:01:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/04/23/p-21642771050</id>
+    <id>http://www.ahwkong.com/post/2012/04/23/p-21642771050</id>
     <content type="html"><![CDATA[<p>If I have removed a file by accident, and want to reinstate the file form a source code repository, then,</p>
 
 <p>in subversion I will do</p>
@@ -52,9 +52,9 @@
   
   <entry>
     <title type="html"><![CDATA[A simple example of using hg]]></title>
-    <link href="http://kongakong.github.io/post/2011/12/28/p-14913221859/"/>
+    <link href="http://www.ahwkong.com/post/2011/12/28/p-14913221859/"/>
     <updated>2011-12-28T21:54:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2011/12/28/p-14913221859</id>
+    <id>http://www.ahwkong.com/post/2011/12/28/p-14913221859</id>
     <content type="html"><![CDATA[<p>````</p>
 
 <p><em>$ hg pull</em></p>
@@ -71,9 +71,9 @@
   
   <entry>
     <title type="html"><![CDATA[hg problem]]></title>
-    <link href="http://kongakong.github.io/post/2011/12/28/p-14912402052/"/>
+    <link href="http://www.ahwkong.com/post/2011/12/28/p-14912402052/"/>
     <updated>2011-12-28T21:07:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2011/12/28/p-14912402052</id>
+    <id>http://www.ahwkong.com/post/2011/12/28/p-14912402052</id>
     <content type="html"><![CDATA[<p>9:06pm</p>
 
 <p>Tried to run <code>hg</code>. Got this error:</p>

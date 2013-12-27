@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: JSONKit | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/jsonkit/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/jsonkit/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Incorrect way to use JSONKit?]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/13/incorrect-way-to-use-jsonkit/"/>
     <updated>2013-12-13T06:42:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
+    <id>http://www.ahwkong.com/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
     <content type="html"><![CDATA[<p>At the beginning I use the following code to decode a JSON string:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -70,9 +70,9 @@
   
   <entry>
     <title type="html"><![CDATA[JSONKit exception]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/12/jsonkit-exception/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/12/jsonkit-exception/"/>
     <updated>2013-12-12T06:59:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/12/jsonkit-exception</id>
+    <id>http://www.ahwkong.com/post/2013/12/12/jsonkit-exception</id>
     <content type="html"><![CDATA[<p>Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector  <code>objectFromJSONString</code>. It is my misunderstanding of how the JSONKit APIs are used</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

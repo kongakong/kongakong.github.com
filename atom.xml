@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Timeline]]></title>
-  <link href="http://kongakong.github.io/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -14,10 +14,23 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Fixing qt4 dependency of pyqt4]]></title>
+    <link href="http://www.ahwkong.com/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/"/>
+    <updated>2013-12-27T22:57:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2013/12/27/fixing-qt4-dependency-of-pyqt4</id>
+    <content type="html"><![CDATA[<p>SIP is installed</p>
+
+<p>PyQt needs qt4. <code>brew install qt4</code> takes care of this dependency.</p>
+
+<p>PyQt cannot be installed by either <code>easy_install</code> or <code>pip</code>. I have to download the package, run <code>configure.py</code> and then <code>make</code> and <code>make install</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Mach problem: Failed at Unified_cpp_2]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/failed-at-unified-cpp-2/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/failed-at-unified-cpp-2/"/>
     <updated>2013-12-24T21:24:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/failed-at-unified-cpp-2</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/failed-at-unified-cpp-2</id>
     <content type="html"><![CDATA[<p>Failed at this point</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -72,15 +85,19 @@ abort: repository default not found!
 </span><span class='line'>default-push = ssh://hg.mozilla.org/mozilla-central/</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Unfortunately it does not fix my problem</p>
+<p>Unfortunately it does not fix my problem .</p>
+
+<p>It turns out it has something to do with the PC. I created an instance of VirtualBox to run ubuntu desktop 13.10 for the compilation. I only allocted 512MB RAM for the exercise. The failure above is a problem of too little RAM.</p>
+
+<p>Allocated 4GB of RAM to the VM and the exception is gone.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Mach problem: Could not compile basic X program]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/could-not-compile-basic-x-program/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/could-not-compile-basic-x-program/"/>
     <updated>2013-12-24T20:51:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/could-not-compile-basic-x-program</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/could-not-compile-basic-x-program</id>
     <content type="html"><![CDATA[<p>Here is the full error message:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -93,9 +110,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Mach problem: gstreamer backend]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/gstreamer-backend/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/gstreamer-backend/"/>
     <updated>2013-12-24T20:49:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/gstreamer-backend</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/gstreamer-backend</id>
     <content type="html"><![CDATA[<p>This is the full error message:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -126,9 +143,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/"/>
     <updated>2013-12-24T19:38:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met</id>
     <content type="html"><![CDATA[<p>Full error message:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -141,9 +158,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Mach problem: C++ compiler cannot create executables]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/"/>
     <updated>2013-12-24T19:19:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
     <content type="html"><![CDATA[<p>Got this error when I ran <code>mach build</code>:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -156,9 +173,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[mach problem]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/mach-problem/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/mach-problem/"/>
     <updated>2013-12-24T08:27:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/mach-problem</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/mach-problem</id>
     <content type="html"><![CDATA[
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -211,9 +228,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[How to do a multi-line string in objective-c]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/"/>
     <updated>2013-12-19T07:33:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c</id>
+    <id>http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c</id>
     <content type="html"><![CDATA[<p>Here is an example:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -231,9 +248,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[ownership rule exception]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/19/ownership-rule-exception/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/19/ownership-rule-exception/"/>
     <updated>2013-12-19T07:26:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/19/ownership-rule-exception</id>
+    <id>http://www.ahwkong.com/post/2013/12/19/ownership-rule-exception</id>
     <content type="html"><![CDATA[<p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
 
 <p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
@@ -242,9 +259,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Need to write a proper unit test in objective-c]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c/"/>
     <updated>2013-12-19T07:12:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c</id>
+    <id>http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c</id>
     <content type="html"><![CDATA[<p>It is my first attempt at testing my JSON handling code:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -284,9 +301,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Using NSURLConnection to read json data]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/18/using-nsurlconnection-to-read-json-data/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/18/using-nsurlconnection-to-read-json-data/"/>
     <updated>2013-12-18T22:34:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/18/using-nsurlconnection-to-read-json-data</id>
+    <id>http://www.ahwkong.com/post/2013/12/18/using-nsurlconnection-to-read-json-data</id>
     <content type="html"><![CDATA[<p>My code is not good at all for the following reasons:</p>
 
 <ul>
@@ -350,9 +367,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[cannot init a class object]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/16/cannot-init-a-class-object/"/>
     <updated>2013-12-16T20:39:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/16/cannot-init-a-class-object</id>
+    <id>http://www.ahwkong.com/post/2013/12/16/cannot-init-a-class-object</id>
     <content type="html"><![CDATA[<p>Got this exception</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -381,18 +398,18 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[UIScrollView and contentSize]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/16/uiscrollview-and-contnetsize/"/>
     <updated>2013-12-16T10:42:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/16/uiscrollview-and-contnetsize</id>
+    <id>http://www.ahwkong.com/post/2013/12/16/uiscrollview-and-contnetsize</id>
     <content type="html"><![CDATA[<p>Common mistake in using <code>UIScrollView</code>: did not set the <code>contentSize</code></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Incorrect way to use JSONKit?]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/13/incorrect-way-to-use-jsonkit/"/>
     <updated>2013-12-13T06:42:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
+    <id>http://www.ahwkong.com/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
     <content type="html"><![CDATA[<p>At the beginning I use the following code to decode a JSON string:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -431,9 +448,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[JSONKit exception]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/12/jsonkit-exception/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/12/jsonkit-exception/"/>
     <updated>2013-12-12T06:59:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/12/jsonkit-exception</id>
+    <id>http://www.ahwkong.com/post/2013/12/12/jsonkit-exception</id>
     <content type="html"><![CDATA[<p>Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector  <code>objectFromJSONString</code>. It is my misunderstanding of how the JSONKit APIs are used</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -504,9 +521,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[ivar error message: Autosynthesized property 'delegate' will use synthesized instance variable '_delegate', not existing instance variable 'delegate']]></title>
-    <link href="http://kongakong.github.io/post/2013/12/11/ivar-error-message/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/11/ivar-error-message/"/>
     <updated>2013-12-11T06:28:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/11/ivar-error-message</id>
+    <id>http://www.ahwkong.com/post/2013/12/11/ivar-error-message</id>
     <content type="html"><![CDATA[<p><em>(Sourced from Stackoverflow here <a href="http://stackoverflow.com/a/14184752/58129">http://stackoverflow.com/a/14184752/58129</a>)</em></p>
 
 <p>The most idiomatic way to handle this situation is simply to remove your <code>delegate</code> ivar declaration.  If you were using your <code>delegate</code> ivar, you should use the implicit ivar <code>_delegate</code> instead.</p>
@@ -583,10 +600,10 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Discount Margin of FRN]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn/"/>
     <updated>2013-12-09T23:45:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn</id>
-    <content type="html"><![CDATA[<figure class='code'><figcaption><span>&#8216;Discount Margin&#8217;   (frn.erl)</span> <a href='http://kongakong.github.io/downloads/code/erlang/frn.erl'>download</a></figcaption>
+    <id>http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span>&#8216;Discount Margin&#8217;   (frn.erl)</span> <a href='http://www.ahwkong.com/downloads/code/erlang/frn.erl'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -638,9 +655,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Aquamacs crashed in maverick]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/05/aquamacs-crashed-in-maverick/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/05/aquamacs-crashed-in-maverick/"/>
     <updated>2013-12-05T19:28:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/05/aquamacs-crashed-in-maverick</id>
+    <id>http://www.ahwkong.com/post/2013/12/05/aquamacs-crashed-in-maverick</id>
     <content type="html"><![CDATA[<p>Keep crasing when I try to use the &lsquo;Open File&hellip;&rsquo; dialog</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -1903,9 +1920,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Assignment statement in Lua vs Python]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/05/assignment-statement-in-lua-vs-python/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/05/assignment-statement-in-lua-vs-python/"/>
     <updated>2013-12-05T07:19:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/05/assignment-statement-in-lua-vs-python</id>
+    <id>http://www.ahwkong.com/post/2013/12/05/assignment-statement-in-lua-vs-python</id>
     <content type="html"><![CDATA[<p>Given <code>a</code> is an array of  <code>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</code></p>
 
 <p>and this bit of code</p>
@@ -1936,9 +1953,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[How to install pygame in osx]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx/"/>
     <updated>2013-12-04T22:52:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx</id>
+    <id>http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx</id>
     <content type="html"><![CDATA[<p>These are steps for installing pygame into OSX Maverick</p>
 
 <ul>
@@ -1961,221 +1978,6 @@ abort: repository default not found!
 
 
 <p>(This is based on the bug report <a href="https://bitbucket.org/pygame/pygame/issue/82/homebrew-on-leopard-fails-to-install">here</a>)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[testing pygame installation]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/04/test-pygame-installation/"/>
-    <updated>2013-12-04T22:50:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/04/test-pygame-installation</id>
-    <content type="html"><![CDATA[<p>There are some failures and errors:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ python -m pygame.tests 
-</span><span class='line'>skipping pygame.tests._movie_test (tag 'subprocess_ignore')
-</span><span class='line'>skipping pygame.tests.cdrom_test (tag 'interactive')
-</span><span class='line'>skipping pygame.tests.midi_test (tag 'interactive')
-</span><span class='line'>skipping pygame.tests.movie_test (tag 'subprocess_ignore')
-</span><span class='line'>skipping pygame.tests.scrap_test (tag 'subprocess_ignore')
-</span><span class='line'>loading pygame.tests.base_test
-</span><span class='line'>loading pygame.tests.blit_test
-</span><span class='line'>loading pygame.tests.bufferproxy_test
-</span><span class='line'>loading pygame.tests.camera_test
-</span><span class='line'>loading pygame.tests.color_test
-</span><span class='line'>loading pygame.tests.compat_test
-</span><span class='line'>loading pygame.tests.cursors_test
-</span><span class='line'>loading pygame.tests.display_test
-</span><span class='line'>loading pygame.tests.draw_test
-</span><span class='line'>loading pygame.tests.event_test
-</span><span class='line'>loading pygame.tests.fastevent_test
-</span><span class='line'>loading pygame.tests.font_test
-</span><span class='line'>loading pygame.tests.freetype_test
-</span><span class='line'>loading pygame.tests.ftfont_test
-</span><span class='line'>loading pygame.tests.gfxdraw_test
-</span><span class='line'>loading pygame.tests.image__save_gl_surface_test
-</span><span class='line'>loading pygame.tests.image_test
-</span><span class='line'>loading pygame.tests.imageext_test
-</span><span class='line'>loading pygame.tests.joystick_test
-</span><span class='line'>loading pygame.tests.key_test
-</span><span class='line'>loading pygame.tests.mask_test
-</span><span class='line'>loading pygame.tests.math_test
-</span><span class='line'>loading pygame.tests.mixer_music_test
-</span><span class='line'>loading pygame.tests.mixer_test
-</span><span class='line'>loading pygame.tests.mouse_test
-</span><span class='line'>loading pygame.tests.overlay_test
-</span><span class='line'>loading pygame.tests.pixelarray_test
-</span><span class='line'>loading pygame.tests.pixelcopy_test
-</span><span class='line'>loading pygame.tests.rect_test
-</span><span class='line'>loading pygame.tests.rwobject_test
-</span><span class='line'>loading pygame.tests.sndarray_test
-</span><span class='line'>loading pygame.tests.sprite_test
-</span><span class='line'>loading pygame.tests.surface_test
-</span><span class='line'>loading pygame.tests.surfarray_test
-</span><span class='line'>loading pygame.tests.surflock_test
-</span><span class='line'>loading pygame.tests.sysfont_test
-</span><span class='line'>loading pygame.tests.threads_test
-</span><span class='line'>loading pygame.tests.time_test
-</span><span class='line'>loading pygame.tests.transform_test
-</span><span class='line'>...................................................................................................................................................F........................................................FF...........................................................................................................E.F..........................................................................................................................................................................................................................................................................................................E............................................................
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: FreeTypeFontTest.test_freetype_Font_get_rect
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/freetype_test.py", line 434, in test_freetype_Font_get_rect
-</span><span class='line'>    self.assertNotEqual(size_utf16[0], size_utf32[0]);
-</span><span class='line'>AssertionError: -1 == -1
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: ImageModuleTest.testLoadPNG
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 82, in testLoadPNG
-</span><span class='line'>    self.assertEquals(pixel_x1_y1, greyish_pixel)
-</span><span class='line'>AssertionError: (109, 120, 129, 140) != (110, 120, 130, 140)
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: ImageModuleTest.testSavePNG
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 141, in testSavePNG
-</span><span class='line'>    self.assertEquals(pixels_as_tuples[0], reddish_pixel)
-</span><span class='line'>AssertionError: (0, 215, 0, 255) != (215, 0, 0, 255)
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>ERROR: MixerMusicModuleTest.test_load
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_music_test.py", line 45, in test_load
-</span><span class='line'>    pygame.mixer.music.load(umusfn)
-</span><span class='line'>error: Unrecognized music format
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: MixerModuleTest.test_array_keyword
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 336, in test_array_keyword
-</span><span class='line'>    self._test_array_argument(format, a, c == channels)
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 349, in _test_array_argument
-</span><span class='line'>    (format, a.dtype))
-</span><span class='line'>AssertionError: Raised ValueError: Format -8, dtype int32
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>ERROR: SurfaceTypeTest.test_image_convert_bug_131
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/surface_test.py", line 682, in test_image_convert_bug_131
-</span><span class='line'>    self.assertEquals( im.get_palette(),  ((0, 0, 0, 255), (255, 255, 255, 255)) )
-</span><span class='line'>error: Surface has no palette to get
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Ran 675 tests in 66.985s
-</span><span class='line'>
-</span><span class='line'>FAILED (failures=4, errors=2)</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   

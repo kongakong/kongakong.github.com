@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: uitableview | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/uitableview/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/uitableview/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,23 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[Delete a row from UITableView]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/16/p-29544259150/"/>
+    <link href="http://www.ahwkong.com/post/2012/08/16/p-29544259150/"/>
     <updated>2012-08-16T19:35:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/16/p-29544259150</id>
+    <id>http://www.ahwkong.com/post/2012/08/16/p-29544259150</id>
     <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
+
+<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>I can enable this feature, but I got this exception from this function</p>
 

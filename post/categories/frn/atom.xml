@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: FRN | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/frn/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/frn/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Discount Margin of FRN]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn/"/>
     <updated>2013-12-09T23:45:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/09/discount-margin-of-frn</id>
+    <id>http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn</id>
     <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>&lsquo;Discount Margin&rsquo;   (frn.erl)</span> <a href='/downloads/code/erlang/frn.erl'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

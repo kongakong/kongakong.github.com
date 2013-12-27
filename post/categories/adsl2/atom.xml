@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: adsl2 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/adsl2/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/adsl2/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[TpLink ADSL2 Modem woe]]></title>
-    <link href="http://kongakong.github.io/post/2010/11/25/p-1669311225/"/>
+    <link href="http://www.ahwkong.com/post/2010/11/25/p-1669311225/"/>
     <updated>2010-11-25T00:38:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/11/25/p-1669311225</id>
+    <id>http://www.ahwkong.com/post/2010/11/25/p-1669311225</id>
     <content type="html"><![CDATA[<p>Turns out the modems have issue with TPG, and the problem can only be fixed by refreshing the firmware. But when I discovered it, I have already spent hours to isolate the problem.</p>
 
 <p>Most people reports instant “plug-and-play” experience. It is probably because the currently available retail units are of more recent version and already have the firmware sorted out. Not my case. I ordered the modem online.</p>

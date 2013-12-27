@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: photo | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/photo/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/photo/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,10 +15,10 @@
   
   <entry>
     <title type="html"><![CDATA[Frost in July]]></title>
-    <link href="http://kongakong.github.io/post/2010/08/04/p-899408889/"/>
+    <link href="http://www.ahwkong.com/post/2010/08/04/p-899408889/"/>
     <updated>2010-08-04T06:15:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2010/08/04/p-899408889</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/tumblr_l6ley4u25E1qbpfzr.jpg"></p>
+    <id>http://www.ahwkong.com/post/2010/08/04/p-899408889</id>
+    <content type="html"><![CDATA[<p>{% img left /images/tumblr_l6ley4u25E1qbpfzr.jpg %}</p>
 
 <p>Sydney. July. Frost.</p>
 ]]></content>

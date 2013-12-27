@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: c | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/c/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/c/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA['struct winsize' declared inside parameter list]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/08/p-1264649679/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/08/p-1264649679/"/>
     <updated>2010-10-08T08:52:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/08/p-1264649679</id>
+    <id>http://www.ahwkong.com/post/2010/10/08/p-1264649679</id>
     <content type="html"><![CDATA[<p>Seeing a lot of</p>
 
 <p><code>warning: 'struct winsize' declared inside parameter list</code></p>

@@ -9,13 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Supposedly it is the clang used by Xcode 4.1. 1
+  <meta name="description" content="A very simple test to compare g++ and clang++ 1
 2
-3
-4
-5 $ clang -v
-Apple clang version 2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
-Target: &hellip;">
+3 $ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+cc1plus: warning: command &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +21,7 @@ Target: &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://kongakong.github.io/post/page/89">
+  <link rel="canonical" href="http://www.ahwkong.com/post/page/89">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
@@ -56,7 +53,7 @@ Target: &hellip;">
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:kongakong.github.io" />
+    <input type="hidden" name="q" value="site:www.ahwkong.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -71,6 +68,62 @@ Target: &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8544970346/">G++ and Clang++</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:28:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A very simple test to compare g++ and clang++</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span><span class='line'>cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>clang++ does not complaint at all</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -231,42 +284,6 @@ Target: &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396862778/">Finally Killed the _perl_ Job That Owns the Alert Window. Killed the Parent _uninstalld_ (?) Process Too</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:43:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Finally killed the <em>perl</em> job that owns the alert window. Killed the parent <em>uninstalld</em>  (?) process too</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/90/">&larr; Older</a>
@@ -284,6 +301,10 @@ Target: &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing qt4 dependency of pyqt4</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
@@ -297,10 +318,6 @@ Target: &hellip;">
     
       <li class="post">
         <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach problem: C++ compiler cannot create executables</a>
       </li>
     
   </ul>

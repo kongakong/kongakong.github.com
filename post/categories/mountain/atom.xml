@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mountain | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/mountain/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/mountain/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Doing a clean install of Mountain Lion.]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/01/p-30646969056/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/01/p-30646969056/"/>
     <updated>2012-09-01T20:44:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/01/p-30646969056</id>
+    <id>http://www.ahwkong.com/post/2012/09/01/p-30646969056</id>
     <content type="html"><![CDATA[<p>Doing a clean install of Mountain Lion.</p>
 
 <p>Basically all you need to know is contained in this</p>

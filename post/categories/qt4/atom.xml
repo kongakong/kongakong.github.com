@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: qt4 | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/qt4/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fixing qt4 dependency of pyqt4]]></title>
+    <link href="http://www.ahwkong.com/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/"/>
+    <updated>2013-12-27T22:57:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2013/12/27/fixing-qt4-dependency-of-pyqt4</id>
+    <content type="html"><![CDATA[<p>SIP is installed</p>
+
+<p>PyQt needs qt4. <code>brew install qt4</code> takes care of this dependency.</p>
+
+<p>PyQt cannot be installed by either <code>easy_install</code> or <code>pip</code>. I have to download the package, run <code>configure.py</code> and then <code>make</code> and <code>make install</code></p>
+]]></content>
+  </entry>
+  
+</feed>

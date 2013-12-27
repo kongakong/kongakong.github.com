@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: TIL | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/til/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/til/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Learn something about /tmp on OSX today]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/"/>
+    <link href="http://www.ahwkong.com/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/"/>
     <updated>2013-08-12T11:02:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today</id>
+    <id>http://www.ahwkong.com/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today</id>
     <content type="html"><![CDATA[<p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
 
 <p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[Health system in Oregon]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/06/p-52292736599/"/>
+    <link href="http://www.ahwkong.com/post/2013/06/06/p-52292736599/"/>
     <updated>2013-06-06T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/06/p-52292736599</id>
+    <id>http://www.ahwkong.com/post/2013/06/06/p-52292736599</id>
     <content type="html"><![CDATA[<p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to its citizens.</p>
 
 <p>From</p>
@@ -45,9 +45,9 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
   <entry>
     <title type="html"><![CDATA[The most cost-effective way to store a DNA sequence ... is the DNA itself]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/23/p-32107367444/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/23/p-32107367444/"/>
     <updated>2012-09-23T16:20:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/23/p-32107367444</id>
+    <id>http://www.ahwkong.com/post/2012/09/23/p-32107367444</id>
     <content type="html"><![CDATA[<p>[The most cost-effective way to store a DNA sequence &hellip; is the DNA itself]
 (<a href="http://www.youtube.com/watch?v=9SzwiZMSBeQ">http://www.youtube.com/watch?v=9SzwiZMSBeQ</a>)</p>
 
@@ -57,9 +57,9 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
   <entry>
     <title type="html"><![CDATA[Put the events into historical perspective]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/15/p-29473317348/"/>
+    <link href="http://www.ahwkong.com/post/2012/08/15/p-29473317348/"/>
     <updated>2012-08-15T19:48:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/15/p-29473317348</id>
+    <id>http://www.ahwkong.com/post/2012/08/15/p-29473317348</id>
     <content type="html"><![CDATA[<blockquote><p>Leonardo da Vinci, who was forty years old when Columbus discovered America, died in 1519 at sixty-seven. Just two years earlier, in 1517, Martin Luther had posted his Ninety-five Theses on a church door in Wittenberg, launching the Protestant Reformation the same year Ferdinand Magellan had set sail from Spain, aspiring to circumnavigate the earth.</p></blockquote>
 
 <p>Quoted from</p>
@@ -70,9 +70,9 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
   <entry>
     <title type="html"><![CDATA[Remote virtual interface (RVI)]]></title>
-    <link href="http://kongakong.github.io/post/2012/07/20/p-27619704546/"/>
+    <link href="http://www.ahwkong.com/post/2012/07/20/p-27619704546/"/>
     <updated>2012-07-20T19:55:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/07/20/p-27619704546</id>
+    <id>http://www.ahwkong.com/post/2012/07/20/p-27619704546</id>
     <content type="html"><![CDATA[<p>iOS 5 added a remote virtual interface (RVI) facility that lets you use Mac OS X packet trace programs to capture traces from an iOS device.</p>
 ]]></content>
   </entry>

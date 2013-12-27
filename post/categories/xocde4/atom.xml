@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: xocde4 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/xocde4/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/xocde4/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[UIViewController::setMoviePlayerController]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/09/p-29045520999/"/>
+    <link href="http://www.ahwkong.com/post/2012/08/09/p-29045520999/"/>
     <updated>2012-08-09T19:56:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/09/p-29045520999</id>
+    <id>http://www.ahwkong.com/post/2012/08/09/p-29045520999</id>
     <content type="html"><![CDATA[<p><code>UIViewController::setMoviePlayerController:</code> is an undocumented API, yet it is used in one of the Apple sample project.</p>
 ]]></content>
   </entry>

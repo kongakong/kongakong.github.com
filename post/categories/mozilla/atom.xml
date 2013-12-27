@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mozilla | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/mozilla/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/mozilla/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mach problem: Failed at Unified_cpp_2]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/failed-at-unified-cpp-2/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/failed-at-unified-cpp-2/"/>
     <updated>2013-12-24T21:24:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/failed-at-unified-cpp-2</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/failed-at-unified-cpp-2</id>
     <content type="html"><![CDATA[<p>Failed at this point</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -85,15 +85,19 @@ abort: repository default not found!
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Unfortunately it does not fix my problem</p>
+<p>Unfortunately it does not fix my problem .</p>
+
+<p>It turns out it has something to do with the PC. I created an instance of VirtualBox to run ubuntu desktop 13.10 for the compilation. I only allocted 512MB RAM for the exercise. The failure above is a problem of too little RAM.</p>
+
+<p>Allocated 4GB of RAM to the VM and the exception is gone.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Mach problem: Could not compile basic X program]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/could-not-compile-basic-x-program/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/could-not-compile-basic-x-program/"/>
     <updated>2013-12-24T20:51:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/could-not-compile-basic-x-program</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/could-not-compile-basic-x-program</id>
     <content type="html"><![CDATA[<p>Here is the full error message:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -113,9 +117,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Mach problem: gstreamer backend]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/gstreamer-backend/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/gstreamer-backend/"/>
     <updated>2013-12-24T20:49:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/gstreamer-backend</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/gstreamer-backend</id>
     <content type="html"><![CDATA[<p>This is the full error message:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -153,9 +157,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/"/>
     <updated>2013-12-24T19:38:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met</id>
     <content type="html"><![CDATA[<p>Full error message:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -171,9 +175,9 @@ abort: repository default not found!
   
   <entry>
     <title type="html"><![CDATA[Mach problem: C++ compiler cannot create executables]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/"/>
     <updated>2013-12-24T19:19:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
+    <id>http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
     <content type="html"><![CDATA[<p>Got this error when I ran <code>mach build</code>:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

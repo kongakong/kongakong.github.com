@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: pybrain | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/pybrain/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/pybrain/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[svmtrainer]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/16/p-23161496577/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/16/p-23161496577/"/>
     <updated>2012-05-16T22:01:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/16/p-23161496577</id>
+    <id>http://www.ahwkong.com/post/2012/05/16/p-23161496577</id>
     <content type="html"><![CDATA[<p>Getting this exception when trying the svmtrainer in pybrain</p>
 
 <p>```</p>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[It is a follow-up on an]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/04/p-22378145113/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/04/p-22378145113/"/>
     <updated>2012-05-04T21:32:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/04/p-22378145113</id>
+    <id>http://www.ahwkong.com/post/2012/05/04/p-22378145113</id>
     <content type="html"><![CDATA[<p>It is a follow-up on an</p>
 ]]></content>
   </entry>

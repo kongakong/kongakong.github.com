@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sybase | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/sybase/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/sybase/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A useful Sybase tool]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/15/a-useful-sybase-tool/"/>
+    <link href="http://www.ahwkong.com/post/2013/07/15/a-useful-sybase-tool/"/>
     <updated>2013-07-15T23:08:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/15/a-useful-sybase-tool</id>
+    <id>http://www.ahwkong.com/post/2013/07/15/a-useful-sybase-tool</id>
     <content type="html"><![CDATA[<p><code>defncopy</code> is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development tools such as <a href="http://www.aquafold.com/aquadatastudio.html">Aqua Data Studio</a></p>
 
 <p>This utility comes with Sybase distribution. Here is its usage:</p>
@@ -53,9 +53,9 @@ Usage: defncopy</p>
   
   <entry>
     <title type="html"><![CDATA[http://superuser.com/questions/306009/sybase-how-to-add-a-connection-definition-to-ase-isql]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/05/p-7262489717/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/05/p-7262489717/"/>
     <updated>2011-07-05T23:34:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/05/p-7262489717</id>
+    <id>http://www.ahwkong.com/post/2011/07/05/p-7262489717</id>
     <content type="html"><![CDATA[<p><a href="http://superuser.com/questions/306009/sybase-how-to-add-a-connection-definition-to-ase-isql">http://superuser.com/questions/306009/sybase-how-to-add-a-connection-definition-to-ase-isql</a></p>
 
 <p>Answered my own question about Sybase and ASE isql</p>

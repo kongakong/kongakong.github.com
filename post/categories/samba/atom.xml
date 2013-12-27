@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: samba | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/samba/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/samba/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MBP and SMB]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/24/p-1388761712/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/24/p-1388761712/"/>
     <updated>2010-10-24T22:34:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/24/p-1388761712</id>
+    <id>http://www.ahwkong.com/post/2010/10/24/p-1388761712</id>
     <content type="html"><![CDATA[<p>Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.</p>
 ]]></content>
   </entry>

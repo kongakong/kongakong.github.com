@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: storyboard | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/storyboard/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/storyboard/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,54 +15,41 @@
   
   <entry>
     <title type="html"><![CDATA[How to dismiss a modal view controller which is created by a segue in storyboard?]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/12/p-29256890594/"/>
+    <link href="http://www.ahwkong.com/post/2012/08/12/p-29256890594/"/>
     <updated>2012-08-12T19:50:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/12/p-29256890594</id>
+    <id>http://www.ahwkong.com/post/2012/08/12/p-29256890594</id>
     <content type="html"><![CDATA[<p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objc %}
+&ndash; (IBAction)cancelAddItem:(UIBarButtonItem *)sender {</p>
+
+<pre><code>[self.navigationController popViewControllerAnimated:YES];
+</code></pre>
+
+<p>}
+{% endcodeblock %}</p>
 
 <p>But it does not work in storyboard anymore.</p>
 
 <p>This is the solution:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nl">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="n">sender</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock  lang:objc %}
+&ndash; (IBAction)cancelAddItem:(UIBarButtonItem *)sender {</p>
+
+<pre><code>[self dismissModalViewControllerAnimated:YES];
+</code></pre>
+
+<p>}</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/26/p-23788398195/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/26/p-23788398195/"/>
     <updated>2012-05-26T19:47:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/26/p-23788398195</id>
+    <id>http://www.ahwkong.com/post/2012/05/26/p-23788398195</id>
     <content type="html"><![CDATA[<p>When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.</p>
 
 <p>The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue.</p>
@@ -73,9 +60,9 @@
   
   <entry>
     <title type="html"><![CDATA[Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/26/p-23786684708/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/26/p-23786684708/"/>
     <updated>2012-05-26T18:25:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/26/p-23786684708</id>
+    <id>http://www.ahwkong.com/post/2012/05/26/p-23786684708</id>
     <content type="html"><![CDATA[<p>Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.</p>
 
 <p>Since I did not start with a UITableViewController at the beginning, I was unable to connect a segway to an individual cell inside the table view.</p>

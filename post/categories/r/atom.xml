@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: R | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/r/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/r/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,30 +15,26 @@
   
   <entry>
     <title type="html"><![CDATA[var in R]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/11/var-in-r/"/>
+    <link href="http://www.ahwkong.com/post/2013/08/11/var-in-r/"/>
     <updated>2013-08-11T04:47:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/11/var-in-r</id>
+    <id>http://www.ahwkong.com/post/2013/08/11/var-in-r</id>
     <content type="html"><![CDATA[<p><code>var()</code> in R return sample variance (divide by N-1), not population (divide by N)</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Simple R vector]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/27/p-32374610695/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/27/p-32374610695/"/>
     <updated>2012-09-27T13:02:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/27/p-32374610695</id>
+    <id>http://www.ahwkong.com/post/2012/09/27/p-32374610695</id>
     <content type="html"><![CDATA[<p>Simple R vector</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;p>x  x
-</span><span class='line'> [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
-</span><span class='line'> [16] 16 17 18 19 20</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote>
+<p>{% codeblock %}</p>
+
+<blockquote><p>x  x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+ [16] 16 17 18 19 20
+{% endcodeblock %}</p></blockquote>
 
 <p>[1] means the index of the element in the resultant vector</p>
 ]]></content>
@@ -46,18 +42,18 @@
   
   <entry>
     <title type="html"><![CDATA[Rbind - bind data frame by rows]]></title>
-    <link href="http://kongakong.github.io/post/2011/08/17/p-9031220952/"/>
+    <link href="http://www.ahwkong.com/post/2011/08/17/p-9031220952/"/>
     <updated>2011-08-17T16:17:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/08/17/p-9031220952</id>
+    <id>http://www.ahwkong.com/post/2011/08/17/p-9031220952</id>
     <content type="html"><![CDATA[<p>Rbind &ndash; bind data frame by rows</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Wired. When I start R (CLI) in command prompt on Win XP, it will compliant about missing command line switch (``--save``, ``--nosave`` or ``--vanilla``), then aborted with ‘Execution halted’ error message.]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/20/p-7842071321/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/20/p-7842071321/"/>
     <updated>2011-07-20T22:50:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/20/p-7842071321</id>
+    <id>http://www.ahwkong.com/post/2011/07/20/p-7842071321</id>
     <content type="html"><![CDATA[<p>Wired. When I start R (CLI) in command prompt on Win XP, it will compliant about missing command line switch (<code>--save</code>, <code>--nosave</code> or <code>--vanilla</code>), then aborted with ‘Execution halted’ error message.</p>
 ]]></content>
   </entry>

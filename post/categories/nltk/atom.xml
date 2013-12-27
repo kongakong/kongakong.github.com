@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: nltk | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/nltk/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/nltk/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[nltk (2)]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/29/p-1424460143/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/29/p-1424460143/"/>
     <updated>2010-10-29T03:48:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/29/p-1424460143</id>
+    <id>http://www.ahwkong.com/post/2010/10/29/p-1424460143</id>
     <content type="html"><![CDATA[<p>From</p>
 
 <p><a href="http://nltk.googlecode.com/svn/trunk/doc/book/ch02.html">Chapter 2</a></p>
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[nltk (1)]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/28/p-1423124719/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/28/p-1423124719/"/>
     <updated>2010-10-28T23:17:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/28/p-1423124719</id>
+    <id>http://www.ahwkong.com/post/2010/10/28/p-1423124719</id>
     <content type="html"><![CDATA[<p>Important tools/concept in</p>
 
 <p><a href="http://nltk.googlecode.com/svn/trunk/doc/book/ch01.html">Chapter 1 </a></p>
@@ -59,9 +59,9 @@
   
   <entry>
     <title type="html"><![CDATA[nltk and matplotlib]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/27/p-1409480378/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/27/p-1409480378/"/>
     <updated>2010-10-27T09:02:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/27/p-1409480378</id>
+    <id>http://www.ahwkong.com/post/2010/10/27/p-1409480378</id>
     <content type="html"><![CDATA[<p>Run</p>
 
 <p><code>text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])</code></p>
@@ -76,9 +76,9 @@
   
   <entry>
     <title type="html"><![CDATA[nltk.download()]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/26/p-1405694431/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/26/p-1405694431/"/>
     <updated>2010-10-26T21:04:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/26/p-1405694431</id>
+    <id>http://www.ahwkong.com/post/2010/10/26/p-1405694431</id>
     <content type="html"><![CDATA[<p>OK, so <code>nltk.download()</code> will actually bring up a GUI downloader.</p>
 
 <p>Did not notice this, and waited for hour.</p>
@@ -87,9 +87,9 @@
   
   <entry>
     <title type="html"><![CDATA[nltk setup]]></title>
-    <link href="http://kongakong.github.io/post/2010/10/24/p-1385207169/"/>
+    <link href="http://www.ahwkong.com/post/2010/10/24/p-1385207169/"/>
     <updated>2010-10-24T12:07:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2010/10/24/p-1385207169</id>
+    <id>http://www.ahwkong.com/post/2010/10/24/p-1385207169</id>
     <content type="html"><![CDATA[<p>Need to install libYAML-0.1.3 and PyYAML-3.0.9 first</p>
 
 <p>Turns out the python system path is not set properly, and I am still unable to install nltk. Need fixing</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: finance | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/finance/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/finance/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,27 +15,27 @@
   
   <entry>
     <title type="html"><![CDATA[AFS]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/08/p-52451932662/"/>
+    <link href="http://www.ahwkong.com/post/2013/06/08/p-52451932662/"/>
     <updated>2013-06-08T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/08/p-52451932662</id>
+    <id>http://www.ahwkong.com/post/2013/06/08/p-52451932662</id>
     <content type="html"><![CDATA[<p>Morgan Stanley uses <a href="http://en.wikipedia.org/wiki/Andrew_File_System">AFS</a> for application deployment with good results.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[When there is a positive correlation between the financing rate r and a future contract subjected to marks-to-market rules, the future  will be convex and will trade above the forwards of the same delivery]]></title>
-    <link href="http://kongakong.github.io/post/2012/02/21/p-17967651732/"/>
+    <link href="http://www.ahwkong.com/post/2012/02/21/p-17967651732/"/>
     <updated>2012-02-21T08:19:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/02/21/p-17967651732</id>
+    <id>http://www.ahwkong.com/post/2012/02/21/p-17967651732</id>
     <content type="html"><![CDATA[<p>When there is a positive correlation between the financing rate r and a future contract subjected to marks-to-market rules, the future  will be convex and will trade above the forwards of the same delivery</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[The contamination principle dictates that every nonlinear security commands time value, positive if the security is convex and negative if it is concave.]]></title>
-    <link href="http://kongakong.github.io/post/2012/01/10/p-15582485815/"/>
+    <link href="http://www.ahwkong.com/post/2012/01/10/p-15582485815/"/>
     <updated>2012-01-10T08:43:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/01/10/p-15582485815</id>
+    <id>http://www.ahwkong.com/post/2012/01/10/p-15582485815</id>
     <content type="html"><![CDATA[<p>The contamination principle dictates that every nonlinear security commands time value, positive if the security is convex and negative if it is concave.</p>
 
 <p>Nassim Taleb, <em>Dynamic Hedging</em></p>
@@ -44,18 +44,18 @@
   
   <entry>
     <title type="html"><![CDATA[EFP]]></title>
-    <link href="http://kongakong.github.io/post/2011/12/21/p-14559224775/"/>
+    <link href="http://www.ahwkong.com/post/2011/12/21/p-14559224775/"/>
     <updated>2011-12-21T22:43:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2011/12/21/p-14559224775</id>
+    <id>http://www.ahwkong.com/post/2011/12/21/p-14559224775</id>
     <content type="html"><![CDATA[<p><a href="Exchange%20for%20Physical">http://www.asx.net.au/products/what-are-efps.htm</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[IAN: Indexed Amortizing Notes]]></title>
-    <link href="http://kongakong.github.io/post/2011/08/28/p-9455015711/"/>
+    <link href="http://www.ahwkong.com/post/2011/08/28/p-9455015711/"/>
     <updated>2011-08-28T00:14:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/08/28/p-9455015711</id>
+    <id>http://www.ahwkong.com/post/2011/08/28/p-9455015711</id>
     <content type="html"><![CDATA[<p>IAN: Indexed Amortizing Notes</p>
 ]]></content>
   </entry>

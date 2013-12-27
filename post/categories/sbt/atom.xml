@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sbt | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/sbt/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/sbt/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Using sbt in ubuntu]]></title>
-    <link href="http://kongakong.github.io/post/2013/04/17/p-48145048805/"/>
+    <link href="http://www.ahwkong.com/post/2013/04/17/p-48145048805/"/>
     <updated>2013-04-17T07:18:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/04/17/p-48145048805</id>
+    <id>http://www.ahwkong.com/post/2013/04/17/p-48145048805</id>
     <content type="html"><![CDATA[<p>First, to install, follow the instrument here:</p>
 
 <p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>

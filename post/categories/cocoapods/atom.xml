@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: CocoaPods | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/cocoapods/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/cocoapods/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Adding SSZipArchive to Podfile]]></title>
-    <link href="http://kongakong.github.io/post/2013/05/30/p-51714499390/"/>
+    <link href="http://www.ahwkong.com/post/2013/05/30/p-51714499390/"/>
     <updated>2013-05-30T20:00:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/05/30/p-51714499390</id>
+    <id>http://www.ahwkong.com/post/2013/05/30/p-51714499390</id>
     <content type="html"><![CDATA[<p>The podfile is for a osx 10.8 project. Here is the output from <code>podfile install</code></p>
 
 <p><code>
@@ -30,9 +30,9 @@ dtrace: failed to open framework/TestResources/CorePlotProbes.d: No such file or
   
   <entry>
     <title type="html"><![CDATA[SSToolkit]]></title>
-    <link href="http://kongakong.github.io/post/2013/05/29/p-51633107176/"/>
+    <link href="http://www.ahwkong.com/post/2013/05/29/p-51633107176/"/>
     <updated>2013-05-29T20:00:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/05/29/p-51633107176</id>
+    <id>http://www.ahwkong.com/post/2013/05/29/p-51633107176</id>
     <content type="html"><![CDATA[<p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
 
 <p><code>

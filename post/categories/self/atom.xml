@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: self | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/self/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/self/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Get rid of self]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/11/p-7462218961/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/11/p-7462218961/"/>
     <updated>2011-07-11T05:04:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/11/p-7462218961</id>
+    <id>http://www.ahwkong.com/post/2011/07/11/p-7462218961</id>
     <content type="html"><![CDATA[<blockquote><p>I think this has been addressed in the responses; it’s not as easy as you’d think, and there are important advantages to the uniform interpretation of methods as “just functions that get called in a funky way”. In Ruby, everything is a method, or an anonymous block, and there are no “free functions”. Python uses the complimentary approach, treating functions as first-class citizens. Both approaches are complete; they are however incompatible, and you can’t easily morph one into the other. (Personally, I find that the criticm of explicit self has about as much merit as the criticism of Python’s use of whitespace.)”</p></blockquote>
 
 <p><a href="Guido%20van%20Rossum">http://www.artima.com/weblogs/viewpost.jsp?thread=214325</a></p>

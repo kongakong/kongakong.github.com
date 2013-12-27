@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: git | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/git/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/git/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,25 +15,23 @@
   
   <entry>
     <title type="html"><![CDATA[Git tip 1]]></title>
-    <link href="http://kongakong.github.io/post/2013/08/03/git-tip-1/"/>
+    <link href="http://www.ahwkong.com/post/2013/08/03/git-tip-1/"/>
     <updated>2013-08-03T21:21:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/08/03/git-tip-1</id>
+    <id>http://www.ahwkong.com/post/2013/08/03/git-tip-1</id>
     <content type="html"><![CDATA[<p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git &mdash;no-pager diff&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+git &mdash;no-pager diff</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Was about to hit ‘brew install git’. Then I realised I'd already have git installed]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/26/p-32266848480/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/26/p-32266848480/"/>
     <updated>2012-09-26T02:16:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/26/p-32266848480</id>
+    <id>http://www.ahwkong.com/post/2012/09/26/p-32266848480</id>
     <content type="html"><![CDATA[<p>Do not have git on my rebuilt MBP. Was about to hit ‘brew install git’. Then I realised: I already have git installed. It is part of XCode.</p>
 
 <p>So it is what I did: add the following line to <code>.bash_rc</code></p>
@@ -42,9 +40,9 @@
   
   <entry>
     <title type="html"><![CDATA[Did a ‘git commit .’ but did not realised the commit has failed.]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/02/p-24202482392/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/02/p-24202482392/"/>
     <updated>2012-06-02T03:26:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/02/p-24202482392</id>
+    <id>http://www.ahwkong.com/post/2012/06/02/p-24202482392</id>
     <content type="html"><![CDATA[<p>Did a ‘git commit .’ but did not realised the commit has failed.</p>
 
 <p>Then I did a ‘git checkout -b next_jira’ and I lost all my changes… Nice.</p>
@@ -53,9 +51,9 @@
   
   <entry>
     <title type="html"><![CDATA[Try to use ``git`` on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a ``.gitignore`` myself, probably. Turns out there is a ``.gitignore`` in the repository. Glad need not to do this extra work]]></title>
-    <link href="http://kongakong.github.io/post/2011/08/28/p-9497321169/"/>
+    <link href="http://www.ahwkong.com/post/2011/08/28/p-9497321169/"/>
     <updated>2011-08-28T20:56:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/08/28/p-9497321169</id>
+    <id>http://www.ahwkong.com/post/2011/08/28/p-9497321169</id>
     <content type="html"><![CDATA[<p>Try to use <code>git</code> on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a <code>.gitignore</code> myself, probably. Turns out there is a <code>.gitignore</code> in the repository. Glad need not to do this extra work</p>
 ]]></content>
   </entry>

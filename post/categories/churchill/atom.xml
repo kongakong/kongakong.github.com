@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Churchill | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/churchill/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/churchill/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Finally finished the book, “Winston’s War: Churchill, 1940-1945” by Max Hastings]]></title>
-    <link href="http://kongakong.github.io/post/2012/03/13/p-19231539841/"/>
+    <link href="http://www.ahwkong.com/post/2012/03/13/p-19231539841/"/>
     <updated>2012-03-13T22:00:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/03/13/p-19231539841</id>
+    <id>http://www.ahwkong.com/post/2012/03/13/p-19231539841</id>
     <content type="html"><![CDATA[<p>Finally finished the book, “Winston’s War: Churchill, 1940-1945” by Max Hastings</p>
 ]]></content>
   </entry>

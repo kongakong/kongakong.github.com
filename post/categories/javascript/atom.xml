@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: javascript | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/javascript/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[There is no _insertAfter_ in JavaScript]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/15/p-23100334227/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/15/p-23100334227/"/>
     <updated>2012-05-15T22:20:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/15/p-23100334227</id>
+    <id>http://www.ahwkong.com/post/2012/05/15/p-23100334227</id>
     <content type="html"><![CDATA[<p>There is no <em>insertAfter</em> in JavaScript</p>
 ]]></content>
   </entry>

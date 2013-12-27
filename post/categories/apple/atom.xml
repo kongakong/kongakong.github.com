@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: apple | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/apple/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/apple/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[iMac woe]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/16/p-31619891652/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/16/p-31619891652/"/>
     <updated>2012-09-16T09:42:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/16/p-31619891652</id>
+    <id>http://www.ahwkong.com/post/2012/09/16/p-31619891652</id>
     <content type="html"><![CDATA[<p>This 27” iMac brings me endless issue.</p>
 
 <p>When I first bought it, it got recalled right away.</p>
@@ -44,9 +44,9 @@
   
   <entry>
     <title type="html"><![CDATA[iTune Festival]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/07/p-31011821379/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/07/p-31011821379/"/>
     <updated>2012-09-07T06:53:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/07/p-31011821379</id>
+    <id>http://www.ahwkong.com/post/2012/09/07/p-31011821379</id>
     <content type="html"><![CDATA[<p><a href="http://www.tuaw.com/2012/08/29/itunes-festival-app-on-apple-tv/">Checked out my AppleTV and it indeed happened&hellip;</a></p>
 
 <p>Very sneaky update.</p>
@@ -55,9 +55,9 @@
   
   <entry>
     <title type="html"><![CDATA[One use case of Apple TV: Stream WWDC video onto the TV.]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/24/p-25773812194/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/24/p-25773812194/"/>
     <updated>2012-06-24T19:21:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/24/p-25773812194</id>
+    <id>http://www.ahwkong.com/post/2012/06/24/p-25773812194</id>
     <content type="html"><![CDATA[<p>One use case of Apple TV: Stream WWDC video onto the TV.</p>
 
 <p>I can therefore free up my MBP screen to try out anything mentioned in the WWDC presentations while watching.</p>
@@ -66,18 +66,18 @@
   
   <entry>
     <title type="html"><![CDATA[Bonjour]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/16/p-7666544291/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/16/p-7666544291/"/>
     <updated>2011-07-16T09:14:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/16/p-7666544291</id>
+    <id>http://www.ahwkong.com/post/2011/07/16/p-7666544291</id>
     <content type="html"><![CDATA[<p>Installed Apple Bonjour on Windows 7 and instantly I can resolve the mac computer names live in my local LAN.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Watching WWDC 2011 keynote]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/07/p-6258328621/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/07/p-6258328621/"/>
     <updated>2011-06-07T06:23:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/07/p-6258328621</id>
+    <id>http://www.ahwkong.com/post/2011/06/07/p-6258328621</id>
     <content type="html"><![CDATA[<p>Watching WWDC 2011 keynote</p>
 ]]></content>
   </entry>

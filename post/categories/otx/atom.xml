@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: otx | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/otx/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/otx/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Just installed ``otx``, an OSS implementation of ``otool``]]></title>
-    <link href="http://kongakong.github.io/post/2012/01/04/p-15289689582/"/>
+    <link href="http://www.ahwkong.com/post/2012/01/04/p-15289689582/"/>
     <updated>2012-01-04T20:45:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/01/04/p-15289689582</id>
+    <id>http://www.ahwkong.com/post/2012/01/04/p-15289689582</id>
     <content type="html"><![CDATA[<p>Just installed <code>otx</code>, an OSS implementation of <code>otool</code></p>
 ]]></content>
   </entry>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: computer | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/computer/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/computer/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Algebraic data type]]></title>
-    <link href="http://kongakong.github.io/post/2012/07/29/p-28257805067/"/>
+    <link href="http://www.ahwkong.com/post/2012/07/29/p-28257805067/"/>
     <updated>2012-07-29T19:58:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/07/29/p-28257805067</id>
+    <id>http://www.ahwkong.com/post/2012/07/29/p-28257805067</id>
     <content type="html"><![CDATA[<p><a href="Algebraic%20data%20type">http://en.wikipedia.org/wiki/Algebraic_data_type</a></p>
 
 <p>Algebraic data type is a kind of composite type, i.e. a type formed by combining other types. Two common classes of algebraic type are product types and sum types</p>
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[Liskov substitution principle]]></title>
-    <link href="http://kongakong.github.io/post/2011/05/25/p-5815038508/"/>
+    <link href="http://www.ahwkong.com/post/2011/05/25/p-5815038508/"/>
     <updated>2011-05-25T09:41:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/05/25/p-5815038508</id>
+    <id>http://www.ahwkong.com/post/2011/05/25/p-5815038508</id>
     <content type="html"><![CDATA[<p><a href="Liskov%20Principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a></p>
 ]]></content>
   </entry>

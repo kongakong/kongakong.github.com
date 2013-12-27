@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: ruby | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[rvm install problem]]></title>
-    <link href="http://kongakong.github.io/post/2013/11/27/rvm-install/"/>
+    <link href="http://www.ahwkong.com/post/2013/11/27/rvm-install/"/>
     <updated>2013-11-27T20:24:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/11/27/rvm-install</id>
+    <id>http://www.ahwkong.com/post/2013/11/27/rvm-install</id>
     <content type="html"><![CDATA[<p>At first the <code>rvm install ruby-1.9.3-p484</code> did not work on OSX. The extra <code>--with-gcc=clang</code> parameter fixed the issue</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby quirk?]]></title>
-    <link href="http://kongakong.github.io/post/2013/07/06/ruby-quirk/"/>
+    <link href="http://www.ahwkong.com/post/2013/07/06/ruby-quirk/"/>
     <updated>2013-07-06T08:06:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/07/06/ruby-quirk</id>
+    <id>http://www.ahwkong.com/post/2013/07/06/ruby-quirk</id>
     <content type="html"><![CDATA[<p>Have absolutely zero knowledge of Ruby, although I am planning to learn more about this langauge since I started using Octopress.</p>
 
 <p>Came across this code snippet in <a href="https://twitter.com/garybernhardt/status/352864696547803136">this tweet</a></p>
@@ -87,9 +87,9 @@
   
   <entry>
     <title type="html"><![CDATA[Just installed RVM]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/12/p-52782958923/"/>
+    <link href="http://www.ahwkong.com/post/2013/06/12/p-52782958923/"/>
     <updated>2013-06-12T21:20:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/12/p-52782958923</id>
+    <id>http://www.ahwkong.com/post/2013/06/12/p-52782958923</id>
     <content type="html"><![CDATA[<p>Just installed RVM.</p>
 
 <p>Message from RVM after installation:</p>

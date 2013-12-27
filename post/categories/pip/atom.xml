@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: pip | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/pip/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/pip/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to install pygame in osx]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx/"/>
     <updated>2013-12-04T22:52:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx</id>
+    <id>http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx</id>
     <content type="html"><![CDATA[<p>These are steps for installing pygame into OSX Maverick</p>
 
 <ul>
@@ -27,10 +27,10 @@
 </ul>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>brew tap homebrew/headonly
-</span><span class='line'>brew install &mdash;HEAD smpeg</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+brew tap homebrew/headonly
+brew install &mdash;HEAD smpeg
+{% endcodeblock %}</p>
 
 <ul>
 <li><p>Use pip to install pygame: <code>pip install hg+http://bitbucket.org/pygame/pygame</code></p></li>
@@ -44,9 +44,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to set up virtualenv and use pip in python 3.3]]></title>
-    <link href="http://kongakong.github.io/post/2012/11/18/p-35977135674/"/>
+    <link href="http://www.ahwkong.com/post/2012/11/18/p-35977135674/"/>
     <updated>2012-11-18T20:44:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/11/18/p-35977135674</id>
+    <id>http://www.ahwkong.com/post/2012/11/18/p-35977135674</id>
     <content type="html"><![CDATA[<p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
 
 <p>Then you’ll need to create a virtualenv and activate it. For details see</p>
@@ -61,9 +61,9 @@
   
   <entry>
     <title type="html"><![CDATA[Solution to the pip scipy problem]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/05/p-22440295991/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/05/p-22440295991/"/>
     <updated>2012-05-05T21:34:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/05/p-22440295991</id>
+    <id>http://www.ahwkong.com/post/2012/05/05/p-22440295991</id>
     <content type="html"><![CDATA[<p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
 
 <p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
@@ -78,9 +78,9 @@ pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https:
   
   <entry>
     <title type="html"><![CDATA[The pip cannot install scipy properly.]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/03/p-22317238609/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/03/p-22317238609/"/>
     <updated>2012-05-03T22:21:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/03/p-22317238609</id>
+    <id>http://www.ahwkong.com/post/2012/05/03/p-22317238609</id>
     <content type="html"><![CDATA[<p>The pip cannot install scipy properly.</p>
 
 <p>```</p>
@@ -134,9 +134,9 @@ Traceback (most recent call last):
   
   <entry>
     <title type="html"><![CDATA[Trying to ``pip install numpy`` on ubuntu, and got this:]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/02/p-22252177628/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/02/p-22252177628/"/>
     <updated>2012-05-02T21:22:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/02/p-22252177628</id>
+    <id>http://www.ahwkong.com/post/2012/05/02/p-22252177628</id>
     <content type="html"><![CDATA[<p>Trying to <code>pip install numpy</code> on ubuntu, and got this:</p>
 
 <p>```</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: TDD | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/tdd/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/tdd/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Need to write a proper unit test in objective-c]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c/"/>
     <updated>2013-12-19T07:12:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/19/tdd-in-objective-c</id>
+    <id>http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c</id>
     <content type="html"><![CDATA[<p>It is my first attempt at testing my JSON handling code:</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>

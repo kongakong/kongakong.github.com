@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: llvm | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/llvm/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/llvm/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[new llvm c compiler warning flag “-Weverything”]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/23/p-25708610924/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/23/p-25708610924/"/>
     <updated>2012-06-23T19:56:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/23/p-25708610924</id>
+    <id>http://www.ahwkong.com/post/2012/06/23/p-25708610924</id>
     <content type="html"><![CDATA[<p>new llvm c compiler warning flag “-Weverything”</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Problem solved: compiling python 3.3 on osx]]></title>
-    <link href="http://kongakong.github.io/post/2012/01/15/p-15874914919/"/>
+    <link href="http://www.ahwkong.com/post/2012/01/15/p-15874914919/"/>
     <updated>2012-01-15T18:02:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/01/15/p-15874914919</id>
+    <id>http://www.ahwkong.com/post/2012/01/15/p-15874914919</id>
     <content type="html"><![CDATA[<p>It is a follow-up on</p>
 
 <p>Turns out this problem has been reported to python bug database:</p>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[What is going on?]]></title>
-    <link href="http://kongakong.github.io/post/2012/01/04/p-15288901020/"/>
+    <link href="http://www.ahwkong.com/post/2012/01/04/p-15288901020/"/>
     <updated>2012-01-04T09:00:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/01/04/p-15288901020</id>
+    <id>http://www.ahwkong.com/post/2012/01/04/p-15288901020</id>
     <content type="html"><![CDATA[<p>```</p>
 
 <p>$ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
@@ -57,9 +57,9 @@ Traceback (most recent call last):
   
   <entry>
     <title type="html"><![CDATA[TTBA]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/25/p-8016686986/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/25/p-8016686986/"/>
     <updated>2011-07-25T08:18:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/25/p-8016686986</id>
+    <id>http://www.ahwkong.com/post/2011/07/25/p-8016686986</id>
     <content type="html"><![CDATA[<p>Type based alias analysis</p>
 
 <p>LLVM Feature, enable by using -strict-aliasing</p>

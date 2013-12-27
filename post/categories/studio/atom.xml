@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: studio | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/studio/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/studio/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Trying to compile _python 3.2_ on _winxp_ using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work.]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/20/p-6709792052/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/20/p-6709792052/"/>
     <updated>2011-06-20T12:32:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/20/p-6709792052</id>
+    <id>http://www.ahwkong.com/post/2011/06/20/p-6709792052</id>
     <content type="html"><![CDATA[<p>Trying to compile <em>python 3.2</em> on <em>winxp</em> using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work.</p>
 
 <p>Even the VS Express 2008 does not like the sln file.</p>

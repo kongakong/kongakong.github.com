@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: programming | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/programming/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/programming/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Wat]]></title>
-    <link href="http://kongakong.github.io/post/2012/08/06/p-28828938592/"/>
+    <link href="http://www.ahwkong.com/post/2012/08/06/p-28828938592/"/>
     <updated>2012-08-06T19:45:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/08/06/p-28828938592</id>
+    <id>http://www.ahwkong.com/post/2012/08/06/p-28828938592</id>
     <content type="html"><![CDATA[<p><a href="https://www.destroyallsoftware.com/talks/wat/">Wat</a>]</p>
 ]]></content>
   </entry>

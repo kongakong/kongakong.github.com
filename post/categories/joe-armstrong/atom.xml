@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: joe_armstrong | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/joe-armstrong/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/joe-armstrong/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[erlang daemon mode]]></title>
-    <link href="http://kongakong.github.io/post/2007/11/30/1863063009982204384/"/>
+    <link href="http://www.ahwkong.com/post/2007/11/30/1863063009982204384/"/>
     <updated>2007-11-30T05:08:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2007/11/30/1863063009982204384</id>
+    <id>http://www.ahwkong.com/post/2007/11/30/1863063009982204384</id>
     <content type="html"><![CDATA[<p><a href="http://www.sics.se/~joe/tutorials/web_server/web_server.html">A webserver daemon</a></p>
 ]]></content>
   </entry>

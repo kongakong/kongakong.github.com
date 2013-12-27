@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: distribute | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/distribute/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/distribute/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[byte-compiling error]]></title>
-    <link href="http://kongakong.github.io/post/2012/04/28/p-21971423940/"/>
+    <link href="http://www.ahwkong.com/post/2012/04/28/p-21971423940/"/>
     <updated>2012-04-28T21:41:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/04/28/p-21971423940</id>
+    <id>http://www.ahwkong.com/post/2012/04/28/p-21971423940</id>
     <content type="html"><![CDATA[<p>Had  a bunch of byte-compiling error when running <code>python3 distribute_setup.py</code></p>
 
 <p>```</p>
@@ -198,9 +198,9 @@ Creating /Users/antkong/local/lib/python3.3/site-packages/setuptools.pth</p>
   
   <entry>
     <title type="html"><![CDATA[Follow-up on a previous]]></title>
-    <link href="http://kongakong.github.io/post/2012/04/28/p-21969667729/"/>
+    <link href="http://www.ahwkong.com/post/2012/04/28/p-21969667729/"/>
     <updated>2012-04-28T20:22:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/04/28/p-21969667729</id>
+    <id>http://www.ahwkong.com/post/2012/04/28/p-21969667729</id>
     <content type="html"><![CDATA[<p>Follow-up on a previous</p>
 
 <p>It turns out on</p>

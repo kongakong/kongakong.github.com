@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mssql2000 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/mssql2000/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/mssql2000/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[For MSSQL2000, a row cannot exceed the size of a page, which is 8KB - overhead i.e. 8060 bytes. 8KB is the size of a continuos disk space for storing, read and writing data.]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/25/p-8001939023/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/25/p-8001939023/"/>
     <updated>2011-07-25T00:48:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/25/p-8001939023</id>
+    <id>http://www.ahwkong.com/post/2011/07/25/p-8001939023</id>
     <content type="html"><![CDATA[<p>For MSSQL2000, a row cannot exceed the size of a page, which is 8KB &ndash; overhead i.e. 8060 bytes. 8KB is the size of a continuos disk space for storing, read and writing data.</p>
 ]]></content>
   </entry>

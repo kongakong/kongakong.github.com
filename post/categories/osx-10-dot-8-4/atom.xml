@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: osx_10.8.4 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/osx-10-dot-8-4/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/osx-10-dot-8-4/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Weird error message of 'say' in 10.8.4]]></title>
-    <link href="http://kongakong.github.io/post/2013/06/09/p-52534137425/"/>
+    <link href="http://www.ahwkong.com/post/2013/06/09/p-52534137425/"/>
     <updated>2013-06-09T20:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/06/09/p-52534137425</id>
+    <id>http://www.ahwkong.com/post/2013/06/09/p-52534137425</id>
     <content type="html"><![CDATA[<p>Weird error message of <code>say</code> in 10.8.4</p>
 
 <p><code>

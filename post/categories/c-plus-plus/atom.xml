@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: c++ | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/c-plus-plus/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/c-plus-plus/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,45 +15,45 @@
   
   <entry>
     <title type="html"><![CDATA[Moving onto “More Effective C++”]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/18/p-6621895244/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/18/p-6621895244/"/>
     <updated>2011-06-18T00:56:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/18/p-6621895244</id>
+    <id>http://www.ahwkong.com/post/2011/06/18/p-6621895244</id>
     <content type="html"><![CDATA[<p>Moving onto “More Effective C++”</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Item 50:  Improve your understanding of C++]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/18/p-6621581139/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/18/p-6621581139/"/>
     <updated>2011-06-18T00:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/18/p-6621581139</id>
+    <id>http://www.ahwkong.com/post/2011/06/18/p-6621581139</id>
     <content type="html"><![CDATA[<p>The final item.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Item 49:  Familiarize yourself with the standard library]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/18/p-6621512115/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/18/p-6621512115/"/>
     <updated>2011-06-18T00:37:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/18/p-6621512115</id>
+    <id>http://www.ahwkong.com/post/2011/06/18/p-6621512115</id>
     <content type="html"><![CDATA[<p>Pretty obvious I suppose…</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Item 47:  Ensure that non-local static objects are initialized before they're used]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/17/p-6617932879/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/17/p-6617932879/"/>
     <updated>2011-06-17T20:51:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/17/p-6617932879</id>
+    <id>http://www.ahwkong.com/post/2011/06/17/p-6617932879</id>
     <content type="html"><![CDATA[<p>Use Singleton pattern to manage non-local static object</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[RAII stands for]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/17/p-6617312821/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/17/p-6617312821/"/>
     <updated>2011-06-17T20:01:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/17/p-6617312821</id>
+    <id>http://www.ahwkong.com/post/2011/06/17/p-6617312821</id>
     <content type="html"><![CDATA[<p>RAII stands for</p>
 
 <p><a href="Resource%20Acquisition%20Is%20Initialization">http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization</a></p>

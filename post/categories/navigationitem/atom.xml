@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: navigationItem | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/navigationitem/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/navigationitem/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Finally figure out the back button title not set issue.]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/12/p-24942635911/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/12/p-24942635911/"/>
     <updated>2012-06-12T17:06:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/12/p-24942635911</id>
+    <id>http://www.ahwkong.com/post/2012/06/12/p-24942635911</id>
     <content type="html"><![CDATA[<p>Finally figure out the back button title not set issue.</p>
 
 <p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>

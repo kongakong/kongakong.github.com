@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: art | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/art/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/art/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Antonio Canova]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/06/p-6241593955/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/06/p-6241593955/"/>
     <updated>2011-06-06T15:55:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/06/p-6241593955</id>
+    <id>http://www.ahwkong.com/post/2011/06/06/p-6241593955</id>
     <content type="html"><![CDATA[<p><a href="Antonio%20Canova">http://en.wikipedia.org/wiki/Antonio_Canova</a></p>
 
 <p>Saw his works on Google Art Project</p>

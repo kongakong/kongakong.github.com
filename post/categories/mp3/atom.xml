@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mp3 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/mp3/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/mp3/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[afconvert - audio format tools on osx]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/29/p-7043649006/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/29/p-7043649006/"/>
     <updated>2011-06-29T23:34:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/29/p-7043649006</id>
+    <id>http://www.ahwkong.com/post/2011/06/29/p-7043649006</id>
     <content type="html"><![CDATA[<p><em>afconvert</em> &ndash; audio format tools on osx</p>
 ]]></content>
   </entry>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: COM | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/com/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/com/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Disappointed at MS powershell]]></title>
-    <link href="http://kongakong.github.io/post/2012/03/15/p-19340098717/"/>
+    <link href="http://www.ahwkong.com/post/2012/03/15/p-19340098717/"/>
     <updated>2012-03-15T22:05:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/03/15/p-19340098717</id>
+    <id>http://www.ahwkong.com/post/2012/03/15/p-19340098717</id>
     <content type="html"><![CDATA[<p>My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.</p>
 
 <p>So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.</p>

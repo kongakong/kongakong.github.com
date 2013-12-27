@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: xcode4 | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/xcode4/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/xcode4/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Trying out cocoapods]]></title>
-    <link href="http://kongakong.github.io/post/2013/05/01/p-49296939249/"/>
+    <link href="http://www.ahwkong.com/post/2013/05/01/p-49296939249/"/>
     <updated>2013-05-01T06:45:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2013/05/01/p-49296939249</id>
+    <id>http://www.ahwkong.com/post/2013/05/01/p-49296939249</id>
     <content type="html"><![CDATA[<p>The installation failed at the end</p>
 
 <p>It failed because I did not install the command line tools in XCode. After installing the tool, the gem command ran fine.</p>
@@ -26,18 +26,18 @@
   
   <entry>
     <title type="html"><![CDATA[Most important layout related logic are inside MyMovieViewController in the MediaPlayer_iPhone example]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/12/p-24944720490/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/12/p-24944720490/"/>
     <updated>2012-06-12T18:24:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/12/p-24944720490</id>
+    <id>http://www.ahwkong.com/post/2012/06/12/p-24944720490</id>
     <content type="html"><![CDATA[<p>Most important layout related logic are inside MyMovieViewController in the MediaPlayer_iPhone example</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Finally figure out the back button title not set issue.]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/12/p-24942635911/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/12/p-24942635911/"/>
     <updated>2012-06-12T17:06:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/12/p-24942635911</id>
+    <id>http://www.ahwkong.com/post/2012/06/12/p-24942635911</id>
     <content type="html"><![CDATA[<p>Finally figure out the back button title not set issue.</p>
 
 <p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
@@ -50,9 +50,9 @@
   
   <entry>
     <title type="html"><![CDATA[Annoying. Cannot get the subview resized automatically, despite doing this:]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/10/p-24803473772/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/10/p-24803473772/"/>
     <updated>2012-06-10T18:38:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/10/p-24803473772</id>
+    <id>http://www.ahwkong.com/post/2012/06/10/p-24803473772</id>
     <content type="html"><![CDATA[<p>Annoying. Cannot get the subview resized automatically, despite doing this:</p>
 
 <p>Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController</p>
@@ -61,9 +61,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to bring a subview to the front when you tap it?]]></title>
-    <link href="http://kongakong.github.io/post/2012/06/10/p-24801287706/"/>
+    <link href="http://www.ahwkong.com/post/2012/06/10/p-24801287706/"/>
     <updated>2012-06-10T17:11:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/06/10/p-24801287706</id>
+    <id>http://www.ahwkong.com/post/2012/06/10/p-24801287706</id>
     <content type="html"><![CDATA[<p>```</p>
 
 <p>[parentView bringSubviewToFront:childView];</p>

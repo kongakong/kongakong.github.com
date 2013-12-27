@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: couchdb | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/couchdb/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/couchdb/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[brew install couchdb]]></title>
-    <link href="http://kongakong.github.io/post/2011/09/09/p-9992918894/"/>
+    <link href="http://www.ahwkong.com/post/2011/09/09/p-9992918894/"/>
     <updated>2011-09-09T22:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/09/09/p-9992918894</id>
+    <id>http://www.ahwkong.com/post/2011/09/09/p-9992918894</id>
     <content type="html"><![CDATA[<p>```</p>
 
 <p>$ brew install couchdb
@@ -32,9 +32,9 @@ Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
   
   <entry>
     <title type="html"><![CDATA[Installing couchdb using brew]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/02/p-6103768529/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/02/p-6103768529/"/>
     <updated>2011-06-02T20:32:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/02/p-6103768529</id>
+    <id>http://www.ahwkong.com/post/2011/06/02/p-6103768529</id>
     <content type="html"><![CDATA[<p>Message after a successful installation</p>
 
 <p>```</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: maverick | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/maverick/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/maverick/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:40:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to install pygame in osx]]></title>
-    <link href="http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx/"/>
+    <link href="http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx/"/>
     <updated>2013-12-04T22:52:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2013/12/04/how-to-install-pygame-in-osx</id>
+    <id>http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx</id>
     <content type="html"><![CDATA[<p>These are steps for installing pygame into OSX Maverick</p>
 
 <ul>

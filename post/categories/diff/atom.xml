@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: diff | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/diff/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/diff/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Diff tools on OSX]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/26/p-6936209281/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/26/p-6936209281/"/>
     <updated>2011-06-26T22:50:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/26/p-6936209281</id>
+    <id>http://www.ahwkong.com/post/2011/06/26/p-6936209281</id>
     <content type="html"><![CDATA[<p>CLI: <code>opendiff</code></p>
 
 <p>GUI: <code>FileMerge</code></p>

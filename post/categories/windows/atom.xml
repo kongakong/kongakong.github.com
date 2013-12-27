@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Windows | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/windows/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/windows/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Bonjour]]></title>
-    <link href="http://kongakong.github.io/post/2011/07/16/p-7666544291/"/>
+    <link href="http://www.ahwkong.com/post/2011/07/16/p-7666544291/"/>
     <updated>2011-07-16T09:14:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/07/16/p-7666544291</id>
+    <id>http://www.ahwkong.com/post/2011/07/16/p-7666544291</id>
     <content type="html"><![CDATA[<p>Installed Apple Bonjour on Windows 7 and instantly I can resolve the mac computer names live in my local LAN.</p>
 ]]></content>
   </entry>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mac | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/mac/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/mac/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[External Harddisk, Airport Extreme and Time Capsule]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/07/p-31050185788/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/07/p-31050185788/"/>
     <updated>2012-09-07T19:52:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/07/p-31050185788</id>
+    <id>http://www.ahwkong.com/post/2012/09/07/p-31050185788</id>
     <content type="html"><![CDATA[<p>I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.</p>
 
 <p>My last-gen MBP has a 320Gb harddisk and about 265Gb of data. I am too lazy to do an initial time machine backup via a ethernet cable.</p>
@@ -30,9 +30,9 @@
   
   <entry>
     <title type="html"><![CDATA[Just found an old receipt for 4 GB RAM I purchased on 12 Aug 2009. It was for my last Mac Book Pro (pre-unibody model). It costed me A$220.]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/24/p-6851508029/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/24/p-6851508029/"/>
     <updated>2011-06-24T13:06:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/24/p-6851508029</id>
+    <id>http://www.ahwkong.com/post/2011/06/24/p-6851508029</id>
     <content type="html"><![CDATA[<p>Just found an old receipt for 4 GB RAM I purchased on 12 Aug 2009. It was for my last Mac Book Pro (pre-unibody model). It costed me A$220.</p>
 
 <p>And about a week, I spent less than this amount and got myself 16G RAM to upgrade my iMac.</p>

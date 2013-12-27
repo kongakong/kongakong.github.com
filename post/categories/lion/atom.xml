@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: lion | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/lion/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/lion/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Doing a clean install of Mountain Lion.]]></title>
-    <link href="http://kongakong.github.io/post/2012/09/01/p-30646969056/"/>
+    <link href="http://www.ahwkong.com/post/2012/09/01/p-30646969056/"/>
     <updated>2012-09-01T20:44:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/09/01/p-30646969056</id>
+    <id>http://www.ahwkong.com/post/2012/09/01/p-30646969056</id>
     <content type="html"><![CDATA[<p>Doing a clean install of Mountain Lion.</p>
 
 <p>Basically all you need to know is contained in this</p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[brew install google-go]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/05/p-22441352771/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/05/p-22441352771/"/>
     <updated>2012-05-05T22:19:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/05/p-22441352771</id>
+    <id>http://www.ahwkong.com/post/2012/05/05/p-22441352771</id>
     <content type="html"><![CDATA[<p>```</p>
 
 <p>$ brew install google-go
@@ -53,9 +53,9 @@
   
   <entry>
     <title type="html"><![CDATA[Solution to the pip scipy problem]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/05/p-22440295991/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/05/p-22440295991/"/>
     <updated>2012-05-05T21:34:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/05/p-22440295991</id>
+    <id>http://www.ahwkong.com/post/2012/05/05/p-22440295991</id>
     <content type="html"><![CDATA[<p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
 
 <p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
@@ -70,9 +70,9 @@ pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https:
   
   <entry>
     <title type="html"><![CDATA[Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.]]></title>
-    <link href="http://kongakong.github.io/post/2012/05/03/p-22316283422/"/>
+    <link href="http://www.ahwkong.com/post/2012/05/03/p-22316283422/"/>
     <updated>2012-05-03T21:40:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2012/05/03/p-22316283422</id>
+    <id>http://www.ahwkong.com/post/2012/05/03/p-22316283422</id>
     <content type="html"><![CDATA[<p>Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.</p>
 
 <p>```</p>
@@ -105,9 +105,9 @@ pip install -e git+<a href="https://github.com/scipy/scipy#egg=scipy-dev">https:
   
   <entry>
     <title type="html"><![CDATA[gcc vs llvm-gcc on osx]]></title>
-    <link href="http://kongakong.github.io/post/2012/01/13/p-15771046267/"/>
+    <link href="http://www.ahwkong.com/post/2012/01/13/p-15771046267/"/>
     <updated>2012-01-13T22:33:00+11:00</updated>
-    <id>http://kongakong.github.io/post/2012/01/13/p-15771046267</id>
+    <id>http://www.ahwkong.com/post/2012/01/13/p-15771046267</id>
     <content type="html"><![CDATA[<p>```</p>
 
 <p>$ gcc-4.2

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: generic | Timeline]]></title>
-  <link href="http://kongakong.github.io/post/categories/generic/atom.xml" rel="self"/>
-  <link href="http://kongakong.github.io/"/>
-  <updated>2013-12-25T22:32:15+11:00</updated>
-  <id>http://kongakong.github.io/</id>
+  <link href="http://www.ahwkong.com/post/categories/generic/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-28T08:44:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Angelika Langer's Java Generics FAQs]]></title>
-    <link href="http://kongakong.github.io/post/2011/06/20/p-6711357253/"/>
+    <link href="http://www.ahwkong.com/post/2011/06/20/p-6711357253/"/>
     <updated>2011-06-20T13:25:00+10:00</updated>
-    <id>http://kongakong.github.io/post/2011/06/20/p-6711357253</id>
+    <id>http://www.ahwkong.com/post/2011/06/20/p-6711357253</id>
     <content type="html"><![CDATA[<p><a href="Angelika%20Langer's%20Java%20Generics%20FAQs">http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html</a></p>
 ]]></content>
   </entry>
