@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2013-12-28T08:44:43+11:00</updated>
+  <updated>2013-12-31T06:50:30+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[User defined runtime attribute]]></title>
+    <link href="http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute/"/>
+    <updated>2013-12-31T06:42:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute</id>
+    <content type="html"><![CDATA[<p>It is for the interface builder and xib files to set an attrible in a class.</p>
+
+<p>If the att:ribute is not defined, you will get this error and the app will crash</p>
+
+<pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to do a multi-line string in objective-c]]></title>
@@ -129,33 +143,6 @@ if (theConnection) {
 <h3>Decoding of JSON data</h3>
 
 <p>I used a lot of enumerators to walk through dictionaries and arrays at different level. It makes future changes to the JSON schema or objective-c object model difficult.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[cannot init a class object]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/16/cannot-init-a-class-object/"/>
-    <updated>2013-12-16T20:39:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/16/cannot-init-a-class-object</id>
-    <content type="html"><![CDATA[<p>Got this exception</p>
-
-<p>{% codeblock  %}
-2013-12-16 17:35:59.976 MyProject[41964:70b] <strong><em> Terminating app due to uncaught
-exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;</em></strong> +[MyClass<0x100084d80> init]: cannot init a class object.&rsquo;</p>
-
-<p>{% endcodeblock %}</p>
-
-<p>It is because I have mistakenly written</p>
-
-<p>{% codeblock lang:objective-c  %}
-[[MyClass init] alloc];
-{% endcodeblock %}</p>
-
-<p>instead of</p>
-
-<p>{% codeblock lang:objective-c  %}
-[[MyClass alloc] init];
-{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

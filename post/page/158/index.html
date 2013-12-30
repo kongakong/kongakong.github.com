@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The frame property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system. The center &hellip;">
+  <meta name="description" content="Modal View screws up the SplitView after dismiss. Tried if ([self modalViewController]) {
+return;
+} in willHideSplitView but it does not work
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +68,124 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
+
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2668647745/">iOS Idiom 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-10T02:44:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2667588233/">NSInvalidArgumentException</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-10T00:40:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got <code>Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'</code></p>
+
+<p>when trying to dismiss a modal view controller.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -142,116 +263,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/04/p-2586930582/">iOS Idiom 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-04T10:28:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To access the main window</p>
-
-<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566688864/">Some UIKit Classes Such as &#8220;UIColor&#8220;, &#8220;UIFont&#8220; and &#8220;UIImage&#8220; Are Thread Safe</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-02T23:17:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some UIKit classes such as <code>UIColor</code>, <code>UIFont</code> and  <code>UIImage</code> are thread safe</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566308188/">Use &#8220;NSZombieEnabled&#8220; to Catch BAD_ASSESS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-02T22:07:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use <code>NSZombieEnabled</code> to catch BAD_ASSESS</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/159/">&larr; Older</a>
@@ -269,23 +280,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/31/user-defined-runtime-attribute/">User defined runtime attribute</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/30/conda-install-ipython-problem/">conda install ipython problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/28/finally-firefox-is-built/">Finally firefox is built</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing qt4 dependency of pyqt4</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
   </ul>

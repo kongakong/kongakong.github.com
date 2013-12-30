@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,118 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048028170/">Item 14: Make Sure Base Classes Have Virtual Destructors</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T07:34:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual destructor , the results are <em>undefined</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046791916/">iPhone Buttons</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T06:56:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Library:</p>
+
+<p><a href="Jeff%20LaMarche%E2%80%99s%20programmatic%20gradient%20buttons">http://code.google.com/p/iphonegradientbuttons/</a></p>
+
+<p><a href="From%20%E2%80%9CCocoa%20is%20My%20GirlFriend%E2%80%9D">http://www.cimgf.com/2010/01/28/fun-with-uibuttons-and-core-animation-layers/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046309287/">Item 13: List Members in an Initialization List in the Order in Which They Are Declared</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T06:40:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Because destructor cleans up in the reverse order.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -139,120 +250,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036161971/">C++ Weirdness</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T23:05:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This calls the copy constructor</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035862177/">C++: Required Class Operations</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T22:47:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Related to</p>
-
-<p>C++ requires that all classes must provide certain operations</p>
-
-<p>If you donât provide them, the compiler will make them up by following some simple rules. This can lead to problems</p>
-
-<p><a href="cs11%20lecture%202">http://www.cs.caltech.edu/courses/cs11/material/cpp/donnie/lectures/cs11-cpp-lec2.pdf</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035529872/">Item 11: Declare a Copy Constructor and an Assignment Operator for Classes With Dynamically Allocated Memory</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T22:27:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>An <em>assignment operator</em> is to address this kind of situation:</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/123/">&larr; Older</a>
@@ -270,23 +267,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/31/user-defined-runtime-attribute/">User defined runtime attribute</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/30/conda-install-ipython-problem/">conda install ipython problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/28/finally-firefox-is-built/">Finally firefox is built</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing qt4 dependency of pyqt4</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
   </ul>

@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying to build erlang on scientific linux. Currently missing a number of libraries. Installing java-1.6.0-openjdk now for the jinterface
-">
+  <meta name="description" content="Try to run ‘brew update’. Got this error: &#8220;` $ brew update Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,183 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/09/02/p-9702772529/">Brew Update Issue on Lion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-02T21:41:00+10:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Try to run ‘brew update’. Got this error:</p>
+
+<p>&#8220;`</p>
+
+<p>$ brew update</p>
+
+<p>Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317, done.
+remote: Compressing objects: 100% (19213/19213), done.
+remote: Total 43317 (delta 26643), reused 38295 (delta 23498)
+Receiving objects: 100% (43317/43317), 5.93 MiB | 457 KiB/s, done.
+Resolving deltas: 100% (26643/26643), done.
+From</p>
+
+<p><a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a></p>
+
+<p><a href="http://github.com/mxcl/homebrew.git">http://github.com/mxcl/homebrew.git</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585407349/">Last Warning.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T23:00:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last warning.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Probably no existing rpm for this.</p>
+
+<p>These yum commands fixed most of the warnings</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>yum install ncurses
+</span><span class='line'>yum install ncurses-devel
+</span><span class='line'>yum install java-1.6.0-openjdk
+</span><span class='line'>yum install libssh2-devel 
+</span><span class='line'>yum install openssl-devel
+</span><span class='line'>yum install java-1.6.0-openjdk-devel
+</span><span class='line'>yum install unixODBC
+</span><span class='line'>yum install unixODBC-devel
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585200763/">Erlang’s &#8220; Configure&#8220; sTILl Reports These Components as Missing:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T22:49:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>erlang’s <code>configure</code> sTILl reports these components as missing:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>crypto         : No usable OpenSSL found
+</span><span class='line'>jinterface     : No Java compiler found
+</span><span class='line'>odbc           : ODBC library - link check failed
+</span><span class='line'>ssh            : No usable OpenSSL found
+</span><span class='line'>ssl            : No usable OpenSSL found
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -145,114 +322,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/28/p-9497321169/">Try to Use &#8220;git&#8220; on a Cpython Code Base (Which Uses Hg as the VCS). Was Thinking: Need to Come Up With a &#8220;.gitignore&#8220; Myself, Probably. Turns Out There Is a &#8220;.gitignore&#8220; in the Repository. Glad Need Not to Do This Extra Work</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-28T20:56:00+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Try to use <code>git</code> on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a <code>.gitignore</code> myself, probably. Turns out there is a <code>.gitignore</code> in the repository. Glad need not to do this extra work</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/28/p-9455015711/">IAN: Indexed Amortizing Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-28T00:14:00+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>IAN: Indexed Amortizing Notes</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/27/p-9448858352/">Comm</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-27T17:49:00+10:00" pubdate data-updated="true">Aug 27<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Every now and then I sTILl discover some unix command that I did not know before but is very useful. For example, <code>comm</code>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/87/">&larr; Older</a>
@@ -270,23 +339,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/31/user-defined-runtime-attribute/">User defined runtime attribute</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/30/conda-install-ipython-problem/">conda install ipython problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2013/12/28/finally-firefox-is-built/">Finally firefox is built</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing qt4 dependency of pyqt4</a>
       </li>
     
       <li class="post">
         <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach problem: Could not compile basic X program</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/gstreamer-backend/">Mach problem: gstreamer backend</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met</a>
       </li>
     
   </ul>

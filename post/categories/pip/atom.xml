@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pip | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/pip/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2013-12-28T08:44:43+11:00</updated>
+  <updated>2013-12-31T06:50:30+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[conda install ipython problem]]></title>
+    <link href="http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem/"/>
+    <updated>2013-12-30T08:27:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
+    <content type="html"><![CDATA[<p>How should I update <code>pip</code>?</p>
+
+<p>{% codeblock %}
+$ conda update ipython</p>
+
+<h1>All packages already at latest version, nothing to do.</h1>
+
+<h1>packages in environment at /Users/antkong/anaconda:</h1>
+
+<p>#</p>
+
+<h1>Warning: Your version of pip is older than what conda requires for pip</h1>
+
+<h1>integration, so pip-installed packages will not be displayed.  Please</h1>
+
+<h1>update pip, (conda update pip -p /Users/antkong/anaconda)</h1>
+
+<p>conda                     2.2.5                    py27_0<br/>
+ipython                   1.1.0                    py27_0<br/>
+mbp003:py antkong$ which pip
+/Users/antkong/anaconda/bin/pip
+mbp003:py antkong$ pip &mdash;version
+pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to install pygame in osx]]></title>
@@ -127,21 +160,6 @@ Traceback (most recent call last):
 
 <pre><code>/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
 </code></pre>
-
-<p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Trying to ``pip install numpy`` on ubuntu, and got this:]]></title>
-    <link href="http://www.ahwkong.com/post/2012/05/02/p-22252177628/"/>
-    <updated>2012-05-02T21:22:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2012/05/02/p-22252177628</id>
-    <content type="html"><![CDATA[<p>Trying to <code>pip install numpy</code> on ubuntu, and got this:</p>
-
-<p>```</p>
-
-<p>SystemError: Cannot compile &lsquo;Python.h&rsquo;. Perhaps you need to install python-dev|python-devel.</p>
 
 <p>```</p>
 ]]></content>

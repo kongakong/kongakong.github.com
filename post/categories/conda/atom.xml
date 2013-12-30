@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: conda | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/conda/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2013-12-31T06:50:30+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[conda install ipython problem]]></title>
+    <link href="http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem/"/>
+    <updated>2013-12-30T08:27:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
+    <content type="html"><![CDATA[<p>How should I update <code>pip</code>?</p>
+
+<p>{% codeblock %}
+$ conda update ipython</p>
+
+<h1>All packages already at latest version, nothing to do.</h1>
+
+<h1>packages in environment at /Users/antkong/anaconda:</h1>
+
+<p>#</p>
+
+<h1>Warning: Your version of pip is older than what conda requires for pip</h1>
+
+<h1>integration, so pip-installed packages will not be displayed.  Please</h1>
+
+<h1>update pip, (conda update pip -p /Users/antkong/anaconda)</h1>
+
+<p>conda                     2.2.5                    py27_0<br/>
+ipython                   1.1.0                    py27_0<br/>
+mbp003:py antkong$ which pip
+/Users/antkong/anaconda/bin/pip
+mbp003:py antkong$ pip &mdash;version
+pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
+  
+</feed>
