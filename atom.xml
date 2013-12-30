@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2013-12-31T06:45:18+11:00</updated>
+  <updated>2013-12-31T06:52:06+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,7 @@
     <id>http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute</id>
     <content type="html"><![CDATA[<p>It is for the interface builder and xib files to set an attrible in a class.</p>
 
-<p>If the att:ribute is not defined, you will get this error and the app will crash</p>
+<p>If the attribute is not defined, you will get this error and the app will crash</p>
 
 <pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
 </code></pre>
@@ -32,7 +32,7 @@
     <link href="http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem/"/>
     <updated>2013-12-30T08:27:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
-    <content type="html"><![CDATA[<p>How should I update <code>pip</code>?</p>
+    <content type="html"><![CDATA[<p>How can I update <code>pip</code>? Need research&hellip;</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
