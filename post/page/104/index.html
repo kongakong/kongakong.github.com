@@ -9,11 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In hg you have to use two commands to extract info similar to svn. &#8220;` $ hg tip
-changeset: 70656:3301a01071f9
-tag: tip
-user: Martin v. LÃ¶wis
-">
+  <meta name="description" content="svn update is again split into two stage process in hg: 1
+2
+3 hg pull
+hg update ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +68,53 @@ user: Martin v. LÃ¶wis
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767377183/">_svn Update _is Again Split Into Two Stage Process in _hg_:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T07:18:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>svn update </em>is again split into two stage process in <em>hg</em>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>hg pull
+</span><span class='line'>hg update
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -267,44 +313,6 @@ user:        Martin v. LÃ¶wis</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6712502628/">http://wwwsearch.sourceforge.net/mechanize/</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T14:05:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://wwwsearch.sourceforge.net/mechanize/">http://wwwsearch.sourceforge.net/mechanize/</a></p>
-
-<p><code>mechanize</code> is available for python and ruby. May want to check this out later</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/105/">&larr; Older</a>
@@ -322,6 +330,10 @@ user:        Martin v. LÃ¶wis</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/01/category-vs-class-extension/">category vs class extension</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/31/swizzle/">swizzle</a>
       </li>
     
@@ -335,10 +347,6 @@ user:        Martin v. LÃ¶wis</p>
     
       <li class="post">
         <a href="/post/2013/12/28/finally-firefox-is-built/">Finally firefox is built</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing qt4 dependency of pyqt4</a>
       </li>
     
   </ul>
@@ -382,7 +390,7 @@ user:        Martin v. LÃ¶wis</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Anthony Kong -
+  Copyright &copy; 2014 - Anthony Kong -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
