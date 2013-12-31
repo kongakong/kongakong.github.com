@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2013-12-31T06:52:06+11:00</updated>
+  <updated>2013-12-31T20:06:44+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[swizzle]]></title>
+    <link href="http://www.ahwkong.com/post/2013/12/31/swizzle/"/>
+    <updated>2013-12-31T07:21:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2013/12/31/swizzle</id>
+    <content type="html"><![CDATA[<p>A new concept to me: <a href="http://stackoverflow.com/questions/20775670/set-ivar-value-from-category">http://stackoverflow.com/questions/20775670/set-ivar-value-from-category</a></p>
+
+<p>Here is a summary:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">original</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">setImportantProperty:</span><span class="p">));</span>
+</span><span class='line'><span class="n">swizzled</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">alternative_setImportantProperty:</span><span class="p">));</span>
+</span><span class='line'><span class="n">method_exchangeImplementations</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">swizzled</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>`</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to do a multi-line string in objective-c]]></title>
@@ -174,36 +203,6 @@
 <h3>Decoding of JSON data</h3>
 
 <p>I used a lot of enumerators to walk through dictionaries and arrays at different level. It makes future changes to the JSON schema or objective-c object model difficult.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[cannot init a class object]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/16/cannot-init-a-class-object/"/>
-    <updated>2013-12-16T20:39:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/16/cannot-init-a-class-object</id>
-    <content type="html"><![CDATA[<p>Got this exception</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] &lt;strong>&lt;em> Terminating app due to uncaught
-</span><span class='line'>exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&lt;/em>&lt;/strong> +[MyClass&lt;0x100084d80> init]: cannot init a class object.&rsquo;&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>It is because I have mistakenly written</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>instead of</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

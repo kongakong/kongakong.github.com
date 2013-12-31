@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For some reason my Chrome installation is gone from my window XP at work. I have to re-install and redo some setup again There are two must-install &hellip;">
+  <meta name="description" content="Wrote up a simple test module code (simply called ‘test’), inside which I defined a function mp. It does some loan calculation given a loan amount, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,56 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/24/p-5797170054/">Earn Another Experience Point</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-24T20:12:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wrote up a simple test module code (simply called ‘test’), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<em>r</em>) and repayment periods (<em>n</em>).</p>
+
+<p>When I compile the module, I get this error message:</p>
+
+<p><code>Warning: this expression will fail with a 'badarith' exception</code></p>
+
+<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
+
+<p>Now I get another error message:</p>
+
+<p>&#8220;</p>
+
+<p>Turns out the function declaration is <code>mp(B, r, n)</code>.</p>
+
+<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -218,42 +268,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/23/p-5741485064/">&#8220;CGAffineTransformMakeRotation&#8220; vs &#8220; CGAffineTransformRotate&#8220;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-23T05:46:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>CGAffineTransformMakeRotation</code> vs <code>CGAffineTransformRotate</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/131/">&larr; Older</a>
@@ -271,6 +285,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2013/12/31/swizzle/">swizzle</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2013/12/31/user-defined-runtime-attribute/">User defined runtime attribute</a>
       </li>
     
@@ -284,10 +302,6 @@
     
       <li class="post">
         <a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing qt4 dependency of pyqt4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach problem: Failed at Unified_cpp_2</a>
       </li>
     
   </ul>

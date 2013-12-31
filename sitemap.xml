@@ -3358,7 +3358,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2012/09/04/p-30862158032/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2013-12-31T20:02:26+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2012/09/05/p-31575783650/</loc>
@@ -3862,15 +3862,19 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute/</loc>
-        <lastmod>2013-12-31T06:51:13+11:00</lastmod>
+        <lastmod>2013-12-31T20:02:58+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2013/12/31/swizzle/</loc>
+        <lastmod>2013-12-31T20:06:34+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2013-12-31T06:52:00+11:00</lastmod>
+        <lastmod>2013-12-31T20:06:34+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2013-12-31T06:52:00+11:00</lastmod>
+        <lastmod>2013-12-31T20:06:34+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -3878,6 +3882,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2013-12-31T06:52:00+11:00</lastmod>
+        <lastmod>2013-12-31T20:06:34+11:00</lastmod>
     </url>
 </urlset>
