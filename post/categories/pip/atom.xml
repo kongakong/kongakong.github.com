@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pip | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/pip/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-01T07:57:44+11:00</updated>
+  <updated>2014-01-03T21:36:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -37,9 +37,9 @@ $ conda update ipython</p>
 
 <p>conda                     2.2.5                    py27_0<br/>
 ipython                   1.1.0                    py27_0<br/>
-mbp003:py antkong$ which pip
+$ which pip
 /Users/antkong/anaconda/bin/pip
-mbp003:py antkong$ pip &mdash;version
+$ pip &mdash;version
 pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
 
 <p>{% endcodeblock %}</p>

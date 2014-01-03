@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-01T07:57:44+11:00</updated>
+  <updated>2014-01-03T21:36:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pandas - dateutil.parser import error]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error/"/>
+    <updated>2014-01-03T21:24:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error</id>
+    <content type="html"><![CDATA[<p>Try to run <code>import pandas</code> in python. Encountered this:</p>
+
+<p>{% codeblock lang:python %}</p>
+
+<blockquote><blockquote><blockquote><p>import pandas
+No module named dateutil.parser
+Traceback (most recent call last):
+  File &ldquo;<stdin>&rdquo;, line 1, in <module>
+  File &ldquo;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/<strong>init</strong>.py&rdquo;, line 6, in <module></p>
+
+<pre><code>from . import hashtable, tslib, lib
+</code></pre>
+
+<p>  File &ldquo;tslib.pyx&rdquo;, line 31, in init pandas.tslib (pandas/tslib.c:48782)
+ImportError: No module named dateutil.parser</p></blockquote></blockquote></blockquote>
+
+<p>{% endcodeblock %}</p>
+
+<p>Fixed by running</p>
+
+<p>{% codeblock lang:bash %}
+$ pip install python-dateutil</p>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[conda install ipython problem]]></title>
@@ -37,9 +69,9 @@ $ conda update ipython</p>
 
 <p>conda                     2.2.5                    py27_0<br/>
 ipython                   1.1.0                    py27_0<br/>
-mbp003:py antkong$ which pip
+$ which pip
 /Users/antkong/anaconda/bin/pip
-mbp003:py antkong$ pip &mdash;version
+$ pip &mdash;version
 pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
 
 <p>{% endcodeblock %}</p>
@@ -56,7 +88,7 @@ pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)<
 610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
 610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
 610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
-610:06.61 Packaging <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x71;&#x75;&#105;&#x74;&#x74;&#101;&#x72;&#x40;&#109;&#111;&#122;&#105;&#x6c;&#108;&#x61;&#x2e;&#x6f;&#x72;&#103;&#x2e;&#x78;&#112;&#x69;&#46;&#46;&#46;">&#113;&#117;&#105;&#116;&#x74;&#101;&#114;&#64;&#x6d;&#x6f;&#122;&#105;&#108;&#108;&#97;&#46;&#x6f;&#114;&#103;&#46;&#x78;&#x70;&#x69;&#46;&#x2e;&#46;</a>
+610:06.61 Packaging <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#113;&#117;&#x69;&#x74;&#116;&#x65;&#x72;&#x40;&#109;&#x6f;&#x7a;&#x69;&#108;&#x6c;&#x61;&#x2e;&#x6f;&#x72;&#x67;&#x2e;&#x78;&#x70;&#105;&#46;&#x2e;&#x2e;">&#113;&#x75;&#x69;&#x74;&#x74;&#x65;&#x72;&#64;&#109;&#x6f;&#122;&#x69;&#108;&#108;&#97;&#46;&#x6f;&#114;&#x67;&#46;&#x78;&#x70;&#x69;&#46;&#46;&#46;</a>
 610:06.95 816 compiler warnings present.
 We know it took a while, but your build finally finished successfully!
 To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox
@@ -726,35 +758,6 @@ USB Device: Bluetooth USB Host Controller
 Thunderbolt Bus: MacBook Pro, Apple Inc., 17.2</p>
 
 <p>{% endcodeblock %}</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to install pygame in osx]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx/"/>
-    <updated>2013-12-04T22:52:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/04/how-to-install-pygame-in-osx</id>
-    <content type="html"><![CDATA[<p>These are steps for installing pygame into OSX Maverick</p>
-
-<ul>
-<li><p><code>brew install sdl sdl_image sdl_mixer sdl_ttf  portmidi</code></p></li>
-<li><p>Download and install <code>XQuartz</code>. It is a dependency of package <code>smpeg</code></p></li>
-<li><p>Install <code>smpeg</code></p></li>
-</ul>
-
-
-<p>{% codeblock %}
-brew tap homebrew/headonly
-brew install &mdash;HEAD smpeg
-{% endcodeblock %}</p>
-
-<ul>
-<li><p>Use pip to install pygame: <code>pip install hg+http://bitbucket.org/pygame/pygame</code></p></li>
-<li><p>Use <code>python -m pygame.tests</code> for test</p></li>
-</ul>
-
-
-<p>(This is based on the bug report <a href="https://bitbucket.org/pygame/pygame/issue/82/homebrew-on-leopard-fails-to-install">here</a>)</p>
 ]]></content>
   </entry>
   

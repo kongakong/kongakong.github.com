@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-01T07:28:50+11:00</updated>
+  <updated>2014-01-03T21:33:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pandas - dateutil.parser import error]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error/"/>
+    <updated>2014-01-03T21:24:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error</id>
+    <content type="html"><![CDATA[<p>Try to run <code>import pandas</code> in python. Encountered this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span>
+</span><span class='line'><span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">hashtable</span><span class="p">,</span> <span class="n">tslib</span><span class="p">,</span> <span class="n">lib</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;tslib.pyx&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="n">init</span> <span class="n">pandas</span><span class="o">.</span><span class="n">tslib</span> <span class="p">(</span><span class="n">pandas</span><span class="o">/</span><span class="n">tslib</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">48782</span><span class="p">)</span>
+</span><span class='line'><span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fixed by running</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install python-dateutil
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[category vs class extension]]></title>
@@ -108,9 +145,9 @@
 </span><span class='line'>
 </span><span class='line'>conda                     2.2.5                    py27_0  
 </span><span class='line'>ipython                   1.1.0                    py27_0  
-</span><span class='line'>mbp003:py antkong$ which pip
+</span><span class='line'>$ which pip
 </span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>mbp003:py antkong$ pip --version
+</span><span class='line'>$ pip --version
 </span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
 
 
@@ -579,79 +616,6 @@ abort: repository default not found!
 
 
 <p>It is probably not an efficient way to handle the incoming json data.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[JSONKit exception]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/12/jsonkit-exception/"/>
-    <updated>2013-12-12T06:59:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/12/jsonkit-exception</id>
-    <content type="html"><![CDATA[<p>Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector  <code>objectFromJSONString</code>. It is my misunderstanding of how the JSONKit APIs are used</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-12 02:05:11.989 Questions[9190:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[JKArray objectFromJSONString]: unrecognized selector sent to instance 0x109318370'
-</span><span class='line'>*** First throw call stack:
-</span><span class='line'>(
-</span><span class='line'>  0   CoreFoundation                      0x0000000101b59795 __exceptionPreprocess + 165
-</span><span class='line'>  1   libobjc.A.dylib                     0x00000001018bc991 objc_exception_throw + 43
-</span><span class='line'>  2   CoreFoundation                      0x0000000101beabad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
-</span><span class='line'>  3   CoreFoundation                      0x0000000101b4b09d ___forwarding___ + 973
-</span><span class='line'>  4   CoreFoundation                      0x0000000101b4ac48 _CF_forwarding_prep_0 + 120
-</span><span class='line'>  5   Questions                           0x0000000100003b14 -[QueQuestionManager convertJsonIntoQuestionnaire:] + 804
-</span><span class='line'>  6   Questions                           0x000000010000404b -[QueQuestionManager connectionDidFinishLoading:] + 203
-</span><span class='line'>  7   Foundation                          0x0000000100467e9b __65-[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:]_block_invoke + 48
-</span><span class='line'>  8   Foundation                          0x000000010031b6ab -[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:] + 210
-</span><span class='line'>  9   Foundation                          0x000000010031b5bc -[NSURLConnectionInternal _withActiveConnectionAndDelegate:] + 69
-</span><span class='line'>  10  CFNetwork                           0x000000010347a777 ___ZN27URLConnectionClient_Classic26_delegate_didFinishLoadingEU13block_pointerFvvE_block_invoke + 107
-</span><span class='line'>  11  CFNetwork                           0x0000000103478942 ___ZN27URLConnectionClient_Classic18_withDelegateAsyncEPKcU13block_pointerFvP16_CFURLConnectionPK33CFURLConnectionClientCurrent_VMaxE_block_invoke_2 + 84
-</span><span class='line'>  12  CFNetwork                           0x00000001034bbf74 ___ZNK17CoreSchedulingSet13_performAsyncEPKcU13block_pointerFvvE_block_invoke + 25
-</span><span class='line'>  13  CoreFoundation                      0x0000000101b00114 CFArrayApplyFunction + 68
-</span><span class='line'>  14  CFNetwork                           0x00000001033ebbeb _ZN19RunloopBlockContext7performEv + 115
-</span><span class='line'>  15  CFNetwork                           0x00000001033eba31 _ZN17MultiplexerSource7performEv + 247
-</span><span class='line'>  16  CFNetwork                           0x00000001033eb854 _ZN17MultiplexerSource8_performEPv + 72
-</span><span class='line'>  17  CoreFoundation                      0x0000000101ae8ec1 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
-</span><span class='line'>  18  CoreFoundation                      0x0000000101ae8792 __CFRunLoopDoSources0 + 242
-</span><span class='line'>  19  CoreFoundation                      0x0000000101b0461f __CFRunLoopRun + 767
-</span><span class='line'>  20  CoreFoundation                      0x0000000101b03f33 CFRunLoopRunSpecific + 467
-</span><span class='line'>  21  GraphicsServices                    0x000000010382f3a0 GSEventRunModal + 161
-</span><span class='line'>  22  UIKit                               0x0000000100987043 UIApplicationMain + 1010
-</span><span class='line'>  23  Questions                           0x0000000100003653 main + 115
-</span><span class='line'>  24  libdyld.dylib                       0x00000001021e85fd start + 1
-</span><span class='line'>)
-</span><span class='line'>libc++abi.dylib: terminating with uncaught exception of type NSException</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   

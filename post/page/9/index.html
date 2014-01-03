@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I could not create a write conflict situation. It turns out it is because I did not set the allow_multi property Here is the command line: curl -i - &hellip;">
+  <meta name="description" content="The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,53 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-12T22:28:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
+
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
+
+<ul>
+<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
+</ul>
+
+
+<p>Source: by Sam Elliott in the mailing list</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -224,44 +271,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/">How to Make Riak Listen to IP Other Than Localhost</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-09T18:53:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By default a riak node will only listen to 127.0.0.1.</p>
-
-<p>Replace 127.0.0.1 with the host IP in app.config will solve this issue</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/10/">&larr; Older</a>
@@ -279,6 +288,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">pandas - dateutil.parser import error</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/01/category-vs-class-extension/">category vs class extension</a>
       </li>
     
@@ -292,10 +305,6 @@
     
       <li class="post">
         <a href="/post/2013/12/30/conda-install-ipython-problem/">conda install ipython problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/28/finally-firefox-is-built/">Finally firefox is built</a>
       </li>
     
   </ul>

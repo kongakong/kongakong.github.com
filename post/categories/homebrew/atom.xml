@@ -4,7 +4,7 @@
   <title><![CDATA[Category: homebrew | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-01T07:57:44+11:00</updated>
+  <updated>2014-01-03T21:36:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[pandas - dateutil.parser import error]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error/"/>
+    <updated>2014-01-03T21:24:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error</id>
+    <content type="html"><![CDATA[<p>Try to run <code>import pandas</code> in python. Encountered this:</p>
+
+<p>{% codeblock lang:python %}</p>
+
+<blockquote><blockquote><blockquote><p>import pandas
+No module named dateutil.parser
+Traceback (most recent call last):
+  File &ldquo;<stdin>&rdquo;, line 1, in <module>
+  File &ldquo;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/<strong>init</strong>.py&rdquo;, line 6, in <module></p>
+
+<pre><code>from . import hashtable, tslib, lib
+</code></pre>
+
+<p>  File &ldquo;tslib.pyx&rdquo;, line 31, in init pandas.tslib (pandas/tslib.c:48782)
+ImportError: No module named dateutil.parser</p></blockquote></blockquote></blockquote>
+
+<p>{% endcodeblock %}</p>
+
+<p>Fixed by running</p>
+
+<p>{% codeblock lang:bash %}
+$ pip install python-dateutil</p>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[brew local modification error and solution]]></title>
