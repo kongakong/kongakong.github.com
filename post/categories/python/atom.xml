@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/python/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-03T21:36:35+11:00</updated>
+  <updated>2014-01-04T21:50:49+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[conda and ipython]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/03/conda-and-ipython/"/>
+    <updated>2014-01-03T23:01:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/03/conda-and-ipython</id>
+    <content type="html"><![CDATA[<p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
+
+<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
+
+<p>Now I have four set of python runtime installed on my MBP:</p>
+
+<ul>
+<li><p>From Apple</p></li>
+<li><p>From Homebrew</p></li>
+<li><p>From Pythonbrew</p></li>
+<li><p>From conda</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[pandas - dateutil.parser import error]]></title>
@@ -367,39 +388,6 @@ no previously-included directories found matching '*/*/CVS'
 </code></pre>
 
 <p>Successfully installed pygame</p>
-
-<p>{% endcodeblock %}</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[easy_install scipy problem]]></title>
-    <link href="http://www.ahwkong.com/post/2013/11/30/easy-install-scipy-problem/"/>
-    <updated>2013-11-30T23:22:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/11/30/easy-install-scipy-problem</id>
-    <content type="html"><![CDATA[<p>No luck with scipy so far</p>
-
-<p>{% codeblock %}
-$ easy_install scipy
-Searching for scipy
-Reading <a href="https://pypi.python.org/simple/scipy/">https://pypi.python.org/simple/scipy/</a>
-Best match: scipy 0.13.1
-Downloading <a href="https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916">https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916</a>
-Processing scipy-0.13.1.zip
-Writing /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/setup.cfg
-Running scipy-0.13.1/setup.py -q bdist_egg &mdash;dist-dir /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/egg-dist-tmp-vWQr5z
-Running from scipy source directory.
-Splitting linalg.interpolative Fortran source files
-/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy-1.8.0-py2.7-macosx-10.9-x86_64.egg/numpy/distutils/system_info.py:507: UserWarning:</p>
-
-<pre><code>UMFPACK sparse solver (http://www.cise.ufl.edu/research/sparse/umfpack/)
-not found. Directories to search for the libraries can be specified in the
-numpy/distutils/site.cfg file (section [umfpack]) or by setting
-the UMFPACK environment variable.
-</code></pre>
-
-<p>  warnings.warn(self.notfounderror.<strong>doc</strong>)
-error: None</p>
 
 <p>{% endcodeblock %}</p>
 ]]></content>

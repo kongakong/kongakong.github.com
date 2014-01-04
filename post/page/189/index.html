@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Zvi responded to Christian S&rsquo;s &ldquo;recommended large text mass handling modules&rdquo;. He said, if for efficiency we represent a string as &hellip;">
+  <meta name="description" content="By now, it is rather obvious that the Fed is determined to promote growth at the risk of having a runaway inflation.Is it a sound policy?I am never &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,78 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/03/01/jst_2450561403351842903/">Growth vs Inflation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-03-01T22:54:00+11:00" pubdate data-updated="true">Mar 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By now, it is rather obvious that the Fed is determined to promote growth at the risk of having a runaway inflation.<br /><br />Is it a sound policy?<br /><br />I am never impressed by this obsession with growth. For example, Wall street expects the listed companies to grow <i>continuously</i>, ignoring the fact that there exists business cycle. Have you studied the &ldquo;Constant Growth Model&rdquo;? It is still a part of orthodox, formal financial education curriculum.<br /><br />In order to fullfill this expectation, GE has to manipulate their accounting in order to smooth out their earning growth to satisfy the Wall Street analysts.<br /><br />In making a choice between <span style="font-style: italic;">Growth Promotion</span> and <span style="font-style: italic;">Inflation Control,</span> it also highlights whom the Government and the Fed are serving.<br /><br />Inflation control is in a way a self-imposed constraint of the Government and the Fed such that they will not impose tax <span style="font-style: italic;">implicitly</span> on the public at large by printing money.  Usually a low inflation rate is preferred because it allows the monetary base to grow with GDP without eroding the purchasing power of existing currency holder significantly. <br /><br />However if the policy makers focus on keeping the momentum of growth of G.D.P., it is not  clear who will ultimately reap the benefit out of this at the end. For example, employers, over the years, have mastered the art of boosting company profit at the expense of the worker by the means of layoff, or, the mere threat of doing so, to suppress the wage growth. General public does not get to share the fruit of the GDP growth.<br /><br />Policy markers used to justify their pro-Growth decisions by saying that &ldquo;A bigger pie feeds more people&rdquo;. But as modern technology has dramatically improved the productivity, a growth in G.D.P does not necessarily translate to increase of payroll positions.<br /><br />I think I can see quite clearly who are going to lose out in next few years as a result of this series of rate-cut by the Fed &mdash; the public.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/02/19/5839983411439621941/">Erlang Mailing List - String as List 3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T08:15:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is the last installment of the digest of the topic of &ldquo;String as List&rdquo;.<br /><span class="HcCDpe"><span email="hasan.veldstra@gmail.com" class="EP8xU" style="color: rgb(204, 0, 96);"><br />Hasan Veldstra</span></span> opined that lack of library support make string operation difficult. He was working on an Erlang Unicode string library based on ICU (<a href="http://www.icu-project.org/" target="_blank"><a href="http://www.icu-project.org/">http://www.icu-project.org/</a></a>) for the past week, and expected to release an alpha version soon.<br /><br /><span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span>  <span class="lDACoc"></span></span>suggested that in the case of 64 bit implementation of Erlang, a &ldquo;String as list&rdquo; representation is wasteful.<br /><br /><span class="HcCDpe"><span email="ok@cs.otago.ac.nz" class="EP8xU" style="color: rgb(121, 6, 25);">Richard A. O&#8217;Keefe </span> seems to be annoyed by this suggestion (and other comment on Lisp machine), and advocated that if space is a concern, the programmer can use an alternative representation such as binary.<br /></span><br /><span class="HcCDpe"><span email="rvirding@gmail.com" class="EP8xU" style="color: rgb(200, 137, 0);">Robert Virding </span></span>clarify the leex (function token/2 and token/3) is re-entrant. However, yecc is not and must be fed with a completed list of token.<br /><br /><span class="HcCDpe"><span email="dmitriid@gmail.com" class="EP8xU" style="color: rgb(121, 6, 25);">Dmitrii &lsquo;Mamut&rsquo; Dimandt </span> </span>gave an example of why &ldquo;string as list&rdquo; is bad idea, because:<br /><blockquote style="font-style: italic;"><br />&ldquo;This is only true for ASCII text. Non-ASCII gets screwed up badly.<br /><br />lists:reverse(&#8220;text&rdquo;)     %% gives you &ldquo;text&rdquo;<br />lists:reverse(&ldquo;текст&rdquo;)  %% Russian for text becomes [130,209,129,209,186,208,181<div bgcolor="#ffffff" text="#000000"><wbr>,208,130,209] which is clearly not I wanted&#8221;</div></blockquote><div bgcolor="#ffffff" text="#000000"><br /></div>  <span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S</span>  <span class="lDACoc">has a solution to this problem:<br /><br /></span></span><blockquote style="font-style: italic;">&ldquo;This is what you should have in your list:<br />1> Text = [16#442, 16#435, 16#43a, 16#441, 16#442].<br />[1090,1077,1082,1089,1090]<br /><br />You can convert it to utf8 for output<br /><br />2> xmerl_ucs:to_utf8(Text).<br />[209,130,208,181,208,186,209<div id="1fvf" class="ArwC7c ckChnd"><wbr>,129,209,130]<br /><br />And you can reverse it and convert that to utf8.<br /><br />3> xmerl_ucs:to_utf8(lists<wbr>:reverse(Text)).<br />[209,130,209,129,208,186,208<wbr>,181,209,130]&rdquo;<br /></div></blockquote><div id="1fvf" class="ArwC7c ckChnd"><br />A positive message from <span class="HcCDpe"><span email="bjorn@erix.ericsson.se" class="EP8xU" style="color: rgb(51, 0, 153);">Bjorn Gustavsson</span></span>. He confirmed that is possible to use lists of Unicode characters easily. In Wings 3D, he have implemented a limited support for Unicode.<br /><br /><span class="HcCDpe"><span email="erlang@gmail.com" class="EP8xU" style="color: rgb(0, 131, 145);">Joe Armstrong</span></span> weighted in on 19 Feb. He suggested &ldquo;One problem with strings unicode, regexps etc. is how you input the string.&rdquo;. He proposed several new syntax to capture regex or xml string.<br /><br />Basically from this point onward the thread has shifted gear into forward looking mood. The discussion now focused on the best way to represent a string in Erlang.<br /><br /><br /></div></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -174,79 +246,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/02/18/9011218246315898500/">Draftttt</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-18T22:06:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><br />
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/02/06/jst_8929617124816659306/">Dysfunctional Market?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-06T06:18:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In an ABC&rsquo;s <a href="http://www.abc.net.au/rn/podcast/feeds/bia.xml"> podcast</a>, Dr Paul Woolley gave an speech on <span style="font-style: italic;">Financial Sector Dysfunctionality</span>. Indeed, witnessing series of financial stuff-up&rsquo;s in last centuries, one bigger than the other,  shouldn&rsquo;t we slow down and take a good look at this interesting business sector?<br /><br />Paul used his personal experience in the adoption of momentum trading to illustrate some recent worrying changes  in the financial market. I don&rsquo;t think I can paraphrase very well, so please read full transcript <a href="http://www.abc.net.au/rn/bigideas/stories/2008/2149972.htm">here</a>.<br /><br />These days, financial sector is growing faster and larger, and taking increasing bigger share in  GDP. It is, however, not entirely a result of the sector doing a better job as an intermediary between investor and borrower. Instead, especially after the rise of hedge funds, more and more financial operations are making profit from market volatility or other speculative behaviors. The money changed hand in the process has far exceeded the actual value of the annual global output. Does it make sense at all?<br /><br />We can always reduce the phenomena to human greed and fear. In the other word, a financial market is for speculators to speculate, just like what Las Vegas is for gamblers.<br /><br />But, could it be something more? If we know it is wrong and yet we fail for it decades after decades, could it be something more hideous that&rsquo;s lurking in our collective psychology?<br /><br />Could it be similar to the construction of the Pyramids in Ancient Egypt? When a society make a collective economic choice and believe that a certain non-productive, expensive activities, conducted by a handful of elites, should be handsomely rewarded by the general public at large, is it a social/organizational problem?<br /><br />For argument sake, let&rsquo;s assume it is. Then what purpose it serves? Could it be just a natural device to stabilize human population (e.g. to creating a underclass who either died of starvation or illness), or an essential mechanism to hold a society together (akin to a common religious experience)?<br /><br /><div style="text-align: left;">Actually the religious analogy can be further developed.<br /><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://3.bp.blogspot.com/_j_Rnsthw-6Y/R7qxdFFu8QI/AAAAAAAAAEw/PVk0gHeVPqU/s1600-h/money_whopship.jpg"><img style="margin: 0pt 0pt 10px 10px; cursor: pointer;" src="http://3.bp.blogspot.com/_j_Rnsthw-6Y/R7qxdFFu8QI/AAAAAAAAAEw/PVk0gHeVPqU/s320/money_whopship.jpg" alt="" id="BLOGGER_PHOTO_ID_5168638635501613314" border="0" /></a></div><br /><ul><li>The various indexes are like the Oracle. It may or may not tell the future direction of the economy. </li><li>The big financial houses are like Temples. High priests are there to talk to the Gods.</li><li>Their royal servants, me included, dutifully takes up the responsibility of all daily housekeeping activities and, most important of all, money collection. We highlight the blessing one will receive if they sacrifice all their income to our product, and unconceivable suffering if they do not put away their for investment.</li><li>Occasionally we have good news to the people: &ldquo;Rejoice, the Oracle of Gods hath spoken. A new era has come. Sell all your belonging and buy the stocks of these websites!&rdquo;</li></ul>Well, I think you have got the idea.<br /><br />But seriously this topic deserves a more systematic, in-depth treatment.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/190/">&larr; Older</a>
@@ -264,6 +263,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/04/swap-convention/">swap convention</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/03/conda-and-ipython/">conda and ipython</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">pandas - dateutil.parser import error</a>
       </li>
     
@@ -273,14 +280,6 @@
     
       <li class="post">
         <a href="/post/2013/12/31/swizzle/">swizzle</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/31/user-defined-runtime-attribute/">User defined runtime attribute</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/30/conda-install-ipython-problem/">conda install ipython problem</a>
       </li>
     
   </ul>

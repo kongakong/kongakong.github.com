@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I find this summary in Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo; book very concise and useful. Relational Traditional databases usually use &hellip;">
+  <meta name="description" content="Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,92 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/02/why-we-should-love-repost/">Why We Should Love Repost</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-02T23:05:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
+
+<p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
+
+<p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
+
+<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
+
+<p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/01/luck-and-skill/">Luck and Skill</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-01T08:23:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
+payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
+sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
+lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
+number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
+
+<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -197,93 +283,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/17/global-send-message/">Global:send_message</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T08:31:00+10:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
-
-<p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/16/erlang-and-pang/">Pong and Pang in Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-16T08:00:00+10:00" pubdate data-updated="true">Jul 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I know it is quite clever to use &lsquo;pang&rsquo; to indciate the process does not exist. However both responses (&lsquo;pong&rsquo; and &lsquo;pang&rsquo;) just look too similar to each other if the terminal app uses a certain kind of font. Don&rsquo;t think i would enjoy it under stress in an operation/support situation.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">exist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
-</span><span class='line'><span class="n">pong</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">notexist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
-</span><span class='line'><span class="n">pang</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/12/">&larr; Older</a>
@@ -301,6 +300,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/04/swap-convention/">swap convention</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/03/conda-and-ipython/">conda and ipython</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">pandas - dateutil.parser import error</a>
       </li>
     
@@ -310,14 +317,6 @@
     
       <li class="post">
         <a href="/post/2013/12/31/swizzle/">swizzle</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/31/user-defined-runtime-attribute/">User defined runtime attribute</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2013/12/30/conda-install-ipython-problem/">conda install ipython problem</a>
       </li>
     
   </ul>

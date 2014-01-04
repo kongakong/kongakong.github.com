@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JSONKit | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/jsonkit/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-03T21:36:35+11:00</updated>
+  <updated>2014-01-04T21:22:53+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,30 +20,49 @@
     <id>http://www.ahwkong.com/post/2013/12/13/incorrect-way-to-use-jsonkit</id>
     <content type="html"><![CDATA[<p>At the beginning I use the following code to decode a JSON string:</p>
 
-<p>{% codeblock lang:objective-c %}
-&ndash; (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{</p>
-
-<pre><code>JSONDecoder* decoder = [[JSONDecoder alloc]
-                        initWithParseOptions:JKParseOptionNone];
-NSArray* json = [decoder objectWithData:receivedData];
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">connectionDidFinishLoading:</span><span class="p">(</span><span class="n">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="n">connection</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>                        <span class="nl">initWithParseOptions:</span><span class="n">JKParseOptionNone</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nl">objectWithData:</span><span class="n">receivedData</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>and then I tried to convert the json data with this function:</p>
 
-<p>{% codeblock lang:objective-c %}
-&ndash;(voide) convertJSONData:(id)json {</p>
-
-<pre><code>NSEnumerator *enumerator = [json objectEnumerator];
-id anObject;
-
-while (anObject = [enumerator nextObject]) {
-    // test for anObject class and handle accordingly
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="n">voide</span><span class="p">)</span> <span class="nl">convertJSONData:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">json</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">enumerator</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span> <span class="n">objectEnumerator</span><span class="p">];</span>
+</span><span class='line'><span class="kt">id</span> <span class="n">anObject</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">while</span> <span class="p">(</span><span class="n">anObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">enumerator</span> <span class="n">nextObject</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// test for anObject class and handle accordingly</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>It is probably not an efficient way to handle the incoming json data.</p>
 ]]></content>
@@ -56,42 +75,76 @@ while (anObject = [enumerator nextObject]) {
     <id>http://www.ahwkong.com/post/2013/12/12/jsonkit-exception</id>
     <content type="html"><![CDATA[<p>Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector  <code>objectFromJSONString</code>. It is my misunderstanding of how the JSONKit APIs are used</p>
 
-<p>{% codeblock %}
-2013-12-12 02:05:11.989 Questions[9190:70b] <strong><em> Terminating app due to uncaught exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&ndash;[JKArray objectFromJSONString]: unrecognized selector sent to instance 0x109318370&rsquo;
-</em></strong> First throw call stack:
-(</p>
-
-<pre><code>0   CoreFoundation                      0x0000000101b59795 __exceptionPreprocess + 165
-1   libobjc.A.dylib                     0x00000001018bc991 objc_exception_throw + 43
-2   CoreFoundation                      0x0000000101beabad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
-3   CoreFoundation                      0x0000000101b4b09d ___forwarding___ + 973
-4   CoreFoundation                      0x0000000101b4ac48 _CF_forwarding_prep_0 + 120
-5   Questions                           0x0000000100003b14 -[QueQuestionManager convertJsonIntoQuestionnaire:] + 804
-6   Questions                           0x000000010000404b -[QueQuestionManager connectionDidFinishLoading:] + 203
-7   Foundation                          0x0000000100467e9b __65-[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:]_block_invoke + 48
-8   Foundation                          0x000000010031b6ab -[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:] + 210
-9   Foundation                          0x000000010031b5bc -[NSURLConnectionInternal _withActiveConnectionAndDelegate:] + 69
-10  CFNetwork                           0x000000010347a777 ___ZN27URLConnectionClient_Classic26_delegate_didFinishLoadingEU13block_pointerFvvE_block_invoke + 107
-11  CFNetwork                           0x0000000103478942 ___ZN27URLConnectionClient_Classic18_withDelegateAsyncEPKcU13block_pointerFvP16_CFURLConnectionPK33CFURLConnectionClientCurrent_VMaxE_block_invoke_2 + 84
-12  CFNetwork                           0x00000001034bbf74 ___ZNK17CoreSchedulingSet13_performAsyncEPKcU13block_pointerFvvE_block_invoke + 25
-13  CoreFoundation                      0x0000000101b00114 CFArrayApplyFunction + 68
-14  CFNetwork                           0x00000001033ebbeb _ZN19RunloopBlockContext7performEv + 115
-15  CFNetwork                           0x00000001033eba31 _ZN17MultiplexerSource7performEv + 247
-16  CFNetwork                           0x00000001033eb854 _ZN17MultiplexerSource8_performEPv + 72
-17  CoreFoundation                      0x0000000101ae8ec1 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
-18  CoreFoundation                      0x0000000101ae8792 __CFRunLoopDoSources0 + 242
-19  CoreFoundation                      0x0000000101b0461f __CFRunLoopRun + 767
-20  CoreFoundation                      0x0000000101b03f33 CFRunLoopRunSpecific + 467
-21  GraphicsServices                    0x000000010382f3a0 GSEventRunModal + 161
-22  UIKit                               0x0000000100987043 UIApplicationMain + 1010
-23  Questions                           0x0000000100003653 main + 115
-24  libdyld.dylib                       0x00000001021e85fd start + 1
-</code></pre>
-
-<p>)
-libc++abi.dylib: terminating with uncaught exception of type NSException</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-12 02:05:11.989 Questions[9190:70b] &lt;strong>&lt;em> Terminating app due to uncaught exception &lsquo;NSInvalidArgumentException&rsquo;, reason: &lsquo;&ndash;[JKArray objectFromJSONString]: unrecognized selector sent to instance 0x109318370&rsquo;
+</span><span class='line'>&lt;/em>&lt;/strong> First throw call stack:
+</span><span class='line'>(&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>0   CoreFoundation                      0x0000000101b59795 __exceptionPreprocess + 165
+</span><span class='line'>1   libobjc.A.dylib                     0x00000001018bc991 objc_exception_throw + 43
+</span><span class='line'>2   CoreFoundation                      0x0000000101beabad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
+</span><span class='line'>3   CoreFoundation                      0x0000000101b4b09d ___forwarding___ + 973
+</span><span class='line'>4   CoreFoundation                      0x0000000101b4ac48 _CF_forwarding_prep_0 + 120
+</span><span class='line'>5   Questions                           0x0000000100003b14 -[QueQuestionManager convertJsonIntoQuestionnaire:] + 804
+</span><span class='line'>6   Questions                           0x000000010000404b -[QueQuestionManager connectionDidFinishLoading:] + 203
+</span><span class='line'>7   Foundation                          0x0000000100467e9b __65-[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:]_block_invoke + 48
+</span><span class='line'>8   Foundation                          0x000000010031b6ab -[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:] + 210
+</span><span class='line'>9   Foundation                          0x000000010031b5bc -[NSURLConnectionInternal _withActiveConnectionAndDelegate:] + 69
+</span><span class='line'>10  CFNetwork                           0x000000010347a777 ___ZN27URLConnectionClient_Classic26_delegate_didFinishLoadingEU13block_pointerFvvE_block_invoke + 107
+</span><span class='line'>11  CFNetwork                           0x0000000103478942 ___ZN27URLConnectionClient_Classic18_withDelegateAsyncEPKcU13block_pointerFvP16_CFURLConnectionPK33CFURLConnectionClientCurrent_VMaxE_block_invoke_2 + 84
+</span><span class='line'>12  CFNetwork                           0x00000001034bbf74 ___ZNK17CoreSchedulingSet13_performAsyncEPKcU13block_pointerFvvE_block_invoke + 25
+</span><span class='line'>13  CoreFoundation                      0x0000000101b00114 CFArrayApplyFunction + 68
+</span><span class='line'>14  CFNetwork                           0x00000001033ebbeb _ZN19RunloopBlockContext7performEv + 115
+</span><span class='line'>15  CFNetwork                           0x00000001033eba31 _ZN17MultiplexerSource7performEv + 247
+</span><span class='line'>16  CFNetwork                           0x00000001033eb854 _ZN17MultiplexerSource8_performEPv + 72
+</span><span class='line'>17  CoreFoundation                      0x0000000101ae8ec1 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+</span><span class='line'>18  CoreFoundation                      0x0000000101ae8792 __CFRunLoopDoSources0 + 242
+</span><span class='line'>19  CoreFoundation                      0x0000000101b0461f __CFRunLoopRun + 767
+</span><span class='line'>20  CoreFoundation                      0x0000000101b03f33 CFRunLoopRunSpecific + 467
+</span><span class='line'>21  GraphicsServices                    0x000000010382f3a0 GSEventRunModal + 161
+</span><span class='line'>22  UIKit                               0x0000000100987043 UIApplicationMain + 1010
+</span><span class='line'>23  Questions                           0x0000000100003653 main + 115
+</span><span class='line'>24  libdyld.dylib                       0x00000001021e85fd start + 1
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>)
+</span><span class='line'>libc++abi.dylib: terminating with uncaught exception of type NSException&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

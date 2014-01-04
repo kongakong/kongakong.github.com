@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vim | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/vim/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-03T21:36:35+11:00</updated>
+  <updated>2014-01-04T21:50:49+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.ahwkong.com/post/2012/09/09/p-31190527440/"/>
     <updated>2012-09-09T20:43:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2012/09/09/p-31190527440</id>
-    <content type="html"><![CDATA[<p><a href="https://github.com/tpope/vim-pathogen]">Pathogen: manage vim runtimepath</a></p>
+    <content type="html"><![CDATA[<p><a href="https://github.com/tpope/vim-pathogen">Pathogen: manage vim runtimepath</a></p>
 ]]></content>
   </entry>
   
