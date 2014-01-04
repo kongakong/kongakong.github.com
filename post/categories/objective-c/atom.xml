@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-04T21:50:49+11:00</updated>
+  <updated>2014-01-05T07:52:47+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,106 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Make picker 2 data dependent on the selected row of picker 1]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1/"/>
+    <updated>2014-01-05T06:28:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1</id>
+    <content type="html"><![CDATA[<p>It is what I want to achive: whenever a selection is changed in the top UIPicker, the choices in the second UIPicker will change accordingly.</p>
+
+<p>{% img center /images/twopickers.png 341 497  %}</p>
+
+<p>Useful lessons from this exercise:</p>
+
+<ul>
+<li>The use of API <code>reloadAllComponents</code></li>
+<li>The use of class extension and category</li>
+<li>Identification of the UI object &ndash; apparently a <code>==</code> is sufficient to find out which picker instance a picker API is handling</li>
+</ul>
+
+
+<p>{% codeblock lang:objective-c %}</p>
+
+<h1>import &ldquo;SOViewController.h&rdquo;</h1>
+
+<p>@interface SOViewController ()</p>
+
+<p>@property (weak, nonatomic) IBOutlet UIPickerView <em>Picker1;
+@property (weak, nonatomic) IBOutlet UIPickerView </em>Picker2;</p>
+
+<p>@end</p>
+
+<p>@interface SOViewController (SOPickerDelegate) &lt;UIPickerViewDelegate, UIPickerViewDataSource></p>
+
+<p>@end</p>
+
+<p>@implementation SOViewController
+{</p>
+
+<pre><code>NSArray* list_media;
+NSArray* list_media_channel;
+</code></pre>
+
+<p>}</p>
+
+<ul>
+<li><p>(void)viewDidLoad
+{
+  [super viewDidLoad];
+  list_media = @[@&ldquo;TV&rdquo;, @&ldquo;Radio&rdquo;];
+  list_media_channel = @[ @[@&ldquo;ABC&rdquo;, @&ldquo;SBS&rdquo;], @[@&ldquo;TripleJ&rdquo;, @&ldquo;107.1&rdquo;, @&ldquo;CBS&rdquo;]];
+}</p></li>
+<li><p>(void)didReceiveMemoryWarning
+{
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
+}</p></li>
+</ul>
+
+
+<p>@end</p>
+
+<p>@implementation SOViewController(SOPickerDelegate)</p>
+
+<ul>
+<li><p>(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+  if (pickerView == <em>Picker1) {
+      // set Picker 2 accordingly
+      [</em>Picker2 reloadAllComponents];
+  }
+}</p></li>
+<li><p>(NSArray<em>) getDataByPicker:(UIPickerView </em>)pickerView
+{
+  if (pickerView == <em>Picker1) {
+      return list_media;
+  } else {
+      NSArray* content = [list_media_channel objectAtIndex:[</em>Picker1 selectedRowInComponent:0]];
+      return content;
+  }
+}</p></li>
+<li><p>(NSString <em>)pickerView:(UIPickerView </em>)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+  NSArray* data = [self getDataByPicker:pickerView];
+  return [data objectAtIndex:row];
+}</p></li>
+<li><p>(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{</p>
+
+<p>  NSArray* data = [self getDataByPicker:pickerView];
+  return [data count];
+}</p></li>
+<li><p>(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+  return 1;
+}</p></li>
+</ul>
+
+
+<p>@end</p>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[category vs class extension]]></title>
@@ -83,46 +183,6 @@ method_exchangeImplementations(original, swizzled);
     <content type="html"><![CDATA[<p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
 
 <p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Need to write a proper unit test in objective-c]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c/"/>
-    <updated>2013-12-19T07:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c</id>
-    <content type="html"><![CDATA[<p>It is my first attempt at testing my JSON handling code:</p>
-
-<p>{% codeblock lang:objective-c %}</p>
-
-<ul>
-<li>(void)testReadingJSON
-{
-  QueQuestionManager* qm = [[QueQuestionManager alloc] init];
-  qm.server_url = @&ldquo;<a href="http://localhost:8777/">http://localhost:8777/</a>&rdquo;;
-  [qm readQuestionnaire];
-  NSLog(@&ldquo;>> %@&rdquo;, qm.questionnaire);
-}</li>
-</ul>
-
-
-<p>{% endcodeblock %}</p>
-
-<p>Needless to say it is pretty bad, for the following reasons:</p>
-
-<ul>
-<li><p>It has an external dependency of a local server. It is strictly speaking not a unit test</p></li>
-<li><p>The code does not work. It is likely because the run loop is not started when the unit test runs</p></li>
-</ul>
-
-
-<p>My TODO:</p>
-
-<ul>
-<li><p>Refactor the above code to be a proper unit test</p></li>
-<li><p>Use functional testing framework to implement the above test</p></li>
-</ul>
-
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conda | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/conda/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-04T21:22:53+11:00</updated>
+  <updated>2014-01-05T07:52:47+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -41,50 +41,29 @@
     <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
     <content type="html"><![CDATA[<p>How can I update <code>pip</code>? Need research&hellip;</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>All packages already at latest version, nothing to do.&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>packages in environment at /Users/antkong/anaconda:&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;p>#&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>Warning: Your version of pip is older than what conda requires for pip&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>integration, so pip-installed packages will not be displayed.  Please&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>update pip, (conda update pip -p /Users/antkong/anaconda)&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;p>conda                     2.2.5                    py27_0&lt;br/>
-</span><span class='line'>ipython                   1.1.0                    py27_0&lt;br/>
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip &mdash;version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+$ conda update ipython</p>
+
+<h1>All packages already at latest version, nothing to do.</h1>
+
+<h1>packages in environment at /Users/antkong/anaconda:</h1>
+
+<p>#</p>
+
+<h1>Warning: Your version of pip is older than what conda requires for pip</h1>
+
+<h1>integration, so pip-installed packages will not be displayed.  Please</h1>
+
+<h1>update pip, (conda update pip -p /Users/antkong/anaconda)</h1>
+
+<p>conda                     2.2.5                    py27_0<br/>
+ipython                   1.1.0                    py27_0<br/>
+$ which pip
+/Users/antkong/anaconda/bin/pip
+$ pip &mdash;version
+pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
