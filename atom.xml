@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-05T10:10:12+11:00</updated>
+  <updated>2014-01-06T19:13:57+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dependency on MathJax.js]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js/"/>
+    <updated>2014-01-06T19:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython qtconsole --pylab inline
+</span><span class='line'>QPixmap::scaled: Pixmap is a null pixmap
+</span><span class='line'>QPixmap::scaled: Pixmap is a null pixmap
+</span><span class='line'>2014-01-06 08:16:27.902 python[20705:507] -_continuousScroll is deprecated for NSScrollWheel. Please use -hasPreciseScrollingDeltas.
+</span><span class='line'>2014-01-06 08:16:27.903 python[20705:507] -deviceDeltaX is deprecated for NSScrollWheel. Please use -scrollingDeltaX.
+</span><span class='line'>2014-01-06 08:16:27.903 python[20705:507] -deviceDeltaY is deprecated for NSScrollWheel. Please use -scrollingDeltaY.
+</span><span class='line'>QPixmap::scaled: Pixmap is a null pixmap
+</span><span class='line'>2014-01-06 19:08:35.848 python[20705:507] modalSession has been exited prematurely - check for a reentrant call to endModalSession:
+</span><span class='line'>mbp003:py antkong$ ipython notebook
+</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
+</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
+</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
+</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To download the mathjax.js, we can run</p>
+
+<pre><code>from IPython.external.mathjax import install_mathjax
+install_mathjax()
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[inline plot in ipython]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/06/inline-plot-in-ipython/"/>
+    <updated>2014-01-06T08:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/06/inline-plot-in-ipython</id>
+    <content type="html"><![CDATA[<p>It is a neat trick</p>
+
+<p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
+
+<p><img src="images/ipython_inline.png" width="457" height="336"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make picker 2 data dependent on the selected row of picker 1]]></title>
@@ -634,114 +692,6 @@ abort: repository default not found!
     <content type="html"><![CDATA[<p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
 
 <p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Need to write a proper unit test in objective-c]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c/"/>
-    <updated>2013-12-19T07:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c</id>
-    <content type="html"><![CDATA[<p>It is my first attempt at testing my JSON handling code:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">testReadingJSON</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">QueQuestionManager</span><span class="o">*</span> <span class="n">qm</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QueQuestionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">qm</span><span class="p">.</span><span class="n">server_url</span> <span class="o">=</span> <span class="s">@&quot;http://localhost:8777/&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">qm</span> <span class="n">readQuestionnaire</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;&gt;&gt; %@&quot;</span><span class="p">,</span> <span class="n">qm</span><span class="p">.</span><span class="n">questionnaire</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Needless to say it is pretty bad, for the following reasons:</p>
-
-<ul>
-<li><p>It has an external dependency of a local server. It is strictly speaking not a unit test</p></li>
-<li><p>The code does not work. It is likely because the run loop is not started when the unit test runs</p></li>
-</ul>
-
-
-<p>My TODO:</p>
-
-<ul>
-<li><p>Refactor the above code to be a proper unit test</p></li>
-<li><p>Use functional testing framework to implement the above test</p></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using NSURLConnection to read json data]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/18/using-nsurlconnection-to-read-json-data/"/>
-    <updated>2013-12-18T22:34:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/18/using-nsurlconnection-to-read-json-data</id>
-    <content type="html"><![CDATA[<p>My code is not good at all for the following reasons:</p>
-
-<ul>
-<li><p>The NSURLConnection retrieves data synchronously</p></li>
-<li><p>The decoding of JSON is not neat. A strong code smell</p></li>
-</ul>
-
-
-<h3>Synchronous network call</h3>
-
-<p>Next step: rewrite the below code to asynchronous mode.</p>
-
-<p>In the viewDidLoad method of my ViewController, I called the following method:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span> <span class="nf">readJSON</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">receivedData</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableData</span> <span class="n">data</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">theRequest</span><span class="o">=</span><span class="p">[</span><span class="n">NSURLRequest</span> <span class="nl">requestWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="n">_server_url</span><span class="p">]];</span>
-</span><span class='line'>    <span class="n">NSURLConnection</span> <span class="o">*</span><span class="n">theConnection</span><span class="o">=</span><span class="p">[[</span><span class="n">NSURLConnection</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithRequest:</span><span class="n">theRequest</span> <span class="nl">delegate:</span><span class="n">self</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">theConnection</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">NSData</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLConnection</span> <span class="nl">sendSynchronousRequest:</span><span class="n">theRequest</span> <span class="nl">returningResponse:</span><span class="o">&amp;</span><span class="n">response</span> <span class="nl">error:</span><span class="o">&amp;</span><span class="n">error</span><span class="p">];</span>
-</span><span class='line'>        <span class="n">NSDictionary</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span> <span class="nl">objectFromJSONDataWithParseOptions:</span><span class="p">(</span><span class="n">JKParseOptionNone</span><span class="p">)];</span>
-</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">convertJsonIntoMyData:</span><span class="n">json</span><span class="p">];</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nb">TRUE</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nb">FALSE</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Decoding of JSON data</h3>
-
-<p>I used a lot of enumerators to walk through dictionaries and arrays at different level. It makes future changes to the JSON schema or objective-c object model difficult.</p>
 ]]></content>
   </entry>
   

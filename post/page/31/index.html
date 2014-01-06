@@ -9,12 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In ocaml, “let rec” defines a recursive function, for example: 1
-2
-3
-4
-# let rec ipow n m = if m = 0 then 1 else n * ipow n (m -1);;
-val ipow : int &hellip;">
+  <meta name="description" content="UIViewController::setMoviePlayerController: is an undocumented API, yet it is used in one of the Apple sample project.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -70,6 +66,90 @@ val ipow : int &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/09/p-29045520999/">UIViewController::setMoviePlayerController</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T19:56:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>UIViewController::setMoviePlayerController:</code> is an undocumented API, yet it is used in one of the Apple sample project.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/08/p-28973709805/">Got This Error Message in Xcode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-08T19:53:00+10:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this error message in xcode</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+</span><span class='line'> a UITableView.'
+</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -198,78 +278,6 @@ val ipow : int &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/05/p-28755939075/">Google Search Intext: Operator</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-05T18:24:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.powersearchingwithgoogle.com/class?class=3&amp;lesson=5">Google search intext: operator</a>]</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/04/p-28691634617/">Doing Complex Math in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-04T19:51:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Easy</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/32/">&larr; Older</a>
@@ -287,6 +295,14 @@ val ipow : int &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1/">Make picker 2 data dependent on the selected row of picker 1</a>
       </li>
     
@@ -296,14 +312,6 @@ val ipow : int &hellip;">
     
       <li class="post">
         <a href="/post/2014/01/03/conda-and-ipython/">conda and ipython</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">pandas - dateutil.parser import error</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/01/category-vs-class-extension/">category vs class extension</a>
       </li>
     
   </ul>

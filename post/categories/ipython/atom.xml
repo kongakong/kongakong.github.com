@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ipython | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ipython/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-05T10:11:43+11:00</updated>
+  <updated>2014-01-06T19:15:39+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dependency on MathJax.js]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js/"/>
+    <updated>2014-01-06T19:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js</id>
+    <content type="html"><![CDATA[<p>{% codeblock %}
+$ ipython qtconsole &mdash;pylab inline
+QPixmap::scaled: Pixmap is a null pixmap
+QPixmap::scaled: Pixmap is a null pixmap
+2014-01-06 08:16:27.902 python[20705:507] &ndash;_continuousScroll is deprecated for NSScrollWheel. Please use -hasPreciseScrollingDeltas.
+2014-01-06 08:16:27.903 python[20705:507] -deviceDeltaX is deprecated for NSScrollWheel. Please use -scrollingDeltaX.
+2014-01-06 08:16:27.903 python[20705:507] -deviceDeltaY is deprecated for NSScrollWheel. Please use -scrollingDeltaY.
+QPixmap::scaled: Pixmap is a null pixmap
+2014-01-06 19:08:35.848 python[20705:507] modalSession has been exited prematurely &ndash; check for a reentrant call to endModalSession:
+mbp003:py antkong$ ipython notebook
+2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
+2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: <a href="http://cdn.mathjax.org/mathjax/latest/MathJax.js">http://cdn.mathjax.org/mathjax/latest/MathJax.js</a>
+2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
+2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: <a href="http://127.0.0.1:8888/">http://127.0.0.1:8888/</a>
+2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+{% endcodeblock %}</p>
+
+<p>To download the mathjax.js, we can run</p>
+
+<pre><code>from IPython.external.mathjax import install_mathjax
+install_mathjax()
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[inline plot in ipython]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/06/inline-plot-in-ipython/"/>
+    <updated>2014-01-06T08:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/06/inline-plot-in-ipython</id>
+    <content type="html"><![CDATA[<p>It is a neat trick</p>
+
+<p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
+
+<p>{% img images/ipython_inline.png 457 336 %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[conda and ipython]]></title>
