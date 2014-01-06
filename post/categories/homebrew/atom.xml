@@ -4,7 +4,7 @@
   <title><![CDATA[Category: homebrew | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/homebrew/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-06T19:15:39+11:00</updated>
+  <updated>2014-01-06T21:49:19+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,28 +20,47 @@
     <id>http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error</id>
     <content type="html"><![CDATA[<p>Try to run <code>import pandas</code> in python. Encountered this:</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<blockquote><blockquote><blockquote><p>import pandas
-No module named dateutil.parser
-Traceback (most recent call last):
-  File &ldquo;<stdin>&rdquo;, line 1, in <module>
-  File &ldquo;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/<strong>init</strong>.py&rdquo;, line 6, in <module></p>
-
-<pre><code>from . import hashtable, tslib, lib
-</code></pre>
-
-<p>  File &ldquo;tslib.pyx&rdquo;, line 31, in init pandas.tslib (pandas/tslib.c:48782)
-ImportError: No module named dateutil.parser</p></blockquote></blockquote></blockquote>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">pandas</span>
+</span><span class='line'><span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">File</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">stdin</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="n">File</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pandas</span><span class="o">-</span><span class="mf">0.12</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">macosx</span><span class="o">-</span><span class="mf">10.9</span><span class="o">-</span><span class="n">x86_64</span><span class="o">.</span><span class="n">egg</span><span class="o">/</span><span class="n">pandas</span><span class="o">/&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">init</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;.</span><span class="n">py</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">hashtable</span><span class="p">,</span> <span class="n">tslib</span><span class="p">,</span> <span class="n">lib</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">File</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">tslib</span><span class="o">.</span><span class="n">pyx</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="n">init</span> <span class="n">pandas</span><span class="o">.</span><span class="n">tslib</span> <span class="p">(</span><span class="n">pandas</span><span class="o">/</span><span class="n">tslib</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">48782</span><span class="p">)</span>
+</span><span class='line'><span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Fixed by running</p>
 
-<p>{% codeblock lang:bash %}
-$ pip install python-dateutil</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install python-dateutil&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

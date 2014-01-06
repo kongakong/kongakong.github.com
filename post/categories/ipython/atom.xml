@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ipython | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ipython/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-06T19:15:39+11:00</updated>
+  <updated>2014-01-06T21:49:19+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,24 +18,22 @@
     <link href="http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js/"/>
     <updated>2014-01-06T19:12:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js</id>
-    <content type="html"><![CDATA[<p>{% codeblock %}
-$ ipython qtconsole &mdash;pylab inline
-QPixmap::scaled: Pixmap is a null pixmap
-QPixmap::scaled: Pixmap is a null pixmap
-2014-01-06 08:16:27.902 python[20705:507] &ndash;_continuousScroll is deprecated for NSScrollWheel. Please use -hasPreciseScrollingDeltas.
-2014-01-06 08:16:27.903 python[20705:507] -deviceDeltaX is deprecated for NSScrollWheel. Please use -scrollingDeltaX.
-2014-01-06 08:16:27.903 python[20705:507] -deviceDeltaY is deprecated for NSScrollWheel. Please use -scrollingDeltaY.
-QPixmap::scaled: Pixmap is a null pixmap
-2014-01-06 19:08:35.848 python[20705:507] modalSession has been exited prematurely &ndash; check for a reentrant call to endModalSession:
-mbp003:py antkong$ ipython notebook
-2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
-2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: <a href="http://cdn.mathjax.org/mathjax/latest/MathJax.js">http://cdn.mathjax.org/mathjax/latest/MathJax.js</a>
-2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
-2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: <a href="http://127.0.0.1:8888/">http://127.0.0.1:8888/</a>
-2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-{% endcodeblock %}</p>
+    <content type="html"><![CDATA[<p>By default, ipython notebook will use MathJax on a CDN</p>
 
-<p>To download the mathjax.js, we can run</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython notebook
+</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
+</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: &lt;a href="http://cdn.mathjax.org/mathjax/latest/MathJax.js">http://cdn.mathjax.org/mathjax/latest/MathJax.js&lt;/a>
+</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
+</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: &lt;a href="http://127.0.0.1:8888/">http://127.0.0.1:8888/&lt;/a>
+</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>To download and install the mathjax.js locally, we can run</p>
 
 <pre><code>from IPython.external.mathjax import install_mathjax
 install_mathjax()
@@ -52,7 +50,7 @@ install_mathjax()
 
 <p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
 
-<p>{% img images/ipython_inline.png 457 336 %}</p>
+<p><img src="images/ipython_inline.png" width="457" height="336"></p>
 ]]></content>
   </entry>
   
@@ -84,29 +82,50 @@ install_mathjax()
     <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
     <content type="html"><![CDATA[<p>How can I update <code>pip</code>? Need research&hellip;</p>
 
-<p>{% codeblock %}
-$ conda update ipython</p>
-
-<h1>All packages already at latest version, nothing to do.</h1>
-
-<h1>packages in environment at /Users/antkong/anaconda:</h1>
-
-<p>#</p>
-
-<h1>Warning: Your version of pip is older than what conda requires for pip</h1>
-
-<h1>integration, so pip-installed packages will not be displayed.  Please</h1>
-
-<h1>update pip, (conda update pip -p /Users/antkong/anaconda)</h1>
-
-<p>conda                     2.2.5                    py27_0<br/>
-ipython                   1.1.0                    py27_0<br/>
-$ which pip
-/Users/antkong/anaconda/bin/pip
-$ pip &mdash;version
-pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>All packages already at latest version, nothing to do.&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>packages in environment at /Users/antkong/anaconda:&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>#&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>Warning: Your version of pip is older than what conda requires for pip&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>integration, so pip-installed packages will not be displayed.  Please&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>update pip, (conda update pip -p /Users/antkong/anaconda)&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>conda                     2.2.5                    py27_0&lt;br/>
+</span><span class='line'>ipython                   1.1.0                    py27_0&lt;br/>
+</span><span class='line'>$ which pip
+</span><span class='line'>/Users/antkong/anaconda/bin/pip
+</span><span class='line'>$ pip &mdash;version
+</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

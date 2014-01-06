@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-06T19:15:39+11:00</updated>
+  <updated>2014-01-06T21:49:19+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,8 +20,8 @@
     <id>http://www.ahwkong.com/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1</id>
     <content type="html"><![CDATA[<p>It is what I want to achieve: whenever a selection is changed in the top UIPicker, the choices in the second UIPicker will change accordingly.</p>
 
-<p>{% img /images/twopickers.png 341 497  %}
-{% img /images/twopickers_b.png 341 497  %}</p>
+<p><img src="/images/twopickers.png" width="341" height="497" title="" >
+<img src="/images/twopickers_b.png" width="341" height="497" title="" ></p>
 
 <p>Useful lessons from this exercise:</p>
 
@@ -32,85 +32,165 @@
 </ul>
 
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<h1>import &ldquo;SOViewController.h&rdquo;</h1>
-
-<p>@interface SOViewController ()</p>
-
-<p>@property (weak, nonatomic) IBOutlet UIPickerView <em>Picker1;
-@property (weak, nonatomic) IBOutlet UIPickerView </em>Picker2;</p>
-
-<p>@end</p>
-
-<p>@interface SOViewController (SOPickerDelegate) &lt;UIPickerViewDelegate, UIPickerViewDataSource></p>
-
-<p>@end</p>
-
-<p>@implementation SOViewController
-{</p>
-
-<pre><code>NSArray* list_media;
-NSArray* list_media_channel;
-</code></pre>
-
-<p>}</p>
-
-<ul>
-<li><p>(void)viewDidLoad
-{
-  [super viewDidLoad];
-  list_media = @[@&ldquo;TV&rdquo;, @&ldquo;Radio&rdquo;];
-  list_media_channel = @[ @[@&ldquo;ABC&rdquo;, @&ldquo;SBS&rdquo;], @[@&ldquo;TripleJ&rdquo;, @&ldquo;107.1&rdquo;, @&ldquo;CBS&rdquo;]];
-}</p></li>
-<li><p>(void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-}</p></li>
-</ul>
-
-
-<p>@end</p>
-
-<p>@implementation SOViewController(SOPickerDelegate)</p>
-
-<ul>
-<li><p>(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-  if (pickerView == <em>Picker1) {
-      // set Picker 2 accordingly
-      [</em>Picker2 reloadAllComponents];
-  }
-}</p></li>
-<li><p>(NSArray<em>) getDataByPicker:(UIPickerView </em>)pickerView
-{
-  if (pickerView == <em>Picker1) {
-      return list_media;
-  } else {
-      NSArray* content = [list_media_channel objectAtIndex:[</em>Picker1 selectedRowInComponent:0]];
-      return content;
-  }
-}</p></li>
-<li><p>(NSString <em>)pickerView:(UIPickerView </em>)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-  NSArray* data = [self getDataByPicker:pickerView];
-  return [data objectAtIndex:row];
-}</p></li>
-<li><p>(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{</p>
-
-<p>  NSArray* data = [self getDataByPicker:pickerView];
-  return [data count];
-}</p></li>
-<li><p>(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-  return 1;
-}</p></li>
-</ul>
-
-
-<p>@end</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">import</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">SOViewController</span><span class="p">.</span><span class="n">h</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker1</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker2</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="nl">(SOPickerDelegate)</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">UIPickerViewDelegate</span><span class="p">,</span> <span class="n">UIPickerViewDataSource</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@implementation</span> <span class="nc">SOViewController</span>
+</span><span class='line'><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSArray</span><span class="o">*</span> <span class="n">list_media</span><span class="p">;</span>
+</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">list_media_channel</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">list_media</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">TV</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">Radio</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;];</span>
+</span><span class='line'>  <span class="n">list_media_channel</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="err">@</span><span class="p">[</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">ABC</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">SBS</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;],</span> <span class="err">@</span><span class="p">[</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">TripleJ</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="mf">107.1</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">CBS</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;]];</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didReceiveMemoryWarning</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">super</span> <span class="n">didReceiveMemoryWarning</span><span class="p">];</span>
+</span><span class='line'>  <span class="c1">// Dispose of any resources that can be recreated.</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@implementation</span> <span class="nc">SOViewController</span><span class="nl">(SOPickerDelegate)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nl">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="n">pickerView</span> <span class="nl">didSelectRow:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">row</span> <span class="nl">inComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">component</span><span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">pickerView</span> <span class="o">==</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// set Picker 2 accordingly</span>
+</span><span class='line'>      <span class="p">[</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker2</span> <span class="n">reloadAllComponents</span><span class="p">];</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span> <span class="nl">getDataByPicker:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">pickerView</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="n">pickerView</span> <span class="o">==</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">list_media</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">NSArray</span><span class="o">*</span> <span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="n">list_media_channel</span> <span class="nl">objectAtIndex:</span><span class="p">[</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker1</span> <span class="nl">selectedRowInComponent:</span><span class="mi">0</span><span class="p">]];</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">content</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="n">NSString</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="nl">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">)</span><span class="n">pickerView</span> <span class="nl">titleForRow:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">row</span> <span class="nl">forComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">component</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">NSArray</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">getDataByPicker:</span><span class="n">pickerView</span><span class="p">];</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">[</span><span class="n">data</span> <span class="nl">objectAtIndex:</span><span class="n">row</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nl">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="n">pickerView</span> <span class="nl">numberOfRowsInComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">component</span><span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">NSArray</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">getDataByPicker:</span><span class="n">pickerView</span><span class="p">];</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">[</span><span class="n">data</span> <span class="n">count</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nl">numberOfComponentsInPickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="n">pickerView</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -125,15 +205,25 @@ NSArray* list_media_channel;
 
 <p>That&rsquo;s why I can do something like this:</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<p>@interface SOViewController ()
-@property (weak, nonatomic) IBOutlet UIPickerView <em>Picker1;
-@property (weak, nonatomic) IBOutlet UIPickerView </em>Picker2;</p>
-
-<p>@end</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker1</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="n">Picker2</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">@end</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -146,14 +236,23 @@ NSArray* list_media_channel;
 
 <p>Here is a summary:</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<pre><code>original = class_getInstanceMethod([ClassA class], @selector(setImportantProperty:));
-swizzled = class_getInstanceMethod([ClassA class], @selector(alternative_setImportantProperty:)); 
-method_exchangeImplementations(original, swizzled);
-</code></pre>
-
-<p>{% endcodeblock %}`</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">original</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">setImportantProperty:</span><span class="p">));</span>
+</span><span class='line'><span class="n">swizzled</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">alternative_setImportantProperty:</span><span class="p">));</span>
+</span><span class='line'><span class="n">method_exchangeImplementations</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">swizzled</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>`</p>
 ]]></content>
   </entry>
   
@@ -164,15 +263,25 @@ method_exchangeImplementations(original, swizzled);
     <id>http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c</id>
     <content type="html"><![CDATA[<p>Here is an example:</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<p> NSString* s = @&ldquo;{&rdquo; \</p>
-
-<pre><code>" key1 = \"value1\" \
-" }";
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;{</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="err">\</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
+</span><span class='line'><span class="s">&quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
