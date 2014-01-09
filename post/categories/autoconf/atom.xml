@@ -4,7 +4,7 @@
   <title><![CDATA[Category: autoconf | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/autoconf/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-06T21:49:19+11:00</updated>
+  <updated>2014-01-09T19:49:50+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,11 @@
     <id>http://www.ahwkong.com/post/2011/12/28/p-14913827164</id>
     <content type="html"><![CDATA[<p>Oops</p>
 
-<p>``</p>
+<pre><code>$ autoconf
+configure.in:8: error: Autoconf version 2.65 or higher is required
+configure.in:8: the top level
+autom4te: /usr/bin/gm4 failed with exit status: 63
+</code></pre>
 
 <p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
 ]]></content>

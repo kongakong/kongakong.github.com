@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: link | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/link/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-01-09T19:49:50+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Design Pattern in Python]]></title>
+    <link href="http://www.ahwkong.com/post/2011/12/29/p-14937137581/"/>
+    <updated>2011-12-29T09:01:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2011/12/29/p-14937137581</id>
+    <content type="html"><![CDATA[<p><a href="http://dpip.testingperspective.com">Design Pattern in Python</a></p>
+]]></content>
+  </entry>
+  
+</feed>

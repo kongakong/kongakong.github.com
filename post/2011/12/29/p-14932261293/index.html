@@ -9,8 +9,20 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="&#8220;
-">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+/usr/bin/ranlib: file: libpython3.3m.a( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,7 +104,35 @@
   </header>
 
 
-<div class="entry-content"><p>&#8220;</p>
+<div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>ranlib libpython3.3m.a
+</span><span class='line'>ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>gcc -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl -framework CoreFoundation 
+</span><span class='line'>./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)
+</span><span class='line'>*** error: can't allocate region
+</span><span class='line'>*** set a breakpoint in malloc_error_break to debug
+</span><span class='line'>make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11
+</span><span class='line'>make: *** Deleting file `Lib/_sysconfigdata.py'</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 

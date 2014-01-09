@@ -9,8 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Oops &#8220; The version of autoconf in both brew and /Developer are 2.61
-">
+  <meta name="description" content="Oops $ autoconf
+configure.in:8: error: Autoconf version 2.65 or higher is required
+configure.in:8: the top level
+autom4te: /usr/bin/gm4 failed with &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,7 +96,11 @@
 
 <div class="entry-content"><p>Oops</p>
 
-<p>&#8220;</p>
+<pre><code>$ autoconf
+configure.in:8: error: Autoconf version 2.65 or higher is required
+configure.in:8: the top level
+autom4te: /usr/bin/gm4 failed with exit status: 63
+</code></pre>
 
 <p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
 </div>

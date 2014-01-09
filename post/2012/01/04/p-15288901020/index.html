@@ -9,8 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="&#8220;` $ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
-Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+$ ./python.exe -SE -m sysconfig --generate-posix-vars
+Fatal Python error: Py_Initialize: can't initialize sys standard streams
+Traceback ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,12 +97,19 @@ Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams &
   </header>
 
 
-<div class="entry-content"><p>&#8220;`</p>
+<div class="entry-content">
 
-<p>$ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
-Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams
-Traceback (most recent call last):
-  File &ldquo;/Users/antkong/wd/python.project/cpython/Lib/io.py&rdquo;, line 60, in</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>Fatal Python error: Py_Initialize: can't initialize sys standard streams
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/Users/antkong/wd/python.project/cpython/Lib/io.py", line 60, in</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 

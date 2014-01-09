@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is a follow-up on Turns out this problem has been reported to python bug database: http://bugs.python.org/issue13241 http://bugs.python.org/ &hellip;">
+  <meta name="description" content="It is a follow-up on a previous problem. Turns out this problem has been reported to python bug database: http://bugs.python.org/issue13241 The llvm &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,17 +91,20 @@
   </header>
 
 
-<div class="entry-content"><p>It is a follow-up on</p>
+<div class="entry-content"><p>It is a follow-up on a previous problem.</p>
 
 <p>Turns out this problem has been reported to python bug database:</p>
-
-<p><a href="None">http://bugs.python.org/issue13241</a></p>
 
 <p><a href="http://bugs.python.org/issue13241">http://bugs.python.org/issue13241</a></p>
 
 <p>The llvm gcc compiler that comes with XCode 4.x is causing the problem.</p>
 
 <p>Do</p>
+
+<pre><code>CC=gcc-4.2; ./configure
+</code></pre>
+
+<p>will fix the issue.</p>
 </div>
 
 

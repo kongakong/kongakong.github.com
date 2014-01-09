@@ -129,7 +129,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289689582/">Just Installed &#8220;otx&#8220;, an OSS Implementation of &#8220;otool&#8220;</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289689582/">Just Installed &#8216;Otx&#8217;, an OSS Implementation of &#8216;Otool&#8217;</a></h1>
     
     
       <p class="meta">
@@ -228,12 +228,19 @@
   </header>
 
 
-  <div class="entry-content"><p>&#8220;`</p>
+  <div class="entry-content">
 
-<p>$ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
-Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams
-Traceback (most recent call last):
-  File &ldquo;/Users/antkong/wd/python.project/cpython/Lib/io.py&rdquo;, line 60, in</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>Fatal Python error: Py_Initialize: can't initialize sys standard streams
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/Users/antkong/wd/python.project/cpython/Lib/io.py", line 60, in</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -271,12 +278,27 @@ Traceback (most recent call last):
 
   <div class="entry-content"><p>Tried to install erlang. Got this error message</p>
 
-<p>&#8220;`</p>
+<pre><code>$ brew install erlang
+==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz
+######################################################################## 100.0%
+==&gt; Pouring erlang-R14B04.bottle.tar.gz
+ln: liberts_r.a: Permission denied
+Error: The linking step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+You can try again using `brew link erlang'
+==&gt; Summary
+/usr/local/Cellar/erlang/R14B04: 6978 files, 261M
+</code></pre>
 
-<p>$ brew install erlang
-==> Downloading</p>
+<p>Tried the following but did not work</p>
 
-<p><a href="https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz">https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz</a></p>
+<pre><code>$ brew cleanup erlang; brew unlink erlang; brew link erlang
+Removing /usr/local/Cellar/erlang/R14B02...
+Removing /usr/local/Cellar/erlang/R14B03...
+Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
+</code></pre>
+
+<p>sudo unlink and link fixed the issue finally</p>
 </div>
   
   
