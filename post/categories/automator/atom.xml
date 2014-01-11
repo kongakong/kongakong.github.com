@@ -4,7 +4,7 @@
   <title><![CDATA[Category: automator | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/automator/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T15:49:30+11:00</updated>
+  <updated>2014-01-11T16:26:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,9 +22,9 @@
 
 <p>This is what I have come up with at the end.</p>
 
-<p><img src="images/automator.png" width="860" height="617"></p>
+<p>{% img images/automator.png 860 617 %}</p>
 
-<p>Lessona/Observationss:</p>
+<p>Lessons/Observations:</p>
 
 <ul>
 <li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
