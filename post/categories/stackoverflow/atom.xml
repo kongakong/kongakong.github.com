@@ -4,7 +4,7 @@
   <title><![CDATA[Category: stackoverflow | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/stackoverflow/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T11:10:59+11:00</updated>
+  <updated>2014-01-11T15:49:30+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[resize images in a Stackoverflow post]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/10/resize-images-in-a-so-post/"/>
+    <updated>2014-01-10T14:18:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/10/resize-images-in-a-so-post</id>
+    <content type="html"><![CDATA[<p>Markdown does not allow us to specify the size of an link image.</p>
+
+<p>To get around this restriction it is what I did:</p>
+
+<h1>1. Upload an image as usual</h1>
+
+<p>Stackoverflow will add these lines to your post:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" alt="enter image description here" />&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h1>2. Change the above to an image tag</h1>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100">&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Done</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difference between setObject:forKey: and setValue:forKey: in  NSMutableDictionary]]></title>

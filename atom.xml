@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T11:10:59+11:00</updated>
+  <updated>2014-01-11T15:49:30+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using automator in OSX]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/11/using-automator-in-osx/"/>
+    <updated>2014-01-11T15:29:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/11/using-automator-in-osx</id>
+    <content type="html"><![CDATA[<p>I want to implement a service in OSX such that I can easily shrink the size of image files in a folder to half of their original size.</p>
+
+<p>This is what I have come up with at the end.</p>
+
+<p><img src="images/automator.png" width="860" height="617"></p>
+
+<p>Lessona/Observationss:</p>
+
+<ul>
+<li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
+<li><p>A lot of useful actions are already built in e.g. Scale image</p></li>
+<li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[resize images in a Stackoverflow post]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/10/resize-images-in-a-so-post/"/>
+    <updated>2014-01-10T14:18:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/10/resize-images-in-a-so-post</id>
+    <content type="html"><![CDATA[<p>Markdown does not allow us to specify the size of an link image.</p>
+
+<p>To get around this restriction it is what I did:</p>
+
+<h1>1. Upload an image as usual</h1>
+
+<p>Stackoverflow will add these lines to your post:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>2. Change the above to an image tag</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
+
+
+<p>Done</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[firefox build failure on osx]]></title>
@@ -661,81 +716,6 @@ abort: repository default not found!
 
 
 <p><strong>Solution</strong>: install g++</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[mach problem]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/24/mach-problem/"/>
-    <updated>2013-12-24T08:27:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/24/mach-problem</id>
-    <content type="html"><![CDATA[
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
-</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2.13.  Stop.
-</span><span class='line'> 0:00.15 make: *** [build] Error 2
-</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>it comes from this check of  mozilla-central/client.mk</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># try to find autoconf 2.13 - discard errors from 'which'
-</span><span class='line'># MacOS X 10.4 sends "no autoconf*" errors to stdout, discard those via grep
-</span><span class='line'>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v '^no autoconf' | head -1)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
-</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
-</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
-</span><span class='line'> 0:00.26 make[1]: *** [/home/antkong/wd/mozilla-central/configure] Error 1
-</span><span class='line'> 0:00.26 make: *** [build] Error 2
-</span><span class='line'> 0:00.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>: install autoconf-2.13</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to do a multi-line string in objective-c]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/"/>
-    <updated>2013-12-19T07:33:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c</id>
-    <content type="html"><![CDATA[<p>Here is an example:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="s">@&quot;{&quot;</span> \
-</span><span class='line'>    <span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
-</span><span class='line'><span class="s">    &quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   

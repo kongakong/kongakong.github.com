@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="There is a 10 user limit in the afp protocol! An unexpected, unpleasant surprise. Switched file sharing to smb
-">
+  <meta name="description" content="Another difference between Linux and OSX: no more adduser. Use dscl instead. So, for example, in order to find out what groups are defined locally, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,88 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388790863/">Dscl</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
+
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
+
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388761712/">MBP and SMB</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:34:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -181,84 +262,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1355924543/">Ditto</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-20T14:14:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Learn something new today</p>
-
-<p>There is a <code>ditto</code> command in BSD for replication of a directory</p>
-
-<p>Never come across it in linux before.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1355753091/">Vi on Black Background Does Not Work With MBP Under Sun</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-20T13:48:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>vi</code> on black background does not work with MBP under sun.</p>
-
-<p>Change the terminal background color to white, it is much better</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/172/">&larr; Older</a>
@@ -276,6 +279,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
       </li>
     
@@ -285,14 +296,6 @@
     
       <li class="post">
         <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1/">Make picker 2 data dependent on the selected row of picker 1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/04/swap-convention/">swap convention</a>
       </li>
     
   </ul>

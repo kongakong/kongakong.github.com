@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The explicit keyword in C++ is used to declare explicit constructors. Explicit constructors are constructors that cannot take part in an implicit &hellip;">
+  <meta name="description" content="Summary: Virtual functions must be members. If f needs to be virtual, make it a member function of C. operator>> and operator&lt;&lt; are never &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,86 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5978423359/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T07:47:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Summary:</p>
+
+<p><em>Virtual functions</em> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p><em>operator>></em> and <em>operator&lt;&lt;</em> are never members. If f is operator» or operator«, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5967914767/">Item 1: Prefer Const and Inline to #define</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T02:14:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Classic example of why sometimes macro is a bad idea:</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -176,78 +256,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5942654011/">_initialize_ Is a Class Method Which Will Be Called Before Any Other Method Is Called on a Class. Alternatively Use a Function With ___attribute__ ((Constructor))_</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T07:39:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>initialize</em> is a class method which will be called before any other method is called on a class. Alternatively use a function with <em><strong>attribute</strong> ((constructor))</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/130/">&larr; Older</a>
@@ -265,6 +273,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
       </li>
     
@@ -274,14 +290,6 @@
     
       <li class="post">
         <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1/">Make picker 2 data dependent on the selected row of picker 1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/04/swap-convention/">swap convention</a>
       </li>
     
   </ul>
