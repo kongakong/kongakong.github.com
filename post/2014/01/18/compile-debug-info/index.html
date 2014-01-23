@@ -104,23 +104,22 @@
 
 <p>However either using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
 
-<p>I can only get it to work like this:</p>
+<p>I can only implant debug info through erlang shell like this:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="mi">4</span><span class="o">&gt;</span> <span class="nn">debugger</span><span class="p">:</span><span class="nf">start</span><span class="p">().</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().
 </span><span class='line'>
-</span><span class='line'><span class="o">=</span><span class="nv">ERROR</span> <span class="nv">REPORT</span><span class="o">====</span> <span class="mi">23</span><span class="o">-</span><span class="nv">Jan</span><span class="o">-</span><span class="mi">2014</span><span class="p">::</span><span class="mi">12</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span> <span class="o">===</span>
-</span><span class='line'><span class="nv">ERROR</span><span class="p">:</span> <span class="nv">Could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">&#39;wxe_driver.so&#39;</span> <span class="nn">in</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nv">Cellar</span><span class="o">/</span><span class="n">erlang</span><span class="o">/</span><span class="nv">R16B03</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">erlang</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">wx</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">priv</span>
-</span><span class='line'><span class="p">{</span><span class="n">ok</span><span class="p">,</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">.</span><span class="mi">49</span><span class="p">.</span><span class="mi">0</span><span class="o">&gt;</span><span class="p">}</span>
-</span><span class='line'><span class="mi">5</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">,</span> <span class="p">[</span><span class="n">debug_info</span><span class="p">]).</span>
-</span><span class='line'><span class="p">{</span><span class="n">ok</span><span class="p">,</span><span class="n">testdebuginfo</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
+</span><span class='line'>ERROR: Could not find 'wxe_driver.so' in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
+</span><span class='line'>{ok,&lt;0.49.0>}
+</span><span class='line'>5> c(testdebuginfo, [debug_info]).
+</span><span class='line'>{ok,testdebuginfo}</span></code></pre></td></tr></table></div></figure>
 
 
 
