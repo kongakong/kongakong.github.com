@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T16:25:16+11:00</updated>
+  <updated>2014-01-23T16:03:26+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,60 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[RequestAnimationFrame]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/20/requestanimationframe/"/>
+    <updated>2014-01-20T18:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/20/requestanimationframe</id>
+    <content type="html"><![CDATA[<p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Html 5 resources]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/20/html5/"/>
+    <updated>2014-01-20T16:04:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/20/html5</id>
+    <content type="html"><![CDATA[<p>Some useful links:</p>
+
+<p><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></p>
+
+<p><a href="https://github.com/scottjehl/picturefill">https://github.com/scottjehl/picturefill</a></p>
+
+<p><a href="http://www.standardista.com/responsive-images-clown-car-technique/">http://www.standardista.com/responsive-images-clown-car-technique/</a></p>
+
+<p><a href="http://www.w3.org/community/respimg/">http://www.w3.org/community/respimg/</a></p>
+
+<p><strong>Hammer.js</strong> <a href="http://eightmedia.github.io/hammer.js/">http://eightmedia.github.io/hammer.js/</a></p>
+
+<p><strong>jQT</strong> <a href="http://jqtjs.com/">http://jqtjs.com/</a></p>
+
+<p><strong>Sencha gestures</strong> <a href="http://www.sencha.com/blog/ext-js-on-tap/">http://www.sencha.com/blog/ext-js-on-tap/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[compile debug_info]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/18/compile-debug-info/"/>
+    <updated>2014-01-18T13:04:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/18/compile-debug-info</id>
+    <content type="html"><![CDATA[<p>Does it still work?</p>
+
+<p>   <a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a></p>
+
+<p><a href="http://stackoverflow.com/questions/21198092/erlang-debug-info-option-inside-module-or-during-compilation">http://stackoverflow.com/questions/21198092/erlang-debug-info-option-inside-module-or-during-compilation</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[class cluster]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/17/class-cluster/"/>
+    <updated>2014-01-17T22:42:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/17/class-cluster</id>
+    <content type="html"><![CDATA[<p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using automator in OSX]]></title>
@@ -638,84 +692,6 @@ abort: repository default not found!
 <p>It turns out it has something to do with the PC. I created an instance of VirtualBox to run ubuntu desktop 13.10 for the compilation. I only allocted 512MB RAM for the exercise. The failure above is a problem of too little RAM.</p>
 
 <p>Allocated 4GB of RAM to the VM and the exception is gone.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mach problem: Could not compile basic X program]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/24/could-not-compile-basic-x-program/"/>
-    <updated>2013-12-24T20:51:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/24/could-not-compile-basic-x-program</id>
-    <content type="html"><![CDATA[<p>Here is the full error message:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>: <code>sudo  apt-get install libxt-dev</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mach problem: gstreamer backend]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/24/gstreamer-backend/"/>
-    <updated>2013-12-24T20:49:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/24/gstreamer-backend</id>
-    <content type="html"><![CDATA[<p>This is the full error message:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25
-</span><span class='line'> 0:09.25                       gstreamer-app-0.10
-</span><span class='line'> 0:09.25                       gstreamer-plugins-base-0.10
-</span><span class='line'> 0:09.25 configure: error: gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer
-</span><span class='line'> 0:09.26 *** Fix above errors and then restart with\
-</span><span class='line'> 0:09.26                "/usr/bin/make -f client.mk build"
-</span><span class='line'> 0:09.26 make[2]: *** [configure] Error 1
-</span><span class='line'> 0:09.26 make[1]: *** [obj-x86_64-unknown-linux-gnu/Makefile] Error 2
-</span><span class='line'> 0:09.26 make: *** [build] Error 2
-</span><span class='line'> 0:09.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>: <code>sudo apt-get install -y libgstreamer-plugins-base0.10-dev</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mach problem: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/"/>
-    <updated>2013-12-24T19:38:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met</id>
-    <content type="html"><![CDATA[<p>Full error message:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:08.11 configure: error: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>:  <code>sudo apt-get install libgtk2.0-dev</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mach problem: C++ compiler cannot create executables]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/"/>
-    <updated>2013-12-24T19:19:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
-    <content type="html"><![CDATA[<p>Got this error when I ran <code>mach build</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>configure: error: installation or configuration problem: C++ compiler cannot create executables.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>: install g++</p>
 ]]></content>
   </entry>
   

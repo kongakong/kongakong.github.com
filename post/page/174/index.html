@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Root View: the pane on the left when iPad is in Landscape mode
-Detail View: the main pane of display
-">
+  <meta name="description" content="Seeing a lot of warning: 'struct winsize' declared inside parameter list Eventually failed at ./Modules/posixmodule.c Fixed by using forward &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +71,164 @@ Detail View: the main pane of display
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1264649679/">&#8216;Struct Winsize&#8217; Declared Inside Parameter List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T08:52:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Seeing a lot of</p>
+
+<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
+
+<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
+
+<p>Fixed by using forward declaration</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1263713208/">-Wno-long-double</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T06:07:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Python 2.5.5 uses the <code>-Wno-long-double</code> c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6</p>
+
+<p>Fixed the configure.in and rerun autoconf. Let&rsquo;s see if it will work.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/06/p-1250836116/">ActiveMQ Build Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-06T07:42:00+11:00" pubdate data-updated="true">Oct 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Try to build it, but hit this error:</p>
+
+<p><code>The system is out of resources.
+Consult the following stack trace for details.
+java.lang.OutOfMemoryError: Java heap space</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/09/22/p-1163578480/">Hit a Persistence Related Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-22T08:38:00+10:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>The model used to open the store is incompatible with the one used to create the store</code></p>
+
+<p>Killed the main thread</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2010/09/20/p-1153892343/">Terminology in SplitView</a></h1>
     
     
@@ -105,156 +261,6 @@ Detail View: the main pane of display
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1119099362/">EXC_BAD_ACCESS Resolved</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
-
-<p>It is probably a wrong conclusion, but commenting out the line works.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1118971148/">EXC_BAD_ACCESS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T13:29:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Is it the equivalent of <em>segfault</em> in unix or <em>NPE</em> in java?</p>
-
-<p>Anyway, having <em>fun</em> with it…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/12/p-1108382072/">Abstract Base Class Support in Objective-c</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-12T19:42:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Basically, there is no support of Abstract base class in objective-c.</p>
-
-<p>The handling is similar to what you can do in python (pre-2.6): inside the supposedly abstract class method throws an exception.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/09/p-1091664243/">Time Machine to Network Drive</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-09T23:44:00+10:00" pubdate data-updated="true">Sep 9<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Tried but failed.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/175/">&larr; Older</a>
@@ -272,23 +278,23 @@ Detail View: the main pane of display
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

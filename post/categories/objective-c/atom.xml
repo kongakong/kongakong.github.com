@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T16:25:16+11:00</updated>
+  <updated>2014-01-23T16:03:26+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[class cluster]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/17/class-cluster/"/>
+    <updated>2014-01-17T22:42:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/17/class-cluster</id>
+    <content type="html"><![CDATA[<p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make picker 2 data dependent on the selected row of picker 1]]></title>
@@ -282,17 +291,6 @@
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ownership rule exception]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/19/ownership-rule-exception/"/>
-    <updated>2013-12-19T07:26:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/19/ownership-rule-exception</id>
-    <content type="html"><![CDATA[<p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
-
-<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
 ]]></content>
   </entry>
   

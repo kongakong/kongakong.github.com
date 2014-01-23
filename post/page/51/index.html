@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above. The root cause &hellip;">
+  <meta name="description" content="Another literary detour.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +72,175 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23853566417/">&#8216;Growing Up Asian in Australia&#8217; by Alice Pung</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T19:29:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another literary detour.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23852209377/">iPod Library</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T18:21:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="iPod%20library">https://developer.apple.com/library/ios/#documentation/Audio/Conceptual/iPodLibraryAccess_Guide/AboutiPodLibraryAccess/AboutiPodLibraryAccess.html#//apple_ref/doc/uid/TP40008765-CH103-SW9</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23836233379/">Interface Type Cannot Be Statically Allocated</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T12:26:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This code fragment</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>// item is a MPMediaItem
+</span><span class='line'>NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>causes <code>Interface type cannot be statically allocated</code></p>
+
+<p>But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
+
+<p>It totally throws me off because nothing is wrong on that line.</p>
+
+<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
+
+<p>But it did not fix the problem.</p>
+
+<p>Eventually I undo the last change I made, which is</p>
+
+<p>and it works again.</p>
+
+<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/05/26/p-23788398195/">When I Select a Prototype Cell, It Does Not Follow Segue and Show the Destination Controller, as Defined in the Storyboard Above.</a></h1>
     
     
@@ -106,186 +276,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788057388/">Sample Use of Pragma Mark</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T19:27:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sample use of pragma mark</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>#pragma mark -
-</span><span class='line'>#pragma mark Data View</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>
-</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23786684708/">Added a UITableVIew to My Custom Controller. Now I Want to Be Able to Add a Segway to a Cell in This Table View.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T18:25:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.</p>
-
-<p>Since I did not start with a UITableViewController at the beginning, I was unable to connect a segway to an individual cell inside the table view.</p>
-
-<p>Finally, by trial and error, I dragged a ‘Table View Cell’ object onto the UITableView. It is now displayed as ‘Prototype Cells’</p>
-
-<p>I can create an outgoing segway from this prototype cell. But now I am getting this error message</p>
-
-<p>It can be easily fixed by simply filling in the <em>Identifier</em> field in the <em>Attribute inspector</em>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23769825268/">Can You Spot the Problem Here?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T12:00:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Can you spot the problem here?</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23757431150/">Hit a EXC_BAD_ACCESS Exception.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T08:37:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hit a EXC_BAD_ACCESS exception.</p>
-
-<p>In the lldb, I tried to interrogate some internal variable, but no success.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>(lldb) p [lessons count]
-</span><span class='line'>error: no known method '-count'; cast the message send to the method's return type
-</span><span class='line'>error: 1 errors parsing expression
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/52/">&larr; Older</a>
@@ -303,23 +293,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

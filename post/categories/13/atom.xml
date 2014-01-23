@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 13 | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/13/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T16:26:48+11:00</updated>
+  <updated>2014-01-23T16:03:26+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,10 +20,12 @@
     <id>http://www.ahwkong.com/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables</id>
     <content type="html"><![CDATA[<p>Got this error when I ran <code>mach build</code>:</p>
 
-<p>{% codeblock %}
-configure: error: installation or configuration problem: C++ compiler cannot create executables.</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>configure: error: installation or configuration problem: C++ compiler cannot create executables.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><strong>Solution</strong>: install g++</p>
 ]]></content>

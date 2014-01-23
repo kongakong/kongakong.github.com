@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My app crashed for no reason. Turns out it is my mistake: 1
-2 [self.view.addSublayer:myLayer]; [myLayer dealloc]; when I mean to do it 1
-2 [self.view &hellip;">
+  <meta name="description" content="initialize is a class method which will be called before any other method is called on a class. Alternatively use a function with attribute (( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +71,168 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5942654011/">_initialize_ Is a Class Method Which Will Be Called Before Any Other Method Is Called on a Class. Alternatively Use a Function With ___attribute__ ((Constructor))_</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T07:39:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>initialize</em> is a class method which will be called before any other method is called on a class. Alternatively use a function with <em><strong>attribute</strong> ((constructor))</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5941073480/">To Find Out What iOS Device Is Attached to the System, We Can Try Monitor</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T06:44:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To find out what iOS device is attached to the system, we can try monitor</p>
+
+<p><a href="Monitoring%20Accessory-Related%20Events">http://developer.apple.com/library/ios/#featuredarticles/ExternalAccessoryPT/Articles/MonitoringEvents.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5940804774/">Difference Between setObject:forKey: And setValue:forKey: In NSMutableDictionary</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T06:35:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From</p>
+
+<p><a href="SO">http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653</a></p>
+
+<p><em>setValue:forKey:</em> is part of the <em>NSKeyValueCoding</em> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <em>setValue:forKey:</em> is implemented in classes other than NSDictionary.</p>
+
+<p><em>setObject:forKey:</em> is<em> NSMutableDictionary</em>’s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It’s somewhat of a coincidence that the signatures are so similar.</p>
+
+<p>What adds to the confusion is that <em>NSMutableDictionary</em>’s implementation of setValue:forKey: is equivalent to<em> setObject:forKey:</em> in most cases. In other classes, _setValue:forKey: _ changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a ‘@’ character — in which case it modifies member variables.</p>
+
+<p>So in a nutshell, use _setObject:forKey: _ when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/28/p-5898731686/">Boby Guard Technique</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-28T01:21:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Boby guard technique</p>
+
+<p>1) Side-by-side/hand holding/hand on shoulder</p>
+
+<p>2) From behind (palm strike or knee back attack + head turn)</p>
+
+<p>3) From side</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/27/p-5886593746/">Stupid Mistake</a></h1>
     
     
@@ -124,158 +284,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/26/p-5844393478/">Counting Unique Items in an Array</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-26T08:03:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From</p>
-
-<p><a href="SO">http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/26/p-5844217301/">When I Use Google Doc in Chrome, I Can Directly Print the Document to the Printer by Just Pressing the Printer Icon.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-26T07:57:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I use google doc in chrome, I can directly print the document to the printer by just pressing the printer icon.</p>
-
-<p>It was less straight-forward in the past. It usually involved downloading a pdf rendering of the file, then print it to a printer via the pdf reader.</p>
-
-<p>Nice.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5815038508/">Liskov Substitution Principle</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T09:41:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Liskov%20Principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5810996367/">It Is Like You Want to Be a Nun Because You Saw a Flying Nun.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T07:42:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is like you want to be a nun because you saw a flying nun.</p>
-
-<p>Edward Conlon, author of <em>Blue Blood</em>, on people wanting to join CSI after watching the TV show</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/132/">&larr; Older</a>
@@ -293,23 +301,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

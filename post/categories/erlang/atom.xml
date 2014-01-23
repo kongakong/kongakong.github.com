@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T16:25:16+11:00</updated>
+  <updated>2014-01-23T16:03:26+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[compile debug_info]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/18/compile-debug-info/"/>
+    <updated>2014-01-18T13:04:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/18/compile-debug-info</id>
+    <content type="html"><![CDATA[<p>Does it still work?</p>
+
+<p>   <a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a></p>
+
+<p><a href="http://stackoverflow.com/questions/21198092/erlang-debug-info-option-inside-module-or-during-compilation">http://stackoverflow.com/questions/21198092/erlang-debug-info-option-inside-module-or-during-compilation</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Discount Margin of FRN]]></title>
@@ -473,22 +486,6 @@
 </span><span class='line'>&lt;hr />
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[riak allow-multi]]></title>
-    <link href="http://www.ahwkong.com/post/2013/08/15/riak-allow-multi/"/>
-    <updated>2013-08-15T01:04:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/08/15/riak-allow-multi</id>
-    <content type="html"><![CDATA[<p>I could not create a write conflict situation.</p>
-
-<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
-
-<p>Here is the command line:</p>
-
-<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
-</code></pre>
 ]]></content>
   </entry>
   

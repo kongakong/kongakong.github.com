@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-11T16:25:16+11:00</updated>
+  <updated>2014-01-23T16:03:26+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[class cluster]]></title>
+    <link href="http://www.ahwkong.com/post/2014/01/17/class-cluster/"/>
+    <updated>2014-01-17T22:42:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/01/17/class-cluster</id>
+    <content type="html"><![CDATA[<p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[User defined runtime attribute]]></title>
@@ -119,75 +128,6 @@
 <li><p>Use functional testing framework to implement the above test</p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using NSURLConnection to read json data]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/18/using-nsurlconnection-to-read-json-data/"/>
-    <updated>2013-12-18T22:34:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/18/using-nsurlconnection-to-read-json-data</id>
-    <content type="html"><![CDATA[<p>My code is not good at all for the following reasons:</p>
-
-<ul>
-<li><p>The NSURLConnection retrieves data synchronously</p></li>
-<li><p>The decoding of JSON is not neat. A strong code smell</p></li>
-</ul>
-
-
-<h3>Synchronous network call</h3>
-
-<p>Next step: rewrite the below code to asynchronous mode.</p>
-
-<p>In the viewDidLoad method of my ViewController, I called the following method:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="kt">BOOL</span><span class="p">)</span> <span class="n">readJSON</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
-</span><span class='line'><span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">receivedData</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableData</span> <span class="n">data</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">theRequest</span><span class="o">=</span><span class="p">[</span><span class="n">NSURLRequest</span> <span class="nl">requestWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="n">_server_url</span><span class="p">]];</span>
-</span><span class='line'><span class="n">NSURLConnection</span> <span class="o">*</span><span class="n">theConnection</span><span class="o">=</span><span class="p">[[</span><span class="n">NSURLConnection</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithRequest:</span><span class="n">theRequest</span> <span class="nl">delegate:</span><span class="n">self</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">if</span> <span class="p">(</span><span class="n">theConnection</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSData</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLConnection</span> <span class="nl">sendSynchronousRequest:</span><span class="n">theRequest</span> <span class="nl">returningResponse:</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">response</span> <span class="nl">error:</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">error</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSDictionary</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span> <span class="nl">objectFromJSONDataWithParseOptions:</span><span class="p">(</span><span class="n">JKParseOptionNone</span><span class="p">)];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">convertJsonIntoMyData:</span><span class="n">json</span><span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nb">TRUE</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nb">FALSE</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h3>Decoding of JSON data</h3>
-
-<p>I used a lot of enumerators to walk through dictionaries and arrays at different level. It makes future changes to the JSON schema or objective-c object model difficult.</p>
 ]]></content>
   </entry>
   

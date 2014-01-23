@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="When operator new cannot satisfy a request for memory, it calls the new-handler function not once, but repeatedly unTIL it can find enough memory. &hellip;">
+  <meta name="description" content="Not good:
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +72,154 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011639593/">Item 9: Avoid Hiding the &#8216;Normal&#8217; Form of New</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T06:36:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Not good:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011529808/">Item 8: Adhere to Convention When Writing Operator New and Operator Delete</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T06:33:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom <code>delete</code> will honor that guarantee</p>
+
+<p>General Idea:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011303409/">[http://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands](United States Minor Outlying Islands)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T06:26:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="United%20States%20Minor%20Outlying%20Islands">http://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6010885434/">Item 7 Revisited</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T06:13:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There is a discussion on</p>
+
+<p><a href="SO">http://stackoverflow.com/questions/1332015/using-class-specific-set-new-handler/1332080#1332080</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/31/p-6010484565/">Item 7: Be Prepared for Out-of-memory Conditions</a></h1>
     
     
@@ -104,156 +253,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6008713823/">A Way to Remove a Certain Layer Form a UIView’s Layers</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T05:02:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A way to remove a certain layer form a UIView’s layers</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/30/p-5999039887/">Item 6: Use Delete on Pointer Members in Destructors</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-30T22:33:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Summary:</p>
-
-<ul>
-<li>deleting a null pointer is always safe</li>
-<li>Do not delete a pointer that was passed into a class in the first place</li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/30/p-5998846098/">Item 5: Use the Same Form in Corresponding Uses of New and Delete</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-30T22:21:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/30/p-5998507148/">Another Oldie: “Put the Blame on Mame” by Rita Hayworth</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-30T22:01:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Another oldie: “Put The Blame On Mame” by Rita Hayworth</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/128/">&larr; Older</a>
@@ -271,23 +270,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The normalization on the complex amplitudes means that the state of the
-system is a unit vector in a k dimensional complex vector space &mdash; &hellip;">
+  <meta name="description" content="Geometrical interpretation of Qubit From the ‘Quantum Mechanics’ by Professor Umesh Vazirani, UCLA via Coursera.org
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +72,241 @@ system is a unit vector in a k dimensional complex vector space &mdash; &hellip;
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/08/03/p-28620996702/">Geometrical Interpretation of Qubit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-03T19:33:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Geometrical interpretation of Qubit</p>
+
+<p><em>From the ‘Quantum Mechanics’ by Professor Umesh Vazirani, UCLA via Coursera.org</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/03/p-28563611964/">The Ferguson Principle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-03T03:03:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Three things you must ask yourself before you say anything:</p>
+
+<ul>
+<li><p>Does This Need to Be Said</p></li>
+<li><p>Does This Need to Be Said by Me</p></li>
+<li><p>Does This Need to Be Said by Me NOW</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/02/p-28548986312/">Sometimes It Is Quite Fun to Answer Some Questions in Stackoverflow: You Can Help Someone Seeking Answer and You May Also Learn a New Thing or Two Yourself in the Process.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-02T19:57:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sometimes it is quite fun to answer some questions in Stackoverflow: you can help someone seeking answer and you may also learn a new thing or two yourself in the process.</p>
+
+<p>This is one such example:</p>
+
+<p><a href="http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.">http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.</a></p>
+
+<p>Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example “assesses” has the substring “sses” 2 times.</p>
+
+<p>It is a very simple question, but there is still something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.</p>
+
+<p>My proposed solution is simply an improved version of OP’s code.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
+</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">location</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span class='line'>                <span class="k">return</span> <span class="mi">0</span> <span class="c"># none whatsoever</span>
+</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class='line'>                <span class="k">while</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">):</span>
+</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>                   <span class="k">if</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>                      <span class="k">break</span>
+</span><span class='line'>                   <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is a even shorter version which takes advantage of python’s flexible comparison syntax:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
+</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">)):</span>
+</span><span class='line'>                   <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/01/p-28477385810/">Dirac&#8217;s Ket Notation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-01T20:01:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Dirac&rsquo;s ket notation.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Bra-ket_notation]">Details here</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/08/01/p-28476372839/">Normalization on the Complex Amplitudes</a></h1>
     
     
@@ -105,169 +340,6 @@ Hilbert space.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/31/p-28404674031/">Qubits</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-31T20:40:00+10:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Qubits</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/31/p-28403684168/">In a Linear Superposition of Any K States, the Probability Amplitude Is Normalised to 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-31T20:16:00+10:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In a linear superposition of any k states, the probability amplitude  is normalised to 1</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/31/p-28402676316/">Common Python Beginner Mistake (3) - Use of Append</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-31T19:35:00+10:00" pubdate data-updated="true">Jul 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>New python beginner tends to do this</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is not a mistake per-se, but definitely a very clumsy style.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [1, 2, 3]</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/30/p-28329341852/">Base Class Stream API</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-30T20:00:00+10:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Base class stream API</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/35/">&larr; Older</a>
@@ -285,23 +357,23 @@ Hilbert space.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

@@ -9,7 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Cannot get UISplitViewController to rotate. Very frustrated
+  <meta name="description" content="Modal View screws up the SplitView after dismiss. Tried if ([self modalViewController]) {
+return;
+} in willHideSplitView but it does not work
 ">
   
 
@@ -72,6 +74,164 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
+
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2668647745/">iOS Idiom 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-10T02:44:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2667588233/">NSInvalidArgumentException</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-10T00:40:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got <code>Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'</code></p>
+
+<p>when trying to dismiss a modal view controller.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/09/p-2658426192/">Some Note on Frame vs Bounds</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
+
+<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
+
+<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/01/07/p-2623149828/">Cannot Get UISplitViewController to Rotate. Very Frustrated</a></h1>
     
     
@@ -103,156 +263,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/04/p-2586930582/">iOS Idiom 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-04T10:28:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To access the main window</p>
-
-<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566688864/">Some UIKit Classes Such as &#8220;UIColor&#8220;, &#8220;UIFont&#8220; and &#8220;UIImage&#8220; Are Thread Safe</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-02T23:17:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some UIKit classes such as <code>UIColor</code>, <code>UIFont</code> and  <code>UIImage</code> are thread safe</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566308188/">Use &#8220;NSZombieEnabled&#8220; to Catch BAD_ASSESS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-02T22:07:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use <code>NSZombieEnabled</code> to catch BAD_ASSESS</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/12/31/p-2540547762/">Use &#8220;copy&#8220; in @properta of Type NSStringy</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-12-31T20:35:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When it is a NSString, do <code>copy</code> in @property</p>
-
-<p>e.g.</p>
-
-<p><code>@property (copy) NSString *info;</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/162/">&larr; Older</a>
@@ -270,23 +280,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

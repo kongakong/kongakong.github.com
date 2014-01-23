@@ -13,16 +13,9 @@
 2
 3
 4
-5
-6
-7
-8
-9
-10
-11
-12
-/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
-/usr/bin/ranlib: file: libpython3.3m.a( &hellip;">
+$ ./python.exe -SE -m sysconfig --generate-posix-vars
+Fatal Python error: Py_Initialize: can't initialize sys standard streams
+Traceback ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +71,184 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15288901020/">What Is Going On?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T09:00:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>Fatal Python error: Py_Initialize: can't initialize sys standard streams
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/Users/antkong/wd/python.project/cpython/Lib/io.py", line 60, in</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/31/p-15045964017/">Brew Symlink Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-31T09:01:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tried to install erlang. Got this error message</p>
+
+<pre><code>$ brew install erlang
+==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz
+######################################################################## 100.0%
+==&gt; Pouring erlang-R14B04.bottle.tar.gz
+ln: liberts_r.a: Permission denied
+Error: The linking step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+You can try again using `brew link erlang'
+==&gt; Summary
+/usr/local/Cellar/erlang/R14B04: 6978 files, 261M
+</code></pre>
+
+<p>Tried the following but did not work</p>
+
+<pre><code>$ brew cleanup erlang; brew unlink erlang; brew link erlang
+Removing /usr/local/Cellar/erlang/R14B02...
+Removing /usr/local/Cellar/erlang/R14B03...
+Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
+</code></pre>
+
+<p>sudo unlink and link fixed the issue finally</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/30/p-15022191238/">How to Retrieve Session Information of a @WebMethod Call in Spring Framework</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-30T22:03:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/29/p-14937137581/">Design Pattern in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T09:01:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://dpip.testingperspective.com">Design Pattern in Python</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -143,214 +314,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913827164/">Autoconf on Lion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T22:30:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Oops</p>
-
-<pre><code>$ autoconf
-configure.in:8: error: Autoconf version 2.65 or higher is required
-configure.in:8: the top level
-autom4te: /usr/bin/gm4 failed with exit status: 63
-</code></pre>
-
-<p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913221859/">A Simple Example of Using Hg</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T21:54:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ hg pull
-</span><span class='line'>pulling from http://hg.python.org/cpython
-</span><span class='line'>searching for changes
-</span><span class='line'>adding changesets
-</span><span class='line'>adding manifests
-</span><span class='line'>adding file changes
-</span><span class='line'>added 3265 changesets with 6204 changes to 1117 files
-</span><span class='line'>(run ‘hg update’ to get a working copy)
-</span><span class='line'>
-</span><span class='line'>$ hg summary
-</span><span class='line'>parent: 70924:d1d5a7392e39 
-</span><span class='line'>(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
-</span><span class='line'>branch: default
-</span><span class='line'>commit: 3 unknown (clean)
-</span><span class='line'>update: 2705 new changesets (update)
-</span><span class='line'>
-</span><span class='line'>$ hg update
-</span><span class='line'>991 files updated, 0 files merged, 12 files removed, 0 files unresolved
-</span><span class='line'>
-</span><span class='line'>$ hg summary
-</span><span class='line'>parent: 74189:456b02030100 tip
-</span><span class='line'>don’t fail if CLOEXEC doesn’t exist
-</span><span class='line'>branch: default
-</span><span class='line'>commit: 3 unknown (clean)
-</span><span class='line'>update: (current)</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14912930755/">Port vs Brew</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T21:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Remove <code>port</code> for now to try out <code>brew</code></p>
-
-<p>Personally <code>port</code> is simple enough. Let see if brew can exceed the bar set by MacPort</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14912627259/">Port Is Corrupted</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T21:20:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Probably related to my previous <code>hg</code> problem, my <code>port</code> install base is also corrupted. This is the error message:</p>
-
-<p>&#8220;&#8220;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/82/">&larr; Older</a>
@@ -368,23 +331,23 @@ autom4te: /usr/bin/gm4 failed with exit status: 63
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>

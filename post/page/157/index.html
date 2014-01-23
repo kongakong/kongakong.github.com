@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I did not know that after implemented a NSFetchResultController, I sTILl need to programmatically fetch the data and then call the table view to &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +72,156 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/02/02/p-3055250498/">Next Steps</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-02T09:27:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2990139811/">Another EXC_BAD_ACCESS (2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T18:31:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Probably related to this one</p>
+
+<p><a href="https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16">https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2990119292/">Another EXC_BAD_ACCESS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T18:29:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This time it has something to do with a split view.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2988855627/">My EXC_BAD_ACCESS Mystery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T16:42:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It turns out it is because of the following line of code:</p>
+
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <em>numberOfObjects</em> returns an integer</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/01/27/p-2952633404/">Core Data 4</a></h1>
     
     
@@ -104,150 +255,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/26/p-2937022057/">Looking Into Stacktrace Related to EXC_BAD_ACCESS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-26T16:14:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The stack trace</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/26/p-2930386975/">Delete the Working Project in Shell by Accident! Time Machine Saved the Day</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-26T09:35:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Delete the working project in shell by accident! Time Machine saved the day</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/26/p-2928337512/">App Just Mysteriously Terminates After Core Data Fetch…</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-26T07:19:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>App just mysteriously terminates after core data fetch…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/25/p-2912666648/">Can Store Data Into the Core Data Sqllite Database, but Cannot Read It Back Into View Controller. Need More Investigation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-25T08:00:00+11:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/158/">&larr; Older</a>
@@ -265,23 +272,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/20/html5/">Html 5 resources</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/10/resize-images-in-a-so-post/">resize images in a Stackoverflow post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/09/firefox-build-failure-on-osx/">firefox build failure on osx</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/06/inline-plot-in-ipython/">inline plot in ipython</a>
       </li>
     
   </ul>
