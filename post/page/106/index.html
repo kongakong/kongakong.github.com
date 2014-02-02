@@ -9,7 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Just found an old receipt for 4 GB RAM I purchased on 12 Aug 2009. It was for my last Mac Book Pro (pre-unibody model). It costed me A$220. And about &hellip;">
+  <meta name="description" content="View the packet statistics on solaris 1
+2
+3
+4
+5
+6
+7 $ netstat -f inet TCP: IPv4 Local Address Remote Address Swind Send-Q Rwind Recv-Q State &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +71,61 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/25/p-6885759406/">View the Packet Statistics on Solaris</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-25T11:19:00+10:00" pubdate data-updated="true">Jun 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>View the packet statistics on solaris</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ netstat -f inet
+</span><span class='line'>
+</span><span class='line'>TCP: IPv4
+</span><span class='line'>   Local Address        Remote Address    Swind Send-Q Rwind Recv-Q    State
+</span><span class='line'>-------------------- -------------------- ----- ------ ----- ------ -----------
+</span><span class='line'>10.0.1.80.ssh        10.0.1.81.49180       524280      0 128872      0 ESTABLISHED
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -220,49 +281,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767517034/">Annoying Error Message When Trying to Compile Latest Python Default Branch in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-22T07:22:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this annoying error message when trying to compile latest python default branch in OSX:</p>
-
-<p>&#8220;`</p>
-
-<p>$ make
-./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
-Traceback (most recent call last):
-  File &ldquo;/usr/local/bin/hg&rdquo;, line 4, in</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/107/">&larr; Older</a>
@@ -280,6 +298,10 @@ Traceback (most recent call last):
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/">Mixing C++ and Objective-c in XCode</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/29/bid-ask-spread/">bid-ask spread and swap spread</a>
       </li>
     
@@ -293,10 +315,6 @@ Traceback (most recent call last):
     
       <li class="post">
         <a href="/post/2014/01/20/html5/">Html 5 resources</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
       </li>
     
   </ul>

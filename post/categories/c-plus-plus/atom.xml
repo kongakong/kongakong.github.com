@@ -4,7 +4,7 @@
   <title><![CDATA[Category: c++ | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/c-plus-plus/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-02T20:56:48+11:00</updated>
+  <updated>2014-02-02T21:08:59+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mixing C++ and Objective-c in XCode]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/"/>
+    <updated>2014-02-02T21:04:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode</id>
+    <content type="html"><![CDATA[<p>The c++ header keeps getting a compiler error:</p>
+
+<pre><code>'iostream' file not found 
+</code></pre>
+
+<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
+
+<p>{% codeblock lang:objective-c %}</p>
+
+<h1>ifdef __cplus</h1>
+
+<h1>include <iostream></h1>
+
+<h1>endif</h1>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Moving onto “More Effective C++”]]></title>
@@ -46,17 +70,6 @@
     <updated>2011-06-17T20:51:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/06/17/p-6617932879</id>
     <content type="html"><![CDATA[<p>Use Singleton pattern to manage non-local static object</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[RAII stands for]]></title>
-    <link href="http://www.ahwkong.com/post/2011/06/17/p-6617312821/"/>
-    <updated>2011-06-17T20:01:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2011/06/17/p-6617312821</id>
-    <content type="html"><![CDATA[<p>RAII stands for</p>
-
-<p><a href="Resource%20Acquisition%20Is%20Initialization">http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization</a></p>
 ]]></content>
   </entry>
   

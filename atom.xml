@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-02T20:56:48+11:00</updated>
+  <updated>2014-02-02T21:06:50+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mixing C++ and Objective-c in XCode]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/"/>
+    <updated>2014-02-02T21:04:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode</id>
+    <content type="html"><![CDATA[<p>The c++ header keeps getting a compiler error:</p>
+
+<pre><code>'iostream' file not found 
+</code></pre>
+
+<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#ifdef __cplus</span>
+</span><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
+</span><span class='line'><span class="cp">#endif</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[bid-ask spread and swap spread]]></title>
@@ -650,37 +675,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Finally firefox is built]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/28/finally-firefox-is-built/"/>
-    <updated>2013-12-28T18:37:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/28/finally-firefox-is-built</id>
-    <content type="html"><![CDATA[
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>609:58.75 TestStartupCache
-</span><span class='line'>610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.61 Packaging quitter@mozilla.org.xpi...
-</span><span class='line'>610:06.95 816 compiler warnings present.
-</span><span class='line'>We know it took a while, but your build finally finished successfully!
-</span><span class='line'>To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox
-</span><span class='line'>For more information on what to do now, see https://developer.mozilla.org/docs/Developer_Guide/So_You_Just_Built_Firefox</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It took almost 10 hours to build in a VM instance of Ubuntu desktop 13.10 with 4GB RAM and 1 CPU</p>
 ]]></content>
   </entry>
   

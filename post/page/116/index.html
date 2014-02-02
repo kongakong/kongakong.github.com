@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="OpenRTB] RTB stands for &ldquo;Real-Time Bidding&rdquo;
-">
+  <meta name="description" content="It touches on the topic of downcasting (cast a derived class to its base class) First of all, downcasting itself is usually unnecessary in most &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6463175755/">Item 39: Avoid Casts Down the Inheritance Hierarchy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-13T06:06:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It touches on the topic of <code>downcasting</code> (cast a derived class to its base class)</p>
+
+<p>First of all, downcasting itself is usually unnecessary in most situation where the virtual functions are suffice.</p>
+
+<p>If it must be done, use <code>dynamic_cast</code>. It will return null if cast is unsuccessful</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -217,42 +256,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6449793506/">Item 35: Make Sure Public Inheritance Models &#8216;Isa&#8217;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-12T21:16:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>OO design principle</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/117/">&larr; Older</a>
@@ -270,6 +273,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/">Mixing C++ and Objective-c in XCode</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/29/bid-ask-spread/">bid-ask spread and swap spread</a>
       </li>
     
@@ -283,10 +290,6 @@
     
       <li class="post">
         <a href="/post/2014/01/20/html5/">Html 5 resources</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
       </li>
     
   </ul>
