@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual &hellip;">
+  <meta name="description" content="A common error amongst new C++ programmers is to have operator= return void, a decision that seems reasonable unTIL you realize it prevents chains of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,80 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6068911247/">Item 15: Have Operator= Return a Reference to *this</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T21:09:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A common error amongst new C++ programmers is to have<em> operator=</em> return void, a decision that seems reasonable unTIL you realize it prevents chains of assignment.</p>
+
+<p>Here is an example implementation:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048281435/">ANSI C Supports &#8220;const&#8220; Keyword in C99</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T07:42:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ANSI C supports <code>const</code> keyword in C99</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -178,78 +252,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036284846/">C++: Dynamic Array</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T23:12:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We can dynamically allocate arrays of primitive types using new as well</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/126/">&larr; Older</a>
@@ -267,6 +269,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/01/29/bid-ask-spread/">bid-ask spread and swap spread</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/01/23/weak-reference/">weak reference in block</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a>
       </li>
     
@@ -276,14 +286,6 @@
     
       <li class="post">
         <a href="/post/2014/01/18/compile-debug-info/">compile debug_info</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/17/class-cluster/">class cluster</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/11/using-automator-in-osx/">Using automator in OSX</a>
       </li>
     
   </ul>

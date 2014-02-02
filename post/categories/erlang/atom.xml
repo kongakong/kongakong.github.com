@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-23T17:06:09+11:00</updated>
+  <updated>2014-02-02T20:56:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -28,7 +28,7 @@
 </span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>However either using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
+<p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
 
 <p>I can only implant debug info through erlang shell like this:</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/emacs/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-01-23T17:06:09+11:00</updated>
+  <updated>2014-02-02T20:56:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -1332,9 +1332,9 @@ Error in init file: Symbol's function definition is void: global-linum-mode
     <link href="http://www.ahwkong.com/post/2013/04/30/p-49203298223/"/>
     <updated>2013-04-30T07:12:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2013/04/30/p-49203298223</id>
-    <content type="html"><![CDATA[<p>erlware-mode is deprecated ( <a href="https://github.com/erlware-deprecated/erlware-mode">https://github.com/erlware-deprecated/erlware-mode</a></p>
+    <content type="html"><![CDATA[<p><a href="https://github.com/erlware-deprecated/erlware-mode">erlware-mode</a> is deprecated.</p>
 
-<p>Use erlang-mode in erlang distribution instead</p>
+<p>Use <code>erlang-mode</code> in erlang distribution instead</p>
 ]]></content>
   </entry>
   

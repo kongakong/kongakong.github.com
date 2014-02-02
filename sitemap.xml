@@ -3466,7 +3466,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/04/30/p-49203298223/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-01-24T13:37:57+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/05/01/p-49296939249/</loc>
@@ -3490,7 +3490,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/05/09/p-49957105079/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-01-24T13:36:36+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/05/09/p-50003419743/</loc>
@@ -3916,7 +3916,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/01/18/compile-debug-info/</loc>
-        <lastmod>2014-01-23T16:55:01+11:00</lastmod>
+        <lastmod>2014-02-02T20:56:38+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/01/20/html5/</loc>
@@ -3927,12 +3927,20 @@
         <lastmod>2014-01-23T15:53:13+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2014/01/23/weak-reference/</loc>
+        <lastmod>2014-01-23T21:58:51+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/01/29/bid-ask-spread/</loc>
+        <lastmod>2014-02-02T20:55:11+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2014-01-23T17:05:54+11:00</lastmod>
+        <lastmod>2014-02-02T20:56:38+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2014-01-23T17:05:54+11:00</lastmod>
+        <lastmod>2014-02-02T20:56:38+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -3940,6 +3948,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2014-01-23T17:05:54+11:00</lastmod>
+        <lastmod>2014-02-02T20:56:38+11:00</lastmod>
     </url>
 </urlset>
