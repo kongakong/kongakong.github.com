@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: scrollview | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/scrollview/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-02-03T22:23:50+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[scrollViewDidScroll is not called]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called/"/>
+    <updated>2014-02-03T22:09:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called</id>
+    <content type="html"><![CDATA[<p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
+
+<ul>
+<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
+<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
+<li><p>Is Autolayout on (if you use storyboard)?</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

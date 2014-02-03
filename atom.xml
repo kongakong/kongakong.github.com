@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-02T21:06:50+11:00</updated>
+  <updated>2014-02-03T22:23:50+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[scrollViewDidScroll is not called]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called/"/>
+    <updated>2014-02-03T22:09:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called</id>
+    <content type="html"><![CDATA[<p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
+
+<ul>
+<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
+<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
+<li><p>Is Autolayout on (if you use storyboard)?</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mixing C++ and Objective-c in XCode]]></title>
@@ -634,47 +650,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 
 <pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[conda install ipython problem]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem/"/>
-    <updated>2013-12-30T08:27:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
-    <content type="html"><![CDATA[<p>How can I update <code>pip</code>? Need research&hellip;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython
-</span><span class='line'># All packages already at latest version, nothing to do.
-</span><span class='line'># packages in environment at /Users/antkong/anaconda:
-</span><span class='line'>#
-</span><span class='line'># Warning: Your version of pip is older than what conda requires for pip
-</span><span class='line'># integration, so pip-installed packages will not be displayed.  Please
-</span><span class='line'># update pip, (conda update pip -p /Users/antkong/anaconda)
-</span><span class='line'>
-</span><span class='line'>conda                     2.2.5                    py27_0  
-</span><span class='line'>ipython                   1.1.0                    py27_0  
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip --version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
