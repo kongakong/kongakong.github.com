@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-03T22:23:50+11:00</updated>
+  <updated>2014-02-09T21:36:37+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[dispatch_once]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/09/dispatch-once/"/>
+    <updated>2014-02-09T21:22:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/09/dispatch-once</id>
+    <content type="html"><![CDATA[<p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[scrollViewDidScroll is not called]]></title>
@@ -78,17 +98,6 @@
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ownership rule exception]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/19/ownership-rule-exception/"/>
-    <updated>2013-12-19T07:26:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/19/ownership-rule-exception</id>
-    <content type="html"><![CDATA[<p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
-
-<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
 ]]></content>
   </entry>
   

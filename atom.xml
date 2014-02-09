@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-03T22:23:50+11:00</updated>
+  <updated>2014-02-09T21:36:37+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[dispatch_once]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/09/dispatch-once/"/>
+    <updated>2014-02-09T21:22:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/09/dispatch-once</id>
+    <content type="html"><![CDATA[<p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[scrollViewDidScroll is not called]]></title>
@@ -636,20 +656,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 
 
 <p>`</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[User defined runtime attribute]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute/"/>
-    <updated>2013-12-31T06:42:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute</id>
-    <content type="html"><![CDATA[<p>It is for the interface builder and xib files to set an attribute in a class.</p>
-
-<p>If the attribute is not defined, you will get this error and the app will crash</p>
-
-<pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
-</code></pre>
 ]]></content>
   </entry>
   
