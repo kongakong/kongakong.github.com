@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: UIViewController | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/uiviewcontroller/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-02-11T08:28:25+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
+    <updated>2014-02-11T08:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event</id>
+    <content type="html"><![CDATA[<p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
+
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>TT2TimeViewController* controller = [[TT2TimeViewController alloc] init];
+controller.city = city;
+UIView* view = [[[NSBundle mainBundle] loadNibNamed:@"TT2TimeViewController"
+                                              owner:controller
+                                            options:nil] objectAtIndex:0];
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
+
+<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
+
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>TT2TimeViewController* controller = [[TT2TimeViewController alloc] initWithNibName:@"TT2TimeViewController"
+                                        bundle:[NSBundle mainBundle]];
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
+  
+</feed>

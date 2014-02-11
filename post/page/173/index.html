@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.
-">
+  <meta name="description" content="Another difference between Linux and OSX: no more adduser. Use dscl instead. So, for example, in order to find out what groups are defined locally, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,52 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388790863/">Dscl</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
+
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
+
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -217,46 +262,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1355924543/">Ditto</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-20T14:14:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Learn something new today</p>
-
-<p>There is a <code>ditto</code> command in BSD for replication of a directory</p>
-
-<p>Never come across it in linux before.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/174/">&larr; Older</a>
@@ -274,6 +279,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
       </li>
     
@@ -287,10 +296,6 @@
     
       <li class="post">
         <a href="/post/2014/01/29/bid-ask-spread/">bid-ask spread and swap spread</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/23/weak-reference/">weak reference in block</a>
       </li>
     
   </ul>

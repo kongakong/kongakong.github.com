@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It all starts with a comment on a online feedback section of a news article. Local councils in Australia have the power to approve or reject any &hellip;">
+  <meta name="description" content="A follow up on my last pip scipy woe. I think it is my answer: http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/05/p-22440295991/">Solution to the Pip Scipy Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-05T21:34:00+10:00" pubdate data-updated="true">May 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
+
+<p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install gfortran
+</span><span class='line'>pip install -e git+https://github.com/scipy/scipy#egg=scipy-dev
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -326,79 +371,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/02/p-22251177837/">Scipy and Pybrain</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T21:33:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>./bin/pip install scipy</code> failed. It is a dependency of pybrain</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>...
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zvout.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(clahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(dlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(slahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(veclib_cabi_f.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>error: Command "ranlib build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a" failed with exit status 1
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/62/">&larr; Older</a>
@@ -416,6 +388,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
       </li>
     
@@ -429,10 +405,6 @@
     
       <li class="post">
         <a href="/post/2014/01/29/bid-ask-spread/">bid-ask spread and swap spread</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/01/23/weak-reference/">weak reference in block</a>
       </li>
     
   </ul>

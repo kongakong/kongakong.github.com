@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-09T21:36:37+11:00</updated>
+  <updated>2014-02-11T08:26:49+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
+    <updated>2014-02-11T08:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event</id>
+    <content type="html"><![CDATA[<p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                                  <span class="nl">owner:</span><span class="n">controller</span>
+</span><span class='line'>                                                <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
+
+<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                            <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[dispatch_once]]></title>
@@ -634,28 +669,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[swizzle]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/31/swizzle/"/>
-    <updated>2013-12-31T07:21:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/31/swizzle</id>
-    <content type="html"><![CDATA[<p>A new concept to me: <a href="http://stackoverflow.com/questions/20775670/set-ivar-value-from-category">http://stackoverflow.com/questions/20775670/set-ivar-value-from-category</a></p>
-
-<p>Here is a summary:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">original</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">setImportantProperty:</span><span class="p">));</span>
-</span><span class='line'>    <span class="n">swizzled</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">alternative_setImportantProperty:</span><span class="p">));</span>
-</span><span class='line'>    <span class="n">method_exchangeImplementations</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">swizzled</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>`</p>
 ]]></content>
   </entry>
   

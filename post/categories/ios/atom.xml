@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-09T21:36:37+11:00</updated>
+  <updated>2014-02-11T08:28:25+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
+    <updated>2014-02-11T08:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event</id>
+    <content type="html"><![CDATA[<p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
+
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>TT2TimeViewController* controller = [[TT2TimeViewController alloc] init];
+controller.city = city;
+UIView* view = [[[NSBundle mainBundle] loadNibNamed:@"TT2TimeViewController"
+                                              owner:controller
+                                            options:nil] objectAtIndex:0];
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
+
+<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
+
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>TT2TimeViewController* controller = [[TT2TimeViewController alloc] initWithNibName:@"TT2TimeViewController"
+                                        bundle:[NSBundle mainBundle]];
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[dispatch_once]]></title>
@@ -69,35 +101,6 @@
 
 <pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to do a multi-line string in objective-c]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/"/>
-    <updated>2013-12-19T07:33:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c</id>
-    <content type="html"><![CDATA[<p>Here is an example:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;{</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="err">\</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
-</span><span class='line'><span class="s">&quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
