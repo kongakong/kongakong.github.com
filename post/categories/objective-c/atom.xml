@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-11T08:28:25+11:00</updated>
+  <updated>2014-02-13T21:12:56+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,34 +14,138 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Timezones in objective-c]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c/"/>
+    <updated>2014-02-13T07:34:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c</id>
+    <content type="html"><![CDATA[<p>To find out all timezone info,</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
+</span><span class='line'><span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Here</span> <span class="n">is</span> <span class="n">the</span> <span class="nl">output:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<pre><code>EDT America/New_York
+GMT GMT
+AST America/Halifax
+IRST Asia/Tehran
+ICT Asia/Bangkok
+PET America/Lima
+KST Asia/Seoul
+PST America/Los_Angeles
+CDT America/Chicago
+EEST Europe/Istanbul
+NZDT Pacific/Auckland
+WEST Europe/Lisbon
+EAT Africa/Addis_Ababa
+HKT Asia/Hong_Kong
+IST Asia/Calcutta
+MDT America/Denver
+NZST Pacific/Auckland
+WIT Asia/Jakarta
+ADT America/Halifax
+BST Europe/London
+ART America/Argentina/Buenos_Aires
+CAT Africa/Harare
+GST Asia/Dubai
+PDT America/Los_Angeles
+SGT Asia/Singapore
+COT America/Bogota
+PKT Asia/Karachi
+EET Europe/Istanbul
+UTC UTC
+WAT Africa/Lagos
+EST America/New_York
+JST Asia/Tokyo
+CLST America/Santiago
+CET Europe/Paris
+BDT Asia/Dhaka
+MSK Europe/Moscow
+AKDT America/Juneau
+CLT America/Santiago
+AKST America/Juneau
+BRST America/Sao_Paulo
+BRT America/Sao_Paulo
+CEST Europe/Paris
+CST America/Chicago
+HST Pacific/Honolulu
+MSD Europe/Moscow
+MST America/Denver
+PHT Asia/Manila
+WET Europe/Lisbon
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
     <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
     <updated>2014-02-11T08:12:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event</id>
     <content type="html"><![CDATA[<p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<pre><code>TT2TimeViewController* controller = [[TT2TimeViewController alloc] init];
-controller.city = city;
-UIView* view = [[[NSBundle mainBundle] loadNibNamed:@"TT2TimeViewController"
-                                              owner:controller
-                                            options:nil] objectAtIndex:0];
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'><span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
+</span><span class='line'><span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                              <span class="nl">owner:</span><span class="n">controller</span>
+</span><span class='line'>                                            <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
 
 <p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<pre><code>TT2TimeViewController* controller = [[TT2TimeViewController alloc] initWithNibName:@"TT2TimeViewController"
-                                        bundle:[NSBundle mainBundle]];
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                        <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -77,15 +181,25 @@ UIView* view = [[[NSBundle mainBundle] loadNibNamed:@"TT2TimeViewController"
 
 <p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<h1>ifdef __cplus</h1>
-
-<h1>include <iostream></h1>
-
-<h1>endif</h1>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">ifdef</span> <span class="n">__cplus</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">endif</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -96,23 +210,23 @@ UIView* view = [[[NSBundle mainBundle] loadNibNamed:@"TT2TimeViewController"
     <id>http://www.ahwkong.com/post/2014/01/23/weak-reference</id>
     <content type="html"><![CDATA[<p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<pre><code>__weak typeof(self) weakSelf = self;
-gravity.action = ^{
-    typeof(self) strongSelf = weakSelf;
-</code></pre>
-
-<p>{% endcodeblock %}</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[class cluster]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/17/class-cluster/"/>
-    <updated>2014-01-17T22:42:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/17/class-cluster</id>
-    <content type="html"><![CDATA[<p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'><span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>    <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

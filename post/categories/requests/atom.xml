@@ -4,7 +4,7 @@
   <title><![CDATA[Category: requests | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/requests/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-11T08:28:25+11:00</updated>
+  <updated>2014-02-13T21:12:56+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -28,53 +28,93 @@
 
 <p>OK, let&rsquo;s import DefaultCookiePolicy. Then I got hit by a <em>missing domain attribute</em> exception. &ldquo;Do I need to use a lower level Cookie class to set the domain?&rdquo;, I wonder. Try switching to Cookie and it throw this exception</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<p>Traceback (most recent call last):</p>
-
-<pre><code>...
-c = Cookie()
-</code></pre>
-
-<p>TypeError: <strong>init</strong>() takes at least 17 arguments (1 given)
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;...</span>
+</span><span class='line'><span class="n">c</span> <span class="o">=</span> <span class="n">Cookie</span><span class="p">()</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="ne">TypeError</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">init</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">()</span> <span class="n">takes</span> <span class="n">at</span> <span class="n">least</span> <span class="mi">17</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">1</span> <span class="n">given</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<pre><code>import urllib2
-from cookielib import Cookie, CookieJar, DefaultCookiePolicy  
-from Cookie import SimpleCookie        
-
-policy = DefaultCookiePolicy(rfc2965=True)        
-
-c = SimpleCookie()
-c['secretkey'] = auth_token
-cj = CookieJar(policy)
-cj.set_cookie(c)
-
-req = urllib2.Request("%s/postdata" % self.server_url)
-proxyHandler = urllib2.ProxyHandler( {} )
-defaultErrorHandler = urllib2.HTTPDefaultErrorHandler()
-cookieHandler = urllib2.HTTPCookieProcessor(cj)
-opener = urllib2.build_opener( proxyHandler, defaultErrorHandler, cookieHandler )
-opener.open(req, data, 10000)
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">urllib2</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">cookielib</span> <span class="kn">import</span> <span class="n">Cookie</span><span class="p">,</span> <span class="n">CookieJar</span><span class="p">,</span> <span class="n">DefaultCookiePolicy</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">Cookie</span> <span class="kn">import</span> <span class="n">SimpleCookie</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">policy</span> <span class="o">=</span> <span class="n">DefaultCookiePolicy</span><span class="p">(</span><span class="n">rfc2965</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">c</span> <span class="o">=</span> <span class="n">SimpleCookie</span><span class="p">()</span>
+</span><span class='line'><span class="n">c</span><span class="p">[</span><span class="s">&#39;secretkey&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">auth_token</span>
+</span><span class='line'><span class="n">cj</span> <span class="o">=</span> <span class="n">CookieJar</span><span class="p">(</span><span class="n">policy</span><span class="p">)</span>
+</span><span class='line'><span class="n">cj</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">/postdata&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_url</span><span class="p">)</span>
+</span><span class='line'><span class="n">proxyHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">(</span> <span class="p">{}</span> <span class="p">)</span>
+</span><span class='line'><span class="n">defaultErrorHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPDefaultErrorHandler</span><span class="p">()</span>
+</span><span class='line'><span class="n">cookieHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cj</span><span class="p">)</span>
+</span><span class='line'><span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span> <span class="n">proxyHandler</span><span class="p">,</span> <span class="n">defaultErrorHandler</span><span class="p">,</span> <span class="n">cookieHandler</span> <span class="p">)</span>
+</span><span class='line'><span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Instead of continuing banging my head against a wall, I recall reading about ‘requests’ module. Let give it a go.</p>
 
 <p>Like magic, it is all I need. 2 lines.</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<pre><code> import requests
- requests.post(url, data, cookie=cookie, headers=headers)
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="nn">requests</span>
+</span><span class='line'> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cookie</span><span class="o">=</span><span class="n">cookie</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>It just works. Well done, requests!</p>
 ]]></content>
