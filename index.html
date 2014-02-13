@@ -9,14 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To find out all timezone info, 1
+  <meta name="description" content="To find out all timezone abbreviation, 1
 2
 3
 4
 5
-6
-7
-8 NSEnumerator *keys = [[NSTimeZone abbreviationDictionary] keyEnumerator]; NSString* value; while (( &hellip;">
+6 NSEnumerator *keys = [[NSTimeZone abbreviationDictionary] keyEnumerator]; NSString* value; while &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,7 +99,7 @@
   </header>
 
 
-  <div class="entry-content"><p>To find out all timezone info,</p>
+  <div class="entry-content"><p>To find out all timezone abbreviation,</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -109,18 +107,16 @@
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
 </span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
 </span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
 </span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="n">Here</span> <span class="n">is</span> <span class="n">the</span> <span class="nl">output:</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>Here is the output:</p>
 
 <pre><code>EDT America/New_York
 GMT GMT

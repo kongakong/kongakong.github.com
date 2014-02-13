@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-13T21:12:56+11:00</updated>
+  <updated>2014-02-13T21:50:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c/"/>
     <updated>2014-02-13T07:34:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c</id>
-    <content type="html"><![CDATA[<p>To find out all timezone info,</p>
+    <content type="html"><![CDATA[<p>To find out all timezone abbreviation,</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -26,18 +26,16 @@
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
 </pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
 </span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
 </span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
 </span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
 </span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="n">Here</span> <span class="n">is</span> <span class="n">the</span> <span class="nl">output:</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>Here is the output:</p>
 
 <pre><code>EDT America/New_York
 GMT GMT
