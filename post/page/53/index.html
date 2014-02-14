@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The debugger will stop at the UIApplicationMain line It totally throws me off because nothing is wrong on that line. I proceeded to reboot my iphone &hellip;">
+  <meta name="description" content="This code fragment 1
+2
+3 // item is a MPMediaItem
+NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL]; causes Interface type cannot be &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +68,55 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23836233379/">Interface Type Cannot Be Statically Allocated</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T12:26:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This code fragment</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>// item is a MPMediaItem
+</span><span class='line'>NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>causes <code>Interface type cannot be statically allocated</code></p>
+
+<p>But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -245,42 +297,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23769825268/">Can You Spot the Problem Here?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T12:00:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Can you spot the problem here?</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/54/">&larr; Older</a>
@@ -298,6 +314,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
       </li>
     
@@ -311,10 +331,6 @@
     
       <li class="post">
         <a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll is not called</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/">Mixing C++ and Objective-c in XCode</a>
       </li>
     
   </ul>

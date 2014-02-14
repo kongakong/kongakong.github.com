@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-13T21:50:43+11:00</updated>
+  <updated>2014-02-15T10:44:59+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Changing NSTimeZone]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/14/changing-nstimezone/"/>
+    <updated>2014-02-14T22:19:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/14/changing-nstimezone</id>
+    <content type="html"><![CDATA[<p>To convert a NSDate into another Timezone</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSCalendarUnit</span> <span class="n">val</span> <span class="o">=</span> <span class="n">NSCalendarUnitYear</span><span class="o">|</span><span class="n">NSCalendarUnitHour</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">NSCalendar</span><span class="o">*</span> <span class="n">dupCal</span> <span class="o">=</span>  <span class="p">[[</span><span class="n">NSCalendar</span> <span class="n">currentCalendar</span><span class="p">]</span> <span class="n">copy</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">dupCal</span> <span class="nl">setTimeZone:</span><span class="n">toTimeZone</span><span class="p">];</span> <span class="c1">// setting to a different timezone</span>
+</span><span class='line'>    <span class="n">NSDateComponents</span> <span class="o">*</span><span class="n">dupComponents</span> <span class="o">=</span> <span class="p">[</span><span class="n">dupCal</span> <span class="nl">components:</span><span class="n">val</span> <span class="nl">fromDate:</span><span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">]];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// print out the time and check</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%ld&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)[</span><span class="n">dupComponents</span> <span class="n">hour</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Timezones in objective-c]]></title>
@@ -679,43 +709,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 <li><p>From Pythonbrew</p></li>
 <li><p>From conda</p></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[pandas - dateutil.parser import error]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error/"/>
-    <updated>2014-01-03T21:24:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/03/pandas-dateutil-dot-parser-import-error</id>
-    <content type="html"><![CDATA[<p>Try to run <code>import pandas</code> in python. Encountered this:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span>
-</span><span class='line'><span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">hashtable</span><span class="p">,</span> <span class="n">tslib</span><span class="p">,</span> <span class="n">lib</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;tslib.pyx&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="n">init</span> <span class="n">pandas</span><span class="o">.</span><span class="n">tslib</span> <span class="p">(</span><span class="n">pandas</span><span class="o">/</span><span class="n">tslib</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">48782</span><span class="p">)</span>
-</span><span class='line'><span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Fixed by running</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install python-dateutil
-</span></code></pre></td></tr></table></div></figure>
-
-
 
 ]]></content>
   </entry>
