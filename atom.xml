@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-15T10:44:59+11:00</updated>
+  <updated>2014-02-15T18:15:06+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -116,6 +116,23 @@ MST America/Denver
 PHT Asia/Manila
 WET Europe/Lisbon
 </code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[chastised by a CoreFoundation class]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class/"/>
+    <updated>2014-02-12T10:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class</id>
+    <content type="html"><![CDATA[<p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
 ]]></content>
   </entry>
   
@@ -689,27 +706,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 <p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p></blockquote>
 
 <p><em>from &lsquo;Moorad Choudhry &ndash; Fixed Income Securities and Derivatives Handbook (Analysis and Valuation)&rsquo;</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[conda and ipython]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/03/conda-and-ipython/"/>
-    <updated>2014-01-03T23:01:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/03/conda-and-ipython</id>
-    <content type="html"><![CDATA[<p>It is a follow-up on <a href="http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
-
-<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
-
-<p>Now I have four set of python runtime installed on my MBP:</p>
-
-<ul>
-<li><p>From Apple</p></li>
-<li><p>From Homebrew</p></li>
-<li><p>From Pythonbrew</p></li>
-<li><p>From conda</p></li>
-</ul>
-
 ]]></content>
   </entry>
   

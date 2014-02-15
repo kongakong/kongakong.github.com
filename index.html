@@ -238,6 +238,50 @@ WET Europe/Lisbon
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">Chastised by a CoreFoundation Class</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-12T10:50:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/02/11/missing-the-viewdidload-event/">Missing the viewDidLoad Event</a></h1>
     
     
@@ -342,49 +386,6 @@ WET Europe/Lisbon
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll Is Not Called</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-03T22:09:00+11:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
-
-<ul>
-<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
-<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
-<li><p>Is Autolayout on (if you use storyboard)?</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -408,15 +409,15 @@ WET Europe/Lisbon
       </li>
     
       <li class="post">
+        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll is not called</a>
       </li>
     
   </ul>

@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Tried to install erlang. Got this error message $ brew install erlang
+==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/31/p-15045964017/">Brew Symlink Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-31T09:01:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tried to install erlang. Got this error message</p>
+
+<pre><code>$ brew install erlang
+==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz
+######################################################################## 100.0%
+==&gt; Pouring erlang-R14B04.bottle.tar.gz
+ln: liberts_r.a: Permission denied
+Error: The linking step did not complete successfully
+The formula built, but is not symlinked into /usr/local
+You can try again using `brew link erlang'
+==&gt; Summary
+/usr/local/Cellar/erlang/R14B04: 6978 files, 261M
+</code></pre>
+
+<p>Tried the following but did not work</p>
+
+<pre><code>$ brew cleanup erlang; brew unlink erlang; brew link erlang
+Removing /usr/local/Cellar/erlang/R14B02...
+Removing /usr/local/Cellar/erlang/R14B03...
+Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
+</code></pre>
+
+<p>sudo unlink and link fixed the issue finally</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -247,94 +305,6 @@ autom4te: /usr/bin/gm4 failed with exit status: 63
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913221859/">A Simple Example of Using Hg</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T21:54:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ hg pull
-</span><span class='line'>pulling from http://hg.python.org/cpython
-</span><span class='line'>searching for changes
-</span><span class='line'>adding changesets
-</span><span class='line'>adding manifests
-</span><span class='line'>adding file changes
-</span><span class='line'>added 3265 changesets with 6204 changes to 1117 files
-</span><span class='line'>(run ‘hg update’ to get a working copy)
-</span><span class='line'>
-</span><span class='line'>$ hg summary
-</span><span class='line'>parent: 70924:d1d5a7392e39 
-</span><span class='line'>(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
-</span><span class='line'>branch: default
-</span><span class='line'>commit: 3 unknown (clean)
-</span><span class='line'>update: 2705 new changesets (update)
-</span><span class='line'>
-</span><span class='line'>$ hg update
-</span><span class='line'>991 files updated, 0 files merged, 12 files removed, 0 files unresolved
-</span><span class='line'>
-</span><span class='line'>$ hg summary
-</span><span class='line'>parent: 74189:456b02030100 tip
-</span><span class='line'>don’t fail if CLOEXEC doesn’t exist
-</span><span class='line'>branch: default
-</span><span class='line'>commit: 3 unknown (clean)
-</span><span class='line'>update: (current)</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/84/">&larr; Older</a>
@@ -360,15 +330,15 @@ autom4te: /usr/bin/gm4 failed with exit status: 63
       </li>
     
       <li class="post">
+        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll is not called</a>
       </li>
     
   </ul>

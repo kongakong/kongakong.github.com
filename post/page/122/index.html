@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Don’t think anyone will seriously argue against the usefulness of namespace. It is also mentioned that we can use struct to simulate the namespace &hellip;">
+  <meta name="description" content="To disallow an operation on your object class, you can 1) declare the function as private 2) do not provide the implementation (if called, caused &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,46 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To disallow an operation on your object class, you can</p>
+
+<p>1) declare the function as <em>private</em></p>
+
+<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -218,52 +258,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172106672/">Item 23: Don&#8217;t Try to Return a Reference When You Must Return an Object</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-04T20:55:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Example:</em></p>
-
-<p><code>operator*</code> and <code>operator+</code> should return a new object instead of a reference. The latter approach will introduce problem such as memory leak</p>
-
-<p><em>Additional note:</em></p>
-
-<p>Avoid overloading short-circuiting operators: x || y or x &amp;&amp; y. The overloaded versions of these do not short-circuit — they evaluate both operands even if the left-hand operand “determines” the outcome, so that confuses users.</p>
-
-<p>From</p>
-
-<p><a href="http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9">C++ FAQ</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/123/">&larr; Older</a>
@@ -289,15 +283,15 @@
       </li>
     
       <li class="post">
+        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll is not called</a>
       </li>
     
   </ul>

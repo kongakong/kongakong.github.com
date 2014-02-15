@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NSCalendar | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/nscalendar/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-02-15T18:15:06+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[chastised by a CoreFoundation class]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class/"/>
+    <updated>2014-02-12T10:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class</id>
+    <content type="html"><![CDATA[<p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
+]]></content>
+  </entry>
+  
+</feed>

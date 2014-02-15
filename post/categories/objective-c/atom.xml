@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-15T10:44:59+11:00</updated>
+  <updated>2014-02-15T18:15:06+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -134,6 +134,23 @@ WET Europe/Lisbon
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[chastised by a CoreFoundation class]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class/"/>
+    <updated>2014-02-12T10:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class</id>
+    <content type="html"><![CDATA[<p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
     <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
     <updated>2014-02-11T08:12:00+11:00</updated>
@@ -201,40 +218,6 @@ WET Europe/Lisbon
 <blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
 
 <p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mixing C++ and Objective-c in XCode]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/"/>
-    <updated>2014-02-02T21:04:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode</id>
-    <content type="html"><![CDATA[<p>The c++ header keeps getting a compiler error:</p>
-
-<pre><code>'iostream' file not found 
-</code></pre>
-
-<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">ifdef</span> <span class="n">__cplus</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">endif</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
