@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Some useful links: http://css-tricks.com/which-responsive-images-solution-should-you-use/ https://github.com/scottjehl/picturefill http://www. &hellip;">
+  <meta name="description" content="Do not use timer to control animation frame refresh in html5. Use RequestAnimationFrame instead.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -30,6 +31,25 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+<!-- Start of StatCounter Code for Netscape Composer -->
+<script type="text/javascript">
+var sc_project=9614190; 
+var sc_invisible=1; 
+var sc_security="867743ed"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9614190/0/867743ed/1/"
+alt="hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Netscape Composer -->
+
   
 
 </head>
@@ -65,6 +85,42 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -268,66 +324,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/10/resize-images-in-a-so-post/">Resize Images in a Stackoverflow Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-10T14:18:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Markdown does not allow us to specify the size of an link image.</p>
-
-<p>To get around this restriction it is what I did:</p>
-
-<h1>1. Upload an image as usual</h1>
-
-<p>Stackoverflow will add these lines to your post:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>2. Change the above to an image tag</h1>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
-
-
-<p>Done</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -345,6 +341,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/15/conda-update/">conda update</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
       </li>
     
@@ -358,10 +358,6 @@
     
       <li class="post">
         <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
       </li>
     
   </ul>

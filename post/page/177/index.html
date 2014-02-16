@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Is it the equivalent of segfault in unix or NPE in java? Anyway, having fun with it…
-">
+  <meta name="description" content="It turns out I was trying to send release message to a NSArray instance which was created using the class method arrayWithObjects: It is probably a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,6 +30,25 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+<!-- Start of StatCounter Code for Netscape Composer -->
+<script type="text/javascript">
+var sc_project=9614190; 
+var sc_invisible=1; 
+var sc_security="867743ed"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9614190/0/867743ed/1/"
+alt="hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Netscape Composer -->
+
   
 
 </head>
@@ -66,6 +84,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/09/14/p-1119099362/">EXC_BAD_ACCESS Resolved</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
+
+<p>It is probably a wrong conclusion, but commenting out the line works.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -221,44 +277,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/05/p-1069081574/">Optional Methods</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-05T20:53:00+10:00" pubdate data-updated="true">Sep 5<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just learn another feature of objective-c: optional methods.</p>
-
-<p>Use keyword <em>@optional</em> for declaration.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/178/">&larr; Older</a>
@@ -276,6 +294,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/15/conda-update/">conda update</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
       </li>
     
@@ -289,10 +311,6 @@
     
       <li class="post">
         <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
       </li>
     
   </ul>

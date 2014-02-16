@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Example: It is often remarked that Churchill had acolytes, but few intimates.
-">
+  <meta name="description" content="The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application. 1 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -31,6 +30,25 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+<!-- Start of StatCounter Code for Netscape Composer -->
+<script type="text/javascript">
+var sc_project=9614190; 
+var sc_invisible=1; 
+var sc_security="867743ed"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9614190/0/867743ed/1/"
+alt="hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Netscape Composer -->
+
   
 
 </head>
@@ -66,6 +84,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/03/19/p-19567046257/">EXC_BAD_ACCESS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-19T20:30:00+11:00" pubdate data-updated="true">Mar 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>    @try {
+</span><span class='line'>        CFGetTypeID(NULL);
+</span><span class='line'>    }  @catch   (NSException * e) {
+</span><span class='line'>            NSLog(@"Exception: %@", e);
+</span><span class='line'>    }
+</span><span class='line'>    @finally {
+</span><span class='line'>            NSLog(@"finally");
+</span><span class='line'>    }
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -219,50 +298,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/03/15/p-19340098717/">Disappointed at MS Powershell</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-15T22:05:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.</p>
-
-<p>So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.</p>
-
-<p>Some COM calls to the excel workbook object just failed when it works fine in vbs or python  with win32com.</p>
-
-<p>The lack of string manipulation functions is not helping either, especially the completion comes from scripting languages like python.</p>
-
-<p>Powershell is probably a good tool to interface with .Net framework and to handle Windows admin task. But for me it is not a language of first choice.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/72/">&larr; Older</a>
@@ -280,6 +315,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/15/conda-update/">conda update</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
       </li>
     
@@ -293,10 +332,6 @@
     
       <li class="post">
         <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/09/dispatch-once/">dispatch_once</a>
       </li>
     
   </ul>
