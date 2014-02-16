@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Having some simple fun with gambit-scheme
-">
+  <meta name="description" content="Finally figure out the back button title not set issue. That’s what I have been doing in the originating controller’s prepareForSegue method: It has &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,86 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24942635911/">Finally Figure Out the Back Button Title Not Set Issue.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T17:06:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally figure out the back button title not set issue.</p>
+
+<p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/11/p-24875240027/">For Some Reason I Cannot Set the Title of the &#8220;backBarButtonItem&#8220; of &#8220;navigationItem&#8220; Programmatically. I Can Only Set It in the InterfaceBuilder.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-11T18:33:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For some reason I cannot set the title of the <code>backBarButtonItem</code> of <code>navigationItem</code> programmatically. I can only set it in the InterfaceBuilder.</p>
+
+<p>Also it must be done in the controller that initiates the page transition</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -203,82 +282,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/09/p-24744300898/">Rational Trigonometry</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-09T23:58:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Rational%20Trigonometry">http://en.wikipedia.org/wiki/Rational_trigonometry</a></p>
-
-<p>Forget distance and angle</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/06/p-24534423672/">Quote of the Day</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-06T21:43:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>I am going to court next week. I have been selected for jury duty. It is kind of insane case: Six thousand ants dressed up as rice and robbed a Chinese restaurant. I don’t think they did it. I know a few of them and they won’t do anything like that</p></blockquote>
-
-<p>- Steven Wright</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/51/">&larr; Older</a>
@@ -296,6 +299,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
@@ -305,14 +316,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
   </ul>

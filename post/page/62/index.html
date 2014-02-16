@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It all starts with a comment on a online feedback section of a news article. Local councils in Australia have the power to approve or reject any &hellip;">
+  <meta name="description" content="&#8220;` $ brew install google-go
+/usr/local/bin/hg
+==> Cloning http://go.googlecode.com/hg/
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +87,93 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/05/p-22441352771/">Brew Install Google-go</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-05T22:19:00+10:00" pubdate data-updated="true">May 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>&#8220;`</p>
+
+<p>$ brew install google-go
+/usr/local/bin/hg
+==> Cloning</p>
+
+<p><a href="http://go.googlecode.com/hg/">http://go.googlecode.com/hg/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/05/p-22440295991/">Solution to the Pip Scipy Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-05T21:34:00+10:00" pubdate data-updated="true">May 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A follow up on my  last pip scipy woe. I think it is my answer:</p>
+
+<p><a href="http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy">http://www.thisisthegreenroom.com/2011/installing-python-numpy-scipy-matplotlib-and-ipython-on-lion/#numpy</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install gfortran
+</span><span class='line'>pip install -e git+https://github.com/scipy/scipy#egg=scipy-dev
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -258,166 +348,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/03/p-22316283422/">Apparently My First Attempt to Run ‘./bin/pip Install Scipy’ in Virtualenv on OSX Lion Has Failed With Bunch of Error Messages. But Second Run Just Miraculously Fine.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-03T21:40:00+10:00" pubdate data-updated="true">May 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Apparently my first attempt to run ‘./bin/pip install scipy’ in  virtualenv on OSX lion has failed with bunch of error messages. But second run just miraculously fine.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>gfortran:f77: scipy/sparse/linalg/eigen/arpack/ARPACK/FWRAPPERS/veclib_cabi_f.f
-</span><span class='line'>
-</span><span class='line'>ar: adding 50 object files to build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cgetv0.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaitr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnapps.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaup2.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cnaupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneigh.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cneupd.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(cngets.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>/usr/bin/ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(csortc.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/02/p-22251177837/">Scipy and Pybrain</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-02T21:33:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>./bin/pip install scipy</code> failed. It is a dependency of pybrain</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>...
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zvout.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(clahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(dlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(slahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(zlahqr.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>ranlib: archive member: build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a(veclib_cabi_f.o) cputype (7) does not match previous archive members cputype (16777223) (all members must match)
-</span><span class='line'>
-</span><span class='line'>error: Command "ranlib build/temp.macosx-10.4-x86_64-2.7/libarpack_scipy.a" failed with exit status 1
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/63/">&larr; Older</a>
@@ -435,6 +365,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
@@ -444,14 +382,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
   </ul>

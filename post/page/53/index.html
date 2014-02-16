@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Another literary detour.
-">
+  <meta name="description" content="Cause The UITableViewController does not ‘live’ in a UINavigationController Solution Because I am using storyboard, the solution is slightly &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,100 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/28/p-23922752806/">Problem: Cannot Use &#8216;Push&#8217; Segue Between a UITableview Cell and Another Controller</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T20:19:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Cause</em></p>
+
+<p>The UITableViewController does not ‘live’ in a UINavigationController</p>
+
+<p><em>Solution</em></p>
+
+<p>Because I am using storyboard, the solution is slightly different from non-storyboard project.</p>
+
+<p>Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.</p>
+
+<p>To fix the problem, I have to</p>
+
+<p>1) drag a UINavigationController in between the TabBarController and the First Custom Controller.</p>
+
+<p>2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller</p>
+
+<p>3) Add a relationship between the TabBarController and the new UINavigationController</p>
+
+<p>4) Add a relationship between the new UINavigationController and the new First Custom Controller</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/28/p-23921458660/">Frame vs Bound</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T19:29:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Frame%20vs%20Bound">http://stackoverflow.com/a/1210141/58129</a></p>
+
+<p>The <em>frame</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.</p>
+
+<p>The <em>bounds</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -207,94 +300,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
-
-<p>It totally throws me off because nothing is wrong on that line.</p>
-
-<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
-
-<p>But it did not fix the problem.</p>
-
-<p>Eventually I undo the last change I made, which is</p>
-
-<p>and it works again.</p>
-
-<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788398195/">When I Select a Prototype Cell, It Does Not Follow Segue and Show the Destination Controller, as Defined in the Storyboard Above.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T19:47:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.</p>
-
-<p>The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue.</p>
-
-<p>Once I change the segue type to ‘modal’, it works.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/54/">&larr; Older</a>
@@ -312,6 +317,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
@@ -321,14 +334,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
   </ul>

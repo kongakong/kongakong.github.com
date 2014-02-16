@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Classic example of why sometimes macro is a bad idea:
+  <meta name="description" content="Advantage of iostream: type safety iostream vs iostream.h: isostream has its own namespace.
 ">
   
 
@@ -85,6 +85,88 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5997010665/">Item 2: Prefer <iostream> to <stdio.h></a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T20:20:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Advantage of <em>iostream</em>: type safety</p>
+
+<p>iostream vs iostream.h: isostream has its own namespace.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5978423359/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T07:47:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Summary:</p>
+
+<p><em>Virtual functions</em> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p><em>operator>></em> and <em>operator&lt;&lt;</em> are never members. If f is operator» or operator«, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -196,78 +278,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961968377/">[http://en.wikipedia.org/wiki/Alexander%27s_Star](Alexander’s Star)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T21:48:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Alexander%E2%80%99s%20Star">http://en.wikipedia.org/wiki/Alexander%27s_Star</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/133/">&larr; Older</a>
@@ -285,6 +295,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
@@ -294,14 +312,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
   </ul>

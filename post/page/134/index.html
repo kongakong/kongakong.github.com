@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="From http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754
+  <meta name="description" content="Boby guard technique 1) Side-by-side/hand holding/hand on shoulder 2) From behind (palm strike or knee back attack + head turn) 3) From side
 ">
   
 
@@ -85,6 +85,104 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/28/p-5898731686/">Boby Guard Technique</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-28T01:21:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Boby guard technique</p>
+
+<p>1) Side-by-side/hand holding/hand on shoulder</p>
+
+<p>2) From behind (palm strike or knee back attack + head turn)</p>
+
+<p>3) From side</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/27/p-5886593746/">Stupid Mistake</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-27T12:52:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My app crashed for no reason.</p>
+
+<p>Turns out it is my mistake:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nl">addSublayer:</span><span class="n">myLayer</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">myLayer</span> <span class="n">dealloc</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>when I mean to do it</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nl">addSublayer:</span><span class="n">myLayer</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">myLayer</span> <span class="n">release</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -200,94 +298,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5810996367/">It Is Like You Want to Be a Nun Because You Saw a Flying Nun.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T07:42:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is like you want to be a nun because you saw a flying nun.</p>
-
-<p>Edward Conlon, author of <em>Blue Blood</em>, on people wanting to join CSI after watching the TV show</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/24/p-5797170054/">Earn Another Experience Point</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-24T20:12:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Wrote up a simple test module code (simply called ‘test’), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<em>r</em>) and repayment periods (<em>n</em>).</p>
-
-<p>When I compile the module, I get this error message:</p>
-
-<p><code>Warning: this expression will fail with a 'badarith' exception</code></p>
-
-<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
-
-<p>Now I get another error message:</p>
-
-<p>&#8220;</p>
-
-<p>Turns out the function declaration is <code>mp(B, r, n)</code>.</p>
-
-<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/135/">&larr; Older</a>
@@ -305,6 +315,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
@@ -314,14 +332,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
   </ul>

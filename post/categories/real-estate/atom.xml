@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: real_estate | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/real-estate/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-02-17T05:15:02+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Land tax is adjustable]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/16/land-tax-is-adjustable/"/>
+    <updated>2014-02-16T17:10:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/16/land-tax-is-adjustable</id>
+    <content type="html"><![CDATA[<p>if <strong>Land Tax Adjustable</strong> is checked, it means the vendor seeks reimbursement of land tax from the buyer</p>
+]]></content>
+  </entry>
+  
+</feed>

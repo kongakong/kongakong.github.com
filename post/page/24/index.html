@@ -9,10 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="… Simply follow the link. e.g. 1
-2
-3 ls -l `which erl`
-lrwxr-xr-x 1 antkong admin 29 29 Apr 23:49 /usr/local/bin/erl -&gt; ../Cellar/erlang/R16B/bin/ &hellip;">
+  <meta name="description" content="Andres Lozano: Parkinson&rsquo;s, depression and the switch that might turn them off Deep brain stimulation is becoming very precise. This technique &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +84,121 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/09/p-49957105079/">TED: Parkinson&#8217;s, Depression and the Switch That Might Turn Them Off - Andres Lozano (2013)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-09T07:02:00+10:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.ted.com/talks/andres_lozano_parkinson_s_depression_and_the_switch_that_might_turn_them_off.html">Andres Lozano: Parkinson&rsquo;s, depression and the switch that might turn them off</a></p>
+
+<p>Deep brain stimulation is becoming very precise. This technique allows surgeons to place electrodes in almost any area of the brain, and turn them up or down — like a radio dial or thermostat — to correct dysfunction. Andres Lozano offers a dramatic look at emerging techniques, in which a woman with Parkinson’s instantly stops shaking and brain areas eroded by Alzheimer’s are brought back to life. (Filmed at TEDxCaltech.)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/08/p-49924605254/">XPath, Python and Erlang</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-08T20:00:00+10:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just feel that python is easier for XML manipulation.</p>
+
+<p>e.g.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;digg-science-rss1.xml&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Very concise.</p>
+
+<p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>      #xmlText{
+</span><span class='line'>          parents = [{item,16},{channel,2},{rss,1}],
+</span><span class='line'>          pos = 3,language = [],value = "\n   ",type = text},
+</span><span class='line'>      #xmlElement{
+</span><span class='line'>          name = link,expanded_name = link,nsinfo = [],
+</span><span class='line'>          namespace = 
+</span><span class='line'>              #xmlNamespace{
+</span><span class='line'>                  default = [],
+</span><span class='line'>                  nodes =
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -209,82 +321,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/01/p-49296939249/">Trying Out Cocoapods</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-01T06:45:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The installation failed at the end</p>
-
-<p>It failed because I did not install the command line tools in XCode. After installing the tool, the gem command ran fine.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/04/30/p-49203298223/">Emacs Fu 2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-30T07:12:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/erlware-deprecated/erlware-mode">erlware-mode</a> is deprecated.</p>
-
-<p>Use <code>erlang-mode</code> in erlang distribution instead</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/25/">&larr; Older</a>
@@ -302,6 +338,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
@@ -311,14 +355,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">chastised by a CoreFoundation class</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/11/missing-the-viewdidload-event/">missing the viewDidLoad event</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-16T15:41:34+11:00</updated>
+  <updated>2014-02-17T05:15:02+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[capture part of ios screen as image]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/17/capture-part-of-ios-screen-as-image/"/>
+    <updated>2014-02-17T04:38:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/17/capture-part-of-ios-screen-as-image</id>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">theCell</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
+</span><span class='line'><span class="p">[</span><span class="n">theCell</span><span class="p">.</span><span class="n">layer</span> <span class="nl">renderInContext:</span><span class="n">UIGraphicsGetCurrentContext</span><span class="p">()];</span>
+</span><span class='line'><span class="n">UIImage</span> <span class="o">*</span><span class="n">renderedCellImage</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
+</span><span class='line'><span class="n">UIGraphicsEndImageContext</span><span class="p">();</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><a href="http://stackoverflow.com/a/13656612/58129">source</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Changing NSTimeZone]]></title>
@@ -201,22 +228,6 @@ WET Europe/Lisbon
 <blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
 
 <p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[scrollViewDidScroll is not called]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called/"/>
-    <updated>2014-02-03T22:09:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called</id>
-    <content type="html"><![CDATA[<p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
-
-<ul>
-<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
-<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
-<li><p>Is Autolayout on (if you use storyboard)?</p></li>
-</ul>
-
 ]]></content>
   </entry>
   
