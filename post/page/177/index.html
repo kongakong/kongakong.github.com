@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The model used to open the store is incompatible with the one used to create the store Killed the main thread
-">
+  <meta name="description" content="Python 2.5.5 uses the -Wno-long-double c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6 Fixed the configure.in and rerun &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,84 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1263713208/">-Wno-long-double</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T06:07:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Python 2.5.5 uses the <code>-Wno-long-double</code> c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6</p>
+
+<p>Fixed the configure.in and rerun autoconf. Let&rsquo;s see if it will work.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/06/p-1250836116/">ActiveMQ Build Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-06T07:42:00+11:00" pubdate data-updated="true">Oct 6<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Try to build it, but hit this error:</p>
+
+<p><code>The system is out of resources.
+Consult the following stack trace for details.
+java.lang.OutOfMemoryError: Java heap space</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -199,82 +276,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1118971148/">EXC_BAD_ACCESS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T13:29:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Is it the equivalent of <em>segfault</em> in unix or <em>NPE</em> in java?</p>
-
-<p>Anyway, having <em>fun</em> with it…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/12/p-1108382072/">Abstract Base Class Support in Objective-c</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-12T19:42:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Basically, there is no support of Abstract base class in objective-c.</p>
-
-<p>The handling is similar to what you can do in python (pre-2.6): inside the supposedly abstract class method throws an exception.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/178/">&larr; Older</a>
@@ -292,6 +293,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
@@ -301,14 +310,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
       </li>
     
   </ul>

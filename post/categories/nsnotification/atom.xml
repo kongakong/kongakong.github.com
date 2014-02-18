@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: NSNotification | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/nsnotification/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-02-19T02:12:48+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[NSNotification and view controller]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller/"/>
+    <updated>2014-02-19T02:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller</id>
+    <content type="html"><![CDATA[<p>I have created a number of custom UIViewController for UICollectionViewCell programmatically. Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere.</p>
+
+<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have tried a few things but my custom UIViewController just do not receive any notification at all.</p>
+
+<p>It turns out it is because the controllers instances have gone out of scope. In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers.</p>
+]]></content>
+  </entry>
+  
+</feed>

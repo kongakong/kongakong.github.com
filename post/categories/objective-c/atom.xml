@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-17T05:15:02+11:00</updated>
+  <updated>2014-02-19T02:12:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Some objective-c note-to-self]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self/"/>
+    <updated>2014-02-19T02:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self</id>
+    <content type="html"><![CDATA[<p>To find the number of items in a <code>NSArray</code> use</p>
+
+<pre><code>[array count];
+</code></pre>
+
+<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NSNotification and view controller]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller/"/>
+    <updated>2014-02-19T02:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller</id>
+    <content type="html"><![CDATA[<p>I have created a number of custom UIViewController for UICollectionViewCell programmatically. Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere.</p>
+
+<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have tried a few things but my custom UIViewController just do not receive any notification at all.</p>
+
+<p>It turns out it is because the controllers instances have gone out of scope. In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[capture part of ios screen as image]]></title>
@@ -157,74 +184,6 @@ MST America/Denver
 PHT Asia/Manila
 WET Europe/Lisbon
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[chastised by a CoreFoundation class]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class/"/>
-    <updated>2014-02-12T10:50:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class</id>
-    <content type="html"><![CDATA[<p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
-
-<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
-An exception has been avoided for now.
-A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
-Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
-</code></pre>
-
-<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
-    <updated>2014-02-11T08:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event</id>
-    <content type="html"><![CDATA[<p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'><span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
-</span><span class='line'><span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
-</span><span class='line'>                                              <span class="nl">owner:</span><span class="n">controller</span>
-</span><span class='line'>                                            <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
-
-<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
-</span><span class='line'>                                        <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

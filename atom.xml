@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-17T05:15:02+11:00</updated>
+  <updated>2014-02-19T02:12:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Some objective-c note-to-self]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self/"/>
+    <updated>2014-02-19T02:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self</id>
+    <content type="html"><![CDATA[<p>To find the number of items in a <code>NSArray</code> use</p>
+
+<pre><code>[array count];
+</code></pre>
+
+<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NSNotification and view controller]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller/"/>
+    <updated>2014-02-19T02:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller</id>
+    <content type="html"><![CDATA[<p>I have created a number of custom UIViewController for UICollectionViewCell programmatically. Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere.</p>
+
+<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have tried a few things but my custom UIViewController just do not receive any notification at all.</p>
+
+<p>It turns out it is because the controllers instances have gone out of scope. In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[capture part of ios screen as image]]></title>
@@ -511,106 +538,6 @@ receive 6-month LIBOR
 
 
 <p>Done</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[firefox build failure on osx]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/09/firefox-build-failure-on-osx/"/>
-    <updated>2014-01-09T21:08:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/09/firefox-build-failure-on-osx</id>
-    <content type="html"><![CDATA[
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found
-</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
-</span><span class='line'> 0:12.72          ^
-</span><span class='line'> 0:12.72 1 error generated.
-</span><span class='line'> 0:12.72 configure: failed program was:
-</span><span class='line'> 0:12.72 #line 19591 "configure"
-</span><span class='line'> 0:12.72 #include "confdefs.h"
-</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
-</span><span class='line'> 0:12.73 int main() {
-</span><span class='line'> 0:12.73  struct ethtool_cmd cmd; cmd.speed_hi = 0;
-</span><span class='line'> 0:12.73 ; return 0; }
-</span><span class='line'> 0:12.73 configure:19790: checking __attribute__ ((aligned ())) support
-</span><span class='line'> 0:12.73 configure:19807: /usr/bin/clang -c  -std=gnu99 -fno-strict-aliasing -fno-math-errno -pthread -DNO_X11 -Werror -Qunused-arguments  conftest.c 1>&5
-</span><span class='line'> 0:12.73 configure: error: yasm is a required build tool for this architecture when webm is enabled. You may either install yasm or --disable-webm (which disables the WebM video format). See https://developer.mozilla.org/en/YASM for more details.
-</span><span class='line'> 0:12.73 *** Fix above errors and then restart with               "/Applications/Xcode.app/Contents/Developer/usr/bin/make -f client.mk build"
-</span><span class='line'> 0:12.73 make[2]: *** [configure] Error 1
-</span><span class='line'> 0:12.73 make[1]: *** [obj-x86_64-apple-darwin13.0.2/Makefile] Error 2
-</span><span class='line'> 0:12.73 make: *** [build] Error 2</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Basically installing yasm fixes this problem. The &lsquo;linux/ethtool.h&rsquo; fatal error seems to be irrevelant.</p>
-
-<p>Here some build statistic (<code>mach resource-usage</code>):</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Wall Time (s)   1230.61
-</span><span class='line'>Start Date  2014-01-09T10:24:38.582Z
-</span><span class='line'>End Date    2014-01-09T10:45:09.191Z
-</span><span class='line'>CPU %   93.85
-</span><span class='line'>Write Bytes 4659960320
-</span><span class='line'>Read Bytes  1421654016
-</span><span class='line'>Write Time  1749179
-</span><span class='line'>Read Time   509074</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dependency on MathJax.js]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js/"/>
-    <updated>2014-01-06T19:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js</id>
-    <content type="html"><![CDATA[<p>By default, ipython notebook will use MathJax on a CDN</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython notebook
-</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
-</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
-</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To download and install the mathjax.js locally, we can run</p>
-
-<pre><code>from IPython.external.mathjax import install_mathjax
-install_mathjax()
-</code></pre>
 ]]></content>
   </entry>
   

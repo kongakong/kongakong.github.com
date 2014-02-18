@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Easy
-">
+  <meta name="description" content="Encountered this error when adding core data support to my ios project 1
+Receiver 'NSManagedObjectContext' for class message is a forward declaration &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +85,84 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/05/p-28758435068/">Encountered This Error When Adding Core Data Support to My Ios Project</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T19:50:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Encountered this error when adding core data support to my ios project</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Receiver 'NSManagedObjectContext' for class message is a forward declaration.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/05/p-28755939075/">Google Search Intext: Operator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T18:24:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.powersearchingwithgoogle.com/class?class=3&amp;lesson=5">Google search intext: operator</a>]</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -202,165 +280,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/03/p-28563611964/">The Ferguson Principle</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-03T03:03:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Three things you must ask yourself before you say anything:</p>
-
-<ul>
-<li><p>Does This Need to Be Said</p></li>
-<li><p>Does This Need to Be Said by Me</p></li>
-<li><p>Does This Need to Be Said by Me NOW</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/02/p-28548986312/">Sometimes It Is Quite Fun to Answer Some Questions in Stackoverflow: You Can Help Someone Seeking Answer and You May Also Learn a New Thing or Two Yourself in the Process.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-02T19:57:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sometimes it is quite fun to answer some questions in Stackoverflow: you can help someone seeking answer and you may also learn a new thing or two yourself in the process.</p>
-
-<p>This is one such example:</p>
-
-<p><a href="http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.">http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.</a></p>
-
-<p>Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example “assesses” has the substring “sses” 2 times.</p>
-
-<p>It is a very simple question, but there is still something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.</p>
-
-<p>My proposed solution is simply an improved version of OP’s code.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
-</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">if</span> <span class="n">location</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span><span class='line'>                <span class="k">return</span> <span class="mi">0</span> <span class="c"># none whatsoever</span>
-</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'>                <span class="k">while</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">):</span>
-</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span><span class='line'>                   <span class="k">if</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class='line'>                      <span class="k">break</span>
-</span><span class='line'>                   <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is a even shorter version which takes advantage of python’s flexible comparison syntax:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
-</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-</span><span class='line'>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">)):</span>
-</span><span class='line'>                   <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/37/">&larr; Older</a>
@@ -378,6 +297,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
@@ -387,14 +314,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-17T05:15:02+11:00</updated>
+  <updated>2014-02-19T02:12:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NSNotification and view controller]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller/"/>
+    <updated>2014-02-19T02:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller</id>
+    <content type="html"><![CDATA[<p>I have created a number of custom UIViewController for UICollectionViewCell programmatically. Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere.</p>
+
+<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have tried a few things but my custom UIViewController just do not receive any notification at all.</p>
+
+<p>It turns out it is because the controllers instances have gone out of scope. In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[capture part of ios screen as image]]></title>
@@ -208,26 +221,6 @@ WET Europe/Lisbon
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dispatch_once]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/09/dispatch-once/"/>
-    <updated>2014-02-09T21:22:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/09/dispatch-once</id>
-    <content type="html"><![CDATA[<p>Wanted to declare and initialise a static variable in a .m file.</p>
-
-<p>Objective-c compiler does not like it, and raise this error message:</p>
-
-<pre><code>Initializer element is not a compile-time constant
-</code></pre>
-
-<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
-
-<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
-
-<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
 ]]></content>
   </entry>
   

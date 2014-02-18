@@ -9,7 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I could not create a write conflict situation. It turns out it is because I did not set the allow_multi property Here is the command line: curl -i - &hellip;">
+  <meta name="description" content="The identify command from ImageMagick can tell us the size of an image file e.g. 1
+2
+$ identify source/images/grab.png source/images/grab.png PNG &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +86,99 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/27/get-image-file-size/">Get Image File Size</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-27T07:28:00+11:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
+
+<p>e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ identify source/images/grab.png 
+</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-12T22:28:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
+
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
+
+<ul>
+<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
+</ul>
+
+
+<p>Source: by Sam Elliott in the mailing list</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -207,80 +302,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/11/var-in-r/">Var in R</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-11T04:47:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>var()</code> in R return sample variance (divide by N-1), not population (divide by N)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/">How to Make Riak Listen to IP Other Than Localhost</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-09T18:53:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By default a riak node will only listen to 127.0.0.1.</p>
-
-<p>Replace 127.0.0.1 with the host IP in app.config will solve this issue</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/15/">&larr; Older</a>
@@ -298,6 +319,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
@@ -307,14 +336,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
       </li>
     
   </ul>

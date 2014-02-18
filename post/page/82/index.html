@@ -9,14 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5 $ gcc-4.2
-i686-apple-darwin11-gcc-4.2.1: no input files
-$ gcc
-i686-apple-darwin11-llvm-gcc-4.2: no input files ">
+  <meta name="description" content="Python 3.3 build missing packages: Python build finished, but the necessary bits to build these modules were not found:
+_lzma ossaudiodev readline &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,6 +85,96 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/15/p-15878852372/">Python 3.3 Build Missing Package</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-15T20:38:00+11:00" pubdate data-updated="true">Jan 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Python 3.3 build missing packages:</p>
+
+<pre><code>Python build finished, but the necessary bits to build these modules were not found:
+_lzma              ossaudiodev        readline        
+spwd  
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/15/p-15874914919/">Problem Solved: Compiling Python 3.3 on Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-15T18:02:00+11:00" pubdate data-updated="true">Jan 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is a follow-up on a previous problem.</p>
+
+<p>Turns out this problem has been reported to python bug database:</p>
+
+<p><a href="http://bugs.python.org/issue13241">http://bugs.python.org/issue13241</a></p>
+
+<p>The llvm gcc compiler that comes with XCode 4.x is causing the problem.</p>
+
+<p>Do</p>
+
+<pre><code>CC=gcc-4.2; ./configure
+</code></pre>
+
+<p>will fix the issue.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -239,97 +323,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/01/10/p-15582485815/">The Contamination Principle Dictates That Every Nonlinear Security Commands Time Value, Positive if the Security Is Convex and Negative if It Is Concave.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-10T08:43:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The contamination principle dictates that every nonlinear security commands time value, positive if the security is convex and negative if it is concave.</p>
-
-<p>Nassim Taleb, <em>Dynamic Hedging</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/01/10/p-15568925380/">I Must Have Done Something Silly With the DYLD_LIBRARY_PATH. This Is an Error I Got When Running Svn</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-10T03:01:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>$ svn info 
-</span><span class='line'>dyld: Library not loaded: /usr/lib/libpq.5.dylib
-</span><span class='line'>  Referenced from: /usr/bin/svn
-</span><span class='line'>  Reason: image not found
-</span><span class='line'>Trace/BPT trap: 5
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Run it in a new shell and the problem goes away.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/83/">&larr; Older</a>
@@ -347,6 +340,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
@@ -356,14 +357,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
       </li>
     
   </ul>

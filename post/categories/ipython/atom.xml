@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ipython | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ipython/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-17T05:15:02+11:00</updated>
+  <updated>2014-02-19T02:12:48+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -136,7 +136,7 @@ install_mathjax()
 
 <p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
 
-<p><img src="images/ipython_inline.png" width="457" height="336"></p>
+<p><img src="/images/ipython_inline.png" width="457" height="336"></p>
 ]]></content>
   </entry>
   

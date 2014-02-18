@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Problem Definition: Euler Problem 4Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,78 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/31/8422387224070078892/">Little Erlang Exercise 4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-31T21:37:00+11:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=4">Euler Problem 4</a><br /><br />Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet handy.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />A palindromic number reads the same both ways. The largest palindrome<br />made from the product of two 2-digit numbers is 9009 = 91 x 99.<br /><br />Find the largest palindrome made from the product of two 3-digit numbers.<br />&rdquo;&ldquo;&rdquo;<br /><br />def isPalindromic(Num):<br />  &ldquo;&rdquo;&ldquo;<br />    For string reversal, pls check this url:<br /><br />      <a href="http://www.python.org/doc/2.3.5/whatsnew/section-slices.html">http://www.python.org/doc/2.3.5/whatsnew/section-slices.html</a><br /><br />  &rdquo;&ldquo;&rdquo;<br />  N = str(Num)<br />  l = len(N)<br />  div, mod = divmod(l, 2)<br />  if mod == 1: # odd<br />    fh = N[0:l/2]<br />    sh = N[1+l/2:]<br />    # print &ldquo;%s %s&rdquo; % (fh, sh)<br />  else:<br />    fh = N[0:l/2]<br />    sh = N[l/2:]<br />  return fh == sh[::-1]<br /><br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />  g = [ x * y for x in xrange(100, 999) for y in xrange(100, 999) ]<br />  print max(filter(lambda x: isPalindromic(x), g))<br /><br /><br /></code></pre><br /><br />Here comes an erlang version. In this rare occasion, erlang runs faster than python. It is probably because, first of all, the list comprehension I used in erlang produces a smaller list. Secondly the test of palindromic is more straightforward in the erlang version. <br /><br />I will revisit the python version, later, when I get a bit more time.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p4).<br />-export([findLargestProduct/0]).<br /><br />isPalindromic(N) when is_list(N) &ndash;><br />  N == lists:reverse(N).<br /><br />findLargestProduct() &ndash;><br />  List = [X * Y || X &lt;&ndash; lists:seq(100, 999),<br />                   Y &lt;&ndash; lists:seq(100, 999),<br />                   isPalindromic(integer_to_list(X * Y))],<br />  lists:max(List).<br /><br /><br /><br /></code><br /></pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/29/5132302946249986477/">Little Erlang Exercise 3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-29T22:09:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=3">Euler Problem 3</a><br /><br />Obviously, these scripts did not actually implement the solution. The problem statement required to pick the largest factor, but I just realized I had not done it.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br /><br />The prime factors of 13195 are 5, 7, 13 and 29.<br /><br />What is the largest prime factor of the number 317584931803?<br /><br />&rdquo;&ldquo;&rdquo;<br /><br />import sys<br /><br />primes = []<br /><br />def isprime(N):<br />  &ldquo;&rdquo;&ldquo;<br />    Original version use xrange, but caused<br /><br />    "OverflowException: long int too large to convert to int&rdquo;<br /><br />    when taking in a large number<br />   <br />    So, I have to use while loop to replace &ldquo;for i in xrange(2, N):&rdquo;<br /><br />    And in order to speed up the process, the prime calculation result<br />    is cached<br />  &ldquo;&rdquo;&ldquo;<br />  global primes<br /><br />  # we have already tested it<br />  if N in primes:<br />    return True<br /><br />  # use the prime results first <br />  for i in primes:<br />    if (N % i) == 0:<br />      return False<br /><br />  # now computation is required<br />  maxprime = 2<br />  if len(primes) > 0:<br />    maxprime = primes[-1]<br /><br />  i = maxprime + 1<br />  while i &lt; N:<br />    if (N % i) == 0:<br />      return False<br />    i = i + 1<br /><br />  primes.append(N)<br />  return True<br /><br /><br />def factorise(N):<br />  &rdquo;&ldquo;&rdquo;<br />    to factorise a integer<br />    <br />  &ldquo;&rdquo;&ldquo;<br />  # short cut<br />  global primes<br />  res = []<br /><br />  if N in primes:<br />    res.append(N)<br />    return res<br /><br />  # original algorithm<br />  idx = 2<br />  while idx &lt;= N:<br />    if isprime(idx):<br />      div, mod = divmod(N, idx)<br />      if mod == 0:<br />        res.append(idx) <br />        res.extend(factorise(div))<br />        break<br />    idx = idx + 1<br />  return res      <br /><br />if <strong>name</strong> == &rdquo;<strong>main</strong>&ldquo;:  <br />  print factorise(int(sys.argv[1]))<br /><br /><br /></code></pre><br /><br /><br /><br />Here comes the erlang version. There is some performance issue with this version. hopefully I would have some free time soon to improve the algorithm.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p3).<br />-export([isprime/1, factorise/1]).<br /><br />%%<br />%% prime means it is not divisible by any numbers other than 1 and itself.<br />%%<br />isprime(1) &ndash;><br /> false;<br /><br />isprime(2) &ndash;><br /> true;<br /><br />isprime(N) when N > 2 &ndash;><br /> Pid = self(),<br /> C = lists:seq(2, N &ndash; 1),<br /> process_flag(trap_exit, true),<br /> lists:map(fun(Div) &ndash;><br />               spawn_link(fun() &ndash;><br />                   test_if_divisible(Pid, N, Div)<br />                   end)<br />               end, C),<br /> isprime_poll(length&copy;).<br /><br /><br />%%<br />%% Message loop: to listen and receive message from voters<br />%%<br />isprime_poll(0) &ndash;><br /> true;<br />isprime_poll(NumVote) &ndash;><br /> receive<br />   {nondivisible, <em>} &ndash;><br />       isprime_poll(NumVote &ndash; 1);<br />   {divisible, </em>} &ndash;><br />       clean_mailbox(),<br />       false<br /> end.<br /><br />%%<br />%% To clear away any messages in mailbox<br />%%<br />clean_mailbox() &ndash;><br /> receive<br />   _ &ndash;><br />     clean_mailbox()<br />   after 0 &ndash;> ok<br /> end.<br /><br />%%<br />%%<br />%%<br />test_if_divisible(Pid, N, Div) &ndash;><br /> case N rem Div of<br />   0 &ndash;> Pid ! {divisible, Div};<br />   _ &ndash;> Pid ! {nondivisible, Div}<br /> end.<br /><br />%%%<br />%%% To factorise an integer &ndash; wrappers<br />%%%<br />factorise(N) when is_list(N) &ndash;><br />   N1 = string:to_integer(N),<br />   factorise(N1, 2, []);<br /><br />factorise(N) &ndash;><br />   factorise(N, 2, []).<br /><br />%%%<br />%%% To factorise an integer<br />%%%<br />factorise(N, Factor, Result) when Factor &lt; N+1  &ndash;><br /> case isprime(Factor) of<br />   true &ndash;><br />     if<br />       (N rem Factor) == 0 &ndash;><br />         %% io:format("Residual is 0 by Factor ~p~n&rdquo;, [Factor]),<br />         factorise(N div Factor, 2, [Factor|Result]);<br />       true &ndash;><br />         factorise(N, Factor + 1, Result)<br />     end;<br />   false &ndash;><br />       factorise(N, Factor + 1, Result)<br /> end;<br /><br />factorise(<em>, </em>, Result) &ndash;><br /> R = lists:reverse(Result),<br /> %% io:format(&ldquo;~p~n&rdquo;, [R]),<br /> R.<br /><br /></code></pre></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -194,79 +265,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/01/11/2642626887724082510/">Little Erlang Exercise 1 (Template)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T11:55:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><table style="color: rgb(51, 255, 51);font-family:courier new;background-color: rgb(0, 0, 0);"><br /><tr><td><br /></td></tr><br /></table>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/01/11/jst_7368608015436447918/">France and Deregulation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T02:55:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Very obviously, the martial status and love life of Sarkozy is taking the limelight, and mainstream media basically treat this story as if it belongs to entertainment section.<br /><br />Oh, well, that&rsquo;s why mainstream media is mainstream, isn&rsquo;t it?<br /><br />So, when I learn about the reform Sarkozy has brought to France, I was a bit surprised. News like this basically escape me, a news junkie.<br /><br />The following are some example:<br /><br /><ul><li>Abolished the 35 work hours/week restriction. On top of this, a worker does not have to pay tax on the income resulted from his/her overtime. Employer is also only required to pay a lesser contribution to pension and health care levy for the overtime payment.</li></ul><br /><ul><li>Simplify the tax laws: for some lower income family, a bill is passed so that a ceiling, 50%, is imposed on they have to pay to government. This does not include just income tax alone, but also covering various government fee and charge.</li></ul><br /><ul><li>Bills passed to weaken Union power</li></ul><br /><ul><li>Actively encourage the R&amp;D via financial incentive</li></ul><br /><span style="font-style: italic;">(It is reported by </span><span style="font-style: italic;">Bloomberg on the Economy</span><span style="font-style: italic;"> Podcast &ndash; Interview with </span><a style="font-style: italic;" href="http://media.bloomberg.com/bb/avfile/BBRECON/vrs30YCrvv3s.mp3">Philippe Farve</a><span style="font-style: italic;">, 21 Dec 07 )</span><br /><br />It seems like it is going to be a Generational Change in France. In the all these hype of BRIC (Bazil, Russia, India and China), people probably is not aware that Europe actually has a balanced and increasing vibrant economy.<br /><br />Next to do: get some quantitative data to verify the above view.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/197/">&larr; Older</a>
@@ -284,6 +282,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
@@ -293,14 +299,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/15/conda-update/">conda update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in objective-c</a>
       </li>
     
   </ul>
