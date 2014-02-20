@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-19T02:12:48+11:00</updated>
+  <updated>2014-02-20T18:38:13+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -32,11 +32,20 @@
     <link href="http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller/"/>
     <updated>2014-02-19T02:02:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller</id>
-    <content type="html"><![CDATA[<p>I have created a number of custom UIViewController for UICollectionViewCell programmatically. Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere.</p>
+    <content type="html"><![CDATA[<p>I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere. But I digress).</p>
 
-<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have tried a few things but my custom UIViewController just do not receive any notification at all.</p>
+<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have ensured that there is no typo in the my notification name (The name is defined in a header file). I have also make sure the notification is fired on the main thread, like so:</p>
 
-<p>It turns out it is because the controllers instances have gone out of scope. In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers.</p>
+<pre><code>dispatch_async(dispatch_get_main_queue(),^{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
+});
+</code></pre>
+
+<p>However my UIViewControllers still do not receive any notification at all.</p>
+
+<p>It turns out it is because the controllers instances have gone out of scope. I found out by putting a <code>NSLog</code> in the <code>dealloc</code> method. It proves that the controllers have gone out of scope.</p>
+
+<p> In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers. Will test if it has any adverse effect or not.</p>
 ]]></content>
   </entry>
   
