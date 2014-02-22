@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="var() in R return sample variance (divide by N-1), not population (divide by N)
-">
+  <meta name="description" content="When I tried to publish a blog post which contains some erlang code, I got this error message Liquid Exception: undefined method `[]' for nil: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,85 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-13T18:47:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
+
+<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
+</code></pre>
+
+<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn Something About /tmp on OSX Today</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-12T11:02:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
+
+<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -241,92 +319,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/03/git-tip-1/">Git Tip 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-03T21:21:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/02/why-we-should-love-repost/">Why We Should Love Repost</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-02T23:05:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
-
-<p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
-
-<p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
-
-<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
-
-<p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/16/">&larr; Older</a>
@@ -344,6 +336,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
       </li>
     
@@ -353,14 +353,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
   </ul>

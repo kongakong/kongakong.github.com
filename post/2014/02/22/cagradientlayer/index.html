@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CAGradientLayer - Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="1
+2
+3
+4 CAGradientLayer *gradient = [CAGradientLayer layer]; gradient.frame = self.view.bounds; gradient.colors = @[ [colorOne CGColor], [colorTwo &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.ahwkong.com/post/2014/02/22/cagradientlayer">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+<!-- Start of StatCounter Code for Netscape Composer -->
+<script type="text/javascript">
+var sc_project=9614190; 
+var sc_invisible=1; 
+var sc_security="867743ed"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9614190/0/867743ed/1/"
+alt="hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Netscape Composer -->
+
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.ahwkong.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">CAGradientLayer</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-22T13:57:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content">
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The above code will cause this compiler error:</p>
+
+<pre><code>/path/to/MyViewController.m:31:26: Collection element of type 'CGColorRef' (aka 'struct CGColor *') is not an Objective-C object
+</code></pre>
+
+<p>It can be fixed by casting to <code>id</code></p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">(</span><span class="kt">id</span><span class="p">)[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is a new behavior due to the use of ARC</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-22T13:57:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/post/categories/arc/'>ARC</a>, <a class='category' href='/post/categories/ios7/'>ios7</a>, <a class='category' href='/post/categories/objective-c/'>objective-c</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.ahwkong.com/post/2014/02/22/cagradientlayer/" data-via="kongakong" data-counturl="http://www.ahwkong.com/post/2014/02/22/cagradientlayer/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/post/2014/02/19/some-objective-c-note-to-self/" title="Previous Post: Some objective-c note-to-self">&laquo; Some objective-c note-to-self</a>
+      
+      
+        <a class="basic-alignment right" href="/post/2014/02/23/urlencode-unicode/" title="Next Post: urlencode unicode">urlencode unicode &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", , );
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
+</section>
+
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/107508522522146376690?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Latest update of Google Chrome makes the cpu fan of my mac book pro spin like crazy. Switch back to firefox for now
-">
+  <meta name="description" content="To enable the swipe to delete feature, one must implement this API: 1
+2
+- (void)tableView:(UITableView *)tableView commitEditingStyle:( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +86,106 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/16/p-29544259150/">Delete a Row From UITableView</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-16T19:35:00+10:00" pubdate data-updated="true">Aug 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To enable the swipe to delete feature, one must implement this API:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+</span><span class='line'>                                            forRowAtIndexPath:(NSIndexPath *)indexPath``</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I can enable this feature, but I got this exception from this function</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2012-08-11 22:30:46.286 app[76532:fb03] *** Terminating app due to uncaught exception
+</span><span class='line'> 'NSInternalInconsistencyException', reason: 'Invalid update: invalid number of rows in section 0.  
+</span><span class='line'>The number of rows contained in an existing section after the update (10) must be equal to the 
+</span><span class='line'>number of rows contained in that section before the update (10), plus or minus the number of rows 
+</span><span class='line'>inserted or deleted from that section (0 inserted, 1 deleted) and plus or minus the number of rows 
+</span><span class='line'>moved into or out of that section (0 moved in, 0 moved out).'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It turns out even though I removed the object from the CoreDate managed context, I did not ask the NSFetchedResultsController to refetch the data set. The UITableView is sTILl bound to the old data set and hence the internal inconsistency.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/15/p-29473317348/">Put the Events Into Historical Perspective</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-15T19:48:00+10:00" pubdate data-updated="true">Aug 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Leonardo da Vinci, who was forty years old when Columbus discovered America, died in 1519 at sixty-seven. Just two years earlier, in 1517, Martin Luther had posted his Ninety-five Theses on a church door in Wittenberg, launching the Protestant Reformation the same year Ferdinand Magellan had set sail from Spain, aspiring to circumnavigate the earth.</p></blockquote>
+
+<p>Quoted from</p>
+
+<p><a href="http://www.amazon.com/gp/product/1588341712/ref=as_li_ss_tl?ie=UTF8&amp;tag=heaprcom05-20&amp;linkCode=as2&amp;camp=217145&amp;creativeASIN=1588341712"><em>Math and the Mona Lisa: The Art and Science of Leonardo da Vinci</em></a> by Bulent Atalay</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -270,120 +371,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/12/p-29256890594/">How to Dismiss a Modal View Controller Which Is Created by a Segue in Storyboard?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-12T19:50:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>But it does not work in storyboard anymore.</p>
-
-<p>This is the solution:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/11/p-29187540494/">Calculate Cash Flows in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-11T19:54:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
-
-<p><em>A:</em></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># contribution at age
-</span><span class='line'>>>> [(i, 5000)for i in range(25, 30+1)]
-</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
-</span><span class='line'>
-</span><span class='line'>>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
-</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/35/">&larr; Older</a>
@@ -401,6 +388,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
       </li>
     
@@ -410,14 +405,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/16/land-tax-is-adjustable/">Land tax is adjustable</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/15/conda-update/">conda update</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-20T18:38:13+11:00</updated>
+  <updated>2014-02-23T07:32:15+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CAGradientLayer]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/22/cagradientlayer/"/>
+    <updated>2014-02-22T13:57:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/22/cagradientlayer</id>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
+</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
+</span><span class='line'><span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The above code will cause this compiler error:</p>
+
+<pre><code>/path/to/MyViewController.m:31:26: Collection element of type 'CGColorRef' (aka 'struct CGColor *') is not an Objective-C object
+</code></pre>
+
+<p>It can be fixed by casting to <code>id</code></p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
+</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
+</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">(</span><span class="kt">id</span><span class="p">)[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
+</span><span class='line'><span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>It is a new behavior due to the use of ARC</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Some objective-c note-to-self]]></title>
@@ -110,89 +166,6 @@
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Timezones in objective-c]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c/"/>
-    <updated>2014-02-13T07:34:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c</id>
-    <content type="html"><![CDATA[<p>To find out all timezone abbreviation,</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
-</span><span class='line'><span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
-</span><span class='line'><span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Here is the output:</p>
-
-<pre><code>EDT America/New_York
-GMT GMT
-AST America/Halifax
-IRST Asia/Tehran
-ICT Asia/Bangkok
-PET America/Lima
-KST Asia/Seoul
-PST America/Los_Angeles
-CDT America/Chicago
-EEST Europe/Istanbul
-NZDT Pacific/Auckland
-WEST Europe/Lisbon
-EAT Africa/Addis_Ababa
-HKT Asia/Hong_Kong
-IST Asia/Calcutta
-MDT America/Denver
-NZST Pacific/Auckland
-WIT Asia/Jakarta
-ADT America/Halifax
-BST Europe/London
-ART America/Argentina/Buenos_Aires
-CAT Africa/Harare
-GST Asia/Dubai
-PDT America/Los_Angeles
-SGT Asia/Singapore
-COT America/Bogota
-PKT Asia/Karachi
-EET Europe/Istanbul
-UTC UTC
-WAT Africa/Lagos
-EST America/New_York
-JST Asia/Tokyo
-CLST America/Santiago
-CET Europe/Paris
-BDT Asia/Dhaka
-MSK Europe/Moscow
-AKDT America/Juneau
-CLT America/Santiago
-AKST America/Juneau
-BRST America/Sao_Paulo
-BRT America/Sao_Paulo
-CEST Europe/Paris
-CST America/Chicago
-HST Pacific/Honolulu
-MSD Europe/Moscow
-MST America/Denver
-PHT Asia/Manila
-WET Europe/Lisbon
-</code></pre>
 ]]></content>
   </entry>
   
