@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The Erlang Token Scanner http://www.erlang.org/doc/man/erl_scan.html http://www.erlang.org/doc/man/erl_scan.html
-">
+  <meta name="description" content="It means I am missing the elib library. However according to http://www.gnu.org/software/elib/ It turns out it is because the default emacs in OSX is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,50 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/24/p-16344686959/">Installing JDEE for Emacs: Problem With Avltree</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-24T06:13:00+11:00" pubdate data-updated="true">Jan 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It means I am missing the elib library.</p>
+
+<p>However according to</p>
+
+<p><a href="GNU">http://www.gnu.org/software/elib/</a></p>
+
+<p>It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old <code>avltree</code> in elib.</p>
+
+<p>Use brew to install the latest version of emacs</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -240,57 +283,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/01/18/p-16058064684/">VirtualBox Upgrade</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-18T22:37:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Upgraded VirtualBox to 4.1.8r75467. When I start a vm I got an error message</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>$ VBoxManage startvm 7b2a72e2-08cd-483b-b594-fe27dff6974a --type headless
-</span><span class='line'>Waiting for VM "7b2a72e2-08cd-483b-b594-fe27dff6974a" to power on...
-</span><span class='line'>VBoxManage: error: No error info
-</span><span class='line'>VBoxManage: error: Details: code NS_ERROR_CALL_FAILED (0x800706be), component ProgressProxy, interface IProgress, callee
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/82/">&larr; Older</a>
@@ -308,6 +300,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
       </li>
     
@@ -321,10 +317,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
   </ul>

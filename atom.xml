@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-23T07:32:15+11:00</updated>
+  <updated>2014-02-28T22:46:05+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Create a NSArray from NSMutualArray]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray/"/>
+    <updated>2014-02-28T19:31:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray</id>
+    <content type="html"><![CDATA[<p>It is so simple</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// m is a NSMutualArray </span>
+</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[urlencode unicode]]></title>
@@ -586,15 +604,6 @@ receive 6-month LIBOR
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[class cluster]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/17/class-cluster/"/>
-    <updated>2014-01-17T22:42:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/17/class-cluster</id>
-    <content type="html"><![CDATA[<p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
 ]]></content>
   </entry>
   

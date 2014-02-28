@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For some reason I cannot set the title of the backBarButtonItem of navigationItem programmatically. I can only set it in the InterfaceBuilder. Also &hellip;">
+  <meta name="description" content="Finally figure out the back button title not set issue. That’s what I have been doing in the originating controller’s prepareForSegue method: It has &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,48 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24942635911/">Finally Figure Out the Back Button Title Not Set Issue.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T17:06:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally figure out the back button title not set issue.</p>
+
+<p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -240,44 +282,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/09/p-24744300898/">Rational Trigonometry</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-09T23:58:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Rational%20Trigonometry">http://en.wikipedia.org/wiki/Rational_trigonometry</a></p>
-
-<p>Forget distance and angle</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/52/">&larr; Older</a>
@@ -295,6 +299,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
       </li>
     
@@ -308,10 +316,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
   </ul>

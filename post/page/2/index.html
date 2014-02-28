@@ -9,8 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="if Land Tax Adjustable is checked, it means the vendor seeks reimbursement of land tax from the buyer
-">
+  <meta name="description" content="1
+2
+3
+4
+UIGraphicsBeginImageContext(theCell.bounds.size);
+[theCell.layer renderInContext:UIGraphicsGetCurrentContext()];
+UIImage *renderedCellImage &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +90,55 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">Capture Part of Ios Screen as Image</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-17T04:38:00+11:00" pubdate data-updated="true">Feb 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">theCell</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
+</span><span class='line'><span class="p">[</span><span class="n">theCell</span><span class="p">.</span><span class="n">layer</span> <span class="nl">renderInContext:</span><span class="n">UIGraphicsGetCurrentContext</span><span class="p">()];</span>
+</span><span class='line'><span class="n">UIImage</span> <span class="o">*</span><span class="n">renderedCellImage</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
+</span><span class='line'><span class="n">UIGraphicsEndImageContext</span><span class="p">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://stackoverflow.com/a/13656612/58129">source</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -382,50 +436,6 @@ WET Europe/Lisbon
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">Chastised by a CoreFoundation Class</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-12T10:50:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
-
-<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
-An exception has been avoided for now.
-A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
-Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
-</code></pre>
-
-<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/3/">&larr; Older</a>
@@ -443,6 +453,10 @@ Here is the backtrace where this occurred this time (some frames may be missing 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
       </li>
     
@@ -456,10 +470,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
     
       <li class="post">
         <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">capture part of ios screen as image</a>
       </li>
     
   </ul>

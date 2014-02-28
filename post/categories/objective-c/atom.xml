@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-23T07:32:15+11:00</updated>
+  <updated>2014-02-28T22:46:05+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Create a NSArray from NSMutualArray]]></title>
+    <link href="http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray/"/>
+    <updated>2014-02-28T19:31:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray</id>
+    <content type="html"><![CDATA[<p>It is so simple</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c1">// m is a NSMutualArray</span>
+</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CAGradientLayer]]></title>
@@ -129,43 +152,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><a href="http://stackoverflow.com/a/13656612/58129">source</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Changing NSTimeZone]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/14/changing-nstimezone/"/>
-    <updated>2014-02-14T22:19:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/14/changing-nstimezone</id>
-    <content type="html"><![CDATA[<p>To convert a NSDate into another Timezone</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSCalendarUnit</span> <span class="n">val</span> <span class="o">=</span> <span class="n">NSCalendarUnitYear</span><span class="o">|</span><span class="n">NSCalendarUnitHour</span><span class="p">;</span>
-</span><span class='line'><span class="n">NSCalendar</span><span class="o">*</span> <span class="n">dupCal</span> <span class="o">=</span>  <span class="p">[[</span><span class="n">NSCalendar</span> <span class="n">currentCalendar</span><span class="p">]</span> <span class="n">copy</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">[</span><span class="n">dupCal</span> <span class="nl">setTimeZone:</span><span class="n">toTimeZone</span><span class="p">];</span> <span class="c1">// setting to a different timezone</span>
-</span><span class='line'><span class="n">NSDateComponents</span> <span class="o">*</span><span class="n">dupComponents</span> <span class="o">=</span> <span class="p">[</span><span class="n">dupCal</span> <span class="nl">components:</span><span class="n">val</span> <span class="nl">fromDate:</span><span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">]];</span>
-</span><span class='line'>
-</span><span class='line'><span class="c1">// print out the time and check</span>
-</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%ld&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)[</span><span class="n">dupComponents</span> <span class="n">hour</span><span class="p">]);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
