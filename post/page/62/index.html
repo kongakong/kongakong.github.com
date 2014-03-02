@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A Paganini’s 24th caprice is on my iPhone. Beautiful music but I have no idea why it is there.
-">
+  <meta name="description" content="Population of Sweden was 7 millions in 1945. It is around 9 millions in 2010. Australia had about the same population (7 millions) in 1945 too. http &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,116 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/15/p-23099348710/">Population of Sweden Was 7 Millions in 1945. It Is Around 9 Millions in 2010.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-15T21:41:00+10:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Population of Sweden was 7 millions in 1945. It is around 9 millions in 2010.</p>
+
+<p>Australia had about the same population (7 millions) in 1945 too.</p>
+
+<p><a href="%E2%80%9CA%20%E2%80%98BIG%E2%80%99%20AUSTRALIA?%E2%80%9D%20talk">http://www.abc.net.au/radionational/programs/bigideas/big-ideas-30-april-2012/3975996</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/15/p-23056813657/">Slicing Magic</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-15T07:01:00+10:00" pubdate data-updated="true">May 15<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Original post: <a href="http://stackoverflow.com/a/9858902/58129">http://stackoverflow.com/a/9858902/58129</a></p>
+
+<p>Given this</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>  <span class="o">=</span> <span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">]])</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</span><span class='line'><span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+</span><span class='line'>       <span class="p">[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],</span>
+</span><span class='line'>       <span class="p">[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can use the following code to extract data in the first and second column as such</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span>
+</span><span class='line'><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">list1</span>
+</span><span class='line'><span class="n">array</span><span class="p">([</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Slicing documentation: <a href="http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing">http://docs.scipy.org/doc/numpy/reference/arrays.indexing.html#basic-slicing</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -206,103 +315,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/07/p-22582856414/">Reading List:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-07T21:42:00+10:00" pubdate data-updated="true">May 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Reading list:</p>
-
-<p><a href="http://en.wikipedia.org/wiki/Pareto_frontier#Pareto_frontier">http://en.wikipedia.org/wiki/Pareto_frontier#Pareto_frontier</a></p>
-
-<p><a href="http://en.wikipedia.org/wiki/Multi-objective_optimization">http://en.wikipedia.org/wiki/Multi-objective_optimization</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/06/p-22510222332/">Get Pid of the Current Process in Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-06T21:41:00+10:00" pubdate data-updated="true">May 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>$ erl
-</span><span class='line'>Erlang R14B04 (erts-5.8.5) [source] [64-bit] [smp:4:4] [rq:4] [async-threads:0] [hipe] [kernel-poll:false]
-</span><span class='line'>
-</span><span class='line'>Eshell V5.8.5  (abort with ^G)
-</span><span class='line'>1&gt; import(os).
-</span><span class='line'>ok
-</span><span class='line'>2&gt; os:getpid().
-</span><span class='line'>"50615"
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/63/">&larr; Older</a>
@@ -320,6 +332,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
       </li>
     
@@ -329,14 +349,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
       </li>
     
   </ul>

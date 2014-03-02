@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t
-">
+  <meta name="description" content="Example: operator* and operator+ should return a new object instead of a reference. The latter approach will introduce problem such as memory leak &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,6 +84,92 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172106672/">Item 23: Don&#8217;t Try to Return a Reference When You Must Return an Object</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T20:55:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Example:</em></p>
+
+<p><code>operator*</code> and <code>operator+</code> should return a new object instead of a reference. The latter approach will introduce problem such as memory leak</p>
+
+<p><em>Additional note:</em></p>
+
+<p>Avoid overloading short-circuiting operators: x || y or x &amp;&amp; y. The overloaded versions of these do not short-circuit — they evaluate both operands even if the left-hand operand “determines” the outcome, so that confuses users.</p>
+
+<p>From</p>
+
+<p><a href="http://www.parashift.com/c++-faq-lite/operator-overloading.html#faq-13.9">C++ FAQ</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172071952/">Item 22: Prefer Pass-by-reference to Pass-by-value</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T20:52:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.</p>
+
+<p>Secondly, it avoids this kind of error:</p>
+
+<p>A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -194,78 +279,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/03/p-6108828433/">C Trick Question</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-03T01:22:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Why doesn’t it compile?</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/03/p-6107440181/">How to Do Lazy Loading With NSURLConnection</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-03T00:09:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="How%20to%20do%20Lazy%20Loading%20with%20NSURLConnection">http://www.cocoanetics.com/2011/05/and-now-lazy-loading-with-nsurlconnection/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/126/">&larr; Older</a>
@@ -283,6 +296,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
       </li>
     
@@ -292,14 +313,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/19/some-objective-c-note-to-self/">Some objective-c note-to-self</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and view controller</a>
       </li>
     
   </ul>

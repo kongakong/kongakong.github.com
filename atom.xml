@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-02-28T22:46:05+11:00</updated>
+  <updated>2014-03-02T13:29:07+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,88 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TIL R is presinstalled in OSX]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/02/til-r-is-presinstalled-in-osx/"/>
+    <updated>2014-03-02T11:27:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/02/til-r-is-presinstalled-in-osx</id>
+    <content type="html"><![CDATA[<p>I just found out R is pre-installed in OSX!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ R
+</span><span class='line'>
+</span><span class='line'>R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+</span><span class='line'>Copyright (C) 2013 The R Foundation for Statistical Computing
+</span><span class='line'>Platform: x86_64-apple-darwin10.8.0 (64-bit)
+</span><span class='line'>
+</span><span class='line'>R is free software and comes with ABSOLUTELY NO WARRANTY.
+</span><span class='line'>You are welcome to redistribute it under certain conditions.
+</span><span class='line'>Type 'license()' or 'licence()' for distribution details.
+</span><span class='line'>
+</span><span class='line'>  Natural language support but running in an English locale
+</span><span class='line'>
+</span><span class='line'>R is a collaborative project with many contributors.
+</span><span class='line'>Type 'contributors()' for more information and
+</span><span class='line'>'citation()' on how to cite R or R packages in publications.
+</span><span class='line'>
+</span><span class='line'>Type 'demo()' for some demos, 'help()' for on-line help, or
+</span><span class='line'>'help.start()' for an HTML browser interface to help.
+</span><span class='line'>Type 'q()' to quit R.
+</span><span class='line'>
+</span><span class='line'>></span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Prepare a maverick usb]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/01/prepare-a-maverick-usb/"/>
+    <updated>2014-03-01T07:08:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/01/prepare-a-maverick-usb</id>
+    <content type="html"><![CDATA[<p>Get a USB flash drive that is at least 8 GBs.</p>
+
+<p>Use Disk Utility to prepare the flash drive:</p>
+
+<ul>
+<li>Click on the Erase tab in the DU main window.</li>
+<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
+<li>Click on the Erase button.</li>
+</ul>
+
+
+<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
+
+<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia
+</code></pre>
+
+<p> &mdash;volume /Volumes/Untitled &mdash;applicationpath /Applications/Install\ OS\ X\ Mavericks.app &mdash;nointeraction</p>
+
+<p>No need of any third party software</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Create a NSArray from NSMutualArray]]></title>
@@ -541,69 +623,6 @@ receive 6-month LIBOR
     <updated>2014-01-20T18:11:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/01/20/requestanimationframe</id>
     <content type="html"><![CDATA[<p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Html 5 resources]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/20/html5/"/>
-    <updated>2014-01-20T16:04:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/20/html5</id>
-    <content type="html"><![CDATA[<p>Some useful links:</p>
-
-<p><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></p>
-
-<p><a href="https://github.com/scottjehl/picturefill">https://github.com/scottjehl/picturefill</a></p>
-
-<p><a href="http://www.standardista.com/responsive-images-clown-car-technique/">http://www.standardista.com/responsive-images-clown-car-technique/</a></p>
-
-<p><a href="http://www.w3.org/community/respimg/">http://www.w3.org/community/respimg/</a></p>
-
-<p><strong>Hammer.js</strong> <a href="http://eightmedia.github.io/hammer.js/">http://eightmedia.github.io/hammer.js/</a></p>
-
-<p><strong>jQT</strong> <a href="http://jqtjs.com/">http://jqtjs.com/</a></p>
-
-<p><strong>Sencha gestures</strong> <a href="http://www.sencha.com/blog/ext-js-on-tap/">http://www.sencha.com/blog/ext-js-on-tap/</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[compile debug_info]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/18/compile-debug-info/"/>
-    <updated>2014-01-18T13:04:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/18/compile-debug-info</id>
-    <content type="html"><![CDATA[<p>After coming this SO question about [debug_info] (<a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a> ), I am curious if it is indeed a problem.</p>
-
-<p>Based on the <a href="http://www.erlang.org/doc/man/compile.html#debug_info">documentation</a>, this should enable the addition of debug info to the .beam files.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
-
-<p>I can only implant debug info through erlang shell like this:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().
-</span><span class='line'>
-</span><span class='line'>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
-</span><span class='line'>ERROR: Could not find 'wxe_driver.so' in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
-</span><span class='line'>{ok,&lt;0.49.0>}
-</span><span class='line'>5> c(testdebuginfo, [debug_info]).
-</span><span class='line'>{ok,testdebuginfo}</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
