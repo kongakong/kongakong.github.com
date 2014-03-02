@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-02T14:00:32+11:00</updated>
+  <updated>2014-03-02T20:55:24+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -31,10 +31,9 @@
 
 <p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
 
-<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia
+<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
+--volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
 </code></pre>
-
-<p> &mdash;volume /Volumes/Untitled &mdash;applicationpath /Applications/Install\ OS\ X\ Mavericks.app &mdash;nointeraction</p>
 
 <p>No need of any third party software</p>
 ]]></content>
