@@ -4,7 +4,7 @@
   <title><![CDATA[Category: R | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/r/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-02T13:29:07+11:00</updated>
+  <updated>2014-03-02T14:00:32+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -54,7 +54,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Wired. When I start R (CLI) in command prompt on Win XP, it will compliant about missing command line switch (``--save``, ``--nosave`` or ``--vanilla``), then aborted with ‘Execution halted’ error message.]]></title>
+    <title type="html"><![CDATA[R problem on WinXP]]></title>
     <link href="http://www.ahwkong.com/post/2011/07/20/p-7842071321/"/>
     <updated>2011-07-20T22:50:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/07/20/p-7842071321</id>

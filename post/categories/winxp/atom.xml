@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: winxp | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/winxp/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-03-02T14:00:32+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[R problem on WinXP]]></title>
+    <link href="http://www.ahwkong.com/post/2011/07/20/p-7842071321/"/>
+    <updated>2011-07-20T22:50:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2011/07/20/p-7842071321</id>
+    <content type="html"><![CDATA[<p>Wired. When I start R (CLI) in command prompt on Win XP, it will compliant about missing command line switch (<code>--save</code>, <code>--nosave</code> or <code>--vanilla</code>), then aborted with ‘Execution halted’ error message.</p>
+]]></content>
+  </entry>
+  
+</feed>
