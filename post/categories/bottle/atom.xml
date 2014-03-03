@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bottle | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/bottle/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-03-03T23:01:18+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[bottle and parameters]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters/"/>
+    <updated>2014-03-03T22:58:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters</id>
+    <content type="html"><![CDATA[<p>Use   <code>request.query</code> to retrieve the url parameters</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>coding: utf-8&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>from bottle import *&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>@route(&lsquo;/&rsquo;)
+</span><span class='line'>@route(&lsquo;/index.html&rsquo;)
+</span><span class='line'>def index():&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>return '&lt;a href="http://www.ahwkong.com/hello"&gt;Go to Hello page&lt;/a&gt;'
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>@route(&lsquo;/hello&rsquo;)
+</span><span class='line'>def hello():&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>name = None
+</span><span class='line'>names = request.query.getall('name')
+</span><span class='line'>if names:
+</span><span class='line'>    name = names[0]
+</span><span class='line'>return '&lt;h1&gt;Hello %s&lt;/h1&gt;' % name
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>run(host=&lsquo;localhost&rsquo;, port=8000, reloader=True)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

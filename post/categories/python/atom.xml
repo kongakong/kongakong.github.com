@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/python/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-02T20:55:24+11:00</updated>
+  <updated>2014-03-03T23:01:18+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[bottle and parameters]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters/"/>
+    <updated>2014-03-03T22:58:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters</id>
+    <content type="html"><![CDATA[<p>Use   <code>request.query</code> to retrieve the url parameters</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>coding: utf-8&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>from bottle import *&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>@route(&lsquo;/&rsquo;)
+</span><span class='line'>@route(&lsquo;/index.html&rsquo;)
+</span><span class='line'>def index():&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>return '&lt;a href="http://www.ahwkong.com/hello"&gt;Go to Hello page&lt;/a&gt;'
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>@route(&lsquo;/hello&rsquo;)
+</span><span class='line'>def hello():&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>name = None
+</span><span class='line'>names = request.query.getall('name')
+</span><span class='line'>if names:
+</span><span class='line'>    name = names[0]
+</span><span class='line'>return '&lt;h1&gt;Hello %s&lt;/h1&gt;' % name
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>run(host=&lsquo;localhost&rsquo;, port=8000, reloader=True)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[urlencode unicode]]></title>
@@ -249,44 +311,6 @@
 </span><span class='line'>
 </span><span class='line'>&lt;p&gt;
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Assignment statement in Lua vs Python]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/05/assignment-statement-in-lua-vs-python/"/>
-    <updated>2013-12-05T07:19:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/05/assignment-statement-in-lua-vs-python</id>
-    <content type="html"><![CDATA[<p>Given <code>a</code> is an array of  <code>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</code></p>
-
-<p>and this bit of code</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>i = 3
-</span><span class='line'>i, a[i] = i+1, 20&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>In lua, <code>a</code> will become</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{1, 1, 1, 20, 1, 1, 1, 1, 1, 1}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Whereas in python it will become</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>a
-</span><span class='line'>[1, 1, 1, 1, 20, 1, 1, 1, 1, 1]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
-
-<p>And it is a non-issue in erlang because it does not support mutable variable</p>
 ]]></content>
   </entry>
   

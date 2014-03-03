@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-02T20:55:24+11:00</updated>
+  <updated>2014-03-03T23:01:18+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,77 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[bottle and parameters]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters/"/>
+    <updated>2014-03-03T22:58:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters</id>
+    <content type="html"><![CDATA[<p>Use   <code>request.query</code> to retrieve the url parameters</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#coding: utf-8
+</span><span class='line'>from bottle import *
+</span><span class='line'> 
+</span><span class='line'>@route('/')
+</span><span class='line'>@route('/index.html')
+</span><span class='line'>def index():
+</span><span class='line'>    return '&lt;a href="http://www.ahwkong.com/hello">Go to Hello page&lt;/a>'
+</span><span class='line'>
+</span><span class='line'>@route('/hello')
+</span><span class='line'>def hello():
+</span><span class='line'>    name = None
+</span><span class='line'>    names = request.query.getall('name')
+</span><span class='line'>    if names:
+</span><span class='line'>        name = names[0]
+</span><span class='line'>    return '&lt;h1>Hello %s&lt;/h1>' % name
+</span><span class='line'>
+</span><span class='line'>run(host='localhost', port=8000, reloader=True)</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[NSLog macro]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/03/nslog-macro/"/>
+    <updated>2014-03-03T08:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/03/nslog-macro</id>
+    <content type="html"><![CDATA[<p>This is a useful marco for doing debug logging:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
+</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
+</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
+</span><span class='line'><span class="cp">} while (0)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
+
+<p>(Source)[<a href="https://coderwall.com/p/2ko3la">https://coderwall.com/p/2ko3la</a>]</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[TIL R is presinstalled in OSX]]></title>
@@ -593,35 +664,6 @@ receive 6-month LIBOR
 <p>The fixed rate is always set at a spread over the government bond yield curve and is often quoted that way. Say the 5-year Treasury is trading at a yield of 4.88 percent. The 5-year swap bid and offer rates in the example are 31 basis points and 37 basis points, respectively, above this yield, and the bank’s swap trader could quote the swap rates as a swap spread: 37–31. This means that the bank would be willing to enter into a swap in which it paid 31 basis points above the benchmark yield and received LIBOR or one in which it received 37 basis points above the yield curve and paid LIBOR.</p>
 
 <p>(Quoted from &lsquo;Fixed Income Securities and Derivatives Handbook Analysis and Valuation&rsquo; )</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[weak reference in block]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/23/weak-reference/"/>
-    <updated>2014-01-23T21:55:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/23/weak-reference</id>
-    <content type="html"><![CDATA[<p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
-</span><span class='line'>        <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[RequestAnimationFrame]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/20/requestanimationframe/"/>
-    <updated>2014-01-20T18:11:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/20/requestanimationframe</id>
-    <content type="html"><![CDATA[<p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
 ]]></content>
   </entry>
   

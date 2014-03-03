@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-02T20:55:24+11:00</updated>
+  <updated>2014-03-03T23:01:18+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[NSLog macro]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/03/nslog-macro/"/>
+    <updated>2014-03-03T08:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/03/nslog-macro</id>
+    <content type="html"><![CDATA[<p>This is a useful marco for doing debug logging:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">define</span> <span class="n">DLog</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;)</span> <span class="k">do</span> <span class="p">{</span> <span class="err">\</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">NSString</span> <span class="o">*</span><span class="n">dLogString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="nl">s:</span> <span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">PRETTY_FUNCTION</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">msg</span><span class="p">];</span> \
+</span><span class='line'>  <span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">VA_ARGS</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">);</span> \
+</span><span class='line'><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
+
+<p>(Source)[<a href="https://coderwall.com/p/2ko3la">https://coderwall.com/p/2ko3la</a>]</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Prepare a maverick usb]]></title>
@@ -99,27 +132,6 @@ install_mathjax()
 <p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
 
 <p><img src="/images/ipython_inline.png" width="457" height="336"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[conda and ipython]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/03/conda-and-ipython/"/>
-    <updated>2014-01-03T23:01:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/03/conda-and-ipython</id>
-    <content type="html"><![CDATA[<p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
-
-<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
-
-<p>Now I have four set of python runtime installed on my MBP:</p>
-
-<ul>
-<li><p>From Apple</p></li>
-<li><p>From Homebrew</p></li>
-<li><p>From Pythonbrew</p></li>
-<li><p>From conda</p></li>
-</ul>
-
 ]]></content>
   </entry>
   

@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Python 2.5.5 uses the -Wno-long-double c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6 Fixed the configure.in and rerun &hellip;">
+  <meta name="description" content="One of the steps ./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +85,86 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1267909194/">Overcoming Compilation Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T18:40:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of the steps</p>
+
+<p><code>./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1264649679/">&#8216;Struct Winsize&#8217; Declared Inside Parameter List</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-08T08:52:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Seeing a lot of</p>
+
+<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
+
+<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
+
+<p>Fixed by using forward declaration</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -201,81 +282,6 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/20/p-1153892343/">Terminology in SplitView</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-20T13:26:00+10:00" pubdate data-updated="true">Sep 20<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Root View</em>: the pane on the left when iPad is in Landscape mode
-<em>Detail View</em>: the main pane of display</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1119099362/">EXC_BAD_ACCESS Resolved</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
-
-<p>It is probably a wrong conclusion, but commenting out the line works.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/179/">&larr; Older</a>
@@ -293,6 +299,14 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
       </li>
     
@@ -302,14 +316,6 @@ java.lang.OutOfMemoryError: Java heap space</code></p>
     
       <li class="post">
         <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/23/urlencode-unicode/">urlencode unicode</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a>
       </li>
     
   </ul>
