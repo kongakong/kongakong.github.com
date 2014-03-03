@@ -27,8 +27,8 @@
 16
 17
 #coding: utf-8
-from bottle import * @route('/')
-@route('/ &hellip;">
+from bottle import * @route(&#39;/&#39;)
+@ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -131,7 +131,7 @@ alt="hit counter"></a></div></noscript>
 
 <div class="entry-content"><p>Use   <code>request.query</code> to retrieve the url parameters</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -148,23 +148,24 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#coding: utf-8
-</span><span class='line'>from bottle import *
-</span><span class='line'> 
-</span><span class='line'>@route('/')
-</span><span class='line'>@route('/index.html')
-</span><span class='line'>def index():
-</span><span class='line'>    return '&lt;a href="/hello">Go to Hello page&lt;/a>'
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#coding: utf-8</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*</span>
 </span><span class='line'>
-</span><span class='line'>@route('/hello')
-</span><span class='line'>def hello():
-</span><span class='line'>    name = None
-</span><span class='line'>    names = request.query.getall('name')
-</span><span class='line'>    if names:
-</span><span class='line'>        name = names[0]
-</span><span class='line'>    return '&lt;h1>Hello %s&lt;/h1>' % name
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/index.html&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;a href=&quot;/hello&quot;&gt;Go to Hello page&lt;/a&gt;&#39;</span>
 </span><span class='line'>
-</span><span class='line'>run(host='localhost', port=8000, reloader=True)</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/hello&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;h1&gt;Hello </span><span class="si">%s</span><span class="s">&lt;/h1&gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
