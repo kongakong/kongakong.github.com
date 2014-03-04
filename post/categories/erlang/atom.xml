@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T18:51:46+11:00</updated>
+  <updated>2014-03-04T20:03:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,25 +22,34 @@
 
 <p>Based on the <a href="http://www.erlang.org/doc/man/compile.html#debug_info">documentation</a>, this should enable the addition of debug info to the .beam files.</p>
 
-<p>{% codeblock lang:erlang %}
--module(testdebuginfo).
--compile(debug_info).
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
 
 <p>I can only implant debug info through erlang shell like this:</p>
 
-<p>{% codeblock %}
-4> debugger:start().</p>
-
-<p>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
-ERROR: Could not find &lsquo;wxe_driver.so&rsquo; in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
-{ok,&lt;0.49.0>}
-5> c(testdebuginfo, [debug_info]).
-{ok,testdebuginfo}</p>
-
-<p>{% endcodeblock  %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
+</span><span class='line'>ERROR: Could not find &lsquo;wxe_driver.so&rsquo; in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
+</span><span class='line'>{ok,&lt;0.49.0>}
+</span><span class='line'>5> c(testdebuginfo, [debug_info]).
+</span><span class='line'>{ok,testdebuginfo}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -49,7 +58,52 @@ ERROR: Could not find &lsquo;wxe_driver.so&rsquo; in: /usr/local/Cellar/erlang/R
     <link href="http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn/"/>
     <updated>2013-12-09T23:45:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn</id>
-    <content type="html"><![CDATA[<p>{% include_code &lsquo;Discount Margin&rsquo; lang:erlang  erlang/frn.erl %}</p>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>&lsquo;Discount Margin&rsquo;   (frn.erl)</span> <a href='/downloads/code/erlang/frn.erl'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">frn</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">discount_margin</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">discount_margin</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">test</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">% Simple margin = ((M − Pd ) / (100 × T) )+ Mq</span>
+</span><span class='line'><span class="c">% </span>
+</span><span class='line'><span class="c">% where</span>
+</span><span class='line'><span class="c">% Pd = the dirty price, or P plus the accrued interest AI </span>
+</span><span class='line'><span class="c">% M = the par value</span>
+</span><span class='line'><span class="c">% T = the number of years from settlement to maturity </span>
+</span><span class='line'><span class="c">% Mq = the quoted margin</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c">% A positive simple margin signifies that the FRN’s yield is higher than that of a comparable money market security.</span>
+</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">DirtyPrice</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="p">(</span><span class="nv">ParValue</span> <span class="o">-</span> <span class="nv">DirtyPrice</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">100</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="nv">Years</span><span class="p">)</span> <span class="o">+</span> <span class="nv">QuotedMargin</span><span class="p">.</span>
+</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span><span class="p">,</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span> <span class="o">+</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="nf">test</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">).</span> <span class="c">% 0.0502</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -67,171 +121,334 @@ ERROR: Could not find &lsquo;wxe_driver.so&rsquo; in: /usr/local/Cellar/erlang/R
     <link href="http://www.ahwkong.com/post/2013/12/04/osx-specific-error-with-erlang-compilation/"/>
     <updated>2013-12-04T07:53:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2013/12/04/osx-specific-error-with-erlang-compilation</id>
-    <content type="html"><![CDATA[<p>{% codeblock %}
-gcc  -Werror=return-type  -m32 -g  -O3 -fomit-frame-pointer -I/Users/antkong/wd/erl/build/otp_src_R16B02/erts/x86_64-apple-darwin13.0.1   -D_XOPEN_SOURCE -DERTS_SMP -DHAVE_CONFIG_H -Wall -Wstrict-prototypes -Wmissing-prototypes -Wdeclaration-after-statement -DUSE_THREADS -D_THREAD_SAFE -D_REENTRANT -DPOSIX_THREADS   -Ix86_64-apple-darwin13.0.1/opt/smp -Ibeam -Isys/unix -Isys/common -Ix86_64-apple-darwin13.0.1 -Izlib  -Ipcre -Ihipe -I../include -I../include/x86_64-apple-darwin13.0.1 -I../include/internal -I../include/internal/x86_64-apple-darwin13.0.1 -c beam/beam_emu.c -o obj/x86_64-apple-darwin13.0.1/opt/smp/beam_emu.o
-beam/beam_emu.c:4718:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]</p>
-
-<pre><code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
- ^
-</code></pre>
-
-<p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;</p>
-
-<h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR</h1>
-
-<pre><code>                        ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)</h1>
-
-<pre><code>                                    ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}</h1>
-
-<pre><code>                                              ^
-</code></pre>
-
-<p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
-extern int finite(double) <strong>OSX_AVAILABLE_BUT_DEPRECATED(</strong>MAC_10_0, <strong>MAC_10_9, </strong>IPHONE_NA, __IPHONE_NA);</p>
-
-<pre><code>       ^
-</code></pre>
-
-<p>beam/beam_emu.c:4727:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]</p>
-
-<pre><code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
- ^
-</code></pre>
-
-<p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;</p>
-
-<h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR</h1>
-
-<pre><code>                        ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)</h1>
-
-<pre><code>                                    ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}</h1>
-
-<pre><code>                                              ^
-</code></pre>
-
-<p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
-extern int finite(double) <strong>OSX_AVAILABLE_BUT_DEPRECATED(</strong>MAC_10_0, <strong>MAC_10_9, </strong>IPHONE_NA, __IPHONE_NA);</p>
-
-<pre><code>       ^
-</code></pre>
-
-<p>beam/beam_emu.c:4736:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]</p>
-
-<pre><code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
- ^
-</code></pre>
-
-<p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;</p>
-
-<h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR</h1>
-
-<pre><code>                        ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)</h1>
-
-<pre><code>                                    ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}</h1>
-
-<pre><code>                                              ^
-</code></pre>
-
-<p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
-extern int finite(double) <strong>OSX_AVAILABLE_BUT_DEPRECATED(</strong>MAC_10_0, <strong>MAC_10_9, </strong>IPHONE_NA, __IPHONE_NA);</p>
-
-<pre><code>       ^
-</code></pre>
-
-<p>beam/beam_emu.c:4745:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]</p>
-
-<pre><code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
- ^
-</code></pre>
-
-<p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;</p>
-
-<h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR</h1>
-
-<pre><code>                        ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)</h1>
-
-<pre><code>                                    ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}</h1>
-
-<pre><code>                                              ^
-</code></pre>
-
-<p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
-extern int finite(double) <strong>OSX_AVAILABLE_BUT_DEPRECATED(</strong>MAC_10_0, <strong>MAC_10_9, </strong>IPHONE_NA, __IPHONE_NA);</p>
-
-<pre><code>       ^
-</code></pre>
-
-<p>beam/beam_emu.c:4754:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]</p>
-
-<pre><code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(1)), goto fbadarith);
- ^
-</code></pre>
-
-<p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;</p>
-
-<h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR</h1>
-
-<pre><code>                        ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)</h1>
-
-<pre><code>                                    ^
-</code></pre>
-
-<p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;</p>
-
-<h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}</h1>
-
-<pre><code>                                              ^
-</code></pre>
-
-<p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
-extern int finite(double) <strong>OSX_AVAILABLE_BUT_DEPRECATED(</strong>MAC_10_0, <strong>MAC_10_9, </strong>IPHONE_NA, __IPHONE_NA);</p>
-
-<p>{% endcodeblock %}</p>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gcc  -Werror=return-type  -m32 -g  -O3 -fomit-frame-pointer -I/Users/antkong/wd/erl/build/otp_src_R16B02/erts/x86_64-apple-darwin13.0.1   -D_XOPEN_SOURCE -DERTS_SMP -DHAVE_CONFIG_H -Wall -Wstrict-prototypes -Wmissing-prototypes -Wdeclaration-after-statement -DUSE_THREADS -D_THREAD_SAFE -D_REENTRANT -DPOSIX_THREADS   -Ix86_64-apple-darwin13.0.1/opt/smp -Ibeam -Isys/unix -Isys/common -Ix86_64-apple-darwin13.0.1 -Izlib  -Ipcre -Ihipe -I../include -I../include/x86_64-apple-darwin13.0.1 -I../include/internal -I../include/internal/x86_64-apple-darwin13.0.1 -c beam/beam_emu.c -o obj/x86_64-apple-darwin13.0.1/opt/smp/beam_emu.o
+</span><span class='line'>beam/beam_emu.c:4718:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'> ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                        ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                    ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                              ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
+</span><span class='line'>extern int finite(double) &lt;strong>OSX_AVAILABLE_BUT_DEPRECATED(&lt;/strong>MAC_10_0, &lt;strong>MAC_10_9, &lt;/strong>IPHONE_NA, __IPHONE_NA);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>       ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4727:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'> ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                        ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                    ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                              ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
+</span><span class='line'>extern int finite(double) &lt;strong>OSX_AVAILABLE_BUT_DEPRECATED(&lt;/strong>MAC_10_0, &lt;strong>MAC_10_9, &lt;/strong>IPHONE_NA, __IPHONE_NA);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>       ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4736:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'> ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                        ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                    ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                              ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
+</span><span class='line'>extern int finite(double) &lt;strong>OSX_AVAILABLE_BUT_DEPRECATED(&lt;/strong>MAC_10_0, &lt;strong>MAC_10_9, &lt;/strong>IPHONE_NA, __IPHONE_NA);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>       ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4745:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(2)), goto fbadarith);
+</span><span class='line'> ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                        ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                    ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                              ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
+</span><span class='line'>extern int finite(double) &lt;strong>OSX_AVAILABLE_BUT_DEPRECATED(&lt;/strong>MAC_10_0, &lt;strong>MAC_10_9, &lt;/strong>IPHONE_NA, __IPHONE_NA);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>       ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4754:6: warning: &lsquo;finite&rsquo; is deprecated: first deprecated in OS X 10.9 [-Wdeprecated-declarations]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code> ERTS_NO_FPE_ERROR(c_p, fb(Arg(1)), goto fbadarith);
+</span><span class='line'> ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>beam/beam_emu.c:4689:29: note: expanded from macro &lsquo;ERTS_NO_FPE_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_NO_FPE_ERROR ERTS_FP_ERROR&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                        ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:310:33: note: expanded from macro &lsquo;ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define ERTS_FP_ERROR(p, f, A)          __ERTS_FP_ERROR(&amp;(p)&ndash;>fp_exception, f, A)&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                    ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sys/unix/erl_unix_sys.h:235:51: note: expanded from macro &lsquo;__ERTS_FP_ERROR&rsquo;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>define __ERTS_FP_ERROR(fpexnp, f, Action) if (!finite(f)) { Action; } else {}&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                              ^
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
+</span><span class='line'>extern int finite(double) &lt;strong>OSX_AVAILABLE_BUT_DEPRECATED(&lt;/strong>MAC_10_0, &lt;strong>MAC_10_9, &lt;/strong>IPHONE_NA, __IPHONE_NA);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -242,33 +459,60 @@ extern int finite(double) <strong>OSX_AVAILABLE_BUT_DEPRECATED(</strong>MAC_10_0
     <id>http://www.ahwkong.com/post/2013/12/04/building-erlang-r16b02</id>
     <content type="html"><![CDATA[<p>Got this at the end of configure</p>
 
-<p>{% codeblock %}</p>
-
-<hr />
-
-<p><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>***  APPLICATIONS INFORMATION  </em></strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
-
-<hr />
-
-<p>wx             : wxWidgets not found, wx will NOT be usable</p>
-
-<hr />
-
-<hr />
-
-<p><strong><strong><strong><strong><strong><strong><strong><strong><strong>****  DOCUMENTATION INFORMATION  </strong></strong></strong></strong></strong></strong></strong></strong></strong></p>
-
-<hr />
-
-<p>documentation  :</p>
-
-<pre><code>             fop is missing.
-             Using fakefop to generate placeholder PDF files.
-</code></pre>
-
-<hr />
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;em>***  APPLICATIONS INFORMATION  &lt;/em>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>wx             : wxWidgets not found, wx will NOT be usable&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>****  DOCUMENTATION INFORMATION  &lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p>documentation  :&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>             fop is missing.
+</span><span class='line'>             Using fakefop to generate placeholder PDF files.
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;hr />
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

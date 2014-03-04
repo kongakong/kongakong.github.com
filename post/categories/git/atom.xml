@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/git/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T18:51:46+11:00</updated>
+  <updated>2014-03-04T20:03:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,10 +20,12 @@
     <id>http://www.ahwkong.com/post/2013/08/03/git-tip-1</id>
     <content type="html"><![CDATA[<p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
 
-<p>{% codeblock %}
-git &mdash;no-pager diff</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git &mdash;no-pager diff&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

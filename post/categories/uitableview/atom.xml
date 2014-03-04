@@ -4,7 +4,7 @@
   <title><![CDATA[Category: uitableview | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/uitableview/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T18:51:46+11:00</updated>
+  <updated>2014-03-04T20:03:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,13 +20,18 @@
     <id>http://www.ahwkong.com/post/2012/08/16/p-29544259150</id>
     <content type="html"><![CDATA[<p>To enable the swipe to delete feature, one must implement this API:</p>
 
-<p>{% codeblock %}
-&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle</p>
-
-<pre><code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&ndash; (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>                                        forRowAtIndexPath:(NSIndexPath *)indexPath``
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>I can enable this feature, but I got this exception from this function</p>
 

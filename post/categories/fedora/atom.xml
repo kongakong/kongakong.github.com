@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fedora | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/fedora/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T18:51:46+11:00</updated>
+  <updated>2014-03-04T20:03:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -38,17 +38,14 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[My _Fedora_ instance refused ssh connection. Needed to disable the iptable in order to get it working]]></title>
+    <title type="html"><![CDATA[My Fedora instance refused ssh connection. Needed to disable the iptable in order to get it working]]></title>
     <link href="http://www.ahwkong.com/post/2011/06/18/p-6623386099/"/>
     <updated>2011-06-18T02:01:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/06/18/p-6623386099</id>
     <content type="html"><![CDATA[<p>My <em>Fedora</em> instance refused ssh connection. Needed to disable the iptable in order to get it working</p>
 
-<p>```</p>
-
-<p>sudo service iptables stop</p>
-
-<p>```</p>
+<pre><code>sudo service iptables stop
+</code></pre>
 ]]></content>
   </entry>
   
