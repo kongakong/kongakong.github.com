@@ -4,7 +4,7 @@
   <title><![CDATA[Category: c++ | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/c-plus-plus/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:51:46+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[x in y in c++]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/04/x-in-y-in-c-plus-plus/"/>
+    <updated>2014-03-04T08:23:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/04/x-in-y-in-c-plus-plus</id>
+    <content type="html"><![CDATA[<p>Equivalent to</p>
+
+<p>{% codeblock lang:python %}
+   for x in y:</p>
+
+<pre><code>  # do something
+</code></pre>
+
+<p>{% endcodeblock %}</p>
+
+<p>in C++ is</p>
+
+<p>{% codeblock lang:c++ %}
+void print_loop() {</p>
+
+<pre><code>auto y = {0, 1, 2, 3, 4, 5, 6};
+
+for (auto i : y)
+{
+    cout &lt;&lt; '.' &lt;&lt; i;
+}
+</code></pre>
+
+<p>}</p>
+
+<p>{% endcodeblock %}</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mixing C++ and Objective-c in XCode]]></title>
@@ -25,25 +59,15 @@
 
 <p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">ifdef</span> <span class="n">__cplus</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">iostream</span><span class="o">&gt;&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">endif</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<h1>ifdef __cplus</h1>
+
+<h1>include <iostream></h1>
+
+<h1>endif</h1>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
@@ -71,15 +95,6 @@
     <updated>2011-06-18T00:37:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/06/18/p-6621512115</id>
     <content type="html"><![CDATA[<p>Pretty obvious I suppose…</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Item 47:  Ensure that non-local static objects are initialized before they're used]]></title>
-    <link href="http://www.ahwkong.com/post/2011/06/17/p-6617932879/"/>
-    <updated>2011-06-17T20:51:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2011/06/17/p-6617932879</id>
-    <content type="html"><![CDATA[<p>Use Singleton pattern to manage non-local static object</p>
 ]]></content>
   </entry>
   

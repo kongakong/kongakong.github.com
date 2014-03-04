@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="http://stackoverflow.com/a/1210141/58129 The frame of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to &hellip;">
+  <meta name="description" content="Cause The UITableViewController does not ‘live’ in a UINavigationController Solution Because I am using storyboard, the solution is slightly &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -84,6 +84,60 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/28/p-23922752806/">Problem: Cannot Use &#8216;Push&#8217; Segue Between a UITableview Cell and Another Controller</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T20:19:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Cause</em></p>
+
+<p>The UITableViewController does not ‘live’ in a UINavigationController</p>
+
+<p><em>Solution</em></p>
+
+<p>Because I am using storyboard, the solution is slightly different from non-storyboard project.</p>
+
+<p>Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.</p>
+
+<p>To fix the problem, I have to</p>
+
+<p>1) drag a UINavigationController in between the TabBarController and the First Custom Controller.</p>
+
+<p>2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller</p>
+
+<p>3) Add a relationship between the TabBarController and the new UINavigationController</p>
+
+<p>4) Add a relationship between the new UINavigationController and the new First Custom Controller</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -246,54 +300,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
-
-<p>It totally throws me off because nothing is wrong on that line.</p>
-
-<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
-
-<p>But it did not fix the problem.</p>
-
-<p>Eventually I undo the last change I made, which is</p>
-
-<p>and it works again.</p>
-
-<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/56/">&larr; Older</a>
@@ -311,6 +317,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
       </li>
     
@@ -324,10 +334,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
       </li>
     
   </ul>

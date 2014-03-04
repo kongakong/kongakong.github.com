@@ -4,7 +4,7 @@
   <title><![CDATA[Category: euler | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/euler/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:51:46+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -24,419 +24,214 @@
 
 <p><strong>Python Solution</strong></p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">#&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">prime</span> <span class="n">factors</span> <span class="n">of</span> <span class="mi">13195</span> <span class="n">are</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">13</span> <span class="ow">and</span> <span class="mf">29.</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">#&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">What</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">largest</span> <span class="n">prime</span> <span class="n">factor</span> <span class="n">of</span> <span class="n">the</span> <span class="n">number</span> <span class="mi">317584931803</span><span class="err">?</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">#&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">sys</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">isprime</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span><span class='line'>  <span class="c">#  Original version use xrange, but caused</span>
-</span><span class='line'>  <span class="c">#</span>
-</span><span class='line'>  <span class="c">#  &amp;ldquo;OverflowException: long int too large to convert to int”</span>
-</span><span class='line'>  <span class="c">#</span>
-</span><span class='line'>  <span class="c">#  when taking in a large number</span>
-</span><span class='line'>  <span class="c">#</span>
-</span><span class='line'>  <span class="c">#  So, I have to use while loop to replace “for i in xrange(2, N):”</span>
-</span><span class='line'>  <span class="c">#</span>
-</span><span class='line'>  <span class="c">#  And in order to speed up the process, the prime calculation result</span>
-</span><span class='line'>  <span class="c">#  is cached</span>
-</span><span class='line'>  <span class="k">global</span> <span class="n">primes</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c"># we have already tested it</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">N</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">return</span> <span class="bp">True</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c"># use the prime results first</span>
-</span><span class='line'>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class='line'>  <span class="k">return</span> <span class="bp">False</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c"># now computation is required</span>
-</span><span class='line'>  <span class="n">maxprime</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span class='line'>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">maxprime</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">i</span> <span class="o">=</span> <span class="n">maxprime</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span class='line'>  <span class="k">while</span> <span class="n">i</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">N</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class='line'>  <span class="k">return</span> <span class="bp">False</span>
-</span><span class='line'><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">return</span> <span class="bp">True</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">def</span> <span class="nf">factorise</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-</span><span class='line'>  <span class="c">#</span>
-</span><span class='line'>  <span class="c">#  To factorise a integer</span>
-</span><span class='line'>  <span class="c">#&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c"># short cut</span>
-</span><span class='line'>  <span class="k">global</span> <span class="n">primes</span>
-</span><span class='line'>  <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="k">if</span> <span class="n">N</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</span><span class='line'><span class="k">return</span> <span class="n">res</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="c"># original algorithm</span>
-</span><span class='line'>  <span class="n">idx</span> <span class="o">=</span> <span class="mi">2</span>
-</span><span class='line'>  <span class="k">while</span> <span class="n">idx</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">=</span> <span class="n">N</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">if</span> <span class="n">isprime</span><span class="p">(</span><span class="n">idx</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">div</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
-</span><span class='line'>  <span class="k">if</span> <span class="n">mod</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class='line'>    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">res</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">factorise</span><span class="p">(</span><span class="n">div</span><span class="p">))</span>
-</span><span class='line'>    <span class="k">break</span>
-</span><span class='line'><span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="k">return</span> <span class="n">res</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">if</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span> <span class="o">==</span> <span class="err">”</span><span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">main</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="err">“</span><span class="p">:</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span>
-</span><span class='line'>  <span class="k">print</span> <span class="n">factorise</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:python %}</p>
+
+<p>#</p>
+
+<h1>The prime factors of 13195 are 5, 7, 13 and 29.</h1>
+
+<p>#</p>
+
+<h1>What is the largest prime factor of the number 317584931803?</h1>
+
+<p>#</p>
+
+<p>import sys</p>
+
+<p>primes = []</p>
+
+<p>def isprime(N):
+  #  Original version use xrange, but caused
+  #
+  #  &ldquo;OverflowException: long int too large to convert to int”
+  #
+  #  when taking in a large number
+  #
+  #  So, I have to use while loop to replace “for i in xrange(2, N):”
+  #
+  #  And in order to speed up the process, the prime calculation result
+  #  is cached
+  global primes</p>
+
+<p>  # we have already tested it
+  if N in primes:</p>
+
+<pre><code>return True
+</code></pre>
+
+<p>  # use the prime results first
+  for i in primes:</p>
+
+<pre><code>if (N % i) == 0:
+  return False
+</code></pre>
+
+<p>  # now computation is required
+  maxprime = 2
+  if len(primes) > 0:</p>
+
+<pre><code>maxprime = primes[-1]
+</code></pre>
+
+<p>  i = maxprime + 1
+  while i &lt; N:</p>
+
+<pre><code>if (N % i) == 0:
+  return False
+i = i + 1
+</code></pre>
+
+<p>  primes.append(N)
+  return True</p>
+
+<p>def factorise(N):
+  #
+  #  To factorise a integer
+  #</p>
+
+<p>  # short cut
+  global primes
+  res = []</p>
+
+<p>  if N in primes:</p>
+
+<pre><code>res.append(N)
+return res
+</code></pre>
+
+<p>  # original algorithm
+  idx = 2
+  while idx &lt;= N:</p>
+
+<pre><code>if isprime(idx):
+  div, mod = divmod(N, idx)
+  if mod == 0:
+    res.append(idx) 
+    res.extend(factorise(div))
+    break
+idx = idx + 1
+</code></pre>
+
+<p>  return res</p>
+
+<p>if <strong>name</strong> == ”<strong>main</strong>“:<br/>
+  print factorise(int(sys.argv[1]))</p>
+
+<p>{% endcodeblock %}</p>
 
 <p><strong>Erlang Solution</strong></p>
 
 <p>Here comes the erlang version. There is some performance issue with this version. hopefully I would have some free time soon to improve the algorithm.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-<span class='line-number'>102</span>
-<span class='line-number'>103</span>
-<span class='line-number'>104</span>
-<span class='line-number'>105</span>
-<span class='line-number'>106</span>
-<span class='line-number'>107</span>
-<span class='line-number'>108</span>
-<span class='line-number'>109</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;-</span><span class="n">module</span><span class="p">(</span><span class="n">p3</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">isprime</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">factorise</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%%</span>
-</span><span class='line'><span class="c">%% prime means it is not divisible by any numbers other than 1 and itself.</span>
-</span><span class='line'><span class="c">%%</span>
-</span><span class='line'><span class="nf">isprime</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="n">false</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">isprime</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="n">true</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">isprime</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="k">when</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="nv">Pid</span> <span class="o">=</span> <span class="n">self</span><span class="p">(),</span>
-</span><span class='line'> <span class="nv">C</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nv">N</span> <span class="err">–</span> <span class="mi">1</span><span class="p">),</span>
-</span><span class='line'> <span class="nb">process_flag</span><span class="p">(</span><span class="n">trap_exit</span><span class="p">,</span> <span class="n">true</span><span class="p">),</span>
-</span><span class='line'> <span class="nn">lists</span><span class="p">:</span><span class="nf">map</span><span class="p">(</span><span class="k">fun</span><span class="p">(</span><span class="nv">Div</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>           <span class="nb">spawn_link</span><span class="p">(</span><span class="k">fun</span><span class="p">()</span> <span class="err">–&amp;</span><span class="n">gt</span><span class="p">;</span>
-</span><span class='line'>               <span class="n">test_if_divisible</span><span class="p">(</span><span class="nv">Pid</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">Div</span><span class="p">)</span>
-</span><span class='line'>               <span class="k">end</span><span class="p">)</span>
-</span><span class='line'>           <span class="k">end</span><span class="p">,</span> <span class="nv">C</span><span class="p">),</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="n">isprime_poll</span><span class="p">(</span><span class="nb">length</span><span class="err">&amp;</span><span class="n">copy</span><span class="p">;).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%%</span>
-</span><span class='line'><span class="c">%% Message loop: to listen and receive message from voters</span>
-</span><span class='line'><span class="c">%%</span>
-</span><span class='line'><span class="nf">isprime_poll</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="n">true</span><span class="p">;</span>
-</span><span class='line'><span class="nf">isprime_poll</span><span class="p">(</span><span class="nv">NumVote</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="k">receive</span>
-</span><span class='line'>   <span class="p">{</span><span class="n">nondivisible</span><span class="p">,</span> <span class="p">}</span> <span class="err">–</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>   <span class="n">isprime_poll</span><span class="p">(</span><span class="nv">NumVote</span> <span class="err">–</span> <span class="mi">1</span><span class="p">);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="p">{</span><span class="n">divisible</span><span class="p">,</span> <span class="p">}</span> <span class="err">–</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>   <span class="n">clean_mailbox</span><span class="p">(),</span>
-</span><span class='line'>   <span class="n">false</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="k">end</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%%</span>
-</span><span class='line'><span class="c">%% To clear away any messages in mailbox</span>
-</span><span class='line'><span class="c">%%</span>
-</span><span class='line'><span class="nf">clean_mailbox</span><span class="p">()</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="k">receive</span>
-</span><span class='line'>   <span class="p">_</span> <span class="err">–</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="n">clean_mailbox</span><span class="p">()</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="k">after</span> <span class="mi">0</span> <span class="err">–</span><span class="o">&gt;</span> <span class="n">ok</span>
-</span><span class='line'> <span class="k">end</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%%</span>
-</span><span class='line'><span class="c">%%</span>
-</span><span class='line'><span class="c">%%</span>
-</span><span class='line'><span class="nf">test_if_divisible</span><span class="p">(</span><span class="nv">Pid</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">Div</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="k">case</span> <span class="nv">N</span> <span class="ow">rem</span> <span class="nv">Div</span> <span class="k">of</span>
-</span><span class='line'>   <span class="mi">0</span> <span class="err">–</span><span class="o">&gt;</span> <span class="nv">Pid</span> <span class="o">!</span> <span class="p">{</span><span class="n">divisible</span><span class="p">,</span> <span class="nv">Div</span><span class="p">};</span>
-</span><span class='line'>   <span class="p">_</span> <span class="err">–</span><span class="o">&gt;</span> <span class="nv">Pid</span> <span class="o">!</span> <span class="p">{</span><span class="n">nondivisible</span><span class="p">,</span> <span class="nv">Div</span><span class="p">}</span>
-</span><span class='line'> <span class="k">end</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%%%</span>
-</span><span class='line'><span class="c">%%% To factorise an integer – wrappers</span>
-</span><span class='line'><span class="c">%%%</span>
-</span><span class='line'><span class="nf">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_list</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'>   <span class="nv">N1</span> <span class="o">=</span> <span class="nn">string</span><span class="p">:</span><span class="nf">to_integer</span><span class="p">(</span><span class="nv">N</span><span class="p">),</span>
-</span><span class='line'>   <span class="n">factorise</span><span class="p">(</span><span class="nv">N1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[]);</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'>   <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[]).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%%%</span>
-</span><span class='line'><span class="c">%%% To factorise an integer</span>
-</span><span class='line'><span class="c">%%%</span>
-</span><span class='line'><span class="nf">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Factor</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span> <span class="k">when</span> <span class="nv">Factor</span> <span class="err">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="nv">N</span><span class="o">+</span><span class="mi">1</span>  <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="k">case</span> <span class="n">isprime</span><span class="p">(</span><span class="nv">Factor</span><span class="p">)</span> <span class="k">of</span>
-</span><span class='line'>   <span class="n">true</span> <span class="err">–</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="k">if</span>
-</span><span class='line'>   <span class="p">(</span><span class="nv">N</span> <span class="ow">rem</span> <span class="nv">Factor</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="err">–&amp;</span><span class="n">gt</span><span class="p">;</span>
-</span><span class='line'>     <span class="c">%% io:format(&quot;Residual is 0 by Factor ~p~n”, [Factor]),</span>
-</span><span class='line'>     <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span> <span class="ow">div</span> <span class="nv">Factor</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="nv">Factor</span><span class="p">|</span><span class="nv">Result</span><span class="p">]);</span>
-</span><span class='line'>   <span class="n">true</span> <span class="err">–&amp;</span><span class="n">gt</span><span class="p">;</span>
-</span><span class='line'>     <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Factor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span>
-</span><span class='line'> <span class="k">end</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>   <span class="n">false</span> <span class="err">–</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>   <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Factor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span> <span class="k">end</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">factorise</span><span class="p">(</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
-</span><span class='line'> <span class="nv">R</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">(</span><span class="nv">Result</span><span class="p">),</span>
-</span><span class='line'> <span class="c">%% io:format(“~p~n”, [R]),</span>
-</span><span class='line'> <span class="nv">R</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:erlang %}</p>
+
+<p>-module(p3).
+-export([isprime/1, factorise/1]).</p>
+
+<p>%%
+%% prime means it is not divisible by any numbers other than 1 and itself.
+%%
+isprime(1) –>
+ false;</p>
+
+<p>isprime(2) –>
+ true;</p>
+
+<p>isprime(N) when N > 2 –>
+ Pid = self(),
+ C = lists:seq(2, N – 1),
+ process_flag(trap_exit, true),
+ lists:map(fun(Div) –></p>
+
+<pre><code>           spawn_link(fun() –&gt;
+               test_if_divisible(Pid, N, Div)
+               end)
+           end, C),
+</code></pre>
+
+<p> isprime_poll(length&copy;).</p>
+
+<p>%%
+%% Message loop: to listen and receive message from voters
+%%
+isprime_poll(0) –>
+ true;
+isprime_poll(NumVote) –>
+ receive
+   {nondivisible, } –></p>
+
+<pre><code>   isprime_poll(NumVote – 1);
+</code></pre>
+
+<p>   {divisible, } –></p>
+
+<pre><code>   clean_mailbox(),
+   false
+</code></pre>
+
+<p> end.</p>
+
+<p>%%
+%% To clear away any messages in mailbox
+%%
+clean_mailbox() –>
+ receive
+   _ –></p>
+
+<pre><code> clean_mailbox()
+</code></pre>
+
+<p>   after 0 –> ok
+ end.</p>
+
+<p>%%
+%%
+%%
+test_if_divisible(Pid, N, Div) –>
+ case N rem Div of
+   0 –> Pid ! {divisible, Div};
+   _ –> Pid ! {nondivisible, Div}
+ end.</p>
+
+<p>%%%
+%%% To factorise an integer – wrappers
+%%%
+factorise(N) when is_list(N) –>
+   N1 = string:to_integer(N),
+   factorise(N1, 2, []);</p>
+
+<p>factorise(N) –>
+   factorise(N, 2, []).</p>
+
+<p>%%%
+%%% To factorise an integer
+%%%
+factorise(N, Factor, Result) when Factor &lt; N+1  –>
+ case isprime(Factor) of
+   true –></p>
+
+<pre><code> if
+   (N rem Factor) == 0 –&gt;
+     %% io:format("Residual is 0 by Factor ~p~n”, [Factor]),
+     factorise(N div Factor, 2, [Factor|Result]);
+   true –&gt;
+     factorise(N, Factor + 1, Result)
+ end;
+</code></pre>
+
+<p>   false –></p>
+
+<pre><code>   factorise(N, Factor + 1, Result)
+</code></pre>
+
+<p> end;</p>
+
+<p>factorise(<em>, </em>, Result) –>
+ R = lists:reverse(Result),
+ %% io:format(“~p~n”, [R]),
+ R.</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

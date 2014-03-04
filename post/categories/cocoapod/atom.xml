@@ -4,7 +4,7 @@
   <title><![CDATA[Category: cocoapod | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/cocoapod/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:51:46+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,18 +22,13 @@
 
 <p>Made a first cut and wanted to do a sanity check. At first it did not look good.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
-</span><span class='line'>pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>[!] Unable to find a spec named `/Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec'.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+$ pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec</p>
+
+<p>[!] Unable to find a spec named `/Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec'.</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>There are several issues here:</p>
 
@@ -45,44 +40,25 @@
 
 <p>Fixed the above and committed the code change. Now I got these error messages:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ pod spec lint&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p> &ndash;> JSONKit (1.6)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>- WARN  | Git sources should specify a tag.
-</span><span class='line'>- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture x86_64
-</span><span class='line'>- NOTE  | [xcodebuild]  JSONKit/JSONKit.m:2600:77: warning: bitmasking for introspection of Objective-C object pointers is strongly discouraged [-Wdeprecated-objc-pointer-introspection]
-</span><span class='line'>- WARN  | Unable to find a license file
-</span><span class='line'>- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7
-</span><span class='line'>- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7s
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Analyzed 1 podspec.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>[!] The spec did not pass validation.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}</p>
+
+<p>$ pod spec lint</p>
+
+<p> &ndash;> JSONKit (1.6)</p>
+
+<pre><code>- WARN  | Git sources should specify a tag.
+- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture x86_64
+- NOTE  | [xcodebuild]  JSONKit/JSONKit.m:2600:77: warning: bitmasking for introspection of Objective-C object pointers is strongly discouraged [-Wdeprecated-objc-pointer-introspection]
+- WARN  | Unable to find a license file
+- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7
+- NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7s
+</code></pre>
+
+<p>Analyzed 1 podspec.</p>
+
+<p>[!] The spec did not pass validation.</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>Need to work on the two warnings</p>
 ]]></content>

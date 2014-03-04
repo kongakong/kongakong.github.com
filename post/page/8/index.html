@@ -9,9 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A new concept to me: http://stackoverflow.com/questions/20775670/set-ivar-value-from-category Here is a summary: 1
+  <meta name="description" content="Category does not allow addition of ivar. The restriction does not apply to class extension. That&rsquo;s why I can do something like this: 1
 2
-3 original = &hellip;">
+3
+4
+5 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +88,61 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/01/category-vs-class-extension/">Category vs Class Extension</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-01T07:25:00+11:00" pubdate data-updated="true">Jan 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Category does not allow addition of ivar.</p>
+
+<p>The restriction does not apply to class extension.</p>
+
+<p>That&rsquo;s why I can do something like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker1</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker2</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -303,46 +360,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing Qt4 Dependency of Pyqt4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-27T22:57:00+11:00" pubdate data-updated="true">Dec 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>SIP is installed</p>
-
-<p>PyQt needs qt4. <code>brew install qt4</code> takes care of this dependency.</p>
-
-<p>PyQt cannot be installed by either <code>easy_install</code> or <code>pip</code>. I have to download the package, run <code>configure.py</code> and then <code>make</code> and <code>make install</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -360,6 +377,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
       </li>
     
@@ -373,10 +394,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray from NSMutualArray</a>
       </li>
     
   </ul>

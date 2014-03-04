@@ -4,7 +4,7 @@
   <title><![CDATA[Category: online_education | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/online-education/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:51:46+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,7 +22,7 @@
 
 <p><a href="http://en.wikipedia.org/wiki/Robert_Sapolsky">Robert Spalosky</a></p>
 
-<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/NNnIGh9g6fA "></iframe></div></p>
+<p>{% youtube NNnIGh9g6fA %}</p>
 ]]></content>
   </entry>
   

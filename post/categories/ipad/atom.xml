@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ipad | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/ipad/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-03-04T18:51:46+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction to iPad GUI design by Omnigroup]]></title>
+    <link href="http://www.ahwkong.com/post/2011/04/24/p-4893899586/"/>
+    <updated>2011-04-24T22:15:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2011/04/24/p-4893899586</id>
+    <content type="html"><![CDATA[<p><a href="http://www.omnigroup.com/blog/designing_graceful_gracious_interfaces_for_ipad">Introduction to iPad GUI design by Omnigroup</a></p>
+]]></content>
+  </entry>
+  
+</feed>

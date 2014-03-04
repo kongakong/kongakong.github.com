@@ -4,7 +4,7 @@
   <title><![CDATA[Category: population | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/population/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:51:46+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,7 @@
     <id>http://www.ahwkong.com/post/2012/09/05/p-31575783650</id>
     <content type="html"><![CDATA[<p><a href="http://www.youtube.com/watch?v=yag-v_T0IQ">Population &ndash; Can We Begin to Talk Sensibly?</a></p>
 
-<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/yag-v_T0IQa "></iframe></div></p>
+<p>{% youtube yag-v_T0IQa %}</p>
 ]]></content>
   </entry>
   

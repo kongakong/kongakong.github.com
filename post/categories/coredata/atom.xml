@@ -4,7 +4,7 @@
   <title><![CDATA[Category: coredata | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/coredata/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:51:46+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -64,7 +64,7 @@ Receiver 'NSManagedObjectContext' for class message is a forward declaration.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation]]></title>
+    <title type="html"><![CDATA[Can store data into the Core Data sqllite database, but cannot read it back]]></title>
     <link href="http://www.ahwkong.com/post/2011/01/25/p-2912666648/"/>
     <updated>2011-01-25T08:00:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2011/01/25/p-2912666648</id>

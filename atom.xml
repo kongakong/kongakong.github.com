@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T07:01:18+11:00</updated>
+  <updated>2014-03-04T18:50:10+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,45 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[x in y in c++]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/04/x-in-y-in-c-plus-plus/"/>
+    <updated>2014-03-04T08:23:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/04/x-in-y-in-c-plus-plus</id>
+    <content type="html"><![CDATA[<p>Equivalent to</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span>
+</span><span class='line'>      <span class="c"># do something</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in C++ is</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="kt">void</span> <span class="n">print_loop</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">i</span> <span class="o">:</span> <span class="n">y</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;.&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[bottle and parameters]]></title>
@@ -643,28 +682,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[bid-ask spread and swap spread]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/29/bid-ask-spread/"/>
-    <updated>2014-01-29T08:11:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/29/bid-ask-spread</id>
-    <content type="html"><![CDATA[<p>For a 5-year swap, for example, a bank’s swap desk might quote the following:</p>
-
-<pre><code>Floating-rate payer: pay 6-month LIBOR
-receive a fixed rate of 5.19 percent
-
-Fixed-rate payer: pay a fixed rate of 5.25 percent
-receive 6-month LIBOR
-</code></pre>
-
-<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p>
-
-<p>The fixed rate is always set at a spread over the government bond yield curve and is often quoted that way. Say the 5-year Treasury is trading at a yield of 4.88 percent. The 5-year swap bid and offer rates in the example are 31 basis points and 37 basis points, respectively, above this yield, and the bank’s swap trader could quote the swap rates as a swap spread: 37–31. This means that the bank would be willing to enter into a swap in which it paid 31 basis points above the benchmark yield and received LIBOR or one in which it received 37 basis points above the yield curve and paid LIBOR.</p>
-
-<p>(Quoted from &lsquo;Fixed Income Securities and Derivatives Handbook Analysis and Valuation&rsquo; )</p>
 ]]></content>
   </entry>
   
