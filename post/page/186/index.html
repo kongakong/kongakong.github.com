@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It means that an instrument increases in value when interest rates fall more than they lose when rates rise by a similar amount is just as plain &hellip;">
+  <meta name="description" content="From http://developer.apple.com/mac/library/referencelibrary/GettingStarted/GS_GraphicsImaging/index.html Fundamentals Examples
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -51,6 +52,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -90,7 +94,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/06/20/p-5823552901/">Positive Convexity</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/07/11/p-796996959/">Reading List of the Day</a></h1>
     
     
       <p class="meta">
@@ -106,14 +110,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-06-20T13:51:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2010</time>
+<time datetime="2010-07-11T17:41:00+10:00" pubdate data-updated="true">Jul 11<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It means that an instrument increases in value when interest rates fall more than they lose when rates rise by a similar amount is just as plain vanilla bonds do.</p>
+  <div class="entry-content"><p>From</p>
+
+<p><a href="http://developer.apple.com/mac/library/referencelibrary/GettingStarted/GS_GraphicsImaging/index.html">http://developer.apple.com/mac/library/referencelibrary/GettingStarted/GS_GraphicsImaging/index.html</a></p>
+
+<p><em>Fundamentals</em></p>
+
+<p><em>Examples</em></p>
 </div>
   
   
@@ -126,7 +136,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/05/18/p-6200019099/">DAO vs DTO</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/07/10/p-792411942/">Epub Is an Open Format</a></h1>
     
     
       <p class="meta">
@@ -142,18 +152,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-05-18T21:33:00+10:00" pubdate data-updated="true">May 18<span>th</span>, 2010</time>
+<time datetime="2010-07-10T14:58:00+10:00" pubdate data-updated="true">Jul 10<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>DAO is a class that usually has the CRUD operations like save, update, delete.</p>
+  <div class="entry-content"><p>Just learn of this from the video of session 302 of WWDC10. It also showcased how to make your epub file with Automator.</p>
 
-<p>Whereas the DTO is just an object that holds data. It is really a glorified JavaBean with instance variables and setter and getters. Usually it is the DTO that is passed to the save method of a DAO.</p>
-
-<p><a href="coderanch">http://www.coderanch.com/t/99834/patterns/difference-between-DTO-DAO</a></p>
+<p>It is something new to me.</p>
 </div>
   
   
@@ -166,7 +174,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/04/20/p-5817277931/">Reuters RIC Codes</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/07/06/p-774087319/">Learning Obj-c</a></h1>
     
     
       <p class="meta">
@@ -182,72 +190,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-04-20T10:41:00+10:00" pubdate data-updated="true">Apr 20<span>th</span>, 2010</time>
+<time datetime="2010-07-06T07:17:00+10:00" pubdate data-updated="true">Jul 6<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>Call Month                      Put Month
-</span><span class='line'>January         A               January         M
-</span><span class='line'>February        B               February        N
-</span><span class='line'>March           C               March           O
-</span><span class='line'>April           D               April           P
-</span><span class='line'>May             E               May             Q
-</span><span class='line'>June            F               June            R
-</span><span class='line'>July            G               July            S
-</span><span class='line'>August          H               August          T
-</span><span class='line'>September       I               September       U
-</span><span class='line'>October         J               October         V
-</span><span class='line'>November        K               November        W
-</span><span class='line'>December        L               December        X
-</span><span class='line'>
-</span><span class='line'>futures chain RIC codes -
-</span><span class='line'>January         F
-</span><span class='line'>February        G
-</span><span class='line'>March           H
-</span><span class='line'>April           J
-</span><span class='line'>May             K
-</span><span class='line'>June            M
-</span><span class='line'>July            N
-</span><span class='line'>August          Q
-</span><span class='line'>September       U
-</span><span class='line'>October         V
-</span><span class='line'>November        X
-</span><span class='line'>December        Z</span></code></pre></td></tr></table></div></figure>
+  <div class="entry-content"><p>After some simple programming exercises, I think I am getting more comfortable with the language and IDE.</p>
 
-
-
+<p>Hopefully it is the last OO/procedural language I will care to learn. In this school of language, one has to spend too much time to learn syntax and gotcha.</p>
 </div>
   
   
@@ -260,7 +212,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/04/07/p-5834251040/">How to Interpret a Quote for FRA?</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/07/01/p-756245960/">Cinch</a></h1>
     
     
       <p class="meta">
@@ -276,16 +228,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-04-07T22:11:00+10:00" pubdate data-updated="true">Apr 7<span>th</span>, 2010</time>
+<time datetime="2010-07-01T14:00:00+10:00" pubdate data-updated="true">Jul 1<span>st</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><strong>US$ 3x9 &ndash; 3.25/3.50%p.a. </strong></p>
-
-<p>means deposit interest starting 3 months from now for 6 month is 3.25% and borrowing interest rate starting 3 months from now for 6 month is 3.50%.</p>
+  <div class="entry-content"><p>Using cinch to simplify the resizing windows in OSX. I probably do not need the more advanced features as found in SizeUp and Divvy.</p>
 </div>
   
   
@@ -298,7 +248,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/04/07/p-5834194279/">Macaulay Duration vs Modified Duration</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/06/30/p-753650737/">@property and @synthesize</a></h1>
     
     
       <p class="meta">
@@ -314,18 +264,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-04-07T21:15:00+10:00" pubdate data-updated="true">Apr 7<span>th</span>, 2010</time>
+<time datetime="2010-06-30T22:54:00+10:00" pubdate data-updated="true">Jun 30<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>Macaulay duration and modified duration are both termed “duration” and have the same (or close to the same) numerical value, but it is important to keep in mind the conceptual distinctions between them. Macaulay duration is a time measure with units in years, and really makes sense only for an instrument with fixed cash flows. For a standard bond the Macaulay duration will be between 0 and the maturity of the bond. It is equal to the maturity if and only if the bond is a zero-coupon bond.</p>
-
-<p>Modified duration, on the other hand, is a derivative or price sensitivity and measures the percentage rate of change of price with respect to yield. (Price sensitivity with respect to yields can also be measured in absolute (dollar) terms, and the absolute sensitivity is often referred to as dollar duration, DV01, PV01, or delta (δ or Δ) risk.) The concept of modified duration can be applied to interest-rate sensitive instruments with non-fixed cash flows, and can thus be applied to a wider range of instruments than can Macaulay duration.</p></blockquote>
-
-<p>from <a href="http://en.wikipedia.org/wiki/Bond_duration">Wikipedia</a></p>
+  <div class="entry-content"><p>Learning @property and @synthesize</p>
 </div>
   
   
@@ -350,23 +296,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -379,7 +325,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

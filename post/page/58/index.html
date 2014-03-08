@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Need to refresh my memory about how to do array or dictionary in objective-c…
+  <meta name="description" content="Can you spot the problem here?
 ">
   
 
@@ -52,6 +52,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +94,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/24/p-23669432124/">Need to Refresh My Memory About How to Do Array or Dictionary in Objective-c…</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23769825268/">Can You Spot the Problem Here?</a></h1>
     
     
       <p class="meta">
@@ -107,14 +110,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-24T23:08:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2012</time>
+<time datetime="2012-05-26T12:00:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Need to refresh my memory about how to do array or dictionary in objective-c…</p>
+  <div class="entry-content"><p>Can you spot the problem here?</p>
 </div>
   
   
@@ -127,7 +130,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/24/p-23667627010/">What Is the Difference Between a Porcupine, Hedgehog and Echidna?</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23757431150/">Hit a EXC_BAD_ACCESS Exception.</a></h1>
     
     
       <p class="meta">
@@ -143,139 +146,145 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-24T21:58:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2012</time>
+<time datetime="2012-05-26T08:37:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>They are completely different animals.</p>
-</div>
-  
-  
+  <div class="entry-content"><p>Hit a EXC_BAD_ACCESS exception.</p>
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/24/p-23665255760/">Trying Out &#8220; ALAssetsLibrary&#8220;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-24T20:11:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying out <code>ALAssetsLibrary</code></p>
-
-<p>This is how to import the header file:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/24/p-23663974204/">Installing Ubuntu 12.04 Server.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-24T19:03:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Installing Ubuntu 12.04 server.</p>
-
-<p>Used these options: encrypted home directory and LVM</p>
-
-<p>The installation is certainly more complicated than the desktop edition in the sense that it will expect the user to be able to answer certain technical questions.</p>
-
-<p>Therefore, after the machine was rebooted, I did a <code>apt-get update</code> then <code>apt-get install</code> the packages that I want to play with. Old school.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/23/p-23606198243/">Encountered This Problem When Trying to Deploy App to the Phone</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-23T22:50:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Encountered this problem when trying to deploy app to the phone</p>
+<p>In the lldb, I tried to interrogate some internal variable, but no success.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>Code Sign error: Certificate identity 'iPhone Developer: Developer Name (1234HEX)' appears more than once in the keychain. The codesign tool requires there only be one.
+</span><span class='line'>
+</span><span class='line'>(lldb) p [lessons count]
+</span><span class='line'>error: no known method '-count'; cast the message send to the method's return type
+</span><span class='line'>error: 1 errors parsing expression
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Clean up the Keychain and the problem is fixed</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/25/p-23730125189/">Dispatch IO</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-25T22:29:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>New stuff</p>
+
+<p><a href="None">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
+
+<p><a href="http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/25/p-23694702384/">Justinian I</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-25T08:22:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Justinian_I">Justinian I</a></p>
+
+<p>Very fascinating. He commissioned to build Hagia Sophia which was completed in less than 6 years. Remarkable.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/25/p-23690153155/">GLPK - the GNU Linear Programming Kit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-25T07:11:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="GLPK%20-%20the%20GNU%20Linear%20Programming%20Kit">http://ftp.gnu.org/gnu/glpk/</a></p>
 </div>
   
   
@@ -300,23 +309,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -329,7 +338,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

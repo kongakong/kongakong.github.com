@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation
+  <meta name="description" content="This time it has something to do with a split view.
 ">
   
 
@@ -52,6 +52,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +94,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/25/p-2912666648/">Can Store Data Into the Core Data Sqllite Database, but Cannot Read It Back</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2990119292/">Another EXC_BAD_ACCESS</a></h1>
     
     
       <p class="meta">
@@ -107,14 +110,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-25T08:00:00+11:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
+<time datetime="2011-01-29T18:29:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation</p>
+  <div class="entry-content"><p>This time it has something to do with a split view.</p>
 </div>
   
   
@@ -127,7 +130,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/24/p-2907806178/">Core Data 3</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2988855627/">My EXC_BAD_ACCESS Mystery</a></h1>
     
     
       <p class="meta">
@@ -143,16 +146,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-24T21:39:00+11:00" pubdate data-updated="true">Jan 24<span>th</span>, 2011</time>
+<time datetime="2011-01-29T16:42:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><code>The model used to open the store is incompatible with the one used to create the store</code></p>
+  <div class="entry-content"><p>It turns out it is because of the following line of code:</p>
 
-<p>Delete the app from the iOS simulator whenever seeing this error message</p>
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <em>numberOfObjects</em> returns an integer</p>
 </div>
   
   
@@ -165,7 +170,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/23/p-2879727373/">The Console Message Is Rather Helpful</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/27/p-2952633404/">Core Data 4</a></h1>
     
     
       <p class="meta">
@@ -181,14 +186,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-23T09:21:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2011</time>
+<time datetime="2011-01-27T15:13:00+11:00" pubdate data-updated="true">Jan 27<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><code>*** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'An instance of NSFetchedResultsController requires a fetch request with sort descriptors'</code></p>
+  <div class="entry-content"><p>I did not know that after implemented a <code>NSFetchResultController</code>, I sTILl need to programmatically fetch the data and then call the table view to <code>reloadData</code></p>
+
+<p>An example:</p>
 </div>
   
   
@@ -201,7 +208,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/23/p-2879685346/">Error: @synthesize Property Must Be in Implementation Context</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/26/p-2937022057/">Looking Into Stacktrace Related to EXC_BAD_ACCESS</a></h1>
     
     
       <p class="meta">
@@ -217,14 +224,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-23T09:18:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2011</time>
+<time datetime="2011-01-26T16:14:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Yes, <code>@synthesize</code> should be within the <code>@implementation</code> block</p>
+  <div class="entry-content"><p>The stack trace</p>
 </div>
   
   
@@ -237,7 +244,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/23/p-2878322041/">Core Data 2</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/26/p-2930386975/">Delete the Working Project in Shell by Accident! Time Machine Saved the Day</a></h1>
     
     
       <p class="meta">
@@ -253,16 +260,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-23T07:52:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2011</time>
+<time datetime="2011-01-26T09:35:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Adding <code>NSFetchedResultsControllerDelegate</code> to the View Controller to add core data support.</p>
-
-<p>The amount of boiler plate code is incredible…</p>
+  <div class="entry-content"><p>Delete the working project in shell by accident! Time Machine saved the day</p>
 </div>
   
   
@@ -287,23 +292,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -316,7 +321,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: erlang | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/erlang/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T20:03:08+11:00</updated>
+  <updated>2014-03-09T08:38:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SpaceX and redundancy]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/spacex-and-redundancy/"/>
+    <updated>2014-03-06T07:51:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/spacex-and-redundancy</id>
+    <content type="html"><![CDATA[<p><strong>Q:</strong> So, these flight computers on Dragon – there are three on board, and that&rsquo;s for redundancy?</p>
+
+<p><strong>A:</strong> There are actually six computers. They operate in pairs, so there are three computer units, each of which have two computers checking on each other. The reason we have three is when operating in proximity of ISS, we have to always have two computer strings voting on something on critical actions. We have three so we can tolerate a failure and still have two voting on each other. And that has nothing to do with radiation, that has to do with ensuring that we&rsquo;re safe when we&rsquo;re flying our vehicle in the proximity of the space station.</p>
+
+<p>I went into the lab earlier today, and we have 18 different processing units with computers in them. We have three main computers, but 18 units that have a computer of some kind, and all of them are triple computers – everything is three processors. So we have like 54 processors on the spacecraft. It&rsquo;s a highly distributed design and very fault-tolerant and very robust.</p>
+
+<p><a href="http://www.aviationweek.com/Blogs.aspx?plckBlogId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385&amp;plckPostId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385Post:a8b87703-93f9-4cdf-885f-9429605e14df">Source</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[compile debug_info]]></title>
@@ -447,70 +462,6 @@
 </span><span class='line'>
 </span><span class='line'>&lt;p>/usr/include/math.h:718:12: note: &lsquo;finite&rsquo; declared here
 </span><span class='line'>extern int finite(double) &lt;strong>OSX_AVAILABLE_BUT_DEPRECATED(&lt;/strong>MAC_10_0, &lt;strong>MAC_10_9, &lt;/strong>IPHONE_NA, __IPHONE_NA);&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Building erlang R16B02]]></title>
-    <link href="http://www.ahwkong.com/post/2013/12/04/building-erlang-r16b02/"/>
-    <updated>2013-12-04T07:50:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2013/12/04/building-erlang-r16b02</id>
-    <content type="html"><![CDATA[<p>Got this at the end of configure</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;hr />
-</span><span class='line'>
-</span><span class='line'>&lt;p>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;em>***  APPLICATIONS INFORMATION  &lt;/em>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;hr />
-</span><span class='line'>
-</span><span class='line'>&lt;p>wx             : wxWidgets not found, wx will NOT be usable&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;hr />
-</span><span class='line'>
-</span><span class='line'>&lt;hr />
-</span><span class='line'>
-</span><span class='line'>&lt;p>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>&lt;strong>****  DOCUMENTATION INFORMATION  &lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/strong>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;hr />
-</span><span class='line'>
-</span><span class='line'>&lt;p>documentation  :&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>             fop is missing.
-</span><span class='line'>             Using fakefop to generate placeholder PDF files.
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;hr />
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>

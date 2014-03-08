@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="KVC stands for Key-Value Coding It is time to seriously engage the documentation
+  <meta name="description" content="NIF stands for Native Implementation Function in Erlang
 ">
   
 
@@ -52,6 +52,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +94,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1357321396/">Reading iOS Documentation on KVC</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/25/p-1389628295/">NIF in Erlang</a></h1>
     
     
       <p class="meta">
@@ -107,16 +110,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-20T18:45:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
+<time datetime="2010-10-25T01:26:00+11:00" pubdate data-updated="true">Oct 25<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>KVC</em> stands for Key-Value Coding</p>
-
-<p>It is time to seriously engage the documentation</p>
+  <div class="entry-content"><p><code>NIF</code> stands for <em>Native Implementation Function</em> in Erlang</p>
 </div>
   
   
@@ -129,7 +130,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1355924543/">Ditto</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388888975/">iPad Photo Sync</a></h1>
     
     
       <p class="meta">
@@ -145,18 +146,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-20T14:14:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
+<time datetime="2010-10-24T23:03:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Learn something new today</p>
+  <div class="entry-content"><p>Another weird problem with sync’ing ipad: When it comes to photo sync, it goes “You do not have enough access privileges to sync this ipad”.</p>
 
-<p>There is a <code>ditto</code> command in BSD for replication of a directory</p>
+<p>It turns out because of previous share connection problem, I have changed the login for share mapping. The permissions are therefore out of sync.</p>
 
-<p>Never come across it in linux before.</p>
+<p>Fixed by granting write permission to the group for the set of files</p>
 </div>
   
   
@@ -169,7 +170,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/20/p-1355753091/">Vi on Black Background Does Not Work With MBP Under Sun</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388790863/">Dscl</a></h1>
     
     
       <p class="meta">
@@ -185,16 +186,24 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-20T13:48:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><code>vi</code> on black background does not work with MBP under sun.</p>
+  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
 
-<p>Change the terminal background color to white, it is much better</p>
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
+
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
 </div>
   
   
@@ -207,7 +216,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/14/p-1312897866/">Postgresql Memo</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388761712/">MBP and SMB</a></h1>
     
     
       <p class="meta">
@@ -223,18 +232,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-14T23:57:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2010</time>
+<time datetime="2010-10-24T22:34:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I do not use pgsql a lot, so  I need to jot down a few ommonly used commands here:</p>
-
-<p>Use <code>\connect &lt;database name&gt;</code> to switch database</p>
-
-<p>The equivalent in MSSQL or Sybase will be <code>use &lt;database name&gt; go</code></p>
+  <div class="entry-content"><p>Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.</p>
 </div>
   
   
@@ -247,7 +252,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/11/p-1290729286/">Successfully Compiled and Built Python 2.5.5 on Osx 10.6</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1387854919/">There Is a 10-users Limit in the Afp Protocol</a></h1>
     
     
       <p class="meta">
@@ -263,14 +268,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-11T22:45:00+11:00" pubdate data-updated="true">Oct 11<span>th</span>, 2010</time>
+<time datetime="2010-10-24T19:03:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>But there is no <code>ncurse</code> lib</p>
+  <div class="entry-content"><p>There is a 10 user limit in the afp protocol! An unexpected, unpleasant surprise.</p>
+
+<p>Switched file sharing to smb</p>
 </div>
   
   
@@ -295,23 +302,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -324,7 +331,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

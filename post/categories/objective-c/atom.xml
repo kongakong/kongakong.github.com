@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T20:03:08+11:00</updated>
+  <updated>2014-03-09T08:38:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Current time in objective-c and python]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python/"/>
+    <updated>2014-03-06T18:49:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python</id>
+    <content type="html"><![CDATA[<p>To get the current time in python</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">datetime</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>and in objective-c</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">date</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[how to make a label recognise a tape]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape/"/>
+    <updated>2014-03-06T07:44:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape</id>
+    <content type="html"><![CDATA[<p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="kt">void</span><span class="p">)</span> <span class="nl">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="n">gestureRecognizer</span>  <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[NSLog macro]]></title>
@@ -122,42 +228,6 @@
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>It is a new behavior due to the use of ARC</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Some objective-c note-to-self]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self/"/>
-    <updated>2014-02-19T02:11:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self</id>
-    <content type="html"><![CDATA[<p>To find the number of items in a <code>NSArray</code> use</p>
-
-<pre><code>[array count];
-</code></pre>
-
-<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[NSNotification and view controller]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller/"/>
-    <updated>2014-02-19T02:02:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/19/nsnotification-and-view-controller</id>
-    <content type="html"><![CDATA[<p>I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere. But I digress).</p>
-
-<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have ensured that there is no typo in the my notification name (The name is defined in a header file). I have also make sure the notification is fired on the main thread, like so:</p>
-
-<pre><code>dispatch_async(dispatch_get_main_queue(),^{
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
-});
-</code></pre>
-
-<p>However my UIViewControllers still do not receive any notification at all.</p>
-
-<p>It turns out it is because the controllers instances have gone out of scope. I found out by putting a <code>NSLog</code> in the <code>dealloc</code> method. It proves that the controllers have gone out of scope.</p>
-
-<p> In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers. Will test if it has any adverse effect or not.</p>
 ]]></content>
   </entry>
   

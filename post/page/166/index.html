@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The frame property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system. The center &hellip;">
+  <meta name="description" content="I was just trying a very simple cpp program in osx.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -51,6 +52,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -90,7 +94,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/09/p-2658426192/">Some Note on Frame vs Bounds</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/16/p-2762296356/">Fall Into the Same Trap Everytime</a></h1>
     
     
       <p class="meta">
@@ -106,18 +110,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
+<time datetime="2011-01-16T04:34:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
-
-<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
-
-<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
+  <div class="entry-content"><p>I was just trying a very simple cpp program in osx.</p>
 </div>
   
   
@@ -130,7 +130,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/07/p-2623149828/">Cannot Get UISplitViewController to Rotate. Very Frustrated</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/16/p-2759634210/">Finally I Can Bring Up a Login Screen Before the Split View in the Ipad.</a></h1>
     
     
       <p class="meta">
@@ -146,14 +146,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-07T01:05:00+11:00" pubdate data-updated="true">Jan 7<span>th</span>, 2011</time>
+<time datetime="2011-01-16T00:27:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Cannot get UISplitViewController to rotate. Very frustrated</p>
+  <div class="entry-content"><p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
 </div>
   
   
@@ -166,7 +170,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/04/p-2586930582/">iOS Idiom 1</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2727123479/">Splash Screen on iOS</a></h1>
     
     
       <p class="meta">
@@ -182,16 +186,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-04T10:28:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
+<time datetime="2011-01-13T20:22:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>To access the main window</p>
+  <div class="entry-content"><p>In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful.</p>
 
-<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
+<p><a href="Source">http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942</a></p>
 </div>
   
   
@@ -204,7 +208,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566688864/">Some UIKit Classes Such as &#8220;UIColor&#8220;, &#8220;UIFont&#8220; and &#8220;UIImage&#8220; Are Thread Safe</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
     
     
       <p class="meta">
@@ -220,14 +224,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-02T23:17:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
+<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Some UIKit classes such as <code>UIColor</code>, <code>UIFont</code> and  <code>UIImage</code> are thread safe</p>
+  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
+
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
 </div>
   
   
@@ -240,7 +252,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566308188/">Use NSZombieEnabled to Catch BAD_ASSESS</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2668647745/">iOS Idiom 2</a></h1>
     
     
       <p class="meta">
@@ -256,14 +268,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-02T22:07:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
+<time datetime="2011-01-10T02:44:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Use <code>NSZombieEnabled</code> to catch BAD_ASSESS</p>
+  <div class="entry-content"><p><code>[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];</code></p>
 </div>
   
   
@@ -288,23 +300,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -317,7 +329,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

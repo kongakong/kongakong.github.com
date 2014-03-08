@@ -9,12 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Hit a EXC_BAD_ACCESS exception. In the lldb, I tried to interrogate some internal variable, but no success. 1
+  <meta name="description" content="This code fragment 1
 2
-3
-4
-5 (lldb) p [lessons count]
-error &hellip;">
+3 // item is a MPMediaItem
+NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL]; causes Interface type cannot be &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -56,6 +54,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -95,7 +96,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23757431150/">Hit a EXC_BAD_ACCESS Exception.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23836233379/">Interface Type Cannot Be Statically Allocated</a></h1>
     
     
       <p class="meta">
@@ -111,31 +112,27 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-26T08:37:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
+<time datetime="2012-05-27T12:26:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Hit a EXC_BAD_ACCESS exception.</p>
-
-<p>In the lldb, I tried to interrogate some internal variable, but no success.</p>
+  <div class="entry-content"><p>This code fragment</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>(lldb) p [lessons count]
-</span><span class='line'>error: no known method '-count'; cast the message send to the method's return type
-</span><span class='line'>error: 1 errors parsing expression
+</span><span class='line'>// item is a MPMediaItem
+</span><span class='line'>NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>causes <code>Interface type cannot be statically allocated</code></p>
 
+<p>But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
 </div>
   
   
@@ -148,7 +145,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23730125189/">Dispatch IO</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
     
     
       <p class="meta">
@@ -164,18 +161,26 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-25T22:29:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>New stuff</p>
+  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
 
-<p><a href="None">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
+<p>It totally throws me off because nothing is wrong on that line.</p>
 
-<p><a href="http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
+<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
+
+<p>But it did not fix the problem.</p>
+
+<p>Eventually I undo the last change I made, which is</p>
+
+<p>and it works again.</p>
+
+<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
 </div>
   
   
@@ -188,7 +193,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23694702384/">Justinian I</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788398195/">When I Select a Prototype Cell, It Does Not Follow Segue and Show the Destination Controller, as Defined in the Storyboard Above.</a></h1>
     
     
       <p class="meta">
@@ -204,16 +209,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-25T08:22:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+<time datetime="2012-05-26T19:47:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Justinian_I">Justinian I</a></p>
+  <div class="entry-content"><p>When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.</p>
 
-<p>Very fascinating. He commissioned to build Hagia Sophia which was completed in less than 6 years. Remarkable.</p>
+<p>The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue.</p>
+
+<p>Once I change the segue type to ‘modal’, it works.</p>
 </div>
   
   
@@ -226,7 +233,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23690153155/">GLPK - the GNU Linear Programming Kit</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788057388/">Sample Use of Pragma Mark</a></h1>
     
     
       <p class="meta">
@@ -242,14 +249,25 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-25T07:11:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+<time datetime="2012-05-26T19:27:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="GLPK%20-%20the%20GNU%20Linear%20Programming%20Kit">http://ftp.gnu.org/gnu/glpk/</a></p>
+  <div class="entry-content"><p>Sample use of pragma mark</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>#pragma mark -
+</span><span class='line'>#pragma mark Data View</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>
+</code></p>
 </div>
   
   
@@ -262,7 +280,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/24/p-23669802351/">&#8216;12 Byzantine Rulers: The History of the Byzantine Empire&#8217; by Lars Brownworth</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23786684708/">Added a UITableVIew to My Custom Controller. Now I Want to Be Able to Add a Segway to a Cell in This Table View.</a></h1>
     
     
       <p class="meta">
@@ -278,16 +296,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-24T23:21:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2012</time>
+<time datetime="2012-05-26T18:25:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Just finished the podcast series (total to 6.7 hours). The story of Byzantine Empire is amazing. Lars has kept very good pace in the narrative. The materials are not too light or too dense.</p>
+  <div class="entry-content"><p>Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.</p>
 
-<p>Absolutely a great introduction to Byzantine history for someone who knows next to nothing about this splendid empire.</p>
+<p>Since I did not start with a UITableViewController at the beginning, I was unable to connect a segway to an individual cell inside the table view.</p>
+
+<p>Finally, by trial and error, I dragged a ‘Table View Cell’ object onto the UITableView. It is now displayed as ‘Prototype Cells’</p>
+
+<p>I can create an outgoing segway from this prototype cell. But now I am getting this error message</p>
+
+<p>It can be easily fixed by simply filling in the <em>Identifier</em> field in the <em>Attribute inspector</em>.</p>
 </div>
   
   
@@ -312,23 +336,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -341,7 +365,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Installed erlang via apt-get in Ubuntu 11.04. Here is a list of dependency: 1
+  <meta name="description" content="Now let’s try install erlang on Solaris Express: 1
 2
 3
 4
@@ -22,15 +22,8 @@
 11
 12
 13
-14
-15
-16
-17
-18
-19
-20
-21
-22 ~$ apt-get &hellip;">
+14 ~$ sudo pkg install erlang
+Password: Packages to install: 2 Create &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +65,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -111,7 +107,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/19/p-6655329978/">Installing Erlang via Apt-get in Ubuntu 11.04</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/19/p-6685804647/">Now Let’s Try Install _erlang_ on _Solaris Express_:</a></h1>
     
     
       <p class="meta">
@@ -127,14 +123,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-19T00:33:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
+<time datetime="2011-06-19T21:47:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Installed <em>erlang</em> via <em>apt-get</em> in <em>Ubuntu 11.04</em>. Here is a list of dependency:</p>
+  <div class="entry-content"><p>Now let’s try install <em>erlang</em> on <em>Solaris Express</em>:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -150,40 +146,24 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>~$ apt-get install erlang
-</span><span class='line'>Reading package lists... Done
-</span><span class='line'>Building dependency tree       
-</span><span class='line'>Reading state information... Done
-</span><span class='line'>The following extra packages will be installed:
-</span><span class='line'>  emacsen-common erlang-appmon erlang-asn1 erlang-base erlang-common-test erlang-corba erlang-crypto erlang-debugger erlang-dev
-</span><span class='line'>  erlang-dialyzer erlang-docbuilder erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inets
-</span><span class='line'>  erlang-inviso erlang-megaco erlang-mnesia erlang-mode erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept
-</span><span class='line'>  erlang-pman erlang-public-key erlang-reltool erlang-runtime-tools erlang-snmp erlang-src erlang-ssh erlang-ssl erlang-syntax-tools
-</span><span class='line'>  erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool erlang-xmerl libsctp1 lksctp-tools odbcinst
-</span><span class='line'>  odbcinst1debian2 tk tk8.4 unixodbc
-</span><span class='line'>Suggested packages:
-</span><span class='line'>  erlang-manpages erlang-doc-html fop libmyodbc odbc-postgresql tdsodbc unixodbc-bin
-</span><span class='line'>The following NEW packages will be installed:
-</span><span class='line'>  emacsen-common erlang erlang-appmon erlang-asn1 erlang-base erlang-common-test erlang-corba erlang-crypto erlang-debugger erlang-dev
-</span><span class='line'>  erlang-dialyzer erlang-docbuilder erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inets
-</span><span class='line'>  erlang-inviso erlang-megaco erlang-mnesia erlang-mode erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept
-</span><span class='line'>  erlang-pman erlang-public-key erlang-reltool erlang-runtime-tools erlang-snmp erlang-src erlang-ssh erlang-ssl erlang-syntax-tools
-</span><span class='line'>  erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool erlang-xmerl libsctp1 lksctp-tools odbcinst
-</span><span class='line'>  odbcinst1debian2 tk tk8.4 unixodbc
+</span><span class='line'>~$ sudo pkg install erlang
+</span><span class='line'>Password: 
+</span><span class='line'>               Packages to install:     2
+</span><span class='line'>           Create boot environment:    No
+</span><span class='line'>DOWNLOAD                                  PKGS       FILES    XFER (MB)
+</span><span class='line'>Completed                                  2/2   8577/8577    79.7/79.7
 </span><span class='line'>
+</span><span class='line'>PHASE                                        ACTIONS
+</span><span class='line'>Install Phase                              9425/9425 
+</span><span class='line'>
+</span><span class='line'>PHASE                                          ITEMS
+</span><span class='line'>Package State Update Phase                       2/2 
+</span><span class='line'>Image State Update Phase                         2/2 
 </span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>That’s all the message I got from the process. Very neat.</p>
 </div>
   
   
@@ -196,7 +176,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/18/p-6632827087/">Quite a Lot.</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/19/p-6684158511/">Windows Vista (and by Extension Windows 7) Seems to Have Adopted the Idea Of</a></h1>
     
     
       <p class="meta">
@@ -212,18 +192,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-18T07:23:00+10:00" pubdate data-updated="true">Jun 18<span>th</span>, 2011</time>
+<time datetime="2011-06-19T19:44:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Quite a lot.</p>
+  <div class="entry-content"><p>Windows Vista (and by extension Windows 7) seems to have adopted the idea of</p>
 
-<p>Did not expect to see SDL (Simple DirectMedia Layer)  here.</p>
-
-<p>Glad to see ODBC layer is included.</p>
+<p><a href="package%20manager">http://technet.microsoft.com/en-us/library/cc749465(WS.10).aspx</a></p>
 </div>
   
   
@@ -236,7 +214,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/18/p-6623386099/">My Fedora Instance Refused Ssh Connection. Needed to Disable the Iptable in Order to Get It Working</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/19/p-6684058002/">_gksu_ - a GTK+ Su Frontend</a></h1>
     
     
       <p class="meta">
@@ -252,17 +230,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-18T02:01:00+10:00" pubdate data-updated="true">Jun 18<span>th</span>, 2011</time>
+<time datetime="2011-06-19T19:37:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>My <em>Fedora</em> instance refused ssh connection. Needed to disable the iptable in order to get it working</p>
-
-<pre><code>sudo service iptables stop
-</code></pre>
+  <div class="entry-content"><p><em>gksu</em>  &ndash; a GTK+ su frontend</p>
 </div>
   
   
@@ -275,7 +250,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/18/p-6622672762/">On Unix Like Systems, ActiveMQ Is Running on Port 61616</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/19/p-6672342143/">Choose ‘2 CPUs’ for My VM, VirtualBox Shows ‘non-optimal Setting’ Warning. Any Value Bigger Than One Will Show This Warning.</a></h1>
     
     
       <p class="meta">
@@ -291,14 +266,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-18T01:31:00+10:00" pubdate data-updated="true">Jun 18<span>th</span>, 2011</time>
+<time datetime="2011-06-19T11:04:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>On unix like systems, <em>ActiveMQ</em> is running on port 61616</p>
+  <div class="entry-content"><p>Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.</p>
+
+<p>Select ‘Enable IO APIC’ gets rid of the warning message.</p>
 </div>
   
   
@@ -311,7 +288,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/18/p-6621895244/">Moving Onto “More Effective C++”</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/19/p-6670901721/">Fedora Does Not Use Inittab to Control Runlevel Any More</a></h1>
     
     
       <p class="meta">
@@ -327,14 +304,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-18T00:56:00+10:00" pubdate data-updated="true">Jun 18<span>th</span>, 2011</time>
+<time datetime="2011-06-19T10:10:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Moving onto “More Effective C++”</p>
+  <div class="entry-content"><p>Just learn that <em>Fedora</em> uses <code>inittab</code> to control <code>runlevel</code> no more</p>
+
+<p>Instead it uses <code>/etc/systemd/system/default.target</code></p>
 </div>
   
   
@@ -359,23 +338,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -388,7 +367,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

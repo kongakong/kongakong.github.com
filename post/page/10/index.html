@@ -9,8 +9,17 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Got this error when I ran mach build: 1
-configure: error: installation or configuration problem: C++ compiler cannot create executables. Solution: &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+9
+609:58.75 TestStartupCache
+610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -52,6 +61,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +103,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach Problem: C++ Compiler Cannot Create Executables</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/12/28/finally-firefox-is-built/">Finally Firefox Is Built</a></h1>
     
     
       <p class="meta">
@@ -107,49 +119,7 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-24T19:19:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this error when I ran <code>mach build</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>configure: error: installation or configuration problem: C++ compiler cannot create executables.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>: install g++</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/24/mach-problem/">Mach Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-24T08:27:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+<time datetime="2013-12-28T18:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2013</time>
         
       </p>
     
@@ -163,24 +133,98 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
-</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2.13.  Stop.
-</span><span class='line'> 0:00.15 make: *** [build] Error 2
-</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>609:58.75 TestStartupCache
+</span><span class='line'>610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
+</span><span class='line'>610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
+</span><span class='line'>610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
+</span><span class='line'>610:06.61 Packaging quitter@mozilla.org.xpi...
+</span><span class='line'>610:06.95 816 compiler warnings present.
+</span><span class='line'>We know it took a while, but your build finally finished successfully!
+</span><span class='line'>To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox
+</span><span class='line'>For more information on what to do now, see https://developer.mozilla.org/docs/Developer_Guide/So_You_Just_Built_Firefox</span></code></pre></td></tr></table></div></figure>
 
 
-<p>it comes from this check of  mozilla-central/client.mk</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># try to find autoconf 2.13 - discard errors from 'which'
-</span><span class='line'># MacOS X 10.4 sends "no autoconf*" errors to stdout, discard those via grep
-</span><span class='line'>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v '^no autoconf' | head -1)</span></code></pre></td></tr></table></div></figure>
+<p>It took almost 10 hours to build in a VM instance of Ubuntu desktop 13.10 with 4GB RAM and 1 CPU</p>
+</div>
+  
+  
 
 
-<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing Qt4 Dependency of Pyqt4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-27T22:57:00+11:00" pubdate data-updated="true">Dec 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>SIP is installed</p>
+
+<p>PyQt needs qt4. <code>brew install qt4</code> takes care of this dependency.</p>
+
+<p>PyQt cannot be installed by either <code>easy_install</code> or <code>pip</code>. I have to download the package, run <code>configure.py</code> and then <code>make</code> and <code>make install</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach Problem: Failed at Unified_cpp_2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T21:24:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Failed at this point</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -191,65 +235,54 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
-</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
-</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
-</span><span class='line'> 0:00.26 make[1]: *** [/home/antkong/wd/mozilla-central/configure] Error 1
-</span><span class='line'> 0:00.26 make: *** [build] Error 2
-</span><span class='line'> 0:00.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>8:57.00 {standard input}: Assembler messages:
+</span><span class='line'> 8:57.17 {standard input}:104313: Warning: end of file not at end of a line; newline inserted
+</span><span class='line'> 8:57.17 {standard input}:104921: Error: unknown pseudo-op: `.lvl'
+</span><span class='line'> 8:57.18 {standard input}: Error: open CFI at the end of file; missing .cfi_endproc directive
+</span><span class='line'> 8:57.18 c++: internal compiler error: Killed (program cc1plus)
+</span><span class='line'> 8:57.18 Please submit a full bug report,
+</span><span class='line'> 8:57.19 with preprocessed source if appropriate.
+</span><span class='line'> 8:57.19 See &lt;file:///usr/share/doc/gcc-4.8/README.Bugs> for instructions.
+</span><span class='line'> 8:57.19 
+</span><span class='line'> 8:57.19 In the directory  /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/js/src
+</span><span class='line'> 8:57.19 The following command failed to execute properly:
+</span><span class='line'> 8:57.19 c++ -o Unified_cpp_2.o -c -I../../dist/system_wrappers_js -include /home/antkong/wd/mozilla-central/js/src/config/gcc_hidden.h -DENABLE_PARALLEL_JS -DENABLE_BINARYDATA -DEXPORT_JS_API -DJS_HAS_CTYPES -DDLL_PREFIX="lib" -DDLL_SUFFIX=".so" -DMOZ_GLUE_IN_PROGRAM -DNO_NSPR_10_SUPPORT -DUSE_ZLIB -I/home/antkong/wd/mozilla-central/js/src -I. -Ictypes/libffi/include -I/home/antkong/wd/mozilla-central/js/src/../../mfbt/double-conversion -I/home/antkong/wd/mozilla-central/js/src/../../intl/icu/source/common -I/home/antkong/wd/mozilla-central/js/src/../../intl/icu/source/i18n -I../../dist/include -I/home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/include/nspr -I/home/antkong/wd/mozilla-central/js/src -fPIC -DMOZILLA_CLIENT -include ./js-confdefs.h -MD -MP -MF .deps/Unified_cpp_2.o.pp -Wall -Wpointer-arith -Woverloaded-virtual -Werror=return-type -Wtype-limits -Wempty-body -Werror=conversion-null -Wsign-compare -Wno-invalid-offsetof -Wcast-align -fno-rtti -fno-exceptions -fno-math-errno -std=gnu++0x -pthread -pipe -DNDEBUG -DTRIMMED -g -O3 -freorder-blocks -fomit-frame-pointer -DUSE_SYSTEM_MALLOC=1 -DENABLE_ASSEMBLER=1 -DENABLE_JIT=1 /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/js/src/Unified_cpp_2.cpp</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Solution</strong>: install autoconf-2.13</p>
-</div>
-  
-  
+<p>Could be due to a change I made earlier related to autoconf in <code>client.mk</code>. In order to do a clean build I will</p>
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to Do a Multi-line String in Objective-c</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-19T07:33:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here is an example:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="s">@&quot;{&quot;</span> \
-</span><span class='line'>    <span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
-</span><span class='line'><span class="s">    &quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>hg revert --no-backup client.mk
+</span><span class='line'>./mach clobber
+</span><span class='line'>hg pull -u</span></code></pre></td></tr></table></div></figure>
 
 
+<p>When I ran <code>hg pull</code> I got this error message:</p>
 
+<pre><code>$ hg pull -u
+abort: repository default not found!
+</code></pre>
+
+<p>Fixed it by creating a .hg/hgrc file:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[paths]
+</span><span class='line'>default = http://hg.mozilla.org/mozilla-central/
+</span><span class='line'>default-push = ssh://hg.mozilla.org/mozilla-central/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Unfortunately it does not fix my problem .</p>
+
+<p>It turns out it has something to do with the PC. I created an instance of VirtualBox to run ubuntu desktop 13.10 for the compilation. I only allocted 512MB RAM for the exercise. The failure above is a problem of too little RAM.</p>
+
+<p>Allocated 4GB of RAM to the VM and the exception is gone.</p>
 </div>
   
   
@@ -262,7 +295,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/19/ownership-rule-exception/">Ownership Rule Exception</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach Problem: Could Not Compile Basic X Program</a></h1>
     
     
       <p class="meta">
@@ -278,16 +311,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-19T07:26:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
+<time datetime="2013-12-24T20:51:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
+  <div class="entry-content"><p>Here is the full error message:</p>
 
-<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: <code>sudo  apt-get install libxt-dev</code></p>
 </div>
   
   
@@ -300,7 +337,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/19/tdd-in-objective-c/">Need to Write a Proper Unit Test in Objective-c</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/12/24/gstreamer-backend/">Mach Problem: Gstreamer Backend</a></h1>
     
     
       <p class="meta">
@@ -316,47 +353,38 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-19T07:12:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
+<time datetime="2013-12-24T20:49:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is my first attempt at testing my JSON handling code:</p>
+  <div class="entry-content"><p>This is the full error message:</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">testReadingJSON</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">QueQuestionManager</span><span class="o">*</span> <span class="n">qm</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QueQuestionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">qm</span><span class="p">.</span><span class="n">server_url</span> <span class="o">=</span> <span class="s">@&quot;http://localhost:8777/&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">qm</span> <span class="n">readQuestionnaire</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;&gt;&gt; %@&quot;</span><span class="p">,</span> <span class="n">qm</span><span class="p">.</span><span class="n">questionnaire</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25
+</span><span class='line'> 0:09.25                       gstreamer-app-0.10
+</span><span class='line'> 0:09.25                       gstreamer-plugins-base-0.10
+</span><span class='line'> 0:09.25 configure: error: gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer
+</span><span class='line'> 0:09.26 *** Fix above errors and then restart with\
+</span><span class='line'> 0:09.26                "/usr/bin/make -f client.mk build"
+</span><span class='line'> 0:09.26 make[2]: *** [configure] Error 1
+</span><span class='line'> 0:09.26 make[1]: *** [obj-x86_64-unknown-linux-gnu/Makefile] Error 2
+</span><span class='line'> 0:09.26 make: *** [build] Error 2
+</span><span class='line'> 0:09.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Needless to say it is pretty bad, for the following reasons:</p>
-
-<ul>
-<li><p>It has an external dependency of a local server. It is strictly speaking not a unit test</p></li>
-<li><p>The code does not work. It is likely because the run loop is not started when the unit test runs</p></li>
-</ul>
-
-
-<p>My TODO:</p>
-
-<ul>
-<li><p>Refactor the above code to be a proper unit test</p></li>
-<li><p>Use functional testing framework to implement the above test</p></li>
-</ul>
-
+<p><strong>Solution</strong>: <code>sudo apt-get install -y libgstreamer-plugins-base0.10-dev</code></p>
 </div>
   
   
@@ -381,23 +409,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -410,7 +438,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

@@ -9,8 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For a 5-year swap, for example, a bank’s swap desk might quote the following: Floating-rate payer: pay 6-month LIBOR
-receive a fixed rate of 5.19 &hellip;">
+  <meta name="description" content="To find out all timezone abbreviation, 1
+2
+3
+4
+5
+6 NSEnumerator *keys = [[NSTimeZone abbreviationDictionary] keyEnumerator]; NSString* value; while &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -52,6 +56,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +98,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/01/29/bid-ask-spread/">Bid-ask Spread and Swap Spread</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in Objective-c</a></h1>
     
     
       <p class="meta">
@@ -107,226 +114,276 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-01-29T08:11:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2014</time>
+<time datetime="2014-02-13T07:34:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>For a 5-year swap, for example, a bank’s swap desk might quote the following:</p>
-
-<pre><code>Floating-rate payer: pay 6-month LIBOR
-receive a fixed rate of 5.19 percent
-
-Fixed-rate payer: pay a fixed rate of 5.25 percent
-receive 6-month LIBOR
-</code></pre>
-
-<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p>
-
-<p>The fixed rate is always set at a spread over the government bond yield curve and is often quoted that way. Say the 5-year Treasury is trading at a yield of 4.88 percent. The 5-year swap bid and offer rates in the example are 31 basis points and 37 basis points, respectively, above this yield, and the bank’s swap trader could quote the swap rates as a swap spread: 37–31. This means that the bank would be willing to enter into a swap in which it paid 31 basis points above the benchmark yield and received LIBOR or one in which it received 37 basis points above the yield curve and paid LIBOR.</p>
-
-<p>(Quoted from &lsquo;Fixed Income Securities and Derivatives Handbook Analysis and Valuation&rsquo; )</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/23/weak-reference/">Weak Reference in Block</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-23T21:55:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
+  <div class="entry-content"><p>To find out all timezone abbreviation,</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
-</span><span class='line'>        <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/20/html5/">Html 5 Resources</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-20T16:04:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some useful links:</p>
-
-<p><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></p>
-
-<p><a href="https://github.com/scottjehl/picturefill">https://github.com/scottjehl/picturefill</a></p>
-
-<p><a href="http://www.standardista.com/responsive-images-clown-car-technique/">http://www.standardista.com/responsive-images-clown-car-technique/</a></p>
-
-<p><a href="http://www.w3.org/community/respimg/">http://www.w3.org/community/respimg/</a></p>
-
-<p><strong>Hammer.js</strong> <a href="http://eightmedia.github.io/hammer.js/">http://eightmedia.github.io/hammer.js/</a></p>
-
-<p><strong>jQT</strong> <a href="http://jqtjs.com/">http://jqtjs.com/</a></p>
-
-<p><strong>Sencha gestures</strong> <a href="http://www.sencha.com/blog/ext-js-on-tap/">http://www.sencha.com/blog/ext-js-on-tap/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/18/compile-debug-info/">Compile Debug_info</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-18T13:04:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After coming this SO question about [debug_info] (<a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a> ), I am curious if it is indeed a problem.</p>
-
-<p>Based on the <a href="http://www.erlang.org/doc/man/compile.html#debug_info">documentation</a>, this should enable the addition of debug info to the .beam files.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
-
-<p>I can only implant debug info through erlang shell like this:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
 </span><span class='line'>
-</span><span class='line'>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
-</span><span class='line'>ERROR: Could not find 'wxe_driver.so' in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
-</span><span class='line'>{ok,&lt;0.49.0>}
-</span><span class='line'>5> c(testdebuginfo, [debug_info]).
-</span><span class='line'>{ok,testdebuginfo}</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Here is the output:</p>
+
+<pre><code>EDT America/New_York
+GMT GMT
+AST America/Halifax
+IRST Asia/Tehran
+ICT Asia/Bangkok
+PET America/Lima
+KST Asia/Seoul
+PST America/Los_Angeles
+CDT America/Chicago
+EEST Europe/Istanbul
+NZDT Pacific/Auckland
+WEST Europe/Lisbon
+EAT Africa/Addis_Ababa
+HKT Asia/Hong_Kong
+IST Asia/Calcutta
+MDT America/Denver
+NZST Pacific/Auckland
+WIT Asia/Jakarta
+ADT America/Halifax
+BST Europe/London
+ART America/Argentina/Buenos_Aires
+CAT Africa/Harare
+GST Asia/Dubai
+PDT America/Los_Angeles
+SGT Asia/Singapore
+COT America/Bogota
+PKT Asia/Karachi
+EET Europe/Istanbul
+UTC UTC
+WAT Africa/Lagos
+EST America/New_York
+JST Asia/Tokyo
+CLST America/Santiago
+CET Europe/Paris
+BDT Asia/Dhaka
+MSK Europe/Moscow
+AKDT America/Juneau
+CLT America/Santiago
+AKST America/Juneau
+BRST America/Sao_Paulo
+BRT America/Sao_Paulo
+CEST Europe/Paris
+CST America/Chicago
+HST Pacific/Honolulu
+MSD Europe/Moscow
+MST America/Denver
+PHT Asia/Manila
+WET Europe/Lisbon
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">Chastised by a CoreFoundation Class</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-12T10:50:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/11/missing-the-viewdidload-event/">Missing the viewDidLoad Event</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-11T08:12:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                                  <span class="nl">owner:</span><span class="n">controller</span>
+</span><span class='line'>                                                <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
+
+<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                            <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/09/dispatch-once/">Dispatch_once</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-09T21:22:00+11:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll Is Not Called</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-03T22:09:00+11:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
+
+<ul>
+<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
+<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
+<li><p>Is Autolayout on (if you use storyboard)?</p></li>
+</ul>
 
 </div>
   
@@ -352,23 +409,23 @@ receive 6-month LIBOR
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -381,7 +438,7 @@ receive 6-month LIBOR
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

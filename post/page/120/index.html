@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="OpenRTB] RTB stands for &ldquo;Real-Time Bidding&rdquo;
+  <meta name="description" content="Basically a summary of what have been said about OO design
 ">
   
 
@@ -52,6 +52,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +94,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/13/p-6462484863/">OpenRTB</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6475607689/">Item 44: Say What You Mean; Understand What You&#8217;re Saying</a></h1>
     
     
       <p class="meta">
@@ -107,16 +110,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-13T05:44:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+<time datetime="2011-06-13T12:39:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://openrtb.info/mobile/">OpenRTB</a>]</p>
-
-<p>RTB stands for &ldquo;Real-Time Bidding&rdquo;</p>
+  <div class="entry-content"><p>Basically a summary of what have been said about OO design</p>
 </div>
   
   
@@ -129,7 +130,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/13/p-6461712369/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6475480576/">Item 43: Use Multiple Inheritance Judiciously</a></h1>
     
     
       <p class="meta">
@@ -145,14 +146,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-13T05:19:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+<time datetime="2011-06-13T12:35:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Virtual functions are dynamically bound, but default parameters are statically bound</p>
+  <div class="entry-content"><p>The deadly diamond shape inheritance relationship.</p>
+
+<p>That’s why Java uses multiple interface instead.</p>
 </div>
   
   
@@ -165,7 +168,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/13/p-6461660818/">Item 37: Never Redefine an Inherited Nonvirtual Function</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6475222144/">Item 42: Use Private Inheritance Judiciously</a></h1>
     
     
       <p class="meta">
@@ -181,14 +184,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-13T05:18:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+<time datetime="2011-06-13T12:27:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Lead to difference in behavior if a derived class is casted to its base class. Not advised.</p>
+  <div class="entry-content"><p>To inherit the implementation but not the interface.</p>
+
+<p>Example:</p>
 </div>
   
   
@@ -201,7 +206,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6450378712/">Item 36: Differentiate Between Inheritance of Interface and Inheritance of Implementation</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6469435037/">Item 41: Differentiate Between Inheritance and Templates</a></h1>
     
     
       <p class="meta">
@@ -217,18 +222,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-12T21:59:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
+<time datetime="2011-06-13T09:28:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The purpose of declaring a <code>_pure virtual function_</code> is to have derived classes inherit a function interface only</p>
-
-<p>The purpose of declaring a simple <code>_virtual function_</code> is to have derived classes inherit a function interface as well as a default implementation.</p>
-
-<p>The purpose of declaring a <code>_nonvirtual function_</code> is to have derived classes inherit a function interface as well as a mandatory implementation.</p>
+  <div class="entry-content"><p>A <code>template</code> should be used to generate a collection of classes when the type of the objects does not affect the behavior of the class’s functions.</p>
 </div>
   
   
@@ -241,7 +242,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6449793506/">Item 35: Make Sure Public Inheritance Models &#8216;Isa&#8217;</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6463253620/">Item 40: Model &#8216;Has-a&#8217; or &#8216;Is-implemented-in-terms-of&#8217; Through Layering</a></h1>
     
     
       <p class="meta">
@@ -257,14 +258,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-12T21:16:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
+<time datetime="2011-06-13T06:09:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>OO design principle</p>
+  <div class="entry-content"><p>Layering is known as composition, containment, and embedding.</p>
+
+<p>It represents a ‘has-a’ relationship</p>
 </div>
   
   
@@ -289,23 +292,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -318,7 +321,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

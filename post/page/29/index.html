@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3. &hellip;">
+  <meta name="description" content="First, to install, follow the instrument here: http://stackoverflow.com/a/13718915/58129 You may then get a Could not reserve enough space for object &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -51,6 +51,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -90,7 +93,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/11/18/p-35977135674/">How to Set Up Virtualenv and Use Pip in Python 3.3</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/04/17/p-48145048805/">Using Sbt in Ubuntu</a></h1>
     
     
       <p class="meta">
@@ -106,22 +109,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-11-18T20:44:00+11:00" pubdate data-updated="true">Nov 18<span>th</span>, 2012</time>
+<time datetime="2013-04-17T07:18:00+10:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
+  <div class="entry-content"><p>First, to install, follow the instrument here:</p>
 
-<p>Then you’ll need to create a virtualenv and activate it. For details see</p>
+<p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
 
-<p><a href="http://docs.python.org/3/library/venv.html">the python doc</a></p>
+<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
 
-<p>Since I want to install packages using pip, I proceed to install distribute.</p>
-
-<p><a href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></p>
+<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
 </div>
   
   
@@ -134,7 +135,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/11/13/p-35580336669/">VirtualEnv and Python 3.3</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/02/18/p-43309281489/">Native Client: See Only &#8216;Status: Creating Embed: Newlib&#8217; in Chrome</a></h1>
     
     
       <p class="meta">
@@ -150,16 +151,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-11-13T07:02:00+11:00" pubdate data-updated="true">Nov 13<span>th</span>, 2012</time>
+<time datetime="2013-02-18T01:00:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><code>virtualenv</code> is now a built-in module in python 3.3. The best documentation so far seems to be the</p>
-
-<p><a href="PEP%20405">http://www.python.org/dev/peps/pep-0405/</a></p>
+  <div class="entry-content"><p>It is because I have turned on the flag ‘Native Client GDB-based debugging’. It is not compatible with nexe that are linked with newlib.</p>
 </div>
   
   
@@ -172,7 +171,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/10/23/p-34100874247/">Steven Pinker: Linguistics as a Window to Understanding the Brain</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/01/02/p-39379650701/">Libtoolize</a></h1>
     
     
       <p class="meta">
@@ -188,16 +187,61 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-10-23T02:36:00+11:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2012</time>
+<time datetime="2013-01-02T00:21:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Steven Pinker: Linguistics as a Window to Understanding the Brain</p>
+  <div class="entry-content"><p>Missing <code>libtoolize</code> in OSX. Looking for solution</p>
+</div>
+  
+  
 
-<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/Q-B_ONJIEcE "></iframe></div>
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/12/06/p-37258221019/">Easiest Way to Set Up JAVA_HOME in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-06T00:15:00+11:00" pubdate data-updated="true">Dec 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>No more guesswork.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export JAVA_HOME=$(/usr/libexec/java_home)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>End result:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home</span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
   
@@ -211,7 +255,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/10/14/p-33555499567/">What Is Going on? Need to Find Out How to Override the Mirror Url.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/12/03/p-37050868937/">XCode Linker Error</a></h1>
     
     
       <p class="meta">
@@ -227,90 +271,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-10-14T19:36:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2012</time>
+<time datetime="2012-12-03T06:44:00+11:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>What is going on? Need to find out how to override the mirror url.</p>
+  <div class="entry-content"><p>An old project was created for iOS 5. When trying to re-run it, I got these error messages</p>
 
-<p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
+<p>Do not recall this kind of trouble before with iOS upgrade.</p>
 
-<p><a href="http://apache.mirror.uber.com.au/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://apache.mirror.uber.com.au/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
+<p>Set the ‘Deployment Target’ to iOS6, clean and rebuilt but it did not work.</p>
 
-<p><a href="http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz">http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-3.0.4-bin.tar.gz</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/10/14/p-33556110477/">Scala IDE</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-10-14T19:30:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">package</span> <span class="nn">greeter</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">object</span> <span class="nc">helloworld</span> <span class="o">{</span>
-</span><span class='line'>    <span class="n">println</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">)</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>I proceeded to run it by using the ‘Run it…’. I expected to see ‘Run as Scala Application’ but the option was not there.</p>
-
-<p>Turns out it is my mistake. I need to extends the object from <em>App</em>:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">package</span> <span class="nn">greeter</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">object</span> <span class="nc">helloworld</span> <span class="k">extends</span> <span class="nc">App</span><span class="o">{</span>
-</span><span class='line'>    <span class="n">println</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">)</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Then the option will appear (as shown here):</p>
-
-<p><img class="center" src="/images/tumblr_mbvkaxoK7w1qb37bm.jpg"></p>
+<p>AVFoundation Framework is actually dropped out from “Link Binary with Libraries” section. Re-adding the framework fixes the issue.</p>
 </div>
   
   
@@ -335,23 +309,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -364,7 +338,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

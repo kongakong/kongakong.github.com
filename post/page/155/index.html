@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I was having UIWebView problem because I did not set my custom controller as the root view controller.
-">
+  <meta name="description" content="A few parameters: From http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html Note The proportion of the heap dedicated to the young &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -52,6 +51,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +93,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/03/30/p-4190746017/">I Was Having UIWebView Problem Because I Did Not Set My Custom Controller as the Root View Controller.</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/04/11/p-6108177790/">JVM: Sizing the Generations</a></h1>
     
     
       <p class="meta">
@@ -107,14 +109,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-03-30T07:34:00+11:00" pubdate data-updated="true">Mar 30<span>th</span>, 2011</time>
+<time datetime="2011-04-11T22:53:00+10:00" pubdate data-updated="true">Apr 11<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I was having UIWebView problem because I did not set my custom controller as the root view controller.</p>
+  <div class="entry-content"><p>A few parameters:</p>
+
+<p>From</p>
+
+<p><a href="Sun%20JVM%20Documentation">http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html</a></p>
+
+<p><em>Note</em></p>
+
+<p>The proportion of the heap dedicated to the young generation: The bigger the young generation, the less often minor collections occur. However, for a bounded heap size a larger young generation implies a smaller tenured generation, which will increase the frequency of major collections. The optimal choice depends on the lifetime distribution of the objects allocated by the application.</p>
 </div>
   
   
@@ -127,7 +137,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/03/27/p-4110932323/">Let Give Three20 a Go</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/04/11/p-4500465032/">Cocoa Binding</a></h1>
     
     
       <p class="meta">
@@ -143,14 +153,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-03-27T04:15:00+11:00" pubdate data-updated="true">Mar 27<span>th</span>, 2011</time>
+<time datetime="2011-04-11T04:42:00+10:00" pubdate data-updated="true">Apr 11<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Let give three20 a go</p>
+  <div class="entry-content"><p>Related to KVO</p>
+
+<p><a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html">http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CocoaBindings/CocoaBindings.html</a></p>
 </div>
   
   
@@ -163,7 +175,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/03/20/p-3979113363/">Way to Make a Widget Auto-resize to the Size Container View</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/04/11/p-4499826123/">KVO</a></h1>
     
     
       <p class="meta">
@@ -179,16 +191,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-03-20T22:21:00+11:00" pubdate data-updated="true">Mar 20<span>th</span>, 2011</time>
+<time datetime="2011-04-11T04:17:00+10:00" pubdate data-updated="true">Apr 11<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Way to make a widget auto-resize to the size container view</p>
+  <div class="entry-content"><p>KVO: Key value observation. Related to Notification.</p>
 
-<p><code>view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;</code></p>
+<p><a href="http://developer.apple.com/library/ios/#documentation/cocoa/conceptual/KeyValueObserving/KeyValueObserving.html">Dcoumentation is here:</a></p>
 </div>
   
   
@@ -201,7 +213,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/03/20/p-3979095194/">UIWebView Rotation on iPad</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/04/11/p-4499737022/">Learn Something New Today:</a></h1>
     
     
       <p class="meta">
@@ -217,16 +229,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-03-20T22:19:00+11:00" pubdate data-updated="true">Mar 20<span>th</span>, 2011</time>
+<time datetime="2011-04-11T04:14:00+10:00" pubdate data-updated="true">Apr 11<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="None">http://stackoverflow.com/questions/3632084/uiwebview-rotation-on-ipad</a></p>
+  <div class="entry-content"><p>Learn something new today:</p>
 
-<p><a href="http://stackoverflow.com/questions/3632084/uiwebview-rotation-on-ipad">http://stackoverflow.com/questions/3632084/uiwebview-rotation-on-ipad</a></p>
+<p><a href="NSNotificationCenter">http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNotificationCenter_Class/Reference/Reference.html</a></p>
 </div>
   
   
@@ -239,7 +251,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/03/20/p-3976327399/">Difference Between Git Clone and Git Pull</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/04/04/p-6108881664/">Example of EqualBuilder</a></h1>
     
     
       <p class="meta">
@@ -255,16 +267,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-03-20T18:00:00+11:00" pubdate data-updated="true">Mar 20<span>th</span>, 2011</time>
+<time datetime="2011-04-04T22:24:00+10:00" pubdate data-updated="true">Apr 4<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>One difference between <code>git clone</code> and <code>git pull</code>: <code>git pull</code> will require a pre-existing .git.</p>
-
-<p>If I need to check out the source code for the first time, use of <code>git pull</code> is certainly not the right command.</p>
+  <div class="entry-content">
 </div>
   
   
@@ -289,23 +299,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -318,7 +328,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

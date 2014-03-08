@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-04T20:03:08+11:00</updated>
+  <updated>2014-03-09T08:38:08+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,323 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Current time in objective-c and python]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python/"/>
+    <updated>2014-03-06T18:49:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python</id>
+    <content type="html"><![CDATA[<p>To get the current time in python</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and in objective-c</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SpaceX and redundancy]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/spacex-and-redundancy/"/>
+    <updated>2014-03-06T07:51:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/spacex-and-redundancy</id>
+    <content type="html"><![CDATA[<p><strong>Q:</strong> So, these flight computers on Dragon – there are three on board, and that&rsquo;s for redundancy?</p>
+
+<p><strong>A:</strong> There are actually six computers. They operate in pairs, so there are three computer units, each of which have two computers checking on each other. The reason we have three is when operating in proximity of ISS, we have to always have two computer strings voting on something on critical actions. We have three so we can tolerate a failure and still have two voting on each other. And that has nothing to do with radiation, that has to do with ensuring that we&rsquo;re safe when we&rsquo;re flying our vehicle in the proximity of the space station.</p>
+
+<p>I went into the lab earlier today, and we have 18 different processing units with computers in them. We have three main computers, but 18 units that have a computer of some kind, and all of them are triple computers – everything is three processors. So we have like 54 processors on the spacecraft. It&rsquo;s a highly distributed design and very fault-tolerant and very robust.</p>
+
+<p><a href="http://www.aviationweek.com/Blogs.aspx?plckBlogId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385&amp;plckPostId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385Post:a8b87703-93f9-4cdf-885f-9429605e14df">Source</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[how to make a label recognise a tape]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape/"/>
+    <updated>2014-03-06T07:44:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape</id>
+    <content type="html"><![CDATA[<p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="nv">gestureRecognizer</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[yield to maturity]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/yield-to-maturity/"/>
+    <updated>2014-03-06T07:13:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/yield-to-maturity</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[quick 32nd lookup]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/05/quick-32nd-lookup/"/>
+    <updated>2014-03-05T07:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/05/quick-32nd-lookup</id>
+    <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>32nd</strong>  </th>
+<th> <strong>Decimal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> 1/32   </td>
+<td>0.03125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 2/32   </td>
+<td>0.0625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 3/32   </td>
+<td>0.09375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 4/32   </td>
+<td>0.125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 5/32   </td>
+<td>0.15625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 6/32   </td>
+<td>0.1875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 7/32   </td>
+<td>0.21875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 8/32   </td>
+<td>0.25 </td>
+</tr>
+<tr>
+<td></td>
+<td> 9/32   </td>
+<td>0.28125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 10/32  </td>
+<td>0.3125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 11/32  </td>
+<td>0.34375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 12/32  </td>
+<td>0.375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 13/32  </td>
+<td>0.40625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 14/32  </td>
+<td>0.4375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 15/32  </td>
+<td>0.46875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 16/32  </td>
+<td>0.5 </td>
+</tr>
+<tr>
+<td></td>
+<td> 17/32  </td>
+<td>0.53125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 18/32  </td>
+<td>0.5625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 19/32  </td>
+<td>0.59375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 20/32  </td>
+<td>0.625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 21/32  </td>
+<td>0.65625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 22/32  </td>
+<td>0.6875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 23/32  </td>
+<td>0.71875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 24/32  </td>
+<td>0.75 </td>
+</tr>
+<tr>
+<td></td>
+<td> 25/32  </td>
+<td>0.78125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 26/32  </td>
+<td>0.8125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 27/32  </td>
+<td>0.84375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 28/32  </td>
+<td>0.875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 29/32  </td>
+<td>0.90625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 30/32  </td>
+<td>0.9375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 31/32  </td>
+<td>0.96875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 32/32  </td>
+<td>1.0 </td>
+</tr>
+</tbody>
+</table>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[missing curses library]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/05/missing-curses-library/"/>
+    <updated>2014-03-05T07:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/05/missing-curses-library</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install ncurses-dev
+</span><span class='line'>Reading package lists... Done
+</span><span class='line'>Building dependency tree       
+</span><span class='line'>Reading state information... Done
+</span><span class='line'>Note, selecting 'libncurses5-dev' instead of 'ncurses-dev'
+</span><span class='line'>The following extra packages will be installed:
+</span><span class='line'>  libtinfo-dev
+</span><span class='line'>Suggested packages:
+</span><span class='line'>  ncurses-doc
+</span><span class='line'>The following NEW packages will be installed:
+</span><span class='line'>  libncurses5-dev libtinfo-dev
+</span><span class='line'>0 upgraded, 2 newly installed, 0 to remove and 107 not upgraded.
+</span><span class='line'>Need to get 328 kB of archives.
+</span><span class='line'>After this operation, 1,452 kB of additional disk space will be used.
+</span><span class='line'>Do you want to continue [Y/n]?</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Other dependency</p>
+
+<p>$ sudo apt-get install libssl-dev</p>
+
+<p>jinterface     : No Java compiler found
+odbc           : ODBC library &ndash; link check failed</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[x in y in c++]]></title>
@@ -489,195 +806,6 @@
 </span><span class='line'>
 </span><span class='line'>    <span class="c1">// print out the time and check</span>
 </span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%ld&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)[</span><span class="n">dupComponents</span> <span class="n">hour</span><span class="p">]);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Timezones in objective-c]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c/"/>
-    <updated>2014-02-13T07:34:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/13/timezone-in-objective-c</id>
-    <content type="html"><![CDATA[<p>To find out all timezone abbreviation,</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is the output:</p>
-
-<pre><code>EDT America/New_York
-GMT GMT
-AST America/Halifax
-IRST Asia/Tehran
-ICT Asia/Bangkok
-PET America/Lima
-KST Asia/Seoul
-PST America/Los_Angeles
-CDT America/Chicago
-EEST Europe/Istanbul
-NZDT Pacific/Auckland
-WEST Europe/Lisbon
-EAT Africa/Addis_Ababa
-HKT Asia/Hong_Kong
-IST Asia/Calcutta
-MDT America/Denver
-NZST Pacific/Auckland
-WIT Asia/Jakarta
-ADT America/Halifax
-BST Europe/London
-ART America/Argentina/Buenos_Aires
-CAT Africa/Harare
-GST Asia/Dubai
-PDT America/Los_Angeles
-SGT Asia/Singapore
-COT America/Bogota
-PKT Asia/Karachi
-EET Europe/Istanbul
-UTC UTC
-WAT Africa/Lagos
-EST America/New_York
-JST Asia/Tokyo
-CLST America/Santiago
-CET Europe/Paris
-BDT Asia/Dhaka
-MSK Europe/Moscow
-AKDT America/Juneau
-CLT America/Santiago
-AKST America/Juneau
-BRST America/Sao_Paulo
-BRT America/Sao_Paulo
-CEST Europe/Paris
-CST America/Chicago
-HST Pacific/Honolulu
-MSD Europe/Moscow
-MST America/Denver
-PHT Asia/Manila
-WET Europe/Lisbon
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[chastised by a CoreFoundation class]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class/"/>
-    <updated>2014-02-12T10:50:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/12/chastised-by-a-corefoundation-class</id>
-    <content type="html"><![CDATA[<p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
-
-<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
-An exception has been avoided for now.
-A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
-Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
-</code></pre>
-
-<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[missing the viewDidLoad event]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event/"/>
-    <updated>2014-02-11T08:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/11/missing-the-viewdidload-event</id>
-    <content type="html"><![CDATA[<p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
-</span><span class='line'>                                                  <span class="nl">owner:</span><span class="n">controller</span>
-</span><span class='line'>                                                <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
-
-<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
-</span><span class='line'>                                            <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dispatch_once]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/09/dispatch-once/"/>
-    <updated>2014-02-09T21:22:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/09/dispatch-once</id>
-    <content type="html"><![CDATA[<p>Wanted to declare and initialise a static variable in a .m file.</p>
-
-<p>Objective-c compiler does not like it, and raise this error message:</p>
-
-<pre><code>Initializer element is not a compile-time constant
-</code></pre>
-
-<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
-
-<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
-
-<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[scrollViewDidScroll is not called]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called/"/>
-    <updated>2014-02-03T22:09:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/03/scrollviewdidscroll-is-not-called</id>
-    <content type="html"><![CDATA[<p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
-
-<ul>
-<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
-<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
-<li><p>Is Autolayout on (if you use storyboard)?</p></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mixing C++ and Objective-c in XCode]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/"/>
-    <updated>2014-02-02T21:04:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode</id>
-    <content type="html"><![CDATA[<p>The c++ header keeps getting a compiler error:</p>
-
-<pre><code>'iostream' file not found 
-</code></pre>
-
-<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#ifdef __cplus</span>
-</span><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
-</span><span class='line'><span class="cp">#endif</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

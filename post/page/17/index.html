@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Question: Today is 1st of January. The residual maturity of a swap is 9 months. The notional principal is $1,000. You receive 3% fixed semiannual &hellip;">
+  <meta name="description" content="The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -51,6 +51,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -90,7 +93,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/08/04/simple-swap-calculation/">Simple Swap Calculation</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/09/12/riak-content-type/">Riak Content Type</a></h1>
     
     
       <p class="meta">
@@ -106,59 +109,25 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-08-04T17:34:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
+<time datetime="2013-09-12T22:28:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><strong>Question</strong>: Today is 1st of January. The residual maturity of a swap is 9 months. The notional
- principal is $1,000. You receive 3% fixed semiannual payments and pay semiannual
- cash flows based on the 6-month Libor rate on March 31st and September 30th.
- Next payment is based on Libor at 5%. The current term structure is
- R(0, 0.25) = 4% and R(0, 0.75) = 5%.</p>
+  <div class="entry-content"><p>The content-type is important for Riak KV: Various clients will use it to identify the difference between a response where the whole body is the key, or a response that contains siblings</p>
 
-<p>Find the value of the fixed leg, floating leg and the swap.</p>
+<p>It will also allow you to version your objects better. Here are a few suggestions (of course replace the text between the &lt; >):</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">swap</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">example1</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">example1</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">Fixed</span> <span class="o">=</span> <span class="n">example1_fixedleg</span><span class="p">(),</span>
-</span><span class='line'>    <span class="nv">Floating</span> <span class="o">=</span> <span class="n">example1_floatingleg</span><span class="p">(),</span>
-</span><span class='line'>    <span class="p">{</span><span class="nv">Fixed</span><span class="p">,</span> <span class="nv">Floating</span><span class="p">,</span> <span class="nv">Fixed</span><span class="o">-</span><span class="nv">Floating</span><span class="p">}.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">example1_fixedleg</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="mi">30</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">04</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1030</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">example1_floatingleg</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="c">% 25 - next floating cash-flow payment </span>
-</span><span class='line'>    <span class="c">% 1000 - the notional as if it is a zero-coupon bond</span>
-</span><span class='line'>    <span class="mi">25</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
+<ul>
+<li><code>application/octet-stream</code> &ndash; this is usually used for binary data, and is the easiest thing to set the content-type to.</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;</code> &ndash; a vendor-specific type, which you can create yourself</li>
+<li><code>application/vnd.&lt;company name&gt;.&lt;useful type name here&gt;.v&lt;version number&gt;</code> &ndash; another vendor-specific type, which supports versioning.</li>
+</ul>
 
 
-<p><strong>Answer</strong>: {1022.6981406074298,1012.5734611086509,10.124679498778846}</p>
+<p>Source: by Sam Elliott in the mailing list</p>
 </div>
   
   
@@ -171,7 +140,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/08/03/git-tip-1/">Git Tip 1</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/08/15/riak-allow-multi/">Riak Allow-multi</a></h1>
     
     
       <p class="meta">
@@ -187,20 +156,21 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-08-03T21:21:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+<time datetime="2013-08-15T01:04:00+10:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
+  <div class="entry-content"><p>I could not create a write conflict situation.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
+<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
 
+<p>Here is the command line:</p>
 
-
+<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
+</code></pre>
 </div>
   
   
@@ -213,7 +183,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/08/02/why-we-should-love-repost/">Why We Should Love Repost</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a></h1>
     
     
       <p class="meta">
@@ -229,22 +199,19 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-08-02T23:05:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+<time datetime="2013-08-13T18:47:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
+  <div class="entry-content"><p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
 
-<p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
+<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
+</code></pre>
 
-<p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
-
-<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
-
-<p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
+<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
 </div>
   
   
@@ -257,7 +224,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/08/01/luck-and-skill/">Luck and Skill</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn Something About /tmp on OSX Today</a></h1>
     
     
       <p class="meta">
@@ -273,20 +240,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-08-01T08:23:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+<time datetime="2013-08-12T11:02:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
-payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
-sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
-lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
-number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
+  <div class="entry-content"><p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
 
-<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
+<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
 </div>
   
   
@@ -299,7 +262,7 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/07/29/different-type-of-database/">Different Type of Database Models</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/08/11/var-in-r/">Var in R</a></h1>
     
     
       <p class="meta">
@@ -315,33 +278,14 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
   
 
 
-<time datetime="2013-07-29T08:08:00+10:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
+<time datetime="2013-08-11T04:47:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I find this summary in <a href="http://littleriakbook.com/">Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo;</a> book  very concise and useful.</p>
-
-<ol>
-<li><p><strong>Relational</strong> Traditional databases usually use SQL to model and query data. They are useful for data which can be stored in a highly structured schema, yet require lexible querying. Scaling a relational database (RDBMS) traditionally occurs by more powerful hardware (vertical growth).</p>
-
-<p>Examples: PostgreSQL, MySQL, Oracle</p></li>
-<li><p><strong>Graph</strong> These exist for dataighly interconnected data. They excel in modeling complex relationships between nodes, and many implementations can handle multiple billions of nodes and relationships (or edges and vertices). I tend to include triplestores and object DBs as specialized variants.</p>
-
-<p> Examples: Neo4j, Graphbase, IniniteGraph</p></li>
-<li><p><strong>Document</strong> Document datastores model hierarchical values called documents, represented in formats such as JSON or XML, and do not enforce a document schema. They generally support distributing across multiple servers (horizontal growth).</p>
-
-<p> Examples: CouchDB, MongoDB, Couchbase</p></li>
-<li><p><strong>Columnar</strong> Popularized by Google’s BigTable, this form of database exists to scale across mul- tiple servers, and groups similar data into column families. Column values can be individually versioned and managed, though families are deined in advance, not unlike RDBMS schemas.</p>
-
-<p> Examples: HBase, Cassandra, BigTable 4</p></li>
-<li><p><strong>Key/Value</strong> Key/Value, or KV stores, are conceptually like hashtables, where values are stored and accessed by an immutable key. They range from single-server varieties like Memcached used for high-speed caching, to multi-datacenter distributed systems like Riak Enterprise.</p>
-
-<p> Examples: Riak, Redis, Voldemort</p></li>
-</ol>
-
+  <div class="entry-content"><p><code>var()</code> in R return sample variance (divide by N-1), not population (divide by N)</p>
 </div>
   
   
@@ -366,23 +310,23 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -395,7 +339,7 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>

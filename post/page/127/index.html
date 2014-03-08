@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Compile this and run, &#8220;` include
-">
+  <meta name="description" content="First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency. Secondly, it avoids this kind of error &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -52,6 +51,9 @@ alt="hit counter"></a></div></noscript>
 
   
 
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body   class="collapse-sidebar sidebar-footer" >
@@ -91,7 +93,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6107123844/">Compile This and Run&#8230;</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172071952/">Item 22: Prefer Pass-by-reference to Pass-by-value</a></h1>
     
     
       <p class="meta">
@@ -107,18 +109,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T23:52:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-04T20:52:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Compile this and run,</p>
+  <div class="entry-content"><p>First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.</p>
 
-<p>&#8220;`</p>
+<p>Secondly, it avoids this kind of error:</p>
 
-<h1>include</h1>
+<p>A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.</p>
 </div>
   
   
@@ -131,7 +133,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105625669/">Item 18: Strive for Class Interfaces That Are Complete and Minimal</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6115767038/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
     
     
       <p class="meta">
@@ -147,7 +149,43 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T22:28:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T06:04:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6115016559/">Item 21: Use Const Whenever Possible</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-03T05:40:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
@@ -167,7 +205,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105544979/">Item 17: Check for Assignment to Self in Operator=</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6114962267/">Item 20: Avoid Data Members in the Public Interface</a></h1>
     
     
       <p class="meta">
@@ -183,14 +221,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T22:23:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T05:38:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>By pointer,</p>
+  <div class="entry-content">
 </div>
   
   
@@ -203,7 +241,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6104327299/">Item 16: Assign to All Data Members in Operator=</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6108828433/">C Trick Question</a></h1>
     
     
       <p class="meta">
@@ -219,52 +257,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T21:08:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T01:22:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>For a derived class, a way to achieve this is by reusing base class’s <code>=</code> operator:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103900919/">Dalai Farmer (Bill Bailey)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-02T20:40:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is just a little joke in one episode of QI (Series 5, Episode 4), but there is already a webpage about</p>
-
-<p><a href="it">http://uncyclopedia.wikia.com/wiki/Dalai_Farmer</a></p>
+  <div class="entry-content"><p>Why doesn’t it compile?</p>
 </div>
   
   
@@ -289,23 +289,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">x in y in c++</a>
+        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/bottle-and-parameters/">bottle and parameters</a>
+        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/03/nslog-macro/">NSLog macro</a>
+        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R is presinstalled in OSX</a>
+        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a maverick usb</a>
+        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>
@@ -318,7 +318,7 @@ alt="hit counter"></a></div></noscript>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
-      getTwitterFeed("kongakong", , );
+      getTwitterFeed("kongakong", 5, true);
     });
   </script>
   <script src="/javascripts/twitter.js" type="text/javascript"> </script>
