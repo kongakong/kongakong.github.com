@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="By default a riak node will only listen to 127.0.0.1. Replace 127.0.0.1 with the host IP in app.config will solve this issue
-">
+  <meta name="description" content="I could not create a write conflict situation. It turns out it is because I did not set the allow_multi property Here is the command line: curl -i - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +93,164 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/08/15/riak-allow-multi/">Riak Allow-multi</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-15T01:04:00+10:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I could not create a write conflict situation.</p>
+
+<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
+
+<p>Here is the command line:</p>
+
+<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-13T18:47:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
+
+<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
+</code></pre>
+
+<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn Something About /tmp on OSX Today</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-12T11:02:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
+
+<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/11/var-in-r/">Var in R</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-11T04:47:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>var()</code> in R return sample variance (divide by N-1), not population (divide by N)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/">How to Make Riak Listen to IP Other Than Localhost</a></h1>
     
     
@@ -127,215 +284,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/04/simple-swap-calculation/">Simple Swap Calculation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-04T17:34:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>Question</strong>: Today is 1st of January. The residual maturity of a swap is 9 months. The notional
- principal is $1,000. You receive 3% fixed semiannual payments and pay semiannual
- cash flows based on the 6-month Libor rate on March 31st and September 30th.
- Next payment is based on Libor at 5%. The current term structure is
- R(0, 0.25) = 4% and R(0, 0.75) = 5%.</p>
-
-<p>Find the value of the fixed leg, floating leg and the swap.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">swap</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">example1</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">example1</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">Fixed</span> <span class="o">=</span> <span class="n">example1_fixedleg</span><span class="p">(),</span>
-</span><span class='line'>    <span class="nv">Floating</span> <span class="o">=</span> <span class="n">example1_floatingleg</span><span class="p">(),</span>
-</span><span class='line'>    <span class="p">{</span><span class="nv">Fixed</span><span class="p">,</span> <span class="nv">Floating</span><span class="p">,</span> <span class="nv">Fixed</span><span class="o">-</span><span class="nv">Floating</span><span class="p">}.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">example1_fixedleg</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="mi">30</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">04</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1030</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">example1_floatingleg</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="c">% 25 - next floating cash-flow payment </span>
-</span><span class='line'>    <span class="c">% 1000 - the notional as if it is a zero-coupon bond</span>
-</span><span class='line'>    <span class="mi">25</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Answer</strong>: {1022.6981406074298,1012.5734611086509,10.124679498778846}</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/03/git-tip-1/">Git Tip 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-03T21:21:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/02/why-we-should-love-repost/">Why We Should Love Repost</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-02T23:05:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
-
-<p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
-
-<p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
-
-<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
-
-<p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/01/luck-and-skill/">Luck and Skill</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-01T08:23:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
-payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
-sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
-lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
-number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
-
-<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/19/">&larr; Older</a>
@@ -353,23 +301,23 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/quicklook/">quicklook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>

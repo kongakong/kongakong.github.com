@@ -9,8 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="LSE has a public lecture about the rise and decline of Wallonia, Belgium. Sounds interesting.
-">
+  <meta name="description" content="A very simple test to compare g++ and clang++ 1
+2
+3 $ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+cc1plus: warning: command &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +96,185 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8544970346/">G++ and Clang++</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:28:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A very simple test to compare g++ and clang++</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span><span class='line'>cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>clang++ does not complaint at all</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8544748050/">A Simple Clang Version Check</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:22:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Supposedly it is the clang used by Xcode 4.1.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ clang -v
+</span><span class='line'>Apple clang version 2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
+</span><span class='line'>Target: x86_64-apple-darwin11.0.0
+</span><span class='line'>Thread model: posix
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/03/p-8427446977/">Lion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-03T23:50:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There is a lot to like about lion. e.g. when I run <code>mvn</code>, it failed because no java runtime is found on my MBP. Immediately a window pops up and asked if I want to download java. A software update dialog appears and java is installed.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/03/p-8427413963/">XCode 4.1 Does Not Play Too Well With ‘Full Screen’ Mode. If I Connect an iPhone to the MBP, the Xcode Will Show a Dialog Box to Ask Me if I Want to Capture the Latest iOS. The Dialog Box Appears in the Organiser Windows, but It Is Totally Inaccessible. (You Can See Between the Gap of Two Desktop When Doing Three-fingers Swipe)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-03T23:49:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>XCode 4.1 does not play too well with ‘Full screen’ mode. If I connect an iPhone to the MBP, the Xcode will show a dialog box to ask me if I want to capture the latest iOS. The dialog box appears in the Organiser windows, but it is totally inaccessible. (You can see between the gap of two desktop when doing three-fingers swipe)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/08/03/p-8400000511/">LSE Has a Public Lecture About the Rise and Decline of Wallonia, Belgium. Sounds Interesting.</a></h1>
     
     
@@ -125,150 +306,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396862778/">Finally Killed the _perl_ Job That Owns the Alert Window. Killed the Parent _uninstalld_ (?) Process Too</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:43:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Finally killed the <em>perl</em> job that owns the alert window. Killed the parent <em>uninstalld</em>  (?) process too</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396704828/">Xcode Installation Woe</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:39:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is not looking good. The new Xcode installation hang. It stops to alert me to close iTune. But after it is closed the alert stay. I killed the installer but the alert window is still there.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396663423/">XCode 4.2 Beta Also Does Not Work With Lion. Uninstalled.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:38:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>XCode 4.2 beta also does not work with Lion. Uninstalled.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/02/p-8353796822/">Xcode 3 No Longer Works With Lion. Need to Figure Out How to Remove It Properly. (Is Running &#8220;uninstall-developer-folder&#8220; All I Need?)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-02T07:15:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Xcode 3 no longer works with Lion. Need to figure out how to remove it properly. (Is running <code>uninstall-developer-folder</code>  all I need?)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/100/">&larr; Older</a>
@@ -286,23 +323,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/quicklook/">quicklook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>

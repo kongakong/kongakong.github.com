@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-09T08:38:08+11:00</updated>
+  <updated>2014-03-15T23:22:28+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,92 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[quicklook]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/10/quicklook/"/>
+    <updated>2014-03-10T21:52:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/10/quicklook</id>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ qlmanage -l
+</span><span class='line'>List of all generator IDs: (&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>"com.apple.quicklookgenerator.iChat",
+</span><span class='line'>"com.apple.qlgenerator.package",
+</span><span class='line'>"com.apple.qlgenerator.pdf",
+</span><span class='line'>"com.apple.qlgenerator.contact",
+</span><span class='line'>"com.apple.qlgenerator.mail",
+</span><span class='line'>"com.apple.qlgenerator.audio",
+</span><span class='line'>"com.apple.garageband.quicklookgenerator",
+</span><span class='line'>"com.apple.qlgenerator.iCal",
+</span><span class='line'>"com.apple.Notes.qlgenerator",
+</span><span class='line'>"com.apple.qlgenerator.movie",
+</span><span class='line'>"com.apple.qlgenerator.image",
+</span><span class='line'>"com.apple.qlgenerator.web",
+</span><span class='line'>"com.apple.qlgenerator.LogicXQLGenerator",
+</span><span class='line'>"com.apple.qlgenerator.eps",
+</span><span class='line'>"com.apple.qlgenerator.certificates",
+</span><span class='line'>"com.apple.qlgenerator.bookmark",
+</span><span class='line'>"com.apple.qlgenerator.text",
+</span><span class='line'>"com.apple.qlgenerator.clipping",
+</span><span class='line'>"org.m0k.transmission.QuickLookPlugin",
+</span><span class='line'>"com.apple.qlgenerator.font",
+</span><span class='line'>"com.apple.qlgenerator.office",
+</span><span class='line'>"com.apple.iBooksAuthor.iBooksAuthorQuickLookGenerator",
+</span><span class='line'>"org.openemu.savestategenerator",
+</span><span class='line'>"com.apple.qlgenerator.SceneKit",
+</span><span class='line'>"com.apple.qlgenerator.iconset",
+</span><span class='line'>"com.apple.qlgenerator.standard-bundles",
+</span><span class='line'>"com.apple.qlgenerator.locPDF",
+</span><span class='line'>"com.apple.iWork.iWorkQuickLookGenerator",
+</span><span class='line'>"com.pixelmatorteam.quicklook"
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[how to make a label recognise a tape]]></title>
@@ -156,34 +242,6 @@
 <li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dependency on MathJax.js]]></title>
-    <link href="http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js/"/>
-    <updated>2014-01-06T19:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/01/06/dependency-on-mathjax-dot-js</id>
-    <content type="html"><![CDATA[<p>By default, ipython notebook will use MathJax on a CDN</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython notebook
-</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
-</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: &lt;a href="http://cdn.mathjax.org/mathjax/latest/MathJax.js">http://cdn.mathjax.org/mathjax/latest/MathJax.js&lt;/a>
-</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: &lt;a href="http://127.0.0.1:8888/">http://127.0.0.1:8888/&lt;/a>
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>To download and install the mathjax.js locally, we can run</p>
-
-<pre><code>from IPython.external.mathjax import install_mathjax
-install_mathjax()
-</code></pre>
 ]]></content>
   </entry>
   

@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="NIF stands for Native Implementation Function in Erlang
-">
+  <meta name="description" content="Run text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"]) but it says, The plot function requires the matplotlib package. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +93,160 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2010/10/27/p-1409480378/">Nltk and Matplotlib</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-27T09:02:00+11:00" pubdate data-updated="true">Oct 27<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Run</p>
+
+<p><code>text4.dispersion_plot(["citizens", "democracy", "freedom", "duties", "America"])</code></p>
+
+<p>but it says,</p>
+
+<blockquote><p>The plot function requires the matplotlib package.See</p></blockquote>
+
+<p><a href="http://matplotlib.sourceforge.net">http://matplotlib.sourceforge.net</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/26/p-1405815180/">SUNWwbapi</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-26T21:30:00+11:00" pubdate data-updated="true">Oct 26<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Solaris installation: Still at 45%. SUNWwbapi</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/26/p-1405694431/">nltk.download()</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-26T21:04:00+11:00" pubdate data-updated="true">Oct 26<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>OK, so <code>nltk.download()</code> will actually bring up a GUI downloader.</p>
+
+<p>Did not notice this, and waited for hour.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/26/p-1405099435/">Solaris 10 U9 Installation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-26T18:31:00+11:00" pubdate data-updated="true">Oct 26<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Running Solaris 10 u9 installation. The progress bar has stayed at 45% for a very long time</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2010/10/25/p-1389628295/">NIF in Erlang</a></h1>
     
     
@@ -125,166 +278,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388888975/">iPad Photo Sync</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-24T23:03:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Another weird problem with sync’ing ipad: When it comes to photo sync, it goes “You do not have enough access privileges to sync this ipad”.</p>
-
-<p>It turns out because of previous share connection problem, I have changed the login for share mapping. The permissions are therefore out of sync.</p>
-
-<p>Fixed by granting write permission to the group for the set of files</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388790863/">Dscl</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
-
-<p>So, for example, in order to find out what groups are defined locally, we can run</p>
-
-<p><code>dscl localhost -list /Local/Default/Groups</code></p>
-
-<p>To add someone to a group, we should run</p>
-
-<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
-
-<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388761712/">MBP and SMB</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-24T22:34:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/24/p-1387854919/">There Is a 10-users Limit in the Afp Protocol</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-24T19:03:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There is a 10 user limit in the afp protocol! An unexpected, unpleasant surprise.</p>
-
-<p>Switched file sharing to smb</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/178/">&larr; Older</a>
@@ -302,23 +295,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/quicklook/">quicklook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>

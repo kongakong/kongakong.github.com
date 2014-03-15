@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is just a little joke in one episode of QI (Series 5, Episode 4), but there is already a webpage about http://uncyclopedia.wikia.com/wiki/ &hellip;">
+  <meta name="description" content="Compile this and run, &#8220;` include
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,154 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6107123844/">Compile This and Run&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-02T23:52:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Compile this and run,</p>
+
+<p>&#8220;`</p>
+
+<h1>include</h1>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105625669/">Item 18: Strive for Class Interfaces That Are Complete and Minimal</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-02T22:28:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105544979/">Item 17: Check for Assignment to Self in Operator=</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-02T22:23:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By pointer,</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6104327299/">Item 16: Assign to All Data Members in Operator=</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-02T21:08:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For a derived class, a way to achieve this is by reusing base class’s <code>=</code> operator:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/06/02/p-6103900919/">Dalai Farmer (Bill Bailey)</a></h1>
     
     
@@ -126,187 +275,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103768529/">Installing Couchdb Using Brew</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-02T20:32:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Message after a successful installation</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>If this is your first install, automatically load on login with:
-</span><span class='line'>    mkdir -p ~/Library/LaunchAgents
-</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
-</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>
-</span><span class='line'>If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
-</span><span class='line'>    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
-</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>
-</span><span class='line'>Or start manually with:
-</span><span class='line'>    couchdb
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073811670/">Fill a Popover With a Tableview</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-02T01:42:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Example:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073241354/">Null Pointer in Different Languages</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-02T01:14:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Each programming language calls it differently: nil, null, none etc… Let’s do a revision.</p>
-
-<p><em>Objective-c</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6069047203/">Using Const With Reference Arguments</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-01T21:18:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>_Rule of thumb: _</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/130/">&larr; Older</a>
@@ -324,23 +292,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/quicklook/">quicklook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>

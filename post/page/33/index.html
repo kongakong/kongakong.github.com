@@ -9,8 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Pathogen: manage vim runtimepath
-">
+  <meta name="description" content="This bit of code is trying to calculate a list of mid prices based on bid and ask prices 1
+2
+3
+def mids(self, bids, asks): f = lambda X, Y: (X is not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +96,201 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/09/20/p-31877647026/">Side Effect Programming Is Bad</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-20T06:52:00+10:00" pubdate data-updated="true">Sep 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This bit of code is trying to calculate a list of mid prices based on bid and ask prices</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def mids(self, bids, asks):
+</span><span class='line'>    f = lambda X, Y: (X is not None) and (Y  is not None) and (X+Y)/2 or None
+</span><span class='line'>    return [f(bid, ask) for bid, ask in zip(bids, asks)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It works fine unTIL one day there is a None in mids.</p>
+
+<p>The bid and ask of the corresponding item are both zero. We expect to see zero in the result.</p>
+
+<p>So what happened?</p>
+
+<p>The original lambda, f, rely on the side effect of short-circuit behaviour of  and/or operator to return the mid price (if there is data) or None (if both are <code>None</code>)</p>
+
+<p>But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the ‘or’ part of the expression.</p>
+
+<p>A better to write the lambda:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>f = lambda X, Y:  (X+Y)/2.0 if (X is not None) and (Y  is not None)  else None</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/09/19/p-31813116468/">Scala Build Tool</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-19T06:39:00+10:00" pubdate data-updated="true">Sep 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/harrah/xsbt/wiki">Scala build tool</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/09/16/p-31619891652/">iMac Woe</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-16T09:42:00+10:00" pubdate data-updated="true">Sep 16<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This 27” iMac brings me endless issue.</p>
+
+<p>When I first bought it, it got recalled right away.</p>
+
+<p>I have to take a cab to and from the apple store because it is too hard to find parking in the CBD near the Apple Store. Have to move this heavy beast up and down to get to the genius bar.</p>
+
+<p>From then on there is a lot of stability issue.</p>
+
+<p>I am trying to upgrade it to Mountain Lion today.</p>
+
+<p>My previous attempts on Macbook air and Macbook Pro are very smooth.</p>
+
+<p>But not on this iMac.</p>
+
+<p>For days, I cannot download the Mountain Lion installer to Launder.</p>
+
+<p>Fine.</p>
+
+<p>Prepared an mountain lion OSX thumb drive and boot it up. Cannot run installer because it cannot download components for installation!</p>
+
+<p>Should never buy an iMac. Look stunning but really unreliable. Should have bough a mac mini + display instead. At least it will make it easier to visit a Genius Bar when there is a trouble.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/09/10/p-31263644336/">Human Behavioral Biology by Robert Sapolsky</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-10T19:52:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Human Behavioral Biology</em> by</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Robert_Sapolsky">Robert Spalosky</a></p>
+
+<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/NNnIGh9g6fA "></iframe></div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/09/09/p-31190527440/">Pathogen: Manage Vim Runtimepath</a></h1>
     
     
@@ -125,175 +322,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/09/07/p-31050185788/">External Harddisk, Airport Extreme and Time Capsule</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-07T19:52:00+10:00" pubdate data-updated="true">Sep 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.</p>
-
-<p>My last-gen MBP has a 320Gb harddisk and about 265Gb of data. I am too lazy to do an initial time machine backup via a ethernet cable.</p>
-
-<p>So over wifi and 10 hours later, the backup is still less than half way through.</p>
-
-<p>I did not expect this scheme to work at all because my past research indicated that Apple/TimeMachine did not allow backup to network drive unless it is hosted by Time Capsule.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/09/07/p-31011821379/">iTune Festival</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-07T06:53:00+10:00" pubdate data-updated="true">Sep 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.tuaw.com/2012/08/29/itunes-festival-app-on-apple-tv/">Checked out my AppleTV and it indeed happened&hellip;</a></p>
-
-<p>Very sneaky update.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/09/05/p-31575783650/">Population - Can We Begin to Talk Sensibly?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-05T00:00:00+10:00" pubdate data-updated="true">Sep 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.youtube.com/watch?v=yag-v_T0IQ">Population &ndash; Can We Begin to Talk Sensibly?</a></p>
-
-<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/yag-v_T0IQa "></iframe></div>
-
-
-<p></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/09/04/p-30862158032/">Doing Python Programming on Osx</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-04T19:33:00+10:00" pubdate data-updated="true">Sep 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Come across this useful  <a href="http://www.reddit.com/r/Python/comments/z16ap/switch_to_mac_for_python_programming/c60vbly">post on reddit</a></p>
-
-<p>Summary:</p>
-
-<ul>
-<li>use <code>homebrew</code> for installing/managing mysql/nginx/apache/etc &ndash; but not Python!</li>
-<li>use <code>pythonbrew</code> for managing your Python installs.</li>
-<li>use <code>buildout</code> in place of virtualenv. Trust me on this. You will thank me later.</li>
-<li>use <code>supervisor</code> to run any dev-based daemons (nginx/mysql/mongodb/etc).</li>
-</ul>
-
-
-<p>A main problem I had before is building scipy. Hopefully pythonbrew might fix this issue.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/34/">&larr; Older</a>
@@ -311,23 +339,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/10/quicklook/">quicklook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and redundancy</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">how to make a label recognise a tape</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/yield-to-maturity/">yield to maturity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/05/quick-32nd-lookup/">quick 32nd lookup</a>
       </li>
     
   </ul>

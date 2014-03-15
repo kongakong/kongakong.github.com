@@ -1258,11 +1258,11 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/05/24/p-5796329592/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-03-10T08:46:12+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/05/24/p-5797170054/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-03-10T08:50:11+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/05/25/p-5810996367/</loc>
@@ -4014,7 +4014,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/05/missing-curses-library/</loc>
-        <lastmod>2014-03-05T07:20:30+11:00</lastmod>
+        <lastmod>2014-03-10T21:56:33+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/05/quick-32nd-lookup/</loc>
@@ -4022,7 +4022,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/06/yield-to-maturity/</loc>
-        <lastmod>2014-03-06T07:13:51+11:00</lastmod>
+        <lastmod>2014-03-10T09:02:25+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape/</loc>
@@ -4037,12 +4037,30 @@
         <lastmod>2014-03-06T18:52:53+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2014/03/07/keyboard-in-ios/</loc>
+        <lastmod>2014-03-10T22:07:48+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/03/10/quicklook/</loc>
+        <lastmod>2014-03-10T21:53:04+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/</loc>
+        <lastmod>2014-03-10T22:01:31+11:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.ahwkong.com/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/
+        </loc>
+        <lastmod>2014-03-15T23:22:20+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2014-03-09T07:17:12+11:00</lastmod>
+        <lastmod>2014-03-15T23:22:20+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2014-03-09T07:17:12+11:00</lastmod>
+        <lastmod>2014-03-15T23:22:20+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4050,6 +4068,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2014-03-09T07:17:12+11:00</lastmod>
+        <lastmod>2014-03-15T23:22:20+11:00</lastmod>
     </url>
 </urlset>

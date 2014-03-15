@@ -4,7 +4,7 @@
   <title><![CDATA[Category: finance | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/finance/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-09T08:38:08+11:00</updated>
+  <updated>2014-03-15T23:22:28+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[yield to maturity]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/06/yield-to-maturity/"/>
+    <updated>2014-03-06T07:13:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/06/yield-to-maturity</id>
+    <content type="html"><![CDATA[<p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
+
+<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[bid-ask spread and swap spread]]></title>
@@ -61,15 +72,6 @@ receive 6-month LIBOR
     <content type="html"><![CDATA[<p>The contamination principle dictates that every nonlinear security commands time value, positive if the security is convex and negative if it is concave.</p>
 
 <p>Nassim Taleb, <em>Dynamic Hedging</em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[EFP]]></title>
-    <link href="http://www.ahwkong.com/post/2011/12/21/p-14559224775/"/>
-    <updated>2011-12-21T22:43:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2011/12/21/p-14559224775</id>
-    <content type="html"><![CDATA[<p><a href="Exchange%20for%20Physical">http://www.asx.net.au/products/what-are-efps.htm</a></p>
 ]]></content>
   </entry>
   
