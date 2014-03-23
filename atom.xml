@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-23T20:57:10+11:00</updated>
+  <updated>2014-03-24T06:47:45+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,145 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[octopress deploy rejected]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/22/octopress-deploy-rejected/"/>
+    <updated>2014-03-22T22:07:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/22/octopress-deploy-rejected</id>
+    <content type="html"><![CDATA[<p>Got this error when running &lsquo;rake deploy&rsquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>## Pushing generated _deploy website
+</span><span class='line'>Counting objects: 9767, done.
+</span><span class='line'>Delta compression using up to 4 threads.
+</span><span class='line'>Compressing objects: 100% (5297/5297), done.
+</span><span class='line'>Writing objects: 100% (7245/7245), 3.98 MiB | 121.00 KiB/s, done.
+</span><span class='line'>Total 7245 (delta 3406), reused 2619 (delta 423)
+</span><span class='line'>remote: error: GH001: Large files detected.
+</span><span class='line'>remote: error: Trace: 2cb44393c3f81f907b200d71379dc45c
+</span><span class='line'>remote: error: See http://git.io/iEPt8g for more information.
+</span><span class='line'>remote: error: File downloads/code/erlang/out3.log is 122.48 MB; this exceeds GitHub's file size limit of 100 MB
+</span><span class='line'>To git@github.com:kongakong/kongakong.github.com
+</span><span class='line'> ! [remote rejected] master -> master (pre-receive hook declined)
+</span><span class='line'>error: failed to push some refs to 'git@github.com:kongakong/kongakong.github.com'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I have left a log file in the downloads/code folder. Although I did not check in the file, it is copied into the _deploy folder and get committed for deployment.</p>
+
+<p>Here is a solution</p>
+
+<p>1) Make sure the unwanted file is removed from git</p>
+
+<p>2) Add <code>*.log</code> to .gitignore to permanently ignore this file type.</p>
+
+<p>3) Download <a href="http://rtyley.github.io/bfg-repo-cleaner/"><code>bfg</code></a> to remove the redundant, big files in <strong>_deploy</strong> folder</p>
+
+<p>Here is the partial output from bfg</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>These are your protected commits, and so their contents will NOT be altered:
+</span><span class='line'>
+</span><span class='line'> * commit d8b90a41 (protected by 'HEAD')
+</span><span class='line'>
+</span><span class='line'>Cleaning
+</span><span class='line'>--------
+</span><span class='line'>
+</span><span class='line'>Found 910 commits
+</span><span class='line'>Cleaning commits:       100% (910/910)
+</span><span class='line'>Cleaning commits completed in 3,051 ms.
+</span><span class='line'>
+</span><span class='line'>Updating 1 Ref
+</span><span class='line'>--------------
+</span><span class='line'>
+</span><span class='line'>    Ref                 Before     After   
+</span><span class='line'>    ---------------------------------------
+</span><span class='line'>    refs/heads/master | d8b90a41 | 1c0ad187
+</span><span class='line'>
+</span><span class='line'>Updating references:    100% (1/1)
+</span><span class='line'>...Ref update completed in 16 ms.
+</span><span class='line'>
+</span><span class='line'>Commit Tree-Dirt History
+</span><span class='line'>------------------------
+</span><span class='line'>
+</span><span class='line'>    Earliest                                              Latest
+</span><span class='line'>    |                                                          |
+</span><span class='line'>    ...........................................................D
+</span><span class='line'>
+</span><span class='line'>    D = dirty commits (file tree fixed)
+</span><span class='line'>    m = modified commits (commit message or parents changed)
+</span><span class='line'>    . = clean commits (no changes to file tree)
+</span><span class='line'>
+</span><span class='line'>                            Before     After   
+</span><span class='line'>    -------------------------------------------
+</span><span class='line'>    First modified commit | 6725709a | f2971f05
+</span><span class='line'>    Last dirty commit     | cbc09c38 | 774bb768
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>In total, 14 object ids were changed - a record of these will be written to:
+</span><span class='line'>
+</span><span class='line'>    /Users/antkong/octopress/_deploy.bfg-report/2014-03-23T21-03/object-id-map.old-new.txt
+</span><span class='line'>
+</span><span class='line'>BFG run is complete!</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[2x2 suduko solver]]></title>
@@ -1105,20 +1244,6 @@ true
 
 
 <p>It is a new behavior due to the use of ARC</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Some objective-c note-to-self]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self/"/>
-    <updated>2014-02-19T02:11:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/19/some-objective-c-note-to-self</id>
-    <content type="html"><![CDATA[<p>To find the number of items in a <code>NSArray</code> use</p>
-
-<pre><code>[array count];
-</code></pre>
-
-<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI &hellip;">
+  <meta name="description" content="To find the number of items in a NSArray use [array count]; It is not size (python) or length (java)
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +88,47 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/19/some-objective-c-note-to-self/">Some Objective-c Note-to-self</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-19T02:11:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To find the number of items in a <code>NSArray</code> use</p>
+
+<pre><code>[array count];
+</code></pre>
+
+<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -322,63 +364,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-14T22:19:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To convert a NSDate into another Timezone</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSCalendarUnit</span> <span class="n">val</span> <span class="o">=</span> <span class="n">NSCalendarUnitYear</span><span class="o">|</span><span class="n">NSCalendarUnitHour</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">NSCalendar</span><span class="o">*</span> <span class="n">dupCal</span> <span class="o">=</span>  <span class="p">[[</span><span class="n">NSCalendar</span> <span class="n">currentCalendar</span><span class="p">]</span> <span class="n">copy</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="p">[</span><span class="n">dupCal</span> <span class="nl">setTimeZone:</span><span class="n">toTimeZone</span><span class="p">];</span> <span class="c1">// setting to a different timezone</span>
-</span><span class='line'>    <span class="n">NSDateComponents</span> <span class="o">*</span><span class="n">dupComponents</span> <span class="o">=</span> <span class="p">[</span><span class="n">dupCal</span> <span class="nl">components:</span><span class="n">val</span> <span class="nl">fromDate:</span><span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">]];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="c1">// print out the time and check</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%ld&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)[</span><span class="n">dupComponents</span> <span class="n">hour</span><span class="p">]);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/6/">&larr; Older</a>
@@ -396,6 +381,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/16/2x2-suduko-solver/">2x2 suduko solver</a>
       </li>
     
@@ -409,10 +398,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/03/10/quicklook/">quicklook</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
       </li>
     
   </ul>
