@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/octopress/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-24T06:47:45+11:00</updated>
+  <updated>2014-03-24T07:12:12+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -59,7 +59,7 @@
 
 <p>It is because I have left a log file in the downloads/code folder. Although I did not check in the file, it is copied into the _deploy folder and get committed for deployment.</p>
 
-<p>Here is a solution</p>
+<p>Here is a solution:</p>
 
 <p>1) Make sure the unwanted file is removed from git</p>
 
@@ -67,7 +67,7 @@
 
 <p>3) Download <a href="http://rtyley.github.io/bfg-repo-cleaner/"><code>bfg</code></a> to remove the redundant, big files in <strong>_deploy</strong> folder</p>
 
-<p>Here is the partial output from bfg</p>
+<p>Here is the partial output from <code>bfg</code></p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -161,7 +161,7 @@
 </span><span class='line'>
 </span><span class='line'>&lt;p>In total, 14 object ids were changed &ndash; a record of these will be written to:&lt;/p>
 </span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>/Users/antkong/octopress/_deploy.bfg-report/2014-03-23T21-03/object-id-map.old-new.txt
+</span><span class='line'>&lt;pre>&lt;code>/Users/antkong/octopress/_deploy.bfg-report/2014-03-22T21-03/object-id-map.old-new.txt
 </span><span class='line'>&lt;/code>&lt;/pre>
 </span><span class='line'>
 </span><span class='line'>&lt;p>BFG run is complete!&lt;/p>

@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Is it the equivalent of segfault in unix or NPE in java? Anyway, having fun with it…
-">
+  <meta name="description" content="It turns out I was trying to send release message to a NSArray instance which was created using the class method arrayWithObjects: It is probably a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +87,44 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/09/14/p-1119099362/">EXC_BAD_ACCESS Resolved</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
+
+<p>It is probably a wrong conclusion, but commenting out the line works.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -243,44 +280,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/09/05/p-1069081574/">Optional Methods</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-09-05T20:53:00+10:00" pubdate data-updated="true">Sep 5<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just learn another feature of objective-c: optional methods.</p>
-
-<p>Use keyword <em>@optional</em> for declaration.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/183/">&larr; Older</a>
@@ -298,11 +297,15 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">2x2 suduko solver</a>
+        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver</a>
       </li>
     
       <li class="post">
@@ -311,10 +314,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/10/quicklook/">quicklook</a>
       </li>
     
   </ul>
