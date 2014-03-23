@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Question: Today is 1st of January. The residual maturity of a swap is 9 months. The notional principal is $1,000. You receive 3% fixed semiannual &hellip;">
+  <meta name="description" content="By default a riak node will only listen to 127.0.0.1. Replace 127.0.0.1 with the host IP in app.config will solve this issue
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +88,44 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/">How to Make Riak Listen to IP Other Than Localhost</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T18:53:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By default a riak node will only listen to 127.0.0.1.</p>
+
+<p>Replace 127.0.0.1 with the host IP in app.config will solve this issue</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -297,61 +336,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/29/different-type-of-database/">Different Type of Database Models</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-29T08:08:00+10:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I find this summary in <a href="http://littleriakbook.com/">Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo;</a> book  very concise and useful.</p>
-
-<ol>
-<li><p><strong>Relational</strong> Traditional databases usually use SQL to model and query data. They are useful for data which can be stored in a highly structured schema, yet require lexible querying. Scaling a relational database (RDBMS) traditionally occurs by more powerful hardware (vertical growth).</p>
-
-<p>Examples: PostgreSQL, MySQL, Oracle</p></li>
-<li><p><strong>Graph</strong> These exist for dataighly interconnected data. They excel in modeling complex relationships between nodes, and many implementations can handle multiple billions of nodes and relationships (or edges and vertices). I tend to include triplestores and object DBs as specialized variants.</p>
-
-<p> Examples: Neo4j, Graphbase, IniniteGraph</p></li>
-<li><p><strong>Document</strong> Document datastores model hierarchical values called documents, represented in formats such as JSON or XML, and do not enforce a document schema. They generally support distributing across multiple servers (horizontal growth).</p>
-
-<p> Examples: CouchDB, MongoDB, Couchbase</p></li>
-<li><p><strong>Columnar</strong> Popularized by Google’s BigTable, this form of database exists to scale across mul- tiple servers, and groups similar data into column families. Column values can be individually versioned and managed, though families are deined in advance, not unlike RDBMS schemas.</p>
-
-<p> Examples: HBase, Cassandra, BigTable 4</p></li>
-<li><p><strong>Key/Value</strong> Key/Value, or KV stores, are conceptually like hashtables, where values are stored and accessed by an immutable key. They range from single-server varieties like Memcached used for high-speed caching, to multi-datacenter distributed systems like Riak Enterprise.</p>
-
-<p> Examples: Riak, Redis, Voldemort</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/20/">&larr; Older</a>
@@ -369,6 +353,10 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/16/2x2-suduko-solver/">2x2 suduko solver</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
@@ -382,10 +370,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
     
       <li class="post">
         <a href="/post/2014/03/07/keyboard-in-ios/">keyboard in iOS</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/06/now-in-objective-c-and-python/">Current time in objective-c and python</a>
       </li>
     
   </ul>
