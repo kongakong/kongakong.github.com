@@ -1802,7 +1802,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/06/23/p-6804116161/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-03-26T18:23:48+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/06/24/p-6851508029/</loc>
@@ -3858,7 +3858,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute/</loc>
-        <lastmod>2013-12-31T20:02:58+11:00</lastmod>
+        <lastmod>2014-03-26T18:21:29+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2013/12/31/swizzle/</loc>
@@ -4056,23 +4056,27 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/16/2x2-suduko-solver/</loc>
-        <lastmod>2014-03-24T06:59:32+11:00</lastmod>
+        <lastmod>2014-03-26T18:22:44+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/22/octopress-deploy-rejected/</loc>
-        <lastmod>2014-03-24T06:58:16+11:00</lastmod>
+        <lastmod>2014-03-26T18:27:02+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/03/24/9x9-suduko-solver/</loc>
         <lastmod>2014-03-24T07:10:25+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2014/03/31/design-pattern/</loc>
+        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2014-03-24T07:10:25+11:00</lastmod>
+        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2014-03-24T07:10:25+11:00</lastmod>
+        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4080,6 +4084,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2014-03-24T07:10:25+11:00</lastmod>
+        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
     </url>
 </urlset>

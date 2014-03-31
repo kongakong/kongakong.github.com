@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: design | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/design/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-03-31T19:35:39+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[design pattern]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/31/design-pattern/"/>
+    <updated>2014-03-31T16:43:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/31/design-pattern</id>
+    <content type="html"><![CDATA[<p>From p63 of <a href="http://norvig.com/design-patterns/design-patterns.pdf">the Design Pattern Slide</a> by Peter Norvig.</p>
+
+<p>It sounds like a very good advise.</p>
+
+<h3>Design Strategy: English Translation</h3>
+
+<p>-  To insure that your program says what you mean:</p>
+
+<p>(1) Start with English description</p>
+
+<p>(2) Write code from description</p>
+
+<p>(3) Translate code back to English; compare to (1)</p>
+
+<p>Example: (1), (2) from a Lisp textbook
+(1) “Given a list of monsters, determine the number
+ that are swarms.”</p>
+
+<p>(2) See next slide</p>
+
+<p>(3) “Given a list of monsters, produce a 1 for a
+ monster whose type is swarm, and a 0 for others.
+ Then add up the numbers.”</p>
+]]></content>
+  </entry>
+  
+</feed>

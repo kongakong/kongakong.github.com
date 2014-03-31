@@ -4,7 +4,7 @@
   <title><![CDATA[Category: interface_builder | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/interface-builder/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-24T07:12:12+11:00</updated>
+  <updated>2014-03-31T19:35:39+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute/"/>
     <updated>2013-12-31T06:42:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2013/12/31/user-defined-runtime-attribute</id>
-    <content type="html"><![CDATA[<p>It is for the interface builder and xib files to set an attribute in a class.</p>
+    <content type="html"><![CDATA[<p>It comes from the interface builder. The exception is thrown when xib file is loaded and trying to set an attribute in a class.</p>
 
 <p>If the attribute is not defined, you will get this error and the app will crash</p>
 

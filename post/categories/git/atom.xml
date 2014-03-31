@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/git/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-24T07:12:12+11:00</updated>
+  <updated>2014-03-31T19:35:39+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -61,11 +61,11 @@
 
 <p>Here is a solution:</p>
 
-<p>1) Make sure the unwanted file is removed from git</p>
+<p>1) Make sure the unwanted file is removed</p>
 
-<p>2) Add <code>*.log</code> to .gitignore to permanently ignore this file type.</p>
+<p>2) Add <code>*.log</code> to <strong>.gitignore</strong> to permanently ignore this file type.</p>
 
-<p>3) Download <a href="http://rtyley.github.io/bfg-repo-cleaner/"><code>bfg</code></a> to remove the redundant, big files in <strong>_deploy</strong> folder</p>
+<p>3) Download <a href="http://rtyley.github.io/bfg-repo-cleaner/"><code>bfg</code></a> to remove the redundant, big files in the <strong>_deploy</strong> folder</p>
 
 <p>Here is the partial output from <code>bfg</code></p>
 
@@ -167,6 +167,8 @@
 </span><span class='line'>&lt;p>BFG run is complete!&lt;/p>
 </span><span class='line'>
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>4) Now you can run the <code>rake deploy</code> again</p>
 ]]></content>
   </entry>
   

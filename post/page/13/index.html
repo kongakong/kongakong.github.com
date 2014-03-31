@@ -9,9 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Here is an example: 1
+  <meta name="description" content="1
 2
-3 NSString* s = @&quot;{&quot; \ &quot; key1 = \&quot;value1\&quot; \ &quot; }&quot;; ">
+3
+4
+5
+$ ./mach build 0:00.10 /usr/bin/make -f client.mk -s 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +92,88 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/mach-problem/">Mach Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T08:27:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
+</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2.13.  Stop.
+</span><span class='line'> 0:00.15 make: *** [build] Error 2
+</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it comes from this check of  mozilla-central/client.mk</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># try to find autoconf 2.13 - discard errors from 'which'
+</span><span class='line'># MacOS X 10.4 sends "no autoconf*" errors to stdout, discard those via grep
+</span><span class='line'>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v '^no autoconf' | head -1)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
+</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
+</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
+</span><span class='line'> 0:00.26 make[1]: *** [/home/antkong/wd/mozilla-central/configure] Error 1
+</span><span class='line'> 0:00.26 make: *** [build] Error 2
+</span><span class='line'> 0:00.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: install autoconf-2.13</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -337,64 +422,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/16/cannot-init-a-class-object/">Cannot Init a Class Object</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-16T20:39:00+11:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this exception</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] *** Terminating app due to uncaught 
-</span><span class='line'>exception 'NSInvalidArgumentException', reason: '*** +[MyClass&lt;0x100084d80> init]: cannot init a class object.'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is because I have mistakenly written</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>instead of</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/14/">&larr; Older</a>
@@ -412,6 +439,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
@@ -420,15 +451,11 @@ alt="hit counter"></a></div></noscript>
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver</a>
+        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
       </li>
     
   </ul>

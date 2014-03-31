@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-24T07:12:12+11:00</updated>
+  <updated>2014-03-31T19:35:39+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[design pattern]]></title>
+    <link href="http://www.ahwkong.com/post/2014/03/31/design-pattern/"/>
+    <updated>2014-03-31T16:43:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/03/31/design-pattern</id>
+    <content type="html"><![CDATA[<p>From p63 of <a href="http://norvig.com/design-patterns/design-patterns.pdf">the Design Pattern Slide</a> by Peter Norvig.</p>
+
+<p>It sounds like a very good advise.</p>
+
+<h3>Design Strategy: English Translation</h3>
+
+<p>-  To insure that your program says what you mean:</p>
+
+<p>(1) Start with English description</p>
+
+<p>(2) Write code from description</p>
+
+<p>(3) Translate code back to English; compare to (1)</p>
+
+<p>Example: (1), (2) from a Lisp textbook
+(1) “Given a list of monsters, determine the number
+ that are swarms.”</p>
+
+<p>(2) See next slide</p>
+
+<p>(3) “Given a list of monsters, produce a 1 for a
+ monster whose type is swarm, and a 0 for others.
+ Then add up the numbers.”</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[9x9 suduko solver]]></title>
@@ -417,7 +448,7 @@
 </span><span class='line'><span class="nf">solve</span><span class="p">(_</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">EndPos</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[],</span> <span class="p">_,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="p">_</span><span class="nv">Steps</span><span class="p">)</span> <span class="k">when</span> <span class="nv">EndPos</span> <span class="o">==</span> <span class="nv">SideLen</span> <span class="o">*</span> <span class="nv">SideLen</span> <span class="o">+</span> <span class="mi">1</span>  <span class="o">-&gt;</span>
 </span><span class='line'>    <span class="c">%% pass the end post</span>
 </span><span class='line'>    <span class="nv">Ans</span><span class="p">;</span>
-</span><span class='line'><span class="nf">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">Remain</span><span class="p">],</span> <span class="nv">LastNum</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span> <span class="k">when</span> <span class="nv">H</span> <span class="o">=:=</span> <span class="mi">0</span>
+</span><span class='line'><span class="nf">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">Rest</span><span class="p">],</span> <span class="nv">LastNum</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span> <span class="k">when</span> <span class="nv">H</span> <span class="o">=:=</span> <span class="mi">0</span>
 </span><span class='line'>    <span class="o">-&gt;</span>
 </span><span class='line'>    <span class="p">{</span><span class="nv">R</span><span class="p">,</span> <span class="nv">C</span><span class="p">}</span> <span class="o">=</span> <span class="n">pos_to_xy</span><span class="p">(</span><span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">),</span>
 </span><span class='line'>    <span class="nv">CurrentMatrix</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">sublist</span><span class="p">(</span><span class="nv">Ans</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">++</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">sublist</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="p">,</span> <span class="nb">length</span><span class="p">(</span><span class="nv">Seed</span><span class="p">)</span><span class="o">-</span><span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
@@ -430,22 +461,22 @@
 </span><span class='line'>          <span class="k">case</span> <span class="n">is_well_formed</span><span class="p">(</span><span class="nv">ProposedMatrix</span><span class="p">,</span> <span class="nv">Pts</span><span class="p">)</span> <span class="k">of</span>
 </span><span class='line'>          <span class="n">true</span> <span class="o">-&gt;</span> <span class="c">%% move on</span>
 </span><span class='line'>              <span class="c">% io:format(&quot;Got it ~p. Next pos ~p~n&quot;, [NewH, PosInSeed+1]),</span>
-</span><span class='line'>              <span class="n">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="o">++</span><span class="p">[</span><span class="nv">NewH</span><span class="p">],</span> <span class="nv">Remain</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="p">[{</span><span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">NewH</span><span class="p">}]</span><span class="o">++</span><span class="nv">Steps</span><span class="p">);</span>
+</span><span class='line'>              <span class="n">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="o">++</span><span class="p">[</span><span class="nv">NewH</span><span class="p">],</span> <span class="nv">Rest</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="p">[{</span><span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">NewH</span><span class="p">}]</span><span class="o">++</span><span class="nv">Steps</span><span class="p">);</span>
 </span><span class='line'>          <span class="n">false</span> <span class="o">-&gt;</span> <span class="c">%% backtraked</span>
 </span><span class='line'>              <span class="c">% io:format(&quot;backtracked (1) at ~p. Tried ~p at (~p,~p)~n&quot;, [ PosInSeed, NewH, R, C ]),</span>
-</span><span class='line'>              <span class="n">solve_backtrack</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">]</span><span class="o">++</span><span class="nv">Remain</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span>
+</span><span class='line'>              <span class="n">solve_backtrack</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">]</span><span class="o">++</span><span class="nv">Rest</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span>
 </span><span class='line'>          <span class="k">end</span><span class="p">;</span>
 </span><span class='line'>      <span class="p">{</span><span class="n">no</span><span class="p">,</span> <span class="p">_}</span> <span class="o">-&gt;</span> <span class="c">% continue</span>
 </span><span class='line'>          <span class="c">% io:format(&quot;backtracked (2) at ~p. Tried ~p at (~p,~p)~n&quot;, [ PosInSeed, NewH, R, C ]),</span>
-</span><span class='line'>          <span class="n">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="o">++</span><span class="p">[</span><span class="nv">NewH</span><span class="p">],</span> <span class="nv">Remain</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="p">[{</span><span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">NewH</span><span class="p">}]</span><span class="o">++</span><span class="nv">Steps</span><span class="p">)</span>
+</span><span class='line'>          <span class="n">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="o">++</span><span class="p">[</span><span class="nv">NewH</span><span class="p">],</span> <span class="nv">Rest</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="p">[{</span><span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">NewH</span><span class="p">}]</span><span class="o">++</span><span class="nv">Steps</span><span class="p">)</span>
 </span><span class='line'>       <span class="k">end</span><span class="p">;</span>
 </span><span class='line'>      <span class="p">_</span> <span class="o">-&gt;</span> <span class="c">%% backtracked</span>
 </span><span class='line'>      <span class="c">% io:format(&quot;backtracked (3) at ~p. No soln at (~p,~p)~n&quot;, [ PosInSeed, R, C ]),</span>
-</span><span class='line'>            <span class="n">solve_backtrack</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">]</span><span class="o">++</span><span class="nv">Remain</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span>
+</span><span class='line'>            <span class="n">solve_backtrack</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Ans</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">]</span><span class="o">++</span><span class="nv">Rest</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span>
 </span><span class='line'>    <span class="k">end</span><span class="p">;</span>
-</span><span class='line'><span class="nf">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">Begin</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">Remain</span><span class="p">],</span> <span class="p">_</span><span class="nv">TriedNumAtThisPos</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'><span class="nf">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="p">,</span> <span class="nv">Begin</span><span class="p">,</span> <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">Rest</span><span class="p">],</span> <span class="p">_</span><span class="nv">TriedNumAtThisPos</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">)</span> <span class="o">-&gt;</span>
 </span><span class='line'>    <span class="c">%% seeded value, keep moving on</span>
-</span><span class='line'>    <span class="n">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Begin</span> <span class="o">++</span> <span class="p">[</span><span class="nv">H</span><span class="p">],</span> <span class="nv">Remain</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">).</span>
+</span><span class='line'>    <span class="n">solve</span><span class="p">(</span><span class="nv">Seed</span><span class="p">,</span> <span class="nv">PosInSeed</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">Begin</span> <span class="o">++</span> <span class="p">[</span><span class="nv">H</span><span class="p">],</span> <span class="nv">Rest</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">SideLen</span><span class="p">,</span> <span class="nv">Steps</span><span class="p">).</span>
 </span><span class='line'>
 </span><span class='line'><span class="nf">run</span><span class="p">()</span> <span class="o">-&gt;</span>
 </span><span class='line'>    <span class="nv">Ans</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">seed_matrix</span><span class="p">()),</span>
@@ -505,11 +536,11 @@
 
 <p>Here is a solution:</p>
 
-<p>1) Make sure the unwanted file is removed from git</p>
+<p>1) Make sure the unwanted file is removed</p>
 
-<p>2) Add <code>*.log</code> to .gitignore to permanently ignore this file type.</p>
+<p>2) Add <code>*.log</code> to <strong>.gitignore</strong> to permanently ignore this file type.</p>
 
-<p>3) Download <a href="http://rtyley.github.io/bfg-repo-cleaner/"><code>bfg</code></a> to remove the redundant, big files in <strong>_deploy</strong> folder</p>
+<p>3) Download <a href="http://rtyley.github.io/bfg-repo-cleaner/"><code>bfg</code></a> to remove the redundant, big files in the <strong>_deploy</strong> folder</p>
 
 <p>Here is the partial output from <code>bfg</code></p>
 
@@ -601,12 +632,12 @@
 </span><span class='line'>BFG run is complete!</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p>4) Now you can run the <code>rake deploy</code> again</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[4x4 suduko solver]]></title>
+    <title type="html"><![CDATA[4x4 suduko solver in erlang]]></title>
     <link href="http://www.ahwkong.com/post/2014/03/16/2x2-suduko-solver/"/>
     <updated>2014-03-16T17:05:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/03/16/2x2-suduko-solver</id>
@@ -1590,69 +1621,6 @@ true
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// m is a NSMutualArray </span>
 </span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[urlencode unicode]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/23/urlencode-unicode/"/>
-    <updated>2014-02-23T07:25:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/23/urlencode-unicode</id>
-    <content type="html"><![CDATA[<p>Work in python 3</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python3</span>
-</span><span class='line'><span class="n">Python</span> <span class="mf">3.3</span><span class="o">.</span><span class="mi">4</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Feb</span> <span class="mi">23</span> <span class="mi">2014</span><span class="p">,</span> <span class="mo">06</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">55</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.2</span><span class="o">.</span><span class="mi">1</span> <span class="n">Compatible</span> <span class="n">Apple</span> <span class="n">LLVM</span> <span class="mf">5.0</span> <span class="p">(</span><span class="n">clang</span><span class="o">-</span><span class="mf">500.2</span><span class="o">.</span><span class="mi">79</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
-</span><span class='line'><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib.parse</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
-</span><span class='line'><span class="s">&#39;a=%C6%90&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Does not work in python</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python</span>
-</span><span class='line'><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">6</span> <span class="o">|</span><span class="n">Anaconda</span> <span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jan</span> <span class="mi">10</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.0</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">Apple</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">build</span> <span class="mi">5493</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
-</span><span class='line'><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'><span class="ne">ValueError</span><span class="p">:</span> <span class="nb">chr</span><span class="p">()</span> <span class="n">arg</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="s">u&quot;</span><span class="se">\u0400</span><span class="s">&quot;</span><span class="p">})</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/Users/antkong/anaconda/lib/python2.7/urllib.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1329</span><span class="p">,</span> <span class="ow">in</span> <span class="n">urlencode</span>
-</span><span class='line'>    <span class="n">v</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
-</span><span class='line'><span class="ne">UnicodeEncodeError</span><span class="p">:</span> <span class="s">&#39;ascii&#39;</span> <span class="n">codec</span> <span class="n">can</span><span class="s">&#39;t encode character u&#39;</span>\<span class="n">u0400</span><span class="s">&#39; in position 0: ordinal not in range(128)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

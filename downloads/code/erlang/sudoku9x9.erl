@@ -173,7 +173,7 @@ solve_backtrack(Seed, _PosInSeed, Ans, _Rest, _LastNum, SideLen, [LastStep|Tail]
 solve(_Seed, EndPos, Ans, [], _, SideLen, _Steps) when EndPos == SideLen * SideLen + 1  ->
     %% pass the end post
     Ans;
-solve(Seed, PosInSeed, Ans, [H|Remain], LastNum, SideLen, Steps) when H =:= 0
+solve(Seed, PosInSeed, Ans, [H|Rest], LastNum, SideLen, Steps) when H =:= 0
     ->
     {R, C} = pos_to_xy(PosInSeed, SideLen),
     CurrentMatrix = lists:sublist(Ans, 1, PosInSeed-1) ++ lists:sublist(Seed, PosInSeed, length(Seed)-PosInSeed+1),
@@ -186,22 +186,22 @@ solve(Seed, PosInSeed, Ans, [H|Remain], LastNum, SideLen, Steps) when H =:= 0
 		    case is_well_formed(ProposedMatrix, Pts) of
 			true -> %% move on
 			    % io:format("Got it ~p. Next pos ~p~n", [NewH, PosInSeed+1]),
-			    solve(Seed, PosInSeed+1, Ans++[NewH], Remain, 0, SideLen, [{PosInSeed, NewH}]++Steps);
+			    solve(Seed, PosInSeed+1, Ans++[NewH], Rest, 0, SideLen, [{PosInSeed, NewH}]++Steps);
 			false -> %% backtraked
 			    % io:format("backtracked (1) at ~p. Tried ~p at (~p,~p)~n", [ PosInSeed, NewH, R, C ]),
-			    solve_backtrack(Seed, -1, Ans, [H]++Remain, -1, SideLen, Steps)
+			    solve_backtrack(Seed, -1, Ans, [H]++Rest, -1, SideLen, Steps)
 		    end;
 		{no, _} -> % continue
 		    % io:format("backtracked (2) at ~p. Tried ~p at (~p,~p)~n", [ PosInSeed, NewH, R, C ]),
-		    solve(Seed, PosInSeed+1, Ans++[NewH], Remain, 0, SideLen, [{PosInSeed, NewH}]++Steps)
+		    solve(Seed, PosInSeed+1, Ans++[NewH], Rest, 0, SideLen, [{PosInSeed, NewH}]++Steps)
 	     end;
       _ -> %% backtracked
 	    % io:format("backtracked (3) at ~p. No soln at (~p,~p)~n", [ PosInSeed, R, C ]),
-            solve_backtrack(Seed, -1, Ans, [H]++Remain, -1, SideLen, Steps)
+            solve_backtrack(Seed, -1, Ans, [H]++Rest, -1, SideLen, Steps)
     end;
-solve(Seed, PosInSeed, Begin, [H|Remain], _TriedNumAtThisPos, SideLen, Steps) -> 
+solve(Seed, PosInSeed, Begin, [H|Rest], _TriedNumAtThisPos, SideLen, Steps) -> 
     %% seeded value, keep moving on
-    solve(Seed, PosInSeed+1, Begin ++ [H], Remain, 0, SideLen, Steps).
+    solve(Seed, PosInSeed+1, Begin ++ [H], Rest, 0, SideLen, Steps).
 
 run() ->    
     Ans = solve(seed_matrix()),

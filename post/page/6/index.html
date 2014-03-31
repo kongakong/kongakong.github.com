@@ -9,10 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="At first I am confused by this conda output. It seems suggest conda is going to upgrade python even though there is no new version of python. 1
-2
-3
-4 &hellip;">
+  <meta name="description" content="if Land Tax Adjustable is checked, it means the vendor seeks reimbursement of land tax from the buyer
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +88,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/16/land-tax-is-adjustable/">Land Tax Is Adjustable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-16T17:10:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>if <strong>Land Tax Adjustable</strong> is checked, it means the vendor seeks reimbursement of land tax from the buyer</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -395,68 +429,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/11/missing-the-viewdidload-event/">Missing the viewDidLoad Event</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-11T08:12:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
-</span><span class='line'>                                                  <span class="nl">owner:</span><span class="n">controller</span>
-</span><span class='line'>                                                <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
-
-<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
-</span><span class='line'>                                            <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -474,6 +446,10 @@ Here is the backtrace where this occurred this time (some frames may be missing 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
@@ -482,15 +458,11 @@ Here is the backtrace where this occurred this time (some frames may be missing 
       </li>
     
       <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver</a>
+        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">when top bar is enabled&#8230;</a>
       </li>
     
   </ul>
