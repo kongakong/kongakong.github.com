@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This http://bugs.python.org/issue12850 I am surprised by how short the patch is.
-">
+  <meta name="description" content="Last warning. 1
+2
+3 wx : wxWidgets not found, wx will NOT be usable Probably no existing rpm for this. These yum commands fixed most of the warnings &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +95,169 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585407349/">Last Warning.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T23:00:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last warning.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Probably no existing rpm for this.</p>
+
+<p>These yum commands fixed most of the warnings</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>yum install ncurses
+</span><span class='line'>yum install ncurses-devel
+</span><span class='line'>yum install java-1.6.0-openjdk
+</span><span class='line'>yum install libssh2-devel 
+</span><span class='line'>yum install openssl-devel
+</span><span class='line'>yum install java-1.6.0-openjdk-devel
+</span><span class='line'>yum install unixODBC
+</span><span class='line'>yum install unixODBC-devel
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585200763/">Erlang’s &#8220; Configure&#8220; sTILl Reports These Components as Missing:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T22:49:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>erlang’s <code>configure</code> sTILl reports these components as missing:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>crypto         : No usable OpenSSL found
+</span><span class='line'>jinterface     : No Java compiler found
+</span><span class='line'>odbc           : ODBC library - link check failed
+</span><span class='line'>ssh            : No usable OpenSSL found
+</span><span class='line'>ssl            : No usable OpenSSL found
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585102499/">Trying to Build Erlang on Scientific Linux.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T22:43:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying to build erlang on scientific linux.</p>
+
+<p>Currently missing a number of libraries. Installing java-1.6.0-openjdk now for the jinterface</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/08/29/p-9543635958/">Enabling STM in Python</a></h1>
     
     
@@ -165,116 +329,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/28/p-9455015711/">IAN: Indexed Amortizing Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-28T00:14:00+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>IAN: Indexed Amortizing Notes</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/27/p-9448858352/">Comm</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-27T17:49:00+10:00" pubdate data-updated="true">Aug 27<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Every now and then I sTILl discover some unix command that I did not know before but is very useful. For example, <code>comm</code>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/20/p-9158815320/">&#8220;gcc&#8220; on Scientific Linux Is 4.4.5. The Latest Stable Is 4.6.1.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-20T17:53:00+10:00" pubdate data-updated="true">Aug 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>gcc</code> on Scientific Linux is 4.4.5. The latest stable is 4.6.1.</p>
-
-<p>Not too far behind.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/98/">&larr; Older</a>
@@ -292,23 +346,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

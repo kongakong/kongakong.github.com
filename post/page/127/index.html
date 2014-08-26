@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For example, one should try to avoid Returning a handle of a private member variable via public member functions
-Returning a pointer of a private &hellip;">
+  <meta name="description" content="Because calling constructor is expensive
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +94,155 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196784167/">Item 32: Postpone Variable Definitions as Long as Possible</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:57:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Because calling constructor is expensive</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196683746/">Item 31: Never Return a Reference to a Local Object or to a Dereferenced Pointer Initialized by New Within the Function</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:54:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The first part is easy to understand: scope issue</p>
+
+<p>The second part is important because it will lead to memory leak. (Related to item 23 and operator overload)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196319451/">Item 23 Revisited</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:42:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Revisiting <a href="/blog/2011/06/04/p-6172106672">Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object</a></p>
+
+<p>While the title sounds rather generic, the main content is about what is appropriate to return from various operator functions.</p>
+
+<p>SO has a more</p>
+
+<p><a href="http://stackoverflow.com/questions/4421706/operator-overloading/4421729">in-depth treatment</a></p>
+
+<p>In the case of binary operators, here is a good example of the function declaration/implementation:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="k">class</span> <span class="nc">X</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">X</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// actual addition of rhs to *this </span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kr">inline</span> <span class="n">X</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">X</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">lhs</span> <span class="o">+=</span> <span class="n">rhs</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">lhs</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note the parameter lhs is passed into <code>operator+</code> via copying.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/06/05/p-6194235311/">Item 30: Avoid Member Functions That Return Non-const Pointers or References to Members Less Accessible Than Themselves</a></h1>
     
     
@@ -167,120 +316,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T07:52:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To disallow an operation on your object class, you can</p>
-
-<p>1) declare the function as <em>private</em></p>
-
-<p>2) do not provide the implementation (if called, caused link error. Prevent being <em>friended</em>)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6189159712/">Item 28: Partition the Global Namespace</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T07:47:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Don’t think anyone will seriously argue against the usefulness of namespace.</p>
-
-<p>It is also mentioned that we can use <code>struct</code> to simulate the namespace functionality. But it will not be able to support direct, infix call of operator functions.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6186209686/">Item 26: Guard Against Potential Ambiguity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T06:10:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Compiler cannot decide:</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/128/">&larr; Older</a>
@@ -298,23 +333,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

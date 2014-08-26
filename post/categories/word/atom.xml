@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Word | Timeline]]></title>
+  <title><![CDATA[Category: word | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/word/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-31T19:35:39+11:00</updated>
+  <updated>2014-08-26T17:53:09+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,13 +14,17 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Chugger]]></title>
-    <link href="http://www.ahwkong.com/post/2012/06/18/p-25351591952/"/>
-    <updated>2012-06-18T17:20:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2012/06/18/p-25351591952</id>
-    <content type="html"><![CDATA[<p>Chugger</p>
+    <title type="html"><![CDATA[Biannual vs biennial]]></title>
+    <link href="http://www.ahwkong.com/post/2012/04/06/p-20566131314/"/>
+    <updated>2012-04-06T12:45:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2012/04/06/p-20566131314</id>
+    <content type="html"><![CDATA[<p>Whenever I come across people saying “Biannual means once every two years,” I have an urge to correct them :&ndash;)</p>
 
-<p>= “Charity” + “Mugger”</p>
+<p><a href="None">http://xkcd.com/386</a></p>
+
+<p>Biannual actually means twice every year. Biennial is word for “once every two years”.</p>
+
+<p>It is so confusing I prefer to use semiannual instead of biannual.</p>
 ]]></content>
   </entry>
   

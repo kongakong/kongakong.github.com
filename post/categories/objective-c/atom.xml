@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objective-c | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/objective-c/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-31T19:35:39+11:00</updated>
+  <updated>2014-08-26T17:53:09+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -43,37 +43,22 @@
     <id>http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python</id>
     <content type="html"><![CDATA[<p>To get the current time in python</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">datetime</span>
-</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:python %}</p>
+
+<blockquote><blockquote><blockquote><p>import datetime
+datetime.datetime.now()
+datetime.datetime(2014, 3, 6, 18, 51, 13, 321003)</p></blockquote></blockquote></blockquote>
+
+<p>{% endcodeblock %}</p>
 
 <p>and in objective-c</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
-</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">date</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<p>NSDate* date = [NSDate date];
+NSLog(@&ldquo;%@&rdquo;, date);</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
@@ -84,61 +69,35 @@
     <id>http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape</id>
     <content type="html"><![CDATA[<p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="kt">void</span><span class="p">)</span> <span class="nl">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="n">gestureRecognizer</span>  <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<p>&ndash;(void) handleSingleTap:(UIGestureRecognizer *)gestureRecognizer  {</p>
+
+<pre><code>NSLog(@"handleSingleTap called");
+</code></pre>
+
+<p>}</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
-</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+[self.lblHour addGestureRecognizer:singleTap];
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>[self.lblHour setUserInteractionEnabled:YES];
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
@@ -149,25 +108,15 @@
     <id>http://www.ahwkong.com/post/2014/03/03/nslog-macro</id>
     <content type="html"><![CDATA[<p>This is a useful marco for doing debug logging:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">define</span> <span class="n">DLog</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;)</span> <span class="k">do</span> <span class="p">{</span> <span class="err">\</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">NSString</span> <span class="o">*</span><span class="n">dLogString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="nl">s:</span> <span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">PRETTY_FUNCTION</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">msg</span><span class="p">];</span> \
-</span><span class='line'>  <span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">VA_ARGS</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">);</span> \
-</span><span class='line'><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<h1>define DLog(msg, &hellip;) do { \</h1>
+
+<p>  NSString *dLogString = [NSString stringWithFormat:@&ldquo;%s: %@&rdquo;, <strong>PRETTY_FUNCTION</strong>, msg]; \
+  NSLog(@&ldquo;%@&rdquo;, <strong>VA_ARGS</strong>); \
+} while (0)</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
 

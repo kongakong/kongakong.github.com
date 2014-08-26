@@ -9,12 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In ocaml, “let rec” defines a recursive function, for example: 1
+  <meta name="description" content="Calculate regular payment based on rate, number of payment and PV 1
 2
-3
-4
-# let rec ipow n m = if m = 0 then 1 else n * ipow n (m -1);;
-val ipow : int &hellip;">
+def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,6 +89,142 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/10/p-29116896037/">Calculate Regular Payment Based on Rate, Number of Payment and PV</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-10T19:58:00+10:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Calculate regular payment based on rate, number of payment and PV</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def pmt(i, n, p):
+</span><span class='line'>    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> pmt(0.06, 120, 120000)
+</span><span class='line'>-7206.622591189367</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/09/p-29045520999/">UIViewController::setMoviePlayerController</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-09T19:56:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>UIViewController::setMoviePlayerController:</code> is an undocumented API, yet it is used in one of the Apple sample project.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/08/p-28973709805/">Got This Error Message in Xcode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-08T19:53:00+10:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this error message in xcode</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+</span><span class='line'> a UITableView.'
+</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -178,120 +311,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/05/p-28758435068/">Encountered This Error When Adding Core Data Support to My Ios Project</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-05T19:50:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Encountered this error when adding core data support to my ios project</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Receiver 'NSManagedObjectContext' for class message is a forward declaration.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/05/p-28755939075/">Google Search Intext: Operator</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-05T18:24:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.powersearchingwithgoogle.com/class?class=3&amp;lesson=5">Google search intext: operator</a>]</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/04/p-28691634617/">Doing Complex Math in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-04T19:51:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Easy</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/41/">&larr; Older</a>
@@ -309,23 +328,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

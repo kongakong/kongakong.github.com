@@ -1778,7 +1778,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/06/22/p-6755732384/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-04-05T19:18:47+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/06/22/p-6766810226/</loc>
@@ -1866,7 +1866,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/06/29/p-7043322527/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2014-04-05T19:19:27+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2011/06/29/p-7043649006/</loc>
@@ -3912,7 +3912,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/01/18/compile-debug-info/</loc>
-        <lastmod>2014-02-02T20:56:38+11:00</lastmod>
+        <lastmod>2014-04-08T22:44:34+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2014/01/20/html5/</loc>
@@ -4071,12 +4071,24 @@
         <lastmod>2014-03-31T19:33:52+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2014/04/15/homebrew-problem/</loc>
+        <lastmod>2014-08-26T17:46:56+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/07/06/opam/</loc>
+        <lastmod>2014-08-26T17:50:59+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/07/06/install-mirage-failed/</loc>
+        <lastmod>2014-08-26T17:47:54+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
+        <lastmod>2014-08-26T17:50:59+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
+        <lastmod>2014-08-26T17:50:59+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4084,6 +4096,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2014-03-31T19:33:52+11:00</lastmod>
+        <lastmod>2014-08-26T17:50:59+10:00</lastmod>
     </url>
 </urlset>

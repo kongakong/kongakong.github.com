@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For some reason I cannot set the title of the backBarButtonItem of navigationItem programmatically. I can only set it in the InterfaceBuilder. Also &hellip;">
+  <meta name="description" content="https://discussions.apple.com/thread/3766710?start=0&amp;tstart=0 iMac hang for no reason. In Console I can see a dump of GPU debug info. Some people &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +93,122 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/06/14/p-25088277061/">Hopefully It Is a Solution to My Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-14T23:04:00+10:00" pubdate data-updated="true">Jun 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Hopefully%20it%20is%20a%20solution%20to%20my%20problem">https://discussions.apple.com/thread/3766710?start=0&amp;tstart=0</a></p>
+
+<p>iMac hang for no reason. In Console I can see a dump of GPU debug info. Some people suspect it is the photo screen saver issue &ndash; it cannot handle video in the photo library.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24944720490/">Most Important Layout Related Logic Are Inside MyMovieViewController in the MediaPlayer_iPhone Example</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T18:24:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Most important layout related logic are inside MyMovieViewController in the MediaPlayer_iPhone example</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24942635911/">Finally Figure Out the Back Button Title Not Set Issue.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-12T17:06:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally figure out the back button title not set issue.</p>
+
+<p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/06/11/p-24875240027/">For Some Reason I Cannot Set the Title of the &#8220;backBarButtonItem&#8220; of &#8220;navigationItem&#8220; Programmatically. I Can Only Set It in the InterfaceBuilder.</a></h1>
     
     
@@ -162,125 +278,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/10/p-24803473772/">Annoying. Cannot Get the Subview Resized Automatically, Despite Doing This:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-10T18:38:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Annoying. Cannot get the subview resized automatically, despite doing this:</p>
-
-<p>Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/10/p-24801287706/">How to Bring a Subview to the Front When You Tap It?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-10T17:11:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>[parentView bringSubviewToFront:childView];
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/06/09/p-24744300898/">Rational Trigonometry</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-09T23:58:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Rational%20Trigonometry">http://en.wikipedia.org/wiki/Rational_trigonometry</a></p>
-
-<p>Forget distance and angle</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/56/">&larr; Older</a>
@@ -298,23 +295,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

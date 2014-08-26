@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I did not know that after implemented a NSFetchResultController, I sTILl need to programmatically fetch the data and then call the table view to &hellip;">
+  <meta name="description" content="Probably related to this one https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,6 +94,120 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2990139811/">Another EXC_BAD_ACCESS (2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T18:31:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Probably related to this one</p>
+
+<p><a href="https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16">https://github.com/mattgemmell/MGSplitViewController/issues/#issue/16</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2990119292/">Another EXC_BAD_ACCESS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T18:29:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This time it has something to do with a split view.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2988855627/">My EXC_BAD_ACCESS Mystery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T16:42:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It turns out it is because of the following line of code:</p>
+
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <em>numberOfObjects</em> returns an integer</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/01/27/p-2952633404/">Core Data 4</a></h1>
     
     
@@ -162,114 +277,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/26/p-2930386975/">Delete the Working Project in Shell by Accident! Time Machine Saved the Day</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-26T09:35:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Delete the working project in shell by accident! Time Machine saved the day</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/26/p-2928337512/">App Just Mysteriously Terminates After Core Data Fetch…</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-26T07:19:00+11:00" pubdate data-updated="true">Jan 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>App just mysteriously terminates after core data fetch…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/25/p-2912666648/">Can Store Data Into the Core Data Sqllite Database, but Cannot Read It Back</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-25T08:00:00+11:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/166/">&larr; Older</a>
@@ -287,23 +294,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

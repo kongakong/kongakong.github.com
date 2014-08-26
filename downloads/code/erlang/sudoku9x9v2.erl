@@ -119,7 +119,12 @@ N1 /= 0 andalso N2 /= 0 andalso N3 /= 0 andalso N10 /= 0 andalso N11 /= 0 andals
     io:format("checkpoint 21~n"),
     solve_backtrack(Seed, EndPos, Ans, Rest, 0, SideLen, Steps);
     
-solve(Seed, EndPos, [_N1, _N2, _N3, _N4, _N5, _N6, _N7, _N8, _N9, _N10, _N11, _N12, _N13, _N14, _N15, _N16, _N17, _N18, _N19, _N20, _N21, _N22, _N23, _N24, _N25, _N26, _N27, N28, N29, N30, _N31, _N32, _N33, _N34, _N35, _N36, N37, N38, N39, _N40, _N41, _N42, _N43, _N44, _N45, N46, N47, N48|_IGNORE]= Ans, Remain, _, SideLen, Steps) when
+solve(Seed, EndPos, [_N1, _N2, _N3,    _N4, _N5, _N6,    _N7, _N8, _N9, 
+		     _N10, _N11, _N12, _N13, _N14, _N15, _N16, _N17, _N18, 
+                     _N19, _N20, _N21, _N22, _N23, _N24, _N25, _N26, _N27, 
+                     N28, N29, N30, _N31, _N32, _N33, _N34, _N35, _N36, 
+                     N37, N38, N39, _N40, _N41, _N42, _N43, _N44, _N45, 
+                     N46, N47, N48|_IGNORE]= Ans, Remain, _, SideLen, Steps) when
             N28 + N29 + N30 + N37 + N38 + N39 + N46 + N47 + N48 /= 45 andalso
 N28 /= 0 andalso N29 /= 0 andalso N30 /= 0 andalso N37 /= 0 andalso N38 /= 0 andalso N39 /= 0 andalso N46 /= 0 andalso N47 /= 0 andalso N48 /= 0 
     ->

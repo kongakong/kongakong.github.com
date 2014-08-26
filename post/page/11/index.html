@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A new concept to me: http://stackoverflow.com/questions/20775670/set-ivar-value-from-category Here is a summary: 1
-2
-3 original = &hellip;">
+  <meta name="description" content="It is a follow-up on my last ipython install issue Turn out i just need to follow the suggested solution in the conda failure message, which is to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,6 +87,173 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/03/conda-and-ipython/">Conda and Ipython</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-03T23:01:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
+
+<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
+
+<p>Now I have four set of python runtime installed on my MBP:</p>
+
+<ul>
+<li><p>From Apple</p></li>
+<li><p>From Homebrew</p></li>
+<li><p>From Pythonbrew</p></li>
+<li><p>From conda</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">Pandas - dateutil.parser Import Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-03T21:24:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Try to run <code>import pandas</code> in python. Encountered this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span>
+</span><span class='line'><span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">hashtable</span><span class="p">,</span> <span class="n">tslib</span><span class="p">,</span> <span class="n">lib</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;tslib.pyx&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="n">init</span> <span class="n">pandas</span><span class="o">.</span><span class="n">tslib</span> <span class="p">(</span><span class="n">pandas</span><span class="o">/</span><span class="n">tslib</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">48782</span><span class="p">)</span>
+</span><span class='line'><span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fixed by running</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install python-dateutil
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/01/category-vs-class-extension/">Category vs Class Extension</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-01T07:25:00+11:00" pubdate data-updated="true">Jan 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Category does not allow addition of ivar.</p>
+
+<p>The restriction does not apply to class extension.</p>
+
+<p>That&rsquo;s why I can do something like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker1</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker2</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -180,172 +345,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/30/conda-install-ipython-problem/">Conda Install Ipython Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-30T08:27:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How can I update <code>pip</code>? Need research&hellip;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython
-</span><span class='line'># All packages already at latest version, nothing to do.
-</span><span class='line'># packages in environment at /Users/antkong/anaconda:
-</span><span class='line'>#
-</span><span class='line'># Warning: Your version of pip is older than what conda requires for pip
-</span><span class='line'># integration, so pip-installed packages will not be displayed.  Please
-</span><span class='line'># update pip, (conda update pip -p /Users/antkong/anaconda)
-</span><span class='line'>
-</span><span class='line'>conda                     2.2.5                    py27_0  
-</span><span class='line'>ipython                   1.1.0                    py27_0  
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip --version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/28/finally-firefox-is-built/">Finally Firefox Is Built</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-28T18:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>609:58.75 TestStartupCache
-</span><span class='line'>610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.61 Packaging quitter@mozilla.org.xpi...
-</span><span class='line'>610:06.95 816 compiler warnings present.
-</span><span class='line'>We know it took a while, but your build finally finished successfully!
-</span><span class='line'>To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox
-</span><span class='line'>For more information on what to do now, see https://developer.mozilla.org/docs/Developer_Guide/So_You_Just_Built_Firefox</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It took almost 10 hours to build in a VM instance of Ubuntu desktop 13.10 with 4GB RAM and 1 CPU</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing Qt4 Dependency of Pyqt4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-27T22:57:00+11:00" pubdate data-updated="true">Dec 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>SIP is installed</p>
-
-<p>PyQt needs qt4. <code>brew install qt4</code> takes care of this dependency.</p>
-
-<p>PyQt cannot be installed by either <code>easy_install</code> or <code>pip</code>. I have to download the package, run <code>configure.py</code> and then <code>make</code> and <code>make install</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/12/">&larr; Older</a>
@@ -363,23 +362,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

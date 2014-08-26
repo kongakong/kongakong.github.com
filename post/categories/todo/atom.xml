@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: TODO | Timeline]]></title>
+  <title><![CDATA[Category: ToDo | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/todo/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-31T19:35:39+11:00</updated>
+  <updated>2014-08-26T17:53:09+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,17 +14,26 @@
 
   
   <entry>
-    <title type="html"><![CDATA[More blog maintenance]]></title>
-    <link href="http://www.ahwkong.com/post/2013/07/12/more-blog-maintenance/"/>
-    <updated>2013-07-12T20:50:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/07/12/more-blog-maintenance</id>
-    <content type="html"><![CDATA[<p>Found some good resource&hellip;</p>
+    <title type="html"><![CDATA[Reading list:]]></title>
+    <link href="http://www.ahwkong.com/post/2012/05/07/p-22582856414/"/>
+    <updated>2012-05-07T21:42:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2012/05/07/p-22582856414</id>
+    <content type="html"><![CDATA[<p>Reading list:</p>
 
-<p><a href="http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/">http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Pareto_frontier#Pareto_frontier">http://en.wikipedia.org/wiki/Pareto_frontier#Pareto_frontier</a></p>
 
-<p><a href="http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times">http://blog.jphpsf.com/2012/06/12/squeezing-octopress-for-faster-load-times</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Multi-objective_optimization">http://en.wikipedia.org/wiki/Multi-objective_optimization</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[http://wwwsearch.sourceforge.net/mechanize/]]></title>
+    <link href="http://www.ahwkong.com/post/2011/06/20/p-6712502628/"/>
+    <updated>2011-06-20T14:05:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2011/06/20/p-6712502628</id>
+    <content type="html"><![CDATA[<p><a href="http://wwwsearch.sourceforge.net/mechanize/">http://wwwsearch.sourceforge.net/mechanize/</a></p>
 
-<p><a href="http://decodize.com/html/moving-from-wordpress-to-octopress/">http://decodize.com/html/moving-from-wordpress-to-octopress/</a></p>
+<p><code>mechanize</code> is available for python and ruby. May want to check this out later</p>
 ]]></content>
   </entry>
   

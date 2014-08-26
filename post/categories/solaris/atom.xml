@@ -4,7 +4,7 @@
   <title><![CDATA[Category: solaris | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/solaris/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-31T19:35:39+11:00</updated>
+  <updated>2014-08-26T17:53:09+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[_ufsdump_ - incremental file system dump]]></title>
+    <title type="html"><![CDATA[ufsdump]]></title>
     <link href="http://www.ahwkong.com/post/2011/06/29/p-7043322527/"/>
     <updated>2011-06-29T23:15:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/06/29/p-7043322527</id>
@@ -54,7 +54,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[The _python_ build on _solaris express_ is a partial success. Here is part of the output message:]]></title>
+    <title type="html"><![CDATA[The python build on solaris express is a partial success]]></title>
     <link href="http://www.ahwkong.com/post/2011/06/22/p-6755732384/"/>
     <updated>2011-06-22T00:22:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/06/22/p-6755732384</id>

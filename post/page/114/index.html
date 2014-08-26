@@ -9,10 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In hg you have to use two commands to extract info similar to svn. &#8220;` $ hg tip
-changeset: 70656:3301a01071f9
-tag: tip
-user: Martin v. LÃ¶wis
+  <meta name="description" content="Seems like it is a solution to the problem I described http://bugs.python.org/issue11808
 ">
   
 
@@ -97,6 +94,134 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767669302/">Seems Like It Is a Solution to the Problem I Described</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T07:27:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Seems like it is a solution to the problem I described</p>
+
+<p><a href="python%20bug%20database">http://bugs.python.org/issue11808</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767517034/">Annoying Error Message When Trying to Compile Latest Python Default Branch in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T07:22:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this annoying error message when trying to compile latest python default branch in OSX:</p>
+
+<p>&#8220;`</p>
+
+<p>$ make
+./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
+Traceback (most recent call last):
+  File &ldquo;/usr/local/bin/hg&rdquo;, line 4, in</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6767377183/">_svn Update _is Again Split Into Two Stage Process in _hg_:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T07:18:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>svn update </em>is again split into two stage process in <em>hg</em>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>hg pull
+</span><span class='line'>hg update
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/06/22/p-6766810226/">&#8216;Svn Info&#8217; in Hg</a></h1>
     
     
@@ -140,7 +265,7 @@ user:        Martin v. LÃ¶wis</p>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755732384/">The _python_ Build on _solaris Express_ Is a Partial Success. Here Is Part of the Output Message:</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755732384/">The Python Build on Solaris Express Is a Partial Success</a></h1>
     
     
       <p class="meta">
@@ -196,137 +321,6 @@ user:        Martin v. LÃ¶wis</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755628799/">Tried to Build _python_ in _Solaris Express 11_.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-22T00:17:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Tried to build <em>python</em> in <em>Solaris Express 11</em>.</p>
-
-<p>Used <code>pkg</code> to install the <code>gcc/g++</code>.</p>
-
-<p>and <code>hg</code>.</p>
-
-<p>Ran <code>configure</code> to generate the <code>Makefile</code>.</p>
-
-<p>After hitting <code>make</code>, got this error message:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>math.h no such file or directory 
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Solved by running: <code>pkg install header-math</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/21/p-6731433101/">http://bugs.python.org/issue12267</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-21T05:51:00+10:00" pubdate data-updated="true">Jun 21<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://bugs.python.org/issue12267">http://bugs.python.org/issue12267</a></p>
-
-<p><em>Building Python on Windows &ndash; May skip VS2010</em></p>
-
-<p>Brian Curtin submitted a patch to enable python 2.7 to compile using VS2010 for x64 target. The bug is rejected at the end because it might eventually move to VS2012</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6712502628/">http://wwwsearch.sourceforge.net/mechanize/</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T14:05:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://wwwsearch.sourceforge.net/mechanize/">http://wwwsearch.sourceforge.net/mechanize/</a></p>
-
-<p><code>mechanize</code> is available for python and ruby. May want to check this out later</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/115/">&larr; Older</a>
@@ -344,23 +338,23 @@ user:        Martin v. LÃ¶wis</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/06/opam/">opam install log</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/03/31/design-pattern/">design pattern</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/22/octopress-deploy-rejected/">octopress deploy rejected</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/16/2x2-suduko-solver/">4x4 suduko solver in erlang</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">sometimes it is not obvious at the beginning</a>
       </li>
     
   </ul>

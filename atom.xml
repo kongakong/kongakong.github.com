@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-03-31T19:35:39+11:00</updated>
+  <updated>2014-08-26T17:51:05+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,179 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[install mirage failed]]></title>
+    <link href="http://www.ahwkong.com/post/2014/07/06/install-mirage-failed/"/>
+    <updated>2014-07-06T21:26:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/07/06/install-mirage-failed</id>
+    <content type="html"><![CDATA[
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[ERROR] Due to some errors while processing optcomp.1.6, the following actions will NOT proceed:
+</span><span class='line'> - install mirage.1.1.3
+</span><span class='line'> - install ocplib-endian.0.7
+</span><span class='line'> - install io-page.1.1.1
+</span><span class='line'> - install mirage-types.1.1.3
+</span><span class='line'> - install cstruct.1.3.0
+</span><span class='line'>
+</span><span class='line'>===== ERROR while installing optcomp.1.6 =====
+</span><span class='line'>Could not get the source for optcomp.1.6:
+</span><span class='line'># opam-version    1.1.1
+</span><span class='line'># os              linux
+</span><span class='line'>Cannot download https://opam.ocaml.org/archives/optcomp.1.6+opam.tar.gz, please check your connection settings.
+</span><span class='line'>
+</span><span class='line'>The former state can be restored with opam switch import -f "/home/antkong/.opam/system/backup/state-20140606112154.export"
+</span><span class='line'>'opam install mirage' failed.</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[opam install log]]></title>
+    <link href="http://www.ahwkong.com/post/2014/07/06/opam/"/>
+    <updated>2014-07-06T21:03:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/07/06/opam</id>
+    <content type="html"><![CDATA[<p>Adding a repository for ocaml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>precise32:~$ sudo add-apt-repository ppa:avsm/ppa
+</span><span class='line'>You are about to add the following PPA to your system:
+</span><span class='line'> Latest stable versions of OCaml and OPAM.
+</span><span class='line'> More info: https://launchpad.net/~avsm/+archive/ppa
+</span><span class='line'>Press [ENTER] to continue or ctrl-c to cancel adding it
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>gpg: keyring `/tmp/tmpU270CK/secring.gpg' created
+</span><span class='line'>gpg: keyring `/tmp/tmpU270CK/pubring.gpg' created
+</span><span class='line'>gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
+</span><span class='line'>gpg: /tmp/tmpU270CK/trustdb.gpg: trustdb created
+</span><span class='line'>gpg: key 61707B09: public key "Launchpad PPA for Anil Madhavapeddy" imported
+</span><span class='line'>gpg: Total number processed: 1
+</span><span class='line'>gpg:               imported: 1  (RSA: 1)
+</span><span class='line'>OK</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[homebrew problem]]></title>
+    <link href="http://www.ahwkong.com/post/2014/04/15/homebrew-problem/"/>
+    <updated>2014-04-15T17:32:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/04/15/homebrew-problem</id>
+    <content type="html"><![CDATA[<p>Homebrew error message due to incomplete installation of XCode</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+</span><span class='line'>==> This script will install:
+</span><span class='line'>/usr/local/bin/brew
+</span><span class='line'>/usr/local/Library/...
+</span><span class='line'>/usr/local/share/man/man1/brew.1
+</span><span class='line'>
+</span><span class='line'>Press RETURN to continue or any other key to abort
+</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /usr/local
+</span><span class='line'>
+</span><span class='line'>WARNING: Improper use of the sudo command could lead to data loss
+</span><span class='line'>or the deletion of important system files. Please double-check your
+</span><span class='line'>typing when using sudo. Type "man sudo" for more information.
+</span><span class='line'>
+</span><span class='line'>To proceed, enter your password, or type Ctrl-C to abort.
+</span><span class='line'>
+</span><span class='line'>Password:
+</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /usr/local
+</span><span class='line'>==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local
+</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
+</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
+</span><span class='line'>==> Installing the Command Line Tools (expect a GUI popup):
+</span><span class='line'>==> /usr/bin/sudo /usr/bin/xcode-select --install
+</span><span class='line'>xcode-select: note: install requested for command line developer tools
+</span><span class='line'>Press any key when the installation has completed.
+</span><span class='line'>==> Downloading and installing Homebrew...
+</span><span class='line'>remote: Counting objects: 166311, done.
+</span><span class='line'>remote: Compressing objects: 100% (46739/46739), done.
+</span><span class='line'>Receiving objects:  76% (126773/166311), 23.62 MiB | 83.00 KiB/s    
+</span><span class='line'>error: RPC failed; result=56, HTTP code = 200
+</span><span class='line'>fatal: The remote end hung up unexpectedly
+</span><span class='line'>fatal: early EOF
+</span><span class='line'>fatal: index-pack failed
+</span><span class='line'>Failed during: git fetch origin master:refs/remotes/origin/master -n
+</span><span class='line'>$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+</span><span class='line'>It appears Homebrew is already installed. If your intent is to reinstall you
+</span><span class='line'>should do the following before running this installer again:
+</span><span class='line'>    rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[design pattern]]></title>
@@ -1526,105 +1699,6 @@ true
 <p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
 
 <p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TIL R is presinstalled in OSX]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/02/til-r-is-presinstalled-in-osx/"/>
-    <updated>2014-03-02T11:27:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/02/til-r-is-presinstalled-in-osx</id>
-    <content type="html"><![CDATA[<p>I just found out R is pre-installed in OSX!</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ R
-</span><span class='line'>
-</span><span class='line'>R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
-</span><span class='line'>Copyright (C) 2013 The R Foundation for Statistical Computing
-</span><span class='line'>Platform: x86_64-apple-darwin10.8.0 (64-bit)
-</span><span class='line'>
-</span><span class='line'>R is free software and comes with ABSOLUTELY NO WARRANTY.
-</span><span class='line'>You are welcome to redistribute it under certain conditions.
-</span><span class='line'>Type 'license()' or 'licence()' for distribution details.
-</span><span class='line'>
-</span><span class='line'>  Natural language support but running in an English locale
-</span><span class='line'>
-</span><span class='line'>R is a collaborative project with many contributors.
-</span><span class='line'>Type 'contributors()' for more information and
-</span><span class='line'>'citation()' on how to cite R or R packages in publications.
-</span><span class='line'>
-</span><span class='line'>Type 'demo()' for some demos, 'help()' for on-line help, or
-</span><span class='line'>'help.start()' for an HTML browser interface to help.
-</span><span class='line'>Type 'q()' to quit R.
-</span><span class='line'>
-</span><span class='line'>></span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Prepare a maverick usb]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/01/prepare-a-maverick-usb/"/>
-    <updated>2014-03-01T07:08:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/01/prepare-a-maverick-usb</id>
-    <content type="html"><![CDATA[<p>Get a USB flash drive that is at least 8 GBs.</p>
-
-<p>Use Disk Utility to prepare the flash drive:</p>
-
-<ul>
-<li>Click on the Erase tab in the DU main window.</li>
-<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
-<li>Click on the Erase button.</li>
-</ul>
-
-
-<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
-
-<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
---volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
-</code></pre>
-
-<p>No need of any third party software</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Create a NSArray from NSMutualArray]]></title>
-    <link href="http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray/"/>
-    <updated>2014-02-28T19:31:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray</id>
-    <content type="html"><![CDATA[<p>It is so simple</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// m is a NSMutualArray </span>
-</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
