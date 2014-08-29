@@ -120,7 +120,7 @@ alt="hit counter"></a></div></noscript>
 
 <p>Show that the resulting list of suffixes can be generated in O(n) time and rep- resented in O(n) space.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -129,15 +129,16 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>-module(e2_1).
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e2_1</span><span class="p">).</span>
 </span><span class='line'>
-</span><span class='line'>-export([suffixes/1]).
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">suffixes</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
 </span><span class='line'>
-</span><span class='line'>suffixes(L) -> suffixes(L, []).
+</span><span class='line'><span class="nf">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="p">[]).</span>
 </span><span class='line'>
-</span><span class='line'>suffixes([H|T], R)  
-</span><span class='line'>    -> suffixes(T, [[H|T]|R]);
-</span><span class='line'>suffixes([], R) -> lists:reverse([[]|R]).</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span>
+</span><span class='line'>    <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">]|</span><span class="nv">R</span><span class="p">]);</span>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">([],</span> <span class="nv">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">([[]|</span><span class="nv">R</span><span class="p">]).</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -165,6 +166,12 @@ alt="hit counter"></a></div></noscript>
 
 <time datetime="2014-08-27T10:02:00+10:00" pubdate data-updated="true">Aug 27<span>th</span>, 2014</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/post/categories/data/'>data</a>, <a class='category' href='/post/categories/erlang/'>erlang</a>, <a class='category' href='/post/categories/functional/'>functional</a>, <a class='category' href='/post/categories/structure/'>structure</a>
+  
+</span>
 
 
     </p>
@@ -201,6 +208,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
       </li>
     
@@ -214,10 +225,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/07/06/opam/">opam install log</a>
       </li>
     
   </ul>

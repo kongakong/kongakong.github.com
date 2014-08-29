@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="When creating the new project in Xcode, the ‘Class prefix’ should be of reasonable length (say 2 to 6 characters). Class prefix is a sad (?) reminder &hellip;">
+  <meta name="description" content="Encountered this problem when trying to deploy app to the phone 1
+2 Code Sign error: Certificate identity 'iPhone Developer: Developer Name (1234HEX &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +88,51 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/23/p-23606198243/">Encountered This Problem When Trying to Deploy App to the Phone</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-23T22:50:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Encountered this problem when trying to deploy app to the phone</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>Code Sign error: Certificate identity 'iPhone Developer: Developer Name (1234HEX)' appears more than once in the keychain. The codesign tool requires there only be one.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Clean up the Keychain and the problem is fixed</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -248,44 +294,6 @@ Traceback (most recent call last):
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/22/p-23480202721/">Underfitting -> High Bias</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-22T00:32:00+10:00" pubdate data-updated="true">May 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Underfitting &ndash;> high bias</p>
-
-<p>Overfitting &ndash;> high variance</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/64/">&larr; Older</a>
@@ -303,6 +311,10 @@ Traceback (most recent call last):
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
       </li>
     
@@ -316,10 +328,6 @@ Traceback (most recent call last):
     
       <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/07/06/opam/">opam install log</a>
       </li>
     
   </ul>

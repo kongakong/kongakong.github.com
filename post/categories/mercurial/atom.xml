@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Mercurial | Timeline]]></title>
+  <title><![CDATA[Category: mercurial | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/mercurial/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-08-29T11:09:16+10:00</updated>
+  <updated>2014-08-29T21:50:17+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,61 +14,75 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Seems like it is a solution to the problem I described]]></title>
-    <link href="http://www.ahwkong.com/post/2011/06/22/p-6767669302/"/>
-    <updated>2011-06-22T07:27:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2011/06/22/p-6767669302</id>
-    <content type="html"><![CDATA[<p>Seems like it is a solution to the problem I described</p>
+    <title type="html"><![CDATA[If I have removed a file by accident, and want to reinstate the file form a source code repository, then...]]></title>
+    <link href="http://www.ahwkong.com/post/2012/04/23/p-21642771050/"/>
+    <updated>2012-04-23T22:01:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2012/04/23/p-21642771050</id>
+    <content type="html"><![CDATA[<p>If I have removed a file by accident, and want to reinstate the file form a source code repository, then,</p>
 
-<p><a href="python%20bug%20database">http://bugs.python.org/issue11808</a></p>
+<p>in subversion I will do</p>
+
+<p>```</p>
+
+<p>svn update file</p>
+
+<p>```</p>
+
+<p>in mercurial I will do</p>
+
+<p>```</p>
+
+<p>hg revert file</p>
+
+<p>```</p>
+
+<p>In git,</p>
+
+<p>```</p>
+
+<p>git checkout file</p>
+
+<p>```</p>
+
+<p>Reference:</p>
+
+<p><a href="mercurial">http://hgbook.red-bean.com/read/mercurial-in-daily-use.html</a></p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Annoying error message when trying to compile latest python default branch in OSX]]></title>
-    <link href="http://www.ahwkong.com/post/2011/06/22/p-6767517034/"/>
-    <updated>2011-06-22T07:22:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2011/06/22/p-6767517034</id>
-    <content type="html"><![CDATA[<p>Got this annoying error message when trying to compile latest python default branch in OSX:</p>
+    <title type="html"><![CDATA[A simple example of using hg]]></title>
+    <link href="http://www.ahwkong.com/post/2011/12/28/p-14913221859/"/>
+    <updated>2011-12-28T21:54:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2011/12/28/p-14913221859</id>
+    <content type="html"><![CDATA[<p>{% codeblock %}
+$ hg pull
+pulling from <a href="http://hg.python.org/cpython">http://hg.python.org/cpython</a>
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 3265 changesets with 6204 changes to 1117 files
+(run ‘hg update’ to get a working copy)</p>
 
-<p>```</p>
+<p>$ hg summary
+parent: 70924:d1d5a7392e39
+(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
+branch: default
+commit: 3 unknown (clean)
+update: 2705 new changesets (update)</p>
 
-<p>$ make
-./Parser/asdl_c.py -h ./Include ./Parser/Python.asdl
-Traceback (most recent call last):
-  File &ldquo;/usr/local/bin/hg&rdquo;, line 4, in</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[_svn update _is again split into two stage process in _hg_:]]></title>
-    <link href="http://www.ahwkong.com/post/2011/06/22/p-6767377183/"/>
-    <updated>2011-06-22T07:18:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2011/06/22/p-6767377183</id>
-    <content type="html"><![CDATA[<p><em>svn update </em>is again split into two stage process in <em>hg</em>:</p>
+<p>$ hg update
+991 files updated, 0 files merged, 12 files removed, 0 files unresolved</p>
 
-<p>```</p>
+<p>$ hg summary
+parent: 74189:456b02030100 tip
+don’t fail if CLOEXEC doesn’t exist
+branch: default
+commit: 3 unknown (clean)
+update: (current)</p>
 
-<p>hg pull
-hg update</p>
-
-<p>```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA['svn info' in hg]]></title>
-    <link href="http://www.ahwkong.com/post/2011/06/22/p-6766810226/"/>
-    <updated>2011-06-22T07:01:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2011/06/22/p-6766810226</id>
-    <content type="html"><![CDATA[<p>In <em>hg</em> you have to use two commands to extract info similar to <em>svn</em>.</p>
-
-<p>```</p>
-
-<p>$ hg tip
-changeset:   70656:3301a01071f9
-tag:         tip
-user:        Martin v. LÃ¶wis</p>
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

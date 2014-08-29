@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Fixed by import MobileCoreServices
-">
+  <meta name="description" content="Exercise 2.2 (Andersson [And91D]) In the worst case, member performs approximately 2d comparisons, where d is the depth of the tree. Rewrite member &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,6 +93,133 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-29T14:59:00+10:00" pubdate data-updated="true">Aug 29<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Exercise 2.2</strong> (Andersson [And91D]) In the worst case, member performs approximately 2d comparisons, where d is the depth of the tree. Rewrite member to take no more than d + 1 comparisons by keeping track of a candidate element that might be equal to the query element (say, the last element for which &lt; returned false or &lt; returned true) and checking for equality only when you hit the bottom of the tree.)</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">ex2_2</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">make_sample_tree</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_insert</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">record</span><span class="p">(</span><span class="nl">treenode</span><span class="p">,</span> <span class="p">{</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">}).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">record</span><span class="p">(</span><span class="nl">tree</span><span class="p">,</span> <span class="p">{</span><span class="n">left</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{},</span> <span class="n">right</span><span class="p">}).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">make_node</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">TN</span> <span class="o">=</span> <span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">K</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">},</span>
+</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nv">TN</span><span class="p">},</span>
+</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">make_node</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">,</span> <span class="nv">LeftTree</span><span class="p">,</span> <span class="nv">RightTree</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">TN</span> <span class="o">=</span> <span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">K</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">},</span>
+</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nv">TN</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="nv">LeftTree</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="nv">RightTree</span><span class="p">},</span>
+</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="n">undefined</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="n">make_node</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">);</span>
+</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="nl">#tree</span><span class="p">{</span><span class="n">left</span><span class="o">=</span><span class="nv">LT</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">_</span><span class="nv">CurV</span><span class="p">},</span> <span class="n">right</span><span class="o">=</span><span class="p">_</span><span class="nv">RT</span><span class="p">}</span><span class="o">=</span><span class="nv">T</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&lt;</span> <span class="nv">CurK</span>  <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">LT1</span><span class="o">=</span><span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">LT</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">),</span>
+</span><span class='line'>    <span class="nv">T1</span><span class="o">=</span><span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">left</span><span class="o">=</span><span class="nv">LT1</span><span class="p">},</span>
+</span><span class='line'>    <span class="nv">T1</span><span class="p">;</span>
+</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="nl">#tree</span><span class="p">{</span><span class="n">left</span><span class="o">=</span><span class="p">_</span><span class="nv">LT</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">_</span><span class="nv">CurV</span><span class="p">},</span> <span class="n">right</span><span class="o">=</span><span class="nv">RT</span><span class="p">}</span><span class="o">=</span><span class="nv">T</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&gt;</span> <span class="nv">CurK</span>  <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">RT1</span><span class="o">=</span><span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">RT</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">),</span>
+</span><span class='line'>    <span class="nv">T1</span><span class="o">=</span><span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">right</span><span class="o">=</span><span class="nv">RT1</span><span class="p">},</span>
+</span><span class='line'>    <span class="nv">T1</span><span class="p">;</span>
+</span><span class='line'><span class="c">% when K == CurK</span>
+</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">_</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span>  <span class="k">when</span> <span class="nb">is_record</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">}}.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">%% routines for testings</span>
+</span><span class='line'><span class="c">%% </span>
+</span><span class='line'><span class="nf">make_sample_tree</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Left</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+</span><span class='line'>    <span class="nv">Right</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">Left</span><span class="p">,</span> <span class="nv">Right</span><span class="p">),</span>
+</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">test_insert</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree</span><span class="p">(),</span>
+</span><span class='line'>    <span class="nv">T1</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+</span><span class='line'>    <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;old </span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">T</span><span class="p">]),</span>
+</span><span class='line'>    <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;new </span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">T1</span><span class="p">]).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL Undefined</a></h1>
     
     
@@ -160,7 +286,7 @@ alt="hit counter"></a></div></noscript>
 
 <p>Show that the resulting list of suffixes can be generated in O(n) time and rep- resented in O(n) space.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -169,15 +295,16 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>-module(e2_1).
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e2_1</span><span class="p">).</span>
 </span><span class='line'>
-</span><span class='line'>-export([suffixes/1]).
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">suffixes</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
 </span><span class='line'>
-</span><span class='line'>suffixes(L) -> suffixes(L, []).
+</span><span class='line'><span class="nf">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="p">[]).</span>
 </span><span class='line'>
-</span><span class='line'>suffixes([H|T], R)  
-</span><span class='line'>    -> suffixes(T, [[H|T]|R]);
-</span><span class='line'>suffixes([], R) -> lists:reverse([[]|R]).</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span>
+</span><span class='line'>    <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">]|</span><span class="nv">R</span><span class="p">]);</span>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">([],</span> <span class="nv">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">([[]|</span><span class="nv">R</span><span class="p">]).</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -294,76 +421,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/07/06/opam/">Opam Install Log</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-06T21:03:00+10:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Adding a repository for ocaml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>precise32:~$ sudo add-apt-repository ppa:avsm/ppa
-</span><span class='line'>You are about to add the following PPA to your system:
-</span><span class='line'> Latest stable versions of OCaml and OPAM.
-</span><span class='line'> More info: https://launchpad.net/~avsm/+archive/ppa
-</span><span class='line'>Press [ENTER] to continue or ctrl-c to cancel adding it
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>gpg: keyring `/tmp/tmpU270CK/secring.gpg' created
-</span><span class='line'>gpg: keyring `/tmp/tmpU270CK/pubring.gpg' created
-</span><span class='line'>gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
-</span><span class='line'>gpg: /tmp/tmpU270CK/trustdb.gpg: trustdb created
-</span><span class='line'>gpg: key 61707B09: public key "Launchpad PPA for Anil Madhavapeddy" imported
-</span><span class='line'>gpg: Total number processed: 1
-</span><span class='line'>gpg:               imported: 1  (RSA: 1)
-</span><span class='line'>OK</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -379,6 +436,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
       </li>
     
@@ -392,10 +453,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/07/06/opam/">opam install log</a>
       </li>
     
   </ul>
