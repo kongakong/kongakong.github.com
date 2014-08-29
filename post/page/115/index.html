@@ -9,7 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Tried to build python in Solaris Express 11. Used pkg to install the gcc/g++. and hg. Ran configure to generate the Makefile. After hitting make, got &hellip;">
+  <meta name="description" content="In hg you have to use two commands to extract info similar to svn. &#8220;` $ hg tip
+changeset: 70656:3301a01071f9
+tag: tip
+user: Martin v. LÃ¶wis
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +91,110 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6766810226/">&#8216;Svn Info&#8217; in Hg</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T07:01:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In <em>hg</em> you have to use two commands to extract info similar to <em>svn</em>.</p>
+
+<p>&#8220;`</p>
+
+<p>$ hg tip
+changeset:   70656:3301a01071f9
+tag:         tip
+user:        Martin v. LÃ¶wis</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755732384/">The Python Build on Solaris Express Is a Partial Success</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T00:22:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <em>python</em> build on <em>solaris express</em> is a partial success. Here is part of the output message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>Python build finished, but the necessary bits to build these modules were not found:
+</span><span class='line'>_gdbm              ossaudiodev                        
+</span><span class='line'>To find the necessary bits, look in setup.py in detect_modules() for the module's name.
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Failed to build these modules:
+</span><span class='line'>_curses            _curses_panel                      
+</span><span class='line'>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -219,78 +327,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6711357253/">Angelika Langer&#8217;s Java Generics FAQs</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T13:25:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Angelika%20Langer's%20Java%20Generics%20FAQs">http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6710214695/">[http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java](this)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T12:46:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="this">http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/116/">&larr; Older</a>
@@ -308,6 +344,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
@@ -317,14 +361,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
   </ul>

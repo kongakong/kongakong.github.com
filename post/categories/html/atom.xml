@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: html | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/html/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-08-29T10:34:17+10:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[html vs xhtml]]></title>
+    <link href="http://www.ahwkong.com/post/2014/07/26/html-vs-xhtml/"/>
+    <updated>2014-07-26T17:54:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/07/26/html-vs-xhtml</id>
+    <content type="html"><![CDATA[<p>HTML is not case-sensitive but XHTML is</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/python/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-08-26T17:53:09+10:00</updated>
+  <updated>2014-08-29T10:34:17+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,22 +20,37 @@
     <id>http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python</id>
     <content type="html"><![CDATA[<p>To get the current time in python</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<blockquote><blockquote><blockquote><p>import datetime
-datetime.datetime.now()
-datetime.datetime(2014, 3, 6, 18, 51, 13, 321003)</p></blockquote></blockquote></blockquote>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">datetime</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>and in objective-c</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<p>NSDate* date = [NSDate date];
-NSLog(@&ldquo;%@&rdquo;, date);</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">date</span><span class="p">);</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -46,30 +61,49 @@ NSLog(@&ldquo;%@&rdquo;, date);</p>
     <id>http://www.ahwkong.com/post/2014/03/04/x-in-y-in-c-plus-plus</id>
     <content type="html"><![CDATA[<p>Equivalent to</p>
 
-<p>{% codeblock lang:python %}
-   for x in y:</p>
-
-<pre><code>  # do something
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>  <span class="c"># do something</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>in C++ is</p>
 
-<p>{% codeblock lang:c++ %}
-void print_loop() {</p>
-
-<pre><code>auto y = {0, 1, 2, 3, 4, 5, 6};
-
-for (auto i : y)
-{
-    cout &lt;&lt; '.' &lt;&lt; i;
-}
-</code></pre>
-
-<p>}</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="kt">void</span> <span class="n">print_loop</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">i</span> <span class="o">:</span> <span class="n">y</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">cout</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="sc">&#39;.&#39;</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">i</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -80,32 +114,59 @@ for (auto i : y)
     <id>http://www.ahwkong.com/post/2014/03/03/bottle-and-parameters</id>
     <content type="html"><![CDATA[<p>Use   <code>request.query</code> to retrieve the url parameters</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<h1>coding: utf-8</h1>
-
-<p>from bottle import *</p>
-
-<p>@route(&lsquo;/&rsquo;)
-@route(&lsquo;/index.html&rsquo;)
-def index():</p>
-
-<pre><code>return '&lt;a href="http://www.ahwkong.com/hello"&gt;Go to Hello page&lt;/a&gt;'
-</code></pre>
-
-<p>@route(&lsquo;/hello&rsquo;)
-def hello():</p>
-
-<pre><code>name = None
-names = request.query.getall('name')
-if names:
-    name = names[0]
-return '&lt;h1&gt;Hello %s&lt;/h1&gt;' % name
-</code></pre>
-
-<p>run(host=&lsquo;localhost&rsquo;, port=8000, reloader=True)</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">coding</span><span class="p">:</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@route</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="k">return</span> <span class="s">&#39;&amp;lt;a href=&quot;http://www.ahwkong.com/hello&quot;&amp;gt;Go to Hello page&amp;lt;/a&amp;gt;&#39;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="nd">@route</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="n">hello</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'><span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">if</span> <span class="n">names</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'><span class="k">return</span> <span class="s">&#39;&amp;lt;h1&amp;gt;Hello </span><span class="si">%s</span><span class="s">&amp;lt;/h1&amp;gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">localhost</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -116,43 +177,77 @@ return '&lt;h1&gt;Hello %s&lt;/h1&gt;' % name
     <id>http://www.ahwkong.com/post/2014/02/23/urlencode-unicode</id>
     <content type="html"><![CDATA[<p>Work in python 3</p>
 
-<p>{% codeblock lang:python %}
-$ python3
-Python 3.3.4 (default, Feb 23 2014, 06:47:55)
-[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)] on darwin
-Type &ldquo;help&rdquo;, &ldquo;copyright&rdquo;, &ldquo;credits&rdquo; or &ldquo;license&rdquo; for more information.</p>
-
-<blockquote><blockquote><blockquote><p>import urllib.parse
-urllib.parse.urlencode({&lsquo;a&rsquo;:chr(400)})
-&lsquo;a=%C6%90&rsquo;</p></blockquote></blockquote></blockquote>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python3</span>
+</span><span class='line'><span class="n">Python</span> <span class="mf">3.3</span><span class="o">.</span><span class="mi">4</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Feb</span> <span class="mi">23</span> <span class="mi">2014</span><span class="p">,</span> <span class="mo">06</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">55</span><span class="p">)</span>
+</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.2</span><span class="o">.</span><span class="mi">1</span> <span class="n">Compatible</span> <span class="n">Apple</span> <span class="n">LLVM</span> <span class="mf">5.0</span> <span class="p">(</span><span class="n">clang</span><span class="o">-</span><span class="mf">500.2</span><span class="o">.</span><span class="mi">79</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
+</span><span class='line'><span class="n">Type</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">help</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">copyright</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">credits</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="ow">or</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">license</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">urllib.parse</span>
+</span><span class='line'><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">a</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
+</span><span class='line'><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">a</span><span class="o">=%</span><span class="n">C6</span><span class="o">%</span><span class="mi">90</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Does not work in python</p>
 
-<p>{% codeblock lang:python %}</p>
-
-<p>$ python
-Python 2.7.6 |Anaconda 1.8.0 (x86_64)| (default, Jan 10 2014, 11:23:15)
-[GCC 4.0.1 (Apple Inc. build 5493)] on darwin
-Type &ldquo;help&rdquo;, &ldquo;copyright&rdquo;, &ldquo;credits&rdquo; or &ldquo;license&rdquo; for more information.</p>
-
-<blockquote><blockquote><blockquote><p>import urllib
-urllib.urlencode({&lsquo;a&rsquo;:chr(400)})
-Traceback (most recent call last):
-  File &ldquo;<stdin>&rdquo;, line 1, in <module>
-ValueError: chr() arg not in range(256)
-urllib.urlencode({&lsquo;a&rsquo;:u"\u0400"})
-Traceback (most recent call last):
-  File &ldquo;<stdin>&rdquo;, line 1, in <module>
-  File &ldquo;/Users/antkong/anaconda/lib/python2.7/urllib.py&rdquo;, line 1329, in urlencode</p>
-
-<pre><code>v = quote_plus(str(v))
-</code></pre>
-
-<p>UnicodeEncodeError: &lsquo;ascii&rsquo; codec can&rsquo;t encode character u'\u0400' in position 0: ordinal not in range(128)</p></blockquote></blockquote></blockquote>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="err">$</span> <span class="n">python</span>
+</span><span class='line'><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">6</span> <span class="o">|</span><span class="n">Anaconda</span> <span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jan</span> <span class="mi">10</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span>
+</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.0</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">Apple</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">build</span> <span class="mi">5493</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
+</span><span class='line'><span class="n">Type</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">help</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">copyright</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">credits</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="ow">or</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">license</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">blockquote</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="kn">import</span> <span class="nn">urllib</span>
+</span><span class='line'><span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">a</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
+</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">File</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">stdin</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'><span class="ne">ValueError</span><span class="p">:</span> <span class="nb">chr</span><span class="p">()</span> <span class="n">arg</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
+</span><span class='line'><span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">a</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;:</span><span class="s">u&quot;</span><span class="se">\u0400</span><span class="s">&quot;</span><span class="p">})</span>
+</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">File</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">stdin</span><span class="o">&gt;&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="n">File</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">antkong</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">urllib</span><span class="o">.</span><span class="n">py</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">line</span> <span class="mi">1329</span><span class="p">,</span> <span class="ow">in</span> <span class="n">urlencode</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">v</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="ne">UnicodeEncodeError</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">ascii</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="n">codec</span> <span class="n">can</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="n">t</span> <span class="n">encode</span> <span class="n">character</span> <span class="s">u&#39;</span><span class="se">\u0400</span><span class="s">&#39;</span> <span class="ow">in</span> <span class="n">position</span> <span class="mi">0</span><span class="p">:</span> <span class="n">ordinal</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -163,43 +258,80 @@ Traceback (most recent call last):
     <id>http://www.ahwkong.com/post/2014/02/15/conda-update</id>
     <content type="html"><![CDATA[<p>At first I am confused by this <code>conda</code> output. It seems suggest <code>conda</code> is going to upgrade python even though there is no new version of python.</p>
 
-<p>{% codeblock %}</p>
-
-<p>$ conda update python
-Updating conda environment at /Users/antkong/anaconda</p>
-
-<p>The following packages will be downloaded:</p>
-
-<pre><code>package                    |            build
----------------------------|-----------------
-conda-3.0.4                |           py27_0         103 KB
-openssl-1.0.1c             |                0         2.1 MB
-python-2.7.6               |                1         9.9 MB
-readline-6.2               |                2         275 KB
-</code></pre>
-
-<p>The following packages will be UN-linked:</p>
-
-<pre><code>package                    |            build
----------------------------|-----------------
-conda-2.2.7                |           py27_0
-python-2.7.6               |                0
-readline-6.2               |                1
-</code></pre>
-
-<p>The following packages will be linked:</p>
-
-<pre><code>package                    |            build
----------------------------|-----------------
-conda-3.0.4                |           py27_0   hard-link
-openssl-1.0.1c             |                0   hard-link
-python-2.7.6               |                1   hard-link
-readline-6.2               |                2   hard-link
-</code></pre>
-
-<p>Proceed ([y]/n)?</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ conda update python
+</span><span class='line'>Updating conda environment at /Users/antkong/anaconda&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>The following packages will be downloaded:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>package                    |            build
+</span><span class='line'>---------------------------|-----------------
+</span><span class='line'>conda-3.0.4                |           py27_0         103 KB
+</span><span class='line'>openssl-1.0.1c             |                0         2.1 MB
+</span><span class='line'>python-2.7.6               |                1         9.9 MB
+</span><span class='line'>readline-6.2               |                2         275 KB
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>The following packages will be UN-linked:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>package                    |            build
+</span><span class='line'>---------------------------|-----------------
+</span><span class='line'>conda-2.2.7                |           py27_0
+</span><span class='line'>python-2.7.6               |                0
+</span><span class='line'>readline-6.2               |                1
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>The following packages will be linked:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>package                    |            build
+</span><span class='line'>---------------------------|-----------------
+</span><span class='line'>conda-3.0.4                |           py27_0   hard-link
+</span><span class='line'>openssl-1.0.1c             |                0   hard-link
+</span><span class='line'>python-2.7.6               |                1   hard-link
+</span><span class='line'>readline-6.2               |                2   hard-link
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Proceed ([y]/n)?&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>It turns out they are the dependency of <code>conda</code>, which will be upgraded from 2.2.7 to 3.0.4</p>
 ]]></content>

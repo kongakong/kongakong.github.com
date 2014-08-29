@@ -4,7 +4,7 @@
   <title><![CDATA[Category: lecture | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/lecture/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-08-26T17:53:09+10:00</updated>
+  <updated>2014-08-29T10:34:17+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,7 @@
     <id>http://www.ahwkong.com/post/2012/10/23/p-34100874247</id>
     <content type="html"><![CDATA[<p>Steven Pinker: Linguistics as a Window to Understanding the Brain</p>
 
-<p>{% youtube Q-B_ONJIEcE %}</p>
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/Q-B_ONJIEcE "></iframe></div></p>
 ]]></content>
   </entry>
   
@@ -31,7 +31,7 @@
     <id>http://www.ahwkong.com/post/2012/10/11/p-33295871370</id>
     <content type="html"><![CDATA[<p>Bovine Spongiform Encephalopathy (BSE) aka Mad Cow Disease</p>
 
-<p>{% youtube HUcvsEP6L_E %}</p>
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/HUcvsEP6L_E "></iframe></div></p>
 ]]></content>
   </entry>
   
@@ -42,7 +42,7 @@
     <id>http://www.ahwkong.com/post/2012/03/05/p-18786500332</id>
     <content type="html"><![CDATA[<p>Lord Stern on climate change in LSE (23/2)</p>
 
-<p>{% youtube HTDdZ0mEtOI %}</p>
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/HTDdZ0mEtOI "></iframe></div></p>
 ]]></content>
   </entry>
   

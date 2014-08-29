@@ -9,7 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="if - (void)scrollViewDidScroll:(UIScrollView *)scrollView of the delegate is not called, one should check: Has the delegate of the ScrollView been &hellip;">
+  <meta name="description" content="This is my original code. It does the job and put a specialised view into a cell of a UICollectionView 1
+2
+3
+4
+5 TT2TimeViewController* controller &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +91,115 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/11/missing-the-viewdidload-event/">Missing the viewDidLoad Event</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-11T08:12:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                                  <span class="nl">owner:</span><span class="n">controller</span>
+</span><span class='line'>                                                <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
+
+<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                            <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/09/dispatch-once/">Dispatch_once</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-09T21:22:00+11:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -232,89 +345,6 @@ receive 6-month LIBOR
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/23/weak-reference/">Weak Reference in Block</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-23T21:55:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
-</span><span class='line'>        <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -332,6 +362,14 @@ receive 6-month LIBOR
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
@@ -341,14 +379,6 @@ receive 6-month LIBOR
     
       <li class="post">
         <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
   </ul>

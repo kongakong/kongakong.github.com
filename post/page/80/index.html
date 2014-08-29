@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="http://www.rba.gov.au/publications/bulletin/2009/nov/pdf/bu-1109-1.pdf “The offshore issuance of bank debt and asset-backed securities (mainly &hellip;">
+  <meta name="description" content="Was getting ‘class has no selector alloc’ method error when I wrote 1
+2
+3 MyClass* obj;
+obj = [[MyClass alloc] init]; It is because I did not make &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +90,92 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/03/06/p-18843112135/">Was Getting ‘class Has No Selector Alloc’ Method Error When I Wrote</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T22:00:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Was getting ‘class has no selector alloc’ method error when I wrote</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>MyClass* obj;
+</span><span class='line'>obj = [[MyClass alloc] init];
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I did not make MyClass a subclass of NSObject</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/03/05/p-18786500332/">Lord Stern on Climate Change in LSE (23/2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-05T22:00:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Lord Stern on climate change in LSE (23/2)</p>
+
+<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/HTDdZ0mEtOI "></iframe></div>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -206,78 +295,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/03/03/p-18650017261/">Do Custom Initialisation in ViewDidLoad of a ViewController</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-03T16:59:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do custom initialisation in ViewDidLoad of a ViewController</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/03/02/p-18602480609/">There Is No Such Thing as NSFloat</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-02T22:30:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There is no such thing as NSFloat</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/81/">&larr; Older</a>
@@ -295,6 +312,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
@@ -304,14 +329,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
   </ul>

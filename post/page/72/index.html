@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I want to enable solarize The putty solarize color scheme files can be found here Alternatively, if you have powershell on Windows, you can run the &hellip;">
+  <meta name="description" content="I think I finally understand what the problem is. In previous version of Xcode (prior to 4.3), it will install the llvm-gcc and the ‘original’ gcc. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +87,90 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/04/26/p-21844435707/">I Think I Finally Understand What the Problem Is.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-26T22:02:00+10:00" pubdate data-updated="true">Apr 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I think I finally understand what the problem is.</p>
+
+<p>In previous version of Xcode (prior to 4.3), it will install the llvm-gcc and the ‘original’ gcc.</p>
+
+<p>gcc will invoke the llvm-gcc and gcc-4.2 will invoke the GNU gcc.</p>
+
+<p>However, since 4.3, these command line tools will not be installed by default. We can have the command line tools like svn, make and gcc installed by download the ‘command line tools for OSX’ in XCode.</p>
+
+<p>However, the package does not include GNU gcc.</p>
+
+<p>It is the next problem I have to fix.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/04/25/p-21780013907/">I Mis-typed the Tumblr Url to tumbr.com, and It Takes Me to This Tumblr-themed “survey” Site</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-25T22:52:00+10:00" pubdate data-updated="true">Apr 25<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I mis-typed the tumblr url to tumbr.com, and it takes me to this tumblr-themed “survey” site</p>
+
+<p>If you follow it through and give up your personal information in order to take part in the draw, you are scammed.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -339,86 +423,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/04/22/p-21564195825/">Sometimes My Time Is Spent on Things Which Are Mundane and Mindless. Today Is a Good Example&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-22T21:29:00+10:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sometimes my time is spent on things which are mundane and mindless. Today is a good example,</p>
-
-<p>1) I reinstalled XCode 4.3</p>
-
-<p>2) resolved an iphone sync problem due to file permission</p>
-
-<p>3) Trying to free up some local hard disk space</p>
-
-<p>4) Fix brew issue due to the reinstallation of XCode</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/04/10/p-20839154995/">In AD287 Diocletian Divided Roman Empire Into East and West</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-10T22:39:00+10:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In AD287 Diocletian divided Roman Empire into East and West</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/73/">&larr; Older</a>
@@ -436,6 +440,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
@@ -445,14 +457,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
   </ul>

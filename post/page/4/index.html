@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="32nd Decimal 1/32 0.03125 2/32 0.0625 3/32 0.09375 4/32 0.125 5/32 0.15625 6/32 0.1875 7/32 0.21875 8/32 0.25 9/32 0.28125 10/32 0.3125 11/32 0. &hellip;">
+  <meta name="description" content="Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback 1
+2
+3
+-(void) handleSingleTap:(UIGestureRecognizer *) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,6 +90,107 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">How to Make a Label Recognise a Tape</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T07:44:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="nv">gestureRecognizer</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/yield-to-maturity/">Yield to Maturity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T07:13:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
+
+<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -445,132 +549,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/03/bottle-and-parameters/">Bottle and Parameters</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T22:58:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use   <code>request.query</code> to retrieve the url parameters</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#coding: utf-8</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/index.html&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;a href=&quot;/hello&quot;&gt;Go to Hello page&lt;/a&gt;&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/hello&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
-</span><span class='line'>    <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;h1&gt;Hello </span><span class="si">%s</span><span class="s">&lt;/h1&gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/03/nslog-macro/">NSLog Macro</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T08:11:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a useful marco for doing debug logging:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
-</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
-</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
-</span><span class='line'><span class="cp">} while (0)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
-
-<p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/5/">&larr; Older</a>
@@ -588,6 +566,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
@@ -597,14 +583,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/31/design-pattern/">design pattern</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/03/24/9x9-suduko-solver/">9x9 suduko solver</a>
       </li>
     
   </ul>
