@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: swift | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/swift/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-08-29T11:09:16+10:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[kUTTypeURL undefined]]></title>
+    <link href="http://www.ahwkong.com/post/2014/08/29/kuttypeurl-undefined/"/>
+    <updated>2014-08-29T11:08:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/08/29/kuttypeurl-undefined</id>
+    <content type="html"><![CDATA[<p>Fixed by import <code>MobileCoreServices</code></p>
+]]></content>
+  </entry>
+  
+</feed>

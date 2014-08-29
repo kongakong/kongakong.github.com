@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="ANSI C supports const keyword in C99
-">
+  <meta name="description" content="A common error amongst new C++ programmers is to have operator= return void, a decision that seems reasonable unTIL you realize it prevents chains of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +87,44 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6068911247/">Item 15: Have Operator= Return a Reference to *this</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T21:09:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A common error amongst new C++ programmers is to have<em> operator=</em> return void, a decision that seems reasonable unTIL you realize it prevents chains of assignment.</p>
+
+<p>Here is an example implementation:</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -237,42 +274,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/134/">&larr; Older</a>
@@ -290,6 +291,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
       </li>
     
@@ -303,10 +308,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/07/06/opam/">opam install log</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
       </li>
     
   </ul>

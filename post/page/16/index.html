@@ -9,29 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="&#8216;Discount Margin&#8217; (frn.erl) download 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
--module(frn). -export([discount_margin/4, &hellip;">
+  <meta name="description" content="(Sourced from Stackoverflow here http://stackoverflow.com/a/14184752/58129) The most idiomatic way to handle this situation is simply to remove your &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -109,6 +87,112 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/11/ivar-error-message/">Ivar Error Message: Autosynthesized Property &#8216;Delegate&#8217; Will Use Synthesized Instance Variable &#8216;_delegate&#8217;, Not Existing Instance Variable &#8216;Delegate&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-11T06:28:00+11:00" pubdate data-updated="true">Dec 11<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>(Sourced from Stackoverflow here <a href="http://stackoverflow.com/a/14184752/58129">http://stackoverflow.com/a/14184752/58129</a>)</em></p>
+
+<p>The most idiomatic way to handle this situation is simply to remove your <code>delegate</code> ivar declaration.  If you were using your <code>delegate</code> ivar, you should use the implicit ivar <code>_delegate</code> instead.</p>
+
+<p><strong>Why does this work?</strong></p>
+
+<p>As of <a href="http://developer.apple.com/library/ios/#releasenotes/ObjectiveC/ObjCAvailabilityIndex/">Xcode 4.4 (LLVM Compiler 4.0)</a>, instance variables and accessor methods are synthesized automatically for a property <em>if the <code>@synthesize</code> directive is not used explicitly for that property</em>.  As <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Apple&rsquo;s documentation on encapsulation</a> states</p>
+
+<blockquote><p>By default, [&hellip;] accessor methods are synthesized automatically for you by the compiler, so you don’t need to do anything other than declare the property using @property in the class interface.</p></blockquote>
+
+<p>The ivar that is used for a property (which is gotten and set by the automatically synthesized property accessor methods) is named <code>_&lt;propertyName&gt;</code> (i.e. the ivar&rsquo;s name is the property&rsquo;s name prefixed with an underscore).</p>
+
+<p>In this case the property name is <code>delegate</code>, so the the ivar that is used is <code>_delegate</code>.  This is already happening in your code.  When you call <code>-delegate</code> and <code>-setDelegate:</code>, this ivar <code>_delegate</code> will be gotten and set.</p>
+
+<p>However, you&rsquo;ve also declared your own ivar <code>delegate</code>.  Of course, the ivar you explicitly declared (<code>delegate</code>) will not be gotten and set by the instance methods <code>-delegate</code> and <code>-setDelegate:</code> since the automatically synthesized ivar (<code>_delegate</code>) is being gotten and set.  However, (almost always&mdash;if it wasn&rsquo;t, your code is ambiguous) your intent was for your ivar <code>delegate</code> to be the thing that your property&rsquo;s accessors would get and set.  Luckily, the compiler is clever enough to notice what you&rsquo;ve done, and that&rsquo;s why it is emitting this warning:</p>
+
+<blockquote><p>warning: autosynthesized property &lsquo;delegate&rsquo; will use synthesized instance variable &lsquo;_delegate&rsquo;, not existing instance variable &lsquo;delegate&rsquo; [-Wobjc-autosynthesis-property-ivar-name-match]</p></blockquote>
+
+<p>It&rsquo;s telling you that your property <code>delegate</code> will use the automatically synthesized ivar <code>_delegate</code> rather than the ivar that you explicitly declared, <code>delegate</code>.</p>
+
+<p>So if you simply delete your <code>delegate</code> ivar, the compiler will stop emitting this warning.  If you were using the <code>delegate</code> ivar directly (not through the property), start using <code>_delegate</code> instead.</p>
+
+<hr />
+
+<p>A minor variation on this option is to explicitly declare the same ivar (<code>_delegate</code>) that the automatic synthesis of the <code>delegate</code> property is creating.  You can do this by replacing</p>
+
+<pre><code>@interface TheClass : TheSuperclass
+{
+    //...
+    id&lt;TheDelegateProtocol&gt; delegate
+    //...
+}
+@end
+</code></pre>
+
+<p>with</p>
+
+<pre><code>@interface TheClass : TheSuperclass
+{
+    //...
+    id&lt;TheDelegateProtocol&gt; _delegate
+    //...
+}
+@end
+</code></pre>
+
+<p>This works because automatic synthesis of a property will always use an ivar whose name is the property&rsquo;s name prefixed with an underscore.  If no such ivar exists, the ivar will be generated.  If it does exist, it will be used.</p>
+
+<hr />
+
+<p>If instead you would prefer that your property&rsquo;s accessors set and get your ivar <code>delegate</code> you can add an <code>@synthesize</code> directive to your class&#8217; <code>@implementation</code> to tell the compiler to do just this:</p>
+
+<pre><code>@implementation TheClass
+//...
+@synthesize delegate = delegate;
+//...
+@end
+</code></pre>
+
+<p>The line <code>@synthesize delegate = delegate;</code> tells the compiler to use the ivar <code>delegate</code> (the right hand of the assignment) in the accessors for the property <code>delegate</code> (the left hand side of the assignment).</p>
+
+<p>You can also omit the right hand side of the <code>@synthesize</code> assignment and just write</p>
+
+<pre><code>@implementation TheClass
+//...
+@synthesize delegate;
+//...
+@end
+</code></pre>
+
+<p>This works because a property with a manual <code>@synthesize</code> which does not explicitly specify the ivar to be gotten and set by its accessors (such as <code>@synthesize delegate;</code>) will use an ivar with the same name as the property, NOT prefixed by an underscore.  This has to do with backwards compatibility.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1601,248 +1685,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/04/test-pygame-installation/">Testing Pygame Installation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-04T22:50:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There are some failures and errors:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-<span class='line-number'>91</span>
-<span class='line-number'>92</span>
-<span class='line-number'>93</span>
-<span class='line-number'>94</span>
-<span class='line-number'>95</span>
-<span class='line-number'>96</span>
-<span class='line-number'>97</span>
-<span class='line-number'>98</span>
-<span class='line-number'>99</span>
-<span class='line-number'>100</span>
-<span class='line-number'>101</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ python -m pygame.tests 
-</span><span class='line'>skipping pygame.tests._movie_test (tag 'subprocess_ignore')
-</span><span class='line'>skipping pygame.tests.cdrom_test (tag 'interactive')
-</span><span class='line'>skipping pygame.tests.midi_test (tag 'interactive')
-</span><span class='line'>skipping pygame.tests.movie_test (tag 'subprocess_ignore')
-</span><span class='line'>skipping pygame.tests.scrap_test (tag 'subprocess_ignore')
-</span><span class='line'>loading pygame.tests.base_test
-</span><span class='line'>loading pygame.tests.blit_test
-</span><span class='line'>loading pygame.tests.bufferproxy_test
-</span><span class='line'>loading pygame.tests.camera_test
-</span><span class='line'>loading pygame.tests.color_test
-</span><span class='line'>loading pygame.tests.compat_test
-</span><span class='line'>loading pygame.tests.cursors_test
-</span><span class='line'>loading pygame.tests.display_test
-</span><span class='line'>loading pygame.tests.draw_test
-</span><span class='line'>loading pygame.tests.event_test
-</span><span class='line'>loading pygame.tests.fastevent_test
-</span><span class='line'>loading pygame.tests.font_test
-</span><span class='line'>loading pygame.tests.freetype_test
-</span><span class='line'>loading pygame.tests.ftfont_test
-</span><span class='line'>loading pygame.tests.gfxdraw_test
-</span><span class='line'>loading pygame.tests.image__save_gl_surface_test
-</span><span class='line'>loading pygame.tests.image_test
-</span><span class='line'>loading pygame.tests.imageext_test
-</span><span class='line'>loading pygame.tests.joystick_test
-</span><span class='line'>loading pygame.tests.key_test
-</span><span class='line'>loading pygame.tests.mask_test
-</span><span class='line'>loading pygame.tests.math_test
-</span><span class='line'>loading pygame.tests.mixer_music_test
-</span><span class='line'>loading pygame.tests.mixer_test
-</span><span class='line'>loading pygame.tests.mouse_test
-</span><span class='line'>loading pygame.tests.overlay_test
-</span><span class='line'>loading pygame.tests.pixelarray_test
-</span><span class='line'>loading pygame.tests.pixelcopy_test
-</span><span class='line'>loading pygame.tests.rect_test
-</span><span class='line'>loading pygame.tests.rwobject_test
-</span><span class='line'>loading pygame.tests.sndarray_test
-</span><span class='line'>loading pygame.tests.sprite_test
-</span><span class='line'>loading pygame.tests.surface_test
-</span><span class='line'>loading pygame.tests.surfarray_test
-</span><span class='line'>loading pygame.tests.surflock_test
-</span><span class='line'>loading pygame.tests.sysfont_test
-</span><span class='line'>loading pygame.tests.threads_test
-</span><span class='line'>loading pygame.tests.time_test
-</span><span class='line'>loading pygame.tests.transform_test
-</span><span class='line'>...................................................................................................................................................F........................................................FF...........................................................................................................E.F..........................................................................................................................................................................................................................................................................................................E............................................................
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: FreeTypeFontTest.test_freetype_Font_get_rect
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/freetype_test.py", line 434, in test_freetype_Font_get_rect
-</span><span class='line'>    self.assertNotEqual(size_utf16[0], size_utf32[0]);
-</span><span class='line'>AssertionError: -1 == -1
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: ImageModuleTest.testLoadPNG
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 82, in testLoadPNG
-</span><span class='line'>    self.assertEquals(pixel_x1_y1, greyish_pixel)
-</span><span class='line'>AssertionError: (109, 120, 129, 140) != (110, 120, 130, 140)
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: ImageModuleTest.testSavePNG
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 141, in testSavePNG
-</span><span class='line'>    self.assertEquals(pixels_as_tuples[0], reddish_pixel)
-</span><span class='line'>AssertionError: (0, 215, 0, 255) != (215, 0, 0, 255)
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>ERROR: MixerMusicModuleTest.test_load
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_music_test.py", line 45, in test_load
-</span><span class='line'>    pygame.mixer.music.load(umusfn)
-</span><span class='line'>error: Unrecognized music format
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>FAIL: MixerModuleTest.test_array_keyword
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 336, in test_array_keyword
-</span><span class='line'>    self._test_array_argument(format, a, c == channels)
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 349, in _test_array_argument
-</span><span class='line'>    (format, a.dtype))
-</span><span class='line'>AssertionError: Raised ValueError: Format -8, dtype int32
-</span><span class='line'>
-</span><span class='line'>======================================================================
-</span><span class='line'>ERROR: SurfaceTypeTest.test_image_convert_bug_131
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/surface_test.py", line 682, in test_image_convert_bug_131
-</span><span class='line'>    self.assertEquals( im.get_palette(),  ((0, 0, 0, 255), (255, 255, 255, 255)) )
-</span><span class='line'>error: Surface has no palette to get
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>Ran 675 tests in 66.985s
-</span><span class='line'>
-</span><span class='line'>FAILED (failures=4, errors=2)</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/17/">&larr; Older</a>
@@ -1860,6 +1702,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
       </li>
     
@@ -1873,10 +1719,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/07/06/opam/">opam install log</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/04/15/homebrew-problem/">homebrew problem</a>
       </li>
     
   </ul>
