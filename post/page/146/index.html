@@ -238,7 +238,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449551106/">Taken From</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449551106/">Higher Order Function in Erlang</a></h1>
     
     
       <p class="meta">
@@ -261,16 +261,16 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-  <div class="entry-content"><p>Taken from</p>
-
-<p><a href="Lecture%202">http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf</a></p>
+  <div class="entry-content"><p>Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a></p>
 
 <p><code>math</code> module contains a <code>sqrt</code> function, but
-canât pass it as an argument.</p>
+can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order function.</p>
 
-<p>Module functions arenât higher-order function.</p>
+<p>Instead, we can wrap it with a <code>fun</code>:</p>
 
-<p>Instead, we can wrap it with a <em>fun</em></p>
+<pre><code>1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]). 
+[3.00000,4.00000,5.00000] 
+</code></pre>
 </div>
   
   

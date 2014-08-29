@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Taken from - Timeline</title>
+  <title>Higher order function in erlang - Timeline</title>
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Taken from http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf math module contains a sqrt function, but
-canât pass &hellip;">
+  <meta name="description" content="Taken from Lecture 2 math module contains a sqrt function, but
+can&rsquo;t pass it as an argument. Module functions aren&rsquo;t higher-order &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,7 +91,7 @@ alt="hit counter"></a></div></noscript>
   
   <header>
     
-      <h1 class="entry-title">Taken From</h1>
+      <h1 class="entry-title">Higher Order Function in Erlang</h1>
     
     
       <p class="meta">
@@ -114,16 +114,16 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-<div class="entry-content"><p>Taken from</p>
-
-<p><a href="Lecture%202">http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf</a></p>
+<div class="entry-content"><p>Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a></p>
 
 <p><code>math</code> module contains a <code>sqrt</code> function, but
-canât pass it as an argument.</p>
+can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order function.</p>
 
-<p>Module functions arenât higher-order function.</p>
+<p>Instead, we can wrap it with a <code>fun</code>:</p>
 
-<p>Instead, we can wrap it with a <em>fun</em></p>
+<pre><code>1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]). 
+[3.00000,4.00000,5.00000] 
+</code></pre>
 </div>
 
 
