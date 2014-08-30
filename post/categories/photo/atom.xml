@@ -4,7 +4,7 @@
   <title><![CDATA[Category: photo | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/photo/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-08-29T21:50:17+10:00</updated>
+  <updated>2014-08-30T13:56:29+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,7 @@
     <link href="http://www.ahwkong.com/post/2010/08/04/p-899408889/"/>
     <updated>2010-08-04T06:15:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2010/08/04/p-899408889</id>
-    <content type="html"><![CDATA[<p>{% img left /images/tumblr_l6ley4u25E1qbpfzr.jpg %}</p>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/tumblr_l6ley4u25E1qbpfzr.jpg"></p>
 
 <p>Sydney. July. Frost.</p>
 ]]></content>

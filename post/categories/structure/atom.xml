@@ -4,7 +4,7 @@
   <title><![CDATA[Category: structure | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/structure/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-08-29T21:48:13+10:00</updated>
+  <updated>2014-08-30T13:56:29+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -19,6 +19,44 @@
     <updated>2014-08-29T14:59:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2014/08/29/ex-2-dot-2</id>
     <content type="html"><![CDATA[<p><strong>Exercise 2.2</strong> (Andersson [And91D]) In the worst case, member performs approximately 2d comparisons, where d is the depth of the tree. Rewrite member to take no more than d + 1 comparisons by keeping track of a candidate element that might be equal to the query element (say, the last element for which &lt; returned false or &lt; returned true) and checking for equality only when you hit the bottom of the tree.)</p>
+
+<p><strong>Answer</strong></p>
+
+<p>To test the example code, run these commands:</p>
+
+<pre><code>erl -noshell -noinit -run ex2_2 test_insert -run init stop
+erl -noshell -noinit -run ex2_2 test_member -run init stop
+</code></pre>
+
+<p>My erlang implementation actually does not have the same performance characteristic as stated in the question. The code in question is this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="k">fun</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="nc">E</span><span class="o">)</span> <span class="o">=</span> <span class="bp">false</span>
+</span><span class='line'>  <span class="o">|</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="nc">T</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">b</span><span class="o">))</span> <span class="o">=&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>    <span class="nc">If</span> <span class="nn">Element</span><span class="p">.</span><span class="n">lt</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">then</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span>
+</span><span class='line'>    <span class="k">else</span> <span class="k">if</span> <span class="nn">Element</span><span class="p">.</span><span class="n">lt</span> <span class="o">(</span><span class="n">y</span><span class="o">,</span> <span class="n">x</span><span class="o">)</span> <span class="k">then</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span>
+</span><span class='line'>    <span class="k">else</span> <span class="bp">true</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>The <code>if</code> clause in the above function will cause the <code>Element.lt</code> to be executed twice per node visit in the worst case scenarios. Hence the 2 * d comparisons.</p>
+
+<p>It does not really apply to my erlang version of code because pattern matching has shortcircuted the comparsion when there is a match. The comparsion is done by the <code>guard</code>. In a sense I cheated: I did not use a functor to compare the values. This enables me to use the pattern matching.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -86,10 +124,73 @@
 <span class='line-number'>64</span>
 <span class='line-number'>65</span>
 <span class='line-number'>66</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;-</span><span class="n">module</span><span class="p">(</span><span class="n">ex2_2</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">make_sample_tree</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_insert</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">ex2_2</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">make_sample_tree</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_insert</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_traverse</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_member</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;-</span><span class="n">record</span><span class="p">(</span><span class="n">treenode</span><span class="p">,</span> <span class="p">{</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">}).</span>
 </span><span class='line'><span class="p">-</span><span class="ni">record</span><span class="p">(</span><span class="nl">tree</span><span class="p">,</span> <span class="p">{</span><span class="n">left</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{},</span> <span class="n">right</span><span class="p">}).</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
@@ -133,6 +234,41 @@
 </span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">}}.</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_record</span><span class="p">(</span><span class="nv">Tree</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">is_function</span><span class="p">(</span><span class="nv">F</span><span class="p">)</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">traverse</span><span class="p">(</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="nv">F</span><span class="p">,</span> <span class="n">undefined</span><span class="p">,</span> <span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;</span><span class="nv">D</span><span class="p">)</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;</span> <span class="n">ok</span><span class="p">;</span>
+</span><span class='line'><span class="nf">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="p">,</span> <span class="nv">D</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_record</span><span class="p">(</span><span class="nv">Tree</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">is_function</span><span class="p">(</span><span class="nv">F</span><span class="p">)</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;</span> <span class="c">% F is a function that work on K and V&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.left</span><span class="p">,</span> <span class="nv">D</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
+</span><span class='line'><span class="nv">F</span><span class="p">(</span><span class="nv">Tree</span><span class="nl">#tree.treenode#treenode.key</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.treenode#treenode.value</span><span class="p">,</span> <span class="nv">D</span><span class="p">),</span>
+</span><span class='line'><span class="nf">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.right</span><span class="p">,</span> <span class="nv">D</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">K</span><span class="p">}}</span><span class="o">=</span><span class="nv">Tree</span><span class="p">)</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">found</span><span class="p">;</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">}}</span><span class="o">=</span><span class="nv">Tree</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="err">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="nv">CurK</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c">% io:format(&quot;Compared for ~p~n&quot;, [K]),</span>
+</span><span class='line'><span class="nf">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.left</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">}}</span><span class="o">=</span><span class="nv">Tree</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&gt;</span> <span class="nv">CurK</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="c">% io:format(&quot;Compared for ~p~n&quot;, [K]),</span>
+</span><span class='line'><span class="nf">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.right</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="n">undefined</span><span class="p">)</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">not_found</span><span class="p">.</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c">%% routines for testings</span>
 </span><span class='line'><span class="c">%%</span>
 </span><span class='line'><span class="nf">make_sample_tree</span><span class="p">()</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
@@ -143,12 +279,44 @@
 </span><span class='line'><span class="nv">T</span><span class="p">.</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">make_sample_tree2</span><span class="p">()</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">T</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T1</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T2</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T3</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T4</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T5</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T6</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+</span><span class='line'><span class="nv">T6</span><span class="p">.</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">test_insert</span><span class="p">()</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree</span><span class="p">(),</span>
 </span><span class='line'><span class="nv">T1</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
 </span><span class='line'><span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;old </span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">T</span><span class="p">]),</span>
 </span><span class='line'><span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;new </span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">T1</span><span class="p">]).</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">test_traverse</span><span class="p">()</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">F</span> <span class="o">=</span> <span class="k">fun</span> <span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">,</span> <span class="p">_</span><span class="nv">D</span><span class="p">)</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;key:</span><span class="si">~p</span><span class="s"> val:</span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">])</span> <span class="k">end</span><span class="p">,</span>
+</span><span class='line'><span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree</span><span class="p">(),</span>
+</span><span class='line'><span class="nf">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">test_member</span><span class="p">()</span> <span class="err">&amp;</span><span class="n">ndash</span><span class="p">;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree2</span><span class="p">(),</span>
+</span><span class='line'><span class="nv">F</span> <span class="o">=</span> <span class="k">fun</span> <span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">,</span> <span class="nv">Depth</span><span class="p">)</span> <span class="o">-</span><span class="err">&amp;</span><span class="n">gt</span><span class="p">;</span>
+</span><span class='line'>        <span class="nv">Indent</span> <span class="o">=</span> <span class="nn">string</span><span class="p">:</span><span class="nf">chars</span><span class="p">(</span><span class="sc">$\s</span><span class="p">,</span> <span class="nv">Depth</span><span class="o">*</span><span class="mi">4</span><span class="p">),</span>
+</span><span class='line'>        <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~s</span><span class="s">key:</span><span class="si">~p</span><span class="s"> val:</span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Indent</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">])</span>
+</span><span class='line'>    <span class="k">end</span><span class="p">,</span>
+</span><span class='line'><span class="nf">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span>
+</span><span class='line'><span class="nv">R1</span> <span class="o">=</span> <span class="n">member</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span>
+</span><span class='line'><span class="nv">R2</span> <span class="o">=</span> <span class="n">member</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span>
+</span><span class='line'><span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;R1:</span><span class="si">~p</span><span class="s"> R2:</span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">R1</span><span class="p">,</span> <span class="nv">R2</span><span class="p">]).</span>
 </span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
@@ -166,7 +334,7 @@
 <pre><code>suffixes [1,2,3,4] = [[1,2,3,4], [2,3,4], [3,4], [4], [ ] ]
 </code></pre>
 
-<p>Show that the resulting list of suffixes can be generated in O(n) time and rep- resented in O(n) space.</p>
+<p>Show that the resulting list of suffixes can be generated in O(n) time and represented in O(n) space.</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>

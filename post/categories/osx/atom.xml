@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-08-29T21:50:17+10:00</updated>
+  <updated>2014-08-30T13:56:29+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,49 +20,92 @@
     <id>http://www.ahwkong.com/post/2014/04/15/homebrew-problem</id>
     <content type="html"><![CDATA[<p>Homebrew error message due to incomplete installation of XCode</p>
 
-<p>{% codeblock %}</p>
-
-<p>$ ruby -e &ldquo;$(curl -fsSL <a href="https://raw.github.com/Homebrew/homebrew/go/install">https://raw.github.com/Homebrew/homebrew/go/install</a>)&rdquo;
-==> This script will install:
-/usr/local/bin/brew
-/usr/local/Library/&hellip;
-/usr/local/share/man/man1/brew.1</p>
-
-<p>Press RETURN to continue or any other key to abort
-==> /usr/bin/sudo /bin/mkdir /usr/local</p>
-
-<p>WARNING: Improper use of the sudo command could lead to data loss
-or the deletion of important system files. Please double-check your
-typing when using sudo. Type &ldquo;man sudo&rdquo; for more information.</p>
-
-<p>To proceed, enter your password, or type Ctrl-C to abort.</p>
-
-<p>Password:
-==> /usr/bin/sudo /bin/chmod g+rwx /usr/local
-==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local
-==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
-==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
-==> Installing the Command Line Tools (expect a GUI popup):
-==> /usr/bin/sudo /usr/bin/xcode-select &mdash;install
-xcode-select: note: install requested for command line developer tools
-Press any key when the installation has completed.
-==> Downloading and installing Homebrew&hellip;
-remote: Counting objects: 166311, done.
-remote: Compressing objects: 100% (46739/46739), done.
-Receiving objects:  76% (126773/166311), 23.62 MiB | 83.00 KiB/s  <br/>
-error: RPC failed; result=56, HTTP code = 200
-fatal: The remote end hung up unexpectedly
-fatal: early EOF
-fatal: index-pack failed
-Failed during: git fetch origin master:refs/remotes/origin/master -n
-$ ruby -e &ldquo;$(curl -fsSL <a href="https://raw.github.com/Homebrew/homebrew/go/install">https://raw.github.com/Homebrew/homebrew/go/install</a>)&rdquo;
-It appears Homebrew is already installed. If your intent is to reinstall you
-should do the following before running this installer again:</p>
-
-<pre><code>rm -rf /usr/local/Cellar /usr/local/.git &amp;&amp; brew cleanup
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ ruby -e &ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install">https://raw.github.com/Homebrew/homebrew/go/install&lt;/a>)&rdquo;
+</span><span class='line'>==> This script will install:
+</span><span class='line'>/usr/local/bin/brew
+</span><span class='line'>/usr/local/Library/&hellip;
+</span><span class='line'>/usr/local/share/man/man1/brew.1&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Press RETURN to continue or any other key to abort
+</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /usr/local&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>WARNING: Improper use of the sudo command could lead to data loss
+</span><span class='line'>or the deletion of important system files. Please double-check your
+</span><span class='line'>typing when using sudo. Type &ldquo;man sudo&rdquo; for more information.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>To proceed, enter your password, or type Ctrl-C to abort.&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>Password:
+</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /usr/local
+</span><span class='line'>==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local
+</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
+</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
+</span><span class='line'>==> Installing the Command Line Tools (expect a GUI popup):
+</span><span class='line'>==> /usr/bin/sudo /usr/bin/xcode-select &mdash;install
+</span><span class='line'>xcode-select: note: install requested for command line developer tools
+</span><span class='line'>Press any key when the installation has completed.
+</span><span class='line'>==> Downloading and installing Homebrew&hellip;
+</span><span class='line'>remote: Counting objects: 166311, done.
+</span><span class='line'>remote: Compressing objects: 100% (46739/46739), done.
+</span><span class='line'>Receiving objects:  76% (126773/166311), 23.62 MiB | 83.00 KiB/s  &lt;br/>
+</span><span class='line'>error: RPC failed; result=56, HTTP code = 200
+</span><span class='line'>fatal: The remote end hung up unexpectedly
+</span><span class='line'>fatal: early EOF
+</span><span class='line'>fatal: index-pack failed
+</span><span class='line'>Failed during: git fetch origin master:refs/remotes/origin/master -n
+</span><span class='line'>$ ruby -e &ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install">https://raw.github.com/Homebrew/homebrew/go/install&lt;/a>)&rdquo;
+</span><span class='line'>It appears Homebrew is already installed. If your intent is to reinstall you
+</span><span class='line'>should do the following before running this installer again:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>rm -rf /usr/local/Cellar /usr/local/.git &amp;&amp; brew cleanup
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -71,45 +114,84 @@ should do the following before running this installer again:</p>
     <link href="http://www.ahwkong.com/post/2014/03/10/quicklook/"/>
     <updated>2014-03-10T21:52:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/03/10/quicklook</id>
-    <content type="html"><![CDATA[<p>{% codeblock %}</p>
-
-<p>$ qlmanage -l
-List of all generator IDs: (</p>
-
-<pre><code>"com.apple.quicklookgenerator.iChat",
-"com.apple.qlgenerator.package",
-"com.apple.qlgenerator.pdf",
-"com.apple.qlgenerator.contact",
-"com.apple.qlgenerator.mail",
-"com.apple.qlgenerator.audio",
-"com.apple.garageband.quicklookgenerator",
-"com.apple.qlgenerator.iCal",
-"com.apple.Notes.qlgenerator",
-"com.apple.qlgenerator.movie",
-"com.apple.qlgenerator.image",
-"com.apple.qlgenerator.web",
-"com.apple.qlgenerator.LogicXQLGenerator",
-"com.apple.qlgenerator.eps",
-"com.apple.qlgenerator.certificates",
-"com.apple.qlgenerator.bookmark",
-"com.apple.qlgenerator.text",
-"com.apple.qlgenerator.clipping",
-"org.m0k.transmission.QuickLookPlugin",
-"com.apple.qlgenerator.font",
-"com.apple.qlgenerator.office",
-"com.apple.iBooksAuthor.iBooksAuthorQuickLookGenerator",
-"org.openemu.savestategenerator",
-"com.apple.qlgenerator.SceneKit",
-"com.apple.qlgenerator.iconset",
-"com.apple.qlgenerator.standard-bundles",
-"com.apple.qlgenerator.locPDF",
-"com.apple.iWork.iWorkQuickLookGenerator",
-"com.pixelmatorteam.quicklook"
-</code></pre>
-
-<p>)</p>
-
-<p>{% endcodeblock %}</p>
+    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>$ qlmanage -l
+</span><span class='line'>List of all generator IDs: (&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>"com.apple.quicklookgenerator.iChat",
+</span><span class='line'>"com.apple.qlgenerator.package",
+</span><span class='line'>"com.apple.qlgenerator.pdf",
+</span><span class='line'>"com.apple.qlgenerator.contact",
+</span><span class='line'>"com.apple.qlgenerator.mail",
+</span><span class='line'>"com.apple.qlgenerator.audio",
+</span><span class='line'>"com.apple.garageband.quicklookgenerator",
+</span><span class='line'>"com.apple.qlgenerator.iCal",
+</span><span class='line'>"com.apple.Notes.qlgenerator",
+</span><span class='line'>"com.apple.qlgenerator.movie",
+</span><span class='line'>"com.apple.qlgenerator.image",
+</span><span class='line'>"com.apple.qlgenerator.web",
+</span><span class='line'>"com.apple.qlgenerator.LogicXQLGenerator",
+</span><span class='line'>"com.apple.qlgenerator.eps",
+</span><span class='line'>"com.apple.qlgenerator.certificates",
+</span><span class='line'>"com.apple.qlgenerator.bookmark",
+</span><span class='line'>"com.apple.qlgenerator.text",
+</span><span class='line'>"com.apple.qlgenerator.clipping",
+</span><span class='line'>"org.m0k.transmission.QuickLookPlugin",
+</span><span class='line'>"com.apple.qlgenerator.font",
+</span><span class='line'>"com.apple.qlgenerator.office",
+</span><span class='line'>"com.apple.iBooksAuthor.iBooksAuthorQuickLookGenerator",
+</span><span class='line'>"org.openemu.savestategenerator",
+</span><span class='line'>"com.apple.qlgenerator.SceneKit",
+</span><span class='line'>"com.apple.qlgenerator.iconset",
+</span><span class='line'>"com.apple.qlgenerator.standard-bundles",
+</span><span class='line'>"com.apple.qlgenerator.locPDF",
+</span><span class='line'>"com.apple.iWork.iWorkQuickLookGenerator",
+</span><span class='line'>"com.pixelmatorteam.quicklook"
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>)&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -120,35 +202,61 @@ List of all generator IDs: (</p>
     <id>http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape</id>
     <content type="html"><![CDATA[<p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<p>&ndash;(void) handleSingleTap:(UIGestureRecognizer *)gestureRecognizer  {</p>
-
-<pre><code>NSLog(@"handleSingleTap called");
-</code></pre>
-
-<p>}</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;&amp;</span><span class="n">ndash</span><span class="p">;(</span><span class="kt">void</span><span class="p">)</span> <span class="nl">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="n">gestureRecognizer</span>  <span class="p">{</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<pre><code>UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-[self.lblHour addGestureRecognizer:singleTap];
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
+</span><span class='line'><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<pre><code>[self.lblHour setUserInteractionEnabled:YES];
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -159,15 +267,25 @@ List of all generator IDs: (</p>
     <id>http://www.ahwkong.com/post/2014/03/03/nslog-macro</id>
     <content type="html"><![CDATA[<p>This is a useful marco for doing debug logging:</p>
 
-<p>{% codeblock lang:objective-c %}</p>
-
-<h1>define DLog(msg, &hellip;) do { \</h1>
-
-<p>  NSString *dLogString = [NSString stringWithFormat:@&ldquo;%s: %@&rdquo;, <strong>PRETTY_FUNCTION</strong>, msg]; \
-  NSLog(@&ldquo;%@&rdquo;, <strong>VA_ARGS</strong>); \
-} while (0)</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">define</span> <span class="n">DLog</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;)</span> <span class="k">do</span> <span class="p">{</span> <span class="err">\</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>  <span class="n">NSString</span> <span class="o">*</span><span class="n">dLogString</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="nl">stringWithFormat:</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="nl">s:</span> <span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">PRETTY_FUNCTION</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">msg</span><span class="p">];</span> \
+</span><span class='line'>  <span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">VA_ARGS</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">);</span> \
+</span><span class='line'><span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
 
