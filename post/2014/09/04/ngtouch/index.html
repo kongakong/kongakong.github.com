@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To introduce touch behaviour in angularjs-enabled mobile app, try this: &lt;% codeblock lang:javascript %> angular.module(&lsquo;myApp&rsquo;, [& &hellip;">
+  <meta name="description" content="To introduce touch behaviour in angularjs-enabled mobile app, try this: &lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -143,15 +143,9 @@ alt="hit counter"></a></div></noscript>
 
 <div class="entry-content"><p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
 
-<p>&lt;% codeblock lang:javascript %></p>
-
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-
-
-<p>
-angular.module(&lsquo;myApp&rsquo;, [&lsquo;ngTouch&rsquo;])</p>
-
-<p>&lt;% endcodeblock %></p>
+<pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
+angular.module('myApp', ['ngTouch']) 
+</code></pre>
 </div>
 
 

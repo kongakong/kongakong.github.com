@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-04T16:12:41+10:00</updated>
+  <updated>2014-09-04T16:46:38+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,15 +20,9 @@
     <id>http://www.ahwkong.com/post/2014/09/04/ngtouch</id>
     <content type="html"><![CDATA[<p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
 
-<p>&lt;% codeblock lang:javascript %></p>
-
-<script src="bower_components/angular-touch/angular-touch.js"></script>
-
-
-<p>
-angular.module(&lsquo;myApp&rsquo;, [&lsquo;ngTouch&rsquo;])</p>
-
-<p>&lt;% endcodeblock %></p>
+<pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
+angular.module('myApp', ['ngTouch']) 
+</code></pre>
 ]]></content>
   </entry>
   
