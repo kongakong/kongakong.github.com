@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-04T15:07:04+10:00</updated>
+  <updated>2014-09-04T16:12:41+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ngTouch]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/04/ngtouch/"/>
+    <updated>2014-09-04T16:11:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/04/ngtouch</id>
+    <content type="html"><![CDATA[<p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
+
+<p>&lt;% codeblock lang:javascript %></p>
+
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+
+
+<p>
+angular.module(&lsquo;myApp&rsquo;, [&lsquo;ngTouch&rsquo;])</p>
+
+<p>&lt;% endcodeblock %></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[semi-colon in swift]]></title>
@@ -1643,17 +1662,6 @@ true
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[yield to maturity]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/06/yield-to-maturity/"/>
-    <updated>2014-03-06T07:13:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/06/yield-to-maturity</id>
-    <content type="html"><![CDATA[<p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
-
-<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
 ]]></content>
   </entry>
   

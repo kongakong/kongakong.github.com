@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: angularjs | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/angularjs/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-09-04T16:12:41+10:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ngTouch]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/04/ngtouch/"/>
+    <updated>2014-09-04T16:11:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/04/ngtouch</id>
+    <content type="html"><![CDATA[<p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
+
+<p>&lt;% codeblock lang:javascript %></p>
+
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+
+
+<p>
+angular.module(&lsquo;myApp&rsquo;, [&lsquo;ngTouch&rsquo;])</p>
+
+<p>&lt;% endcodeblock %></p>
+]]></content>
+  </entry>
+  
+</feed>

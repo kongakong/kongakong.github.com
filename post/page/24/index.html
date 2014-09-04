@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I wanted to convert my old blogs on Blogger to markdown files in Github Pages. I went to the Blogger settings and exported my blog. The result was a &hellip;">
+  <meta name="description" content="Have absolutely zero knowledge of Ruby, although I am planning to learn more about this langauge since I started using Octopress. Came across this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,78 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/06/ruby-quirk/">Ruby Quirk?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-06T08:06:00+10:00" pubdate data-updated="true">Jul 6<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Have absolutely zero knowledge of Ruby, although I am planning to learn more about this langauge since I started using Octopress.</p>
+
+<p>Came across this code snippet in <a href="https://twitter.com/garybernhardt/status/352864696547803136">this tweet</a></p>
+
+<p>The behavior does look a bit odd from a python prespective.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">mbp002</span><span class="p">:</span><span class="o">~</span> <span class="n">me</span><span class="err">$</span> <span class="n">irb</span>
+</span><span class='line'><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="n">p195</span> <span class="p">:</span><span class="mo">001</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span>
+</span><span class='line'><span class="ss">SyntaxError</span><span class="p">:</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">1</span><span class="p">:</span> <span class="n">syntax</span> <span class="n">error</span><span class="p">,</span> <span class="n">unexpected</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">expecting</span> <span class="k">end</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">input</span>
+</span><span class='line'>    <span class="n">from</span> <span class="sr">/Users/me</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p195</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="ss">irb</span><span class="p">:</span><span class="mi">16</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;&#39;</span>
+</span><span class='line'><span class="sb">2.0.0p195 :003 &gt; x=1,y=2</span>
+</span><span class='line'><span class="sb"> =&gt; [1, 2] </span>
+</span><span class='line'><span class="sb">2.0.0p195 :004 &gt; x</span>
+</span><span class='line'><span class="sb"> =&gt; [1, 2] </span>
+</span><span class='line'><span class="sb">2.0.0p195 :005 &gt; y</span>
+</span><span class='line'><span class="sb"> =&gt; 2 </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Apparently it is treated like</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -475,42 +547,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/22/git-status-says-file-is-modified-even-if-dot-dot-dot/">Git Status Says File Is Modified Even If&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-22T16:27:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>git status</code> says file is modified even if the file content is not changed</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/25/">&larr; Older</a>
@@ -528,6 +564,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
       </li>
     
@@ -541,10 +581,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
       </li>
     
   </ul>
