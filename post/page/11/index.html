@@ -9,14 +9,25 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="By default, ipython notebook will use MathJax on a CDN 1
+  <meta name="description" content="1
 2
 3
 4
 5
 6
-$ ipython notebook
-2014-01-06 19:08:43.857 [NotebookApp] Using existing profile &hellip;">
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found 0:12.72 #include &lt;linux/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +133,104 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/09/firefox-build-failure-on-osx/">Firefox Build Failure on Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T21:08:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found
+</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
+</span><span class='line'> 0:12.72          ^
+</span><span class='line'> 0:12.72 1 error generated.
+</span><span class='line'> 0:12.72 configure: failed program was:
+</span><span class='line'> 0:12.72 #line 19591 "configure"
+</span><span class='line'> 0:12.72 #include "confdefs.h"
+</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
+</span><span class='line'> 0:12.73 int main() {
+</span><span class='line'> 0:12.73  struct ethtool_cmd cmd; cmd.speed_hi = 0;
+</span><span class='line'> 0:12.73 ; return 0; }
+</span><span class='line'> 0:12.73 configure:19790: checking __attribute__ ((aligned ())) support
+</span><span class='line'> 0:12.73 configure:19807: /usr/bin/clang -c  -std=gnu99 -fno-strict-aliasing -fno-math-errno -pthread -DNO_X11 -Werror -Qunused-arguments  conftest.c 1>&5
+</span><span class='line'> 0:12.73 configure: error: yasm is a required build tool for this architecture when webm is enabled. You may either install yasm or --disable-webm (which disables the WebM video format). See https://developer.mozilla.org/en/YASM for more details.
+</span><span class='line'> 0:12.73 *** Fix above errors and then restart with               "/Applications/Xcode.app/Contents/Developer/usr/bin/make -f client.mk build"
+</span><span class='line'> 0:12.73 make[2]: *** [configure] Error 1
+</span><span class='line'> 0:12.73 make[1]: *** [obj-x86_64-apple-darwin13.0.2/Makefile] Error 2
+</span><span class='line'> 0:12.73 make: *** [build] Error 2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Basically installing yasm fixes this problem. The &lsquo;linux/ethtool.h&rsquo; fatal error seems to be irrevelant.</p>
+
+<p>Here some build statistic (<code>mach resource-usage</code>):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Wall Time (s)   1230.61
+</span><span class='line'>Start Date  2014-01-09T10:24:38.582Z
+</span><span class='line'>End Date    2014-01-09T10:45:09.191Z
+</span><span class='line'>CPU %   93.85
+</span><span class='line'>Write Bytes 4659960320
+</span><span class='line'>Read Bytes  1421654016
+</span><span class='line'>Write Time  1749179
+</span><span class='line'>Read Time   509074</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -459,54 +568,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/03/conda-and-ipython/">Conda and Ipython</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-03T23:01:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
-
-<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
-
-<p>Now I have four set of python runtime installed on my MBP:</p>
-
-<ul>
-<li><p>From Apple</p></li>
-<li><p>From Homebrew</p></li>
-<li><p>From Pythonbrew</p></li>
-<li><p>From conda</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/12/">&larr; Older</a>
@@ -524,6 +585,10 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
       </li>
     
@@ -537,10 +602,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
     
       <li class="post">
         <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
   </ul>

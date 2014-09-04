@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-02T21:26:10+10:00</updated>
+  <updated>2014-09-04T15:07:04+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[semi-colon in swift]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/04/semi-colon-in-swift/"/>
+    <updated>2014-09-04T14:52:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/04/semi-colon-in-swift</id>
+    <content type="html"><![CDATA[<p>The perfered style of semi-colon placement in swift is:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>struct Foo: SomeProtocol {}
+</span><span class='line'>class Foo: SomeProtocol {}
+</span><span class='line'>
+</span><span class='line'>var x: Int
+</span><span class='line'>func foo(x: Int) {}
+</span><span class='line'>func bar(x: (y: Int) -> Int) -> Double {}
+</span><span class='line'>let dict = ["key": value]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>i.e. No space before the semi-colon. One space after the semi-colon</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ex 2.2]]></title>
@@ -1627,186 +1654,6 @@ true
     <content type="html"><![CDATA[<p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
 
 <p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[quick 32nd lookup]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/05/quick-32nd-lookup/"/>
-    <updated>2014-03-05T07:11:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/05/quick-32nd-lookup</id>
-    <content type="html"><![CDATA[<table>
-<thead>
-<tr>
-<th></th>
-<th><strong>32nd</strong>  </th>
-<th> <strong>Decimal</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> 1/32   </td>
-<td>0.03125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 2/32   </td>
-<td>0.0625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 3/32   </td>
-<td>0.09375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 4/32   </td>
-<td>0.125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 5/32   </td>
-<td>0.15625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 6/32   </td>
-<td>0.1875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 7/32   </td>
-<td>0.21875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 8/32   </td>
-<td>0.25 </td>
-</tr>
-<tr>
-<td></td>
-<td> 9/32   </td>
-<td>0.28125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 10/32  </td>
-<td>0.3125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 11/32  </td>
-<td>0.34375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 12/32  </td>
-<td>0.375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 13/32  </td>
-<td>0.40625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 14/32  </td>
-<td>0.4375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 15/32  </td>
-<td>0.46875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 16/32  </td>
-<td>0.5 </td>
-</tr>
-<tr>
-<td></td>
-<td> 17/32  </td>
-<td>0.53125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 18/32  </td>
-<td>0.5625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 19/32  </td>
-<td>0.59375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 20/32  </td>
-<td>0.625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 21/32  </td>
-<td>0.65625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 22/32  </td>
-<td>0.6875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 23/32  </td>
-<td>0.71875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 24/32  </td>
-<td>0.75 </td>
-</tr>
-<tr>
-<td></td>
-<td> 25/32  </td>
-<td>0.78125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 26/32  </td>
-<td>0.8125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 27/32  </td>
-<td>0.84375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 28/32  </td>
-<td>0.875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 29/32  </td>
-<td>0.90625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 30/32  </td>
-<td>0.9375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 31/32  </td>
-<td>0.96875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 32/32  </td>
-<td>1.0 </td>
-</tr>
-</tbody>
-</table>
-
 ]]></content>
   </entry>
   

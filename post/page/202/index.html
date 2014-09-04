@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Problem Definition: Euler Problem 3 Obviously, these scripts did not actually implement the solution. The problem statement required to pick the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,382 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/29/5132302946249986477/">Little Erlang Exercise 3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-29T22:09:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;amp;id=3">Euler Problem 3</a></p>
+
+<p>Obviously, these scripts did not actually implement the solution. The problem statement required to pick the largest factor, but I just realized I had not done it.</p>
+
+<p><strong>Python Solution</strong></p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># The prime factors of 13195 are 5, 7, 13 and 29.</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># What is the largest prime factor of the number 317584931803?</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">isprime</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span><span class='line'>  <span class="c">#  Original version use xrange, but caused</span>
+</span><span class='line'>  <span class="c">#</span>
+</span><span class='line'>  <span class="c">#  &quot;OverflowException: long int too large to convert to int”</span>
+</span><span class='line'>  <span class="c"># </span>
+</span><span class='line'>  <span class="c">#  when taking in a large number</span>
+</span><span class='line'>  <span class="c"># </span>
+</span><span class='line'>  <span class="c">#  So, I have to use while loop to replace “for i in xrange(2, N):”</span>
+</span><span class='line'>  <span class="c">#</span>
+</span><span class='line'>  <span class="c">#  And in order to speed up the process, the prime calculation result</span>
+</span><span class='line'>  <span class="c">#  is cached</span>
+</span><span class='line'>  <span class="k">global</span> <span class="n">primes</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c"># we have already tested it</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">N</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">return</span> <span class="bp">True</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c"># use the prime results first </span>
+</span><span class='line'>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>      <span class="k">return</span> <span class="bp">False</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c"># now computation is required</span>
+</span><span class='line'>  <span class="n">maxprime</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'>  <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">maxprime</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">i</span> <span class="o">=</span> <span class="n">maxprime</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">N</span> <span class="o">%</span> <span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>      <span class="k">return</span> <span class="bp">False</span>
+</span><span class='line'>    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">return</span> <span class="bp">True</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">factorise</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span><span class='line'>  <span class="c">#</span>
+</span><span class='line'>  <span class="c">#  To factorise a integer</span>
+</span><span class='line'>  <span class="c">#</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c"># short cut</span>
+</span><span class='line'>  <span class="k">global</span> <span class="n">primes</span>
+</span><span class='line'>  <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="n">N</span> <span class="ow">in</span> <span class="n">primes</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">res</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c"># original algorithm</span>
+</span><span class='line'>  <span class="n">idx</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class='line'>  <span class="k">while</span> <span class="n">idx</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">isprime</span><span class="p">(</span><span class="n">idx</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">div</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">if</span> <span class="n">mod</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">res</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">factorise</span><span class="p">(</span><span class="n">div</span><span class="p">))</span>
+</span><span class='line'>        <span class="k">break</span>
+</span><span class='line'>    <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">res</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="err">”</span><span class="n">__main__</span><span class="err">“</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">print</span> <span class="n">factorise</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Erlang Solution</strong></p>
+
+<p>Here comes the erlang version. There is some performance issue with this version. hopefully I would have some free time soon to improve the algorithm.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">p3</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">isprime</span><span class="o">/</span><span class="mi">1</span><span class="p">,</span> <span class="n">factorise</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="c">%% prime means it is not divisible by any numbers other than 1 and itself.</span>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="nf">isprime</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="n">false</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">isprime</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="n">true</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">isprime</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="k">when</span> <span class="nv">N</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="nv">Pid</span> <span class="o">=</span> <span class="n">self</span><span class="p">(),</span>
+</span><span class='line'> <span class="nv">C</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nv">N</span> <span class="err">–</span> <span class="mi">1</span><span class="p">),</span>
+</span><span class='line'> <span class="nb">process_flag</span><span class="p">(</span><span class="n">trap_exit</span><span class="p">,</span> <span class="n">true</span><span class="p">),</span>
+</span><span class='line'> <span class="nn">lists</span><span class="p">:</span><span class="nf">map</span><span class="p">(</span><span class="k">fun</span><span class="p">(</span><span class="nv">Div</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>               <span class="nb">spawn_link</span><span class="p">(</span><span class="k">fun</span><span class="p">()</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>                   <span class="n">test_if_divisible</span><span class="p">(</span><span class="nv">Pid</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">Div</span><span class="p">)</span>
+</span><span class='line'>                   <span class="k">end</span><span class="p">)</span>
+</span><span class='line'>               <span class="k">end</span><span class="p">,</span> <span class="nv">C</span><span class="p">),</span>
+</span><span class='line'> <span class="n">isprime_poll</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">C</span><span class="p">)).</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="c">%% Message loop: to listen and receive message from voters</span>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="nf">isprime_poll</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="n">true</span><span class="p">;</span>
+</span><span class='line'><span class="nf">isprime_poll</span><span class="p">(</span><span class="nv">NumVote</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="k">receive</span>
+</span><span class='line'>   <span class="p">{</span><span class="n">nondivisible</span><span class="p">,</span> <span class="p">}</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="n">isprime_poll</span><span class="p">(</span><span class="nv">NumVote</span> <span class="err">–</span> <span class="mi">1</span><span class="p">);</span>
+</span><span class='line'>   <span class="p">{</span><span class="n">divisible</span><span class="p">,</span> <span class="p">}</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="n">clean_mailbox</span><span class="p">(),</span>
+</span><span class='line'>       <span class="n">false</span>
+</span><span class='line'> <span class="k">end</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="c">%% To clear away any messages in mailbox</span>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="nf">clean_mailbox</span><span class="p">()</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="k">receive</span>
+</span><span class='line'>   <span class="p">_</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="n">clean_mailbox</span><span class="p">()</span>
+</span><span class='line'>   <span class="k">after</span> <span class="mi">0</span> <span class="err">–</span><span class="o">&gt;</span> <span class="n">ok</span>
+</span><span class='line'> <span class="k">end</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="c">%%</span>
+</span><span class='line'><span class="nf">test_if_divisible</span><span class="p">(</span><span class="nv">Pid</span><span class="p">,</span> <span class="nv">N</span><span class="p">,</span> <span class="nv">Div</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="k">case</span> <span class="nv">N</span> <span class="ow">rem</span> <span class="nv">Div</span> <span class="k">of</span>
+</span><span class='line'>   <span class="mi">0</span> <span class="err">–</span><span class="o">&gt;</span> <span class="nv">Pid</span> <span class="o">!</span> <span class="p">{</span><span class="n">divisible</span><span class="p">,</span> <span class="nv">Div</span><span class="p">};</span>
+</span><span class='line'>   <span class="p">_</span> <span class="err">–</span><span class="o">&gt;</span> <span class="nv">Pid</span> <span class="o">!</span> <span class="p">{</span><span class="n">nondivisible</span><span class="p">,</span> <span class="nv">Div</span><span class="p">}</span>
+</span><span class='line'> <span class="k">end</span><span class="p">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">%%%</span>
+</span><span class='line'><span class="c">%%% To factorise an integer – wrappers</span>
+</span><span class='line'><span class="c">%%%</span>
+</span><span class='line'><span class="nf">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_list</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>   <span class="nv">N1</span> <span class="o">=</span> <span class="nn">string</span><span class="p">:</span><span class="nf">to_integer</span><span class="p">(</span><span class="nv">N</span><span class="p">),</span>
+</span><span class='line'>   <span class="n">factorise</span><span class="p">(</span><span class="nv">N1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[]);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>   <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">%%%</span>
+</span><span class='line'><span class="c">%%% To factorise an integer</span>
+</span><span class='line'><span class="c">%%%</span>
+</span><span class='line'><span class="nf">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Factor</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span> <span class="k">when</span> <span class="nv">Factor</span> <span class="o">&lt;</span> <span class="nv">N</span><span class="o">+</span><span class="mi">1</span>  <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="k">case</span> <span class="n">isprime</span><span class="p">(</span><span class="nv">Factor</span><span class="p">)</span> <span class="k">of</span>
+</span><span class='line'>   <span class="n">true</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>     <span class="k">if</span>
+</span><span class='line'>       <span class="p">(</span><span class="nv">N</span> <span class="ow">rem</span> <span class="nv">Factor</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>         <span class="c">%% io:format(&quot;Residual is 0 by Factor ~p~n”, [Factor]),</span>
+</span><span class='line'>         <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span> <span class="ow">div</span> <span class="nv">Factor</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="nv">Factor</span><span class="p">|</span><span class="nv">Result</span><span class="p">]);</span>
+</span><span class='line'>       <span class="n">true</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>         <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Factor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span>
+</span><span class='line'>     <span class="k">end</span><span class="p">;</span>
+</span><span class='line'>   <span class="n">false</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>       <span class="n">factorise</span><span class="p">(</span><span class="nv">N</span><span class="p">,</span> <span class="nv">Factor</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">Result</span><span class="p">)</span>
+</span><span class='line'> <span class="k">end</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">factorise</span><span class="p">(_,</span> <span class="p">_,</span> <span class="nv">Result</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="nv">R</span> <span class="o">=</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">(</span><span class="nv">Result</span><span class="p">),</span>
+</span><span class='line'> <span class="c">%% io:format(“~p~n”, [R]),</span>
+</span><span class='line'> <span class="nv">R</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -262,42 +637,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/01/11/jst_7368608015436447918/">France and Deregulation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T02:55:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Very obviously, the martial status and love life of Sarkozy is taking the limelight, and mainstream media basically treat this story as if it belongs to entertainment section.<br /><br />Oh, well, that&rsquo;s why mainstream media is mainstream, isn&rsquo;t it?<br /><br />So, when I learn about the reform Sarkozy has brought to France, I was a bit surprised. News like this basically escape me, a news junkie.<br /><br />The following are some example:<br /><br /><ul><li>Abolished the 35 work hours/week restriction. On top of this, a worker does not have to pay tax on the income resulted from his/her overtime. Employer is also only required to pay a lesser contribution to pension and health care levy for the overtime payment.</li></ul><br /><ul><li>Simplify the tax laws: for some lower income family, a bill is passed so that a ceiling, 50%, is imposed on they have to pay to government. This does not include just income tax alone, but also covering various government fee and charge.</li></ul><br /><ul><li>Bills passed to weaken Union power</li></ul><br /><ul><li>Actively encourage the R&amp;D via financial incentive</li></ul><br /><span style="font-style: italic;">(It is reported by </span><span style="font-style: italic;">Bloomberg on the Economy</span><span style="font-style: italic;"> Podcast &ndash; Interview with </span><a style="font-style: italic;" href="http://media.bloomberg.com/bb/avfile/BBRECON/vrs30YCrvv3s.mp3">Philippe Farve</a><span style="font-style: italic;">, 21 Dec 07 )</span><br /><br />It seems like it is going to be a Generational Change in France. In the all these hype of BRIC (Bazil, Russia, India and China), people probably is not aware that Europe actually has a balanced and increasing vibrant economy.<br /><br />Next to do: get some quantitative data to verify the above view.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/203/">&larr; Older</a>
@@ -315,6 +654,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
       </li>
     
@@ -328,10 +671,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/07/26/html-vs-xhtml/">html vs xhtml</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/07/06/install-mirage-failed/">install mirage failed</a>
       </li>
     
   </ul>
