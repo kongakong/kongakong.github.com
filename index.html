@@ -215,6 +215,54 @@ angular.module('myApp', ['ngTouch'])
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/09/01/what-is-tag-fieldset/">What Is Tag Fieldset?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-01T09:40:00+10:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://stackoverflow.com/questions/9741328/why-do-we-need-a-fieldset-tag">From StackOverflow</a></p>
+
+<p>The most obvious, practical example is:</p>
+
+<pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Colour&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="blue"&gt; Blue &lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="red"&gt; Red &lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="green"&gt; Green &lt;/label&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+<p>This allows each radio button to be labeled while also providing a label for the group as a whole. This is especially important where assistive technology (such as a screen reader) is being used where the association of the controls and their legend cannot be implied by visual presentation.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a></h1>
     
     
@@ -494,70 +542,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/08/27/ex-1/">Ex 2.1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-27T10:02:00+10:00" pubdate data-updated="true">Aug 27<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>Exercise 2.1</strong> Write a function suffixes of type a list &ndash;> a list of list that takes a list xs and returns a list of all the suffixes of xs in decreasing order of length. For example,</p>
-
-<pre><code>suffixes [1,2,3,4] = [[1,2,3,4], [2,3,4], [3,4], [4], [ ] ]
-</code></pre>
-
-<p>Show that the resulting list of suffixes can be generated in O(n) time and represented in O(n) space.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e2_1</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">suffixes</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="p">[]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">suffixes</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span>
-</span><span class='line'>    <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">]|</span><span class="nv">R</span><span class="p">]);</span>
-</span><span class='line'><span class="nf">suffixes</span><span class="p">([],</span> <span class="nv">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">([[]|</span><span class="nv">R</span><span class="p">]).</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -581,15 +565,15 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
       </li>
     
       <li class="post">
+        <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
       </li>
     
   </ul>

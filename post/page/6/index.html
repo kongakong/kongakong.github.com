@@ -9,11 +9,26 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is a useful marco for doing debug logging: 1
+  <meta name="description" content="Use request.query to retrieve the url parameters 1
 2
 3
 4
-#define DLog(msg, ...) do { \ NSString *dLogString = [NSString stringWithFormat:@&quot;%s &hellip;">
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+#coding: utf-8
+from bottle import * @route(&#39;/&#39;)
+@ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -119,6 +134,81 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/03/bottle-and-parameters/">Bottle and Parameters</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T22:58:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Use   <code>request.query</code> to retrieve the url parameters</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#coding: utf-8</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/index.html&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;a href=&quot;/hello&quot;&gt;Go to Hello page&lt;/a&gt;&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/hello&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;h1&gt;Hello </span><span class="si">%s</span><span class="s">&lt;/h1&gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -351,96 +441,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/23/urlencode-unicode/">Urlencode Unicode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-23T07:25:00+11:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Work in python 3</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python3</span>
-</span><span class='line'><span class="n">Python</span> <span class="mf">3.3</span><span class="o">.</span><span class="mi">4</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Feb</span> <span class="mi">23</span> <span class="mi">2014</span><span class="p">,</span> <span class="mo">06</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">55</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.2</span><span class="o">.</span><span class="mi">1</span> <span class="n">Compatible</span> <span class="n">Apple</span> <span class="n">LLVM</span> <span class="mf">5.0</span> <span class="p">(</span><span class="n">clang</span><span class="o">-</span><span class="mf">500.2</span><span class="o">.</span><span class="mi">79</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
-</span><span class='line'><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib.parse</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
-</span><span class='line'><span class="s">&#39;a=%C6%90&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Does not work in python</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python</span>
-</span><span class='line'><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">6</span> <span class="o">|</span><span class="n">Anaconda</span> <span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jan</span> <span class="mi">10</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.0</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">Apple</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">build</span> <span class="mi">5493</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
-</span><span class='line'><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'><span class="ne">ValueError</span><span class="p">:</span> <span class="nb">chr</span><span class="p">()</span> <span class="n">arg</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="s">u&quot;</span><span class="se">\u0400</span><span class="s">&quot;</span><span class="p">})</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/Users/antkong/anaconda/lib/python2.7/urllib.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1329</span><span class="p">,</span> <span class="ow">in</span> <span class="n">urlencode</span>
-</span><span class='line'>    <span class="n">v</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
-</span><span class='line'><span class="ne">UnicodeEncodeError</span><span class="p">:</span> <span class="s">&#39;ascii&#39;</span> <span class="n">codec</span> <span class="n">can</span><span class="s">&#39;t encode character u&#39;</span>\<span class="n">u0400</span><span class="s">&#39; in position 0: ordinal not in range(128)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -466,15 +466,15 @@ alt="hit counter"></a></div></noscript>
       </li>
     
       <li class="post">
+        <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/08/27/ex-1/">Ex 2.1</a>
       </li>
     
   </ul>

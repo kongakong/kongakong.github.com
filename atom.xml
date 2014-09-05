@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-04T16:46:38+10:00</updated>
+  <updated>2014-09-06T09:52:51+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -50,6 +50,27 @@ angular.module('myApp', ['ngTouch'])
 
 
 <p>i.e. No space before the semi-colon. One space after the semi-colon</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What is tag fieldset?]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/01/what-is-tag-fieldset/"/>
+    <updated>2014-09-01T09:40:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/01/what-is-tag-fieldset</id>
+    <content type="html"><![CDATA[<p><a href="http://stackoverflow.com/questions/9741328/why-do-we-need-a-fieldset-tag">From StackOverflow</a></p>
+
+<p>The most obvious, practical example is:</p>
+
+<pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Colour&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="blue"&gt; Blue &lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="red"&gt; Red &lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="green"&gt; Green &lt;/label&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+<p>This allows each radio button to be labeled while also providing a label for the group as a whole. This is especially important where assistive technology (such as a screen reader) is being used where the association of the controls and their legend cannot be implied by visual presentation.</p>
 ]]></content>
   </entry>
   
@@ -1620,42 +1641,6 @@ true
 <p>I went into the lab earlier today, and we have 18 different processing units with computers in them. We have three main computers, but 18 units that have a computer of some kind, and all of them are triple computers – everything is three processors. So we have like 54 processors on the spacecraft. It&rsquo;s a highly distributed design and very fault-tolerant and very robust.</p>
 
 <p><a href="http://www.aviationweek.com/Blogs.aspx?plckBlogId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385&amp;plckPostId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385Post:a8b87703-93f9-4cdf-885f-9429605e14df">Source</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[how to make a label recognise a tape]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape/"/>
-    <updated>2014-03-06T07:44:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/06/how-to-make-a-label-recognise-a-tape</id>
-    <content type="html"><![CDATA[<p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="nv">gestureRecognizer</span>  <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   
