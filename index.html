@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To introduce touch behaviour in angularjs-enabled mobile app, try this: &lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/ &hellip;">
+  <meta name="description" content="Take a look at this swift code (XCode6 Beta7) class C { func name () -&gt; String { return "C" } } class D:C { override func name () -&gt; String { &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,82 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference Between Handling &#8216;Self&#8217; in Python and Swift</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-10T12:35:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Take a look at this <code>swift</code> code (XCode6 Beta7)</p>
+
+<pre><code>    class C {
+            func name () -&gt; String {
+                return "C"
+            }
+    }
+
+    class D:C {
+            override func name () -&gt; String {
+                return "D"
+            }
+    }
+
+    let c = C()
+    println(c.name()) // print 'C'
+
+    let d = D()
+    println(d.name()) // print 'D' as expected
+
+    println(C.name(d)()) // print 'D'! 
+</code></pre>
+
+<p>In python, the last case is different:</p>
+
+<pre><code>    class C:
+        def name(self):
+            return 'C' 
+
+    class D(C):
+        def name(self):
+            return 'D' 
+
+    c = C() 
+    print(c.name())  // print 'C' 
+
+    d = D() 
+    print(d.name())  // print 'D' 
+
+    print(C.name(d)) // print 'C' 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -506,42 +582,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL Undefined</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-29T11:08:00+10:00" pubdate data-updated="true">Aug 29<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Fixed by import <code>MobileCoreServices</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -557,6 +597,10 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
       </li>
     
@@ -570,10 +614,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
     
       <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
       </li>
     
   </ul>

@@ -9,9 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To avoid cyclic reference when referring to an object outside a block, we can do the following: 1
-2
-3 __weak typeof(self) weakSelf = self; gravity. &hellip;">
+  <meta name="description" content="For a 5-year swap, for example, a bank’s swap desk might quote the following: Floating-rate payer: pay 6-month LIBOR
+receive a fixed rate of 5.19 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -117,6 +116,55 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/29/bid-ask-spread/">Bid-ask Spread and Swap Spread</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-29T08:11:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For a 5-year swap, for example, a bank’s swap desk might quote the following:</p>
+
+<pre><code>Floating-rate payer: pay 6-month LIBOR
+receive a fixed rate of 5.19 percent
+
+Fixed-rate payer: pay a fixed rate of 5.25 percent
+receive 6-month LIBOR
+</code></pre>
+
+<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p>
+
+<p>The fixed rate is always set at a spread over the government bond yield curve and is often quoted that way. Say the 5-year Treasury is trading at a yield of 4.88 percent. The 5-year swap bid and offer rates in the example are 31 basis points and 37 basis points, respectively, above this yield, and the bank’s swap trader could quote the swap rates as a swap spread: 37–31. This means that the bank would be willing to enter into a swap in which it paid 31 basis points above the benchmark yield and received LIBOR or one in which it received 37 basis points above the yield curve and paid LIBOR.</p>
+
+<p>(Quoted from &lsquo;Fixed Income Securities and Derivatives Handbook Analysis and Valuation&rsquo; )</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -318,42 +366,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/17/class-cluster/">Class Cluster</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-17T22:42:00+11:00" pubdate data-updated="true">Jan 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/11/">&larr; Older</a>
@@ -371,6 +383,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
       </li>
     
@@ -384,10 +400,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is very easy to remove the tab bar at the bottom. Also need to check ‘hides bottom bars when push’ option
+  <meta name="description" content="Wanted to use MPMoviePlayerViewController but really don’t know how to use initWithContentURL in the context of prepareForSegue
 ">
   
 
@@ -116,6 +116,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/31/p-24121526195/">MPMoviePlayerViewController</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-31T19:15:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to use <code>MPMoviePlayerViewController</code> but really don’t know how to use <code>initWithContentURL</code> in the context of <code>prepareForSegue</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -271,60 +307,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/28/p-23922752806/">Problem: Cannot Use &#8216;Push&#8217; Segue Between a UITableview Cell and Another Controller</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-28T20:19:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Cause</em></p>
-
-<p>The UITableViewController does not ‘live’ in a UINavigationController</p>
-
-<p><em>Solution</em></p>
-
-<p>Because I am using storyboard, the solution is slightly different from non-storyboard project.</p>
-
-<p>Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.</p>
-
-<p>To fix the problem, I have to</p>
-
-<p>1) drag a UINavigationController in between the TabBarController and the First Custom Controller.</p>
-
-<p>2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller</p>
-
-<p>3) Add a relationship between the TabBarController and the new UINavigationController</p>
-
-<p>4) Add a relationship between the new UINavigationController and the new First Custom Controller</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/60/">&larr; Older</a>
@@ -342,6 +324,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
       </li>
     
@@ -355,10 +341,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL undefined</a>
       </li>
     
   </ul>

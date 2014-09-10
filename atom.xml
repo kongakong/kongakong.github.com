@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-06T09:52:51+10:00</updated>
+  <updated>2014-09-10T13:07:42+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Difference between handling 'self' in Python and Swift]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/10/swift-can-be-very-pythonic/"/>
+    <updated>2014-09-10T12:35:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/10/swift-can-be-very-pythonic</id>
+    <content type="html"><![CDATA[<p>Take a look at this <code>swift</code> code (XCode6 Beta7)</p>
+
+<pre><code>    class C {
+            func name () -&gt; String {
+                return "C"
+            }
+    }
+
+    class D:C {
+            override func name () -&gt; String {
+                return "D"
+            }
+    }
+
+    let c = C()
+    println(c.name()) // print 'C'
+
+    let d = D()
+    println(d.name()) // print 'D' as expected
+
+    println(C.name(d)()) // print 'D'! 
+</code></pre>
+
+<p>In python, the last case is different:</p>
+
+<pre><code>    class C:
+        def name(self):
+            return 'C' 
+
+    class D(C):
+        def name(self):
+            return 'D' 
+
+    c = C() 
+    print(c.name())  // print 'C' 
+
+    d = D() 
+    print(d.name())  // print 'D' 
+
+    print(C.name(d)) // print 'C' 
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ngTouch]]></title>
@@ -1626,21 +1675,6 @@ true
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SpaceX and redundancy]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/06/spacex-and-redundancy/"/>
-    <updated>2014-03-06T07:51:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/06/spacex-and-redundancy</id>
-    <content type="html"><![CDATA[<p><strong>Q:</strong> So, these flight computers on Dragon – there are three on board, and that&rsquo;s for redundancy?</p>
-
-<p><strong>A:</strong> There are actually six computers. They operate in pairs, so there are three computer units, each of which have two computers checking on each other. The reason we have three is when operating in proximity of ISS, we have to always have two computer strings voting on something on critical actions. We have three so we can tolerate a failure and still have two voting on each other. And that has nothing to do with radiation, that has to do with ensuring that we&rsquo;re safe when we&rsquo;re flying our vehicle in the proximity of the space station.</p>
-
-<p>I went into the lab earlier today, and we have 18 different processing units with computers in them. We have three main computers, but 18 units that have a computer of some kind, and all of them are triple computers – everything is three processors. So we have like 54 processors on the spacecraft. It&rsquo;s a highly distributed design and very fault-tolerant and very robust.</p>
-
-<p><a href="http://www.aviationweek.com/Blogs.aspx?plckBlogId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385&amp;plckPostId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385Post:a8b87703-93f9-4cdf-885f-9429605e14df">Source</a></p>
 ]]></content>
   </entry>
   
