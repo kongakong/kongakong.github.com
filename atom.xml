@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-10T13:07:42+10:00</updated>
+  <updated>2014-09-10T13:37:49+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[make iphone vibrate]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/10/make-iphone-vibrate/"/>
+    <updated>2014-09-10T13:31:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/10/make-iphone-vibrate</id>
+    <content type="html"><![CDATA[<p>Use these APIs to set the iphone to vibrate</p>
+
+<pre><code>AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+</code></pre>
+
+<p>The first function plays a beep sound if the devices don’t support vibration. The second function on the other hand does nothing on unsupported devices.</p>
+
+<p>if <code>AVRecorder</code> is running, iphone will not vibrate too.</p>
+
+<p>Source: <a href="http://stackoverflow.com/questions/4724980/making-the-iphone-vibrate">Stackoverflow</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Difference between handling 'self' in Python and Swift]]></title>
@@ -1646,35 +1665,6 @@ true
     <content type="html"><![CDATA[<p>Turns out it is not a smaller subject&hellip;</p>
 
 <p>First reading: <a href="http://stackoverflow.com/questions/1126726/how-to-make-a-uitextfield-move-up-when-keyboard-is-present">http://stackoverflow.com/questions/1126726/how-to-make-a-uitextfield-move-up-when-keyboard-is-present</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Current time in objective-c and python]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python/"/>
-    <updated>2014-03-06T18:49:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/06/now-in-objective-c-and-python</id>
-    <content type="html"><![CDATA[<p>To get the current time in python</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and in objective-c</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
-</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">);</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
 ]]></content>
   </entry>
   

@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="We can use the class cluster technique to manage compatibility on different iOS platforms.
-">
+  <meta name="description" content="After coming this SO question about (debug_info)[http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,73 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/18/compile-debug-info/">Compile Debug_info</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-18T13:04:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After coming this SO question about (debug_info)[<a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a>], I am curious if it is indeed a problem.</p>
+
+<p>Based on the (documentation)[<a href="http://www.erlang.org/doc/man/compile.html#debug_info">http://www.erlang.org/doc/man/compile.html#debug_info</a>], this should enable the addition of debug info to the .beam files.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
+
+<p>I can only implant debug info through erlang shell like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().
+</span><span class='line'>
+</span><span class='line'>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
+</span><span class='line'>ERROR: Could not find 'wxe_driver.so' in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
+</span><span class='line'>{ok,&lt;0.49.0>}
+</span><span class='line'>5> c(testdebuginfo, [debug_info]).
+</span><span class='line'>{ok,testdebuginfo}</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -360,62 +426,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-06T19:12:00+11:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By default, ipython notebook will use MathJax on a CDN</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython notebook
-</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
-</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
-</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To download and install the mathjax.js locally, we can run</p>
-
-<pre><code>from IPython.external.mathjax import install_mathjax
-install_mathjax()
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/12/">&larr; Older</a>
@@ -433,6 +443,10 @@ install_mathjax()
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
       </li>
     
@@ -446,10 +460,6 @@ install_mathjax()
     
       <li class="post">
         <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a>
       </li>
     
   </ul>
