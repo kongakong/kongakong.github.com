@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-10T13:37:49+10:00</updated>
+  <updated>2014-09-12T15:13:44+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Starting an angularjs project with bower]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/12/angular-bower/"/>
+    <updated>2014-09-12T10:53:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/12/angular-bower</id>
+    <content type="html"><![CDATA[<p>First you need to install <code>npm</code> via <code>brew</code></p>
+
+<p>Then run <code>npm install -g bower</code> as documented in <a href="http://bower.io/">bower websiter</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[homebrew problem]]></title>
@@ -290,32 +301,6 @@
 <p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
 
 <p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Prepare a maverick usb]]></title>
-    <link href="http://www.ahwkong.com/post/2014/03/01/prepare-a-maverick-usb/"/>
-    <updated>2014-03-01T07:08:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2014/03/01/prepare-a-maverick-usb</id>
-    <content type="html"><![CDATA[<p>Get a USB flash drive that is at least 8 GBs.</p>
-
-<p>Use Disk Utility to prepare the flash drive:</p>
-
-<ul>
-<li>Click on the Erase tab in the DU main window.</li>
-<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
-<li>Click on the Erase button.</li>
-</ul>
-
-
-<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
-
-<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
---volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
-</code></pre>
-
-<p>No need of any third party software</p>
 ]]></content>
   </entry>
   

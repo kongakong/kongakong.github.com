@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Rbind &ndash; bind data frame by rows
+  <meta name="description" content="http://www.scientificlinux.org/
 ">
   
 
@@ -122,6 +122,114 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/08/20/p-9155192863/">[http://www.scientificlinux.org/](Scientific Linux )</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-20T15:22:00+10:00" pubdate data-updated="true">Aug 20<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Scientific%20Linux">http://www.scientificlinux.org/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/19/p-9120392547/">Installing Scientific Linux… Apparently 256M RAM Is Not Sufficient</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-19T22:35:00+10:00" pubdate data-updated="true">Aug 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Installing Scientific Linux… Apparently 256M RAM is not sufficient</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/19/p-9096119007/">Balmain Pier</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-19T08:25:00+10:00" pubdate data-updated="true">Aug 19<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Balmain Pier</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/08/17/p-9031220952/">Rbind - Bind Data Frame by Rows</a></h1>
     
     
@@ -189,245 +297,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/16/p-8994621620/">Learn Something About Dis</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-16T22:56:00+10:00" pubdate data-updated="true">Aug 16<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Classes have a special opcode, LOAD_NAME, that allows for</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">42</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
-</span><span class='line'><span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-</span><span class='line'><span class="o">...</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span><span class="o">.</span><span class="n">x</span>
-</span><span class='line'><span class="mi">42</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>which would fail in a function</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
-</span><span class='line'><span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-</span><span class='line'><span class="o">...</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">()</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="n">f</span>
-</span><span class='line'><span class="ne">UnboundLocalError</span><span class="p">:</span> <span class="n">local</span> <span class="n">variable</span> <span class="s">&#39;x&#39;</span> <span class="n">referenced</span> <span class="n">before</span> <span class="n">assignment</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>LOAD_NAME is pretty dumb, it looks into the local namespace and if that
-lookup fails falls back to the global namespace. Someone probably thought &ldquo;I
-can do better&rdquo;, and reused the static name lookup for nested functions for
-names that occur only on the right-hand side of assignments in a class.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;global&quot;</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-</span><span class='line'><span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;local&quot;</span>
-</span><span class='line'><span class="o">...</span>     <span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
-</span><span class='line'><span class="o">...</span>             <span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-</span><span class='line'><span class="o">...</span>     <span class="k">return</span> <span class="n">A</span>
-</span><span class='line'><span class="o">...</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">bar</span><span class="p">():</span>
-</span><span class='line'><span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;local&quot;</span>
-</span><span class='line'><span class="o">...</span>     <span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
-</span><span class='line'><span class="o">...</span>             <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-</span><span class='line'><span class="o">...</span>     <span class="k">return</span> <span class="n">A</span>
-</span><span class='line'><span class="o">...</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="p">()</span><span class="o">.</span><span class="n">x</span>
-</span><span class='line'><span class="s">&#39;global&#39;</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span><span class="p">()</span><span class="o">.</span><span class="n">y</span>
-</span><span class='line'><span class="s">&#39;local&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now let&rsquo;s have a glimpse at the bytecode:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">dis</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">foo</span><span class="o">.</span><span class="n">func_code</span><span class="o">.</span><span class="n">co_consts</span>
-</span><span class='line'><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">&#39;local&#39;</span><span class="p">,</span> <span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">code</span> <span class="nb">object</span> <span class="n">A</span> <span class="n">at</span> <span class="mh">0x7ffe311bdb70</span><span class="p">,</span> <span class="nb">file</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span>
-</span><span class='line'><span class="mi">3</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">())</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="n">foo</span><span class="o">.</span><span class="n">func_code</span><span class="o">.</span><span class="n">co_consts</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-</span><span class='line'>  <span class="mi">3</span>           <span class="mi">0</span> <span class="n">LOAD_NAME</span>                <span class="mi">0</span> <span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-</span><span class='line'>              <span class="mi">3</span> <span class="n">STORE_NAME</span>               <span class="mi">1</span> <span class="p">(</span><span class="n">__module__</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="mi">4</span>           <span class="mi">6</span> <span class="n">LOAD_NAME</span>                <span class="mi">2</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span class='line'>              <span class="mi">9</span> <span class="n">STORE_NAME</span>               <span class="mi">2</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span class='line'>             <span class="mi">12</span> <span class="n">LOAD_LOCALS</span>
-</span><span class='line'>             <span class="mi">13</span> <span class="n">RETURN_VALUE</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">bar</span><span class="o">.</span><span class="n">func_code</span><span class="o">.</span><span class="n">co_consts</span>
-</span><span class='line'><span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">&#39;local&#39;</span><span class="p">,</span> <span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">code</span> <span class="nb">object</span> <span class="n">A</span> <span class="n">at</span> <span class="mh">0x7ffe311bd828</span><span class="p">,</span> <span class="nb">file</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span>
-</span><span class='line'><span class="mi">3</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">())</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">dis</span><span class="o">.</span><span class="n">dis</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">func_code</span><span class="o">.</span><span class="n">co_consts</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-</span><span class='line'>  <span class="mi">3</span>           <span class="mi">0</span> <span class="n">LOAD_NAME</span>                <span class="mi">0</span> <span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
-</span><span class='line'>              <span class="mi">3</span> <span class="n">STORE_NAME</span>               <span class="mi">1</span> <span class="p">(</span><span class="n">__module__</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="mi">4</span>           <span class="mi">6</span> <span class="n">LOAD_DEREF</span>               <span class="mi">0</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span class='line'>              <span class="mi">9</span> <span class="n">STORE_NAME</span>               <span class="mi">2</span> <span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span><span class='line'>             <span class="mi">12</span> <span class="n">LOAD_LOCALS</span>
-</span><span class='line'>             <span class="mi">13</span> <span class="n">RETURN_VALUE</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/07/p-8596499220/">Discovered Two Useful Modules in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-07T20:44:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Discovered two useful modules in python</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/07/p-8581922778/">Why iOS Developer Should Wait for the 15&#8217; MPA</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-07T12:17:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Why%20iOS%20developer%20should%20wait%20for%20the%2015%22%20MPA">http://www.reddit.com/r/apple/comments/j9tm7/any_developers_running_lion_with_4_gigs_of_memory/c2aiip1</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/102/">&larr; Older</a>
@@ -445,23 +314,23 @@ names that occur only on the right-hand side of assignments in a class.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
       </li>
     
   </ul>

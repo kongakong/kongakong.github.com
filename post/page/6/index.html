@@ -9,24 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback 1
 2
 3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-$ sudo apt-get install ncurses-dev
-Reading package lists... Done
-Building dependency tree Reading state &hellip;">
+-(void) handleSingleTap:(UIGestureRecognizer *) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -132,6 +118,314 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">How to Make a Label Recognise a Tape</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T07:44:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="nv">gestureRecognizer</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/yield-to-maturity/">Yield to Maturity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T07:13:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
+
+<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/05/quick-32nd-lookup/">Quick 32nd Lookup</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>32nd</strong>  </th>
+<th> <strong>Decimal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> 1/32   </td>
+<td>0.03125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 2/32   </td>
+<td>0.0625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 3/32   </td>
+<td>0.09375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 4/32   </td>
+<td>0.125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 5/32   </td>
+<td>0.15625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 6/32   </td>
+<td>0.1875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 7/32   </td>
+<td>0.21875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 8/32   </td>
+<td>0.25 </td>
+</tr>
+<tr>
+<td></td>
+<td> 9/32   </td>
+<td>0.28125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 10/32  </td>
+<td>0.3125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 11/32  </td>
+<td>0.34375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 12/32  </td>
+<td>0.375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 13/32  </td>
+<td>0.40625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 14/32  </td>
+<td>0.4375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 15/32  </td>
+<td>0.46875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 16/32  </td>
+<td>0.5 </td>
+</tr>
+<tr>
+<td></td>
+<td> 17/32  </td>
+<td>0.53125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 18/32  </td>
+<td>0.5625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 19/32  </td>
+<td>0.59375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 20/32  </td>
+<td>0.625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 21/32  </td>
+<td>0.65625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 22/32  </td>
+<td>0.6875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 23/32  </td>
+<td>0.71875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 24/32  </td>
+<td>0.75 </td>
+</tr>
+<tr>
+<td></td>
+<td> 25/32  </td>
+<td>0.78125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 26/32  </td>
+<td>0.8125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 27/32  </td>
+<td>0.84375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 28/32  </td>
+<td>0.875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 29/32  </td>
+<td>0.90625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 30/32  </td>
+<td>0.9375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 31/32  </td>
+<td>0.96875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 32/32  </td>
+<td>1.0 </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -283,214 +577,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/03/bottle-and-parameters/">Bottle and Parameters</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T22:58:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use   <code>request.query</code> to retrieve the url parameters</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#coding: utf-8</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/index.html&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;a href=&quot;/hello&quot;&gt;Go to Hello page&lt;/a&gt;&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/hello&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
-</span><span class='line'>    <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;h1&gt;Hello </span><span class="si">%s</span><span class="s">&lt;/h1&gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/03/nslog-macro/">NSLog Macro</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T08:11:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a useful marco for doing debug logging:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
-</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
-</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
-</span><span class='line'><span class="cp">} while (0)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
-
-<p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R Is Presinstalled in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-02T11:27:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I just found out R is pre-installed in OSX!</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ R
-</span><span class='line'>
-</span><span class='line'>R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
-</span><span class='line'>Copyright (C) 2013 The R Foundation for Statistical Computing
-</span><span class='line'>Platform: x86_64-apple-darwin10.8.0 (64-bit)
-</span><span class='line'>
-</span><span class='line'>R is free software and comes with ABSOLUTELY NO WARRANTY.
-</span><span class='line'>You are welcome to redistribute it under certain conditions.
-</span><span class='line'>Type 'license()' or 'licence()' for distribution details.
-</span><span class='line'>
-</span><span class='line'>  Natural language support but running in an English locale
-</span><span class='line'>
-</span><span class='line'>R is a collaborative project with many contributors.
-</span><span class='line'>Type 'contributors()' for more information and
-</span><span class='line'>'citation()' on how to cite R or R packages in publications.
-</span><span class='line'>
-</span><span class='line'>Type 'demo()' for some demos, 'help()' for on-line help, or
-</span><span class='line'>'help.start()' for an HTML browser interface to help.
-</span><span class='line'>Type 'q()' to quit R.
-</span><span class='line'>
-</span><span class='line'>></span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -508,23 +594,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
       </li>
     
   </ul>

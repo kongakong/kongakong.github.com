@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hoisting | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/hoisting/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-09-12T15:13:44+10:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[javascript and hoisting]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/12/javascript-and-hoisting/"/>
+    <updated>2014-09-12T15:12:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/12/javascript-and-hoisting</id>
+    <content type="html"><![CDATA[<p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
+
+<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
+]]></content>
+  </entry>
+  
+</feed>

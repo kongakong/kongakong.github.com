@@ -4119,12 +4119,24 @@
         <lastmod>2014-09-10T13:35:50+10:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2014/09/12/angular-bower/</loc>
+        <lastmod>2014-09-12T10:55:35+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/09/12/css-overflow/</loc>
+        <lastmod>2014-09-12T12:56:26+10:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2014/09/12/javascript-and-hoisting/</loc>
+        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2014-09-10T13:35:50+10:00</lastmod>
+        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2014-09-10T13:35:50+10:00</lastmod>
+        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4132,6 +4144,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2014-09-10T13:35:50+10:00</lastmod>
+        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
     </url>
 </urlset>

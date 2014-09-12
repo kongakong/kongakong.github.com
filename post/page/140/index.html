@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Virtual functions are dynamically bound, but default parameters are statically bound. It means that you may end up invoking a virtual function &hellip;">
+  <meta name="description" content="Summary: Virtual functions must be members. If f needs to be virtual, make it a member function of C. operator>> and operator&lt;&lt; are never &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,122 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5978423359/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T07:47:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Summary:</p>
+
+<p><em>Virtual functions</em> must be members. If f needs to be virtual, make it a member function of C.</p>
+
+<p><em>operator>></em> and <em>operator&lt;&lt;</em> are never members. If f is operator» or operator«, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Only non-member functions get type conversions on their left-most argument. If f needs type conversions on its left-most argument, make f a non-member function. If, in addition, f needs access to non-public members of C, make f a friend of C.</p>
+
+<p>Everything else should be a member function. If none of the other cases apply, make f a member function of C.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5967914767/">Item 1: Prefer Const and Inline to #define</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T02:14:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Classic example of why sometimes macro is a bad idea:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5966779736/">The _explicit_ Keyword in C++ Is Used to Declare Explicit Constructors. Explicit Constructors Are Constructors That Cannot Take Part in an Implicit Conversion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T01:35:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <em>explicit</em> keyword in C++ is used to declare explicit constructors. Explicit constructors are constructors that cannot take part in an implicit conversion</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/30/p-5965954476/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
     
     
@@ -190,116 +306,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5942654011/">_initialize_ Is a Class Method Which Will Be Called Before Any Other Method Is Called on a Class. Alternatively Use a Function With ___attribute__ ((Constructor))_</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T07:39:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>initialize</em> is a class method which will be called before any other method is called on a class. Alternatively use a function with <em><strong>attribute</strong> ((constructor))</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/29/p-5941073480/">To Find Out What iOS Device Is Attached to the System, We Can Try Monitor</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-29T06:44:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To find out what iOS device is attached to the system, we can try monitor</p>
-
-<p><a href="Monitoring%20Accessory-Related%20Events">http://developer.apple.com/library/ios/#featuredarticles/ExternalAccessoryPT/Articles/MonitoringEvents.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/141/">&larr; Older</a>
@@ -317,23 +323,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
       </li>
     
   </ul>

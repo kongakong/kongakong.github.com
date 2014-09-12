@@ -9,15 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is my first attempt at testing my JSON handling code: 1
+  <meta name="description" content="1
 2
 3
 4
 5
-6
-7
-- (void)testReadingJSON
-{ QueQuestionManager* qm = [[QueQuestionManager alloc &hellip;">
+$ ./mach build 0:00.10 /usr/bin/make -f client.mk -s 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -123,6 +120,173 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/mach-problem/">Mach Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T08:27:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
+</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2.13.  Stop.
+</span><span class='line'> 0:00.15 make: *** [build] Error 2
+</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it comes from this check of  mozilla-central/client.mk</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># try to find autoconf 2.13 - discard errors from 'which'
+</span><span class='line'># MacOS X 10.4 sends "no autoconf*" errors to stdout, discard those via grep
+</span><span class='line'>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v '^no autoconf' | head -1)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
+</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
+</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
+</span><span class='line'> 0:00.26 make[1]: *** [/home/antkong/wd/mozilla-central/configure] Error 1
+</span><span class='line'> 0:00.26 make: *** [build] Error 2
+</span><span class='line'> 0:00.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: install autoconf-2.13</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to Do a Multi-line String in Objective-c</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-19T07:33:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here is an example:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="s">@&quot;{&quot;</span> \
+</span><span class='line'>    <span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
+</span><span class='line'><span class="s">    &quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/19/ownership-rule-exception/">Ownership Rule Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-19T07:26:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
+
+<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -286,168 +450,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/16/cannot-init-a-class-object/">Cannot Init a Class Object</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-16T20:39:00+11:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this exception</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] *** Terminating app due to uncaught 
-</span><span class='line'>exception 'NSInvalidArgumentException', reason: '*** +[MyClass&lt;0x100084d80> init]: cannot init a class object.'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is because I have mistakenly written</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>instead of</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/16/uiscrollview-and-contnetsize/">UIScrollView and contentSize</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-16T10:42:00+11:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Common mistake in using <code>UIScrollView</code>: did not set the <code>contentSize</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/13/incorrect-way-to-use-jsonkit/">Incorrect Way to Use JSONKit?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-13T06:42:00+11:00" pubdate data-updated="true">Dec 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>At the beginning I use the following code to decode a JSON string:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectionDidFinishLoading:</span><span class="p">(</span><span class="n">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="nv">connection</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
-</span><span class='line'>                            <span class="nl">initWithParseOptions:</span><span class="n">JKParseOptionNone</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nl">objectWithData:</span><span class="n">receivedData</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and then I tried to convert the json data with this function:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="n">voide</span><span class="p">)</span> <span class="nf">convertJSONData:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">json</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">enumerator</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span> <span class="n">objectEnumerator</span><span class="p">];</span>
-</span><span class='line'>    <span class="kt">id</span> <span class="n">anObject</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">anObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">enumerator</span> <span class="n">nextObject</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>        <span class="c1">// test for anObject class and handle accordingly</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is probably not an efficient way to handle the incoming json data.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/17/">&larr; Older</a>
@@ -465,23 +467,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/ngtouch/">ngTouch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/04/semi-colon-in-swift/">semi-colon in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/01/what-is-tag-fieldset/">What is tag fieldset?</a>
       </li>
     
   </ul>

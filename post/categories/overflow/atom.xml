@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: overflow | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/overflow/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-09-12T15:13:44+10:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[css overflow]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/12/css-overflow/"/>
+    <updated>2014-09-12T12:54:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/12/css-overflow</id>
+    <content type="html"><![CDATA[<p>Valid values of attribute <code>overflow</code> are visible, hidden, scroll, auto, initial and inherit</p>
+
+<p>It controls browser behavior if content overflows an element&rsquo;s box.</p>
+]]></content>
+  </entry>
+  
+</feed>

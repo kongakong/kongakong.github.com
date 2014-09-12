@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bower | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/bower/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2014-09-12T15:13:44+10:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Starting an angularjs project with bower]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/12/angular-bower/"/>
+    <updated>2014-09-12T10:53:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/12/angular-bower</id>
+    <content type="html"><![CDATA[<p>First you need to install <code>npm</code> via <code>brew</code></p>
+
+<p>Then run <code>npm install -g bower</code> as documented in <a href="http://bower.io/">bower websiter</a></p>
+]]></content>
+  </entry>
+  
+</feed>
