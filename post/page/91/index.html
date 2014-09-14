@@ -9,8 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Just learn something new (to me) about bash: 1) Anonymous function 2) local (to subroutine) variable
-">
+  <meta name="description" content="I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn 1
+2
+3
+4
+5
+6 $ svn info dyld: Library not loaded &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +120,95 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/10/p-15568925380/">I Must Have Done Something Silly With the DYLD_LIBRARY_PATH. This Is an Error I Got When Running Svn</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-10T03:01:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ svn info 
+</span><span class='line'>dyld: Library not loaded: /usr/lib/libpq.5.dylib
+</span><span class='line'>  Referenced from: /usr/bin/svn
+</span><span class='line'>  Reason: image not found
+</span><span class='line'>Trace/BPT trap: 5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run it in a new shell and the problem goes away.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289689582/">Just Installed &#8216;Otx&#8217;, an OSS Implementation of &#8216;Otool&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T20:45:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just installed <code>otx</code>, an OSS implementation of <code>otool</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -263,78 +356,6 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/30/p-15022191238/">How to Retrieve Session Information of a @WebMethod Call in Spring Framework</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-30T22:03:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/29/p-14937137581/">Design Pattern in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-29T09:01:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://dpip.testingperspective.com">Design Pattern in Python</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/92/">&larr; Older</a>
@@ -352,6 +373,14 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
       </li>
     
@@ -361,14 +390,6 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
     
       <li class="post">
         <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="After used octopress for a couple of days seriously as a blogging platform, this is a list of good and bad I feel about the platform: First a list of &hellip;">
+  <meta name="description" content="vi is my editor of choice when I need to do some quick editing. When vi edits a file, it will usally create a swp file for recovery purpose. Usually &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,102 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/29/keep-vi-swp-file-in-tmp/">Keep Vi Swp File in Tmp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-29T21:02:00+10:00" pubdate data-updated="true">Jun 29<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>vi</code> is my editor of choice when I need to do some quick editing.</p>
+
+<p>When vi edits a file, it will usally create a <code>swp</code> file for recovery purpose. Usually it causes no problem.</p>
+
+<p>But apparently octopress does not work when there is temporry file in the <code>post</code> directory. Rake will emit</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake aborted!
+</span><span class='line'>No such file or directory - public/_posts/.2013-06-29-example.markdown.swp</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and then bailed.</p>
+
+<p>I added</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>set backupdir=~/tmp</span></code></pre></td></tr></table></div></figure>
+
+
+<p>to my .vimrc. Hopefully it will prevent this problem from happening again.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/28/problem-with-shifting-python-code-right-in-emacs/">Problem With Shifting Python Code Right in Emacs</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-28T00:27:00+10:00" pubdate data-updated="true">Jun 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am using Aquamacs Emacs which is built on emacs 23.3.50.1.</p>
+
+<p>When I tried to indent a block of python code using the menu item &lsquo;Python&rsquo; &ndash;> &lsquo;Shift Region Right&rsquo;, I got this error message <code>Symbol's function defintion is void: py-shit-right</code></p>
+
+<p>So instead of using the menu option, I just use <code>C-c &gt;</code> to take care of it.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -254,107 +350,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/20/beautifulsoup4/">How to Install Beautifulsoup in Python3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-20T08:14:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This will fail immediately</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>  /usr/local/bin/easy_install3 BeautifulSoup
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>with error message</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>  File <span class="s2">&quot;/usr/local/Cellar/python3/3.3.0/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages/distribute-0.6.28-py3.3.egg/setuptools/sandbox.py&quot;</span>, line 33, in &lt;lambda&gt;
-</span><span class='line'>    <span class="o">)</span>.read<span class="o">()</span>, <span class="s2">&quot;setup.py&quot;</span>, <span class="s1">&#39;exec&#39;</span><span class="o">)</span>,
-</span><span class='line'>  File <span class="s2">&quot;setup.py&quot;</span>, line 22
-</span><span class='line'>    print <span class="s2">&quot;Unit tests have failed!&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is the right way</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span> /usr/local/bin/pip3 install beautifulsoup4
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/19/using-octopress/">Using Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-19T06:09:00+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Octopress really makes blogging on github easy.</p>
-
-<p>I am happy with tumblr after these many years, but writing programming related topic is not really enjoyable due to lack of support of syntax highlight etc.</p>
-
-<p>The markdown support in Octopress is very good</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/27/">&larr; Older</a>
@@ -372,6 +367,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
       </li>
     
@@ -381,14 +384,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
       </li>
     
   </ul>

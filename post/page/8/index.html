@@ -9,16 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Work in python 3 1
-2
-3
-4
-5
-6
-7
-$ python3
-Python 3.3.4 (default, Feb 23 2014, 06:47:55)
-[GCC 4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)] on &hellip;">
+  <meta name="description" content="Get a USB flash drive that is at least 8 GBs. Use Disk Utility to prepare the flash drive: Click on the Erase tab in the DU main window.
+Set the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -124,6 +116,104 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a Maverick Usb</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T07:08:00+11:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Get a USB flash drive that is at least 8 GBs.</p>
+
+<p>Use Disk Utility to prepare the flash drive:</p>
+
+<ul>
+<li>Click on the Erase tab in the DU main window.</li>
+<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
+<li>Click on the Erase button.</li>
+</ul>
+
+
+<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
+
+<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
+--volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
+</code></pre>
+
+<p>No need of any third party software</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray From NSMutualArray</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-28T19:31:00+11:00" pubdate data-updated="true">Feb 28<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is so simple</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// m is a NSMutualArray </span>
+</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -323,104 +413,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and View Controller</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-19T02:02:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere. But I digress).</p>
-
-<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have ensured that there is no typo in the my notification name (The name is defined in a header file). I have also make sure the notification is fired on the main thread, like so:</p>
-
-<pre><code>dispatch_async(dispatch_get_main_queue(),^{
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
-});
-</code></pre>
-
-<p>However my UIViewControllers still do not receive any notification at all.</p>
-
-<p>It turns out it is because the controllers instances have gone out of scope. I found out by putting a <code>NSLog</code> in the <code>dealloc</code> method. It proves that the controllers have gone out of scope.</p>
-
-<p> In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers. Will test if it has any adverse effect or not.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">Capture Part of Ios Screen as Image</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-17T04:38:00+11:00" pubdate data-updated="true">Feb 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">theCell</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
-</span><span class='line'><span class="p">[</span><span class="n">theCell</span><span class="p">.</span><span class="n">layer</span> <span class="nl">renderInContext:</span><span class="n">UIGraphicsGetCurrentContext</span><span class="p">()];</span>
-</span><span class='line'><span class="n">UIImage</span> <span class="o">*</span><span class="n">renderedCellImage</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
-</span><span class='line'><span class="n">UIGraphicsEndImageContext</span><span class="p">();</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://stackoverflow.com/a/13656612/58129">source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -438,6 +430,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
       </li>
     
@@ -447,14 +447,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
       </li>
     
   </ul>

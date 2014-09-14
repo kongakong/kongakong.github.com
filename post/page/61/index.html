@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="http://stackoverflow.com/a/1210141/58129 The frame of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to &hellip;">
+  <meta name="description" content="http://stackoverflow.com/questions/7434326/need-help-with-the-tab-bar-and-tab-bar-controller)
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,96 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/29/p-23992201140/">Tab Bar Controller (Reading 1)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-29T21:30:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Tab%20bar%20controller%20(reading%201">http://stackoverflow.com/questions/7434326/need-help-with-the-tab-bar-and-tab-bar-controller</a>)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/28/p-23922752806/">Problem: Cannot Use &#8216;Push&#8217; Segue Between a UITableview Cell and Another Controller</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T20:19:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Cause</em></p>
+
+<p>The UITableViewController does not ‘live’ in a UINavigationController</p>
+
+<p><em>Solution</em></p>
+
+<p>Because I am using storyboard, the solution is slightly different from non-storyboard project.</p>
+
+<p>Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.</p>
+
+<p>To fix the problem, I have to</p>
+
+<p>1) drag a UINavigationController in between the TabBarController and the First Custom Controller.</p>
+
+<p>2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller</p>
+
+<p>3) Add a relationship between the TabBarController and the new UINavigationController</p>
+
+<p>4) Add a relationship between the new UINavigationController and the new First Custom Controller</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -228,103 +319,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/27/p-23836233379/">Interface Type Cannot Be Statically Allocated</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-27T12:26:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This code fragment</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>// item is a MPMediaItem
-</span><span class='line'>NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>causes <code>Interface type cannot be statically allocated</code></p>
-
-<p>But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
-
-<p>It totally throws me off because nothing is wrong on that line.</p>
-
-<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
-
-<p>But it did not fix the problem.</p>
-
-<p>Eventually I undo the last change I made, which is</p>
-
-<p>and it works again.</p>
-
-<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/62/">&larr; Older</a>
@@ -342,6 +336,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
       </li>
     
@@ -351,14 +353,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
       </li>
     
   </ul>

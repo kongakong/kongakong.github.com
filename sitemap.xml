@@ -4131,12 +4131,24 @@
         <lastmod>2014-09-12T15:13:29+10:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://www.ahwkong.com/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/
+        </loc>
+        <lastmod>2014-09-12T22:36:35+10:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.ahwkong.com/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/
+        </loc>
+        <lastmod>2014-09-14T18:54:08+10:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
+        <lastmod>2014-09-14T18:54:08+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
+        <lastmod>2014-09-14T18:54:08+10:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4144,6 +4156,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2014-09-12T15:13:29+10:00</lastmod>
+        <lastmod>2014-09-14T18:54:08+10:00</lastmod>
     </url>
 </urlset>

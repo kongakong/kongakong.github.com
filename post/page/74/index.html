@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I think I finally understand what the problem is. In previous version of Xcode (prior to 4.3), it will install the llvm-gcc and the ‘original’ gcc. &hellip;">
+  <meta name="description" content="Followup piece of GNU gcc-4.2 issue on OSX 10.7. So I downloaded a gcc package from this location. Then run this command 1
+installer -pkg GCC-10.7. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,94 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/04/28/p-21914025778/">Followup Piece of My Last Gcc 4.2 Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-28T01:08:00+10:00" pubdate data-updated="true">Apr 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Followup piece of <a href="/blog/2012/04/26/p-21844435707/">GNU gcc-4.2 issue on OSX 10.7</a>. So I downloaded a gcc package from <a href="https://github.com/kennethreitz/osx-gcc-installer"> this location</a>. Then run this command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>installer -pkg GCC-10.7.pkg -target /</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Problem solved. Now I can compile python3. For example,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>CC=gcc-4.2 ./configure
+</span><span class='line'>make && make install</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/04/27/p-21908450030/">To Free Up Harddisk Space on Mac&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-27T22:02:00+10:00" pubdate data-updated="true">Apr 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Go into <code>
+iTunes -&gt; preferences -&gt; devices
+</code> to remove multiple backups of your iOS devices</p>
+
+<p>I recovered about 5Gb space.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -344,113 +433,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/04/24/p-21710844399/">After Reinstalling Xcode 4.3, I Lost the gcc-4.2.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-24T22:02:00+10:00" pubdate data-updated="true">Apr 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After reinstalling Xcode 4.3, I lost the gcc-4.2.</p>
-
-<p>Installing the command line tools component did not fix it.</p>
-
-<p>May need to run “brew install</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/04/23/p-21642771050/">If I Have Removed a File by Accident, and Want to Reinstate the File Form a Source Code Repository, Then&#8230;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-23T22:01:00+10:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If I have removed a file by accident, and want to reinstate the file form a source code repository, then,</p>
-
-<p>in subversion I will do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>svn update file
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in mercurial I will do</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>hg revert file
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In git,</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>git checkout file
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Reference:</p>
-
-<p><a href="mercurial">http://hgbook.red-bean.com/read/mercurial-in-daily-use.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/75/">&larr; Older</a>
@@ -468,6 +450,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
       </li>
     
@@ -477,14 +467,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/angular-bower/">Starting an angularjs project with bower</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/make-iphone-vibrate/">make iphone vibrate</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference between handling &#8216;self&#8217; in Python and Swift</a>
       </li>
     
   </ul>

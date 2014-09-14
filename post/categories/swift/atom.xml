@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swift | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/swift/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-12T15:13:44+10:00</updated>
+  <updated>2014-09-14T18:54:14+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Unrecognized selector -replacementObjectForKeyedArchiver: ]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/"/>
+    <updated>2014-09-12T22:31:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver</id>
+    <content type="html"><![CDATA[<p>Here is the code in question:</p>
+
+<pre><code>class Something: NSCoding {
+    ...
+
+let smth = Something() 
+let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
+</code></pre>
+
+<p>It throws this exception:</p>
+
+<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
+Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
+</code></pre>
+
+<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[make iphone vibrate]]></title>
