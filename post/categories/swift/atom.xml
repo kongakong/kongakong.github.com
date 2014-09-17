@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swift | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/swift/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-17T11:49:09+10:00</updated>
+  <updated>2014-09-17T13:58:49+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -43,7 +43,8 @@
 
 <p>throws exception:</p>
 
-<p>   Cannot convert the expression&rsquo;s type &lsquo;Boolean&rsquo; to type &lsquo;Void&rsquo;</p>
+<pre><code>Cannot convert the expression's type 'Boolean' to type 'Void'
+</code></pre>
 
 <p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
 

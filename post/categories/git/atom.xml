@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/git/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-17T11:49:09+10:00</updated>
+  <updated>2014-09-17T14:00:23+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,42 +20,24 @@
     <id>http://www.ahwkong.com/post/2014/03/22/octopress-deploy-rejected</id>
     <content type="html"><![CDATA[<p>Got this error when running &lsquo;rake deploy&rsquo;</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h2>Pushing generated _deploy website&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Counting objects: 9767, done.
-</span><span class='line'>Delta compression using up to 4 threads.
-</span><span class='line'>Compressing objects: 100% (5297/5297), done.
-</span><span class='line'>Writing objects: 100% (7245/7245), 3.98 MiB | 121.00 KiB/s, done.
-</span><span class='line'>Total 7245 (delta 3406), reused 2619 (delta 423)
-</span><span class='line'>remote: error: GH001: Large files detected.
-</span><span class='line'>remote: error: Trace: 2cb44393c3f81f907b200d71379dc45c
-</span><span class='line'>remote: error: See &lt;a href="http://git.io/iEPt8g">http://git.io/iEPt8g&lt;/a> for more information.
-</span><span class='line'>remote: error: File downloads/code/erlang/out3.log is 122.48 MB; this exceeds GitHub&rsquo;s file size limit of 100 MB
-</span><span class='line'>To git@github.com:kongakong/kongakong.github.com
-</span><span class='line'> ! [remote rejected] master &ndash;> master (pre-receive hook declined)
-</span><span class='line'>error: failed to push some refs to &lsquo;git@github.com:kongakong/kongakong.github.com&rsquo;&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}</p>
+
+<h2>Pushing generated _deploy website</h2>
+
+<p>Counting objects: 9767, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5297/5297), done.
+Writing objects: 100% (7245/7245), 3.98 MiB | 121.00 KiB/s, done.
+Total 7245 (delta 3406), reused 2619 (delta 423)
+remote: error: GH001: Large files detected.
+remote: error: Trace: 2cb44393c3f81f907b200d71379dc45c
+remote: error: See <a href="http://git.io/iEPt8g">http://git.io/iEPt8g</a> for more information.
+remote: error: File downloads/code/erlang/out3.log is 122.48 MB; this exceeds GitHub&rsquo;s file size limit of 100 MB
+To git@github.com:kongakong/kongakong.github.com
+ ! [remote rejected] master &ndash;> master (pre-receive hook declined)
+error: failed to push some refs to &lsquo;git@github.com:kongakong/kongakong.github.com&rsquo;</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>It is because I have left a log file in the downloads/code folder. Although I did not check in the file, it is copied into the _deploy folder and get committed for deployment.</p>
 
@@ -69,104 +51,55 @@
 
 <p>Here is the partial output from <code>bfg</code></p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>These are your protected commits, and so their contents will NOT be altered:&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;ul>
-</span><span class='line'>&lt;li>commit d8b90a41 (protected by &lsquo;HEAD&rsquo;)&lt;/li>
-</span><span class='line'>&lt;/ul>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>&lt;h2>Cleaning&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Found 910 commits
-</span><span class='line'>Cleaning commits:       100% (910/910)
-</span><span class='line'>Cleaning commits completed in 3,051 ms.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h2>Updating 1 Ref&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>Ref                 Before     After   
-</span><span class='line'>---------------------------------------
-</span><span class='line'>refs/heads/master | d8b90a41 | 1c0ad187
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Updating references:    100% (1/1)
-</span><span class='line'>&hellip;Ref update completed in 16 ms.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h2>Commit Tree-Dirt History&lt;/h2>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>Earliest                                              Latest
-</span><span class='line'>|                                                          |
-</span><span class='line'>...........................................................D
-</span><span class='line'>
-</span><span class='line'>D = dirty commits (file tree fixed)
-</span><span class='line'>m = modified commits (commit message or parents changed)
-</span><span class='line'>. = clean commits (no changes to file tree)
-</span><span class='line'>
-</span><span class='line'>                        Before     After   
-</span><span class='line'>-------------------------------------------
-</span><span class='line'>First modified commit | 6725709a | f2971f05
-</span><span class='line'>Last dirty commit     | cbc09c38 | 774bb768
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>In total, 14 object ids were changed &ndash; a record of these will be written to:&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>/Users/antkong/octopress/_deploy.bfg-report/2014-03-22T21-03/object-id-map.old-new.txt
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>BFG run is complete!&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}</p>
+
+<p>These are your protected commits, and so their contents will NOT be altered:</p>
+
+<ul>
+<li>commit d8b90a41 (protected by &lsquo;HEAD&rsquo;)</li>
+</ul>
+
+
+<h2>Cleaning</h2>
+
+<p>Found 910 commits
+Cleaning commits:       100% (910/910)
+Cleaning commits completed in 3,051 ms.</p>
+
+<h2>Updating 1 Ref</h2>
+
+<pre><code>Ref                 Before     After   
+---------------------------------------
+refs/heads/master | d8b90a41 | 1c0ad187
+</code></pre>
+
+<p>Updating references:    100% (1/1)
+&hellip;Ref update completed in 16 ms.</p>
+
+<h2>Commit Tree-Dirt History</h2>
+
+<pre><code>Earliest                                              Latest
+|                                                          |
+...........................................................D
+
+D = dirty commits (file tree fixed)
+m = modified commits (commit message or parents changed)
+. = clean commits (no changes to file tree)
+
+                        Before     After   
+-------------------------------------------
+First modified commit | 6725709a | f2971f05
+Last dirty commit     | cbc09c38 | 774bb768
+</code></pre>
+
+<p>In total, 14 object ids were changed &ndash; a record of these will be written to:</p>
+
+<pre><code>/Users/antkong/octopress/_deploy.bfg-report/2014-03-22T21-03/object-id-map.old-new.txt
+</code></pre>
+
+<p>BFG run is complete!</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>4) Now you can run the <code>rake deploy</code> again</p>
 ]]></content>
@@ -179,12 +112,10 @@
     <id>http://www.ahwkong.com/post/2013/08/03/git-tip-1</id>
     <content type="html"><![CDATA[<p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git &mdash;no-pager diff&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+git &mdash;no-pager diff</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   
