@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Finally downloaded the installer for swi-prolog. To load up the dataset, we need to use the &#8220;consult(
-">
+  <meta name="description" content="The solaris installation issue I had is related to the kind of VM I have chosen in VBox. I have used normal Solaris instead of Solaris 64bit After &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,108 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/11/03/p-1462275298/">Solaris Installation Issue in VirtualBox</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-03T02:34:00+11:00" pubdate data-updated="true">Nov 3<span>rd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The solaris installation issue I had is related to the kind of VM I have chosen in VBox. I have used normal Solaris instead of <em>Solaris 64bit</em></p>
+
+<p>After changing the VM type, the installation is done reasonably fast.</p>
+
+<p>To install the guest addition, run</p>
+
+<p><code>pkgadd -d pkgadd -d &lt;path/to/the/pkg file&gt;</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/10/29/p-1424460143/">Nltk (2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-10-29T03:48:00+11:00" pubdate data-updated="true">Oct 29<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From</p>
+
+<p><a href="http://nltk.googlecode.com/svn/trunk/doc/book/ch02.html">Chapter 2</a></p>
+
+<ul>
+<li>Accessing Text Corpora: such as Brown and Reuter</li>
+<li>Conditional Frequency Distributions (nltk.ConditionalFreqDist)</li>
+<li>Generating Random Text with Bigrams</li>
+<li>Lexical Resources</li>
+</ul>
+
+
+<p><em>Summary</em></p>
+
+<ul>
+<li>A text corpus is a large, structured collection of texts. NLTK comes with many corpora, e.g., the Brown Corpus, nltk.corpus.brown.</li>
+<li>Some text corpora are categorized, e.g., by genre or topic; sometimes the categories of a corpus overlap each other.</li>
+<li>A conditional frequency distribution is a collection of frequency distributions, each one for a different condition. They can be used for counting word frequencies, given a context or a genre.</li>
+<li>Python programs more than a few lines long should be entered using a text editor, saved to a file with a .py extension, and accessed using an import statement.</li>
+<li>Python functions permit you to associate a name with a particular block of code, and re-use that code as often as necessary.</li>
+<li>Some functions, known as “methods”, are associated with an object and we give the object name followed by a period followed by the function, like this: x.funct(y), e.g., word.isalpha().</li>
+<li>WordNet is a semantically-oriented dictionary of English, consisting of synonym sets — or synsets — and organized into a network.</li>
+<li>Some functions are not available by default, but must be accessed using Python’s import statement.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -231,80 +332,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/28/p-1423078216/">Sun Installation: At 64%. SUNWftpr</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-28T23:07:00+11:00" pubdate data-updated="true">Oct 28<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sun Installation: at 64%. SUNWftpr</p>
-
-<p>(Why it is taking so long? I must be doing something wrong)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/10/27/p-1412158339/">SUNWrsgk</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-10-27T14:31:00+11:00" pubdate data-updated="true">Oct 27<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sun Installation: at 47%. SUNWrsgk</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/181/">&larr; Older</a>
@@ -322,6 +349,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
@@ -331,14 +366,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
       </li>
     
   </ul>

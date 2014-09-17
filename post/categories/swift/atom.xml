@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swift | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/swift/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-17T23:54:24+10:00</updated>
+  <updated>2014-09-18T01:31:38+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Swift ternanry operator ?]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/18/swift-ternanry-operators/"/>
+    <updated>2014-09-18T01:25:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/18/swift-ternanry-operators</id>
+    <content type="html"><![CDATA[<p>This will cause a compiler error:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
+</span><span class='line'>let b=4&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by &lsquo;;&rsquo;&ldquo;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Putting spaces around operators will resolve the compiler error i.e.</p>
+
+<pre><code>let max = a &gt; b ? a : b
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[autorelease in swift]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/18/autorelease-in-swift/"/>
+    <updated>2014-09-18T01:01:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/18/autorelease-in-swift</id>
+    <content type="html"><![CDATA[<p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>    // do something expensive without using Obj-C code
+</span><span class='line'>
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Swift closure error: Boolean is not Convertible to Void]]></title>
@@ -92,89 +143,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 <p>if <code>AVRecorder</code> is running, iphone will not vibrate too.</p>
 
 <p>Source: <a href="http://stackoverflow.com/questions/4724980/making-the-iphone-vibrate">Stackoverflow</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Difference between handling 'self' in Python and Swift]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/10/swift-can-be-very-pythonic/"/>
-    <updated>2014-09-10T12:35:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/10/swift-can-be-very-pythonic</id>
-    <content type="html"><![CDATA[<p>Take a look at this <code>swift</code> code (XCode6 Beta7)</p>
-
-<pre><code>    class C {
-            func name () -&gt; String {
-                return "C"
-            }
-    }
-
-    class D:C {
-            override func name () -&gt; String {
-                return "D"
-            }
-    }
-
-    let c = C()
-    println(c.name()) // print 'C'
-
-    let d = D()
-    println(d.name()) // print 'D' as expected
-
-    println(C.name(d)()) // print 'D'! 
-</code></pre>
-
-<p>In python, the last case is different:</p>
-
-<pre><code>    class C:
-        def name(self):
-            return 'C' 
-
-    class D(C):
-        def name(self):
-            return 'D' 
-
-    c = C() 
-    print(c.name())  // print 'C' 
-
-    d = D() 
-    print(d.name())  // print 'D' 
-
-    print(C.name(d)) // print 'C' 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[semi-colon in swift]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/04/semi-colon-in-swift/"/>
-    <updated>2014-09-04T14:52:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/04/semi-colon-in-swift</id>
-    <content type="html"><![CDATA[<p>The perfered style of semi-colon placement in swift is:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>struct Foo: SomeProtocol {}
-</span><span class='line'>class Foo: SomeProtocol {}&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>var x: Int
-</span><span class='line'>func foo(x: Int) {}
-</span><span class='line'>func bar(x: (y: Int) &ndash;> Int) &ndash;> Double {}
-</span><span class='line'>let dict = [&ldquo;key&rdquo;: value]&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>i.e. No space before the semi-colon. One space after the semi-colon</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Some useful links: http://css-tricks.com/which-responsive-images-solution-should-you-use/ https://github.com/scottjehl/picturefill http://www. &hellip;">
+  <meta name="description" content="To avoid cyclic reference when referring to an object outside a block, we can do the following: 1
+2
+3 __weak typeof(self) weakSelf = self; gravity. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +117,89 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/23/weak-reference/">Weak Reference in Block</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-23T21:55:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>        <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -269,115 +354,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/11/using-automator-in-osx/">Using Automator in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-11T15:29:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I want to implement a service in OSX such that I can easily shrink the size of image files in a folder to half of their original size.</p>
-
-<p>This is what I have come up with at the end.</p>
-
-<p><img src="images/automator.png" width="860" height="617"></p>
-
-<p>Lessons/Observations:</p>
-
-<ul>
-<li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
-<li><p>A lot of useful actions are already built in e.g. Scale image</p></li>
-<li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/10/resize-images-in-a-so-post/">Resize Images in a Stackoverflow Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-10T14:18:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Markdown does not allow us to specify the size of an link image.</p>
-
-<p>To get around this restriction it is what I did:</p>
-
-<h1>1. Upload an image as usual</h1>
-
-<p>Stackoverflow will add these lines to your post:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>2. Change the above to an image tag</h1>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
-
-
-<p>Done</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/13/">&larr; Older</a>
@@ -395,6 +371,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
@@ -404,14 +388,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
       </li>
     
   </ul>

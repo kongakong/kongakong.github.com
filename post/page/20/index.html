@@ -172,6 +172,580 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/12/04/pip-install-pygame-warning-slash-error-messages/">Pip Install Pygame Warning/error Messages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-04T22:46:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+<span class='line-number'>161</span>
+<span class='line-number'>162</span>
+<span class='line-number'>163</span>
+<span class='line-number'>164</span>
+<span class='line-number'>165</span>
+<span class='line-number'>166</span>
+<span class='line-number'>167</span>
+<span class='line-number'>168</span>
+<span class='line-number'>169</span>
+<span class='line-number'>170</span>
+<span class='line-number'>171</span>
+<span class='line-number'>172</span>
+<span class='line-number'>173</span>
+<span class='line-number'>174</span>
+<span class='line-number'>175</span>
+<span class='line-number'>176</span>
+<span class='line-number'>177</span>
+<span class='line-number'>178</span>
+<span class='line-number'>179</span>
+<span class='line-number'>180</span>
+<span class='line-number'>181</span>
+<span class='line-number'>182</span>
+<span class='line-number'>183</span>
+<span class='line-number'>184</span>
+<span class='line-number'>185</span>
+<span class='line-number'>186</span>
+<span class='line-number'>187</span>
+<span class='line-number'>188</span>
+<span class='line-number'>189</span>
+<span class='line-number'>190</span>
+<span class='line-number'>191</span>
+<span class='line-number'>192</span>
+<span class='line-number'>193</span>
+<span class='line-number'>194</span>
+<span class='line-number'>195</span>
+<span class='line-number'>196</span>
+<span class='line-number'>197</span>
+<span class='line-number'>198</span>
+<span class='line-number'>199</span>
+<span class='line-number'>200</span>
+<span class='line-number'>201</span>
+<span class='line-number'>202</span>
+<span class='line-number'>203</span>
+<span class='line-number'>204</span>
+<span class='line-number'>205</span>
+<span class='line-number'>206</span>
+<span class='line-number'>207</span>
+<span class='line-number'>208</span>
+<span class='line-number'>209</span>
+<span class='line-number'>210</span>
+<span class='line-number'>211</span>
+<span class='line-number'>212</span>
+<span class='line-number'>213</span>
+<span class='line-number'>214</span>
+<span class='line-number'>215</span>
+<span class='line-number'>216</span>
+<span class='line-number'>217</span>
+<span class='line-number'>218</span>
+<span class='line-number'>219</span>
+<span class='line-number'>220</span>
+<span class='line-number'>221</span>
+<span class='line-number'>222</span>
+<span class='line-number'>223</span>
+<span class='line-number'>224</span>
+<span class='line-number'>225</span>
+<span class='line-number'>226</span>
+<span class='line-number'>227</span>
+<span class='line-number'>228</span>
+<span class='line-number'>229</span>
+<span class='line-number'>230</span>
+<span class='line-number'>231</span>
+<span class='line-number'>232</span>
+<span class='line-number'>233</span>
+<span class='line-number'>234</span>
+<span class='line-number'>235</span>
+<span class='line-number'>236</span>
+<span class='line-number'>237</span>
+<span class='line-number'>238</span>
+<span class='line-number'>239</span>
+<span class='line-number'>240</span>
+<span class='line-number'>241</span>
+<span class='line-number'>242</span>
+<span class='line-number'>243</span>
+<span class='line-number'>244</span>
+<span class='line-number'>245</span>
+<span class='line-number'>246</span>
+<span class='line-number'>247</span>
+<span class='line-number'>248</span>
+<span class='line-number'>249</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pip install hg+http://bitbucket.org/pygame/pygame
+</span><span class='line'>Downloading/unpacking hg+http://bitbucket.org/pygame/pygame
+</span><span class='line'>  Cloning hg http://bitbucket.org/pygame/pygame to /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/pip-K_KWAI-build
+</span><span class='line'>warning: bitbucket.org certificate with fingerprint 24:9c:45:8b:9c:aa:ba:55:4e:01:6d:58:ff:e4:28:7d:2a:14:ae:3b not verified (check hostfingerprints or web.cacerts config setting)
+</span><span class='line'>  Running setup.py egg_info for package from hg+http://bitbucket.org/pygame/pygame
+</span><span class='line'>    
+</span><span class='line'>    
+</span><span class='line'>    WARNING, No "Setup" File Exists, Running "config.py"
+</span><span class='line'>    Using Darwin configuration...
+</span><span class='line'>    
+</span><span class='line'>    Hunting dependencies...
+</span><span class='line'>    SDL     : found 1.2.15
+</span><span class='line'>    Framework SDL not found
+</span><span class='line'>    FONT    : found
+</span><span class='line'>    Framework SDL_ttf not found
+</span><span class='line'>    IMAGE   : found
+</span><span class='line'>    Framework SDL_image not found
+</span><span class='line'>    MIXER   : found
+</span><span class='line'>    Framework SDL_mixer not found
+</span><span class='line'>    SMPEG   : found 0.4.5
+</span><span class='line'>    Framework smpeg not found
+</span><span class='line'>    Framework CoreMIDI found
+</span><span class='line'>    Framework QuickTime found
+</span><span class='line'>    PNG     : found
+</span><span class='line'>    JPEG    : found
+</span><span class='line'>    SCRAP   : not found
+</span><span class='line'>    PORTMIDI: found
+</span><span class='line'>    FREETYPE: found 2.5.0
+</span><span class='line'>    AVFORMAT: not found
+</span><span class='line'>    SWSCALE : not found
+</span><span class='line'>    
+</span><span class='line'>    If you get compiler errors during install, doublecheck
+</span><span class='line'>    the compiler flags in the "Setup" file.
+</span><span class='line'>    
+</span><span class='line'>    
+</span><span class='line'>    Continuing With "setup.py"
+</span><span class='line'>    
+</span><span class='line'>    no previously-included directories found matching '*/CVS'
+</span><span class='line'>    no previously-included directories found matching '*/*/CVS'
+</span><span class='line'>Installing collected packages: pygame
+</span><span class='line'>  Running setup.py install for pygame
+</span><span class='line'>    building 'pygame.imageext' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/include/SDL -I/usr/X11/include -I/usr/local/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/imageext.c -o build/temp.macosx-10.9-x86_64-2.7/src/imageext.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/imageext.o -L/usr/local/lib -L/usr/local/lib -L/usr/X11/lib -L/usr/local/lib -lSDLmain -lSDL -lSDL_image -lpng -ljpeg -o build/lib.macosx-10.9-x86_64-2.7/pygame/imageext.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.font' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/font.c -o build/temp.macosx-10.9-x86_64-2.7/src/font.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/font.o -L/usr/local/lib -L/usr/local/lib -lSDLmain -lSDL -lSDL_ttf -o build/lib.macosx-10.9-x86_64-2.7/pygame/font.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.mixer' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/mixer.c -o build/temp.macosx-10.9-x86_64-2.7/src/mixer.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/mixer.o -L/usr/local/lib -L/usr/local/lib -lSDLmain -lSDL -lSDL_mixer -o build/lib.macosx-10.9-x86_64-2.7/pygame/mixer.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.mixer_music' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/music.c -o build/temp.macosx-10.9-x86_64-2.7/src/music.o
+</span><span class='line'>    src/music.c:406:17: warning: explicitly assigning a variable of type 'Mix_Music *' (aka 'struct _Mix_Music *') to itself [-Wself-assign]
+</span><span class='line'>        queue_music = queue_music;
+</span><span class='line'>        ~~~~~~~~~~~ ^ ~~~~~~~~~~~
+</span><span class='line'>    1 warning generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/music.o -L/usr/local/lib -L/usr/local/lib -lSDLmain -lSDL -lSDL_mixer -o build/lib.macosx-10.9-x86_64-2.7/pygame/mixer_music.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame._numericsurfarray' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/_numericsurfarray.c -o build/temp.macosx-10.9-x86_64-2.7/src/_numericsurfarray.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/_numericsurfarray.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/_numericsurfarray.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame._numericsndarray' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/_numericsndarray.c -o build/temp.macosx-10.9-x86_64-2.7/src/_numericsndarray.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/_numericsndarray.o -L/usr/local/lib -L/usr/local/lib -lSDLmain -lSDL -lSDL_mixer -o build/lib.macosx-10.9-x86_64-2.7/pygame/_numericsndarray.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.pypm' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/include -I/System/Library/Frameworks/CoreMIDI.framework/Versions/Current/Headers -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/pypm.c -o build/temp.macosx-10.9-x86_64-2.7/src/pypm.o
+</span><span class='line'>    src/pypm.c:664:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:703:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:734:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:776:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:818:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:868:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:963:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:1006:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:1050:14: warning: explicitly assigning a variable of type 'PyObject *' (aka 'struct _object *') to itself [-Wself-assign]
+</span><span class='line'>      __pyx_self = __pyx_self;
+</span><span class='line'>      ~~~~~~~~~~ ^ ~~~~~~~~~~
+</span><span class='line'>    src/pypm.c:1091:13: warning: unused variable '__pyx_doc_4pypm_6Output___init__' [-Wunused-variable]
+</span><span class='line'>    static char __pyx_doc_4pypm_6Output___init__[] = "Instantiate MIDI output stream object.";
+</span><span class='line'>                ^
+</span><span class='line'>    src/pypm.c:1359:13: warning: unused variable '__pyx_doc_4pypm_6Output___dealloc__' [-Wunused-variable]
+</span><span class='line'>    static char __pyx_doc_4pypm_6Output___dealloc__[] = "Close midi device if still open when the instance is destroyed.";
+</span><span class='line'>                ^
+</span><span class='line'>    src/pypm.c:2673:13: warning: unused variable '__pyx_doc_4pypm_5Input___init__' [-Wunused-variable]
+</span><span class='line'>    static char __pyx_doc_4pypm_5Input___init__[] = "Instantiate MIDI input stream object.";
+</span><span class='line'>                ^
+</span><span class='line'>    src/pypm.c:2845:13: warning: unused variable '__pyx_doc_4pypm_5Input___dealloc__' [-Wunused-variable]
+</span><span class='line'>    static char __pyx_doc_4pypm_5Input___dealloc__[] = "Close midi device if still open when the instance is destroyed.";
+</span><span class='line'>                ^
+</span><span class='line'>    13 warnings generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/pypm.o -L/usr/local/lib -L/usr/local/lib -lSDLmain -lSDL -lportmidi -o build/lib.macosx-10.9-x86_64-2.7/pygame/pypm.so -Wl,-framework,Cocoa -framework CoreMIDI -F/System/Library/Frameworks/
+</span><span class='line'>    building 'pygame.gfxdraw' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/gfxdraw.c -o build/temp.macosx-10.9-x86_64-2.7/src/gfxdraw.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/SDL_gfx/SDL_gfxPrimitives.c -o build/temp.macosx-10.9-x86_64-2.7/src/SDL_gfx/SDL_gfxPrimitives.o
+</span><span class='line'>    src/SDL_gfx/SDL_gfxPrimitives.c:5851:15: warning: unused variable 'rotatedCharacter' [-Wunused-variable]
+</span><span class='line'>            SDL_Surface *rotatedCharacter;
+</span><span class='line'>                         ^
+</span><span class='line'>    src/SDL_gfx/SDL_gfxPrimitives.c:6521:25: warning: passing 'Uint16 [4]' to parameter of type 'const Sint16 *' (aka 'const short *') converts between pointers to integer types with different sign [-Wpointer-sign]
+</span><span class='line'>                            polygonColor(m->dst, px, py, 4, m->color);
+</span><span class='line'>                                                 ^~
+</span><span class='line'>    src/SDL_gfx/SDL_gfxPrimitives.c:4917:52: note: passing argument to parameter 'vx' here
+</span><span class='line'>    int polygonColor(SDL_Surface * dst, const Sint16 * vx, const Sint16 * vy, int n, Uint32 color)
+</span><span class='line'>                                                       ^
+</span><span class='line'>    src/SDL_gfx/SDL_gfxPrimitives.c:6521:29: warning: passing 'Uint16 [4]' to parameter of type 'const Sint16 *' (aka 'const short *') converts between pointers to integer types with different sign [-Wpointer-sign]
+</span><span class='line'>                            polygonColor(m->dst, px, py, 4, m->color);
+</span><span class='line'>                                                     ^~
+</span><span class='line'>    src/SDL_gfx/SDL_gfxPrimitives.c:4917:71: note: passing argument to parameter 'vy' here
+</span><span class='line'>    int polygonColor(SDL_Surface * dst, const Sint16 * vx, const Sint16 * vy, int n, Uint32 color)
+</span><span class='line'>                                                                          ^
+</span><span class='line'>    3 warnings generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/gfxdraw.o build/temp.macosx-10.9-x86_64-2.7/src/SDL_gfx/SDL_gfxPrimitives.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/gfxdraw.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame._freetype' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/freetype/ft_cache.c -o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_cache.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/freetype/ft_wrap.c -o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_wrap.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/freetype/ft_render.c -o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_render.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/freetype/ft_render_cb.c -o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_render_cb.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/freetype/ft_layout.c -o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_layout.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/freetype/ft_unicode.c -o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_unicode.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/opt/X11/include/freetype2 -I/opt/X11/include -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/_freetype.c -o build/temp.macosx-10.9-x86_64-2.7/src/_freetype.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_cache.o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_wrap.o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_render.o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_render_cb.o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_layout.o build/temp.macosx-10.9-x86_64-2.7/src/freetype/ft_unicode.o build/temp.macosx-10.9-x86_64-2.7/src/_freetype.o -L/usr/local/lib -L/opt/X11/lib -lSDLmain -lSDL -lfreetype -lz -lbz2 -o build/lib.macosx-10.9-x86_64-2.7/pygame/_freetype.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.base' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/base.c -o build/temp.macosx-10.9-x86_64-2.7/src/base.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/base.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/base.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.cdrom' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/cdrom.c -o build/temp.macosx-10.9-x86_64-2.7/src/cdrom.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/cdrom.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/cdrom.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.color' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/color.c -o build/temp.macosx-10.9-x86_64-2.7/src/color.o
+</span><span class='line'>    src/color.c:1504:13: warning: comparison of constant 9223372036854775807 with expression of type 'Uint32' (aka 'unsigned int') is always true [-Wtautological-constant-out-of-range-compare]
+</span><span class='line'>        if (tmp &lt; LONG_MAX)
+</span><span class='line'>            ~~~ ^ ~~~~~~~~
+</span><span class='line'>    src/color.c:1549:13: warning: comparison of constant 9223372036854775807 with expression of type 'Uint32' (aka 'unsigned int') is always true [-Wtautological-constant-out-of-range-compare]
+</span><span class='line'>        if (tmp &lt; LONG_MAX)
+</span><span class='line'>            ~~~ ^ ~~~~~~~~
+</span><span class='line'>    src/color.c:1567:13: warning: comparison of constant 9223372036854775807 with expression of type 'Uint32' (aka 'unsigned int') is always true [-Wtautological-constant-out-of-range-compare]
+</span><span class='line'>        if (tmp &lt; LONG_MAX)
+</span><span class='line'>            ~~~ ^ ~~~~~~~~
+</span><span class='line'>    3 warnings generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/color.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/color.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.constants' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/constants.c -o build/temp.macosx-10.9-x86_64-2.7/src/constants.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/constants.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/constants.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.display' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/display.c -o build/temp.macosx-10.9-x86_64-2.7/src/display.o
+</span><span class='line'>    src/display.c:328:15: warning: unused variable 'tmp' [-Wunused-variable]
+</span><span class='line'>        PyObject *tmp;
+</span><span class='line'>                  ^
+</span><span class='line'>    1 warning generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/display.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/display.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.event' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/event.c -o build/temp.macosx-10.9-x86_64-2.7/src/event.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/event.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/event.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.fastevent' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/fastevent.c -o build/temp.macosx-10.9-x86_64-2.7/src/fastevent.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/fastevents.c -o build/temp.macosx-10.9-x86_64-2.7/src/fastevents.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/fastevent.o build/temp.macosx-10.9-x86_64-2.7/src/fastevents.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/fastevent.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.key' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/key.c -o build/temp.macosx-10.9-x86_64-2.7/src/key.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/key.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/key.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.mouse' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/mouse.c -o build/temp.macosx-10.9-x86_64-2.7/src/mouse.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/mouse.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/mouse.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.rect' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/rect.c -o build/temp.macosx-10.9-x86_64-2.7/src/rect.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/rect.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/rect.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.rwobject' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/rwobject.c -o build/temp.macosx-10.9-x86_64-2.7/src/rwobject.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/rwobject.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/rwobject.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.surface' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/surface.c -o build/temp.macosx-10.9-x86_64-2.7/src/surface.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/alphablit.c -o build/temp.macosx-10.9-x86_64-2.7/src/alphablit.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/surface_fill.c -o build/temp.macosx-10.9-x86_64-2.7/src/surface_fill.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/surface.o build/temp.macosx-10.9-x86_64-2.7/src/alphablit.o build/temp.macosx-10.9-x86_64-2.7/src/surface_fill.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/surface.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.surflock' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/surflock.c -o build/temp.macosx-10.9-x86_64-2.7/src/surflock.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/surflock.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/surflock.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.time' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/time.c -o build/temp.macosx-10.9-x86_64-2.7/src/time.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/time.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/time.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.joystick' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/joystick.c -o build/temp.macosx-10.9-x86_64-2.7/src/joystick.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/joystick.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/joystick.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.draw' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/draw.c -o build/temp.macosx-10.9-x86_64-2.7/src/draw.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/draw.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/draw.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.image' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/image.c -o build/temp.macosx-10.9-x86_64-2.7/src/image.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/image.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/image.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.overlay' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/overlay.c -o build/temp.macosx-10.9-x86_64-2.7/src/overlay.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/overlay.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/overlay.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.transform' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -D_NO_MMX_FOR_X86_64 -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/transform.c -o build/temp.macosx-10.9-x86_64-2.7/src/transform.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -D_NO_MMX_FOR_X86_64 -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/rotozoom.c -o build/temp.macosx-10.9-x86_64-2.7/src/rotozoom.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -D_NO_MMX_FOR_X86_64 -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/scale2x.c -o build/temp.macosx-10.9-x86_64-2.7/src/scale2x.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -D_NO_MMX_FOR_X86_64 -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/scale_mmx.c -o build/temp.macosx-10.9-x86_64-2.7/src/scale_mmx.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/transform.o build/temp.macosx-10.9-x86_64-2.7/src/rotozoom.o build/temp.macosx-10.9-x86_64-2.7/src/scale2x.o build/temp.macosx-10.9-x86_64-2.7/src/scale_mmx.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/transform.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.mask' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/mask.c -o build/temp.macosx-10.9-x86_64-2.7/src/mask.o
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/bitmask.c -o build/temp.macosx-10.9-x86_64-2.7/src/bitmask.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/mask.o build/temp.macosx-10.9-x86_64-2.7/src/bitmask.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/mask.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.bufferproxy' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/bufferproxy.c -o build/temp.macosx-10.9-x86_64-2.7/src/bufferproxy.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/bufferproxy.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/bufferproxy.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.pixelarray' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/pixelarray.c -o build/temp.macosx-10.9-x86_64-2.7/src/pixelarray.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/pixelarray.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/pixelarray.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.math' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/math.c -o build/temp.macosx-10.9-x86_64-2.7/src/math.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/math.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/math.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.pixelcopy' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/pixelcopy.c -o build/temp.macosx-10.9-x86_64-2.7/src/pixelcopy.o
+</span><span class='line'>    src/pixelcopy.c:910:22: warning: format specifies type 'int' but the argument has type 'Py_ssize_t' (aka 'long') [-Wformat]
+</span><span class='line'>                         src_view_p->shape[src_ndim - 1]);
+</span><span class='line'>                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</span><span class='line'>    1 warning generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/pixelcopy.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/pixelcopy.so -Wl,-framework,Cocoa
+</span><span class='line'>    building 'pygame.newbuffer' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -DENABLE_NEWBUF=1 -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/newbuffer.c -o build/temp.macosx-10.9-x86_64-2.7/src/newbuffer.o
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/newbuffer.o -o build/lib.macosx-10.9-x86_64-2.7/pygame/newbuffer.so
+</span><span class='line'>    building 'pygame.sdlmain_osx' extension
+</span><span class='line'>    clang -fno-strict-aliasing -fno-common -dynamic -I/usr/local/include -I/usr/local/opt/sqlite/include -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -Ddarwin -D_THREAD_SAFE -DENABLE_NEWBUF=1 -I/usr/X11R6/include -I/usr/local/include/SDL -I/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c src/sdlmain_osx.m -o build/temp.macosx-10.9-x86_64-2.7/src/sdlmain_osx.o
+</span><span class='line'>    src/sdlmain_osx.m:240:24: warning: unused variable 'pool' [-Wunused-variable]
+</span><span class='line'>        NSAutoreleasePool   *pool = [[NSAutoreleasePool alloc] init];
+</span><span class='line'>                             ^
+</span><span class='line'>    src/sdlmain_osx.m:320:12: warning: unused variable 'ret' [-Wunused-variable]
+</span><span class='line'>            PyObject *ret = NULL;
+</span><span class='line'>                      ^
+</span><span class='line'>    2 warnings generated.
+</span><span class='line'>    clang -bundle -undefined dynamic_lookup -L/usr/local/lib -L/usr/local/opt/sqlite/lib build/temp.macosx-10.9-x86_64-2.7/src/sdlmain_osx.o -L/usr/local/lib -lSDLmain -lSDL -o build/lib.macosx-10.9-x86_64-2.7/pygame/sdlmain_osx.so -Wl,-framework,Cocoa
+</span><span class='line'>    
+</span><span class='line'>    no previously-included directories found matching '*/CVS'
+</span><span class='line'>    no previously-included directories found matching '*/*/CVS'
+</span><span class='line'>Successfully installed pygame</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/04/power-consumption-of-erlang-compilation/">Power Consumption of Erlang Compilation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-04T07:58:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Only cost 2% of battery power of my MacBookPro. Not bad at all</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/12/04/osx-specific-error-with-erlang-compilation/">Osx Specific Error With Erlang Compilation</a></h1>
     
     
@@ -487,120 +1061,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/02/grab/">Grab</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-02T08:10:00+11:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The built-in screen capture app grab&hellip; Why it only allows saving in tiff format?</p>
-
-<p><img class="center" src="/images/grab.png" width="460" height="175" title="" ></p>
-
-<p>Severly reduce its usefulness</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/11/30/easy-install-scipy-problem/">Easy_install Scipy Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-30T23:22:00+11:00" pubdate data-updated="true">Nov 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>No luck with scipy so far</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ easy_install scipy
-</span><span class='line'>Searching for scipy
-</span><span class='line'>Reading https://pypi.python.org/simple/scipy/
-</span><span class='line'>Best match: scipy 0.13.1
-</span><span class='line'>Downloading https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916
-</span><span class='line'>Processing scipy-0.13.1.zip
-</span><span class='line'>Writing /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/setup.cfg
-</span><span class='line'>Running scipy-0.13.1/setup.py -q bdist_egg --dist-dir /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/egg-dist-tmp-vWQr5z
-</span><span class='line'>Running from scipy source directory.
-</span><span class='line'>Splitting linalg.interpolative Fortran source files
-</span><span class='line'>/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy-1.8.0-py2.7-macosx-10.9-x86_64.egg/numpy/distutils/system_info.py:507: UserWarning: 
-</span><span class='line'>    UMFPACK sparse solver (http://www.cise.ufl.edu/research/sparse/umfpack/)
-</span><span class='line'>    not found. Directories to search for the libraries can be specified in the
-</span><span class='line'>    numpy/distutils/site.cfg file (section [umfpack]) or by setting
-</span><span class='line'>    the UMFPACK environment variable.
-</span><span class='line'>  warnings.warn(self.notfounderror.__doc__)
-</span><span class='line'>error: None</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/21/">&larr; Older</a>
@@ -618,6 +1078,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
@@ -627,14 +1095,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
       </li>
     
   </ul>

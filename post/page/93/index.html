@@ -21,23 +21,8 @@
 10
 11
 12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-$ hg pull
-pulling from http://hg.python.org/cpython
-searching for changes
-adding &hellip;">
+/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+/usr/bin/ranlib: file: libpython3.3m.a( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -143,6 +128,114 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/29/p-14932261293/">My Python 3.3 Compilation Ends in This</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T07:26:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>ranlib libpython3.3m.a
+</span><span class='line'>ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>gcc -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl -framework CoreFoundation 
+</span><span class='line'>./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)
+</span><span class='line'>*** error: can't allocate region
+</span><span class='line'>*** set a breakpoint in malloc_error_break to debug
+</span><span class='line'>make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11
+</span><span class='line'>make: *** Deleting file `Lib/_sysconfigdata.py'</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913827164/">Autoconf on Lion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T22:30:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Oops</p>
+
+<pre><code>$ autoconf
+configure.in:8: error: Autoconf version 2.65 or higher is required
+configure.in:8: the top level
+autom4te: /usr/bin/gm4 failed with exit status: 63
+</code></pre>
+
+<p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -308,84 +401,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14912402052/">Hg Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T21:07:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>9:06pm</p>
-
-<p>Tried to run <code>hg</code>. Got this error:</p>
-
-<p>&#8220;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/22/p-14584037817/">The City of London Shows That Logic Has Its Limits and That the City Lies Outside Them.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-22T09:54:00+11:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The City of London shows that logic has its limits and that the City lies outside them.</p>
-
-<p>Heard from the public lecture, The City of London, at LSE given by Professor David Kynaston</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/94/">&larr; Older</a>
@@ -403,6 +418,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
@@ -412,14 +435,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
       </li>
     
   </ul>

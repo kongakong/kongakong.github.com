@@ -9,11 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This piece code here: 1
+  <meta name="description" content="This will cause a compiler error: 1
 2
 3
-dismissViewControllerAnimated(true, completion: { () -> Void in let account = Account()
-}) throws exception: Cannot &hellip;">
+4
+let a=3
+let b=4 let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -119,6 +120,107 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/swift-ternanry-operators/">Swift Ternanry Operator ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:25:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will cause a compiler error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
+</span><span class='line'>let b=4
+</span><span class='line'> 
+</span><span class='line'>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by ';'"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Putting spaces around operators will resolve the compiler error i.e.</p>
+
+<pre><code>let max = a &gt; b ? a : b
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/autorelease-in-swift/">Autorelease in Swift</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:01:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {
+</span><span class='line'>
+</span><span class='line'>        // do something expensive without using Obj-C code
+</span><span class='line'>
+</span><span class='line'>    }</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -273,82 +375,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
-
-<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/css-overflow/">Css Overflow</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T12:54:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Valid values of attribute <code>overflow</code> are visible, hidden, scroll, auto, initial and inherit</p>
-
-<p>It controls browser behavior if content overflows an element&rsquo;s box.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -364,6 +390,14 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
@@ -373,14 +407,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
     
       <li class="post">
         <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/javascript-and-hoisting/">javascript and hoisting</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/css-overflow/">css overflow</a>
       </li>
     
   </ul>
