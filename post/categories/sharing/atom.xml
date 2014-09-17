@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: sharing | Timeline]]></title>
+  <title><![CDATA[Category: Sharing | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/sharing/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-17T14:00:23+10:00</updated>
+  <updated>2014-09-17T14:52:57+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,79 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Luck and Skill]]></title>
-    <link href="http://www.ahwkong.com/post/2013/08/01/luck-and-skill/"/>
-    <updated>2013-08-01T08:23:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/08/01/luck-and-skill</id>
-    <content type="html"><![CDATA[<blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
-payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
-sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
-lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
-number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
+    <title type="html"><![CDATA[A word in your ear: Rhyming slang]]></title>
+    <link href="http://www.ahwkong.com/post/2013/06/05/p-52213593051/"/>
+    <updated>2013-06-05T21:20:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2013/06/05/p-52213593051</id>
+    <content type="html"><![CDATA[<p><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></p>
 
-<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:]]></title>
-    <link href="http://www.ahwkong.com/post/2013/06/10/p-52620998556/"/>
-    <updated>2013-06-10T21:44:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/06/10/p-52620998556</id>
-    <content type="html"><![CDATA[<p>In light of the NSA PRISM scandal, I recommend these two videos from ‘Conversation with History’ series:</p>
-
-<p><a href="Interview%20with%20Glenn%20Greenwald">http://www.youtube.com/watch?v=-qlFjrgGqVA</a></p>
-
-<p><a href="%E2%80%98Deep%20State%E2%80%99%20-%20Interview%20with%20Professor%20Peter%20Dale%20Scott">http://youtu.be/CBGgxU27kJA</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[TED: Paola Antonelli: Why I brought Pac-Man to MoMA - Paola Antonelli (2013)]]></title>
-    <link href="http://www.ahwkong.com/post/2013/06/04/p-52131731225/"/>
-    <updated>2013-06-04T20:40:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/06/04/p-52131731225</id>
-    <content type="html"><![CDATA[<p><a href="http://feedproxy.google.com/~r/TEDTalks_video/~3/8g9dc9r8sZs/paola_antonelli_why_i_brought_pacman_to_moma.html">TEDTalks (video) &ndash; TED: Paola Antonelli: Why I brought Pac-Man to MoMA &ndash; Paola Antonelli (2013)</a></p>
-
-<p>When the Museum of Modern Art’s senior curator of architecture and design announced the acquisition of 14 video games in 2012, “all hell broke loose.” In this far-ranging, entertaining, and deeply insightful talk, Paola Antonelli explains why she’s delighted to challenge preconceived ideas about art and galleries, and describes her burning wish to help establish a broader understanding of design</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Drone Warfare]]></title>
-    <link href="http://www.ahwkong.com/post/2013/06/02/p-51959897403/"/>
-    <updated>2013-06-02T21:00:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/06/02/p-51959897403</id>
-    <content type="html"><![CDATA[<p>This is a public lecture by investigative journalist/activist Jeremy Scahill:</p>
-
-<p><a href="https://www.commonwealthclub.org/node/65484">https://www.commonwealthclub.org/node/65484</a></p>
-
-<p>Very chilling account of the impact of drone warfare on the targeted population as well as the democratic values of USA.</p>
-
-<p>From another perspective, here is an interview of General Norton Schwartz:</p>
-
-<p><a href="http://www.uctv.tv/shows/The-Air-Force-in-the-Twenty-First-Century-with-General-Norton-Schwartz-Conversations-with-History-25072">http://www.uctv.tv/shows/The-Air-Force-in-the-Twenty-First-Century-with-General-Norton-Schwartz-Conversations-with-History-25072</a></p>
-
-<p>Harry put the drone warfare question to him near the end of interview.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Algorithms for Making Good Decisions]]></title>
-    <link href="http://www.ahwkong.com/post/2013/05/12/p-50250633524/"/>
-    <updated>2013-05-12T21:35:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/05/12/p-50250633524</id>
-    <content type="html"><![CDATA[<p><strong>Algorithms for Making Good Decisions</strong> by Kevin Leyton-Brown</p>
-
-<p>{% youtube VJrqh6iT5BA %}</p>
-
-<p>The video was posted in 2011, but it is still very informative.</p>
-
-<p>Kevin is also a contributor to the Game Theory course in coursera.org.</p>
-
-<p>Presentation slide can be found here:</p>
-
-<p><a href="http://www.cs.ubc.ca/~kevinlb/talk.php?u=2011-Calumet-AlgorithmsDecisions.pdf">http://www.cs.ubc.ca/~kevinlb/talk.php?u=2011-Calumet-AlgorithmsDecisions.pdf</a></p>
+<p>‘Apple and Pear’ means ‘upstair’. Fun.</p>
 ]]></content>
   </entry>
   

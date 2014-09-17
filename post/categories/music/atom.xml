@@ -4,7 +4,7 @@
   <title><![CDATA[Category: music | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/music/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-17T14:00:23+10:00</updated>
+  <updated>2014-09-17T14:52:57+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -29,7 +29,7 @@
     <id>http://www.ahwkong.com/post/2012/03/25/p-19887388007</id>
     <content type="html"><![CDATA[<p>Libertango performed by Ikuko Kawai</p>
 
-<p>{% youtube fgFLBu-BgY4 %}</p>
+<p><div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/fgFLBu-BgY4 "></iframe></div></p>
 ]]></content>
   </entry>
   
