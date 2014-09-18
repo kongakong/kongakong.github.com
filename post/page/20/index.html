@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="There are some failures and errors: 1
 2
 3
 4
@@ -49,18 +49,7 @@
 38
 39
 40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52 &hellip;">
+41 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -166,6 +155,248 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/04/test-pygame-installation/">Testing Pygame Installation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-04T22:50:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There are some failures and errors:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ python -m pygame.tests 
+</span><span class='line'>skipping pygame.tests._movie_test (tag 'subprocess_ignore')
+</span><span class='line'>skipping pygame.tests.cdrom_test (tag 'interactive')
+</span><span class='line'>skipping pygame.tests.midi_test (tag 'interactive')
+</span><span class='line'>skipping pygame.tests.movie_test (tag 'subprocess_ignore')
+</span><span class='line'>skipping pygame.tests.scrap_test (tag 'subprocess_ignore')
+</span><span class='line'>loading pygame.tests.base_test
+</span><span class='line'>loading pygame.tests.blit_test
+</span><span class='line'>loading pygame.tests.bufferproxy_test
+</span><span class='line'>loading pygame.tests.camera_test
+</span><span class='line'>loading pygame.tests.color_test
+</span><span class='line'>loading pygame.tests.compat_test
+</span><span class='line'>loading pygame.tests.cursors_test
+</span><span class='line'>loading pygame.tests.display_test
+</span><span class='line'>loading pygame.tests.draw_test
+</span><span class='line'>loading pygame.tests.event_test
+</span><span class='line'>loading pygame.tests.fastevent_test
+</span><span class='line'>loading pygame.tests.font_test
+</span><span class='line'>loading pygame.tests.freetype_test
+</span><span class='line'>loading pygame.tests.ftfont_test
+</span><span class='line'>loading pygame.tests.gfxdraw_test
+</span><span class='line'>loading pygame.tests.image__save_gl_surface_test
+</span><span class='line'>loading pygame.tests.image_test
+</span><span class='line'>loading pygame.tests.imageext_test
+</span><span class='line'>loading pygame.tests.joystick_test
+</span><span class='line'>loading pygame.tests.key_test
+</span><span class='line'>loading pygame.tests.mask_test
+</span><span class='line'>loading pygame.tests.math_test
+</span><span class='line'>loading pygame.tests.mixer_music_test
+</span><span class='line'>loading pygame.tests.mixer_test
+</span><span class='line'>loading pygame.tests.mouse_test
+</span><span class='line'>loading pygame.tests.overlay_test
+</span><span class='line'>loading pygame.tests.pixelarray_test
+</span><span class='line'>loading pygame.tests.pixelcopy_test
+</span><span class='line'>loading pygame.tests.rect_test
+</span><span class='line'>loading pygame.tests.rwobject_test
+</span><span class='line'>loading pygame.tests.sndarray_test
+</span><span class='line'>loading pygame.tests.sprite_test
+</span><span class='line'>loading pygame.tests.surface_test
+</span><span class='line'>loading pygame.tests.surfarray_test
+</span><span class='line'>loading pygame.tests.surflock_test
+</span><span class='line'>loading pygame.tests.sysfont_test
+</span><span class='line'>loading pygame.tests.threads_test
+</span><span class='line'>loading pygame.tests.time_test
+</span><span class='line'>loading pygame.tests.transform_test
+</span><span class='line'>...................................................................................................................................................F........................................................FF...........................................................................................................E.F..........................................................................................................................................................................................................................................................................................................E............................................................
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: FreeTypeFontTest.test_freetype_Font_get_rect
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/freetype_test.py", line 434, in test_freetype_Font_get_rect
+</span><span class='line'>    self.assertNotEqual(size_utf16[0], size_utf32[0]);
+</span><span class='line'>AssertionError: -1 == -1
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: ImageModuleTest.testLoadPNG
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 82, in testLoadPNG
+</span><span class='line'>    self.assertEquals(pixel_x1_y1, greyish_pixel)
+</span><span class='line'>AssertionError: (109, 120, 129, 140) != (110, 120, 130, 140)
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: ImageModuleTest.testSavePNG
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/image_test.py", line 141, in testSavePNG
+</span><span class='line'>    self.assertEquals(pixels_as_tuples[0], reddish_pixel)
+</span><span class='line'>AssertionError: (0, 215, 0, 255) != (215, 0, 0, 255)
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>ERROR: MixerMusicModuleTest.test_load
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_music_test.py", line 45, in test_load
+</span><span class='line'>    pygame.mixer.music.load(umusfn)
+</span><span class='line'>error: Unrecognized music format
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>FAIL: MixerModuleTest.test_array_keyword
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 336, in test_array_keyword
+</span><span class='line'>    self._test_array_argument(format, a, c == channels)
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/mixer_test.py", line 349, in _test_array_argument
+</span><span class='line'>    (format, a.dtype))
+</span><span class='line'>AssertionError: Raised ValueError: Format -8, dtype int32
+</span><span class='line'>
+</span><span class='line'>======================================================================
+</span><span class='line'>ERROR: SurfaceTypeTest.test_image_convert_bug_131
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pygame/tests/surface_test.py", line 682, in test_image_convert_bug_131
+</span><span class='line'>    self.assertEquals( im.get_palette(),  ((0, 0, 0, 255), (255, 255, 255, 255)) )
+</span><span class='line'>error: Surface has no palette to get
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>Ran 675 tests in 66.985s
+</span><span class='line'>
+</span><span class='line'>FAILED (failures=4, errors=2)</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1003,64 +1234,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException When Using Count</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-03T22:04:00+11:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Oops.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-03 22:01:10.281 Questions[50951:70b] -[NSNull count]: unrecognized selector sent to instance 0x101cb4b40
-</span><span class='line'>2013-12-03 22:01:10.311 Questions[50951:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[NSNull count]: unrecognized selector sent to instance 0x101cb4b40'</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution:</strong></p>
-
-<p>Check if the target is indeed an array</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if ([anObject isKindOfClass:[NSArray class]]) { // Add a check here
-</span><span class='line'>    NSInteger count = [anObject count];
-</span><span class='line'>    ...
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/21/">&larr; Older</a>
@@ -1078,6 +1251,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
       </li>
     
@@ -1091,10 +1268,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
       </li>
     
   </ul>

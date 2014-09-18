@@ -9,8 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The built-in screen capture app grab&hellip; Why it only allows saving in tiff format? Severly reduce its usefulness
-">
+  <meta name="description" content="Oops. 1
+2
+2013-12-03 22:01:10.281 Questions[50951:70b] -[NSNull count]: unrecognized selector sent to instance 0x101cb4b40
+2013-12-03 22:01:10.311 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +118,64 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/03/nsinvalidargumentexception/">NSInvalidArgumentException When Using Count</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-03T22:04:00+11:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Oops.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-03 22:01:10.281 Questions[50951:70b] -[NSNull count]: unrecognized selector sent to instance 0x101cb4b40
+</span><span class='line'>2013-12-03 22:01:10.311 Questions[50951:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[NSNull count]: unrecognized selector sent to instance 0x101cb4b40'</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution:</strong></p>
+
+<p>Check if the target is indeed an array</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if ([anObject isKindOfClass:[NSArray class]]) { // Add a check here
+</span><span class='line'>    NSInteger count = [anObject count];
+</span><span class='line'>    ...
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2661,44 +2721,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-28T23:14:00+11:00" pubdate data-updated="true">Nov 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>What is this about?</p>
-
-<p><img class="center" src="/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/22/">&larr; Older</a>
@@ -2716,6 +2738,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
       </li>
     
@@ -2729,10 +2755,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized selector -replacementObjectForKeyedArchiver: </a>
       </li>
     
   </ul>
