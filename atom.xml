@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-18T16:26:58+10:00</updated>
+  <updated>2014-09-18T16:45:50+10:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,12 +14,20 @@
 
   
   <entry>
+    <title type="html"><![CDATA[init chain rule in swift]]></title>
+    <link href="http://www.ahwkong.com/post/2014/09/18/init-chain-rule-in-swift/"/>
+    <updated>2014-09-18T16:30:00+10:00</updated>
+    <id>http://www.ahwkong.com/post/2014/09/18/init-chain-rule-in-swift</id>
+    <content type="html"><![CDATA[<blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[@IBDesignable and @IBInspectable ]]></title>
     <link href="http://www.ahwkong.com/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/"/>
     <updated>2014-09-18T16:26:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2014/09/18/at-ibdesignable-and-at-ibinspectable</id>
-    <content type="html"><![CDATA[<pre><code>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.
-</code></pre>
+    <content type="html"><![CDATA[<blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
 
 <p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
 ]]></content>
@@ -619,49 +627,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
 </span><span class='line'>
 </span><span class='line'>The former state can be restored with opam switch import -f "/home/antkong/.opam/system/backup/state-20140606112154.export"
 </span><span class='line'>'opam install mirage' failed.</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[opam install log]]></title>
-    <link href="http://www.ahwkong.com/post/2014/07/06/opam/"/>
-    <updated>2014-07-06T21:03:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/07/06/opam</id>
-    <content type="html"><![CDATA[<p>Adding a repository for ocaml</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>precise32:~$ sudo add-apt-repository ppa:avsm/ppa
-</span><span class='line'>You are about to add the following PPA to your system:
-</span><span class='line'> Latest stable versions of OCaml and OPAM.
-</span><span class='line'> More info: https://launchpad.net/~avsm/+archive/ppa
-</span><span class='line'>Press [ENTER] to continue or ctrl-c to cancel adding it
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>gpg: keyring `/tmp/tmpU270CK/secring.gpg' created
-</span><span class='line'>gpg: keyring `/tmp/tmpU270CK/pubring.gpg' created
-</span><span class='line'>gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
-</span><span class='line'>gpg: /tmp/tmpU270CK/trustdb.gpg: trustdb created
-</span><span class='line'>gpg: key 61707B09: public key "Launchpad PPA for Anil Madhavapeddy" imported
-</span><span class='line'>gpg: Total number processed: 1
-</span><span class='line'>gpg:               imported: 1  (RSA: 1)
-</span><span class='line'>OK</span></code></pre></td></tr></table></div></figure>
 
 
 

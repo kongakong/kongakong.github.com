@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder. from Apple &hellip;">
+  <meta name="description" content="Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,42 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/09/18/init-chain-rule-in-swift/">Init Chain Rule in Swift</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T16:30:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable</a></h1>
     
     
@@ -144,8 +180,7 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-  <div class="entry-content"><pre><code>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.
-</code></pre>
+  <div class="entry-content"><blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
 
 <p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
 </div>
@@ -309,55 +344,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of Type NSInteger Should Not Be Used as Format Arguments</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-14T18:01:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In this example,</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSInteger val = 15000;
-</span><span class='line'>    NSLog(@"%i", val);</span></code></pre></td></tr></table></div></figure>
-
-
-<p>XCode will flag this error</p>
-
-<pre><code>Values of type "NSInteger" should not be used as format arguments: add an explicit cast to 'long' instead.
-</code></pre>
-
-<p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -373,6 +359,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
       </li>
     
@@ -386,10 +376,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
       </li>
     
   </ul>

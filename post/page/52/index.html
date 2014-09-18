@@ -9,7 +9,19 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="From &lsquo;The Grand Chessboard&rsquo; (1997) by Zbigniew Brzezinski, The overseas British Empuire was initially acquired through a combination of &hellip;">
+  <meta name="description" content="For a 2-dim array, axis 0 is the y-axis and 1 is the x-axis 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+&gt;&gt;&gt; b = numpy.random.random(9)
+&gt;&gt;&gt; b.resize(3,3)
+& &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +127,67 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/07/10/p-26897511136/">Numpy Sum and Axis</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-10T20:11:00+10:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For a 2-dim array, axis 0 is the y-axis and 1 is the x-axis</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+</span><span class='line'><span class="n">array</span><span class="p">([[</span> <span class="mf">0.87004074</span><span class="p">,</span>  <span class="mf">0.96632953</span><span class="p">,</span>  <span class="mf">0.23284793</span><span class="p">],</span>
+</span><span class='line'>       <span class="p">[</span> <span class="mf">0.51685093</span><span class="p">,</span>  <span class="mf">0.28653961</span><span class="p">,</span>  <span class="mf">0.10544557</span><span class="p">],</span>
+</span><span class='line'>       <span class="p">[</span> <span class="mf">0.06448447</span><span class="p">,</span>  <span class="mf">0.62316361</span><span class="p">,</span>  <span class="mf">0.93653307</span><span class="p">]])</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span><span class='line'><span class="n">array</span><span class="p">([</span> <span class="mf">1.45137614</span><span class="p">,</span>  <span class="mf">1.87603274</span><span class="p">,</span>  <span class="mf">1.27482656</span><span class="p">])</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span><span class='line'><span class="n">array</span><span class="p">([</span> <span class="mf">2.06921819</span><span class="p">,</span>  <span class="mf">0.90883611</span><span class="p">,</span>  <span class="mf">1.62418114</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -287,42 +360,6 @@ This pattern can simplify a lot the way concurrency is handled in an application
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/08/p-26755200145/">Simple Numpy Example. To Illustrate the Use of &#8220;arange&#8220; and &#8220;resize&#8220;</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-08T19:38:00+10:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Simple Numpy example. To illustrate the use of <code>arange</code> and <code>resize</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/53/">&larr; Older</a>
@@ -340,6 +377,10 @@ This pattern can simplify a lot the way concurrency is handled in an application
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
       </li>
     
@@ -353,10 +394,6 @@ This pattern can simplify a lot the way concurrency is handled in an application
     
       <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
       </li>
     
   </ul>

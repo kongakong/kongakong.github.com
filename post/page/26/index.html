@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Found some good resource&hellip; http://miguelcamba.com/blog/2013/04/22/tweak-and-improve-your-new-octopress-blog/ http://blog.jphpsf.com/2012/06/12/ &hellip;">
+  <meta name="description" content="defncopy is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,91 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/15/a-useful-sybase-tool/">A Useful Sybase Tool</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-15T23:08:00+10:00" pubdate data-updated="true">Jul 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>defncopy</code> is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development tools such as <a href="http://www.aquafold.com/aquadatastudio.html">Aqua Data Studio</a></p>
+
+<p>This utility comes with Sybase distribution. Here is its usage:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ defncopy
+</span><span class='line'> 
+</span><span class='line'>defncopy Syntax Error
+</span><span class='line'>Usage: defncopy
+</span><span class='line'>    [-v]
+</span><span class='line'>    [-W]
+</span><span class='line'>    [-X]
+</span><span class='line'>    [-a &lt;display_charset&gt;]
+</span><span class='line'>    [-I &lt;interfaces_file&gt;]
+</span><span class='line'>    [-J [&lt;client_charset&gt;]]
+</span><span class='line'>    [-K &lt;keytab_file&gt;]
+</span><span class='line'>    [-P &lt;password&gt;]
+</span><span class='line'>    [-R &lt;remote_server_principal&gt;]
+</span><span class='line'>    [-S [&lt;server_name&gt;]]
+</span><span class='line'>    [-U &lt;user_name&gt;]
+</span><span class='line'>    [-V &lt;security_options&gt;]
+</span><span class='line'>    [-Z &lt;security_mechanism&gt;]
+</span><span class='line'>    [-z &lt;language&gt;]
+</span><span class='line'>    { in &lt;file_name&gt; &lt;database_name&gt; |
+</span><span class='line'>      out &lt;file_name&gt; &lt;database_name&gt; [&lt;owner&gt;.]&lt;object_name&gt;
+</span><span class='line'>          [[&lt;owner&gt;.]&lt;object_name&gt;...] }
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -475,62 +560,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/29/keep-vi-swp-file-in-tmp/">Keep Vi Swp File in Tmp</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-29T21:02:00+10:00" pubdate data-updated="true">Jun 29<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>vi</code> is my editor of choice when I need to do some quick editing.</p>
-
-<p>When vi edits a file, it will usally create a <code>swp</code> file for recovery purpose. Usually it causes no problem.</p>
-
-<p>But apparently octopress does not work when there is temporry file in the <code>post</code> directory. Rake will emit</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake aborted!
-</span><span class='line'>No such file or directory - public/_posts/.2013-06-29-example.markdown.swp</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and then bailed.</p>
-
-<p>I added</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>set backupdir=~/tmp</span></code></pre></td></tr></table></div></figure>
-
-
-<p>to my .vimrc. Hopefully it will prevent this problem from happening again.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/27/">&larr; Older</a>
@@ -548,6 +577,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
       </li>
     
@@ -561,10 +594,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
       </li>
     
   </ul>

@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Equivalent to 1
-2 for x in y: # do something in C++ is 1
+  <meta name="description" content="1
 2
 3
 4
@@ -18,7 +17,16 @@
 6
 7
 8
-void print_loop() { auto y = {0, 1, 2, 3, 4, 5, 6}; for (auto i : y) { cout & &hellip;">
+9
+10
+11
+12
+13
+14
+15
+$ sudo apt-get install ncurses-dev
+Reading package lists... Done
+Building dependency tree Reading state &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -124,6 +132,90 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/05/missing-curses-library/">Missing Curses Library</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install ncurses-dev
+</span><span class='line'>Reading package lists... Done
+</span><span class='line'>Building dependency tree       
+</span><span class='line'>Reading state information... Done
+</span><span class='line'>Note, selecting 'libncurses5-dev' instead of 'ncurses-dev'
+</span><span class='line'>The following extra packages will be installed:
+</span><span class='line'>  libtinfo-dev
+</span><span class='line'>Suggested packages:
+</span><span class='line'>  ncurses-doc
+</span><span class='line'>The following NEW packages will be installed:
+</span><span class='line'>  libncurses5-dev libtinfo-dev
+</span><span class='line'>0 upgraded, 2 newly installed, 0 to remove and 107 not upgraded.
+</span><span class='line'>Need to get 328 kB of archives.
+</span><span class='line'>After this operation, 1,452 kB of additional disk space will be used.
+</span><span class='line'>Do you want to continue [Y/n]?</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Other dependency</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install libssl-dev</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Do not need them for now</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>jinterface     : No Java compiler found
+</span><span class='line'>odbc           : ODBC library - link check failed</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -399,59 +491,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a Maverick Usb</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T07:08:00+11:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Get a USB flash drive that is at least 8 GBs.</p>
-
-<p>Use Disk Utility to prepare the flash drive:</p>
-
-<ul>
-<li>Click on the Erase tab in the DU main window.</li>
-<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
-<li>Click on the Erase button.</li>
-</ul>
-
-
-<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
-
-<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
---volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
-</code></pre>
-
-<p>No need of any third party software</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -469,6 +508,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
       </li>
     
@@ -482,10 +525,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of type NSInteger should not be used as format arguments</a>
       </li>
     
   </ul>
