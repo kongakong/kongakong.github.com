@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Exercise 2.1 Write a function suffixes of type a list &ndash;> a list of list that takes a list xs and returns a list of all the suffixes of xs in &hellip;">
+  <meta name="description" content="Fixed by import MobileCoreServices
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/08/29/kuttypeurl-undefined/">kUTTypeURL Undefined</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-29T11:08:00+10:00" pubdate data-updated="true">Aug 29<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Fixed by import <code>MobileCoreServices</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -356,120 +393,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/04/15/homebrew-problem/">Homebrew Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-15T17:32:00+10:00" pubdate data-updated="true">Apr 15<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Homebrew error message due to incomplete installation of XCode</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-</span><span class='line'>==> This script will install:
-</span><span class='line'>/usr/local/bin/brew
-</span><span class='line'>/usr/local/Library/...
-</span><span class='line'>/usr/local/share/man/man1/brew.1
-</span><span class='line'>
-</span><span class='line'>Press RETURN to continue or any other key to abort
-</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /usr/local
-</span><span class='line'>
-</span><span class='line'>WARNING: Improper use of the sudo command could lead to data loss
-</span><span class='line'>or the deletion of important system files. Please double-check your
-</span><span class='line'>typing when using sudo. Type "man sudo" for more information.
-</span><span class='line'>
-</span><span class='line'>To proceed, enter your password, or type Ctrl-C to abort.
-</span><span class='line'>
-</span><span class='line'>Password:
-</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /usr/local
-</span><span class='line'>==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local
-</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
-</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
-</span><span class='line'>==> Installing the Command Line Tools (expect a GUI popup):
-</span><span class='line'>==> /usr/bin/sudo /usr/bin/xcode-select --install
-</span><span class='line'>xcode-select: note: install requested for command line developer tools
-</span><span class='line'>Press any key when the installation has completed.
-</span><span class='line'>==> Downloading and installing Homebrew...
-</span><span class='line'>remote: Counting objects: 166311, done.
-</span><span class='line'>remote: Compressing objects: 100% (46739/46739), done.
-</span><span class='line'>Receiving objects:  76% (126773/166311), 23.62 MiB | 83.00 KiB/s    
-</span><span class='line'>error: RPC failed; result=56, HTTP code = 200
-</span><span class='line'>fatal: The remote end hung up unexpectedly
-</span><span class='line'>fatal: early EOF
-</span><span class='line'>fatal: index-pack failed
-</span><span class='line'>Failed during: git fetch origin master:refs/remotes/origin/master -n
-</span><span class='line'>$ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-</span><span class='line'>It appears Homebrew is already installed. If your intent is to reinstall you
-</span><span class='line'>should do the following before running this installer again:
-</span><span class='line'>    rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/6/">&larr; Older</a>
@@ -495,15 +418,15 @@ alt="hit counter"></a></div></noscript>
       </li>
     
       <li class="post">
+        <a href="/post/2015/01/18/basic-rvm/">basic rvm</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
       </li>
     
       <li class="post">
         <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
       </li>
     
   </ul>

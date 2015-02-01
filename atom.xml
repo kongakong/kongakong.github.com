@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-01T15:19:22+11:00</updated>
+  <updated>2015-02-01T16:02:01+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -34,6 +34,49 @@
     <content type="html"><![CDATA[<p>The best way to install chefdk on OSX for me is to use <code>brew cask</code>:</p>
 
 <pre><code>brew cask instal chefdk 
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[basic rvm]]></title>
+    <link href="http://www.ahwkong.com/post/2015/01/18/basic-rvm/"/>
+    <updated>2015-01-18T15:53:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/01/18/basic-rvm</id>
+    <content type="html"><![CDATA[<p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
+
+<p>Here is some basic <code>rvm</code> command:</p>
+
+<pre><code>$ rvm list
+
+rvm rubies
+
+   ruby-1.9.3-p484 [ x86_64 ]
+   ruby-1.9.3-p551 [ x86_64 ]
+=* ruby-2.2.0 [ x86_64 ]
+
+# =&gt; - current
+# =* - current &amp;&amp; default
+#  * - default
+
+
+$ rvm use 2.2.0
+Using /Users/antkong/.rvm/gems/ruby-2.2.0
+
+$ bundle install
+bash: bundle: command not found
+
+$ gem install bundle
+Fetching: bundler-1.7.12.gem (100%)
+Successfully installed bundler-1.7.12
+Fetching: bundle-0.0.1.gem (100%)
+Successfully installed bundle-0.0.1
+Parsing documentation for bundler-1.7.12
+Installing ri documentation for bundler-1.7.12
+Parsing documentation for bundle-0.0.1
+Installing ri documentation for bundle-0.0.1
+Done installing documentation for bundler, bundle after 1 seconds
+2 gems installed 
 </code></pre>
 ]]></content>
   </entry>
@@ -610,15 +653,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[kUTTypeURL undefined]]></title>
-    <link href="http://www.ahwkong.com/post/2014/08/29/kuttypeurl-undefined/"/>
-    <updated>2014-08-29T11:08:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/08/29/kuttypeurl-undefined</id>
-    <content type="html"><![CDATA[<p>Fixed by import <code>MobileCoreServices</code></p>
 ]]></content>
   </entry>
   
