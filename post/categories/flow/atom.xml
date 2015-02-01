@@ -4,7 +4,7 @@
   <title><![CDATA[Category: flow | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/flow/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-01T13:16:54+11:00</updated>
+  <updated>2015-02-01T15:07:34+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,16 +22,24 @@
 
 <p><em>A:</em></p>
 
-<p>{% codeblock %}</p>
-
-<h1>contribution at age</h1>
-
-<blockquote><blockquote><blockquote><p>[(i, 5000)for i in range(25, 30+1)]
-[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]</p>
-
-<p>sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
-34009.5640625
-{% endcodeblock %}</p></blockquote></blockquote></blockquote>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>contribution at age&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>[(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
 ]]></content>
   </entry>
   

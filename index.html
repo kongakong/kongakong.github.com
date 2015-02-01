@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a &hellip;">
+  <meta name="description" content="After some trial and errors, the best way (as of this writing) to manage cookbooks for vagrant + chef is to use brekshef. You can forget about knife &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,46 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2015/01/20/chef/">Chef, Brekshelf and Data Bag</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-20T14:41:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
+
+<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
+
+<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2015/01/13/toastmaster-speech-2/">My Attempt at Toastmaster Speech #2</a></h1>
     
     
@@ -144,7 +184,7 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-  <div class="entry-content"><p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely drives me to look at memorisation technique.</p>
+  <div class="entry-content"><p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely motivated me to look at memorisation techniques.</p>
 
 <h1>The Speech</h1>
 
@@ -321,56 +361,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/autorelease-in-swift/">Autorelease in Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T01:01:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {
-</span><span class='line'>
-</span><span class='line'>        // do something expensive without using Obj-C code
-</span><span class='line'>
-</span><span class='line'>    }</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -386,6 +376,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
       </li>
     
@@ -399,10 +393,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
       </li>
     
   </ul>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: berkshelf | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/berkshelf/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-01T15:07:34+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[chef, brekshelf and data bag]]></title>
+    <link href="http://www.ahwkong.com/post/2015/01/20/chef/"/>
+    <updated>2015-01-20T14:41:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/01/20/chef</id>
+    <content type="html"><![CDATA[<p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
+
+<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
+
+<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
+]]></content>
+  </entry>
+  
+</feed>

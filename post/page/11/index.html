@@ -9,14 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To convert a NSDate into another Timezone 1
+  <meta name="description" content="At first I am confused by this conda output. It seems suggest conda is going to upgrade python even though there is no new version of python. 1
 2
 3
-4
-5
-6
-7
-8 NSCalendarUnit val = NSCalendarUnitYear|NSCalendarUnitHour; NSCalendar* dupCal = [[ &hellip;">
+4 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +118,106 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/15/conda-update/">Conda Update</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-15T19:51:00+11:00" pubdate data-updated="true">Feb 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At first I am confused by this <code>conda</code> output. It seems suggest <code>conda</code> is going to upgrade python even though there is no new version of python.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update python
+</span><span class='line'>Updating conda environment at /Users/antkong/anaconda
+</span><span class='line'>
+</span><span class='line'>The following packages will be downloaded:
+</span><span class='line'>
+</span><span class='line'>    package                    |            build
+</span><span class='line'>    ---------------------------|-----------------
+</span><span class='line'>    conda-3.0.4                |           py27_0         103 KB
+</span><span class='line'>    openssl-1.0.1c             |                0         2.1 MB
+</span><span class='line'>    python-2.7.6               |                1         9.9 MB
+</span><span class='line'>    readline-6.2               |                2         275 KB
+</span><span class='line'>
+</span><span class='line'>The following packages will be UN-linked:
+</span><span class='line'>
+</span><span class='line'>    package                    |            build
+</span><span class='line'>    ---------------------------|-----------------
+</span><span class='line'>    conda-2.2.7                |           py27_0
+</span><span class='line'>    python-2.7.6               |                0
+</span><span class='line'>    readline-6.2               |                1
+</span><span class='line'>
+</span><span class='line'>The following packages will be linked:
+</span><span class='line'>
+</span><span class='line'>    package                    |            build
+</span><span class='line'>    ---------------------------|-----------------
+</span><span class='line'>    conda-3.0.4                |           py27_0   hard-link
+</span><span class='line'>    openssl-1.0.1c             |                0   hard-link
+</span><span class='line'>    python-2.7.6               |                1   hard-link
+</span><span class='line'>    readline-6.2               |                2   hard-link
+</span><span class='line'>
+</span><span class='line'>Proceed ([y]/n)?</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It turns out they are the dependency of <code>conda</code>, which will be upgraded from 2.2.7 to 3.0.4</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -389,53 +485,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/09/dispatch-once/">Dispatch_once</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-09T21:22:00+11:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Wanted to declare and initialise a static variable in a .m file.</p>
-
-<p>Objective-c compiler does not like it, and raise this error message:</p>
-
-<pre><code>Initializer element is not a compile-time constant
-</code></pre>
-
-<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
-
-<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
-
-<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/12/">&larr; Older</a>
@@ -453,6 +502,10 @@ Here is the backtrace where this occurred this time (some frames may be missing 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
       </li>
     
@@ -466,10 +519,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
     
       <li class="post">
         <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
       </li>
     
   </ul>

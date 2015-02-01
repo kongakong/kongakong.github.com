@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-01T13:15:35+11:00</updated>
+  <updated>2015-02-01T15:07:34+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,11 +14,24 @@
 
   
   <entry>
+    <title type="html"><![CDATA[chef, brekshelf and data bag]]></title>
+    <link href="http://www.ahwkong.com/post/2015/01/20/chef/"/>
+    <updated>2015-01-20T14:41:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/01/20/chef</id>
+    <content type="html"><![CDATA[<p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
+
+<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
+
+<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[My attempt at toastmaster speech #2]]></title>
     <link href="http://www.ahwkong.com/post/2015/01/13/toastmaster-speech-2/"/>
     <updated>2015-01-13T04:33:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/01/13/toastmaster-speech-2</id>
-    <content type="html"><![CDATA[<p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely drives me to look at memorisation technique.</p>
+    <content type="html"><![CDATA[<p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely motivated me to look at memorisation techniques.</p>
 
 <h1>The Speech</h1>
 
@@ -631,15 +644,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[html vs xhtml]]></title>
-    <link href="http://www.ahwkong.com/post/2014/07/26/html-vs-xhtml/"/>
-    <updated>2014-07-26T17:54:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/07/26/html-vs-xhtml</id>
-    <content type="html"><![CDATA[<p>HTML is not case-sensitive but XHTML is</p>
 ]]></content>
   </entry>
   
