@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-01T15:15:14+11:00</updated>
+  <updated>2015-02-01T15:19:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,18 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[best way to install chefdk on OSX]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/01/best-way-to-install-chefdk/"/>
-    <updated>2015-02-01T15:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/01/best-way-to-install-chefdk</id>
-    <content type="html"><![CDATA[<p>The best way to install chefdk on OSX for me is to use &lsquo;brew cask&rsquo;:</p>
-
-<pre><code>brew cask instal chefdk 
-</code></pre>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[chef, brekshelf and data bag]]></title>
@@ -35,6 +23,18 @@
 <p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
 
 <p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[best way to install chefdk on OSX]]></title>
+    <link href="http://www.ahwkong.com/post/2015/01/19/best-way-to-install-chefdk/"/>
+    <updated>2015-01-19T15:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/01/19/best-way-to-install-chefdk</id>
+    <content type="html"><![CDATA[<p>The best way to install chefdk on OSX for me is to use <code>brew cask</code>:</p>
+
+<pre><code>brew cask instal chefdk 
+</code></pre>
 ]]></content>
   </entry>
   
