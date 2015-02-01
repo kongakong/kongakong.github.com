@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="After some trial and errors, the best way (as of this writing) to manage cookbooks for vagrant + chef is to use brekshef. You can forget about knife &hellip;">
+  <meta name="description" content="The best way to install chefdk on OSX for me is to use &lsquo;brew cask&rsquo;: brew cask instal chefdk ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,45 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/01/best-way-to-install-chefdk/">Best Way to Install Chefdk on OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-01T15:12:00+11:00" pubdate data-updated="true">Feb 1<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The best way to install chefdk on OSX for me is to use &lsquo;brew cask&rsquo;:</p>
+
+<pre><code>brew cask instal chefdk 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -310,57 +349,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/swift-ternanry-operators/">Swift Ternanry Operator ?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T01:25:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This will cause a compiler error:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
-</span><span class='line'>let b=4
-</span><span class='line'> 
-</span><span class='line'>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by ';'"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Putting spaces around operators will resolve the compiler error i.e.</p>
-
-<pre><code>let max = a &gt; b ? a : b
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -376,6 +364,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/01/best-way-to-install-chefdk/">best way to install chefdk on OSX</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -389,10 +381,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
       </li>
     
   </ul>

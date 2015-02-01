@@ -9,7 +9,15 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Finally reached the final chapter of the book. The point of departure for the needed [US] policy has to be hard-nosed recognition of the three &hellip;">
+  <meta name="description" content="Dfa class interface: 1
+2
+3
+4
+5
+6
+7
+8
+class DFA: def __init__(...): def predict(self, input): def noViableAlt(self, s, input): def error(self, nvae): &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +123,63 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/07/26/p-28046614623/">Dfa Class</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-26T19:49:00+10:00" pubdate data-updated="true">Jul 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Dfa class interface:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">DFA</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">noViableAlt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nvae</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">specialStateTransition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">getDescription</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">unpack</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -280,44 +345,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/22/p-27756289320/">Casting Is Optional</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-22T19:56:00+10:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In objective-c, if you have an variable of type <code>id</code> but you want to  call a certain method on it as if it an instance of a specific class, you can do it this way:</p>
-
-<p>Here is the definition of the <code>TestDynamic</code> class:</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/50/">&larr; Older</a>
@@ -335,6 +362,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/01/best-way-to-install-chefdk/">best way to install chefdk on OSX</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -348,10 +379,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
       </li>
     
   </ul>

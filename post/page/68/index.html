@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I do not usually run “source activate” before running the python runtime in a virtualenv env. However it seems to work OK without.
-">
+  <meta name="description" content="Installing pyML by running python setup.py install But I do not think it is going to fly because, for example, &#8220;&#8220; /usr/bin/llvm-gcc -fno- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,50 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/21/p-23473129679/">Installing pyML by Running &#8220;python setup.py Install&#8220;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-21T19:36:00+10:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Installing pyML by running <code>python setup.py install</code></p>
+
+<p>But I do not think it is going to fly because, for example,</p>
+
+<p>&#8220;&#8220;</p>
+
+<p>/usr/bin/llvm-gcc -fno-strict-aliasing -O3 -w -pipe -march=core2 -msse4 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/usr/local/bin/../Cellar/python/2.7.2/include/python2.7 -c PyML/containers/ext/Kernel.cpp -o build/temp.macosx-10.4-x86_64-2.7/PyML/containers/ext/Kernel.o</p>
+
+<p>It is using llvm-gcc instead of gcc-4.2 (the GUN compiler)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -298,42 +341,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/18/p-23285831801/">Trying Out iTerm2. Does Not Work Well With Vi by Default (Up/down Arrow Keys Are Not Recognised)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-18T21:31:00+10:00" pubdate data-updated="true">May 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying out iTerm2. Does not work well with vi by default (up/down arrow keys are not recognised)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/69/">&larr; Older</a>
@@ -351,6 +358,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/01/best-way-to-install-chefdk/">best way to install chefdk on OSX</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -364,10 +375,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable </a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/swift-ternanry-operators/">Swift ternanry operator ?</a>
       </li>
     
   </ul>
