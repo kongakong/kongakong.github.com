@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A discussion named &ldquo;String as List&rdquo; has been running, at the time of writing, for 6 days and 56 posts already. A lot of interesting idea &hellip;">
+  <meta name="description" content="Zvi responded to Christian S&rsquo;s &ldquo;recommended large text mass handling modules&rdquo;. He said, if for efficiency we represent a string as &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/02/19/3796997893852752275/">Erlang Mailing List - String as List 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-19T04:09:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span><span class="lDACoc"> responded to </span></span><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S</span></span><span class="HcCDpe"><span class="lDACoc">&rsquo;s &ldquo;recommended large text mass handling modules&rdquo;. He said, if for efficiency we  represent  a string as binary, the code will become too verbose. For example,</span></span><br /><blockquote style="font-style: italic;"><span class="HcCDpe"><span class="lDACoc"></span></span><ul><li> &lt;&lt;&ldquo;ABC&rdquo;>>, instead of &ldquo;ABC&rdquo;</li><li> &lt;<s1 s2="" bytes="">&lt; </s1> S1 / bytes, S2 / bytes <s1 s2="" bytes="">>> instead of S1++S2</s1></li><li> using file:delete(binary_to_list(Filename)) instead of file:delete(Filename)</li><li> xmerl and erlsom parse into lists and not binaries</li></ul></blockquote><div id="1fhc" class="ArwC7c ckChnd"><span class="HcCDpe"><span email="dustin.whitney@gmail.com" class="EP8xU" style="color: rgb(185, 0, 56);">Dustin Whitney</span></span> concurred the verboseness, and recommend a new string type.<span class="HcCDpe"><span email="vychodil.hynek@gmail.com" class="EP8xU" style="color: rgb(132, 102, 0);"></span><span class="lDACoc"><br /><br /></span></span><span class="HcCDpe"><span email="bjorn@erix.ericsson.se" class="EP8xU" style="color: rgb(51, 0, 153);">Bjorn Gustavsson</span></span> responded to eariler <span class="HcCDpe"><span class="lDACoc"></span></span><span class="HcCDpe"><span email="kevin@scaldeferri.com" class="EP8xU" style="color: rgb(204, 0, 96);">Kevin Scaldeferri</span></span>&rsquo;s opinion on list inefficiency. He suggested, in the case of appending:<br /><blockquote style="font-style: italic;"><br />&ldquo;You can append by building a deep list and only flatten it at the end.<br /><br />  NewString = [AListOfChars|AnotherListOfChars]<br /><div id="1fi4" class="ArwC7c ckChnd"><br />or<br />  NewString = [AListOfChars,ACharacter]<br /><br />Or you can simply do a recursion (not tail-recursion) and use<br />the &lsquo;++&rsquo; operator. That will be efficient, because the recursion will<br />ensure that the &lsquo;++&rsquo; operators are executed in a right-to-left order.&rdquo;</div></blockquote><div id="1fi4" class="ArwC7c ckChnd"><br /><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);">Christian S  </span></span>suggested an alternative to one of <span class="HcCDpe"><span email="exta7@walla.com" class="EP8xU" style="color: rgb(0, 148, 134);">Zvi</span><span class="lDACoc">&rsquo;s string-as-binary example (&ldquo;</span></span>  &lt;<s1 s2="" bytes="">&lt;  </s1> S1 / bytes, S2 / bytes >> <s1 s2="" bytes=""> instead of S1++S2&rdquo;)<span class="HcCDpe"><span class="lDACoc">:<br /></span></span><br /></s1><blockquote style="font-style: italic;">&ldquo;[S1,S2] and then do iolist_to_binary/1 if you need it flat.&rdquo;</blockquote><br />Then focus of discussion shifted to a tool called Leex for a while.<br /><br /><span class="HcCDpe"><span email="ok@cs.otago.ac.nz" class="EP8xU" style="color: rgb(121, 6, 25);">Richard A. O&#8217;Keefe </span></span>weighted in and expressed his opinion on a number of issues.<br /><br />First of all, the String as list should not be dismissed as &ldquo;historical reason&rdquo; only:<br /><blockquote><br /><span style="font-style: italic;">&ldquo;it is simplicity (the preferred</span><br /><span style="font-style: italic;">sequence type in Erlang is lists, and strings are just sequences of</span><br /><span style="font-style: italic;">characters), power (because any time someone defines a function on</span><br /><span style="font-style: italic;">lists you get to use it on strings, and there are <em>lots</em> of useful</span><br /><span style="font-style: italic;">list functions), and processing efficiency (because working down</span><br /><span style="font-style: italic;">one character at a time doesn&rsquo;t require allocating <em>any</em> new storage,</span><br /><span style="font-style: italic;">not even for slices).&rdquo;</span></blockquote>He suggested the following rule of thumb for text handling<br /><blockquote style="font-style: italic;"><br />&ldquo;The guiding rule is<br />&ndash; if you just want to hold onto a string for a while, use a binary<br />&ndash; if you want to build or process a string, use a list (possibly in<br />Erlang a deep list).<br />&ndash; if you want to represent something that has structure, and you want<br />your program to be aware of that structure, turn it into a<br />structured<br />data value and work with it in that form.&rdquo;</blockquote>and some myth-busting on appending string performance issue:<br /><blockquote style="font-style: italic;"><br />&ldquo;Right, this is not efficient.  But it is spectacularly<br />inefficient in programming languages with more conventional<br />representations.<br />It is O(n**2).  For example,<br />  x = &rdquo;&ldquo;<br />  for (i = 1; i &lt;= 100000; i++) x = x &#8220;a&rdquo;  just took 30.5 seconds in awk on my machine, 62.2 seconds in Perl, and a massive 631 seconds in Java.  That was using gcj; I lost patience with the Sun SDK and killed it.  (AWK faster than Java?  Yes, it often is.) Building the same string in Erlang using        loop(100000, &ldquo;&rdquo;) where        loop(0, S) &ndash;> lists:reverse(S);<br />  loop(N, S) &ndash;> loop(N-1, &ldquo;a&rdquo;++S).<br />takes 0.15 second on the same machine.&ldquo;</blockquote><br /><span class="HcCDpe"><span email="masklinn@masklinn.net" class="EP8xU" style="color: rgb(121, 6, 25);">Masklinn</span>  <span class="lDACoc">pointed out later that Java benchmark is off because the example is not using StringBuffer.<br /></span></span><br />End of Part 2<br /><br /></div></div><span class="HcCDpe"><span email="chsu79@gmail.com" class="EP8xU" style="color: rgb(91, 16, 148);"><br /></span></span></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -261,42 +297,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/02/06/8866917822435065934/">Why I Choose to Learn Erlang?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-06T06:02:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just think it may be worthwhile to commit it in writing for sharing.<br /><br />In summary, my decision is only partially based on the technical merit or language features.<br /><br />First take a look back at year 2001. Motivated by the desire to find a better, more reliable way to develop software, I learned and switched to Linux platform in this year. For anyone serious in learning unix family OS,  <span style="font-style: italic;">bash</span>, <span style="font-style: italic;">awk</span>, <span style="font-style: italic;">sed </span>and <span style="font-style: italic;">perl </span>scripting are literally the &ldquo;basic dance steps&rdquo;.<br /><br />Then I moved on to Python (see my first blog if you have plenty of time to waste :&ndash;) ).<br /><br />Now fast forward a few years. From Python, I soon learn about these big names such as <a href="http://www.python.org/%7Eguido/">Guido van Rossum</a> and <a href="http://norvig.com/">Peter Norvig</a> etc, and for some reasons, stumbled upon  <a href="http://www.paulgraham.com/">Paul Graham</a> and his famous essays.<br /><br />One of his famous idea on computer language is: there are reasons why some languages are superior than other languages, and Lisp <span style="font-style: italic;">is </span>the most powerful among them. (Alright, I made the assertion for him, he probably never really put it exactly this way. Did he?)<br /><br />So, convinced by the argument that a language is key to a programmer&rsquo;s productivity, I decided to give Lisp a try. The syntax, or the lack of it, is indeed a challenge, but the concept of &ldquo;code is data, data is code&rdquo; is very powerful. <a href="http://www.gigamonkeys.com/book/macros-standard-control-constructs.html">Macros</a> and <a href="http://www.gigamonkeys.com/book/object-reorientation-generic-functions.html">CLOS </a>are effective techniques in Lisp programming.<br /><br />Fortunately there are a lot of resource.<br /><br />Actually I should put it this way: &ldquo;too much resource&rdquo;.<br /><br />Indeed, if you look at variety in the implementations of mainstream Lisp, and its derivative, Scheme, you will find these choices: Common lisp (clisp), CMUCL (CMU lisp), Kawa (Scheme on JVM), PLT Scheme, Scheme 48 etc&hellip; The list goes on and on.<br /><br />It is the common phenomena of *nix world: the Fragmentation.<br /><br />As a result, for any partitioner in commercial software world, it becomes a hard problem: given limited free time for self-study, we are confronted with these choices:<br /><ul><li>which language (Lisp or Scheme)?</li><li>which version (R5RS or R6RS or some subset, in the case of Scheme)?</li><li>which implementation of the language (the usual portability vs power/library issue)?</li></ul>It makes my research long and tedious. If I bet on a wrong horse, I will lose a lot of valuable time, right? What if I am in a middle of a project and encounter a bug in the lisp/scheme interpreter I am using, will there be adequate community support? What if&hellip;<br /><br />Does the risks justify the potential gain from the use of Lisp/Scheme?<br /><br />Then I discovered Erlang.<br /><br />The following reasons make me think, form my particular situation and career need, Erlang is probably the safest  bet (or most cost-effective investment):<br /><br /><ul><li>It has all the beauty and expressiveness of a functional language</li><li>You gain concurrency for free (built-in support in syntax and kernel)<br /></li><li>You gain fault tolerance for free</li><li>You gain distributed processing for free</li><li>The language and library are robust and battle-tested in demanding Telecom industry.</li><li>It does not suffer from the implementation fragmentation of Lisp/Scheme.</li><li>The language evolution is well controlled (by Ericsson)<br /></li></ul>It is a pragmatic choice from a software builder&rsquo;s point of view.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/204/">&larr; Older</a>
@@ -314,6 +314,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
       </li>
     
@@ -327,10 +331,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
   </ul>
@@ -374,7 +374,7 @@ alt="hit counter"></a></div></noscript>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Anthony Kong -
+  Copyright &copy; 2015 - Anthony Kong -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

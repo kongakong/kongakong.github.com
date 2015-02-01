@@ -4,7 +4,7 @@
   <title><![CDATA[Category: llvm-gcc | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/llvm-gcc/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-18T16:45:50+10:00</updated>
+  <updated>2015-02-01T13:16:54+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,22 +18,14 @@
     <link href="http://www.ahwkong.com/post/2012/01/04/p-15288901020/"/>
     <updated>2012-01-04T09:00:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2012/01/04/p-15288901020</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
-</span><span class='line'>Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File &ldquo;/Users/antkong/wd/python.project/cpython/Lib/io.py&rdquo;, line 60, in&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+    <content type="html"><![CDATA[<p>{% codeblock %}</p>
+
+<p>$ ./python.exe -SE -m sysconfig &mdash;generate-posix-vars
+Fatal Python error: Py_Initialize: can&rsquo;t initialize sys standard streams
+Traceback (most recent call last):
+  File &ldquo;/Users/antkong/wd/python.project/cpython/Lib/io.py&rdquo;, line 60, in</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

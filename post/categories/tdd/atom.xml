@@ -4,7 +4,7 @@
   <title><![CDATA[Category: TDD | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/tdd/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2014-09-18T16:45:50+10:00</updated>
+  <updated>2015-02-01T13:16:54+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,35 +20,20 @@
     <id>http://www.ahwkong.com/post/2013/12/19/tdd-in-objective-c</id>
     <content type="html"><![CDATA[<p>It is my first attempt at testing my JSON handling code:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">ul</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">testReadingJSON</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>  <span class="n">QueQuestionManager</span><span class="o">*</span> <span class="n">qm</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QueQuestionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>  <span class="n">qm</span><span class="p">.</span><span class="n">server_url</span> <span class="o">=</span> <span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;http://localhost:8777/&quot;</span><span class="o">&gt;</span><span class="nl">http:</span><span class="c1">//localhost:8777/&lt;/a&gt;&amp;rdquo;;</span>
-</span><span class='line'>  <span class="p">[</span><span class="n">qm</span> <span class="n">readQuestionnaire</span><span class="p">];</span>
-</span><span class='line'>  <span class="n">NSLog</span><span class="p">(</span><span class="err">@</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&gt;&gt;</span> <span class="o">%</span><span class="err">@</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">qm</span><span class="p">.</span><span class="n">questionnaire</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<ul>
+<li>(void)testReadingJSON
+{
+  QueQuestionManager* qm = [[QueQuestionManager alloc] init];
+  qm.server_url = @&ldquo;<a href="http://localhost:8777/">http://localhost:8777/</a>&rdquo;;
+  [qm readQuestionnaire];
+  NSLog(@&ldquo;>> %@&rdquo;, qm.questionnaire);
+}</li>
+</ul>
+
+
+<p>{% endcodeblock %}</p>
 
 <p>Needless to say it is pretty bad, for the following reasons:</p>
 

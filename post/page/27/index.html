@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="vi is my editor of choice when I need to do some quick editing. When vi edits a file, it will usally create a swp file for recovery purpose. Usually &hellip;">
+  <meta name="description" content="I wanted to convert my old blogs on Blogger to markdown files in Github Pages. I went to the Blogger settings and exported my blog. The result was a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,213 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/03/simple-script-to-convert-blogger-posts-to-github-pages/">Simple Script to Convert Blogger Posts to Github Pages</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-03T00:32:00+10:00" pubdate data-updated="true">Jul 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I wanted to convert my old blogs on Blogger to markdown files in Github Pages. I went to the Blogger settings and exported my blog. The result was a xml file. The xml file from Google is not easy to parse. As far as I know there is no documentation on the structure of the xml file.</p>
+
+<p>After some trial and error, I have come up with this script that can parse the xml file and emit the contents in a set of markdown files:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">xml.dom.minidom</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">xml.dom</span> <span class="kn">import</span> <span class="n">Node</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">re</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">list_text</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">handle_node</span><span class="p">(</span><span class="n">feeds</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">feeds</span><span class="p">:</span>
+</span><span class='line'>        <span class="k">for</span> <span class="n">sf</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">childNodes</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">sf</span><span class="o">.</span><span class="n">nodeType</span> <span class="o">==</span> <span class="n">Node</span><span class="o">.</span><span class="n">ELEMENT_NODE</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">handle_node</span><span class="p">(</span><span class="n">sf</span><span class="o">.</span><span class="n">childNodes</span><span class="p">)</span>
+</span><span class='line'>            <span class="k">elif</span> <span class="n">sf</span><span class="o">.</span><span class="n">nodeType</span> <span class="o">==</span> <span class="n">Node</span><span class="o">.</span><span class="n">TEXT_NODE</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">list_text</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">sf</span><span class="o">.</span><span class="n">parentNode</span><span class="o">.</span><span class="n">nodeName</span><span class="p">,</span> <span class="n">sf</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+</span><span class='line'>                <span class="n">handle_node</span><span class="p">(</span><span class="n">sf</span><span class="o">.</span><span class="n">childNodes</span><span class="p">)</span>
+</span><span class='line'>            <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">handle_node</span><span class="p">(</span><span class="n">sf</span><span class="o">.</span><span class="n">childNodes</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">TMPL</span><span class="o">=</span><span class="s">&quot;&quot;&quot;---</span>
+</span><span class='line'><span class="s">layout: post</span>
+</span><span class='line'><span class="s">title: </span><span class="si">%(title)s</span><span class="s"></span>
+</span><span class='line'><span class="s">date:  </span><span class="si">%(date)s</span><span class="s"></span>
+</span><span class='line'><span class="s">comments: true</span>
+</span><span class='line'><span class="s">categories:</span>
+</span><span class='line'><span class="s">meta: </span>
+</span><span class='line'><span class="s">---</span>
+</span><span class='line'><span class="s">&quot;&quot;&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">gen_post</span><span class="p">(</span><span class="n">list_of_post</span><span class="p">):</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="n">list_of_post</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">post_id</span> <span class="o">=</span> <span class="n">post</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&quot;.*tag:blogger.com.*blog-\d*.settings.*&quot;</span><span class="p">,</span> <span class="n">post_id</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">continue</span> <span class="c"># do not process</span>
+</span><span class='line'>        <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&quot;.*tag:blogger.com.*blog-\d*.layout.*&quot;</span><span class="p">,</span> <span class="n">post_id</span><span class="p">)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">continue</span> <span class="c"># do not process</span>
+</span><span class='line'>        <span class="n">pd</span> <span class="o">=</span> <span class="n">post</span><span class="p">[</span><span class="s">&#39;published&#39;</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">pdd</span> <span class="o">=</span> <span class="n">pd</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">pdt</span> <span class="o">=</span> <span class="n">pd</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">fn</span> <span class="o">=</span> <span class="n">post</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">pdd</span> <span class="o">+</span> <span class="s">&quot;-&quot;</span> <span class="o">+</span> <span class="n">fn</span> <span class="o">+</span><span class="s">&quot;.markdown&quot;</span><span class="p">,</span> <span class="s">&quot;w&quot;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="n">TMPL</span> <span class="o">%</span> <span class="p">{</span><span class="s">&#39;title&#39;</span><span class="p">:</span><span class="n">post</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span> <span class="s">&#39;date&#39;</span><span class="p">:</span><span class="n">pdd</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">pdt</span><span class="p">,</span> <span class="s">&#39;id&#39;</span><span class="p">:</span><span class="n">post</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]})</span>
+</span><span class='line'>        <span class="k">try</span><span class="p">:</span>
+</span><span class='line'>            <span class="n">f</span><span class="o">.</span><span class="n">write</span> <span class="p">(</span><span class="n">post</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;content&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">))</span>
+</span><span class='line'>        <span class="k">except</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">print</span><span class="p">(</span><span class="s">&quot;error with </span><span class="si">%s</span><span class="s">, </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">post</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">],</span> <span class="n">fn</span><span class="p">))</span>
+</span><span class='line'>        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">parse_xml</span><span class="p">():</span>
+</span><span class='line'>    <span class="n">ifile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;blog-06-26-2013.xml&#39;</span><span class="p">)</span> <span class="c"># change input file here</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">dom</span> <span class="o">=</span> <span class="n">xml</span><span class="o">.</span><span class="n">dom</span><span class="o">.</span><span class="n">minidom</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="n">ifile</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">nodes</span> <span class="o">=</span> <span class="n">dom</span><span class="o">.</span><span class="n">childNodes</span>
+</span><span class='line'>    <span class="n">handle_node</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">list_post</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span class='line'>    <span class="n">last_id</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="n">tmp</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">list_text</span><span class="p">:</span>
+</span><span class='line'>        <span class="c"># print &quot;[%s] &gt;\t %s&quot; % (k, v)</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;id&#39;</span><span class="p">:</span>
+</span><span class='line'>            <span class="k">if</span> <span class="n">last_id</span> <span class="ow">and</span> <span class="n">last_id</span> <span class="o">!=</span> <span class="n">v</span><span class="p">:</span>
+</span><span class='line'>                <span class="n">list_post</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+</span><span class='line'>                <span class="n">tmp</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>            <span class="n">last_id</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>            <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;updated&#39;</span><span class="p">:</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;updated&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;title&#39;</span><span class="p">:</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;email&#39;</span><span class="p">:</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;email&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;content&#39;</span><span class="p">:</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;content&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">&#39;published&#39;</span><span class="p">:</span> <span class="n">tmp</span><span class="p">[</span><span class="s">&#39;published&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">return</span> <span class="n">list_post</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span class='line'>    <span class="n">posts</span> <span class="o">=</span> <span class="n">parse_xml</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">gen_post</span><span class="p">(</span><span class="n">posts</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is not very polished. For example, it will not capture the tags of a blog post. But it is good enough for my purpose.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -304,52 +511,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/22/dyld-library-not-loaded/">Dyld: Library Not Loaded</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-22T15:55:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>dyld: Library not loaded: @rpath/SenTestingKit.framework/Versions/A/SenTestingKit
-</span><span class='line'>  Referenced from: /Users/antkong/Library/Developer/Xcode/DerivedData/ebookreader-gplhzhssjudwymcrqpmxxokvhqvn/Build/Products/Debug/ebookreader.app/Contents/MacOS/ebookreader
-</span><span class='line'>  Reason: image not found</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Is it going to be <a href="http://lists.apple.com/archives/xcode-users/2008/May/msg00647.html">the answer</a>?</p>
-
-<blockquote><p>I have found a fix by getting to know what @rpath means. It is a tag placed in the generation of an executable&rsquo;s binary format indicating alternate paths to look for dependencies (including other libraries). By setting the build option &ldquo;runpath search paths&rdquo; to the developer frameworks directory, the executable looks in this place for the sen testing library at run time.</p></blockquote>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/28/">&larr; Older</a>
@@ -367,6 +528,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
       </li>
     
@@ -380,10 +545,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2014/09/18/autorelease-in-swift/">autorelease in swift</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift closure error: Boolean is not Convertible to Void</a>
       </li>
     
   </ul>
@@ -427,7 +588,7 @@ alt="hit counter"></a></div></noscript>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Anthony Kong -
+  Copyright &copy; 2015 - Anthony Kong -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
