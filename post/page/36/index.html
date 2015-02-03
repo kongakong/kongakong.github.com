@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is because I have turned on the flag ‘Native Client GDB-based debugging’. It is not compatible with nexe that are linked with newlib.
-">
+  <meta name="description" content="First, to install, follow the instrument here: http://stackoverflow.com/a/13718915/58129 You may then get a Could not reserve enough space for object &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,48 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/04/17/p-48145048805/">Using Sbt in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-17T07:18:00+10:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First, to install, follow the instrument here:</p>
+
+<p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
+
+<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
+
+<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -279,42 +320,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/12/02/p-37006859461/">What Is Portable Native Client?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T15:33:00+11:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="What%20is%20Portable%20Native%20Client?">http://www.chromium.org/nativeclient/pnacl/building-and-testing-portable-native-client</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/37/">&larr; Older</a>
@@ -332,6 +337,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/02/a-little-catch-with-at-patch/">a little gotcha with @patch</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -345,10 +354,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
       </li>
     
   </ul>

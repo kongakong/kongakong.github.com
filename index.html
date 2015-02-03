@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="After some trial and errors, the best way (as of this writing) to manage cookbooks for vagrant + chef is to use brekshef. You can forget about knife &hellip;">
+  <meta name="description" content="This is my code from mail_api import send_mail def my_func(): # do some work send_mail(to="test@example.com", content="data) # do some more work &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,75 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/02/a-little-catch-with-at-patch/">A Little Gotcha With @patch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-02T16:34:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is my code</p>
+
+<pre><code>from mail_api import send_mail
+
+def my_func():
+    # do some work
+    send_mail(to="test@example.com", content="data)
+    # do some more work
+    return result
+</code></pre>
+
+<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
+
+<pre><code>from mock import patch
+
+  class MyTest(unittest.TestCase):
+
+    @patch('mail_api.send_mail')
+    def test_my_func(self, send_mail):
+      self.assertEquals(my_func(), expected_result)
+</code></pre>
+
+<p>To my surprise an email is still sent out when the test is run!</p>
+
+<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
+
+<pre><code>import mail_api
+
+def my_func():
+    # do some work
+    mail_api.send_mail(to="test@example.com", content="data)
+    # do some more work
+    return result
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -345,42 +414,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/init-chain-rule-in-swift/">Init Chain Rule in Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T16:30:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -396,6 +429,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/02/a-little-catch-with-at-patch/">a little gotcha with @patch</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -409,10 +446,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
       </li>
     
   </ul>

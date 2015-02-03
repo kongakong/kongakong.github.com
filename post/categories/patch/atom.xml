@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: patch | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/patch/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-03T21:00:26+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[a little gotcha with @patch]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/02/a-little-catch-with-at-patch/"/>
+    <updated>2015-02-02T16:34:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/02/a-little-catch-with-at-patch</id>
+    <content type="html"><![CDATA[<p>This is my code</p>
+
+<pre><code>from mail_api import send_mail
+
+def my_func():
+    # do some work
+    send_mail(to="test@example.com", content="data)
+    # do some more work
+    return result
+</code></pre>
+
+<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
+
+<pre><code>from mock import patch
+
+  class MyTest(unittest.TestCase):
+
+    @patch('mail_api.send_mail')
+    def test_my_func(self, send_mail):
+      self.assertEquals(my_func(), expected_result)
+</code></pre>
+
+<p>To my surprise an email is still sent out when the test is run!</p>
+
+<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
+
+<pre><code>import mail_api
+
+def my_func():
+    # do some work
+    mail_api.send_mail(to="test@example.com", content="data)
+    # do some more work
+    return result
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Advantage of iostream: type safety iostream vs iostream.h: isostream has its own namespace.
+  <meta name="description" content="The problem with malloc and free: they don’t know about constructors and destructors
 ">
   
 
@@ -116,6 +116,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/30/p-5997673759/">Item 3: Prefer New and Delete to Malloc and Free</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-30T21:05:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The problem with malloc and free: they don’t know about constructors and destructors</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -271,44 +307,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/30/p-5965954476/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-30T01:05:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Virtual functions are dynamically bound, but default parameters are statically bound.</p>
-
-<p>It means that you may end up invoking a virtual function defined in a derived class but using a default parameter value from a base class</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/143/">&larr; Older</a>
@@ -326,6 +324,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/02/a-little-catch-with-at-patch/">a little gotcha with @patch</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -339,10 +341,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
       </li>
     
   </ul>

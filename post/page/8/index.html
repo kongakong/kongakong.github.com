@@ -9,7 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Q: So, these flight computers on Dragon – there are three on board, and that&rsquo;s for redundancy? A: There are actually six computers. They &hellip;">
+  <meta name="description" content="To get the current time in python 1
+2
+3
+&gt;&gt;&gt; import datetime
+&gt;&gt;&gt; datetime.datetime.now()
+datetime.datetime(2014, 3, 6, 18, 51, 13, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +120,62 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/now-in-objective-c-and-python/">Current Time in Objective-c and Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T18:49:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To get the current time in python</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and in objective-c</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -466,90 +527,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/05/missing-curses-library/">Missing Curses Library</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install ncurses-dev
-</span><span class='line'>Reading package lists... Done
-</span><span class='line'>Building dependency tree       
-</span><span class='line'>Reading state information... Done
-</span><span class='line'>Note, selecting 'libncurses5-dev' instead of 'ncurses-dev'
-</span><span class='line'>The following extra packages will be installed:
-</span><span class='line'>  libtinfo-dev
-</span><span class='line'>Suggested packages:
-</span><span class='line'>  ncurses-doc
-</span><span class='line'>The following NEW packages will be installed:
-</span><span class='line'>  libncurses5-dev libtinfo-dev
-</span><span class='line'>0 upgraded, 2 newly installed, 0 to remove and 107 not upgraded.
-</span><span class='line'>Need to get 328 kB of archives.
-</span><span class='line'>After this operation, 1,452 kB of additional disk space will be used.
-</span><span class='line'>Do you want to continue [Y/n]?</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Other dependency</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install libssl-dev</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do not need them for now</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>jinterface     : No Java compiler found
-</span><span class='line'>odbc           : ODBC library - link check failed</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -567,6 +544,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/02/a-little-catch-with-at-patch/">a little gotcha with @patch</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
@@ -580,10 +561,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/01/13/toastmaster-speech-2/">My attempt at toastmaster speech #2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2014/09/18/init-chain-rule-in-swift/">init chain rule in swift</a>
       </li>
     
   </ul>
