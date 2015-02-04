@@ -191,6 +191,60 @@ Done installing documentation for bundler, bundle after 1 seconds
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
+
+<p>Probably the most elegant style</p>
+
+<pre><code>    d = 
+      b: 1
+      c: 2
+</code></pre>
+
+<p>This also works</p>
+
+<pre><code>    d = { b: 1, c: 2}
+</code></pre>
+
+<p>If you need to span multiple lines:</p>
+
+<pre><code>    d = { b: 1 , \
+      c: 2}
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2015/01/13/toastmaster-speech-2/">My Attempt at Toastmaster Speech #2</a></h1>
     
     
@@ -333,57 +387,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <div class="entry-content"><blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
 
 <p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/swift-ternanry-operators/">Swift Ternanry Operator ?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T01:25:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This will cause a compiler error:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
-</span><span class='line'>let b=4
-</span><span class='line'> 
-</span><span class='line'>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by ';'"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Putting spaces around operators will resolve the compiler error i.e.</p>
-
-<pre><code>let max = a &gt; b ? a : b
-</code></pre>
 </div>
   
   

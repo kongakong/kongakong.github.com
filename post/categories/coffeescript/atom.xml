@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: coffeescript | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/coffeescript/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-04T14:59:00+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[dict in coffeescript]]></title>
+    <link href="http://www.ahwkong.com/post/2015/01/18/dict-in-coffeescript/"/>
+    <updated>2015-01-18T14:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/01/18/dict-in-coffeescript</id>
+    <content type="html"><![CDATA[<p>You can create a dictionary in coffeescript in several ways:</p>
+
+<p>Probably the most elegant style</p>
+
+<pre><code>    d = 
+      b: 1
+      c: 2
+</code></pre>
+
+<p>This also works</p>
+
+<pre><code>    d = { b: 1, c: 2}
+</code></pre>
+
+<p>If you need to span multiple lines:</p>
+
+<pre><code>    d = { b: 1 , \
+      c: 2}
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

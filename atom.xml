@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-04T14:35:22+11:00</updated>
+  <updated>2015-02-04T14:59:00+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -151,6 +151,33 @@ Parsing documentation for bundle-0.0.1
 Installing ri documentation for bundle-0.0.1
 Done installing documentation for bundler, bundle after 1 seconds
 2 gems installed 
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[dict in coffeescript]]></title>
+    <link href="http://www.ahwkong.com/post/2015/01/18/dict-in-coffeescript/"/>
+    <updated>2015-01-18T14:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/01/18/dict-in-coffeescript</id>
+    <content type="html"><![CDATA[<p>You can create a dictionary in coffeescript in several ways:</p>
+
+<p>Probably the most elegant style</p>
+
+<pre><code>    d = 
+      b: 1
+      c: 2
+</code></pre>
+
+<p>This also works</p>
+
+<pre><code>    d = { b: 1, c: 2}
+</code></pre>
+
+<p>If you need to span multiple lines:</p>
+
+<pre><code>    d = { b: 1 , \
+      c: 2}
 </code></pre>
 ]]></content>
   </entry>
@@ -444,19 +471,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     print(d.name())  // print 'D' 
 
     print(C.name(d)) // print 'C' 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ngTouch]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/04/ngtouch/"/>
-    <updated>2014-09-04T16:11:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/04/ngtouch</id>
-    <content type="html"><![CDATA[<p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
-
-<pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
-angular.module('myApp', ['ngTouch']) 
 </code></pre>
 ]]></content>
   </entry>
