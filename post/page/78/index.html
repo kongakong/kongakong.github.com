@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Sometimes my time is spent on things which are mundane and mindless. Today is a good example, 1) I reinstalled XCode 4.3 2) resolved an iphone sync &hellip;">
+  <meta name="description" content="If I have removed a file by accident, and want to reinstate the file form a source code repository, then, in subversion I will do 1
+2 svn update file &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,73 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/04/23/p-21642771050/">If I Have Removed a File by Accident, and Want to Reinstate the File Form a Source Code Repository, Then&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-23T22:01:00+10:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If I have removed a file by accident, and want to reinstate the file form a source code repository, then,</p>
+
+<p>in subversion I will do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>svn update file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in mercurial I will do</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>hg revert file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In git,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>git checkout file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Reference:</p>
+
+<p><a href="mercurial">http://hgbook.red-bean.com/read/mercurial-in-daily-use.html</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -268,42 +336,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/04/09/p-20741837171/">viewDidLoad</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-09T09:04:00+10:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use <em>viewDidLoad</em> to do additional work after the .xib is done loading. Otherwise we should use <em>loadView</em>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/79/">&larr; Older</a>
@@ -321,6 +353,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
       </li>
     
@@ -334,10 +370,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/01/19/best-way-to-install-chefdk/">best way to install chefdk on OSX</a>
       </li>
     
   </ul>
