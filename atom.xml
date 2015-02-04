@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-04T09:11:26+11:00</updated>
+  <updated>2015-02-04T14:35:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Search for javascript code in development console in chrome]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/04/search-for-code-in-dev-console-in-chrome/"/>
+    <updated>2015-02-04T14:32:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/04/search-for-code-in-dev-console-in-chrome</id>
+    <content type="html"><![CDATA[<p>In OS X, do <code>cmd</code> + <code>Opt</code> + <code>F</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Update ChefDK in OSX]]></title>
@@ -449,33 +458,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 <pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
 angular.module('myApp', ['ngTouch']) 
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[semi-colon in swift]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/04/semi-colon-in-swift/"/>
-    <updated>2014-09-04T14:52:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/04/semi-colon-in-swift</id>
-    <content type="html"><![CDATA[<p>The perfered style of semi-colon placement in swift is:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>struct Foo: SomeProtocol {}
-</span><span class='line'>class Foo: SomeProtocol {}
-</span><span class='line'>
-</span><span class='line'>var x: Int
-</span><span class='line'>func foo(x: Int) {}
-</span><span class='line'>func bar(x: (y: Int) -> Int) -> Double {}
-</span><span class='line'>let dict = ["key": value]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>i.e. No space before the semi-colon. One space after the semi-colon</p>
 ]]></content>
   </entry>
   

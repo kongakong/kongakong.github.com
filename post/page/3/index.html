@@ -9,11 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This piece code here: 1
+  <meta name="description" content="In Swift it may be necessary to use autorelease if we are using objective-c objects. e.g. 1
 2
 3
-dismissViewControllerAnimated(true, completion: { () -> Void in let account = Account()
-}) throws exception: Cannot &hellip;">
+4
+5
+autoreleasepool { // do something expensive &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -119,6 +120,56 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/autorelease-in-swift/">Autorelease in Swift</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:01:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {
+</span><span class='line'>
+</span><span class='line'>        // do something expensive without using Obj-C code
+</span><span class='line'>
+</span><span class='line'>    }</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -311,44 +362,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/css-overflow/">Css Overflow</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T12:54:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Valid values of attribute <code>overflow</code> are visible, hidden, scroll, auto, initial and inherit</p>
-
-<p>It controls browser behavior if content overflows an element&rsquo;s box.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -366,6 +379,10 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a>
       </li>
     
@@ -379,10 +396,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
     
       <li class="post">
         <a href="/post/2015/01/19/best-way-to-install-chefdk/">best way to install chefdk on OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/01/18/basic-rvm/">basic rvm</a>
       </li>
     
   </ul>

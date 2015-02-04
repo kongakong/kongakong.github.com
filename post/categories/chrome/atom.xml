@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chrome | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/chrome/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-04T09:11:26+11:00</updated>
+  <updated>2015-02-04T14:35:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Search for javascript code in development console in chrome]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/04/search-for-code-in-dev-console-in-chrome/"/>
+    <updated>2015-02-04T14:32:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/04/search-for-code-in-dev-console-in-chrome</id>
+    <content type="html"><![CDATA[<p>In OS X, do <code>cmd</code> + <code>Opt</code> + <code>F</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Latest update of Google Chrome makes the cpu fan of my mac book pro spin like crazy. Switch back to firefox for now]]></title>

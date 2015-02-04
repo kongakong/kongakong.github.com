@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Some useful links: http://css-tricks.com/which-responsive-images-solution-should-you-use/ https://github.com/scottjehl/picturefill http://www. &hellip;">
+  <meta name="description" content="Do not use timer to control animation frame refresh in html5. Use RequestAnimationFrame instead.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -318,66 +355,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/10/resize-images-in-a-so-post/">Resize Images in a Stackoverflow Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-10T14:18:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Markdown does not allow us to specify the size of an link image.</p>
-
-<p>To get around this restriction it is what I did:</p>
-
-<h1>1. Upload an image as usual</h1>
-
-<p>Stackoverflow will add these lines to your post:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>2. Change the above to an image tag</h1>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
-
-
-<p>Done</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/15/">&larr; Older</a>
@@ -395,6 +372,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a>
       </li>
     
@@ -408,10 +389,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/01/19/best-way-to-install-chefdk/">best way to install chefdk on OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/01/18/basic-rvm/">basic rvm</a>
       </li>
     
   </ul>
