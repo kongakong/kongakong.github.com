@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The best way to install chefdk on OSX for me is to use brew cask: brew cask install chefdk ">
+  <meta name="description" content="After some trial and errors, the best way (as of this writing) to manage cookbooks for vagrant + chef is to use brekshef. You can forget about knife &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,46 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/01/20/chef/">Chef, Brekshelf and Data Bag</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-20T14:41:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
+
+<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
+
+<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -359,42 +399,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/init-chain-rule-in-swift/">Init Chain Rule in Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T16:30:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/3/">&larr; Older</a>
@@ -412,6 +416,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">mandrill is sending me a strange template name</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
       </li>
     
@@ -425,10 +433,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2015/02/02/a-little-catch-with-at-patch/">a little gotcha with @patch</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/01/20/chef/">chef, brekshelf and data bag</a>
       </li>
     
   </ul>

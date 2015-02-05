@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: template | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/template/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-05T20:09:54+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[mandrill is sending me a strange template name]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/05/mandrill-is-sending-me-a-strange-name/"/>
+    <updated>2015-02-05T13:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/05/mandrill-is-sending-me-a-strange-name</id>
+    <content type="html"><![CDATA[<p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
+]]></content>
+  </entry>
+  
+</feed>
