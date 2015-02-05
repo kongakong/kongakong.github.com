@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/chef/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-05T20:09:54+11:00</updated>
+  <updated>2015-02-06T05:40:50+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ochiwa unable to connect to sensu]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/"/>
+    <updated>2015-02-06T05:13:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/06/ochiwa-unable-to-connect-to-sensu</id>
+    <content type="html"><![CDATA[<p>I used chef to install sensu and ochiwa.</p>
+
+<p>In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error</p>
+
+<pre><code>{"Date":"2015-02-05T09:42:23.516606749Z","Level":"warning","Src":{"Func":"github.com/sensu/uchiwa/uchiwa.Build","Line":49},"Output":"API call to \"http://127.0.0.1:4567/stashes\" returned: Get http://127.0.0.1:4567/stashes: dial tcp 127.0.0.1:4567: connection refused"}
+</code></pre>
+
+<p>With help from sensu irc chatroom, I checked</p>
+
+<pre><code>netstat -anp | grep 4567
+</code></pre>
+
+<p>There is no process.</p>
+
+<pre><code>service sensu-api status
+</code></pre>
+
+<p>The service is stopped.</p>
+
+<p>After starting the service, ochiwa can talk to sensu server now.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Update ChefDK in OSX]]></title>

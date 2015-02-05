@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no &hellip;">
+  <meta name="description" content="This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,86 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/01/13/toastmaster-speech-2/">My Attempt at Toastmaster Speech #2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-13T04:33:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely motivated me to look at memorisation techniques.</p>
+
+<h1>The Speech</h1>
+
+<p>You are alone, in the dark. It is coming. It is getting closer. You can almost smell it. You are tired, you are exhausted. You are making a last ditch effort in last 12 hours non-stop. You are anxious because you are not sure if everything gonna turn out as planned. Your enemy is invisible yet its feels so real. I am talking about one of the worst enemies in our work lives: meeting the Deadline!</p>
+
+<p>Does this feeling sound familiar to you? Raise your hand if you had this experience before!</p>
+
+<p>Deadline is called deadline for good reasons. The time is set in stone. The consequence of failure is real. If your project misses the deadline, it could mean a failure to meet your customer expectation. Your organisation can suffer from reputational damage and some heads gonna roll! It could well be yours.</p>
+
+<p>Can we tame this monster?</p>
+
+<p>There is a few things you can do to make it easier to meet the deadlines</p>
+
+<p>First of all, understand the objective of your project! It sounds obvious but it is extremely important.</p>
+
+<p>Imagine you are an explorer and is lost in jungle. You want to get out of it alive. It really does not matter if you know how to clear a path with your machete or how to swing from tree to tree like Tarzan. But if you are heading the wrong direction you will never get out!</p>
+
+<p>Sometimes we are too obsessed with operational details, we forget to ask the big picture question: What do we want to achieve? What is the expected outcome? How will we measure success or failure? These are the questions that we have to ask. These are the questions that set the direction.</p>
+
+<p>Next. Planning. To plan well means we need to identify constraints and limitations we will face in a project.</p>
+
+<p>A typical project has a lot of internal and external dependencies. These dependencies can become constraints and, in some case, even a blocker.</p>
+
+<p>Here is a typical example of a constraint: The new system is dependent on the implementation of a new feature by an external vendor. The vendor does not have the capability to deliver this new feature in your timeframe. So our capability to deliver is constrained by how well the vendor can meet our deadline.</p>
+
+<p>Sometimes a constraint can become a blocker. Say your project requires a key piece of new software which can only be run on an latest version of an operating system. But your internal IT insists that you can only use an older version because of policy.  How are you going to resolve it?</p>
+
+<p>It is important to map out all the potential blockers on the critical path. The failure to do so can bring u unpleasant surprise.</p>
+
+<p>3 Use milestones</p>
+
+<p>Milestone is a technique to break a project down into smaller module. They are good checkpoints for monitoring the health of a project. Once you hit a milestone, it is a good time to pause and check if the original estimate is good, reexamine all the assumption, dependencies and constraints you have identified.</p>
+
+<p>4 Set buffer.</p>
+
+<p>What is buffer? Buffer basically means extra time and resources to prepare for the unexpected. Life is full of unexpected event. Your software vendor may suddenly goes of business; your key employee may become ill and cannot report to work for a while; A sudden change in market condition forces you make some last minute revision… All of these will add pressure on your already tight schedule. If you have not budgeted for these risks in a project, you will be likely end up in a position that you have to scramble to find extra resource and, more often than not, put extra pressure on an already stressed out team.</p>
+
+<p>Burning midnight oil to meet deasline is not a fun experience. Keeping a good and even pace at work is key to avoid burnout. Therefore let me rehash the main points:</p>
+
+<p>Understand the objective; know where you are going
+Have a clear idea of the constraints and the limits &ndash; it can only done well if you understand your task or product well
+Break a project into modules and assign milestones. Each milestone is a checkpoint to review the past performance and adjust the plan and direction.</p>
+
+<p>With these technique you will be able to defeat this monster known as Deadline. After all we work to live, not live to work!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -291,59 +371,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift Closure Error: Boolean Is Not Convertible to Void</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-17T10:50:00+10:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This piece code here:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>dismissViewControllerAnimated(true, completion: { () -> Void in
-</span><span class='line'>    let account = Account()
-</span><span class='line'>})</span></code></pre></td></tr></table></div></figure>
-
-
-<p>throws exception:</p>
-
-<pre><code>Cannot convert the expression's type 'Boolean' to type 'Void'
-</code></pre>
-
-<p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
-
-<p>Adding a <code>return ()</code> as the last expression to the block fixes the problem</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -361,6 +388,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">ochiwa unable to connect to sensu</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">mandrill is sending me a strange template name</a>
       </li>
     
@@ -374,10 +405,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/02/a-little-catch-with-at-patch/">a little gotcha with @patch</a>
       </li>
     
   </ul>
