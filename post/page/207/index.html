@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Problem Definition: Euler Problem 5I am rather happy with this python version because I can basically get it done in about 15 min in total. Some &hellip;">
+  <meta name="description" content="Problem Definition: Euler Problem 4 Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,42 +115,6 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/02/01/2545374392026607944/">Little Erlang Exercise 5</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-02-01T23:17:00+11:00" pubdate data-updated="true">Feb 1<span>st</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=5">Euler Problem 5</a><br /><br />I am rather happy with this python version because I can basically get it done in about 15 min in total. Some useful primitives have been developed in module p3 (See my previous post, <a href="http://www.blogger.com/2008/01/little-erlange-exercise-3_29.html">little erlang exercise 3</a>)<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&ldquo;&rdquo;&ldquo;<br />2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.<br /><br />What is the smallest number that is evenly divisible by all of the numbers from 1 to 20?<br />&rdquo;&ldquo;&rdquo;<br /><br /><br />from p3 import isprime, factorise<br /><br />def product(x, y):<br /> return x * y<br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br /> factors = dict()<br /> for l in [factorise(i) for i in xrange(2, 21)]:<br />     tmp = dict()<br />     # count them<br />     for n in l:<br />         tmp[n] = 1 + tmp.get(n, 0)<br />     # reguster the max frequency of factor<br />     for k, v in tmp.items():<br />         factors[k] = max(factors.get(k, 0), v)<br /><br /> print reduce(product, [pow(k, v) for k,v in factors.items()])<br /><br /></code></pre><br /><br />However, the erlang version took me a considerable time to complete. The problem is mainly to switch from a procedural mindset to a functional mindset.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p5).<br />-import(p3).<br />-export([main/0, get_factor_freq_lst/1]).<br /><br />%% run this to print the result<br />main() &ndash;><br />  L = [ p3:factorise(X) || X &lt;&ndash; lists:seq(1, 20)],   <br />  io:format(&ldquo;~f~n&rdquo;, [product(get_factor_freq(L))]).   <br /><br />get_factor_freq(L) &ndash;><br />  Dict = dict:new(),<br />  get_factor_freq(L, Dict).<br /><br />%% spec: H, T are list of list of number<br />%% e.g. [ [N1, N1, N2&hellip;], [N1, N2&hellip;], &hellip;]<br />get_factor_freq([H|T], Dict) &ndash;><br />  Dist = get_factor_freq_lst(H),<br />  D1 = dict:from_list(Dist),<br />  D2 = dict:merge(fun(K, X, Y) &ndash;> update_if_bigger(K, X, Y) end, D1, Dict),<br />  get_factor_freq(T, D2);<br />get_factor_freq([], Dict) &ndash;><br />  dict:to_list(Dict).  %% has to convert to list<br /><br />%% Aux function<br />update_if_bigger(<em>, Initial, NewValue) when Initial &lt; NewValue &ndash;><br />  NewValue;<br />update_if_bigger(</em>, Initial, _) &ndash;><br />  Initial.<br /><br />%% This function assumes the list is sorted<br />%% This function is to delinate a list of number<br />%% into a list of {Key, Frequency}<br />get_factor_freq_lst([A|T]) when is_integer(A) &ndash;><br />  get_factor_freq_lst([{A, 1}|T]);<br />get_factor_freq_lst([{A, N}, A|T]) when is_integer(A) &ndash;><br />  get_factor_freq_lst([{A, N + 1}|T]);<br />get_factor_freq_lst([{A, N}, B|T]) when is_integer(A), is_integer(B), A /= B &ndash;><br />  get_factor_freq_lst([{B, 1}|T] ++ [{A, N}] );<br />get_factor_freq_lst(L) &ndash;><br />  L.<br /><br />%% find the product of a list of tuple {Base, Power)<br />product(L) &ndash;><br />  product(L, 1).<br />product([], Sum) &ndash;><br />  Sum;<br />product([{Base, Power}|T], Sum) &ndash;><br />  product(T, Sum * math:pow(Base, Power)).<br /><br /><br /></code></pre></p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -717,6 +681,42 @@ alt="hit counter"></a></div></noscript>
 
 
   <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=2">Euler Problem 2</a><br /><br />In order to solve this problem in python, I have used the yield keyword to implements a generator to provide a sequence of Fibonacci&rsquo;s numbers. I think I can do a better work in using list comprehension in the main routine to filter and add up the even numbers, but the current version is basically good enough.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code>&ldquo;&rdquo;&ldquo;<br /><br />Euler 2<br /><br />Each new term in the Fibonacci sequence is generated by adding the previous two terms.<br />By starting with 1 and 2, the first 10 terms will be:<br /><br />1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &hellip;<br /><br />Find the sum of all the even-valued terms in the sequence which<br />do not exceed one million.<br /><br /><br />&rdquo;&ldquo;&rdquo;<br />def gen_fib_seq():<br />a = 1<br />b = 2<br />yield a<br />yield b<br />try:<br /> while 1:<br />   c = a + b<br />   a, b = b, c<br />   yield c<br />except StopIteration:<br /> pass<br /><br /><br />if <strong>name</strong> == &ldquo;<strong>main</strong>&rdquo;:<br />b = 0<br />onemillion = 1000000<br />for x in gen_fib_seq():<br /> if x % 2 == 0:<br />   if b + x &lt; onemillion:<br />     b = b + x<br />   else:<br />     break<br />print b<br /><br /><br /></code></pre><br /><br /><br /><br />The erlang turns out to be even simpler than I thought. First of all, because every object or operation can be abstracted as a process, I do not need special keyword &lsquo;yield&rsquo; to create a special object &ndash; generator. Furthermore the guard clause of  function <span style="font-weight: bold;">acc </span>remove the need to put in any &lsquo;if&rsquo; or &lsquo;break&rsquo; to do, for example, the even number testing as in the python version.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code>-module(p2).<br />-export([main/0]).<br /><br />start() &ndash;&gt; spawn(fun() &ndash;&gt; fib(0, 1) end).<br /><br />fib(N, M) &ndash;&gt;<br />receive<br /> {Pid, next} &ndash;&gt;<br />   Pid ! {self(), N + M},<br />   fib(M, N+ M)<br />end.<br /><br />get_next_fib(Pid) &ndash;&gt;<br />Pid ! {self(), next},<br />receive<br /> {<em>, N} &ndash;&gt;<br />   %% io:format(&ldquo;~p~n&rdquo;, [N])<br />   N<br />end.<br /><br />%% accumulator<br />acc(N, Pid, Acc) when (N rem 2) =:= 1 &ndash;&gt;<br /> N1 = get_next_fib(Pid),<br /> acc(N1, Pid, Acc);<br />acc(N, Pid, Acc) when N + Acc &lt; 1000000 &ndash;&gt;<br /> N1 = get_next_fib(Pid),<br /> acc(N1, Pid, Acc + N);<br />acc(</em>, _, Acc) &ndash;&gt;<br /> Acc.<br /><br /><br />%%%<br />%%% Program main()<br />%%%<br />main() &ndash;&gt;<br /> Pid = start(),<br /> Acc = acc(1, Pid, 0),<br /> Acc.<br /><br /><br /></code></pre></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/11/4096780570486567751/">Little Erlange Exercise 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-11T13:05:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=1">Euler Problem 1</a><br /><br />Python version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br />print reduce(lambda x, y : x + y,<br /> filter(lambda x: x % 3 == 0 or x % 5 == 0,<br /> range(1, 1001)))<br /><br /></pre><br /><br />Erlang version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br /><code><br />-module(p1).<br />-export([pr_sum/0]). %% print sum<br /><br />pr_sum() &ndash;><br />      L = lists:seq(1, 1000),<br />      L1 = [ X ||X &lt;&ndash; L, (X rem 3) == 0 orelse (X rem 5) == 0],<br />      sum(L1). <br /><br />sum(L) &ndash;> sum(L, 0).<br />sum([], Acc) &ndash;> Acc;<br />sum([H|T], Acc) &ndash;> sum(T, Acc + H).<br /></code></pre></p>
 </div>
   
   
