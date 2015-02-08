@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="HTML is not case-sensitive but XHTML is
-">
+  <meta name="description" content="Exercise 2.1 Write a function suffixes of type a list &ndash;> a list of list that takes a list xs and returns a list of all the suffixes of xs in &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,70 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/08/27/ex-1/">Ex 2.1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-27T10:02:00+10:00" pubdate data-updated="true">Aug 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Exercise 2.1</strong> Write a function suffixes of type a list &ndash;> a list of list that takes a list xs and returns a list of all the suffixes of xs in decreasing order of length. For example,</p>
+
+<pre><code>suffixes [1,2,3,4] = [[1,2,3,4], [2,3,4], [3,4], [4], [ ] ]
+</code></pre>
+
+<p>Show that the resulting list of suffixes can be generated in O(n) time and represented in O(n) space.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">e2_1</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">suffixes</span><span class="o">/</span><span class="mi">1</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">L</span><span class="p">,</span> <span class="p">[]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">([</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">],</span> <span class="nv">R</span><span class="p">)</span>
+</span><span class='line'>    <span class="o">-&gt;</span> <span class="n">suffixes</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">[[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">]|</span><span class="nv">R</span><span class="p">]);</span>
+</span><span class='line'><span class="nf">suffixes</span><span class="p">([],</span> <span class="nv">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">([[]|</span><span class="nv">R</span><span class="p">]).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -407,64 +470,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/31/design-pattern/">Design Pattern</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-31T16:43:00+11:00" pubdate data-updated="true">Mar 31<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>From p63 of <a href="http://norvig.com/design-patterns/design-patterns.pdf">the Design Pattern Slide</a> by Peter Norvig.</p>
-
-<p>It sounds like a very good advise.</p>
-
-<h3>Design Strategy: English Translation</h3>
-
-<p>-  To insure that your program says what you mean:</p>
-
-<p>(1) Start with English description</p>
-
-<p>(2) Write code from description</p>
-
-<p>(3) Translate code back to English; compare to (1)</p>
-
-<p>Example: (1), (2) from a Lisp textbook
-(1) “Given a list of monsters, determine the number
- that are swarms.”</p>
-
-<p>(2) See next slide</p>
-
-<p>(3) “Given a list of monsters, produce a 1 for a
- monster whose type is swarm, and a 0 for others.
- Then add up the numbers.”</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/8/">&larr; Older</a>
@@ -482,6 +487,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
@@ -495,10 +504,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
       </li>
     
   </ul>

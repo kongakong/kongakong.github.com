@@ -9,12 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In Swift it may be necessary to use autorelease if we are using objective-c objects. e.g. 1
+  <meta name="description" content="This will cause a compiler error: 1
 2
 3
 4
-5
-autoreleasepool { // do something expensive &hellip;">
+let a=3
+let b=4 let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -120,6 +120,57 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/swift-ternanry-operators/">Swift Ternanry Operator ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:25:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will cause a compiler error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
+</span><span class='line'>let b=4
+</span><span class='line'> 
+</span><span class='line'>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by ';'"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Putting spaces around operators will resolve the compiler error i.e.</p>
+
+<pre><code>let max = a &gt; b ? a : b
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -324,44 +375,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
-
-<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/5/">&larr; Older</a>
@@ -379,6 +392,10 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
@@ -392,10 +409,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
     
       <li class="post">
         <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
       </li>
     
   </ul>

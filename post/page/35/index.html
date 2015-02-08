@@ -9,7 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away. It usually works great… until you &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+$ brew update error: Your local changes to the following files would be overwritten by merge: Library/Formula/erlang.rb Please, commit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +121,64 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/15/p-50445623013/">Brew Local Modification Error and Solution</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-15T07:33:00+10:00" pubdate data-updated="true">May 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>       error: Your local changes to the following files would be overwritten by  merge:
+</span><span class='line'>        Library/Formula/erlang.rb
+</span><span class='line'>      Please, commit your changes or stash them before you can merge.
+</span><span class='line'>      Aborting
+</span><span class='line'>      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Solution</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd `brew --prefix`
+</span><span class='line'>$ cd Cellar/erlang/
+</span><span class='line'>$ git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -348,83 +412,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/08/p-49924605254/">XPath, Python and Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-08T20:00:00+10:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just feel that python is easier for XML manipulation.</p>
-
-<p>e.g.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
-</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;digg-science-rss1.xml&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Very concise.</p>
-
-<p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>...
-</span><span class='line'>      #xmlText{
-</span><span class='line'>          parents = [{item,16},{channel,2},{rss,1}],
-</span><span class='line'>          pos = 3,language = [],value = "\n   ",type = text},
-</span><span class='line'>      #xmlElement{
-</span><span class='line'>          name = link,expanded_name = link,nsinfo = [],
-</span><span class='line'>          namespace = 
-</span><span class='line'>              #xmlNamespace{
-</span><span class='line'>                  default = [],
-</span><span class='line'>                  nodes =
-</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/36/">&larr; Older</a>
@@ -442,6 +429,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
@@ -455,10 +446,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
       </li>
     
   </ul>

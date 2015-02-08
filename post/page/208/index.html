@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content=" ">
+  <meta name="description" content="Problem definition: Euler Problem 1Python versionprint reduce(lambda x, y : x + y, filter(lambda x: x % 3 == 0 or x % 5 == 0, range(1, 1001)))Erlang &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/11/4096780570486567751/">Little Erlange Exercise 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-11T13:05:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=1">Euler Problem 1</a><br /><br />Python version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br />print reduce(lambda x, y : x + y,<br /> filter(lambda x: x % 3 == 0 or x % 5 == 0,<br /> range(1, 1001)))<br /><br /></pre><br /><br />Erlang version<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><br /><code><br />-module(p1).<br />-export([pr_sum/0]). %% print sum<br /><br />pr_sum() &ndash;><br />      L = lists:seq(1, 1000),<br />      L1 = [ X ||X &lt;&ndash; L, (X rem 3) == 0 orelse (X rem 5) == 0],<br />      sum(L1). <br /><br />sum(L) &ndash;> sum(L, 0).<br />sum([], Acc) &ndash;> Acc;<br />sum([H|T], Acc) &ndash;> sum(T, Acc + H).<br /></code></pre></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -261,42 +297,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2007/09/14/7492504578198141841/">Erlang Syntax 2 - Pattern Matching and Assignment</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-09-14T17:45:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I think it is probably a typical experience for any beginner of Erlang: The equal sign in Erlang actually works differently comparing most other imperative mainstream application.  I were a little bit surprised when I first realized the subtle difference.<br /><br /><br />In erlang, the equal sign is actually an pattern matching  operator.  For example,<br /><br /><span style="font-family:courier new;">[H|T] = [0, 1, 2, 3, 4]</span><br /><br />In the case, H is actually matched with the head of the list [0..4]. Although it effectively initialised the values of variable H and T, it is fundamentally a different concept.<br /><br />Another application of this language feature is that it serves as a mean to enforce assertion. For example,<br /><br /><span style="font-family: courier new;">ok = module:func().</span><br /><br />If func return an atom <span style="font-weight: bold;">failure</span> instead of <span style="font-weight: bold;">ok</span>, an exception will be automatically generated.<br /><br />Isn&rsquo;t it neat?</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/209/">&larr; Older</a>
@@ -314,6 +314,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
@@ -327,10 +331,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
       </li>
     
   </ul>
