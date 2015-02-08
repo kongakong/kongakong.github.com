@@ -9,17 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is the full error message: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25 0:09.25 gstreamer-app-0.10 0:09. &hellip;">
+  <meta name="description" content="Here is the full error message: 1
+configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory Solution: sudo apt-get install libxt- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -125,6 +116,48 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach Problem: Could Not Compile Basic X Program</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T20:51:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here is the full error message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: <code>sudo  apt-get install libxt-dev</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -352,53 +385,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to Do a Multi-line String in Objective-c</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-19T07:33:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here is an example:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="s">@&quot;{&quot;</span> \
-</span><span class='line'>    <span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
-</span><span class='line'><span class="s">    &quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/20/">&larr; Older</a>
@@ -416,6 +402,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">ochiwa unable to connect to sensu</a>
       </li>
     
@@ -429,10 +419,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a>
       </li>
     
   </ul>

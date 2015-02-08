@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a &hellip;">
+  <meta name="description" content="You can create a dictionary in coffeescript in several ways: Probably the most elegant style d = b: 1 c: 2 This also works d = { b: 1, c: 2} If you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,60 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
+
+<p>Probably the most elegant style</p>
+
+<pre><code>    d = 
+      b: 1
+      c: 2
+</code></pre>
+
+<p>This also works</p>
+
+<pre><code>    d = { b: 1, c: 2}
+</code></pre>
+
+<p>If you need to span multiple lines:</p>
+
+<pre><code>    d = { b: 1 , \
+      c: 2}
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -321,56 +375,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/autorelease-in-swift/">Autorelease in Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T01:01:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {
-</span><span class='line'>
-</span><span class='line'>        // do something expensive without using Obj-C code
-</span><span class='line'>
-</span><span class='line'>    }</span></code></pre></td></tr></table></div></figure>
-
-
-<p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -388,6 +392,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">ochiwa unable to connect to sensu</a>
       </li>
     
@@ -401,10 +409,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Problem Definition: Euler Problem 3 Obviously, these scripts did not actually implement the solution. The problem statement required to pick the &hellip;">
+  <meta name="description" content="Problem Definition: Euler Problem 4 Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,130 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/01/31/8422387224070078892/">Little Erlang Exercise 4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-31T21:37:00+11:00" pubdate data-updated="true">Jan 31<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;amp;id=4">Euler Problem 4</a></p>
+
+<p>Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet handy.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># A palindromic number reads the same both ways. The largest palindrome</span>
+</span><span class='line'><span class="c"># made from the product of two 2-digit numbers is 9009 = 91 x 99.</span>
+</span><span class='line'><span class="c"># </span>
+</span><span class='line'><span class="c"># Find the largest palindrome made from the product of two 3-digit numbers.</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">isPalindromic</span><span class="p">(</span><span class="n">Num</span><span class="p">):</span>
+</span><span class='line'>  <span class="c">#  For string reversal, pls check this url:</span>
+</span><span class='line'>  <span class="c">#</span>
+</span><span class='line'>  <span class="c">#    http://www.python.org/doc/2.3.5/whatsnew/section-slices.html</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">N</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">Num</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">div</span><span class="p">,</span> <span class="n">mod</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">mod</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c"># odd</span>
+</span><span class='line'>    <span class="n">fh</span> <span class="o">=</span> <span class="n">N</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+</span><span class='line'>    <span class="n">sh</span> <span class="o">=</span> <span class="n">N</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="p">:]</span>
+</span><span class='line'>    <span class="c"># print “%s %s” % (fh, sh)</span>
+</span><span class='line'>  <span class="k">else</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">fh</span> <span class="o">=</span> <span class="n">N</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+</span><span class='line'>    <span class="n">sh</span> <span class="o">=</span> <span class="n">N</span><span class="p">[</span><span class="n">l</span><span class="o">/</span><span class="mi">2</span><span class="p">:]</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">fh</span> <span class="o">==</span> <span class="n">sh</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>  <span class="n">g</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span> <span class="p">]</span>
+</span><span class='line'>  <span class="k">print</span> <span class="nb">max</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">isPalindromic</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">g</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here comes an erlang version. In this rare occasion, erlang runs faster than python. It is probably because, first of all, the list comprehension I used in erlang produces a smaller list. Secondly the test of palindromic is more straightforward in the erlang version.</p>
+
+<p>I will revisit the python version, later, when I get a bit more time.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">p4</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">findLargestProduct</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">isPalindromic</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_list</span><span class="p">(</span><span class="nv">N</span><span class="p">)</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="nv">N</span> <span class="o">==</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">reverse</span><span class="p">(</span><span class="nv">N</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">findLargestProduct</span><span class="p">()</span> <span class="err">–</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="nv">List</span> <span class="o">=</span> <span class="p">[</span><span class="nv">X</span> <span class="o">*</span> <span class="nv">Y</span> <span class="p">||</span> <span class="nv">X</span> <span class="o">&lt;</span><span class="err">–</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">999</span><span class="p">),</span>
+</span><span class='line'>                   <span class="nv">Y</span> <span class="o">&lt;</span><span class="err">–</span> <span class="nn">lists</span><span class="p">:</span><span class="nf">seq</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">999</span><span class="p">),</span>
+</span><span class='line'>                   <span class="n">isPalindromic</span><span class="p">(</span><span class="nb">integer_to_list</span><span class="p">(</span><span class="nv">X</span> <span class="o">*</span> <span class="nv">Y</span><span class="p">))],</span>
+</span><span class='line'>  <span class="nn">lists</span><span class="p">:</span><span class="nf">max</span><span class="p">(</span><span class="nv">List</span><span class="p">).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -600,43 +724,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/01/11/2642626887724082510/">Little Erlang Exercise 1 (Template)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-11T11:55:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><table style="color: rgb(51, 255, 51);font-family:courier new;background-color: rgb(0, 0, 0);"><br /><tr><td><br /></td></tr><br /></table>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/208/">&larr; Older</a>
@@ -654,6 +741,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">ochiwa unable to connect to sensu</a>
       </li>
     
@@ -667,10 +758,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for javascript code in development console in chrome</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a>
       </li>
     
   </ul>

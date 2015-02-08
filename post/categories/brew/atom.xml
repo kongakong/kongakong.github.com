@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brew | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/brew/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-06T05:40:50+11:00</updated>
+  <updated>2015-02-08T11:00:56+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[brew and cast]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/08/brew-and-cast/"/>
+    <updated>2015-02-08T10:58:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/08/brew-and-cast</id>
+    <content type="html"><![CDATA[<p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
+
+<pre><code>brew install cask
+</code></pre>
+
+<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
+
+<p>To install <code>brew cask</code>, it is the command:</p>
+
+<pre><code>brew tap caskroom/cask
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to install pygame in osx]]></title>
@@ -123,37 +142,6 @@
 <p>vs brew cflags</p>
 
 <p>``</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Brew symlink exception]]></title>
-    <link href="http://www.ahwkong.com/post/2011/12/31/p-15045964017/"/>
-    <updated>2011-12-31T09:01:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2011/12/31/p-15045964017</id>
-    <content type="html"><![CDATA[<p>Tried to install erlang. Got this error message</p>
-
-<pre><code>$ brew install erlang
-==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz
-######################################################################## 100.0%
-==&gt; Pouring erlang-R14B04.bottle.tar.gz
-ln: liberts_r.a: Permission denied
-Error: The linking step did not complete successfully
-The formula built, but is not symlinked into /usr/local
-You can try again using `brew link erlang'
-==&gt; Summary
-/usr/local/Cellar/erlang/R14B04: 6978 files, 261M
-</code></pre>
-
-<p>Tried the following but did not work</p>
-
-<pre><code>$ brew cleanup erlang; brew unlink erlang; brew link erlang
-Removing /usr/local/Cellar/erlang/R14B02...
-Removing /usr/local/Cellar/erlang/R14B03...
-Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
-</code></pre>
-
-<p>sudo unlink and link fixed the issue finally</p>
 ]]></content>
   </entry>
   
