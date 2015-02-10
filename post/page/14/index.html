@@ -9,11 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my original code. It does the job and put a specialised view into a cell of a UICollectionView 1
-2
-3
-4
-5 TT2TimeViewController* controller &hellip;">
+  <meta name="description" content="This is an error message of a runtime exception thrown by NSCalendar: I mean really, what do you think that operation is supposed to mean with a nil &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -119,6 +115,50 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">Chastised by a CoreFoundation Class</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-12T10:50:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -324,55 +364,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/29/bid-ask-spread/">Bid-ask Spread and Swap Spread</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-29T08:11:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For a 5-year swap, for example, a bank’s swap desk might quote the following:</p>
-
-<pre><code>Floating-rate payer: pay 6-month LIBOR
-receive a fixed rate of 5.19 percent
-
-Fixed-rate payer: pay a fixed rate of 5.25 percent
-receive 6-month LIBOR
-</code></pre>
-
-<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p>
-
-<p>The fixed rate is always set at a spread over the government bond yield curve and is often quoted that way. Say the 5-year Treasury is trading at a yield of 4.88 percent. The 5-year swap bid and offer rates in the example are 31 basis points and 37 basis points, respectively, above this yield, and the bank’s swap trader could quote the swap rates as a swap spread: 37–31. This means that the bank would be willing to enter into a swap in which it paid 31 basis points above the benchmark yield and received LIBOR or one in which it received 37 basis points above the yield curve and paid LIBOR.</p>
-
-<p>(Quoted from &lsquo;Fixed Income Securities and Derivatives Handbook Analysis and Valuation&rsquo; )</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/15/">&larr; Older</a>
@@ -390,6 +381,10 @@ receive 6-month LIBOR
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
       </li>
     
@@ -403,10 +398,6 @@ receive 6-month LIBOR
     
       <li class="post">
         <a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">mandrill is sending me a strange template name</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a>
       </li>
     
   </ul>

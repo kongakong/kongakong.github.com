@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-08T19:50:29+11:00</updated>
+  <updated>2015-02-11T05:27:31+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Providing mysqld password to chef provisioner in vagrant]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/11/mysqld-password-and-chef/"/>
+    <updated>2015-02-11T05:04:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/11/mysqld-password-and-chef</id>
+    <content type="html"><![CDATA[<p>I add a chef <code>mysqld</code> receipt to the Vagrant file and here is the error from <code>vagrant up</code>:</p>
+
+<pre><code>    ==&gt; default: Required argument password is missing!
+    ==&gt; default:
+    ==&gt; default: Cookbook Trace:
+    ==&gt; default: ---------------
+    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:26:in `block in from_file'
+    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:25:in `from_file'
+    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/default.rb:22:in `from_file'
+    ==&gt; default:
+    ==&gt; default: Relevant File Content:
+    ==&gt; default: ----------------------
+    ==&gt; default: /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:
+    ==&gt; default:
+    ==&gt; default:  19:  #
+    ==&gt; default:  20:
+    ==&gt; default:
+    ==&gt; default:  21:  # Configure mysql/mariadb according to attributes
+    ==&gt; default:  22:  mysqld 'default'
+    ==&gt; default:  23:
+    ==&gt; default:  24:  # Set password according to attribute, if set
+    ==&gt; default:  25:  mysqld_password 'root' do
+    ==&gt; default:  26&gt;&gt;   password node['mysqld']['root_password']
+    ==&gt; default:
+    ==&gt; default:  27:    only_if { node['mysqld']['root_password'] }
+    ==&gt; default:  28:  end
+    ==&gt; default:  29:
+</code></pre>
+
+<p>Solution: Add this to set the <code>root_password</code>:</p>
+
+<pre><code>chef.json = {
+  :mysqld   =&gt; {
+    :root_password =&gt; "test"
+  }
+}
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cannot find a resource matching ruby_block[sensu_service_trigger]]]></title>
@@ -487,30 +532,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 </code></pre>
 
 <p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Unrecognized selector -replacementObjectForKeyedArchiver: ]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/"/>
-    <updated>2014-09-12T22:31:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver</id>
-    <content type="html"><![CDATA[<p>Here is the code in question:</p>
-
-<pre><code>class Something: NSCoding {
-    ...
-
-let smth = Something() 
-let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
-</code></pre>
-
-<p>It throws this exception:</p>
-
-<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
-Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
-</code></pre>
-
-<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
 ]]></content>
   </entry>
   
