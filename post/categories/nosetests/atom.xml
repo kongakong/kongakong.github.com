@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: nosetests | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/nosetests/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-13T11:41:09+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[nosetests --failed keeps picking up removed test]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/"/>
+    <updated>2015-02-13T11:38:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test</id>
+    <content type="html"><![CDATA[<p>When I run</p>
+
+<pre><code>nosetests -v --failed
+</code></pre>
+
+<p>I keep getting this exception:</p>
+
+<pre><code>    #40 Failure: ImportError (No module named test_share_link2) ... ERROR
+
+    ======================================================================
+    ERROR: Failure: ImportError (No module named test_share_link2)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/loader.py", line 414, in loadTestsFromName
+        addr.filename, addr.module)
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
+        return self.importFromDir(dir_path, fqname)
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 79, in importFromDir
+        fh, filename, desc = find_module(part, path)
+    ImportError: No module named test_share_link2
+</code></pre>
+
+<p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
+
+<p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
+]]></content>
+  </entry>
+  
+</feed>

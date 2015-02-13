@@ -9,47 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="There are some failures and errors: 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41 &hellip;">
+  <meta name="description" content="These are steps for installing pygame into OSX Maverick brew install sdl sdl_image sdl_mixer sdl_ttf portmidi
+Download and install XQuartz. It is a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -155,6 +116,63 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/04/how-to-install-pygame-in-osx/">How to Install Pygame in Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-04T22:52:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>These are steps for installing pygame into OSX Maverick</p>
+
+<ul>
+<li><p><code>brew install sdl sdl_image sdl_mixer sdl_ttf  portmidi</code></p></li>
+<li><p>Download and install <code>XQuartz</code>. It is a dependency of package <code>smpeg</code></p></li>
+<li><p>Install <code>smpeg</code></p></li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew tap homebrew/headonly
+</span><span class='line'>brew install --HEAD smpeg</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>Use pip to install pygame: <code>pip install hg+http://bitbucket.org/pygame/pygame</code></p></li>
+<li><p>Use <code>python -m pygame.tests</code> for test</p></li>
+</ul>
+
+
+<p>(This is based on the bug report <a href="https://bitbucket.org/pygame/pygame/issue/82/homebrew-on-leopard-fails-to-install">here</a>)</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1162,78 +1180,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/04/building-erlang-r16b02/">Building Erlang R16B02</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-04T07:50:00+11:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this at the end of configure</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>*********************************************************************
-</span><span class='line'>**********************  APPLICATIONS INFORMATION  *******************
-</span><span class='line'>*********************************************************************
-</span><span class='line'>
-</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
-</span><span class='line'>
-</span><span class='line'>*********************************************************************
-</span><span class='line'>*********************************************************************
-</span><span class='line'>**********************  DOCUMENTATION INFORMATION  ******************
-</span><span class='line'>*********************************************************************
-</span><span class='line'>
-</span><span class='line'>documentation  : 
-</span><span class='line'>                 fop is missing.
-</span><span class='line'>                 Using fakefop to generate placeholder PDF files.
-</span><span class='line'>
-</span><span class='line'>*********************************************************************</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/24/">&larr; Older</a>
@@ -1251,6 +1197,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
       </li>
     
@@ -1264,10 +1214,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">ochiwa unable to connect to sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">mandrill is sending me a strange template name</a>
       </li>
     
   </ul>

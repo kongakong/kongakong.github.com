@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Getting to understand more about the role of rootViewController
+  <meta name="description" content="Trying to add SplitViewController to self.window as a RootViewController. STILl not working. Need to work on the XIB magic
 ">
   
 
@@ -116,6 +116,44 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/17/p-5546012348/">Trying to Add SplitViewController to &#8220;self.window&#8220; as a RootViewController. STILl Not Working.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-17T01:45:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying to add SplitViewController to <code>self.window</code> as a RootViewController. STILl not working.</p>
+
+<p>Need to work on the XIB magic</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -261,51 +299,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449551106/">Higher Order Function in Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-13T23:38:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a></p>
-
-<p><code>math</code> module contains a <code>sqrt</code> function, but
-can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order function.</p>
-
-<p>Instead, we can wrap it with a <code>fun</code>:</p>
-
-<pre><code>1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]). 
-[3.00000,4.00000,5.00000] 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/153/">&larr; Older</a>
@@ -323,6 +316,10 @@ can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
       </li>
     
@@ -336,10 +333,6 @@ can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order 
     
       <li class="post">
         <a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">ochiwa unable to connect to sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">mandrill is sending me a strange template name</a>
       </li>
     
   </ul>

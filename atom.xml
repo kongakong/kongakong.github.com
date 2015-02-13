@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-11T05:27:31+11:00</updated>
+  <updated>2015-02-13T11:41:09+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[nosetests --failed keeps picking up removed test]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/"/>
+    <updated>2015-02-13T11:38:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test</id>
+    <content type="html"><![CDATA[<p>When I run</p>
+
+<pre><code>nosetests -v --failed
+</code></pre>
+
+<p>I keep getting this exception:</p>
+
+<pre><code>    #40 Failure: ImportError (No module named test_share_link2) ... ERROR
+
+    ======================================================================
+    ERROR: Failure: ImportError (No module named test_share_link2)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/loader.py", line 414, in loadTestsFromName
+        addr.filename, addr.module)
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
+        return self.importFromDir(dir_path, fqname)
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 79, in importFromDir
+        fh, filename, desc = find_module(part, path)
+    ImportError: No module named test_share_link2
+</code></pre>
+
+<p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
+
+<p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Providing mysqld password to chef provisioner in vagrant]]></title>
@@ -54,6 +87,11 @@
     :root_password =&gt; "test"
   }
 }
+</code></pre>
+
+<p>Now you can connect to the mysql server by running</p>
+
+<pre><code> mysql -u root -p 
 </code></pre>
 ]]></content>
   </entry>
@@ -510,28 +548,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 <p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
 
 <p>Adding a <code>return ()</code> as the last expression to the block fixes the problem</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Values of type NSInteger should not be used as format arguments]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/"/>
-    <updated>2014-09-14T18:01:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments</id>
-    <content type="html"><![CDATA[<p>In this example,</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSInteger val = 15000;
-</span><span class='line'>    NSLog(@"%i", val);</span></code></pre></td></tr></table></div></figure>
-
-
-<p>XCode will flag this error</p>
-
-<pre><code>Values of type "NSInteger" should not be used as format arguments: add an explicit cast to 'long' instead.
-</code></pre>
-
-<p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
 ]]></content>
   </entry>
   
