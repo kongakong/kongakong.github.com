@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: github | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/github/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-14T01:09:46+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[ssh forwarding in vagrant and private github repository]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/13/ssh-forwarding/"/>
+    <updated>2015-02-13T16:23:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/13/ssh-forwarding</id>
+    <content type="html"><![CDATA[<p>First in host OS (Mac OSX in my case), run</p>
+
+<pre><code>ssd-add /path/to/githubkey
+</code></pre>
+
+<p>In the <code>.ssh/config</code>, add these lines:</p>
+
+<pre><code>    Host           github
+    HostName       github.com
+    IdentityFile   /path/to/githubkey
+</code></pre>
+
+<p>Then enable port forwarding in vagrant VM</p>
+
+<pre><code>Vagrant.configure("2") do |config|
+  config.ssh.forward_agent = true
+</code></pre>
+
+<p>After you have run <code>vagrant up</code>, you can test the connection by running</p>
+
+<pre><code>ssh -T git@github.com
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
