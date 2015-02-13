@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vagrant | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/vagrant/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T01:09:46+11:00</updated>
+  <updated>2015-02-14T10:52:13+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,9 @@
     <link href="http://www.ahwkong.com/post/2015/02/13/ssh-forwarding/"/>
     <updated>2015-02-13T16:23:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/02/13/ssh-forwarding</id>
-    <content type="html"><![CDATA[<p>First in host OS (Mac OSX in my case), run</p>
+    <content type="html"><![CDATA[<p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
+
+<p>First in host OS (Mac OSX in my case), run</p>
 
 <pre><code>ssd-add /path/to/githubkey
 </code></pre>
@@ -36,7 +38,7 @@
   config.ssh.forward_agent = true
 </code></pre>
 
-<p>After you have run <code>vagrant up</code>, you can test the connection by running</p>
+<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
 
 <pre><code>ssh -T git@github.com
 </code></pre>

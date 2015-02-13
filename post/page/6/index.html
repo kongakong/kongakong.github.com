@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="First you need to install npm via brew Then run npm install -g bower as documented in bower websiter
-">
+  <meta name="description" content="Here is the code in question: class Something: NSCoding { ... let smth = Something() let data = NSKeyedArchiver.archivedDataWithRootObject(smth); It &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,133 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized Selector -replacementObjectForKeyedArchiver:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T22:31:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here is the code in question:</p>
+
+<pre><code>class Something: NSCoding {
+    ...
+
+let smth = Something() 
+let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
+</code></pre>
+
+<p>It throws this exception:</p>
+
+<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
+Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
+</code></pre>
+
+<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
+
+<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/12/css-overflow/">Css Overflow</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T12:54:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Valid values of attribute <code>overflow</code> are visible, hidden, scroll, auto, initial and inherit</p>
+
+<p>It controls browser behavior if content overflows an element&rsquo;s box.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/09/12/angular-bower/">Starting an Angularjs Project With Bower</a></h1>
     
     
@@ -201,176 +327,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference Between Handling &#8216;Self&#8217; in Python and Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-10T12:35:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Take a look at this <code>swift</code> code (XCode6 Beta7)</p>
-
-<pre><code>    class C {
-            func name () -&gt; String {
-                return "C"
-            }
-    }
-
-    class D:C {
-            override func name () -&gt; String {
-                return "D"
-            }
-    }
-
-    let c = C()
-    println(c.name()) // print 'C'
-
-    let d = D()
-    println(d.name()) // print 'D' as expected
-
-    println(C.name(d)()) // print 'D'! 
-</code></pre>
-
-<p>In python, the last case is different:</p>
-
-<pre><code>    class C:
-        def name(self):
-            return 'C' 
-
-    class D(C):
-        def name(self):
-            return 'D' 
-
-    c = C() 
-    print(c.name())  // print 'C' 
-
-    d = D() 
-    print(d.name())  // print 'D' 
-
-    print(C.name(d)) // print 'C' 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/04/ngtouch/">ngTouch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-04T16:11:00+10:00" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
-
-<pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
-angular.module('myApp', ['ngTouch']) 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/04/semi-colon-in-swift/">Semi-colon in Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-04T14:52:00+10:00" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The perfered style of semi-colon placement in swift is:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>struct Foo: SomeProtocol {}
-</span><span class='line'>class Foo: SomeProtocol {}
-</span><span class='line'>
-</span><span class='line'>var x: Int
-</span><span class='line'>func foo(x: Int) {}
-</span><span class='line'>func bar(x: (y: Int) -> Int) -> Double {}
-</span><span class='line'>let dict = ["key": value]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>i.e. No space before the semi-colon. One space after the semi-colon</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -388,23 +344,23 @@ angular.module('myApp', ['ngTouch'])
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

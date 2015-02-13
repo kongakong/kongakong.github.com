@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="First in host OS (Mac OSX in my case), run ssd-add /path/to/githubkey In the .ssh/config, add these lines: Host github HostName github.com &hellip;">
+  <meta name="description" content="It is how to checkout git private repository from within a VM without leaving a key in the VM First in host OS (Mac OSX in my case), run ssd-add / &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -141,7 +141,9 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-<div class="entry-content"><p>First in host OS (Mac OSX in my case), run</p>
+<div class="entry-content"><p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
+
+<p>First in host OS (Mac OSX in my case), run</p>
 
 <pre><code>ssd-add /path/to/githubkey
 </code></pre>
@@ -159,7 +161,7 @@ alt="hit counter"></a></div></noscript>
   config.ssh.forward_agent = true
 </code></pre>
 
-<p>After you have run <code>vagrant up</code>, you can test the connection by running</p>
+<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
 
 <pre><code>ssh -T git@github.com
 </code></pre>
@@ -213,6 +215,8 @@ alt="hit counter"></a></div></noscript>
         <a class="basic-alignment left" href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/" title="Previous Post: nosetests --failed keeps picking up removed test">&laquo; nosetests --failed keeps picking up removed test</a>
       
       
+        <a class="basic-alignment right" href="/post/2015/02/14/generate-public-key-fingerprint/" title="Next Post: generate public key fingerprint">generate public key fingerprint &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -227,23 +231,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests --failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

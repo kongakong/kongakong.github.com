@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view. Since I did not start with a &hellip;">
+  <meta name="description" content="The debugger will stop at the UIApplicationMain line It totally throws me off because nothing is wrong on that line. I proceeded to reboot my iphone &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,141 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
+
+<p>It totally throws me off because nothing is wrong on that line.</p>
+
+<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
+
+<p>But it did not fix the problem.</p>
+
+<p>Eventually I undo the last change I made, which is</p>
+
+<p>and it works again.</p>
+
+<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788398195/">When I Select a Prototype Cell, It Does Not Follow Segue and Show the Destination Controller, as Defined in the Storyboard Above.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-26T19:47:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.</p>
+
+<p>The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue.</p>
+
+<p>Once I change the segue type to ‘modal’, it works.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788057388/">Sample Use of Pragma Mark</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-26T19:27:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sample use of pragma mark</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>#pragma mark -
+</span><span class='line'>#pragma mark Data View</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>
+</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/05/26/p-23786684708/">Added a UITableVIew to My Custom Controller. Now I Want to Be Able to Add a Segway to a Cell in This Table View.</a></h1>
     
     
@@ -196,137 +331,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23757431150/">Hit a EXC_BAD_ACCESS Exception.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T08:37:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hit a EXC_BAD_ACCESS exception.</p>
-
-<p>In the lldb, I tried to interrogate some internal variable, but no success.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>(lldb) p [lessons count]
-</span><span class='line'>error: no known method '-count'; cast the message send to the method's return type
-</span><span class='line'>error: 1 errors parsing expression
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23730125189/">Dispatch IO</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-25T22:29:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>New stuff</p>
-
-<p><a href="None">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
-
-<p><a href="http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23694702384/">Justinian I</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-25T08:22:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Justinian_I">Justinian I</a></p>
-
-<p>Very fascinating. He commissioned to build Hagia Sophia which was completed in less than 6 years. Remarkable.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/68/">&larr; Older</a>
@@ -344,23 +348,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

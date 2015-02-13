@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Calculate regular payment based on rate, number of payment and PV 1
-2
-def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip;">
+  <meta name="description" content="The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -123,6 +121,159 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/08/13/p-29329230595/">The Importance of the Idea of &#8216;Map&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-13T19:42:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.</p></blockquote>
+
+<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/2QgZVYI3tDs&t=22m0s "></iframe></div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/12/p-29256890594/">How to Dismiss a Modal View Controller Which Is Created by a Segue in Storyboard?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-12T19:50:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But it does not work in storyboard anymore.</p>
+
+<p>This is the solution:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/11/p-29187540494/">Calculate Cash Flows in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-11T19:54:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
+
+<p><em>A:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># contribution at age
+</span><span class='line'>>>> [(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+</span><span class='line'>
+</span><span class='line'>>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/08/10/p-29116896037/">Calculate Regular Payment Based on Rate, Number of Payment and PV</a></h1>
     
     
@@ -206,139 +357,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/08/p-28973709805/">Got This Error Message in Xcode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-08T19:53:00+10:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this error message in xcode</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
-</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
-</span><span class='line'> a UITableView.'
-</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/07/p-28901315549/">In Ocaml, “let Rec” Defines a Recursive Function, for Example:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-07T19:59:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In ocaml, “let rec” defines a recursive function, for example:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="o">#</span> <span class="k">let</span> <span class="k">rec</span> <span class="n">ipow</span> <span class="n">n</span> <span class="n">m</span> <span class="o">=</span> <span class="k">if</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">ipow</span> <span class="n">n</span> <span class="o">(</span><span class="n">m</span> <span class="o">-</span><span class="mi">1</span><span class="o">);;</span>
-</span><span class='line'><span class="k">val</span> <span class="n">ipow</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">=</span> <span class="o">&lt;</span><span class="k">fun</span><span class="o">&gt;</span>
-</span><span class='line'><span class="o">#</span> <span class="n">ipow</span> <span class="mi">7</span> <span class="mi">8</span><span class="o">;;</span>
-</span><span class='line'><span class="o">-</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">5764801</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/06/p-28828938592/">Wat</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-06T19:45:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.destroyallsoftware.com/talks/wat/">Wat</a>]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/48/">&larr; Older</a>
@@ -356,23 +374,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

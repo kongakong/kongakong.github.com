@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To disallow an operation on your object class, you can 1) declare the function as private 2) do not provide the implementation (if called, caused &hellip;">
+  <meta name="description" content="Revisiting Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object While the title sounds rather generic, the main content is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,159 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196319451/">Item 23 Revisited</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:42:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Revisiting <a href="/blog/2011/06/04/p-6172106672">Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object</a></p>
+
+<p>While the title sounds rather generic, the main content is about what is appropriate to return from various operator functions.</p>
+
+<p>SO has a more</p>
+
+<p><a href="http://stackoverflow.com/questions/4421706/operator-overloading/4421729">in-depth treatment</a></p>
+
+<p>In the case of binary operators, here is a good example of the function declaration/implementation:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="k">class</span> <span class="nc">X</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">X</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// actual addition of rhs to *this </span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kr">inline</span> <span class="n">X</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">X</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">lhs</span> <span class="o">+=</span> <span class="n">rhs</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">lhs</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note the parameter lhs is passed into <code>operator+</code> via copying.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6194235311/">Item 30: Avoid Member Functions That Return Non-const Pointers or References to Members Less Accessible Than Themselves</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T10:35:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For example, one should try to avoid</p>
+
+<ol>
+<li><p>Returning a handle of a private member variable via public member functions</p></li>
+<li><p>Returning a pointer of a private function via public interface</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6191932419/">Item 29: Avoid Returning &#8216;Handles&#8217; to Internal Data</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T09:18:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Item 29 is to adress situations in which the holder of a handle (a pointer or reference to the internal data representation) can circumvent  the <code>const</code> semantic by making modification to the underlying data via the handle.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/06/05/p-6189322999/">Item 27: Explicitly Disallow Use of Implicitly Generated Member Functions You Don&#8217;t Want</a></h1>
     
     
@@ -194,120 +347,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6186209686/">Item 26: Guard Against Potential Ambiguity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T06:10:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Compiler cannot decide:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6185145541/">Item 25: Avoid Overloading on a Pointer and a Numerical Type</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T05:36:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some concepts:</p>
-
-<ol>
-<li><p>member function templates (c++ language construct)</p></li>
-<li><p>NullClass (useful while you are a caller of the function and want to avoid potential mistake)</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172703837/">Item 24: Choose Carefully Between Function Overloading and Parameter Defaulting</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-04T21:39:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/136/">&larr; Older</a>
@@ -325,23 +364,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

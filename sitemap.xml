@@ -4228,15 +4228,27 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2015/02/13/ssh-forwarding/</loc>
-        <lastmod>2015-02-14T01:09:37+11:00</lastmod>
+        <lastmod>2015-02-14T01:13:54+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/14/generate-public-key-fingerprint/</loc>
+        <lastmod>2015-02-14T01:30:33+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/14/two-way-to-create-chef-cookbooks/</loc>
+        <lastmod>2015-02-14T01:50:45+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/14/strange-gem-install-error/</loc>
+        <lastmod>2015-02-14T10:50:53+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2015-02-14T01:09:37+11:00</lastmod>
+        <lastmod>2015-02-14T10:50:53+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2015-02-14T01:09:37+11:00</lastmod>
+        <lastmod>2015-02-14T10:50:53+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4244,6 +4256,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2015-02-14T01:09:37+11:00</lastmod>
+        <lastmod>2015-02-14T10:50:53+11:00</lastmod>
     </url>
 </urlset>

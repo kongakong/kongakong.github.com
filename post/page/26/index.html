@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The identify command from ImageMagick can tell us the size of an image file e.g. 1
-2
-$ identify source/images/grab.png source/images/grab.png PNG &hellip;">
+  <meta name="description" content="What is this about? ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -123,6 +121,120 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-28T23:14:00+11:00" pubdate data-updated="true">Nov 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>What is this about?</p>
+
+<p><img class="center" src="/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: Isa Is Deprecated</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-28T07:45:00+11:00" pubdate data-updated="true">Nov 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got a lot of compiler errors when compiling the JSONKit for an iOS7 project.</p>
+
+<p><img class="center" src="/images/ios_jsonkit_isa_error.png"></p>
+
+<p>Answer is here: <a href="http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated">http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/27/rvm-install/">Rvm Install Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-27T20:24:00+11:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At first the <code>rvm install ruby-1.9.3-p484</code> did not work on OSX. The extra <code>--with-gcc=clang</code> parameter fixed the issue</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/11/27/get-image-file-size/">Get Image File Size</a></h1>
     
     
@@ -211,128 +323,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/15/riak-allow-multi/">Riak Allow-multi</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-15T01:04:00+10:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I could not create a write conflict situation.</p>
-
-<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
-
-<p>Here is the command line:</p>
-
-<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-13T18:47:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
-
-<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
-</code></pre>
-
-<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/12/learn-something-about-slash-tmp-on-osx-today/">Learn Something About /tmp on OSX Today</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-12T11:02:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>1) /tmp is actually <a href="http://apple.stackexchange.com/a/1096/3428">/private/tmp</a></p>
-
-<p>2) files in /tmp are removed if they are <a href="http://superuser.com/a/187105/33332">not accessed in three days</a>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/27/">&larr; Older</a>
@@ -350,23 +340,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

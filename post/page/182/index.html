@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="NSFileManager NSFileHandle
+  <meta name="description" content="They are stored in ~/Library/Preference
 ">
   
 
@@ -122,6 +122,165 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541941761/">Objective-c: NSUserDefaults</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:31:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>They are stored in</p>
+
+<p><code>~/Library/Preference</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541936274/">Objective-c: Archiving Objects</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:29:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>NSArchiver</em></p>
+
+<p><em>NSUnarchiver</em></p>
+
+<p><em>NSKeyedArchiver</em></p>
+
+<p><em>NSKeyedUnarchiver</em></p>
+
+<p><em>NSPortCoder</em></p>
+
+<p>NSObject supports</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- (void) encodeWithCoder:(NSCoder *) encoder;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>- (id) initWithCoder:(NSCoder *) decoder;</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/11/11/p-1541924619/">Objective-c: Bundle and Resource Management</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-11T21:27:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Usage:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSBundle</span> <span class="o">*</span><span class="n">bundle</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSString</span> <span class="o">*</span><span class="n">imagePath</span> <span class="o">=</span> <span class="p">[</span><span class="n">bundle</span> <span class="nl">pathForResource:</span><span class="s">@&quot;mug_shot&quot;</span> <span class="nl">ofType:</span><span class="s">@&quot;tiff&quot;</span><span class="p">]</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">NSImage</span> <span class="o">*</span><span class="n">anImage</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSImage</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithContentsOfFile:</span><span class="n">imagePath</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Loading Code</em></p>
+
+<p>Selectors:</p>
+
+<p><code>load</code></p>
+
+<p><code>principlaClass</code></p>
+
+<p><code>classNamed</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2010/11/11/p-1541919052/">Objective-c: Working With Files</a></h1>
     
     
@@ -204,125 +363,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/11/11/p-1536672775/">Objective-c: Some Foundation Classes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-11T08:46:00+11:00" pubdate data-updated="true">Nov 11<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>NSString</em></p>
-
-<p><em>NSComparisonResult</em> &ndash; returned from <code>NSString:compare:str</code> selector</p>
-
-<p><em>NSMutableString</em></p>
-
-<p><em>NSScanner</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/11/10/p-1533666302/">Objective-c: Autorelease</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-10T23:39:00+11:00" pubdate data-updated="true">Nov 10<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Adds the object to the current autorelease pool. This allows you to release your interest in an object without immediately causing the retain count to reach 0. When the autorelease pool is itself released, it sends the release message to every object it contains. This is most useful when you want to pass the object to another object as a return value and won’t have the opportunity to release the object later by yourself.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/11/09/p-1521227799/">Erlang &#8216;Bang&#8217; Operator</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-09T13:29:00+11:00" pubdate data-updated="true">Nov 9<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The basic operator for sending a message is !, pronounced <em>bang</em>,and it&rsquo;s used in the form <code>Destination ! Message</code>.</p>
-
-<ul>
-<li>from <em>Erlang and OTP in Action</em></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/183/">&larr; Older</a>
@@ -340,23 +380,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

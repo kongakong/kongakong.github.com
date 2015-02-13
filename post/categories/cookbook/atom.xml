@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cookbook | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/cookbook/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-14T10:52:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Two way to create chef cookbooks]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/two-way-to-create-chef-cookbooks/"/>
+    <updated>2015-02-14T01:49:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/two-way-to-create-chef-cookbooks</id>
+    <content type="html"><![CDATA[<p>lets say we want to create a cookbook called <code>example</code></p>
+
+<p>Method 1)</p>
+
+<pre><code> chef generate cookbook example
+</code></pre>
+
+<p>Method 2)</p>
+
+<pre><code>chef generate file example
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

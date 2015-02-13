@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: gem | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/gem/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-14T10:52:13+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[strange gem install error]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/strange-gem-install-error/"/>
+    <updated>2015-02-14T10:49:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/strange-gem-install-error</id>
+    <content type="html"><![CDATA[<p>For some reason I got this error last night when I tried to run <code>gem install berkshelf</code></p>
+
+<pre><code>    $ gem install berkshelf
+    ERROR:  While executing gem ... (Errno::EHOSTDOWN)
+        Host is down - sendto(2) for "10.0.1.4" port 53
+</code></pre>
+
+<p>It is apparently OK today:</p>
+
+<pre><code>    $ gem install berkshelf
+    Fetching: nio4r-1.1.0.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed nio4r-1.1.0
+    Fetching: celluloid-io-0.16.2.gem (100%)
+    Successfully installed celluloid-io-0.16.2
+    Fetching: addressable-2.3.7.gem (100%)
+    Successfully installed addressable-2.3.7
+    Fetching: multipart-post-2.0.0.gem (100%)
+    Successfully installed multipart-post-2.0.0
+    Fetching: faraday-0.9.1.gem (100%)
+    Successfully installed faraday-0.9.1
+    Fetching: sawyer-0.6.0.gem (100%)
+    Successfully installed sawyer-0.6.0
+    Fetching: octokit-3.7.1.gem (100%)
+    Successfully installed octokit-3.7.1
+    Fetching: dep-selector-libgecode-1.0.2.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep-selector-libgecode-1.0.2
+    Fetching: dep_selector-1.0.3.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep_selector-1.0.3
+    Fetching: semverse-1.2.1.gem (100%)
+    Successfully installed semverse-1.2.1
+    Fetching: solve-1.2.1.gem (100%)
+    Successfully installed solve-1.2.1
+    Fetching: retryable-2.0.1.gem (100%)
+    Successfully installed retryable-2.0.1
+    Fetching: net-http-persistent-2.9.4.gem (100%)
+    Successfully installed net-http-persistent-2.9.4
+    Fetching: mixlib-log-1.6.0.gem (100%)
+    Successfully installed mixlib-log-1.6.0
+    Fetching: mixlib-authentication-1.3.0.gem (100%)
+    Successfully installed mixlib-authentication-1.3.0
+    Fetching: hashie-2.1.2.gem (100%)
+    Successfully installed hashie-2.1.2
+    Fetching: buff-ruby_engine-0.1.0.gem (100%)
+    Successfully installed buff-ruby_engine-0.1.0
+    Fetching: buff-shell_out-0.2.0.gem (100%)
+    Successfully installed buff-shell_out-0.2.0
+    Fetching: buff-ignore-1.1.1.gem (100%)
+    Successfully installed buff-ignore-1.1.1
+    Fetching: buff-extensions-1.0.0.gem (100%)
+    Successfully installed buff-extensions-1.0.0
+    Fetching: varia_model-0.4.0.gem (100%)
+    Successfully installed varia_model-0.4.0
+    Fetching: buff-config-1.0.1.gem (100%)
+    Successfully installed buff-config-1.0.1
+    Fetching: ridley-4.1.2.gem (100%)
+    Successfully installed ridley-4.1.2
+    Fetching: minitar-0.5.4.gem (100%)
+    Successfully installed minitar-0.5.4
+    Fetching: cleanroom-1.0.0.gem (100%)
+    Successfully installed cleanroom-1.0.0
+    Fetching: berkshelf-api-client-1.2.1.gem (100%)
+    Successfully installed berkshelf-api-client-1.2.1
+    Fetching: berkshelf-3.2.3.gem (100%)
+    Successfully installed berkshelf-3.2.3
+    Parsing documentation for nio4r-1.1.0
+    Installing ri documentation for nio4r-1.1.0
+    Parsing documentation for celluloid-io-0.16.2
+    Installing ri documentation for celluloid-io-0.16.2
+    Parsing documentation for addressable-2.3.7
+    Installing ri documentation for addressable-2.3.7
+    invalid options: -SHN
+    (invalid options are ignored)
+    Parsing documentation for multipart-post-2.0.0
+    Installing ri documentation for multipart-post-2.0.0
+    Parsing documentation for faraday-0.9.1
+    Installing ri documentation for faraday-0.9.1
+    Parsing documentation for sawyer-0.6.0
+    Installing ri documentation for sawyer-0.6.0
+    Parsing documentation for octokit-3.7.1
+    Installing ri documentation for octokit-3.7.1
+    Parsing documentation for dep-selector-libgecode-1.0.2
+    unable to convert "\xEB" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/changelog.in, skipping
+    unable to convert "\x8E" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/contribs/qecode/QCOPPlus.cc, skipping
+    unable to convert "\xFC" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/bin-packing.cpp, skipping
+    unable to convert "\xEA" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/black-hole.cpp, skipping
+    unable to convert "\xD6" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/dominating-queens.cpp, skipping
+    unable to convert "\xEF" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode.m4, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/unary.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/unary.hh, skipping
+    Installing ri documentation for dep-selector-libgecode-1.0.2
+    Parsing documentation for dep_selector-1.0.3
+    Installing ri documentation for dep_selector-1.0.3
+    Parsing documentation for semverse-1.2.1
+    Installing ri documentation for semverse-1.2.1
+    Parsing documentation for solve-1.2.1
+    Installing ri documentation for solve-1.2.1
+    Parsing documentation for retryable-2.0.1
+    Installing ri documentation for retryable-2.0.1
+    Parsing documentation for net-http-persistent-2.9.4
+    Installing ri documentation for net-http-persistent-2.9.4
+    Parsing documentation for mixlib-log-1.6.0
+    Installing ri documentation for mixlib-log-1.6.0
+    Parsing documentation for mixlib-authentication-1.3.0
+    Installing ri documentation for mixlib-authentication-1.3.0
+    Parsing documentation for hashie-2.1.2
+    Installing ri documentation for hashie-2.1.2
+    Parsing documentation for buff-ruby_engine-0.1.0
+    Installing ri documentation for buff-ruby_engine-0.1.0
+    Parsing documentation for buff-shell_out-0.2.0
+    Installing ri documentation for buff-shell_out-0.2.0
+    Parsing documentation for buff-ignore-1.1.1
+    Installing ri documentation for buff-ignore-1.1.1
+    Parsing documentation for buff-extensions-1.0.0
+    Installing ri documentation for buff-extensions-1.0.0
+    Parsing documentation for varia_model-0.4.0
+    Installing ri documentation for varia_model-0.4.0
+    Parsing documentation for buff-config-1.0.1
+    Installing ri documentation for buff-config-1.0.1
+    Parsing documentation for ridley-4.1.2
+    Installing ri documentation for ridley-4.1.2
+    Parsing documentation for minitar-0.5.4
+    Installing ri documentation for minitar-0.5.4
+    Parsing documentation for cleanroom-1.0.0
+    Installing ri documentation for cleanroom-1.0.0
+    Parsing documentation for berkshelf-api-client-1.2.1
+    Installing ri documentation for berkshelf-api-client-1.2.1
+    Parsing documentation for berkshelf-3.2.3
+    Installing ri documentation for berkshelf-3.2.3
+    Done installing documentation for nio4r, celluloid-io, addressable, multipart-post, faraday, sawyer, octokit, dep-selector-libgecode, dep_selector, semverse, solve, retryable, net-http-persistent, mixlib-log, mixlib-authentication, hashie, buff-ruby_engine, buff-shell_out, buff-ignore, buff-extensions, varia_model, buff-config, ridley, minitar, cleanroom, berkshelf-api-client, berkshelf after 17 seconds
+    27 gems installed
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

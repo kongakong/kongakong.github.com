@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Algorithms for Making Good Decisions by Kevin Leyton-Brown The video was posted in 2011, but it is still very informative. Kevin is also a &hellip;">
+  <meta name="description" content="Added SSToolkit to my Podfile and got this message. Don’t know what it means… 1
+[!] [SSToolkit] Specification#config is deprecated. The config is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +122,211 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/05/29/p-51633107176/">SSToolkit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-29T20:00:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/15/p-50445623013/">Brew Local Modification Error and Solution</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-15T07:33:00+10:00" pubdate data-updated="true">May 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>       error: Your local changes to the following files would be overwritten by  merge:
+</span><span class='line'>        Library/Formula/erlang.rb
+</span><span class='line'>      Please, commit your changes or stash them before you can merge.
+</span><span class='line'>      Aborting
+</span><span class='line'>      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Solution</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd `brew --prefix`
+</span><span class='line'>$ cd Cellar/erlang/
+</span><span class='line'>$ git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/14/p-50367270258/">Whenever You Think You Need Urllib2, You Actually Need Requests</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-14T07:21:00+10:00" pubdate data-updated="true">May 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.</p>
+
+<p>It usually works great… until you need something more than basic.</p>
+
+<p>Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…</p>
+
+<p>Why it throws an exception <em>AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’</em>?</p>
+
+<p>OK, let&rsquo;s import DefaultCookiePolicy. Then I got hit by a <em>missing domain attribute</em> exception. &ldquo;Do I need to use a lower level Cookie class to set the domain?&rdquo;, I wonder. Try switching to Cookie and it throw this exception</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">c</span> <span class="o">=</span> <span class="n">Cookie</span><span class="p">()</span>
+</span><span class='line'><span class="ne">TypeError</span><span class="p">:</span> <span class="n">__init__</span><span class="p">()</span> <span class="n">takes</span> <span class="n">at</span> <span class="n">least</span> <span class="mi">17</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">1</span> <span class="n">given</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="kn">import</span> <span class="nn">urllib2</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">cookielib</span> <span class="kn">import</span> <span class="n">Cookie</span><span class="p">,</span> <span class="n">CookieJar</span><span class="p">,</span> <span class="n">DefaultCookiePolicy</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">Cookie</span> <span class="kn">import</span> <span class="n">SimpleCookie</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">policy</span> <span class="o">=</span> <span class="n">DefaultCookiePolicy</span><span class="p">(</span><span class="n">rfc2965</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">c</span> <span class="o">=</span> <span class="n">SimpleCookie</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">c</span><span class="p">[</span><span class="s">&#39;secretkey&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">auth_token</span>
+</span><span class='line'>    <span class="n">cj</span> <span class="o">=</span> <span class="n">CookieJar</span><span class="p">(</span><span class="n">policy</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">cj</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">/postdata&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_url</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">proxyHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">(</span> <span class="p">{}</span> <span class="p">)</span>
+</span><span class='line'>    <span class="n">defaultErrorHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPDefaultErrorHandler</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">cookieHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cj</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span> <span class="n">proxyHandler</span><span class="p">,</span> <span class="n">defaultErrorHandler</span><span class="p">,</span> <span class="n">cookieHandler</span> <span class="p">)</span>
+</span><span class='line'>    <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Instead of continuing banging my head against a wall, I recall reading about ‘requests’ module. Let give it a go.</p>
+
+<p>Like magic, it is all I need. 2 lines.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>     <span class="kn">import</span> <span class="nn">requests</span>
+</span><span class='line'>     <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cookie</span><span class="o">=</span><span class="n">cookie</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It just works. Well done, requests!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/05/12/p-50250633524/">Algorithms for Making Good Decisions</a></h1>
     
     
@@ -203,170 +409,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/09/p-49957105079/">TED: Parkinson&#8217;s, Depression and the Switch That Might Turn Them Off - Andres Lozano (2013)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-09T07:02:00+10:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.ted.com/talks/andres_lozano_parkinson_s_depression_and_the_switch_that_might_turn_them_off.html">Andres Lozano: Parkinson&rsquo;s, depression and the switch that might turn them off</a></p>
-
-<p>Deep brain stimulation is becoming very precise. This technique allows surgeons to place electrodes in almost any area of the brain, and turn them up or down — like a radio dial or thermostat — to correct dysfunction. Andres Lozano offers a dramatic look at emerging techniques, in which a woman with Parkinson’s instantly stops shaking and brain areas eroded by Alzheimer’s are brought back to life. (Filmed at TEDxCaltech.)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/08/p-49924605254/">XPath, Python and Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-08T20:00:00+10:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just feel that python is easier for XML manipulation.</p>
-
-<p>e.g.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
-</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;digg-science-rss1.xml&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Very concise.</p>
-
-<p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>...
-</span><span class='line'>      #xmlText{
-</span><span class='line'>          parents = [{item,16},{channel,2},{rss,1}],
-</span><span class='line'>          pos = 3,language = [],value = "\n   ",type = text},
-</span><span class='line'>      #xmlElement{
-</span><span class='line'>          name = link,expanded_name = link,nsinfo = [],
-</span><span class='line'>          namespace = 
-</span><span class='line'>              #xmlNamespace{
-</span><span class='line'>                  default = [],
-</span><span class='line'>                  nodes =
-</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/07/p-49845982745/">To Find Out Where Homebrew Keeps the Files of a Formula</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-07T20:00:00+10:00" pubdate data-updated="true">May 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>… Simply follow the link.</p>
-
-<p>e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>ls -l `which erl`
-</span><span class='line'>lrwxr-xr-x  1 antkong  admin  29 29 Apr 23:49 /usr/local/bin/erl -&gt; ../Cellar/erlang/R16B/bin/erl
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/37/">&larr; Older</a>
@@ -384,23 +426,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/11/mysqld-password-and-chef/">Providing mysqld password to chef provisioner in vagrant</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot find a resource matching ruby_block[sensu_service_trigger]</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/08/brew-and-cast/">brew and cast</a>
       </li>
     
   </ul>

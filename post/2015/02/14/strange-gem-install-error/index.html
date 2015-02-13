@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>strange gem install error - Timeline</title>
+  <meta name="author" content="Anthony Kong">
+
+  
+  <meta name="description" content="For some reason I got this error last night when I tried to run gem install berkshelf $ gem install berkshelf ERROR: While executing gem ... (Errno:: &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.ahwkong.com/post/2015/02/14/strange-gem-install-error">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+<!-- Start of StatCounter Code for Netscape Composer -->
+<script type="text/javascript">
+var sc_project=9614190; 
+var sc_invisible=1; 
+var sc_security="867743ed"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/9614190/0/867743ed/1/"
+alt="hit counter"></a></div></noscript>
+<!-- End of StatCounter Code for Netscape Composer -->
+
+  
+
+  <!-- add table css  -->
+  <link href="/stylesheets/custom/table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Timeline</a></h1>
+  
+    <h2>My development logbook</h2>
+  
+</hgroup>
+
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.ahwkong.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-33727381-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- HeaderMainBlog --> 
+<p>
+<div>
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8982189898976576"
+     data-ad-slot="5004928679"></ins>
+</div>
+</p>
+
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Strange Gem Install Error</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T10:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>For some reason I got this error last night when I tried to run <code>gem install berkshelf</code></p>
+
+<pre><code>    $ gem install berkshelf
+    ERROR:  While executing gem ... (Errno::EHOSTDOWN)
+        Host is down - sendto(2) for "10.0.1.4" port 53
+</code></pre>
+
+<p>It is apparently OK today:</p>
+
+<pre><code>    $ gem install berkshelf
+    Fetching: nio4r-1.1.0.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed nio4r-1.1.0
+    Fetching: celluloid-io-0.16.2.gem (100%)
+    Successfully installed celluloid-io-0.16.2
+    Fetching: addressable-2.3.7.gem (100%)
+    Successfully installed addressable-2.3.7
+    Fetching: multipart-post-2.0.0.gem (100%)
+    Successfully installed multipart-post-2.0.0
+    Fetching: faraday-0.9.1.gem (100%)
+    Successfully installed faraday-0.9.1
+    Fetching: sawyer-0.6.0.gem (100%)
+    Successfully installed sawyer-0.6.0
+    Fetching: octokit-3.7.1.gem (100%)
+    Successfully installed octokit-3.7.1
+    Fetching: dep-selector-libgecode-1.0.2.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep-selector-libgecode-1.0.2
+    Fetching: dep_selector-1.0.3.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep_selector-1.0.3
+    Fetching: semverse-1.2.1.gem (100%)
+    Successfully installed semverse-1.2.1
+    Fetching: solve-1.2.1.gem (100%)
+    Successfully installed solve-1.2.1
+    Fetching: retryable-2.0.1.gem (100%)
+    Successfully installed retryable-2.0.1
+    Fetching: net-http-persistent-2.9.4.gem (100%)
+    Successfully installed net-http-persistent-2.9.4
+    Fetching: mixlib-log-1.6.0.gem (100%)
+    Successfully installed mixlib-log-1.6.0
+    Fetching: mixlib-authentication-1.3.0.gem (100%)
+    Successfully installed mixlib-authentication-1.3.0
+    Fetching: hashie-2.1.2.gem (100%)
+    Successfully installed hashie-2.1.2
+    Fetching: buff-ruby_engine-0.1.0.gem (100%)
+    Successfully installed buff-ruby_engine-0.1.0
+    Fetching: buff-shell_out-0.2.0.gem (100%)
+    Successfully installed buff-shell_out-0.2.0
+    Fetching: buff-ignore-1.1.1.gem (100%)
+    Successfully installed buff-ignore-1.1.1
+    Fetching: buff-extensions-1.0.0.gem (100%)
+    Successfully installed buff-extensions-1.0.0
+    Fetching: varia_model-0.4.0.gem (100%)
+    Successfully installed varia_model-0.4.0
+    Fetching: buff-config-1.0.1.gem (100%)
+    Successfully installed buff-config-1.0.1
+    Fetching: ridley-4.1.2.gem (100%)
+    Successfully installed ridley-4.1.2
+    Fetching: minitar-0.5.4.gem (100%)
+    Successfully installed minitar-0.5.4
+    Fetching: cleanroom-1.0.0.gem (100%)
+    Successfully installed cleanroom-1.0.0
+    Fetching: berkshelf-api-client-1.2.1.gem (100%)
+    Successfully installed berkshelf-api-client-1.2.1
+    Fetching: berkshelf-3.2.3.gem (100%)
+    Successfully installed berkshelf-3.2.3
+    Parsing documentation for nio4r-1.1.0
+    Installing ri documentation for nio4r-1.1.0
+    Parsing documentation for celluloid-io-0.16.2
+    Installing ri documentation for celluloid-io-0.16.2
+    Parsing documentation for addressable-2.3.7
+    Installing ri documentation for addressable-2.3.7
+    invalid options: -SHN
+    (invalid options are ignored)
+    Parsing documentation for multipart-post-2.0.0
+    Installing ri documentation for multipart-post-2.0.0
+    Parsing documentation for faraday-0.9.1
+    Installing ri documentation for faraday-0.9.1
+    Parsing documentation for sawyer-0.6.0
+    Installing ri documentation for sawyer-0.6.0
+    Parsing documentation for octokit-3.7.1
+    Installing ri documentation for octokit-3.7.1
+    Parsing documentation for dep-selector-libgecode-1.0.2
+    unable to convert "\xEB" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/changelog.in, skipping
+    unable to convert "\x8E" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/contribs/qecode/QCOPPlus.cc, skipping
+    unable to convert "\xFC" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/bin-packing.cpp, skipping
+    unable to convert "\xEA" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/black-hole.cpp, skipping
+    unable to convert "\xD6" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/dominating-queens.cpp, skipping
+    unable to convert "\xEF" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode.m4, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/unary.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/unary.hh, skipping
+    Installing ri documentation for dep-selector-libgecode-1.0.2
+    Parsing documentation for dep_selector-1.0.3
+    Installing ri documentation for dep_selector-1.0.3
+    Parsing documentation for semverse-1.2.1
+    Installing ri documentation for semverse-1.2.1
+    Parsing documentation for solve-1.2.1
+    Installing ri documentation for solve-1.2.1
+    Parsing documentation for retryable-2.0.1
+    Installing ri documentation for retryable-2.0.1
+    Parsing documentation for net-http-persistent-2.9.4
+    Installing ri documentation for net-http-persistent-2.9.4
+    Parsing documentation for mixlib-log-1.6.0
+    Installing ri documentation for mixlib-log-1.6.0
+    Parsing documentation for mixlib-authentication-1.3.0
+    Installing ri documentation for mixlib-authentication-1.3.0
+    Parsing documentation for hashie-2.1.2
+    Installing ri documentation for hashie-2.1.2
+    Parsing documentation for buff-ruby_engine-0.1.0
+    Installing ri documentation for buff-ruby_engine-0.1.0
+    Parsing documentation for buff-shell_out-0.2.0
+    Installing ri documentation for buff-shell_out-0.2.0
+    Parsing documentation for buff-ignore-1.1.1
+    Installing ri documentation for buff-ignore-1.1.1
+    Parsing documentation for buff-extensions-1.0.0
+    Installing ri documentation for buff-extensions-1.0.0
+    Parsing documentation for varia_model-0.4.0
+    Installing ri documentation for varia_model-0.4.0
+    Parsing documentation for buff-config-1.0.1
+    Installing ri documentation for buff-config-1.0.1
+    Parsing documentation for ridley-4.1.2
+    Installing ri documentation for ridley-4.1.2
+    Parsing documentation for minitar-0.5.4
+    Installing ri documentation for minitar-0.5.4
+    Parsing documentation for cleanroom-1.0.0
+    Installing ri documentation for cleanroom-1.0.0
+    Parsing documentation for berkshelf-api-client-1.2.1
+    Installing ri documentation for berkshelf-api-client-1.2.1
+    Parsing documentation for berkshelf-3.2.3
+    Installing ri documentation for berkshelf-3.2.3
+    Done installing documentation for nio4r, celluloid-io, addressable, multipart-post, faraday, sawyer, octokit, dep-selector-libgecode, dep_selector, semverse, solve, retryable, net-http-persistent, mixlib-log, mixlib-authentication, hashie, buff-ruby_engine, buff-shell_out, buff-ignore, buff-extensions, varia_model, buff-config, ridley, minitar, cleanroom, berkshelf-api-client, berkshelf after 17 seconds
+    27 gems installed
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Anthony Kong</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T10:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/post/categories/gem/'>gem</a>, <a class='category' href='/post/categories/rvm/'>rvm</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.ahwkong.com/post/2015/02/14/strange-gem-install-error/" data-via="kongakong" data-counturl="http://www.ahwkong.com/post/2015/02/14/strange-gem-install-error/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/post/2015/02/14/two-way-to-create-chef-cookbooks/" title="Previous Post: Two way to create chef cookbooks">&laquo; Two way to create chef cookbooks</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests --failed keeps picking up removed test</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("kongakong", 5, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/kongakong">@kongakong</a></p>
+  
+</section>
+
+<section>
+  <h1>About Me</h1>
+  <p>Python Developer</p>
+</section>
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/107508522522146376690?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Anthony Kong -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
