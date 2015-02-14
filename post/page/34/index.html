@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful: Connecting Menu Items in Document &hellip;">
+  <meta name="description" content="When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,143 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/06/08/p-52453247211/">OSX Terminal and .bashrc</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-08T21:20:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
+
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/08/p-52451932662/">AFS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-08T20:40:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Morgan Stanley uses <a href="http://en.wikipedia.org/wiki/Andrew_File_System">AFS</a> for application deployment with good results.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/07/p-52372899462/">The Core of Lisp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-07T21:20:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The core of lisp is just 7 functions:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(quote x)
+</span><span class='line'>(atom x)
+</span><span class='line'>(eq x y)
+</span><span class='line'>(cons x y)
+</span><span class='line'>(cond (x y) (w z) (t q))
+</span><span class='line'>(car x)
+</span><span class='line'>(cdr x)</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/06/07/p-52371654734/">NSDocument and First Responder</a></h1>
     
     
@@ -198,126 +335,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/06/p-52292736599/">Health System in Oregon</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-06T20:40:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to its citizens.</p>
-
-<p>From</p>
-
-<p><a href="http://en.wikipedia.org/wiki/Oregon_Health_Plan">Wikipedia</a></p>
-
-<blockquote><p>New enrollment in the program was closed from mid-2004 until early
-2008, when a lottery-based system was introduced. Tens of thousands
-of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockquote>
-
-<p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/05/p-52213593051/">A Word in Your Ear: Rhyming Slang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-05T21:20:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></p>
-
-<p>‘Apple and Pear’ means ‘upstair’. Fun.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/05/p-52212432857/">Two Ways to Build File Names</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-05T20:40:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/35/">&larr; Older</a>
@@ -335,23 +352,23 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
   </ul>

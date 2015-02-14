@@ -9,25 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found 0:12.72 #include &lt;linux/ &hellip;">
+  <meta name="description" content="We can use the class cluster technique to manage compatibility on different iOS platforms.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -133,6 +116,151 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/17/class-cluster/">Class Cluster</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-17T22:42:00+11:00" pubdate data-updated="true">Jan 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/11/using-automator-in-osx/">Using Automator in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-11T15:29:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I want to implement a service in OSX such that I can easily shrink the size of image files in a folder to half of their original size.</p>
+
+<p>This is what I have come up with at the end.</p>
+
+<p><img src="images/automator.png" width="860" height="617"></p>
+
+<p>Lessons/Observations:</p>
+
+<ul>
+<li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
+<li><p>A lot of useful actions are already built in e.g. Scale image</p></li>
+<li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/10/resize-images-in-a-so-post/">Resize Images in a Stackoverflow Post</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-10T14:18:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Markdown does not allow us to specify the size of an link image.</p>
+
+<p>To get around this restriction it is what I did:</p>
+
+<h1>1. Upload an image as usual</h1>
+
+<p>Stackoverflow will add these lines to your post:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>2. Change the above to an image tag</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
+
+
+<p>Done</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -288,286 +416,6 @@ install_mathjax()
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/06/inline-plot-in-ipython/">Inline Plot in Ipython</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-06T08:02:00+11:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is a neat trick</p>
-
-<p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
-
-<p><img src="/images/ipython_inline.png" width="457" height="336"></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1/">Make Picker 2 Data Dependent on the Selected Row of Picker 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-05T06:28:00+11:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is what I want to achieve: whenever a selection is changed in the top UIPicker, the choices in the second UIPicker will change accordingly.</p>
-
-<p><img src="/images/twopickers.png" width="341" height="497" title="" >
-<img src="/images/twopickers_b.png" width="341" height="497" title="" ></p>
-
-<p>Useful lessons from this exercise:</p>
-
-<ul>
-<li>The use of API <code>reloadAllComponents</code></li>
-<li>The use of class extension and category</li>
-<li>Identification of the UI object &ndash; apparently a <code>==</code> is sufficient to find out which picker instance a picker API is handling</li>
-</ul>
-
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#import &quot;SOViewController.h&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker1</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker2</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="nl">(SOPickerDelegate)</span> <span class="o">&lt;</span><span class="n">UIPickerViewDelegate</span><span class="p">,</span> <span class="n">UIPickerViewDataSource</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@implementation</span> <span class="nc">SOViewController</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">list_media</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">list_media_channel</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">list_media</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span><span class="s">@&quot;TV&quot;</span><span class="p">,</span> <span class="s">@&quot;Radio&quot;</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">list_media_channel</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="err">@</span><span class="p">[</span><span class="s">@&quot;ABC&quot;</span><span class="p">,</span> <span class="s">@&quot;SBS&quot;</span><span class="p">],</span> <span class="err">@</span><span class="p">[</span><span class="s">@&quot;TripleJ&quot;</span><span class="p">,</span> <span class="s">@&quot;107.1&quot;</span><span class="p">,</span> <span class="s">@&quot;CBS&quot;</span><span class="p">]];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didReceiveMemoryWarning</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">didReceiveMemoryWarning</span><span class="p">];</span>
-</span><span class='line'>    <span class="c1">// Dispose of any resources that can be recreated.</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@implementation</span> <span class="nc">SOViewController</span><span class="nl">(SOPickerDelegate)</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span> <span class="nf">didSelectRow:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">row</span> <span class="nf">inComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">component</span><span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">pickerView</span> <span class="o">==</span> <span class="n">_Picker1</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="c1">// set Picker 2 accordingly</span>
-</span><span class='line'>        <span class="p">[</span><span class="n">_Picker2</span> <span class="n">reloadAllComponents</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span> <span class="nf">getDataByPicker:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">pickerView</span> <span class="o">==</span> <span class="n">_Picker1</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">list_media</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">NSArray</span><span class="o">*</span> <span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="n">list_media_channel</span> <span class="nl">objectAtIndex:</span><span class="p">[</span><span class="n">_Picker1</span> <span class="nl">selectedRowInComponent:</span><span class="mi">0</span><span class="p">]];</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">content</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span> <span class="nf">titleForRow:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">row</span> <span class="nf">forComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">component</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">getDataByPicker:</span><span class="n">pickerView</span><span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">data</span> <span class="nl">objectAtIndex:</span><span class="n">row</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span> <span class="nf">numberOfRowsInComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">component</span><span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">getDataByPicker:</span><span class="n">pickerView</span><span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">data</span> <span class="n">count</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">numberOfComponentsInPickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/04/swap-convention/">Swap Convention</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-04T21:15:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><pre><code>Floating-rate payer: pay 6-month LIBOR
-                     receive a fixed rate of 5.19 percent
-
-Fixed-rate payer: pay a fixed rate of 5.25 percent
-                  receive 6-month LIBOR
-</code></pre>
-
-<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p></blockquote>
-
-<p><em>from &lsquo;Moorad Choudhry &ndash; Fixed Income Securities and Derivatives Handbook (Analysis and Valuation)&rsquo;</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/19/">&larr; Older</a>
@@ -585,23 +433,23 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
   </ul>

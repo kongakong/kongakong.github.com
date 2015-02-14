@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T14:09:31+11:00</updated>
+  <updated>2015-02-14T15:58:59+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,117 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[error running the motd example of the chef book]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/"/>
+    <updated>2015-02-14T15:27:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/error-running-the-motd-example-of-the-chef-book</id>
+    <content type="html"><![CDATA[<p>I am following the chapter “Your First Cookbook: Message of the Day” from &lsquo;Learning Chef&rsquo; by Mischa Taylor</p>
+
+<p>When I run <code>kitchen converge</code>, I got these error messages:</p>
+
+<pre><code>               ================================================================================
+               Error executing action `create` on resource 'cookbook_file[/etc/motd]'
+               ================================================================================
+
+               Chef::Exceptions::FileNotFound
+               ------------------------------
+               Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
+                 files/ubuntu-12.04/motd
+                 files/ubuntu/motd
+                 files/default/motd
+                 files/motd
+
+               Resource Declaration:
+               ---------------------
+               # In /tmp/kitchen/cookbooks/motd/recipes/default.rb
+
+                 9: cookbook_file "/etc/motd" do
+                10:   source "motd"
+                11:   mode "0644"
+                12: end
+
+               Compiled Resource:
+               ------------------
+               # Declared in /tmp/kitchen/cookbooks/motd/recipes/default.rb:9:in `from_file'
+
+               cookbook_file("/etc/motd") do
+                 provider Chef::Provider::CookbookFile
+                 action "create"
+                 retries 0
+                 retry_delay 2
+                 default_guard_interpreter :default
+                 path "/etc/motd"
+                 backup 5
+                 atomic_update true
+                 source "motd"
+                 declared_type :cookbook_file
+                 cookbook_name :motd
+                 recipe_name "default"
+                 mode "0644"
+               end
+
+
+           Running handlers:
+           [2015-02-14T04:22:29+00:00] ERROR: Running exception handlers
+           Running handlers complete
+           [2015-02-14T04:22:29+00:00] ERROR: Exception handlers complete
+           [2015-02-14T04:22:29+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+           Chef Client failed. 0 resources updated in 11.010074864 seconds
+           [2015-02-14T04:22:29+00:00] ERROR: cookbook_file[/etc/motd] (motd::default line 9) had an error: Chef::Exceptions::FileNotFound: Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
+             files/ubuntu-12.04/motd
+             files/ubuntu/motd
+             files/default/motd
+      1 Hello, world
+             files/motd
+           [2015-02-14T04:22:29+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+</code></pre>
+
+<p>It is because I forgot to create the file <code>files/default/motd</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[kitchen converge problem 2]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/kitchen-converge-problem-2/"/>
+    <updated>2015-02-14T15:07:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/kitchen-converge-problem-2</id>
+    <content type="html"><![CDATA[<p>Trying the <code>kitchen</code> command again, and I am still getting error messages</p>
+
+<pre><code>    $ kitchen converge
+    -----&gt; Starting Kitchen (v1.3.1)
+    -----&gt; Creating &lt;default-ubuntu-1204&gt;...
+           Bringing machine 'default' up with 'virtualbox' provider...
+           The following berks command failed to execute:
+
+               /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
+
+           The stdout and stderr are shown below:
+</code></pre>
+
+<p>It seems like if I make sure the <code>chefdk</code> is at the beginning of the <code>PATH</code>, the above issue will go away too. e.g.</p>
+
+<pre><code>export PATH=/Users/antkong/.chefdk/gem/ruby/2.1.0/bin:/Users/antkong/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/antkong/.rvm/gems/ruby-2.2.0/bin
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A successful run of kitchen init]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/a-successful-run-of-kitchen-init/"/>
+    <updated>2015-02-14T14:57:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/a-successful-run-of-kitchen-init</id>
+    <content type="html"><![CDATA[<pre><code>    $ kitchen init --gem-file
+       identical  .kitchen.yml
+    Successfully installed kitchen-vagrant-0.15.0
+    Parsing documentation for kitchen-vagrant-0.15.0
+    Installing ri documentation for kitchen-vagrant-0.15.0
+    Done installing documentation for kitchen-vagrant after 0 seconds
+    1 gem installed
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[berkshelf problem with kitchen converge]]></title>
@@ -608,129 +719,6 @@ def my_func():
 
 <pre><code>brew cask install chefdk 
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[basic rvm]]></title>
-    <link href="http://www.ahwkong.com/post/2015/01/18/basic-rvm/"/>
-    <updated>2015-01-18T15:53:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/01/18/basic-rvm</id>
-    <content type="html"><![CDATA[<p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
-
-<p>Here is some basic <code>rvm</code> command:</p>
-
-<pre><code>$ rvm list
-
-rvm rubies
-
-   ruby-1.9.3-p484 [ x86_64 ]
-   ruby-1.9.3-p551 [ x86_64 ]
-=* ruby-2.2.0 [ x86_64 ]
-
-# =&gt; - current
-# =* - current &amp;&amp; default
-#  * - default
-
-
-$ rvm use 2.2.0
-Using /Users/antkong/.rvm/gems/ruby-2.2.0
-
-$ bundle install
-bash: bundle: command not found
-
-$ gem install bundle
-Fetching: bundler-1.7.12.gem (100%)
-Successfully installed bundler-1.7.12
-Fetching: bundle-0.0.1.gem (100%)
-Successfully installed bundle-0.0.1
-Parsing documentation for bundler-1.7.12
-Installing ri documentation for bundler-1.7.12
-Parsing documentation for bundle-0.0.1
-Installing ri documentation for bundle-0.0.1
-Done installing documentation for bundler, bundle after 1 seconds
-2 gems installed 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[dict in coffeescript]]></title>
-    <link href="http://www.ahwkong.com/post/2015/01/18/dict-in-coffeescript/"/>
-    <updated>2015-01-18T14:50:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/01/18/dict-in-coffeescript</id>
-    <content type="html"><![CDATA[<p>You can create a dictionary in coffeescript in several ways:</p>
-
-<p>Probably the most elegant style</p>
-
-<pre><code>    d = 
-      b: 1
-      c: 2
-</code></pre>
-
-<p>This also works</p>
-
-<pre><code>    d = { b: 1, c: 2}
-</code></pre>
-
-<p>If you need to span multiple lines:</p>
-
-<pre><code>    d = { b: 1 , \
-      c: 2}
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My attempt at toastmaster speech #2]]></title>
-    <link href="http://www.ahwkong.com/post/2015/01/13/toastmaster-speech-2/"/>
-    <updated>2015-01-13T04:33:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/01/13/toastmaster-speech-2</id>
-    <content type="html"><![CDATA[<p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely motivated me to look at memorisation techniques.</p>
-
-<h1>The Speech</h1>
-
-<p>You are alone, in the dark. It is coming. It is getting closer. You can almost smell it. You are tired, you are exhausted. You are making a last ditch effort in last 12 hours non-stop. You are anxious because you are not sure if everything gonna turn out as planned. Your enemy is invisible yet its feels so real. I am talking about one of the worst enemies in our work lives: meeting the Deadline!</p>
-
-<p>Does this feeling sound familiar to you? Raise your hand if you had this experience before!</p>
-
-<p>Deadline is called deadline for good reasons. The time is set in stone. The consequence of failure is real. If your project misses the deadline, it could mean a failure to meet your customer expectation. Your organisation can suffer from reputational damage and some heads gonna roll! It could well be yours.</p>
-
-<p>Can we tame this monster?</p>
-
-<p>There is a few things you can do to make it easier to meet the deadlines</p>
-
-<p>First of all, understand the objective of your project! It sounds obvious but it is extremely important.</p>
-
-<p>Imagine you are an explorer and is lost in jungle. You want to get out of it alive. It really does not matter if you know how to clear a path with your machete or how to swing from tree to tree like Tarzan. But if you are heading the wrong direction you will never get out!</p>
-
-<p>Sometimes we are too obsessed with operational details, we forget to ask the big picture question: What do we want to achieve? What is the expected outcome? How will we measure success or failure? These are the questions that we have to ask. These are the questions that set the direction.</p>
-
-<p>Next. Planning. To plan well means we need to identify constraints and limitations we will face in a project.</p>
-
-<p>A typical project has a lot of internal and external dependencies. These dependencies can become constraints and, in some case, even a blocker.</p>
-
-<p>Here is a typical example of a constraint: The new system is dependent on the implementation of a new feature by an external vendor. The vendor does not have the capability to deliver this new feature in your timeframe. So our capability to deliver is constrained by how well the vendor can meet our deadline.</p>
-
-<p>Sometimes a constraint can become a blocker. Say your project requires a key piece of new software which can only be run on an latest version of an operating system. But your internal IT insists that you can only use an older version because of policy.  How are you going to resolve it?</p>
-
-<p>It is important to map out all the potential blockers on the critical path. The failure to do so can bring u unpleasant surprise.</p>
-
-<p>3 Use milestones</p>
-
-<p>Milestone is a technique to break a project down into smaller module. They are good checkpoints for monitoring the health of a project. Once you hit a milestone, it is a good time to pause and check if the original estimate is good, reexamine all the assumption, dependencies and constraints you have identified.</p>
-
-<p>4 Set buffer.</p>
-
-<p>What is buffer? Buffer basically means extra time and resources to prepare for the unexpected. Life is full of unexpected event. Your software vendor may suddenly goes of business; your key employee may become ill and cannot report to work for a while; A sudden change in market condition forces you make some last minute revision… All of these will add pressure on your already tight schedule. If you have not budgeted for these risks in a project, you will be likely end up in a position that you have to scramble to find extra resource and, more often than not, put extra pressure on an already stressed out team.</p>
-
-<p>Burning midnight oil to meet deasline is not a fun experience. Keeping a good and even pace at work is key to avoid burnout. Therefore let me rehash the main points:</p>
-
-<p>Understand the objective; know where you are going
-Have a clear idea of the constraints and the limits &ndash; it can only done well if you understand your task or product well
-Break a project into modules and assign milestones. Each milestone is a checkpoint to review the past performance and adjust the plan and direction.</p>
-
-<p>With these technique you will be able to defeat this monster known as Deadline. After all we work to live, not live to work!</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gem | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/gem/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T14:09:31+11:00</updated>
+  <updated>2015-02-14T15:58:59+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A successful run of kitchen init]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/a-successful-run-of-kitchen-init/"/>
+    <updated>2015-02-14T14:57:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/a-successful-run-of-kitchen-init</id>
+    <content type="html"><![CDATA[<pre><code>    $ kitchen init --gem-file
+       identical  .kitchen.yml
+    Successfully installed kitchen-vagrant-0.15.0
+    Parsing documentation for kitchen-vagrant-0.15.0
+    Installing ri documentation for kitchen-vagrant-0.15.0
+    Done installing documentation for kitchen-vagrant after 0 seconds
+    1 gem installed
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[strange gem install error]]></title>

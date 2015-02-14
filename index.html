@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My kitchen converge throws a lot of error message $ kitchen converge -----&gt; Starting Kitchen (v1.3.1) .... &gt;&gt;&gt;&gt;&gt;&gt; ------ &hellip;">
+  <meta name="description" content="I am following the chapter “Your First Cookbook: Message of the Day” from &lsquo;Learning Chef&rsquo; by Mischa Taylor When I run kitchen converge, I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,198 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">Error Running the Motd Example of the Chef Book</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T15:27:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am following the chapter “Your First Cookbook: Message of the Day” from &lsquo;Learning Chef&rsquo; by Mischa Taylor</p>
+
+<p>When I run <code>kitchen converge</code>, I got these error messages:</p>
+
+<pre><code>               ================================================================================
+               Error executing action `create` on resource 'cookbook_file[/etc/motd]'
+               ================================================================================
+
+               Chef::Exceptions::FileNotFound
+               ------------------------------
+               Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
+                 files/ubuntu-12.04/motd
+                 files/ubuntu/motd
+                 files/default/motd
+                 files/motd
+
+               Resource Declaration:
+               ---------------------
+               # In /tmp/kitchen/cookbooks/motd/recipes/default.rb
+
+                 9: cookbook_file "/etc/motd" do
+                10:   source "motd"
+                11:   mode "0644"
+                12: end
+
+               Compiled Resource:
+               ------------------
+               # Declared in /tmp/kitchen/cookbooks/motd/recipes/default.rb:9:in `from_file'
+
+               cookbook_file("/etc/motd") do
+                 provider Chef::Provider::CookbookFile
+                 action "create"
+                 retries 0
+                 retry_delay 2
+                 default_guard_interpreter :default
+                 path "/etc/motd"
+                 backup 5
+                 atomic_update true
+                 source "motd"
+                 declared_type :cookbook_file
+                 cookbook_name :motd
+                 recipe_name "default"
+                 mode "0644"
+               end
+
+
+           Running handlers:
+           [2015-02-14T04:22:29+00:00] ERROR: Running exception handlers
+           Running handlers complete
+           [2015-02-14T04:22:29+00:00] ERROR: Exception handlers complete
+           [2015-02-14T04:22:29+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+           Chef Client failed. 0 resources updated in 11.010074864 seconds
+           [2015-02-14T04:22:29+00:00] ERROR: cookbook_file[/etc/motd] (motd::default line 9) had an error: Chef::Exceptions::FileNotFound: Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
+             files/ubuntu-12.04/motd
+             files/ubuntu/motd
+             files/default/motd
+      1 Hello, world
+             files/motd
+           [2015-02-14T04:22:29+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+</code></pre>
+
+<p>It is because I forgot to create the file <code>files/default/motd</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/kitchen-converge-problem-2/">Kitchen Converge Problem 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T15:07:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying the <code>kitchen</code> command again, and I am still getting error messages</p>
+
+<pre><code>    $ kitchen converge
+    -----&gt; Starting Kitchen (v1.3.1)
+    -----&gt; Creating &lt;default-ubuntu-1204&gt;...
+           Bringing machine 'default' up with 'virtualbox' provider...
+           The following berks command failed to execute:
+
+               /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
+
+           The stdout and stderr are shown below:
+</code></pre>
+
+<p>It seems like if I make sure the <code>chefdk</code> is at the beginning of the <code>PATH</code>, the above issue will go away too. e.g.</p>
+
+<pre><code>export PATH=/Users/antkong/.chefdk/gem/ruby/2.1.0/bin:/Users/antkong/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/antkong/.rvm/gems/ruby-2.2.0/bin
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A Successful Run of Kitchen Init</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T14:57:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>    $ kitchen init --gem-file
+       identical  .kitchen.yml
+    Successfully installed kitchen-vagrant-0.15.0
+    Parsing documentation for kitchen-vagrant-0.15.0
+    Installing ri documentation for kitchen-vagrant-0.15.0
+    Done installing documentation for kitchen-vagrant after 0 seconds
+    1 gem installed
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -380,153 +572,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two Way to Create Chef Cookbooks</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T01:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>lets say we want to create a cookbook called <code>example</code></p>
-
-<p>Method 1)</p>
-
-<pre><code> chef generate cookbook example
-</code></pre>
-
-<p>Method 2)</p>
-
-<pre><code>knife cookbook create example --cookbook-path .
-cd example
-kitchen init --create-gemfile
-bundle install
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/generate-public-key-fingerprint/">Generate Public Key Fingerprint</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T01:28:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is the command:</p>
-
-<pre><code>ssh-keygen -lf /path/to/ssh/public_key
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/13/ssh-forwarding/">Ssh Forwarding in Vagrant and Private Github Repository</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-13T16:23:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
-
-<p>First in host OS (Mac OSX in my case), run</p>
-
-<pre><code>ssd-add /path/to/githubkey
-</code></pre>
-
-<p>In the <code>.ssh/config</code>, add these lines:</p>
-
-<pre><code>    Host           github
-    HostName       github.com
-    IdentityFile   /path/to/githubkey
-</code></pre>
-
-<p>Then enable port forwarding in vagrant VM</p>
-
-<pre><code>Vagrant.configure("2") do |config|
-  config.ssh.forward_agent = true
-</code></pre>
-
-<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
-
-<pre><code>ssh -T git@github.com
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -542,23 +587,23 @@ bundle install
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
   </ul>

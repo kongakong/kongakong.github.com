@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom delete will honor that guarantee General Idea:
+  <meta name="description" content="It is not entirely obvious in http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html
 ">
   
 
@@ -122,6 +122,120 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6031499072/">How to Abort a Maven Build if Checkstyle Fails</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T17:50:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is not entirely obvious in</p>
+
+<p><a href="checkstyle%20maven%20plugin%20documentation">http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011688672/">Item 10: Write Operator Delete if You Write Operator New</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T06:38:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Rather self-explanatory.</p>
+
+<p>Two recommended checks:</p>
+
+<p><em>Null Pointer Check</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011639593/">Item 9: Avoid Hiding the &#8216;Normal&#8217; Form of New</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-31T06:36:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Not good:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/31/p-6011529808/">Item 8: Adhere to Convention When Writing Operator New and Operator Delete</a></h1>
     
     
@@ -191,118 +305,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6010885434/">Item 7 Revisited</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T06:13:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There is a discussion on</p>
-
-<p><a href="SO">http://stackoverflow.com/questions/1332015/using-class-specific-set-new-handler/1332080#1332080</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6010484565/">Item 7: Be Prepared for Out-of-memory Conditions</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T06:00:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When operator <code>new</code> cannot satisfy a request for memory, it calls the new-handler function not once, but repeatedly unTIL it can find enough memory.</p>
-
-<p>The handler can use do one of the following:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6008713823/">A Way to Remove a Certain Layer Form a UIView’s Layers</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T05:02:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A way to remove a certain layer form a UIView’s layers</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/144/">&larr; Older</a>
@@ -320,23 +322,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
   </ul>

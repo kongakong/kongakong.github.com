@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I have originally created a template hello_world. Then I renamed it to sayhi. Somehow the Template Slug stays as hello-world: in the webhook payload &hellip;">
+  <meta name="description" content="This the error message: ==&gt; default: ================================================================================ ==&gt; default: Error &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,158 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot Find a Resource Matching Ruby_block[sensu_service_trigger]</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-08T18:26:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This the error message:</p>
+
+<pre><code>    ==&gt; default: ================================================================================
+    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
+    ==&gt; default: ================================================================================
+    ==&gt; default:
+    ==&gt; default: Chef::Exceptions::ResourceNotFound
+    ==&gt; default: ----------------------------------
+    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
+    ==&gt; default:
+    ==&gt; default: Cookbook Trace:
+    ==&gt; default: ---------------
+    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
+</code></pre>
+
+<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/08/brew-and-cast/">Brew and Cast</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-08T10:58:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
+
+<pre><code>brew install cask
+</code></pre>
+
+<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
+
+<p>To install <code>brew cask</code>, it is the command:</p>
+
+<pre><code>brew tap caskroom/cask
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">Ochiwa Unable to Connect to Sensu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-06T05:13:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I used chef to install sensu and ochiwa.</p>
+
+<p>In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error</p>
+
+<pre><code>{"Date":"2015-02-05T09:42:23.516606749Z","Level":"warning","Src":{"Func":"github.com/sensu/uchiwa/uchiwa.Build","Line":49},"Output":"API call to \"http://127.0.0.1:4567/stashes\" returned: Get http://127.0.0.1:4567/stashes: dial tcp 127.0.0.1:4567: connection refused"}
+</code></pre>
+
+<p>With help from sensu irc chatroom, I checked</p>
+
+<pre><code>netstat -anp | grep 4567
+</code></pre>
+
+<p>There is no process.</p>
+
+<pre><code>service sensu-api status
+</code></pre>
+
+<p>The service is stopped.</p>
+
+<p>After starting the service, ochiwa can talk to sensu server now.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -239,161 +391,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for Javascript Code in Development Console in Chrome</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-04T14:32:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In OS X, do <code>cmd</code> + <code>Opt</code> + <code>F</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-04T09:08:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A new version of ChefDK 0.4.0 has been released. I did an upgrade via <code>brew cask</code></p>
-
-<pre><code>    $ brew update
-    ...
-    $ brew cask install --force chefdk
-    ==&gt; Downloading https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.4.0-1.dmg
-    ######################################################################## 100.0%
-    ==&gt; Running installer for chefdk; your password may be necessary.
-    ==&gt; Package installers may write to any location; options such as --appdir are ignored.
-    Password:
-    ==&gt; installer: Package name is Chef Development Kit
-    ==&gt; installer: Upgrading at base path /
-    ==&gt; installer: The upgrade was successful.
-    🍺  chefdk staged at '/opt/homebrew-cask/Caskroom/chefdk/0.4.0-1' (6 files, 99M)
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/02/a-little-catch-with-at-patch/">A Little Gotcha With @patch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-02T16:34:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is my code</p>
-
-<pre><code>from mail_api import send_mail
-
-def my_func():
-    # do some work
-    send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
-</code></pre>
-
-<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
-
-<pre><code>from mock import patch
-
-  class MyTest(unittest.TestCase):
-
-    @patch('mail_api.send_mail')
-    def test_my_func(self, send_mail):
-      self.assertEquals(my_func(), expected_result)
-</code></pre>
-
-<p>To my surprise an email is still sent out when the test is run!</p>
-
-<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
-
-<pre><code>import mail_api
-
-def my_func():
-    # do some work
-    mail_api.send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -411,23 +408,23 @@ def my_func():
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two way to create chef cookbooks</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/generate-public-key-fingerprint/">generate public key fingerprint</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
       </li>
     
   </ul>
