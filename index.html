@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For some reason I got this error last night when I tried to run gem install berkshelf $ gem install berkshelf ERROR: While executing gem ... (Errno:: &hellip;">
+  <meta name="description" content="My kitchen converge throws a lot of error message $ kitchen converge -----&gt; Starting Kitchen (v1.3.1) .... &gt;&gt;&gt;&gt;&gt;&gt; ------ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,91 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/berkfile-problem/">Berkshelf Problem With Kitchen Converge</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T12:44:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My <code>kitchen converge</code> throws a lot of error message</p>
+
+<pre><code>    $ kitchen converge
+    -----&gt; Starting Kitchen (v1.3.1)
+
+    ....
+
+    &gt;&gt;&gt;&gt;&gt;&gt; ------Exception-------
+    &gt;&gt;&gt;&gt;&gt;&gt; Class: Kitchen::ActionFailed
+    &gt;&gt;&gt;&gt;&gt;&gt; Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+    ---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+    STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+    ==&gt; default: Box 'opscode-ubuntu-12.04' could not be found. Attempting to find and install...
+        default: Box Provider: virtualbox
+        default: Box Version: &gt;= 0
+    ==&gt; default: Adding box 'opscode-ubuntu-12.04' (v0) for provider: virtualbox
+        default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
+    ==&gt; default: Successfully added box 'opscode-ubuntu-12.04' (v0) for 'virtualbox'!
+    STDERR: The following berks command failed to execute:
+
+        /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
+
+    The stdout and stderr are shown below:
+
+        stdout:
+        stderr: /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/dependency.rb:315:in `to_specs': Could not find 'berkshelf' (&gt;= 0) among 122 total gem(s) (Gem::LoadError)
+    Checked in 'GEM_PATH=/Users/antkong/.vagrant.d/gems:/opt/vagrant/bin/../embedded/gems', execute `gem env` for more information
+      from /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/dependency.rb:324:in `to_spec'
+      from /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_gem.rb:64:in `gem'
+      from /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks:22:in `&lt;main&gt;'
+
+
+    It appears that you are not using the ChefDK. Please note that Vagrant Berkshelf
+    works best when used with the ChefDK, and other installation methods are not
+    officially supported.
+
+    Please download and install the latest version of the ChefDK from:
+
+        https://downloads.getchef.com/chef-dk
+
+    and follow the installation instructions. Do not forget to add the ChefDK to
+    your PATH.
+    ---- End output of vagrant up --no-provision --provider=virtualbox ----
+    Ran vagrant up --no-provision --provider=virtualbox returned 1]
+    &gt;&gt;&gt;&gt;&gt;&gt; ----------------------
+    &gt;&gt;&gt;&gt;&gt;&gt; Please see .kitchen/logs/kitchen.log for more details
+    &gt;&gt;&gt;&gt;&gt;&gt; Also try running `kitchen diagnose --all` for configuration
+</code></pre>
+
+<p>It is related to the active <code>rvm</code>. Once I run <code>rvm use system</code>, the problem is resolved.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -439,66 +524,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">Nosetests &#8211;failed Keeps Picking Up Removed Test</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-13T11:38:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I run</p>
-
-<pre><code>nosetests -v --failed
-</code></pre>
-
-<p>I keep getting this exception:</p>
-
-<pre><code>    #40 Failure: ImportError (No module named test_share_link2) ... ERROR
-
-    ======================================================================
-    ERROR: Failure: ImportError (No module named test_share_link2)
-    ----------------------------------------------------------------------
-    Traceback (most recent call last):
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/loader.py", line 414, in loadTestsFromName
-        addr.filename, addr.module)
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
-        return self.importFromDir(dir_path, fqname)
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 79, in importFromDir
-        fh, filename, desc = find_module(part, path)
-    ImportError: No module named test_share_link2
-</code></pre>
-
-<p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
-
-<p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -514,6 +539,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
       </li>
     
@@ -527,10 +556,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/13/ssh-forwarding/">ssh forwarding in vagrant and private github repository</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">nosetests &#8211;failed keeps picking up removed test</a>
       </li>
     
   </ul>
