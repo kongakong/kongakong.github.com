@@ -9,9 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is so simple 1
-2
-// m is a NSMutualArray NSArray* n = [NSArray arrayWithArray:m]; ">
+  <meta name="description" content="Get a USB flash drive that is at least 8 GBs. Use Disk Utility to prepare the flash drive: Click on the Erase tab in the DU main window.
+Set the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -117,6 +116,59 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a Maverick Usb</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T07:08:00+11:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Get a USB flash drive that is at least 8 GBs.</p>
+
+<p>Use Disk Utility to prepare the flash drive:</p>
+
+<ul>
+<li>Click on the Erase tab in the DU main window.</li>
+<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
+<li>Click on the Erase button.</li>
+</ul>
+
+
+<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
+
+<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
+--volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
+</code></pre>
+
+<p>No need of any third party software</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -354,55 +406,6 @@ alt="hit counter"></a></div></noscript>
 </code></pre>
 
 <p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and View Controller</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-19T02:02:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere. But I digress).</p>
-
-<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have ensured that there is no typo in the my notification name (The name is defined in a header file). I have also make sure the notification is fired on the main thread, like so:</p>
-
-<pre><code>dispatch_async(dispatch_get_main_queue(),^{
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
-});
-</code></pre>
-
-<p>However my UIViewControllers still do not receive any notification at all.</p>
-
-<p>It turns out it is because the controllers instances have gone out of scope. I found out by putting a <code>NSLog</code> in the <code>dealloc</code> method. It proves that the controllers have gone out of scope.</p>
-
-<p> In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers. Will test if it has any adverse effect or not.</p>
 </div>
   
   

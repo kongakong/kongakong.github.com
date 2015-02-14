@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T10:52:13+11:00</updated>
+  <updated>2015-02-14T11:07:10+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -674,11 +674,18 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[init chain rule in swift]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/18/init-chain-rule-in-swift/"/>
-    <updated>2014-09-18T16:30:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/18/init-chain-rule-in-swift</id>
-    <content type="html"><![CDATA[<blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
+    <title type="html"><![CDATA[dictionary in swift]]></title>
+    <link href="http://www.ahwkong.com/post/2014/11/06/dictionary-in-swift/"/>
+    <updated>2014-11-06T11:03:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/11/06/dictionary-in-swift</id>
+    <content type="html"><![CDATA[<p>Dictionary look returns an Optional type by default</p>
+
+<pre><code>    var dict = ["name":"hello"]
+
+    println(dict["name"])         # "Optional("hello")
+
+    println(dict["name"]!)        # "hello"
+</code></pre>
 ]]></content>
   </entry>
   

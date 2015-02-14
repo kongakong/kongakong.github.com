@@ -9,7 +9,28 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Apparently my first attempt to run ‘./bin/pip install scipy’ in virtualenv on OSX lion has failed with bunch of error messages. But second run just &hellip;">
+  <meta name="description" content="The pip cannot install scipy properly. 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21 mport pybrain
+Traceback (most recent call last): File &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +136,89 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/03/p-22317238609/">The Pip Cannot Install Scipy Properly.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-03T22:21:00+10:00" pubdate data-updated="true">May 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The pip cannot install scipy properly.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>mport pybrain
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "", line 1, in 
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/__init__.py", line 1, in 
+</span><span class='line'>    from structure.__init__ import *
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/__init__.py", line 2, in 
+</span><span class='line'>    from modules.__init__ import *
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/__init__.py", line 2, in 
+</span><span class='line'>    from gate import GateLayer, DoubleGateLayer, MultiplicationLayer, SwitchLayer
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/structure/modules/gate.py", line 11, in 
+</span><span class='line'>    from pybrain.tools.functions import sigmoid, sigmoidPrime
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/pybrain/tools/functions.py", line 4, in 
+</span><span class='line'>    from scipy.linalg import inv, det, svd
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/__init__.py", line 115, in 
+</span><span class='line'>    from misc import *
+</span><span class='line'>  File "/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/misc.py", line 3, in 
+</span><span class='line'>    import fblas
+</span><span class='line'>ImportError: dlopen(/Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so, 2): no suitable image found.  Did find:
+</span><span class='line'>    /Users/antkong/wd/kaggle/lib/python2.7/site-packages/scipy/linalg/fblas.so: mach-o, but wrong architecture
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -369,51 +473,6 @@ alt="hit counter"></a></div></noscript>
 </span><span class='line'>    numpy/distutils/site.cfg file (section [blas]) or by setting
 </span><span class='line'>
 </span><span class='line'>    the BLAS environment variable.</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/01/p-22189295387/">Install Virtualenv</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-01T22:31:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For my setup (<code>python</code> from <code>brew</code>), I should run this to install virtualenv</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>/usr/local/share/python/pip install  virtualenv
-</span></code></pre></td></tr></table></div></figure>
-
-
 
 </div>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Bovine Spongiform Encephalopathy (BSE) aka Mad Cow Disease ">
+  <meta name="description" content="Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,76 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/10/14/p-33556110477/">Scala IDE</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-14T19:30:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Downloaded Scala IDE from TypeSafe. The simplest thing to test is to write a ‘Hello Word’ program. I did that by creating a Scala Object. Here is the code</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">package</span> <span class="nn">greeter</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">object</span> <span class="nc">helloworld</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">)</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I proceeded to run it by using the ‘Run it…’. I expected to see ‘Run as Scala Application’ but the option was not there.</p>
+
+<p>Turns out it is my mistake. I need to extends the object from <em>App</em>:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">package</span> <span class="nn">greeter</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">object</span> <span class="nc">helloworld</span> <span class="k">extends</span> <span class="nc">App</span><span class="o">{</span>
+</span><span class='line'>    <span class="n">println</span><span class="o">(</span><span class="s">&quot;hello, world&quot;</span><span class="o">)</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then the option will appear (as shown here):</p>
+
+<p><img class="center" src="/images/tumblr_mbvkaxoK7w1qb37bm.jpg"></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -271,45 +341,6 @@ alt="hit counter"></a></div></noscript>
   <div class="entry-content"><p>Do not have git on my rebuilt MBP. Was about to hit ‘brew install git’. Then I realised: I already have git installed. It is part of XCode.</p>
 
 <p>So it is what I did: add the following line to <code>.bash_rc</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/09/23/p-32107367444/">The Most Cost-effective Way to Store a DNA Sequence &#8230; Is the DNA Itself</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-23T16:20:00+10:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>[The most cost-effective way to store a DNA sequence &hellip; is the DNA itself]
-(<a href="http://www.youtube.com/watch?v=9SzwiZMSBeQ">http://www.youtube.com/watch?v=9SzwiZMSBeQ</a>)</p>
-
-<blockquote><p>DNA material, if stored in dark, cool and dry space, can survive thousand years. It is  a lot more cost-effective than storing the sequence on tapes, which needs to be rotated and maintained, and will degrade overtime. Proper storage of DNA can keep it in good condition for multiple  <em>epochs</em>.</p></blockquote>
 </div>
   
   

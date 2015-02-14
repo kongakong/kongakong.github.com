@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I did not know that after implemented a NSFetchResultController, I sTILl need to programmatically fetch the data and then call the table view to &hellip;">
+  <meta name="description" content="It turns out it is because of the following line of code: NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]); It should be %i because &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,46 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/29/p-2988855627/">My EXC_BAD_ACCESS Mystery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T16:42:00+11:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It turns out it is because of the following line of code:</p>
+
+<p><code>NSLog(@"numberOfRowsInSection %@", [sectionInfo numberOfObjects]);</code></p>
+
+<p>It should be <code>%i</code> because  <em>numberOfObjects</em> returns an integer</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -255,42 +295,6 @@ alt="hit counter"></a></div></noscript>
 
 
   <div class="entry-content"><p>App just mysteriously terminates after core data fetch…</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/25/p-2912666648/">Can Store Data Into the Core Data Sqllite Database, but Cannot Read It Back</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-25T08:00:00+11:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Can store data into the Core Data sqllite database, but cannot read it back into view controller. Need more investigation</p>
 </div>
   
   

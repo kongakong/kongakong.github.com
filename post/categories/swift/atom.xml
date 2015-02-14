@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swift | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/swift/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T10:52:13+11:00</updated>
+  <updated>2015-02-14T11:07:10+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[dictionary in swift]]></title>
+    <link href="http://www.ahwkong.com/post/2014/11/06/dictionary-in-swift/"/>
+    <updated>2014-11-06T11:03:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2014/11/06/dictionary-in-swift</id>
+    <content type="html"><![CDATA[<p>Dictionary look returns an Optional type by default</p>
+
+<pre><code>    var dict = ["name":"hello"]
+
+    println(dict["name"])         # "Optional("hello")
+
+    println(dict["name"]!)        # "hello"
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[init chain rule in swift]]></title>
@@ -81,45 +97,6 @@
 </span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Swift closure error: Boolean is not Convertible to Void]]></title>
-    <link href="http://www.ahwkong.com/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/"/>
-    <updated>2014-09-17T10:50:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/09/17/swift-closure-error-is-not-convertible-to-void</id>
-    <content type="html"><![CDATA[<p>This piece code here:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>dismissViewControllerAnimated(true, completion: { () &ndash;> Void in&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>let account = Account()
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>})&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>throws exception:</p>
-
-<pre><code>Cannot convert the expression's type 'Boolean' to type 'Void'
-</code></pre>
-
-<p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
-
-<p>Adding a <code>return ()</code> as the last expression to the block fixes the problem</p>
 ]]></content>
   </entry>
   

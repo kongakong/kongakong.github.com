@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Got this error when I ran mach build: 1
-configure: error: installation or configuration problem: C++ compiler cannot create executables. Solution: &hellip;">
+  <meta name="description" content="Full error message: 1
+0:08.11 configure: error: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +116,48 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach Problem: Library Requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) Not Met</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T19:38:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Full error message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:08.11 configure: error: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>:  <code>sudo apt-get install libgtk2.0-dev</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -319,75 +361,6 @@ alt="hit counter"></a></div></noscript>
   <div class="entry-content"><p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
 
 <p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/19/tdd-in-objective-c/">Need to Write a Proper Unit Test in Objective-c</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-19T07:12:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is my first attempt at testing my JSON handling code:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">testReadingJSON</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">QueQuestionManager</span><span class="o">*</span> <span class="n">qm</span> <span class="o">=</span> <span class="p">[[</span><span class="n">QueQuestionManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">qm</span><span class="p">.</span><span class="n">server_url</span> <span class="o">=</span> <span class="s">@&quot;http://localhost:8777/&quot;</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">qm</span> <span class="n">readQuestionnaire</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;&gt;&gt; %@&quot;</span><span class="p">,</span> <span class="n">qm</span><span class="p">.</span><span class="n">questionnaire</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Needless to say it is pretty bad, for the following reasons:</p>
-
-<ul>
-<li><p>It has an external dependency of a local server. It is strictly speaking not a unit test</p></li>
-<li><p>The code does not work. It is likely because the run loop is not started when the unit test runs</p></li>
-</ul>
-
-
-<p>My TODO:</p>
-
-<ul>
-<li><p>Refactor the above code to be a proper unit test</p></li>
-<li><p>Use functional testing framework to implement the above test</p></li>
-</ul>
-
 </div>
   
   

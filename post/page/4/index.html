@@ -364,7 +364,7 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/18/init-chain-rule-in-swift/">Init Chain Rule in Swift</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/11/06/dictionary-in-swift/">Dictionary in Swift</a></h1>
     
     
       <p class="meta">
@@ -380,14 +380,21 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   
 
 
-<time datetime="2014-09-18T16:30:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+<time datetime="2014-11-06T11:03:00+11:00" pubdate data-updated="true">Nov 6<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
+  <div class="entry-content"><p>Dictionary look returns an Optional type by default</p>
+
+<pre><code>    var dict = ["name":"hello"]
+
+    println(dict["name"])         # "Optional("hello")
+
+    println(dict["name"]!)        # "hello"
+</code></pre>
 </div>
   
   
