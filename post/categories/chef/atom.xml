@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/chef/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T13:47:52+11:00</updated>
+  <updated>2015-02-14T14:09:31+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -27,7 +27,10 @@
 
 <p>Method 2)</p>
 
-<pre><code>chef generate file example
+<pre><code>knife cookbook create example --cookbook-path .
+cd example
+kitchen init --create-gemfile
+bundle install
 </code></pre>
 ]]></content>
   </entry>

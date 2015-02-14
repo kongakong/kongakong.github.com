@@ -417,7 +417,10 @@ alt="hit counter"></a></div></noscript>
 
 <p>Method 2)</p>
 
-<pre><code>chef generate file example
+<pre><code>knife cookbook create example --cookbook-path .
+cd example
+kitchen init --create-gemfile
+bundle install
 </code></pre>
 </div>
   

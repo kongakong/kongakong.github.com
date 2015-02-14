@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="lets say we want to create a cookbook called example Method 1) chef generate cookbook example Method 2) chef generate file example ">
+  <meta name="description" content="lets say we want to create a cookbook called example Method 1) chef generate cookbook example Method 2) knife cookbook create example --cookbook-path &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -150,7 +150,10 @@ alt="hit counter"></a></div></noscript>
 
 <p>Method 2)</p>
 
-<pre><code>chef generate file example
+<pre><code>knife cookbook create example --cookbook-path .
+cd example
+kitchen init --create-gemfile
+bundle install
 </code></pre>
 </div>
 
