@@ -9,7 +9,14 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is an error message of a runtime exception thrown by NSCalendar: I mean really, what do you think that operation is supposed to mean with a nil &hellip;">
+  <meta name="description" content="To convert a NSDate into another Timezone 1
+2
+3
+4
+5
+6
+7
+8 NSCalendarUnit val = NSCalendarUnitYear|NSCalendarUnitHour; NSCalendar* dupCal = [[ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +122,166 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/14/changing-nstimezone/">Changing NSTimeZone</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-14T22:19:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To convert a NSDate into another Timezone</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSCalendarUnit</span> <span class="n">val</span> <span class="o">=</span> <span class="n">NSCalendarUnitYear</span><span class="o">|</span><span class="n">NSCalendarUnitHour</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">NSCalendar</span><span class="o">*</span> <span class="n">dupCal</span> <span class="o">=</span>  <span class="p">[[</span><span class="n">NSCalendar</span> <span class="n">currentCalendar</span><span class="p">]</span> <span class="n">copy</span><span class="p">];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="p">[</span><span class="n">dupCal</span> <span class="nl">setTimeZone:</span><span class="n">toTimeZone</span><span class="p">];</span> <span class="c1">// setting to a different timezone</span>
+</span><span class='line'>    <span class="n">NSDateComponents</span> <span class="o">*</span><span class="n">dupComponents</span> <span class="o">=</span> <span class="p">[</span><span class="n">dupCal</span> <span class="nl">components:</span><span class="n">val</span> <span class="nl">fromDate:</span><span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">]];</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">// print out the time and check</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%ld&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">long</span><span class="p">)[</span><span class="n">dupComponents</span> <span class="n">hour</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in Objective-c</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-13T07:34:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To find out all timezone abbreviation,</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is the output:</p>
+
+<pre><code>EDT America/New_York
+GMT GMT
+AST America/Halifax
+IRST Asia/Tehran
+ICT Asia/Bangkok
+PET America/Lima
+KST Asia/Seoul
+PST America/Los_Angeles
+CDT America/Chicago
+EEST Europe/Istanbul
+NZDT Pacific/Auckland
+WEST Europe/Lisbon
+EAT Africa/Addis_Ababa
+HKT Asia/Hong_Kong
+IST Asia/Calcutta
+MDT America/Denver
+NZST Pacific/Auckland
+WIT Asia/Jakarta
+ADT America/Halifax
+BST Europe/London
+ART America/Argentina/Buenos_Aires
+CAT Africa/Harare
+GST Asia/Dubai
+PDT America/Los_Angeles
+SGT Asia/Singapore
+COT America/Bogota
+PKT Asia/Karachi
+EET Europe/Istanbul
+UTC UTC
+WAT Africa/Lagos
+EST America/New_York
+JST Asia/Tokyo
+CLST America/Santiago
+CET Europe/Paris
+BDT Asia/Dhaka
+MSK Europe/Moscow
+AKDT America/Juneau
+CLT America/Santiago
+AKST America/Juneau
+BRST America/Sao_Paulo
+BRT America/Sao_Paulo
+CEST Europe/Paris
+CST America/Chicago
+HST Pacific/Honolulu
+MSD Europe/Moscow
+MST America/Denver
+PHT Asia/Manila
+WET Europe/Lisbon
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -269,101 +436,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll Is Not Called</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-03T22:09:00+11:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
-
-<ul>
-<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
-<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
-<li><p>Is Autolayout on (if you use storyboard)?</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/">Mixing C++ and Objective-c in XCode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-02T21:04:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The c++ header keeps getting a compiler error:</p>
-
-<pre><code>'iostream' file not found 
-</code></pre>
-
-<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#ifdef __cplus</span>
-</span><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
-</span><span class='line'><span class="cp">#endif</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/17/">&larr; Older</a>
@@ -381,6 +453,14 @@ Here is the backtrace where this occurred this time (some frames may be missing 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: cookbook php needs version number</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
       </li>
     
@@ -390,14 +470,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
     
       <li class="post">
         <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
       </li>
     
   </ul>

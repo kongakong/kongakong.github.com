@@ -4,7 +4,7 @@
   <title><![CDATA[Category: kitchen | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/kitchen/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-14T15:58:59+11:00</updated>
+  <updated>2015-02-15T17:29:19+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[kitchen converge creates two VMs]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/14/kitchen-converge-creates-two-vms/"/>
+    <updated>2015-02-14T18:17:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/14/kitchen-converge-creates-two-vms</id>
+    <content type="html"><![CDATA[<p>It is because in .kitchen.yml, it contains these two lines:</p>
+
+<pre><code>    platforms:
+      - name: ubuntu-12.04
+      - name: centos-6.5 
+</code></pre>
+
+<p>I can either specify the partform every time I use the kitchen command or simply remove the platform that I do not need.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A successful run of kitchen init]]></title>

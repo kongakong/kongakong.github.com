@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying to build erlang on scientific linux. Currently missing a number of libraries. Installing java-1.6.0-openjdk now for the jinterface
-">
+  <meta name="description" content="Last warning. 1
+2
+3 wx : wxWidgets not found, wx will NOT be usable Probably no existing rpm for this. These yum commands fixed most of the warnings &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +117,131 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585407349/">Last Warning.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T23:00:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last warning.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Probably no existing rpm for this.</p>
+
+<p>These yum commands fixed most of the warnings</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>yum install ncurses
+</span><span class='line'>yum install ncurses-devel
+</span><span class='line'>yum install java-1.6.0-openjdk
+</span><span class='line'>yum install libssh2-devel 
+</span><span class='line'>yum install openssl-devel
+</span><span class='line'>yum install java-1.6.0-openjdk-devel
+</span><span class='line'>yum install unixODBC
+</span><span class='line'>yum install unixODBC-devel
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585200763/">Erlang’s &#8220; Configure&#8220; sTILl Reports These Components as Missing:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T22:49:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>erlang’s <code>configure</code> sTILl reports these components as missing:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>crypto         : No usable OpenSSL found
+</span><span class='line'>jinterface     : No Java compiler found
+</span><span class='line'>odbc           : ODBC library - link check failed
+</span><span class='line'>ssh            : No usable OpenSSL found
+</span><span class='line'>ssl            : No usable OpenSSL found
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -231,78 +357,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/28/p-9455015711/">IAN: Indexed Amortizing Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-28T00:14:00+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>IAN: Indexed Amortizing Notes</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/27/p-9448858352/">Comm</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-27T17:49:00+10:00" pubdate data-updated="true">Aug 27<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Every now and then I sTILl discover some unix command that I did not know before but is very useful. For example, <code>comm</code>.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/107/">&larr; Older</a>
@@ -320,6 +374,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: cookbook php needs version number</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
       </li>
     
@@ -329,14 +391,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/berkfile-problem/">berkshelf problem with kitchen converge</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/strange-gem-install-error/">strange gem install error</a>
       </li>
     
   </ul>
