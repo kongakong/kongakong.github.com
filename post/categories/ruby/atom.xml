@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ruby/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T19:33:35+11:00</updated>
+  <updated>2015-02-15T20:29:14+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -92,31 +92,55 @@ Done installing documentation for bundler, bundle after 1 seconds
 
 <p>The behavior does look a bit odd from a python prespective.</p>
 
-<p>{% codeblock lang:ruby %}</p>
-
-<p>mbp002:~ me$ irb
-2.0.0p195 :001 > 1,2
-SyntaxError: (irb):1: syntax error, unexpected &lsquo;,&rsquo;, expecting end-of-input</p>
-
-<pre><code>from /Users/me/.rvm/rubies/ruby-2.0.0-p195/bin/irb:16:in `&lt;main&gt;'
-</code></pre>
-
-<p>2.0.0p195 :003 > x=1,y=2
- => [1, 2]
-2.0.0p195 :004 > x
- => [1, 2]
-2.0.0p195 :005 > y
- => 2</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;mbp002:~ me$ irb</span>
+</span><span class='line'><span class="sr">2.0.0p195 :001 &gt; 1,2</span>
+</span><span class='line'><span class="sr">SyntaxError: (irb):1: syntax error, unexpected &amp;lsquo;,&amp;rsquo;, expecting end-of-input&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">from</span> <span class="sr">/Users/me</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p195</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="ss">irb</span><span class="p">:</span><span class="mi">16</span><span class="ss">:in</span> <span class="sb">`&amp;lt;main&amp;gt;&#39;</span>
+</span><span class='line'><span class="sb">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sb">&lt;p&gt;2.0.0p195 :003 &gt; x=1,y=2</span>
+</span><span class='line'><span class="sb"> =&gt; [1, 2]</span>
+</span><span class='line'><span class="sb">2.0.0p195 :004 &gt; x</span>
+</span><span class='line'><span class="sb"> =&gt; [1, 2]</span>
+</span><span class='line'><span class="sb">2.0.0p195 :005 &gt; y</span>
+</span><span class='line'><span class="sb"> =&gt; 2&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sb">&lt;p&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Apparently it is treated like</p>
 
-<p>{% codeblock lang:ruby %}</p>
-
-<blockquote><blockquote><p>x = [1, (y = 2)]</p></blockquote></blockquote>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;x = [1, (y = 2)]&lt;/</span><span class="nb">p</span><span class="o">&gt;&lt;</span><span class="sr">/blockquote&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -129,13 +153,18 @@ SyntaxError: (irb):1: syntax error, unexpected &lsquo;,&rsquo;, expecting end-of
 
 <p>Message from RVM after installation:</p>
 
-<p>{% codeblock %}
-  * To start using RVM you need to run <code>source /Users/antkong/.rvm/scripts/rvm</code></p>
-
-<pre><code>in all your open shell windows, in rare cases you need to reopen all shell windows.
-</code></pre>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>* To start using RVM you need to run &lt;code>source /Users/antkong/.rvm/scripts/rvm&lt;/code>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>in all your open shell windows, in rare cases you need to reopen all shell windows.
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

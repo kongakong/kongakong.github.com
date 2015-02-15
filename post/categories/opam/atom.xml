@@ -4,7 +4,7 @@
   <title><![CDATA[Category: opam | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/opam/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T19:33:35+11:00</updated>
+  <updated>2015-02-15T20:29:14+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,23 +20,38 @@
     <id>http://www.ahwkong.com/post/2014/07/06/opam</id>
     <content type="html"><![CDATA[<p>Adding a repository for ocaml</p>
 
-<p>{% codeblock %}
-precise32:~$ sudo add-apt-repository ppa:avsm/ppa
-You are about to add the following PPA to your system:
- Latest stable versions of OCaml and OPAM.
- More info: <a href="https://launchpad.net/~avsm/+archive/ppa">https://launchpad.net/~avsm/+archive/ppa</a>
-Press [ENTER] to continue or ctrl-c to cancel adding it</p>
-
-<p>gpg: keyring <code>/tmp/tmpU270CK/secring.gpg' created
-gpg: keyring</code>/tmp/tmpU270CK/pubring.gpg' created
-gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
-gpg: /tmp/tmpU270CK/trustdb.gpg: trustdb created
-gpg: key 61707B09: public key &ldquo;Launchpad PPA for Anil Madhavapeddy&rdquo; imported
-gpg: Total number processed: 1
-gpg:               imported: 1  (RSA: 1)
-OK</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>precise32:~$ sudo add-apt-repository ppa:avsm/ppa
+</span><span class='line'>You are about to add the following PPA to your system:
+</span><span class='line'> Latest stable versions of OCaml and OPAM.
+</span><span class='line'> More info: &lt;a href="https://launchpad.net/~avsm/+archive/ppa">https://launchpad.net/~avsm/+archive/ppa&lt;/a>
+</span><span class='line'>Press [ENTER] to continue or ctrl-c to cancel adding it&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>gpg: keyring &lt;code>/tmp/tmpU270CK/secring.gpg' created
+</span><span class='line'>gpg: keyring&lt;/code>/tmp/tmpU270CK/pubring.gpg' created
+</span><span class='line'>gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
+</span><span class='line'>gpg: /tmp/tmpU270CK/trustdb.gpg: trustdb created
+</span><span class='line'>gpg: key 61707B09: public key &ldquo;Launchpad PPA for Anil Madhavapeddy&rdquo; imported
+</span><span class='line'>gpg: Total number processed: 1
+</span><span class='line'>gpg:               imported: 1  (RSA: 1)
+</span><span class='line'>OK&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

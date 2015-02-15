@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T19:32:06+11:00</updated>
+  <updated>2015-02-15T20:29:14+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,7 +20,7 @@
     <id>http://www.ahwkong.com/post/2015/02/15/solution-to-php-needs-version-number-problem</id>
     <content type="html"><![CDATA[<p>I finally found a solution to <a href="http://www.ahwkong.com/post/2015/02/15/chef-cookbook-php-needs-version-number">the &lsquo;No version specified, and no candidate version available for php&rsquo; problem</a></p>
 
-<p>I need to run the following command to add more repository</p>
+<p>According to this <a href="http://askubuntu.com/questions/540423/libapache2-mod-php5-depends-php5-common">AskUbuntu answer</a>, I need to run the following command to add more repository</p>
 
 <pre><code>    sudo add-apt-repository universe
     sudo add-apt-repository multiverse
