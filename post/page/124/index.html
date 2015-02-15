@@ -9,7 +9,16 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Tried to build python in Solaris Express 11. Used pkg to install the gcc/g++. and hg. Ran configure to generate the Makefile. After hitting make, got &hellip;">
+  <meta name="description" content="The python build on solaris express is a partial success. Here is part of the output message: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 Python build finished, but the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +124,67 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755732384/">The Python Build on Solaris Express Is a Partial Success</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T00:22:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <em>python</em> build on <em>solaris express</em> is a partial success. Here is part of the output message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>Python build finished, but the necessary bits to build these modules were not found:
+</span><span class='line'>_gdbm              ossaudiodev                        
+</span><span class='line'>To find the necessary bits, look in setup.py in detect_modules() for the module's name.
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Failed to build these modules:
+</span><span class='line'>_curses            _curses_panel                      
+</span><span class='line'>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -283,42 +353,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6710214695/">[http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java](this)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T12:46:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="this">http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/125/">&larr; Older</a>
@@ -336,7 +370,11 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: cookbook php needs version number</a>
+        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
       <li class="post">
@@ -349,10 +387,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A successful run of kitchen init</a>
       </li>
     
   </ul>

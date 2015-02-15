@@ -4,7 +4,7 @@
   <title><![CDATA[Category: conda | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/conda/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T17:57:01+11:00</updated>
+  <updated>2015-02-15T19:33:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,80 +20,43 @@
     <id>http://www.ahwkong.com/post/2014/02/15/conda-update</id>
     <content type="html"><![CDATA[<p>At first I am confused by this <code>conda</code> output. It seems suggest <code>conda</code> is going to upgrade python even though there is no new version of python.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ conda update python
-</span><span class='line'>Updating conda environment at /Users/antkong/anaconda&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>The following packages will be downloaded:&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>package                    |            build
-</span><span class='line'>---------------------------|-----------------
-</span><span class='line'>conda-3.0.4                |           py27_0         103 KB
-</span><span class='line'>openssl-1.0.1c             |                0         2.1 MB
-</span><span class='line'>python-2.7.6               |                1         9.9 MB
-</span><span class='line'>readline-6.2               |                2         275 KB
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>The following packages will be UN-linked:&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>package                    |            build
-</span><span class='line'>---------------------------|-----------------
-</span><span class='line'>conda-2.2.7                |           py27_0
-</span><span class='line'>python-2.7.6               |                0
-</span><span class='line'>readline-6.2               |                1
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>The following packages will be linked:&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>package                    |            build
-</span><span class='line'>---------------------------|-----------------
-</span><span class='line'>conda-3.0.4                |           py27_0   hard-link
-</span><span class='line'>openssl-1.0.1c             |                0   hard-link
-</span><span class='line'>python-2.7.6               |                1   hard-link
-</span><span class='line'>readline-6.2               |                2   hard-link
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Proceed ([y]/n)?&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}</p>
+
+<p>$ conda update python
+Updating conda environment at /Users/antkong/anaconda</p>
+
+<p>The following packages will be downloaded:</p>
+
+<pre><code>package                    |            build
+---------------------------|-----------------
+conda-3.0.4                |           py27_0         103 KB
+openssl-1.0.1c             |                0         2.1 MB
+python-2.7.6               |                1         9.9 MB
+readline-6.2               |                2         275 KB
+</code></pre>
+
+<p>The following packages will be UN-linked:</p>
+
+<pre><code>package                    |            build
+---------------------------|-----------------
+conda-2.2.7                |           py27_0
+python-2.7.6               |                0
+readline-6.2               |                1
+</code></pre>
+
+<p>The following packages will be linked:</p>
+
+<pre><code>package                    |            build
+---------------------------|-----------------
+conda-3.0.4                |           py27_0   hard-link
+openssl-1.0.1c             |                0   hard-link
+python-2.7.6               |                1   hard-link
+readline-6.2               |                2   hard-link
+</code></pre>
+
+<p>Proceed ([y]/n)?</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>It turns out they are the dependency of <code>conda</code>, which will be upgraded from 2.2.7 to 3.0.4</p>
 ]]></content>
@@ -127,50 +90,29 @@
     <id>http://www.ahwkong.com/post/2013/12/30/conda-install-ipython-problem</id>
     <content type="html"><![CDATA[<p>How can I update <code>pip</code>? Need research&hellip;</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>All packages already at latest version, nothing to do.&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>packages in environment at /Users/antkong/anaconda:&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;p>#&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>Warning: Your version of pip is older than what conda requires for pip&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>integration, so pip-installed packages will not be displayed.  Please&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;h1>update pip, (conda update pip -p /Users/antkong/anaconda)&lt;/h1>
-</span><span class='line'>
-</span><span class='line'>&lt;p>conda                     2.2.5                    py27_0&lt;br/>
-</span><span class='line'>ipython                   1.1.0                    py27_0&lt;br/>
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip &mdash;version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+$ conda update ipython</p>
+
+<h1>All packages already at latest version, nothing to do.</h1>
+
+<h1>packages in environment at /Users/antkong/anaconda:</h1>
+
+<p>#</p>
+
+<h1>Warning: Your version of pip is older than what conda requires for pip</h1>
+
+<h1>integration, so pip-installed packages will not be displayed.  Please</h1>
+
+<h1>update pip, (conda update pip -p /Users/antkong/anaconda)</h1>
+
+<p>conda                     2.2.5                    py27_0<br/>
+ipython                   1.1.0                    py27_0<br/>
+$ which pip
+/Users/antkong/anaconda/bin/pip
+$ pip &mdash;version
+pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

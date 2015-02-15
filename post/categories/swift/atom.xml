@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swift | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/swift/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T17:57:01+11:00</updated>
+  <updated>2015-02-15T19:33:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -56,14 +56,12 @@
     <id>http://www.ahwkong.com/post/2014/09/18/swift-ternanry-operators</id>
     <content type="html"><![CDATA[<p>This will cause a compiler error:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
-</span><span class='line'>let b=4&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by &lsquo;;&rsquo;&ldquo;</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+let a=3
+let b=4</p>
+
+<p>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by &lsquo;;&rsquo;&ldquo;
+{% endcodeblock %}</p>
 
 <p>Putting spaces around operators will resolve the compiler error i.e.</p>
 
@@ -79,22 +77,15 @@
     <id>http://www.ahwkong.com/post/2014/09/18/autorelease-in-swift</id>
     <content type="html"><![CDATA[<p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>    // do something expensive without using Obj-C code
-</span><span class='line'>
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+   autoreleasepool {</p>
+
+<pre><code>    // do something expensive without using Obj-C code
+
+}
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
 ]]></content>

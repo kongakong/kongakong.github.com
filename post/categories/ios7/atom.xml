@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios7 | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios7/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T17:57:01+11:00</updated>
+  <updated>2015-02-15T19:33:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,25 +18,15 @@
     <link href="http://www.ahwkong.com/post/2014/02/22/cagradientlayer/"/>
     <updated>2014-02-22T13:57:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/02/22/cagradientlayer</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
-</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
-</span><span class='line'><span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+    <content type="html"><![CDATA[<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>CAGradientLayer *gradient = [CAGradientLayer layer];
+gradient.frame = self.view.bounds;
+gradient.colors = @[ [colorOne CGColor], [colorTwo CGColor] ];
+return gradient;
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>The above code will cause this compiler error:</p>
 
@@ -45,25 +35,15 @@
 
 <p>It can be fixed by casting to <code>id</code></p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
-</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-</span><span class='line'><span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">(</span><span class="kt">id</span><span class="p">)[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
-</span><span class='line'><span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
-</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<pre><code>CAGradientLayer *gradient = [CAGradientLayer layer];
+gradient.frame = self.view.bounds;
+gradient.colors = @[ (id)[colorOne CGColor], (id) [colorTwo CGColor] ];
+return gradient;
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>It is a new behavior due to the use of ARC</p>
 ]]></content>
@@ -76,7 +56,7 @@
     <id>http://www.ahwkong.com/post/2013/11/28/jsonkit-isa-is-deprecated</id>
     <content type="html"><![CDATA[<p>Got a lot of compiler errors when compiling the JSONKit for an iOS7 project.</p>
 
-<p><img class="center" src="/images/ios_jsonkit_isa_error.png"></p>
+<p>{% img center /images/ios_jsonkit_isa_error.png %}</p>
 
 <p>Answer is here: <a href="http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated">http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated</a></p>
 ]]></content>

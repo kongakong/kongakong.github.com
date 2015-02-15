@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/chef/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T17:57:01+11:00</updated>
+  <updated>2015-02-15T19:33:35+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[chef: cookbook php needs version number]]></title>
+    <title type="html"><![CDATA[chef: No version specified, and no candidate version available for php]]></title>
     <link href="http://www.ahwkong.com/post/2015/02/15/chef-cookbook-php-needs-version-number/"/>
     <updated>2015-02-15T14:27:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/02/15/chef-cookbook-php-needs-version-number</id>
