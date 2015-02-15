@@ -448,10 +448,9 @@ alt="hit counter"></a></div></noscript>
            The stdout and stderr are shown below:
 </code></pre>
 
-<p>It seems like if I make sure the <code>chefdk</code> is at the beginning of the <code>PATH</code>, the above issue will go away too. e.g.</p>
+<p>I probably have installed chefdk when the system ruby is active.</p>
 
-<pre><code>export PATH=/Users/antkong/.chefdk/gem/ruby/2.1.0/bin:/Users/antkong/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/antkong/.rvm/gems/ruby-2.2.0/bin
-</code></pre>
+<p>So <code>rvm use system</code> works for me</p>
 </div>
   
   

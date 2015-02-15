@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T17:29:19+11:00</updated>
+  <updated>2015-02-15T17:57:01+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -241,10 +241,9 @@
            The stdout and stderr are shown below:
 </code></pre>
 
-<p>It seems like if I make sure the <code>chefdk</code> is at the beginning of the <code>PATH</code>, the above issue will go away too. e.g.</p>
+<p>I probably have installed chefdk when the system ruby is active.</p>
 
-<pre><code>export PATH=/Users/antkong/.chefdk/gem/ruby/2.1.0/bin:/Users/antkong/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/antkong/.rvm/gems/ruby-2.2.0/bin
-</code></pre>
+<p>So <code>rvm use system</code> works for me</p>
 ]]></content>
   </entry>
   
