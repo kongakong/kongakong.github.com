@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To exit an app when applicationDidEnterBackground:(UIApplication *)application is called, try set UIApplicationExitsOnSuspend to YES in project plist &hellip;">
+  <meta name="description" content="Trying to add SplitViewController to self.window as a RootViewController. STILl not working. Need to work on the XIB magic
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +122,116 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/17/p-5546012348/">Trying to Add SplitViewController to &#8220;self.window&#8220; as a RootViewController. STILl Not Working.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-17T01:45:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying to add SplitViewController to <code>self.window</code> as a RootViewController. STILl not working.</p>
+
+<p>Need to work on the XIB magic</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/17/p-5545670118/">Getting to Understand More About the Role of rootViewController</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-17T01:26:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Getting to understand more about the role of rootViewController</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/17/p-5544709639/">If External Screen Is Attached to an Ios Device</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-17T00:30:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will return True:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/14/p-5476741786/">UIApplicationExitsOnSuspend</a></h1>
     
     
@@ -188,123 +299,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449551106/">Higher Order Function in Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-13T23:38:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a></p>
-
-<p><code>math</code> module contains a <code>sqrt</code> function, but
-can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order function.</p>
-
-<p>Instead, we can wrap it with a <code>fun</code>:</p>
-
-<pre><code>1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]). 
-[3.00000,4.00000,5.00000] 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449490950/">Did Not Know I Can Declare an Anonymous Function With Multiple Clauses as Such:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-13T23:34:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Did not know I can declare an anonymous function with multiple clauses as such:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5442998050/">Mobius (II)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-13T15:01:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Find all prime factors</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/156/">&larr; Older</a>
@@ -322,23 +316,23 @@ can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

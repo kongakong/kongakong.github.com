@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="There is a lot to like about lion. e.g. when I run mvn, it failed because no java runtime is found on my MBP. Immediately a window pops up and asked &hellip;">
+  <meta name="description" content="Xcode 4.1.1 is out
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +122,149 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8545277735/">Xcode 4.1.1 Is Out</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:36:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Xcode 4.1.1 is out</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8544970346/">G++ and Clang++</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:28:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A very simple test to compare g++ and clang++</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ g++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span><span class='line'>cc1plus: warning: command line option "-Wstrict-prototypes" is valid for Ada/C/ObjC but not for C++
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>clang++ does not complaint at all</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ clang++ -Wall -Wstrict-prototypes -ansi -pedantic hello1.cpp -o hello1
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/06/p-8544748050/">A Simple Clang Version Check</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-06T14:22:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Supposedly it is the clang used by Xcode 4.1.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ clang -v
+</span><span class='line'>Apple clang version 2.1 (tags/Apple/clang-163.7.1) (based on LLVM 3.0svn)
+</span><span class='line'>Target: x86_64-apple-darwin11.0.0
+</span><span class='line'>Thread model: posix
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/08/03/p-8427446977/">Lion</a></h1>
     
     
@@ -188,114 +332,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8400000511/">LSE Has a Public Lecture About the Rise and Decline of Wallonia, Belgium. Sounds Interesting.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T08:01:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>LSE has a public lecture about the rise and decline of Wallonia, Belgium. Sounds interesting.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396862778/">Finally Killed the _perl_ Job That Owns the Alert Window. Killed the Parent _uninstalld_ (?) Process Too</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:43:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Finally killed the <em>perl</em> job that owns the alert window. Killed the parent <em>uninstalld</em>  (?) process too</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/03/p-8396704828/">Xcode Installation Woe</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-03T06:39:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is not looking good. The new Xcode installation hang. It stops to alert me to close iTune. But after it is closed the alert stay. I killed the installer but the alert window is still there.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/111/">&larr; Older</a>
@@ -313,23 +349,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

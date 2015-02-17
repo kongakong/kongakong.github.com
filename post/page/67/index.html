@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I bought some powdered water but I don’t know what to add Steven Wright
+  <meta name="description" content="Did a ‘git commit .’ but did not realised the commit has failed. Then I did a ‘git checkout -b next_jira’ and I lost all my changes… Nice.
 ">
   
 
@@ -122,6 +122,118 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/06/02/p-24202482392/">Did a ‘git Commit .’ but Did Not Realised the Commit Has Failed.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-02T03:26:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Did a ‘git commit .’ but did not realised the commit has failed.</p>
+
+<p>Then I did a ‘git checkout -b next_jira’ and I lost all my changes… Nice.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/31/p-24121526195/">MPMoviePlayerViewController</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-31T19:15:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to use <code>MPMoviePlayerViewController</code> but really don’t know how to use <code>initWithContentURL</code> in the context of <code>prepareForSegue</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/31/p-24120953000/">It Is Very Easy to Remove the Tab Bar at the Bottom.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-31T19:02:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is very easy to remove the tab bar at the bottom.</p>
+
+<p>Also need to check ‘hides bottom bars when push’ option</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/05/30/p-24060556910/">I Bought Some Powdered Water but I Don’t Know What to Add</a></h1>
     
     
@@ -197,136 +309,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/29/p-23992201140/">Tab Bar Controller (Reading 1)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-29T21:30:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Tab%20bar%20controller%20(reading%201">http://stackoverflow.com/questions/7434326/need-help-with-the-tab-bar-and-tab-bar-controller</a>)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/28/p-23922752806/">Problem: Cannot Use &#8216;Push&#8217; Segue Between a UITableview Cell and Another Controller</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-28T20:19:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Cause</em></p>
-
-<p>The UITableViewController does not ‘live’ in a UINavigationController</p>
-
-<p><em>Solution</em></p>
-
-<p>Because I am using storyboard, the solution is slightly different from non-storyboard project.</p>
-
-<p>Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.</p>
-
-<p>To fix the problem, I have to</p>
-
-<p>1) drag a UINavigationController in between the TabBarController and the First Custom Controller.</p>
-
-<p>2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller</p>
-
-<p>3) Add a relationship between the TabBarController and the new UINavigationController</p>
-
-<p>4) Add a relationship between the new UINavigationController and the new First Custom Controller</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/28/p-23921458660/">Frame vs Bound</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-28T19:29:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Frame%20vs%20Bound">http://stackoverflow.com/a/1210141/58129</a></p>
-
-<p>The <em>frame</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.</p>
-
-<p>The <em>bounds</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/68/">&larr; Older</a>
@@ -344,23 +326,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For some reason my Chrome installation is gone from my window XP at work. I have to re-install and redo some setup again There are two must-install &hellip;">
+  <meta name="description" content="http://en.wikipedia.org/wiki/Liskov_substitution_principle
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +122,132 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/25/p-5815038508/">Liskov Substitution Principle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-25T09:41:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Liskov%20Principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/25/p-5810996367/">It Is Like You Want to Be a Nun Because You Saw a Flying Nun.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-25T07:42:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is like you want to be a nun because you saw a flying nun.</p>
+
+<p>Edward Conlon, author of <em>Blue Blood</em>, on people wanting to join CSI after watching the TV show</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/24/p-5797170054/">Earn Another Experience Point</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-24T20:12:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wrote up a simple test module code (simply called ‘test’), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<strong>r</strong>) and repayment periods (<strong>n</strong>).</p>
+
+<p>When I compile the module, I get this error message:</p>
+
+<pre><code>Warning: this expression will fail with a 'badarith' exception
+</code></pre>
+
+<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
+
+<p>Now I get another error message:</p>
+
+<pre><code>exception error: no function clause matching test:mp(100000, 0.00625, 360)
+</code></pre>
+
+<p>Turns out the function declaration is <code>mp(B, r, n)</code>.</p>
+
+<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/24/p-5796329592/">For Some Reason My Chrome Installation Is Gone From My Window XP at Work. I Have to Re-install and Redo Some Setup Again</a></h1>
     
     
@@ -198,120 +325,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/23/p-5764934331/">A Friend Helps You Move.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-23T21:55:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A friend helps you move.</p>
-
-<p>A good friend helps you move a body</p>
-
-<p>Rich Hall</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/23/p-5760858058/">RSS Feed Parsing Tasks (I)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-23T16:43:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>Goal:</em> return true if the root element looks something like</p>
-
-<p>(Actually do not know why the use of ‘2.0’ and “2.0” in the comparison below can cause a difference in outcome)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/23/p-5741485064/">CGAffineTransformMakeRotation vs CGAffineTransformRotate</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-23T05:46:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>CGAffineTransformMakeRotation</code> vs <code>CGAffineTransformRotate</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/151/">&larr; Older</a>
@@ -329,23 +342,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

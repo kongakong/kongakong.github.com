@@ -4279,12 +4279,24 @@
         <lastmod>2015-02-15T20:29:00+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking/</loc>
+        <lastmod>2015-02-16T08:49:59+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/16/it-happens-too-often/</loc>
+        <lastmod>2015-02-16T10:15:22+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/17/aws-dynamo-exception-400-bad-request/</loc>
+        <lastmod>2015-02-17T15:16:33+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2015-02-15T20:29:00+11:00</lastmod>
+        <lastmod>2015-02-17T15:16:33+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2015-02-15T20:29:00+11:00</lastmod>
+        <lastmod>2015-02-17T15:16:33+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4292,6 +4304,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2015-02-15T20:29:00+11:00</lastmod>
+        <lastmod>2015-02-17T15:16:33+11:00</lastmod>
     </url>
 </urlset>

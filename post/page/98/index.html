@@ -9,13 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn 1
 2
 3
 4
-$ ./python.exe -SE -m sysconfig --generate-posix-vars
-Fatal Python error: Py_Initialize: can't initialize sys standard streams
-Traceback ( &hellip;">
+5
+6 $ svn info dyld: Library not loaded &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -127,6 +126,135 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/01/10/p-15568925380/">I Must Have Done Something Silly With the DYLD_LIBRARY_PATH. This Is an Error I Got When Running Svn</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-10T03:01:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>$ svn info 
+</span><span class='line'>dyld: Library not loaded: /usr/lib/libpq.5.dylib
+</span><span class='line'>  Referenced from: /usr/bin/svn
+</span><span class='line'>  Reason: image not found
+</span><span class='line'>Trace/BPT trap: 5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run it in a new shell and the problem goes away.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289689582/">Just Installed &#8216;Otx&#8217;, an OSS Implementation of &#8216;Otool&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T20:45:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just installed <code>otx</code>, an OSS implementation of <code>otool</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15289562682/">Just Learn Something New (to Me) About Bash:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T20:37:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Just learn something new (to me) about bash:</p>
+
+<p>1) Anonymous function</p>
+
+<p>2) local (to subroutine) variable</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/01/04/p-15288901020/">What Is Going On?</a></h1>
     
     
@@ -228,142 +356,6 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/30/p-15022191238/">How to Retrieve Session Information of a @WebMethod Call in Spring Framework</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-30T22:03:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/29/p-14937137581/">Design Pattern in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-29T09:01:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://dpip.testingperspective.com">Design Pattern in Python</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/29/p-14932261293/">My Python 3.3 Compilation Ends in This</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-29T07:26:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
-</span><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols
-</span><span class='line'>ranlib libpython3.3m.a
-</span><span class='line'>ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
-</span><span class='line'>ranlib: file: libpython3.3m.a(pymath.o) has no symbols
-</span><span class='line'>gcc -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl -framework CoreFoundation 
-</span><span class='line'>./python.exe -SE -m sysconfig --generate-posix-vars
-</span><span class='line'>python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)
-</span><span class='line'>*** error: can't allocate region
-</span><span class='line'>*** set a breakpoint in malloc_error_break to debug
-</span><span class='line'>make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11
-</span><span class='line'>make: *** Deleting file `Lib/_sysconfigdata.py'</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/99/">&larr; Older</a>
@@ -381,23 +373,23 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

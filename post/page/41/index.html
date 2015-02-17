@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="No more guesswork. 1
-export JAVA_HOME=$(/usr/libexec/java_home) End result: 1
-JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/ &hellip;">
+  <meta name="description" content="First, to install, follow the instrument here: http://stackoverflow.com/a/13718915/58129 You may then get a Could not reserve enough space for object &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -123,6 +121,120 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/04/17/p-48145048805/">Using Sbt in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-17T07:18:00+10:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First, to install, follow the instrument here:</p>
+
+<p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
+
+<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
+
+<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/02/18/p-43309281489/">Native Client: See Only &#8216;Status: Creating Embed: Newlib&#8217; in Chrome</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-18T01:00:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is because I have turned on the flag ‘Native Client GDB-based debugging’. It is not compatible with nexe that are linked with newlib.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/01/02/p-39379650701/">Libtoolize</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-02T00:21:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Missing <code>libtoolize</code> in OSX. Looking for solution</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/12/06/p-37258221019/">Easiest Way to Set Up JAVA_HOME in OSX</a></h1>
     
     
@@ -208,124 +320,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/12/02/p-37006859461/">What Is Portable Native Client?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T15:33:00+11:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="What%20is%20Portable%20Native%20Client?">http://www.chromium.org/nativeclient/pnacl/building-and-testing-portable-native-client</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/11/18/p-35977135674/">How to Set Up Virtualenv and Use Pip in Python 3.3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-18T20:44:00+11:00" pubdate data-updated="true">Nov 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>First of all, you have to install python3.3 on your platform. In Ubuntu 12.10, I use apt-get to install python3.3. (By default it comes with python3.2, which does not have built-in virtual env support)</p>
-
-<p>Then you’ll need to create a virtualenv and activate it. For details see</p>
-
-<p><a href="http://docs.python.org/3/library/venv.html">the python doc</a></p>
-
-<p>Since I want to install packages using pip, I proceed to install distribute.</p>
-
-<p><a href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/11/13/p-35580336669/">VirtualEnv and Python 3.3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-11-13T07:02:00+11:00" pubdate data-updated="true">Nov 13<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>virtualenv</code> is now a built-in module in python 3.3. The best documentation so far seems to be the</p>
-
-<p><a href="PEP%20405">http://www.python.org/dev/peps/pep-0405/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/42/">&larr; Older</a>
@@ -343,23 +337,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

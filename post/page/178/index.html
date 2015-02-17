@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];
-">
+  <meta name="description" content="Finally I can bring up a login screen before the Split View in the ipad. Previously I was doing it wrong. I have the button btnLogin action to get a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,128 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/01/16/p-2759634210/">Finally I Can Bring Up a Login Screen Before the Split View in the Ipad.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-16T00:27:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2727123479/">Splash Screen on iOS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T20:22:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful.</p>
+
+<p><a href="Source">http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
+
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/01/10/p-2668647745/">iOS Idiom 2</a></h1>
     
     
@@ -191,120 +312,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/09/p-2658426192/">Some Note on Frame vs Bounds</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
-
-<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
-
-<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/07/p-2623149828/">Cannot Get UISplitViewController to Rotate. Very Frustrated</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-07T01:05:00+11:00" pubdate data-updated="true">Jan 7<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Cannot get UISplitViewController to rotate. Very frustrated</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/04/p-2586930582/">iOS Idiom 1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-04T10:28:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To access the main window</p>
-
-<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/179/">&larr; Older</a>
@@ -322,23 +329,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

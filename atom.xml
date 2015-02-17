@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T20:29:14+11:00</updated>
+  <updated>2015-02-17T15:16:41+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[AWS Dynamo Exception: 400 Bad Request]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/17/aws-dynamo-exception-400-bad-request/"/>
+    <updated>2015-02-17T15:14:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/17/aws-dynamo-exception-400-bad-request</id>
+    <content type="html"><![CDATA[<p>Getting this error from my server code which uses boto to interace with Dynamo</p>
+
+<pre><code>   [Mon Feb 16 07:25:22 2015] [error] JSONResponseError: JSONResponseError: 400 Bad Request
+   [Mon Feb 16 07:25:22 2015] [error] {u'message': u'Signature expired: 20150216T072522Z is now earlier than 20150216T07252
+   2Z (20150216T074022Z - 15 min.)', u'__type': u'com.amazon.coral.service#InvalidSignatureException'}
+</code></pre>
+
+<p>The server is a <strong>Window Server 2012 Standard</strong> box</p>
+
+<p>Reboot the box fixed the problem</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[It happens too often]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/16/it-happens-too-often/"/>
+    <updated>2015-02-16T10:14:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/16/it-happens-too-often</id>
+    <content type="html"><![CDATA[<p>The provisioning failed a few times this morning:</p>
+
+<pre><code>   Reading state information...
+   The following extra packages will be installed:
+     patch
+   Suggested packages:
+     diffutils-doc policykit-1
+   The following NEW packages will be installed:
+     patch update-notifier-common
+   0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+   Need to get 248 kB of archives.
+   After this operation, 2,361 kB of additional disk space will be used.
+   Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main patch amd64 2.7.1-4ubuntu1
+     Could not resolve 'us.archive.ubuntu.com'
+   Err http://us.archive.ubuntu.com/ubuntu/ trusty/main update-notifier-common all 0.154.1
+     Could not resolve 'us.archive.ubuntu.com'
+   STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.1-4ubuntu1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+   E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_0.154.1_all.deb  Could not resolve 'us.archive.ubuntu.com'
+</code></pre>
+
+<p>But when I ping the server, it responds perfectly.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[setting value in chef cooking]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking/"/>
+    <updated>2015-02-16T08:47:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking</id>
+    <content type="html"><![CDATA[<p>If you set a variable this way in a cookbook:</p>
+
+<pre><code>node['mysqld']['root_password'] = 'password'
+</code></pre>
+
+<p>you will get this exception</p>
+
+<pre><code>   Chef::Exceptions::ImmutableAttributeModification
+   ------------------------------------------------
+   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[solution to php needs version number problem]]></title>
@@ -740,98 +807,6 @@ bundle install
     <updated>2015-02-05T13:11:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/02/05/mandrill-is-sending-me-a-strange-name</id>
     <content type="html"><![CDATA[<p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Authenticate Mandrill Webhook Call in Python]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/04/authenticate-mandrill-webhook-call/"/>
-    <updated>2015-02-04T19:58:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/04/authenticate-mandrill-webhook-call</id>
-    <content type="html"><![CDATA[<p>There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here.</p>
-
-<p>It is assuming you are using Google App Engine</p>
-
-<pre><code>    import webapp2
-    import hashlib
-    import hmac
-
-    class MandrillWebhookHandler(webapp2.RequestHandler):
-
-        def _calc_signature(self, raw, key):
-            hashed = hmac.new(key, raw, hashlib.sha1)
-            return hashed.digest().encode("base64").rstrip('\n')
-
-        def verify_mandrill_signature(self):
-            '''
-            Mandrill includes an additional HTTP header with webhook POST requests,
-                X-Mandrill-Signature, which will contain the signature for the request.
-                To verify a webhook request, generate a signature using the same key
-                that Mandrill uses and compare that to the value of the
-                X-Mandrill-Signature header.
-            :return: True if verified valid
-            '''
-            mandrill_signature = self.request.headers['X-Mandrill-Signature']
-            mandrill_key = 'Your mandrill webhook key goes here'
-            signed_data = self.request.path_url
-            sorted_key = sorted(self.request.arguments())
-            for k in sorted_key:
-                signed_data += k
-                signed_data += self.request.get(k)
-            expected_signature = self._calc_signature(signed_data, mandrill_key)
-            return expected_signature == mandrill_signature
-
-        def head(self):
-            '''
-            Must return 200 so Mandrill knows it is a valid webhook
-
-            http://help.mandrill.com/entries/22024856-Why-can-t-my-webhook-or-inbound-route-URL-be-verified-
-            '''
-            self.response.set_status(OK)
-
-        def post(self):
-            '''
-            Mandrill sends data to our webhook by post
-            '''
-            if not self.verify_mandrill_signature():
-                # check failed
-                self.abort()
-
-            # The rest of processing
-            # ...
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Search for javascript code in development console in chrome]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/04/search-for-code-in-dev-console-in-chrome/"/>
-    <updated>2015-02-04T14:32:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/04/search-for-code-in-dev-console-in-chrome</id>
-    <content type="html"><![CDATA[<p>In OS X, do <code>cmd</code> + <code>Opt</code> + <code>F</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Update ChefDK in OSX]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/04/update-chefdk-in-osx/"/>
-    <updated>2015-02-04T09:08:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/04/update-chefdk-in-osx</id>
-    <content type="html"><![CDATA[<p>A new version of ChefDK 0.4.0 has been released. I did an upgrade via <code>brew cask</code></p>
-
-<pre><code>    $ brew update
-    ...
-    $ brew cask install --force chefdk
-    ==&gt; Downloading https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.4.0-1.dmg
-    ######################################################################## 100.0%
-    ==&gt; Running installer for chefdk; your password may be necessary.
-    ==&gt; Package installers may write to any location; options such as --appdir are ignored.
-    Password:
-    ==&gt; installer: Package name is Chef Development Kit
-    ==&gt; installer: Upgrading at base path /
-    ==&gt; installer: The upgrade was successful.
-    🍺  chefdk staged at '/opt/homebrew-cask/Caskroom/chefdk/0.4.0-1' (6 files, 99M)
-</code></pre>
 ]]></content>
   </entry>
   

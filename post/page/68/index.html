@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Another literary detour.
+  <meta name="description" content="http://stackoverflow.com/questions/7434326/need-help-with-the-tab-bar-and-tab-bar-controller)
 ">
   
 
@@ -122,6 +122,136 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/05/29/p-23992201140/">Tab Bar Controller (Reading 1)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-29T21:30:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Tab%20bar%20controller%20(reading%201">http://stackoverflow.com/questions/7434326/need-help-with-the-tab-bar-and-tab-bar-controller</a>)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/28/p-23922752806/">Problem: Cannot Use &#8216;Push&#8217; Segue Between a UITableview Cell and Another Controller</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T20:19:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Cause</em></p>
+
+<p>The UITableViewController does not ‘live’ in a UINavigationController</p>
+
+<p><em>Solution</em></p>
+
+<p>Because I am using storyboard, the solution is slightly different from non-storyboard project.</p>
+
+<p>Original structure is that a TabBarController owns two custom controllers. The first controller is a subclass of a UITableViewController.</p>
+
+<p>To fix the problem, I have to</p>
+
+<p>1) drag a UINavigationController in between the TabBarController and the First Custom Controller.</p>
+
+<p>2) Remove the original ‘relationship’ segue between TabBarController and the First Custom Controller</p>
+
+<p>3) Add a relationship between the TabBarController and the new UINavigationController</p>
+
+<p>4) Add a relationship between the new UINavigationController and the new First Custom Controller</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/28/p-23921458660/">Frame vs Bound</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-28T19:29:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Frame%20vs%20Bound">http://stackoverflow.com/a/1210141/58129</a></p>
+
+<p>The <em>frame</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to the superview it is contained within.</p>
+
+<p>The <em>bounds</em> of an UIView is the rectangle, expressed as a location (x,y) and size (width,height) relative to its own coordinate system (0,0).</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/05/27/p-23853566417/">&#8216;Growing Up Asian in Australia&#8217; by Alice Pung</a></h1>
     
     
@@ -189,143 +319,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/27/p-23836233379/">Interface Type Cannot Be Statically Allocated</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-27T12:26:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This code fragment</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>// item is a MPMediaItem
-</span><span class='line'>NSURL url = [item valueForProperty:MPMediaItemPropertyAssetURL];
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>causes <code>Interface type cannot be statically allocated</code></p>
-
-<p>But xcode is smart enough to show a tip right away on how to fix it. Just need to change <code>NSURL</code> to <code>NSURL*</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
-
-<p>It totally throws me off because nothing is wrong on that line.</p>
-
-<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
-
-<p>But it did not fix the problem.</p>
-
-<p>Eventually I undo the last change I made, which is</p>
-
-<p>and it works again.</p>
-
-<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788398195/">When I Select a Prototype Cell, It Does Not Follow Segue and Show the Destination Controller, as Defined in the Storyboard Above.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-26T19:47:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.</p>
-
-<p>The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue.</p>
-
-<p>Once I change the segue type to ‘modal’, it works.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/69/">&larr; Older</a>
@@ -343,23 +336,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

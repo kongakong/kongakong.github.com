@@ -9,20 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The core of lisp is just 7 functions: 1
+  <meta name="description" content="Weird error message of say in 10.8.4 1
 2
-3
-4
-5
-6
-7
-(quote x)
-(atom x)
-(eq x y)
-(cons x y)
-(cond (x y) (w z) (t q))
-(car x)
-(cdr x) ">
+MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+MTBEAudioUnitSoundOutput::PropagateProperty Error - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -134,6 +124,131 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/06/09/p-52534137425/">Weird Error Message of &#8216;Say&#8217; in 10.8.4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-09T20:40:00+10:00" pubdate data-updated="true">Jun 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Weird error message of <code>say</code> in 10.8.4</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851
+</span><span class='line'>MTBEAudioUnitSoundOutput::PropagateProperty Error -10851</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/08/p-52453247211/">OSX Terminal and .bashrc</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-08T21:20:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
+
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>-s</code> here means if the file exists and not of size 0</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/08/p-52451932662/">AFS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-08T20:40:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Morgan Stanley uses <a href="http://en.wikipedia.org/wiki/Andrew_File_System">AFS</a> for application deployment with good results.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/06/07/p-52372899462/">The Core of Lisp</a></h1>
     
     
@@ -221,134 +336,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/06/p-52293987426/">Useful OSX API to Find Home and Temp Directory</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-06T21:20:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Useful OSX API to find home and temp directory</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSHomeDirectory
-</span><span class='line'>
-</span><span class='line'>NSTemporaryDirectory</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/06/p-52292736599/">Health System in Oregon</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-06T20:40:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to its citizens.</p>
-
-<p>From</p>
-
-<p><a href="http://en.wikipedia.org/wiki/Oregon_Health_Plan">Wikipedia</a></p>
-
-<blockquote><p>New enrollment in the program was closed from mid-2004 until early
-2008, when a lottery-based system was introduced. Tens of thousands
-of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockquote>
-
-<p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/05/p-52213593051/">A Word in Your Ear: Rhyming Slang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-05T21:20:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></p>
-
-<p>‘Apple and Pear’ means ‘upstair’. Fun.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/36/">&larr; Older</a>
@@ -366,23 +353,23 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

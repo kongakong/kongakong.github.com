@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is how to checkout git private repository from within a VM without leaving a key in the VM First in host OS (Mac OSX in my case), run ssd-add / &hellip;">
+  <meta name="description" content="For some reason I got this error last night when I tried to run gem install berkshelf $ gem install berkshelf ERROR: While executing gem ... (Errno:: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,273 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/strange-gem-install-error/">Strange Gem Install Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T10:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For some reason I got this error last night when I tried to run <code>gem install berkshelf</code></p>
+
+<pre><code>    $ gem install berkshelf
+    ERROR:  While executing gem ... (Errno::EHOSTDOWN)
+        Host is down - sendto(2) for "10.0.1.4" port 53
+</code></pre>
+
+<p>It is apparently OK today:</p>
+
+<pre><code>    $ gem install berkshelf
+    Fetching: nio4r-1.1.0.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed nio4r-1.1.0
+    Fetching: celluloid-io-0.16.2.gem (100%)
+    Successfully installed celluloid-io-0.16.2
+    Fetching: addressable-2.3.7.gem (100%)
+    Successfully installed addressable-2.3.7
+    Fetching: multipart-post-2.0.0.gem (100%)
+    Successfully installed multipart-post-2.0.0
+    Fetching: faraday-0.9.1.gem (100%)
+    Successfully installed faraday-0.9.1
+    Fetching: sawyer-0.6.0.gem (100%)
+    Successfully installed sawyer-0.6.0
+    Fetching: octokit-3.7.1.gem (100%)
+    Successfully installed octokit-3.7.1
+    Fetching: dep-selector-libgecode-1.0.2.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep-selector-libgecode-1.0.2
+    Fetching: dep_selector-1.0.3.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep_selector-1.0.3
+    Fetching: semverse-1.2.1.gem (100%)
+    Successfully installed semverse-1.2.1
+    Fetching: solve-1.2.1.gem (100%)
+    Successfully installed solve-1.2.1
+    Fetching: retryable-2.0.1.gem (100%)
+    Successfully installed retryable-2.0.1
+    Fetching: net-http-persistent-2.9.4.gem (100%)
+    Successfully installed net-http-persistent-2.9.4
+    Fetching: mixlib-log-1.6.0.gem (100%)
+    Successfully installed mixlib-log-1.6.0
+    Fetching: mixlib-authentication-1.3.0.gem (100%)
+    Successfully installed mixlib-authentication-1.3.0
+    Fetching: hashie-2.1.2.gem (100%)
+    Successfully installed hashie-2.1.2
+    Fetching: buff-ruby_engine-0.1.0.gem (100%)
+    Successfully installed buff-ruby_engine-0.1.0
+    Fetching: buff-shell_out-0.2.0.gem (100%)
+    Successfully installed buff-shell_out-0.2.0
+    Fetching: buff-ignore-1.1.1.gem (100%)
+    Successfully installed buff-ignore-1.1.1
+    Fetching: buff-extensions-1.0.0.gem (100%)
+    Successfully installed buff-extensions-1.0.0
+    Fetching: varia_model-0.4.0.gem (100%)
+    Successfully installed varia_model-0.4.0
+    Fetching: buff-config-1.0.1.gem (100%)
+    Successfully installed buff-config-1.0.1
+    Fetching: ridley-4.1.2.gem (100%)
+    Successfully installed ridley-4.1.2
+    Fetching: minitar-0.5.4.gem (100%)
+    Successfully installed minitar-0.5.4
+    Fetching: cleanroom-1.0.0.gem (100%)
+    Successfully installed cleanroom-1.0.0
+    Fetching: berkshelf-api-client-1.2.1.gem (100%)
+    Successfully installed berkshelf-api-client-1.2.1
+    Fetching: berkshelf-3.2.3.gem (100%)
+    Successfully installed berkshelf-3.2.3
+    Parsing documentation for nio4r-1.1.0
+    Installing ri documentation for nio4r-1.1.0
+    Parsing documentation for celluloid-io-0.16.2
+    Installing ri documentation for celluloid-io-0.16.2
+    Parsing documentation for addressable-2.3.7
+    Installing ri documentation for addressable-2.3.7
+    invalid options: -SHN
+    (invalid options are ignored)
+    Parsing documentation for multipart-post-2.0.0
+    Installing ri documentation for multipart-post-2.0.0
+    Parsing documentation for faraday-0.9.1
+    Installing ri documentation for faraday-0.9.1
+    Parsing documentation for sawyer-0.6.0
+    Installing ri documentation for sawyer-0.6.0
+    Parsing documentation for octokit-3.7.1
+    Installing ri documentation for octokit-3.7.1
+    Parsing documentation for dep-selector-libgecode-1.0.2
+    unable to convert "\xEB" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/changelog.in, skipping
+    unable to convert "\x8E" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/contribs/qecode/QCOPPlus.cc, skipping
+    unable to convert "\xFC" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/bin-packing.cpp, skipping
+    unable to convert "\xEA" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/black-hole.cpp, skipping
+    unable to convert "\xD6" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/dominating-queens.cpp, skipping
+    unable to convert "\xEF" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode.m4, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/unary.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/unary.hh, skipping
+    Installing ri documentation for dep-selector-libgecode-1.0.2
+    Parsing documentation for dep_selector-1.0.3
+    Installing ri documentation for dep_selector-1.0.3
+    Parsing documentation for semverse-1.2.1
+    Installing ri documentation for semverse-1.2.1
+    Parsing documentation for solve-1.2.1
+    Installing ri documentation for solve-1.2.1
+    Parsing documentation for retryable-2.0.1
+    Installing ri documentation for retryable-2.0.1
+    Parsing documentation for net-http-persistent-2.9.4
+    Installing ri documentation for net-http-persistent-2.9.4
+    Parsing documentation for mixlib-log-1.6.0
+    Installing ri documentation for mixlib-log-1.6.0
+    Parsing documentation for mixlib-authentication-1.3.0
+    Installing ri documentation for mixlib-authentication-1.3.0
+    Parsing documentation for hashie-2.1.2
+    Installing ri documentation for hashie-2.1.2
+    Parsing documentation for buff-ruby_engine-0.1.0
+    Installing ri documentation for buff-ruby_engine-0.1.0
+    Parsing documentation for buff-shell_out-0.2.0
+    Installing ri documentation for buff-shell_out-0.2.0
+    Parsing documentation for buff-ignore-1.1.1
+    Installing ri documentation for buff-ignore-1.1.1
+    Parsing documentation for buff-extensions-1.0.0
+    Installing ri documentation for buff-extensions-1.0.0
+    Parsing documentation for varia_model-0.4.0
+    Installing ri documentation for varia_model-0.4.0
+    Parsing documentation for buff-config-1.0.1
+    Installing ri documentation for buff-config-1.0.1
+    Parsing documentation for ridley-4.1.2
+    Installing ri documentation for ridley-4.1.2
+    Parsing documentation for minitar-0.5.4
+    Installing ri documentation for minitar-0.5.4
+    Parsing documentation for cleanroom-1.0.0
+    Installing ri documentation for cleanroom-1.0.0
+    Parsing documentation for berkshelf-api-client-1.2.1
+    Installing ri documentation for berkshelf-api-client-1.2.1
+    Parsing documentation for berkshelf-3.2.3
+    Installing ri documentation for berkshelf-3.2.3
+    Done installing documentation for nio4r, celluloid-io, addressable, multipart-post, faraday, sawyer, octokit, dep-selector-libgecode, dep_selector, semverse, solve, retryable, net-http-persistent, mixlib-log, mixlib-authentication, hashie, buff-ruby_engine, buff-shell_out, buff-ignore, buff-extensions, varia_model, buff-config, ridley, minitar, cleanroom, berkshelf-api-client, berkshelf after 17 seconds
+    27 gems installed
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two Way to Create Chef Cookbooks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T01:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>lets say we want to create a cookbook called <code>example</code></p>
+
+<p>Method 1)</p>
+
+<pre><code> chef generate cookbook example
+</code></pre>
+
+<p>Method 2)</p>
+
+<pre><code>knife cookbook create example --cookbook-path .
+cd example
+kitchen init --create-gemfile
+bundle install
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/generate-public-key-fingerprint/">Generate Public Key Fingerprint</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T01:28:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is the command:</p>
+
+<pre><code>ssh-keygen -lf /path/to/ssh/public_key
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -235,180 +502,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/11/mysqld-password-and-chef/">Providing Mysqld Password to Chef Provisioner in Vagrant</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-11T05:04:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I add a chef <code>mysqld</code> receipt to the Vagrant file and here is the error from <code>vagrant up</code>:</p>
-
-<pre><code>    ==&gt; default: Required argument password is missing!
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:26:in `block in from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:25:in `from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/default.rb:22:in `from_file'
-    ==&gt; default:
-    ==&gt; default: Relevant File Content:
-    ==&gt; default: ----------------------
-    ==&gt; default: /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:
-    ==&gt; default:
-    ==&gt; default:  19:  #
-    ==&gt; default:  20:
-    ==&gt; default:
-    ==&gt; default:  21:  # Configure mysql/mariadb according to attributes
-    ==&gt; default:  22:  mysqld 'default'
-    ==&gt; default:  23:
-    ==&gt; default:  24:  # Set password according to attribute, if set
-    ==&gt; default:  25:  mysqld_password 'root' do
-    ==&gt; default:  26&gt;&gt;   password node['mysqld']['root_password']
-    ==&gt; default:
-    ==&gt; default:  27:    only_if { node['mysqld']['root_password'] }
-    ==&gt; default:  28:  end
-    ==&gt; default:  29:
-</code></pre>
-
-<p>Solution: Add this to set the <code>root_password</code>:</p>
-
-<pre><code>chef.json = {
-  :mysqld   =&gt; {
-    :root_password =&gt; "test"
-  }
-}
-</code></pre>
-
-<p>Now you can connect to the mysql server by running</p>
-
-<pre><code> mysql -u root -p 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot Find a Resource Matching Ruby_block[sensu_service_trigger]</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-08T18:26:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This the error message:</p>
-
-<pre><code>    ==&gt; default: ================================================================================
-    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
-    ==&gt; default: ================================================================================
-    ==&gt; default:
-    ==&gt; default: Chef::Exceptions::ResourceNotFound
-    ==&gt; default: ----------------------------------
-    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
-</code></pre>
-
-<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/08/brew-and-cast/">Brew and Cast</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-08T10:58:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
-
-<pre><code>brew install cask
-</code></pre>
-
-<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
-
-<p>To install <code>brew cask</code>, it is the command:</p>
-
-<pre><code>brew tap caskroom/cask
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -426,23 +519,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">kitchen converge creates two VMs</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">error running the motd example of the chef book</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/14/kitchen-converge-problem-2/">kitchen converge problem 2</a>
       </li>
     
   </ul>

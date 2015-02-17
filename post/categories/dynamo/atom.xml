@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dynamo | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/dynamo/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-17T15:16:41+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[AWS Dynamo Exception: 400 Bad Request]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/17/aws-dynamo-exception-400-bad-request/"/>
+    <updated>2015-02-17T15:14:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/17/aws-dynamo-exception-400-bad-request</id>
+    <content type="html"><![CDATA[<p>Getting this error from my server code which uses boto to interace with Dynamo</p>
+
+<pre><code>   [Mon Feb 16 07:25:22 2015] [error] JSONResponseError: JSONResponseError: 400 Bad Request
+   [Mon Feb 16 07:25:22 2015] [error] {u'message': u'Signature expired: 20150216T072522Z is now earlier than 20150216T07252
+   2Z (20150216T074022Z - 15 min.)', u'__type': u'com.amazon.coral.service#InvalidSignatureException'}
+</code></pre>
+
+<p>The server is a <strong>Window Server 2012 Standard</strong> box</p>
+
+<p>Reboot the box fixed the problem</p>
+]]></content>
+  </entry>
+  
+</feed>

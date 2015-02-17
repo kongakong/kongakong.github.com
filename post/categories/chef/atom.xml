@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/chef/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-15T20:29:14+11:00</updated>
+  <updated>2015-02-17T15:16:41+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[It happens too often]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/16/it-happens-too-often/"/>
+    <updated>2015-02-16T10:14:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/16/it-happens-too-often</id>
+    <content type="html"><![CDATA[<p>The provisioning failed a few times this morning:</p>
+
+<pre><code>   Reading state information...
+   The following extra packages will be installed:
+     patch
+   Suggested packages:
+     diffutils-doc policykit-1
+   The following NEW packages will be installed:
+     patch update-notifier-common
+   0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+   Need to get 248 kB of archives.
+   After this operation, 2,361 kB of additional disk space will be used.
+   Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main patch amd64 2.7.1-4ubuntu1
+     Could not resolve 'us.archive.ubuntu.com'
+   Err http://us.archive.ubuntu.com/ubuntu/ trusty/main update-notifier-common all 0.154.1
+     Could not resolve 'us.archive.ubuntu.com'
+   STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.1-4ubuntu1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+   E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_0.154.1_all.deb  Could not resolve 'us.archive.ubuntu.com'
+</code></pre>
+
+<p>But when I ping the server, it responds perfectly.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[setting value in chef cooking]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking/"/>
+    <updated>2015-02-16T08:47:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking</id>
+    <content type="html"><![CDATA[<p>If you set a variable this way in a cookbook:</p>
+
+<pre><code>node['mysqld']['root_password'] = 'password'
+</code></pre>
+
+<p>you will get this exception</p>
+
+<pre><code>   Chef::Exceptions::ImmutableAttributeModification
+   ------------------------------------------------
+   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[chef: No version specified, and no candidate version available for php]]></title>
@@ -172,80 +221,6 @@ cd example
 kitchen init --create-gemfile
 bundle install
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Providing mysqld password to chef provisioner in vagrant]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/11/mysqld-password-and-chef/"/>
-    <updated>2015-02-11T05:04:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/11/mysqld-password-and-chef</id>
-    <content type="html"><![CDATA[<p>I add a chef <code>mysqld</code> receipt to the Vagrant file and here is the error from <code>vagrant up</code>:</p>
-
-<pre><code>    ==&gt; default: Required argument password is missing!
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:26:in `block in from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:25:in `from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/default.rb:22:in `from_file'
-    ==&gt; default:
-    ==&gt; default: Relevant File Content:
-    ==&gt; default: ----------------------
-    ==&gt; default: /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:
-    ==&gt; default:
-    ==&gt; default:  19:  #
-    ==&gt; default:  20:
-    ==&gt; default:
-    ==&gt; default:  21:  # Configure mysql/mariadb according to attributes
-    ==&gt; default:  22:  mysqld 'default'
-    ==&gt; default:  23:
-    ==&gt; default:  24:  # Set password according to attribute, if set
-    ==&gt; default:  25:  mysqld_password 'root' do
-    ==&gt; default:  26&gt;&gt;   password node['mysqld']['root_password']
-    ==&gt; default:
-    ==&gt; default:  27:    only_if { node['mysqld']['root_password'] }
-    ==&gt; default:  28:  end
-    ==&gt; default:  29:
-</code></pre>
-
-<p>Solution: Add this to set the <code>root_password</code>:</p>
-
-<pre><code>chef.json = {
-  :mysqld   =&gt; {
-    :root_password =&gt; "test"
-  }
-}
-</code></pre>
-
-<p>Now you can connect to the mysql server by running</p>
-
-<pre><code> mysql -u root -p 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cannot find a resource matching ruby_block[sensu_service_trigger]]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/"/>
-    <updated>2015-02-08T18:26:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger</id>
-    <content type="html"><![CDATA[<p>This the error message:</p>
-
-<pre><code>    ==&gt; default: ================================================================================
-    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
-    ==&gt; default: ================================================================================
-    ==&gt; default:
-    ==&gt; default: Chef::Exceptions::ResourceNotFound
-    ==&gt; default: ----------------------------------
-    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
-</code></pre>
-
-<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
 ]]></content>
   </entry>
   
