@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual &hellip;">
+  <meta name="description" content="A common error amongst new C++ programmers is to have operator= return void, a decision that seems reasonable unTIL you realize it prevents chains of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,80 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6068911247/">Item 15: Have Operator= Return a Reference to *this</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T21:09:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A common error amongst new C++ programmers is to have<em> operator=</em> return void, a decision that seems reasonable unTIL you realize it prevents chains of assignment.</p>
+
+<p>Here is an example implementation:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048281435/">ANSI C Supports &#8220;const&#8220; Keyword in C99</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T07:42:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ANSI C supports <code>const</code> keyword in C99</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -228,78 +302,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036284846/">C++: Dynamic Array</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T23:12:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We can dynamically allocate arrays of primitive types using new as well</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/144/">&larr; Older</a>
@@ -317,6 +319,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
@@ -326,14 +336,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
       </li>
     
   </ul>

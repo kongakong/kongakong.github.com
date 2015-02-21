@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Valid values of attribute overflow are visible, hidden, scroll, auto, initial and inherit It controls browser behavior if content overflows an &hellip;">
+  <meta name="description" content="Here is the code in question: class Something: NSCoding { ... let smth = Something() let data = NSKeyedArchiver.archivedDataWithRootObject(smth); It &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,95 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized Selector -replacementObjectForKeyedArchiver:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T22:31:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here is the code in question:</p>
+
+<pre><code>class Something: NSCoding {
+    ...
+
+let smth = Something() 
+let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
+</code></pre>
+
+<p>It throws this exception:</p>
+
+<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
+Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
+</code></pre>
+
+<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
+
+<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -238,122 +327,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference Between Handling &#8216;Self&#8217; in Python and Swift</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-10T12:35:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Take a look at this <code>swift</code> code (XCode6 Beta7)</p>
-
-<pre><code>    class C {
-            func name () -&gt; String {
-                return "C"
-            }
-    }
-
-    class D:C {
-            override func name () -&gt; String {
-                return "D"
-            }
-    }
-
-    let c = C()
-    println(c.name()) // print 'C'
-
-    let d = D()
-    println(d.name()) // print 'D' as expected
-
-    println(C.name(d)()) // print 'D'! 
-</code></pre>
-
-<p>In python, the last case is different:</p>
-
-<pre><code>    class C:
-        def name(self):
-            return 'C' 
-
-    class D(C):
-        def name(self):
-            return 'D' 
-
-    c = C() 
-    print(c.name())  // print 'C' 
-
-    d = D() 
-    print(d.name())  // print 'D' 
-
-    print(C.name(d)) // print 'C' 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/04/ngtouch/">ngTouch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-04T16:11:00+10:00" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
-
-<pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
-angular.module('myApp', ['ngTouch']) 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/10/">&larr; Older</a>
@@ -371,6 +344,14 @@ angular.module('myApp', ['ngTouch'])
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
@@ -380,14 +361,6 @@ angular.module('myApp', ['ngTouch'])
     
       <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
       </li>
     
   </ul>

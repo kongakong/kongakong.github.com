@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: quote | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/quote/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-21T16:22:19+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A patriot loves his country; a nationalist hates all others]]></title>
+    <link href="http://www.ahwkong.com/post/2012/03/27/p-20004379767/"/>
+    <updated>2012-03-27T22:00:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2012/03/27/p-20004379767</id>
+    <content type="html"><![CDATA[<blockquote><p>A patriot loves his country; a nationalist hates all others</p></blockquote>
+
+<p>- Georges Benjamin Clemenceau</p>
+]]></content>
+  </entry>
+  
+</feed>

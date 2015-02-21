@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Sorting vs Ordering
-">
+  <meta name="description" content="Learn about this from a http://bugs.python.org/issue12459 When you call sleep(-1)) in Windows, it means sleep infinitely. Possible use case is to put &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,97 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/07/02/p-7153080630/">Sleep(-1) Actually Means Something in Windows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-02T20:27:00+10:00" pubdate data-updated="true">Jul 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Learn about this from a</p>
+
+<p><a href="python%20bug%20discussion">http://bugs.python.org/issue12459</a></p>
+
+<p>When you call <code>sleep(-1)</code>) in Windows, it means sleep infinitely. Possible use case is to put an application in sleep unTIL waken up by signal.</p>
+
+<p>Seems like only Windows do that.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/30/p-7078929929/">To Start a _VirtualBox_ VM Instance in a Ssh Session, We Can Run This Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-30T21:41:00+10:00" pubdate data-updated="true">Jun 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To start a <em>VirtualBox</em> VM instance in a ssh session, we can run this command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type headless
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The key is the parameter <code>--type headless</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/06/30/p-7059185222/">Sorting vs Ordering</a></h1>
     
     
@@ -227,80 +317,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/29/p-7043322527/">Ufsdump</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-29T23:15:00+10:00" pubdate data-updated="true">Jun 29<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><em>ufsdump</em> &ndash; incremental file system dump</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/28/p-7009135592/">http://en.wikipedia.org/wiki/Soft_wood</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-28T22:40:00+10:00" pubdate data-updated="true">Jun 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Soft_wood">http://en.wikipedia.org/wiki/Soft_wood</a></p>
-
-<p>The term <em>softwood</em> is used to describe wood from conifers</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/121/">&larr; Older</a>
@@ -318,6 +334,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
@@ -327,14 +351,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
       </li>
     
   </ul>

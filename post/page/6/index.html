@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my code from mail_api import send_mail def my_func(): # do some work send_mail(to="test@example.com", content="data) # do some more work &hellip;">
+  <meta name="description" content="In OS X, do cmd + Opt + F
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,92 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for Javascript Code in Development Console in Chrome</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-04T14:32:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In OS X, do <code>cmd</code> + <code>Opt</code> + <code>F</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-04T09:08:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A new version of ChefDK 0.4.0 has been released. I did an upgrade via <code>brew cask</code></p>
+
+<pre><code>    $ brew update
+    ...
+    $ brew cask install --force chefdk
+    ==&gt; Downloading https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.4.0-1.dmg
+    ######################################################################## 100.0%
+    ==&gt; Running installer for chefdk; your password may be necessary.
+    ==&gt; Package installers may write to any location; options such as --appdir are ignored.
+    Password:
+    ==&gt; installer: Package name is Chef Development Kit
+    ==&gt; installer: Upgrading at base path /
+    ==&gt; installer: The upgrade was successful.
+    🍺  chefdk staged at '/opt/homebrew-cask/Caskroom/chefdk/0.4.0-1' (6 files, 99M)
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -264,130 +351,6 @@ def my_func():
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/18/basic-rvm/">Basic Rvm</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-18T15:53:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
-
-<p>Here is some basic <code>rvm</code> command:</p>
-
-<pre><code>$ rvm list
-
-rvm rubies
-
-   ruby-1.9.3-p484 [ x86_64 ]
-   ruby-1.9.3-p551 [ x86_64 ]
-=* ruby-2.2.0 [ x86_64 ]
-
-# =&gt; - current
-# =* - current &amp;&amp; default
-#  * - default
-
-
-$ rvm use 2.2.0
-Using /Users/antkong/.rvm/gems/ruby-2.2.0
-
-$ bundle install
-bash: bundle: command not found
-
-$ gem install bundle
-Fetching: bundler-1.7.12.gem (100%)
-Successfully installed bundler-1.7.12
-Fetching: bundle-0.0.1.gem (100%)
-Successfully installed bundle-0.0.1
-Parsing documentation for bundler-1.7.12
-Installing ri documentation for bundler-1.7.12
-Parsing documentation for bundle-0.0.1
-Installing ri documentation for bundle-0.0.1
-Done installing documentation for bundler, bundle after 1 seconds
-2 gems installed 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
-
-<p>Probably the most elegant style</p>
-
-<pre><code>    d = 
-      b: 1
-      c: 2
-</code></pre>
-
-<p>This also works</p>
-
-<pre><code>    d = { b: 1, c: 2}
-</code></pre>
-
-<p>If you need to span multiple lines:</p>
-
-<pre><code>    d = { b: 1 , \
-      c: 2}
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -405,6 +368,14 @@ Done installing documentation for bundler, bundle after 1 seconds
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
@@ -414,14 +385,6 @@ Done installing documentation for bundler, bundle after 1 seconds
     
       <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
       </li>
     
   </ul>

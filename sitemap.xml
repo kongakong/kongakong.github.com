@@ -2570,15 +2570,15 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2012/03/27/p-20004379767/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2015-02-21T16:15:17+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2012/03/28/p-20058166984/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2015-02-21T16:17:02+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2012/03/29/p-20112011762/</loc>
-        <lastmod>2013-11-23T22:54:22+11:00</lastmod>
+        <lastmod>2015-02-21T16:20:23+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2012/04/02/p-20310200686/</loc>
@@ -4301,12 +4301,20 @@
         <lastmod>2015-02-21T11:12:39+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2015/02/21/my-toastmaster-speech-3/</loc>
+        <lastmod>2015-02-21T15:01:00+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/21/switching-to-zsh/</loc>
+        <lastmod>2015-02-21T16:11:59+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2015-02-21T11:13:51+11:00</lastmod>
+        <lastmod>2015-02-21T16:20:23+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2015-02-21T11:13:51+11:00</lastmod>
+        <lastmod>2015-02-21T16:20:23+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4314,6 +4322,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2015-02-21T11:13:51+11:00</lastmod>
+        <lastmod>2015-02-21T16:20:23+11:00</lastmod>
     </url>
 </urlset>

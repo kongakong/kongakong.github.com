@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is how to checkout git private repository from within a VM without leaving a key in the VM First in host OS (Mac OSX in my case), run ssd-add / &hellip;">
+  <meta name="description" content="lets say we want to create a cookbook called example Method 1) chef generate cookbook example Method 2) knife cookbook create example --cookbook-path &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,94 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two Way to Create Chef Cookbooks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T01:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>lets say we want to create a cookbook called <code>example</code></p>
+
+<p>Method 1)</p>
+
+<pre><code> chef generate cookbook example
+</code></pre>
+
+<p>Method 2)</p>
+
+<pre><code>knife cookbook create example --cookbook-path .
+cd example
+kitchen init --create-gemfile
+bundle install
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/generate-public-key-fingerprint/">Generate Public Key Fingerprint</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T01:28:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is the command:</p>
+
+<pre><code>ssh-keygen -lf /path/to/ssh/public_key
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -312,103 +400,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot Find a Resource Matching Ruby_block[sensu_service_trigger]</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-08T18:26:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This the error message:</p>
-
-<pre><code>    ==&gt; default: ================================================================================
-    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
-    ==&gt; default: ================================================================================
-    ==&gt; default:
-    ==&gt; default: Chef::Exceptions::ResourceNotFound
-    ==&gt; default: ----------------------------------
-    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
-</code></pre>
-
-<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/08/brew-and-cast/">Brew and Cast</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-08T10:58:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
-
-<pre><code>brew install cask
-</code></pre>
-
-<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
-
-<p>To install <code>brew cask</code>, it is the command:</p>
-
-<pre><code>brew tap caskroom/cask
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/5/">&larr; Older</a>
@@ -426,6 +417,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
@@ -435,14 +434,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/it-happens-too-often/">It happens too often</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
       </li>
     
   </ul>

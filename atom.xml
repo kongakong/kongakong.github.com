@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-21T11:20:22+11:00</updated>
+  <updated>2015-02-21T16:22:19+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,70 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[switching to zsh]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/21/switching-to-zsh/"/>
+    <updated>2015-02-21T16:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/21/switching-to-zsh</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[My toastmaster speech 3]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/21/my-toastmaster-speech-3/"/>
+    <updated>2015-02-21T11:25:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/21/my-toastmaster-speech-3</id>
+    <content type="html"><![CDATA[<h1>Remark</h1>
+
+<p>The original cut (as shown in following) is considerably longer than what I have delivered finally. It is because, after timing myself, the text takes about 8 min to finish. So I have trimmed off part of the speech. The paradox: when I finally delivered it in front of the audience, it took 9 seconds short of 6 minutes. I have talked a lot faster during the speech.</p>
+
+<h1>Feedback</h1>
+
+<ul>
+<li><p>Vocal variation</p></li>
+<li><p>The opening can be better</p></li>
+<li><p>What I have done right: the speech provided a vivid imagery.</p></li>
+</ul>
+
+
+<h1>Text</h1>
+
+<p>Memory. I want to talk to you about memory today.</p>
+
+<p>How good is your memory? Do you want a little challenge? I will give you a list of random items. let’s see if you can remember them all?
+I have watched a seminar by an American World Memory Championship champion Chester Santos just a month ago. I would love to share his insight and tip with you.</p>
+
+<p>But before I continue, let’s me give you a little challenge. Let me give a list of random words and see if you can remember it. OK? Here it is:</p>
+
+<p>Monkey, Iron, Rope, Kite, House, Paper, Shoe, Worm, Envelope, Pencil, River, Rock, Tree, Coin</p>
+
+<p>Did you get them all? Do you think you can recite the list both forward and backward? I will tell you how later in the talk.</p>
+
+<p>But first let me tell you about some common misunderstandings about memory.</p>
+
+<p>The first common one is: our memory get worse when we get older. It is easy to understand why we have this misconception. When we were young and studying in schools, we have to remember tons of information and get quizzed from time to time. After we leave school and get our first job, we again need to absorb massive amount of new information in order to do our job well. However it is typical that in later stage of our lives, when we settle into our roles, we do not need to learn and recall the same amount of new information anymore. Since we do not use our brain for memorisation, its ability to retain and recall data becomes worse. It is just like any muscle system in our body: lack of exercise will make them weak. But we usually draw a wrong conclusion: we think our memory deteriorated because we are getting old. It is simply not true. It is more a result of our life style. As a good counter example, in a World Memory Championship some years ago, there was a contestant from Malaysia who is in his 60s. Despite his age, he managed to remember all entries in an oxford dictionary AND the words position on a page AND the associated page numbers.</p>
+
+<p>Another misunderstanding is: it takes a special brain to memorise massive amount of data. Actually use of appropriate memory techniques will go a long way. Every one of us can master the techniques.</p>
+
+<p>We have actually a lot of untapped memory capacity such as visual and olfactory memory. Visual memory is extremely powerful: for example, we can remember faces we have come across years ago. If we can enlist the visual memory, we can store a lot of information in our brain. The key is that the images have to be exaggerated, crazy and unusual.</p>
+
+<p>[Take 3 4min mark] It is very easy to understand why: let’s say now, out of nowhere, a big pink elephant break through those wall (points to far end), run across this room and then break this wall (points behind me) and escaped. I am sure 30 years from now, all of us will still recall every details of the episode and cannot stop talking about it.</p>
+
+<p>Do you still remember the list I throw at you at the beginning of this speech? It is actually an example used by the World Memory Championship Champion Chester Santos in his demonstration. So let do this  visual memory exercise together!</p>
+
+<p>First imagine a monkey who is happily running around and making some monkey sound. For some reason it finds a giant iron and he starts to dance around with the iron in his hand. On one end of iron it is attached to a rope. You can feel the rope and it feels rough. You look up the rope and you can see it is attached to a kite. Somehow the kite starts to fall and hit a house. The house is very special and is all covered by paper. Out of nowhere a  shoe appears and it walks on the papers and leave footprints all over the place.</p>
+
+<p>Then you notice there is a worm in the shoe. Try picture this. You want to take a closer look but the worn jumps out and get inside an envelope. Now a pencil appears and write all over the envelope. The pencil then jumps into a river and makes a big splash. The river is crashing up a rock. Near the rock there is a tree. And there is cheese growing up on the tree. Coins are shooting out from the cheese.</p>
+
+<p>Now you have a story. Now you have a picture. You can now easily recite the list of words: Monkey, Iron, Rope, Kite, House, Paper, Shoe, Worm, Envelope, Pencil, River, Rock, Tree, Coin. And you can go backward too. Do you try to it with me? Coin, Tree, Rock, River, Pencil, Envelope, Worm, Shoe, Paper, House, Kite, Rope, Iron, Monkey! Yes, you did it!</p>
+
+<p>In conclusion: 1) Your memory does not get worse because you get old. It gets worse because you do not use it enough. 2) Our brain does not hold as much data as you wish because you do not know how to tape into your visual memory.</p>
+
+<p>Thank You.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Don't let private and public key sit in the same folder when vagrant up]]></title>
@@ -782,49 +846,6 @@ bundle install
 <p>Now you can connect to the mysql server by running</p>
 
 <pre><code> mysql -u root -p 
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Cannot find a resource matching ruby_block[sensu_service_trigger]]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/"/>
-    <updated>2015-02-08T18:26:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger</id>
-    <content type="html"><![CDATA[<p>This the error message:</p>
-
-<pre><code>    ==&gt; default: ================================================================================
-    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
-    ==&gt; default: ================================================================================
-    ==&gt; default:
-    ==&gt; default: Chef::Exceptions::ResourceNotFound
-    ==&gt; default: ----------------------------------
-    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
-</code></pre>
-
-<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[brew and cast]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/08/brew-and-cast/"/>
-    <updated>2015-02-08T10:58:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/08/brew-and-cast</id>
-    <content type="html"><![CDATA[<p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
-
-<pre><code>brew install cask
-</code></pre>
-
-<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
-
-<p>To install <code>brew cask</code>, it is the command:</p>
-
-<pre><code>brew tap caskroom/cask
 </code></pre>
 ]]></content>
   </entry>
