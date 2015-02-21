@@ -9,12 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I must have done something silly with the DYLD_LIBRARY_PATH. This is an error I got when running svn 1
-2
-3
-4
-5
-6 $ svn info dyld: Library not loaded &hellip;">
+  <meta name="description" content="Illegal guard expression for IF in erlang
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -120,6 +116,80 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/10/p-15584634873/">Illegal Guard Expression for if in Erlang</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-10T09:23:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://permalink.gmane.org/gmane.comp.lang.erlang.general/57682">Illegal guard expression for IF in erlang</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/10/p-15582485815/">The Contamination Principle Dictates That Every Nonlinear Security Commands Time Value, Positive if the Security Is Convex and Negative if It Is Concave.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-10T08:43:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The contamination principle dictates that every nonlinear security commands time value, positive if the security is convex and negative if it is concave.</p>
+
+<p>Nassim Taleb, <em>Dynamic Hedging</em></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -250,112 +320,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/01/04/p-15288901020/">What Is Going On?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-04T09:00:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./python.exe -SE -m sysconfig --generate-posix-vars
-</span><span class='line'>Fatal Python error: Py_Initialize: can't initialize sys standard streams
-</span><span class='line'>Traceback (most recent call last):
-</span><span class='line'>  File "/Users/antkong/wd/python.project/cpython/Lib/io.py", line 60, in</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/31/p-15045964017/">Brew Symlink Exception</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-31T09:01:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Tried to install erlang. Got this error message</p>
-
-<pre><code>$ brew install erlang
-==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz
-######################################################################## 100.0%
-==&gt; Pouring erlang-R14B04.bottle.tar.gz
-ln: liberts_r.a: Permission denied
-Error: The linking step did not complete successfully
-The formula built, but is not symlinked into /usr/local
-You can try again using `brew link erlang'
-==&gt; Summary
-/usr/local/Cellar/erlang/R14B04: 6978 files, 261M
-</code></pre>
-
-<p>Tried the following but did not work</p>
-
-<pre><code>$ brew cleanup erlang; brew unlink erlang; brew link erlang
-Removing /usr/local/Cellar/erlang/R14B02...
-Removing /usr/local/Cellar/erlang/R14B03...
-Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
-</code></pre>
-
-<p>sudo unlink and link fixed the issue finally</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/99/">&larr; Older</a>
@@ -373,6 +337,14 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -382,14 +354,6 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

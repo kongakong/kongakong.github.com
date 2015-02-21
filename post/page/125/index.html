@@ -9,7 +9,16 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="http://bugs.python.org/issue12267 Building Python on Windows &ndash; May skip VS2010 Brian Curtin submitted a patch to enable python 2.7 to compile &hellip;">
+  <meta name="description" content="The python build on solaris express is a partial success. Here is part of the output message: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10 Python build finished, but the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +124,120 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755732384/">The Python Build on Solaris Express Is a Partial Success</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T00:22:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The <em>python</em> build on <em>solaris express</em> is a partial success. Here is part of the output message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>Python build finished, but the necessary bits to build these modules were not found:
+</span><span class='line'>_gdbm              ossaudiodev                        
+</span><span class='line'>To find the necessary bits, look in setup.py in detect_modules() for the module's name.
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Failed to build these modules:
+</span><span class='line'>_curses            _curses_panel                      
+</span><span class='line'>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/22/p-6755628799/">Tried to Build _python_ in _Solaris Express 11_.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-22T00:17:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Tried to build <em>python</em> in <em>Solaris Express 11</em>.</p>
+
+<p>Used <code>pkg</code> to install the <code>gcc/g++</code>.</p>
+
+<p>and <code>hg</code>.</p>
+
+<p>Ran <code>configure</code> to generate the <code>Makefile</code>.</p>
+
+<p>After hitting <code>make</code>, got this error message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>math.h no such file or directory 
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Solved by running: <code>pkg install header-math</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -230,80 +353,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6710214695/">[http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java](this)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T12:46:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="this">http://code.google.com/p/guava-libraries/source/browse/trunk/guava/src/com/google/common/collect/Sets.java</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/20/p-6709792052/">Trying to Compile _python 3.2_ on _winxp_ Using vs Express 2008. Basically All the Other Express Version (2003, 2005 and 2010 ) Won’t Work.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-20T12:32:00+10:00" pubdate data-updated="true">Jun 20<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying to compile <em>python 3.2</em> on <em>winxp</em> using VS Express 2008. Basically all the other express version (2003, 2005 and 2010 ) won’t work.</p>
-
-<p>Even the VS Express 2008 does not like the sln file.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/126/">&larr; Older</a>
@@ -321,6 +370,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -330,14 +387,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

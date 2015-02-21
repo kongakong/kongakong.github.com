@@ -9,8 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Get a USB flash drive that is at least 8 GBs. Use Disk Utility to prepare the flash drive: Click on the Erase tab in the DU main window.
-Set the &hellip;">
+  <meta name="description" content="This is a useful marco for doing debug logging: 1
+2
+3
+4
+#define DLog(msg, ...) do { \ NSString *dLogString = [NSString stringWithFormat:@&quot;%s &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +119,139 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/03/nslog-macro/">NSLog Macro</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T08:11:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is a useful marco for doing debug logging:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
+</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
+</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
+</span><span class='line'><span class="cp">} while (0)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
+
+<p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R Is Presinstalled in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-02T11:27:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I just found out R is pre-installed in OSX!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ R
+</span><span class='line'>
+</span><span class='line'>R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+</span><span class='line'>Copyright (C) 2013 The R Foundation for Statistical Computing
+</span><span class='line'>Platform: x86_64-apple-darwin10.8.0 (64-bit)
+</span><span class='line'>
+</span><span class='line'>R is free software and comes with ABSOLUTELY NO WARRANTY.
+</span><span class='line'>You are welcome to redistribute it under certain conditions.
+</span><span class='line'>Type 'license()' or 'licence()' for distribution details.
+</span><span class='line'>
+</span><span class='line'>  Natural language support but running in an English locale
+</span><span class='line'>
+</span><span class='line'>R is a collaborative project with many contributors.
+</span><span class='line'>Type 'contributors()' for more information and
+</span><span class='line'>'citation()' on how to cite R or R packages in publications.
+</span><span class='line'>
+</span><span class='line'>Type 'demo()' for some demos, 'help()' for on-line help, or
+</span><span class='line'>'help.start()' for an HTML browser interface to help.
+</span><span class='line'>Type 'q()' to quit R.
+</span><span class='line'>
+</span><span class='line'>></span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -305,114 +441,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-22T13:57:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The above code will cause this compiler error:</p>
-
-<pre><code>/path/to/MyViewController.m:31:26: Collection element of type 'CGColorRef' (aka 'struct CGColor *') is not an Objective-C object
-</code></pre>
-
-<p>It can be fixed by casting to <code>id</code></p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">(</span><span class="kt">id</span><span class="p">)[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is a new behavior due to the use of ARC</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/19/some-objective-c-note-to-self/">Some Objective-c Note-to-self</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-19T02:11:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To find the number of items in a <code>NSArray</code> use</p>
-
-<pre><code>[array count];
-</code></pre>
-
-<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/16/">&larr; Older</a>
@@ -430,6 +458,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -439,14 +475,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

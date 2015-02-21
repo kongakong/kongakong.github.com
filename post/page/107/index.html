@@ -9,14 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="erlang’s configure sTILl reports these components as missing: 1
-2
-3
-4
-5
-6 crypto : No usable OpenSSL found
-jinterface : No Java compiler found
-odbc &hellip;">
+  <meta name="description" content="Try to run ‘brew update’. Got this error: &#8220;` $ brew update Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +116,130 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/09/02/p-9702772529/">Brew Update Issue on Lion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-02T21:41:00+10:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Try to run ‘brew update’. Got this error:</p>
+
+<p>&#8220;`</p>
+
+<p>$ brew update</p>
+
+<p>Initialized empty Git repository in /usr/local/.git/
+remote: Counting objects: 43317, done.
+remote: Compressing objects: 100% (19213/19213), done.
+remote: Total 43317 (delta 26643), reused 38295 (delta 23498)
+Receiving objects: 100% (43317/43317), 5.93 MiB | 457 KiB/s, done.
+Resolving deltas: 100% (26643/26643), done.
+From</p>
+
+<p><a href="http://github.com/mxcl/homebrew">http://github.com/mxcl/homebrew</a></p>
+
+<p><a href="http://github.com/mxcl/homebrew.git">http://github.com/mxcl/homebrew.git</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/08/30/p-9585407349/">Last Warning.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-08-30T23:00:00+10:00" pubdate data-updated="true">Aug 30<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Last warning.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>wx             : wxWidgets not found, wx will NOT be usable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Probably no existing rpm for this.</p>
+
+<p>These yum commands fixed most of the warnings</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>yum install ncurses
+</span><span class='line'>yum install ncurses-devel
+</span><span class='line'>yum install java-1.6.0-openjdk
+</span><span class='line'>yum install libssh2-devel 
+</span><span class='line'>yum install openssl-devel
+</span><span class='line'>yum install java-1.6.0-openjdk-devel
+</span><span class='line'>yum install unixODBC
+</span><span class='line'>yum install unixODBC-devel
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -254,78 +372,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/28/p-9497321169/">Try to Use &#8220;git&#8220; on a Cpython Code Base (Which Uses Hg as the VCS). Was Thinking: Need to Come Up With a &#8220;.gitignore&#8220; Myself, Probably. Turns Out There Is a &#8220;.gitignore&#8220; in the Repository. Glad Need Not to Do This Extra Work</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-28T20:56:00+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Try to use <code>git</code> on a cpython code base (which uses hg as the VCS). Was thinking: Need to come up with a <code>.gitignore</code> myself, probably. Turns out there is a <code>.gitignore</code> in the repository. Glad need not to do this extra work</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/08/28/p-9455015711/">IAN: Indexed Amortizing Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-28T00:14:00+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>IAN: Indexed Amortizing Notes</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/108/">&larr; Older</a>
@@ -343,6 +389,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -352,14 +406,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

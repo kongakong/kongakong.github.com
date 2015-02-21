@@ -9,10 +9,20 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Useful OSX API to find home and temp directory 1
+  <meta name="description" content="The core of lisp is just 7 functions: 1
 2
 3
-NSHomeDirectory NSTemporaryDirectory ">
+4
+5
+6
+7
+(quote x)
+(atom x)
+(eq x y)
+(cons x y)
+(cond (x y) (w z) (t q))
+(car x)
+(cdr x) ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,6 +128,98 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/07/p-52372899462/">The Core of Lisp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-07T21:20:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The core of lisp is just 7 functions:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(quote x)
+</span><span class='line'>(atom x)
+</span><span class='line'>(eq x y)
+</span><span class='line'>(cons x y)
+</span><span class='line'>(cond (x y) (w z) (t q))
+</span><span class='line'>(car x)
+</span><span class='line'>(cdr x)</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/06/07/p-52371654734/">NSDocument and First Responder</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-07T20:40:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful:</p>
+
+<p><a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">Connecting Menu Items in Document Based Applications</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -247,78 +349,6 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/05/p-52212432857/">Two Ways to Build File Names</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-05T20:40:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/06/04/p-52133031773/">Basename-equivalent in Objective-C</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-04T21:20:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use <code>lastPathComponent</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/37/">&larr; Older</a>
@@ -336,6 +366,14 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -345,14 +383,6 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

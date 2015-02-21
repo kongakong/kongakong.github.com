@@ -9,15 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is my first attempt at testing my JSON handling code: 1
+  <meta name="description" content="Here is an example: 1
 2
-3
-4
-5
-6
-7
-- (void)testReadingJSON
-{ QueQuestionManager* qm = [[QueQuestionManager alloc &hellip;">
+3 NSString* s = @&quot;{&quot; \ &quot; key1 = \&quot;value1\&quot; \ &quot; }&quot;; ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -123,6 +117,91 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/19/how-to-do-a-multi-line-string-in-objective-c/">How to Do a Multi-line String in Objective-c</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-19T07:33:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here is an example:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'> <span class="n">NSString</span><span class="o">*</span> <span class="n">s</span> <span class="o">=</span> <span class="s">@&quot;{&quot;</span> \
+</span><span class='line'>    <span class="s">&quot; key1 = </span><span class="se">\&quot;</span><span class="s">value1</span><span class="se">\&quot;</span><span class="s"> \</span>
+</span><span class='line'><span class="s">    &quot;</span> <span class="p">}</span><span class="s">&quot;;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/19/ownership-rule-exception/">Ownership Rule Exception</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-19T07:26:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
+
+<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -344,110 +423,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/16/uiscrollview-and-contnetsize/">UIScrollView and contentSize</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-16T10:42:00+11:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Common mistake in using <code>UIScrollView</code>: did not set the <code>contentSize</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/13/incorrect-way-to-use-jsonkit/">Incorrect Way to Use JSONKit?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-13T06:42:00+11:00" pubdate data-updated="true">Dec 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>At the beginning I use the following code to decode a JSON string:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectionDidFinishLoading:</span><span class="p">(</span><span class="n">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="nv">connection</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="n">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
-</span><span class='line'>                            <span class="nl">initWithParseOptions:</span><span class="n">JKParseOptionNone</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nl">objectWithData:</span><span class="n">receivedData</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>and then I tried to convert the json data with this function:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="n">voide</span><span class="p">)</span> <span class="nf">convertJSONData:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">json</span> <span class="p">{</span>
-</span><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">enumerator</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span> <span class="n">objectEnumerator</span><span class="p">];</span>
-</span><span class='line'>    <span class="kt">id</span> <span class="n">anObject</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">anObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">enumerator</span> <span class="n">nextObject</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>        <span class="c1">// test for anObject class and handle accordingly</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is probably not an efficient way to handle the incoming json data.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/25/">&larr; Older</a>
@@ -465,6 +440,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -474,14 +457,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

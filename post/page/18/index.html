@@ -9,10 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The c++ header keeps getting a compiler error: 'iostream' file not found Here is the solution: wrap the #include inside #ifdef __cplus 1
-2
-3
-#ifdef &hellip;">
+  <meta name="description" content="Wanted to declare and initialise a static variable in a .m file. Objective-c compiler does not like it, and raise this error message: Initializer &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,6 +115,96 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/09/dispatch-once/">Dispatch_once</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-09T21:22:00+11:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll Is Not Called</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-03T22:09:00+11:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
+
+<ul>
+<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
+<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
+<li><p>Is Autolayout on (if you use storyboard)?</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -267,92 +354,6 @@ receive 6-month LIBOR
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/20/html5/">Html 5 Resources</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-20T16:04:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Some useful links:</p>
-
-<p><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></p>
-
-<p><a href="https://github.com/scottjehl/picturefill">https://github.com/scottjehl/picturefill</a></p>
-
-<p><a href="http://www.standardista.com/responsive-images-clown-car-technique/">http://www.standardista.com/responsive-images-clown-car-technique/</a></p>
-
-<p><a href="http://www.w3.org/community/respimg/">http://www.w3.org/community/respimg/</a></p>
-
-<p><strong>Hammer.js</strong> <a href="http://eightmedia.github.io/hammer.js/">http://eightmedia.github.io/hammer.js/</a></p>
-
-<p><strong>jQT</strong> <a href="http://jqtjs.com/">http://jqtjs.com/</a></p>
-
-<p><strong>Sencha gestures</strong> <a href="http://www.sencha.com/blog/ext-js-on-tap/">http://www.sencha.com/blog/ext-js-on-tap/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/19/">&larr; Older</a>
@@ -370,6 +371,14 @@ receive 6-month LIBOR
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -379,14 +388,6 @@ receive 6-month LIBOR
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

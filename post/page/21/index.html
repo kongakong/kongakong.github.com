@@ -9,17 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Try to run import pandas in python. Encountered this: 1
-2
-3
-4
-5
-6
-7
-8
-&gt;&gt;&gt; import pandas
-No module named dateutil.parser
-Traceback (most &hellip;">
+  <meta name="description" content="Floating-rate payer: pay 6-month LIBOR receive a fixed rate of 5.19 percent Fixed-rate payer: pay a fixed rate of 5.25 percent receive 6-month LIBOR &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -125,6 +115,99 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/04/swap-convention/">Swap Convention</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-04T21:15:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><pre><code>Floating-rate payer: pay 6-month LIBOR
+                     receive a fixed rate of 5.19 percent
+
+Fixed-rate payer: pay a fixed rate of 5.25 percent
+                  receive 6-month LIBOR
+</code></pre>
+
+<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p></blockquote>
+
+<p><em>from &lsquo;Moorad Choudhry &ndash; Fixed Income Securities and Derivatives Handbook (Analysis and Valuation)&rsquo;</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/03/conda-and-ipython/">Conda and Ipython</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-03T23:01:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
+
+<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
+
+<p>Now I have four set of python runtime installed on my MBP:</p>
+
+<ul>
+<li><p>From Apple</p></li>
+<li><p>From Homebrew</p></li>
+<li><p>From Pythonbrew</p></li>
+<li><p>From conda</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -294,115 +377,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/31/user-defined-runtime-attribute/">User Defined Runtime Attribute</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-31T06:42:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It comes from the interface builder. The exception is thrown when xib file is loaded and trying to set an attribute in a class.</p>
-
-<p>If the attribute is not defined, you will get this error and the app will crash</p>
-
-<pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/30/conda-install-ipython-problem/">Conda Install Ipython Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-30T08:27:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How can I update <code>pip</code>? Need research&hellip;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython
-</span><span class='line'># All packages already at latest version, nothing to do.
-</span><span class='line'># packages in environment at /Users/antkong/anaconda:
-</span><span class='line'>#
-</span><span class='line'># Warning: Your version of pip is older than what conda requires for pip
-</span><span class='line'># integration, so pip-installed packages will not be displayed.  Please
-</span><span class='line'># update pip, (conda update pip -p /Users/antkong/anaconda)
-</span><span class='line'>
-</span><span class='line'>conda                     2.2.5                    py27_0  
-</span><span class='line'>ipython                   1.1.0                    py27_0  
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip --version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/22/">&larr; Older</a>
@@ -420,6 +394,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -429,14 +411,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

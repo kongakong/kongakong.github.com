@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here. It is assuming you are &hellip;">
+  <meta name="description" content="I used chef to install sensu and ochiwa. In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error {"Date":"2015-02-05T09:42:23. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,97 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">Ochiwa Unable to Connect to Sensu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-06T05:13:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I used chef to install sensu and ochiwa.</p>
+
+<p>In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error</p>
+
+<pre><code>{"Date":"2015-02-05T09:42:23.516606749Z","Level":"warning","Src":{"Func":"github.com/sensu/uchiwa/uchiwa.Build","Line":49},"Output":"API call to \"http://127.0.0.1:4567/stashes\" returned: Get http://127.0.0.1:4567/stashes: dial tcp 127.0.0.1:4567: connection refused"}
+</code></pre>
+
+<p>With help from sensu irc chatroom, I checked</p>
+
+<pre><code>netstat -anp | grep 4567
+</code></pre>
+
+<p>There is no process.</p>
+
+<pre><code>service sensu-api status
+</code></pre>
+
+<p>The service is stopped.</p>
+
+<p>After starting the service, ochiwa can talk to sensu server now.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">Mandrill Is Sending Me a Strange Template Name</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-05T13:11:00+11:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -289,115 +380,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/02/a-little-catch-with-at-patch/">A Little Gotcha With @patch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-02T16:34:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is my code</p>
-
-<pre><code>from mail_api import send_mail
-
-def my_func():
-    # do some work
-    send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
-</code></pre>
-
-<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
-
-<pre><code>from mock import patch
-
-  class MyTest(unittest.TestCase):
-
-    @patch('mail_api.send_mail')
-    def test_my_func(self, send_mail):
-      self.assertEquals(my_func(), expected_result)
-</code></pre>
-
-<p>To my surprise an email is still sent out when the test is run!</p>
-
-<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
-
-<pre><code>import mail_api
-
-def my_func():
-    # do some work
-    mail_api.send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/20/chef/">Chef, Brekshelf and Data Bag</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-20T14:41:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
-
-<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
-
-<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/6/">&larr; Older</a>
@@ -415,6 +397,14 @@ def my_func():
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -424,14 +414,6 @@ def my_func():
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>

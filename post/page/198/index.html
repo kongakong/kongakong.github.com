@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Just learn of this from the video of session 302 of WWDC10. It also showcased how to make your epub file with Automator. It is something new to me.
-">
+  <meta name="description" content="So, it is the answer: 1
+defaults write com.apple.Xcode PBXCustomTemplateMacroDefinitions -dict ORGANIZATIONNAME "your company name" Someone suggested &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +116,90 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/07/13/p-803552014/">Changing __MYCOMPANYNAME__ in Xcode Template</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-13T07:40:00+10:00" pubdate data-updated="true">Jul 13<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, it is the answer:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defaults write com.apple.Xcode PBXCustomTemplateMacroDefinitions -dict ORGANIZATIONNAME "your company name"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Someone suggested that changing the Me Card in the Address Book will have the same effect. Does not work for me though.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2010/07/11/p-796996959/">Reading List of the Day</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-11T17:41:00+10:00" pubdate data-updated="true">Jul 11<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From</p>
+
+<p><a href="http://developer.apple.com/mac/library/referencelibrary/GettingStarted/GS_GraphicsImaging/index.html">http://developer.apple.com/mac/library/referencelibrary/GettingStarted/GS_GraphicsImaging/index.html</a></p>
+
+<p><em>Fundamentals</em></p>
+
+<p><em>Examples</em></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -229,86 +313,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/06/30/p-753650737/">@property and @synthesize</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-30T22:54:00+10:00" pubdate data-updated="true">Jun 30<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Learning @property and @synthesize</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2010/06/26/p-737136407/">NSLog</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-06-26T14:58:00+10:00" pubdate data-updated="true">Jun 26<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Objective-c/Apple platform is my new adventure.</p>
-
-<p>Step 0 is acquisition of a Apple machine.</p>
-
-<p>Step 1, obviously, is to get familiar with the IDE, Xcode.</p>
-
-<p>Step 2? I would say it is to be effective in searching and reading the documentation.</p>
-
-<p>That’s how NSLog becomes the title of the post: how could I find out all I need to know about the ‘format’ parameter efficiently?</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/199/">&larr; Older</a>
@@ -326,6 +330,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/18/chsh/">chsh</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
@@ -335,14 +347,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/16/setting-value-in-chef-cooking/">setting value in chef cooking</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">solution to php needs version number problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">chef: No version specified, and no candidate version available for php</a>
       </li>
     
   </ul>
