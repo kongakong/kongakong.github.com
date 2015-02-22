@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-21T16:36:17+11:00</updated>
+  <updated>2015-02-22T13:19:21+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,7 +18,10 @@
     <link href="http://www.ahwkong.com/post/2015/02/21/switching-to-zsh/"/>
     <updated>2015-02-21T16:11:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/02/21/switching-to-zsh</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>I have been searching the internet for a while to understand this expression <code>${0:h}</code>. Finally here is an answer:</p>
+
+<pre><code> info -f zsh -n Modifiers
+</code></pre>
 ]]></content>
   </entry>
   
