@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In OS X, do cmd + Opt + F
-">
+  <meta name="description" content="There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here. It is assuming you are &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,93 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-04T19:58:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here.</p>
+
+<p>It is assuming you are using Google App Engine</p>
+
+<pre><code>    import webapp2
+    import hashlib
+    import hmac
+
+    class MandrillWebhookHandler(webapp2.RequestHandler):
+
+        def _calc_signature(self, raw, key):
+            hashed = hmac.new(key, raw, hashlib.sha1)
+            return hashed.digest().encode("base64").rstrip('\n')
+
+        def verify_mandrill_signature(self):
+            '''
+            Mandrill includes an additional HTTP header with webhook POST requests,
+                X-Mandrill-Signature, which will contain the signature for the request.
+                To verify a webhook request, generate a signature using the same key
+                that Mandrill uses and compare that to the value of the
+                X-Mandrill-Signature header.
+            :return: True if verified valid
+            '''
+            mandrill_signature = self.request.headers['X-Mandrill-Signature']
+            mandrill_key = 'Your mandrill webhook key goes here'
+            signed_data = self.request.path_url
+            sorted_key = sorted(self.request.arguments())
+            for k in sorted_key:
+                signed_data += k
+                signed_data += self.request.get(k)
+            expected_signature = self._calc_signature(signed_data, mandrill_key)
+            return expected_signature == mandrill_signature
+
+        def head(self):
+            '''
+            Must return 200 so Mandrill knows it is a valid webhook
+
+            http://help.mandrill.com/entries/22024856-Why-can-t-my-webhook-or-inbound-route-URL-be-verified-
+            '''
+            self.response.set_status(OK)
+
+        def post(self):
+            '''
+            Mandrill sends data to our webhook by post
+            '''
+            if not self.verify_mandrill_signature():
+                # check failed
+                self.abort()
+
+            # The rest of processing
+            # ...
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -312,45 +398,6 @@ def my_func():
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/19/best-way-to-install-chefdk/">Best Way to Install Chefdk on OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-19T15:12:00+11:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The best way to install chefdk on OSX for me is to use <code>brew cask</code>:</p>
-
-<pre><code>brew cask install chefdk 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -368,6 +415,10 @@ def my_func():
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/22/innovation/">Innovation</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
       </li>
     
@@ -381,10 +432,6 @@ def my_func():
     
       <li class="post">
         <a href="/post/2015/02/18/chsh/">chsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
   </ul>

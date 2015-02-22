@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-22T13:27:30+11:00</updated>
+  <updated>2015-02-23T00:19:38+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Innovation]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/22/innovation/"/>
+    <updated>2015-02-22T21:32:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/22/innovation</id>
+    <content type="html"><![CDATA[<h2>Video</h2>
+
+<p><a href="https://www.youtube.com/watch?v=Mtjatz9r-Vc">The art of innovation by Guy Kawasaki</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=pii8tTx1UYM">Our approach to innovation is dead wrong by Diana Kander</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=YKV3rhzvaC8">The New Rules of Innovation by Carl Bass</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Do schools kill creativity? by Sir Ken Robinson</a></p>
+
+<blockquote><p>(In a kids&#8217; nativity play) The three boys came in, four-year-olds with tea towels on their heads, and they put these boxes down, and the first boy said, &ldquo;I bring you gold.&rdquo; And the second boy said, &ldquo;I bring you myrrh.&rdquo; And the third boy said, &ldquo;Frank sent this.&rdquo;</p>
+
+<p>Actually, do you know that old philosophical thing, if a tree falls in a forest and nobody hears it, did it happen? Remember that old chestnut? I saw a great t-shirt recently, which said, &ldquo;If a man speaks his mind in a forest, and no woman hears him, is he still wrong?&rdquo;</p></blockquote>
+
+<p><a href="http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"><em>Full transcript</em></a></p>
+
+<p><a href="https://www.youtube.com/watch?v=86x-u-tz0MA">Your elusive creative genius by Elizabeth Gilbert</a></p>
+
+<blockquote><p>Fear based questions</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[switching to zsh]]></title>
@@ -799,56 +826,6 @@ bundle install
 <p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
 
 <p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Providing mysqld password to chef provisioner in vagrant]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/11/mysqld-password-and-chef/"/>
-    <updated>2015-02-11T05:04:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/11/mysqld-password-and-chef</id>
-    <content type="html"><![CDATA[<p>I add a chef <code>mysqld</code> receipt to the Vagrant file and here is the error from <code>vagrant up</code>:</p>
-
-<pre><code>    ==&gt; default: Required argument password is missing!
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:26:in `block in from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:25:in `from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/default.rb:22:in `from_file'
-    ==&gt; default:
-    ==&gt; default: Relevant File Content:
-    ==&gt; default: ----------------------
-    ==&gt; default: /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:
-    ==&gt; default:
-    ==&gt; default:  19:  #
-    ==&gt; default:  20:
-    ==&gt; default:
-    ==&gt; default:  21:  # Configure mysql/mariadb according to attributes
-    ==&gt; default:  22:  mysqld 'default'
-    ==&gt; default:  23:
-    ==&gt; default:  24:  # Set password according to attribute, if set
-    ==&gt; default:  25:  mysqld_password 'root' do
-    ==&gt; default:  26&gt;&gt;   password node['mysqld']['root_password']
-    ==&gt; default:
-    ==&gt; default:  27:    only_if { node['mysqld']['root_password'] }
-    ==&gt; default:  28:  end
-    ==&gt; default:  29:
-</code></pre>
-
-<p>Solution: Add this to set the <code>root_password</code>:</p>
-
-<pre><code>chef.json = {
-  :mysqld   =&gt; {
-    :root_password =&gt; "test"
-  }
-}
-</code></pre>
-
-<p>Now you can connect to the mysql server by running</p>
-
-<pre><code> mysql -u root -p 
-</code></pre>
 ]]></content>
   </entry>
   

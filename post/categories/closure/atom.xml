@@ -4,7 +4,7 @@
   <title><![CDATA[Category: closure | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/closure/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-22T13:27:30+11:00</updated>
+  <updated>2015-02-23T00:21:21+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,26 +20,16 @@
     <id>http://www.ahwkong.com/post/2014/09/17/swift-closure-error-is-not-convertible-to-void</id>
     <content type="html"><![CDATA[<p>This piece code here:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>dismissViewControllerAnimated(true, completion: { () &ndash;> Void in&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>let account = Account()
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>})&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}</p>
+
+<p>dismissViewControllerAnimated(true, completion: { () &ndash;> Void in</p>
+
+<pre><code>let account = Account()
+</code></pre>
+
+<p>})</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>throws exception:</p>
 

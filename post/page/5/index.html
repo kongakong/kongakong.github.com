@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This the error message: ==&gt; default: ================================================================================ ==&gt; default: Error &hellip;">
+  <meta name="description" content="I add a chef mysqld receipt to the Vagrant file and here is the error from vagrant up: ==&gt; default: Required argument password is missing! ==&gt; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,83 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/11/mysqld-password-and-chef/">Providing Mysqld Password to Chef Provisioner in Vagrant</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-11T05:04:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I add a chef <code>mysqld</code> receipt to the Vagrant file and here is the error from <code>vagrant up</code>:</p>
+
+<pre><code>    ==&gt; default: Required argument password is missing!
+    ==&gt; default:
+    ==&gt; default: Cookbook Trace:
+    ==&gt; default: ---------------
+    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:26:in `block in from_file'
+    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:25:in `from_file'
+    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/default.rb:22:in `from_file'
+    ==&gt; default:
+    ==&gt; default: Relevant File Content:
+    ==&gt; default: ----------------------
+    ==&gt; default: /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:
+    ==&gt; default:
+    ==&gt; default:  19:  #
+    ==&gt; default:  20:
+    ==&gt; default:
+    ==&gt; default:  21:  # Configure mysql/mariadb according to attributes
+    ==&gt; default:  22:  mysqld 'default'
+    ==&gt; default:  23:
+    ==&gt; default:  24:  # Set password according to attribute, if set
+    ==&gt; default:  25:  mysqld_password 'root' do
+    ==&gt; default:  26&gt;&gt;   password node['mysqld']['root_password']
+    ==&gt; default:
+    ==&gt; default:  27:    only_if { node['mysqld']['root_password'] }
+    ==&gt; default:  28:  end
+    ==&gt; default:  29:
+</code></pre>
+
+<p>Solution: Add this to set the <code>root_password</code>:</p>
+
+<pre><code>chef.json = {
+  :mysqld   =&gt; {
+    :root_password =&gt; "test"
+  }
+}
+</code></pre>
+
+<p>Now you can connect to the mysql server by running</p>
+
+<pre><code> mysql -u root -p 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -304,93 +381,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-04T19:58:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here.</p>
-
-<p>It is assuming you are using Google App Engine</p>
-
-<pre><code>    import webapp2
-    import hashlib
-    import hmac
-
-    class MandrillWebhookHandler(webapp2.RequestHandler):
-
-        def _calc_signature(self, raw, key):
-            hashed = hmac.new(key, raw, hashlib.sha1)
-            return hashed.digest().encode("base64").rstrip('\n')
-
-        def verify_mandrill_signature(self):
-            '''
-            Mandrill includes an additional HTTP header with webhook POST requests,
-                X-Mandrill-Signature, which will contain the signature for the request.
-                To verify a webhook request, generate a signature using the same key
-                that Mandrill uses and compare that to the value of the
-                X-Mandrill-Signature header.
-            :return: True if verified valid
-            '''
-            mandrill_signature = self.request.headers['X-Mandrill-Signature']
-            mandrill_key = 'Your mandrill webhook key goes here'
-            signed_data = self.request.path_url
-            sorted_key = sorted(self.request.arguments())
-            for k in sorted_key:
-                signed_data += k
-                signed_data += self.request.get(k)
-            expected_signature = self._calc_signature(signed_data, mandrill_key)
-            return expected_signature == mandrill_signature
-
-        def head(self):
-            '''
-            Must return 200 so Mandrill knows it is a valid webhook
-
-            http://help.mandrill.com/entries/22024856-Why-can-t-my-webhook-or-inbound-route-URL-be-verified-
-            '''
-            self.response.set_status(OK)
-
-        def post(self):
-            '''
-            Mandrill sends data to our webhook by post
-            '''
-            if not self.verify_mandrill_signature():
-                # check failed
-                self.abort()
-
-            # The rest of processing
-            # ...
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/6/">&larr; Older</a>
@@ -408,6 +398,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/22/innovation/">Innovation</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
       </li>
     
@@ -421,10 +415,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/18/chsh/">chsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
   </ul>

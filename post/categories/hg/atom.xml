@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hg | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/hg/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-22T13:27:30+11:00</updated>
+  <updated>2015-02-23T00:21:21+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -55,60 +55,34 @@
     <link href="http://www.ahwkong.com/post/2011/12/28/p-14913221859/"/>
     <updated>2011-12-28T21:54:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2011/12/28/p-14913221859</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ hg pull
-</span><span class='line'>pulling from &lt;a href="http://hg.python.org/cpython">http://hg.python.org/cpython&lt;/a>
-</span><span class='line'>searching for changes
-</span><span class='line'>adding changesets
-</span><span class='line'>adding manifests
-</span><span class='line'>adding file changes
-</span><span class='line'>added 3265 changesets with 6204 changes to 1117 files
-</span><span class='line'>(run ‘hg update’ to get a working copy)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ hg summary
-</span><span class='line'>parent: 70924:d1d5a7392e39
-</span><span class='line'>(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
-</span><span class='line'>branch: default
-</span><span class='line'>commit: 3 unknown (clean)
-</span><span class='line'>update: 2705 new changesets (update)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ hg update
-</span><span class='line'>991 files updated, 0 files merged, 12 files removed, 0 files unresolved&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ hg summary
-</span><span class='line'>parent: 74189:456b02030100 tip
-</span><span class='line'>don’t fail if CLOEXEC doesn’t exist
-</span><span class='line'>branch: default
-</span><span class='line'>commit: 3 unknown (clean)
-</span><span class='line'>update: (current)&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+    <content type="html"><![CDATA[<p>{% codeblock %}
+$ hg pull
+pulling from <a href="http://hg.python.org/cpython">http://hg.python.org/cpython</a>
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 3265 changesets with 6204 changes to 1117 files
+(run ‘hg update’ to get a working copy)</p>
+
+<p>$ hg summary
+parent: 70924:d1d5a7392e39
+(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
+branch: default
+commit: 3 unknown (clean)
+update: 2705 new changesets (update)</p>
+
+<p>$ hg update
+991 files updated, 0 files merged, 12 files removed, 0 files unresolved</p>
+
+<p>$ hg summary
+parent: 74189:456b02030100 tip
+don’t fail if CLOEXEC doesn’t exist
+branch: default
+commit: 3 unknown (clean)
+update: (current)</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

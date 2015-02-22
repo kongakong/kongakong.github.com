@@ -4,7 +4,7 @@
   <title><![CDATA[Category: NSArray | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/nsarray/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-22T13:27:30+11:00</updated>
+  <updated>2015-02-23T00:21:21+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,19 +20,12 @@
     <id>http://www.ahwkong.com/post/2014/02/28/create-a-nsarray-from-nsmutualarray</id>
     <content type="html"><![CDATA[<p>It is so simple</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="c1">// m is a NSMutualArray</span>
-</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock lang:objective-c %}</p>
+
+<p>// m is a NSMutualArray
+NSArray* n = [NSArray arrayWithArray:m];</p>
+
+<p>{% endcodeblock %}</p>
 ]]></content>
   </entry>
   

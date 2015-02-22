@@ -4,7 +4,7 @@
   <title><![CDATA[Category: discount _margin | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/discount-margin/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-22T13:27:30+11:00</updated>
+  <updated>2015-02-23T00:21:21+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,52 +18,7 @@
     <link href="http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn/"/>
     <updated>2013-12-09T23:45:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2013/12/09/discount-margin-of-frn</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>&lsquo;Discount Margin&rsquo;   (frn.erl)</span> <a href='/downloads/code/erlang/frn.erl'>download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">frn</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">discount_margin</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="n">discount_margin</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="n">test</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="c">% Simple margin = ((M − Pd ) / (100 × T) )+ Mq</span>
-</span><span class='line'><span class="c">% </span>
-</span><span class='line'><span class="c">% where</span>
-</span><span class='line'><span class="c">% Pd = the dirty price, or P plus the accrued interest AI </span>
-</span><span class='line'><span class="c">% M = the par value</span>
-</span><span class='line'><span class="c">% T = the number of years from settlement to maturity </span>
-</span><span class='line'><span class="c">% Mq = the quoted margin</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c">% A positive simple margin signifies that the FRN’s yield is higher than that of a comparable money market security.</span>
-</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">DirtyPrice</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="p">(</span><span class="nv">ParValue</span> <span class="o">-</span> <span class="nv">DirtyPrice</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">100</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="nv">Years</span><span class="p">)</span> <span class="o">+</span> <span class="nv">QuotedMargin</span><span class="p">.</span>
-</span><span class='line'><span class="nf">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span><span class="p">,</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="nv">ParValue</span><span class="p">,</span> <span class="nv">Price</span> <span class="o">+</span> <span class="nv">AccruedInterest</span><span class="p">,</span> <span class="nv">Years</span><span class="p">,</span> <span class="nv">QuotedMargin</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nf">test</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="n">discount_margin</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">98</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">).</span> <span class="c">% 0.0502</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+    <content type="html"><![CDATA[<p>{% include_code &lsquo;Discount Margin&rsquo; lang:erlang  erlang/frn.erl %}</p>
 ]]></content>
   </entry>
   

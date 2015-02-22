@@ -9,7 +9,12 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is an error message of a runtime exception thrown by NSCalendar: I mean really, what do you think that operation is supposed to mean with a nil &hellip;">
+  <meta name="description" content="To find out all timezone abbreviation, 1
+2
+3
+4
+5
+6 NSEnumerator *keys = [[NSTimeZone abbreviationDictionary] keyEnumerator]; NSString* value; while &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +120,109 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in Objective-c</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-13T07:34:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To find out all timezone abbreviation,</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here is the output:</p>
+
+<pre><code>EDT America/New_York
+GMT GMT
+AST America/Halifax
+IRST Asia/Tehran
+ICT Asia/Bangkok
+PET America/Lima
+KST Asia/Seoul
+PST America/Los_Angeles
+CDT America/Chicago
+EEST Europe/Istanbul
+NZDT Pacific/Auckland
+WEST Europe/Lisbon
+EAT Africa/Addis_Ababa
+HKT Asia/Hong_Kong
+IST Asia/Calcutta
+MDT America/Denver
+NZST Pacific/Auckland
+WIT Asia/Jakarta
+ADT America/Halifax
+BST Europe/London
+ART America/Argentina/Buenos_Aires
+CAT Africa/Harare
+GST Asia/Dubai
+PDT America/Los_Angeles
+SGT Asia/Singapore
+COT America/Bogota
+PKT Asia/Karachi
+EET Europe/Istanbul
+UTC UTC
+WAT Africa/Lagos
+EST America/New_York
+JST Asia/Tokyo
+CLST America/Santiago
+CET Europe/Paris
+BDT Asia/Dhaka
+MSK Europe/Moscow
+AKDT America/Juneau
+CLT America/Santiago
+AKST America/Juneau
+BRST America/Sao_Paulo
+BRT America/Sao_Paulo
+CEST Europe/Paris
+CST America/Chicago
+HST Pacific/Honolulu
+MSD Europe/Moscow
+MST America/Denver
+PHT Asia/Manila
+WET Europe/Lisbon
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -312,58 +420,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/">Mixing C++ and Objective-c in XCode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-02T21:04:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The c++ header keeps getting a compiler error:</p>
-
-<pre><code>'iostream' file not found 
-</code></pre>
-
-<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#ifdef __cplus</span>
-</span><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
-</span><span class='line'><span class="cp">#endif</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/19/">&larr; Older</a>
@@ -381,6 +437,10 @@ Here is the backtrace where this occurred this time (some frames may be missing 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/22/innovation/">Innovation</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
       </li>
     
@@ -394,10 +454,6 @@ Here is the backtrace where this occurred this time (some frames may be missing 
     
       <li class="post">
         <a href="/post/2015/02/18/chsh/">chsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a>
       </li>
     
   </ul>
