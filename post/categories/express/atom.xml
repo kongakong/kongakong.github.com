@@ -4,7 +4,7 @@
   <title><![CDATA[Category: express | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/express/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-23T00:21:21+11:00</updated>
+  <updated>2015-02-23T21:34:37+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -100,11 +100,11 @@ Image State Update Phase                         2/2</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.]]></title>
+    <title type="html"><![CDATA[VirtualBox ‘non-optimal setting’ warning]]></title>
     <link href="http://www.ahwkong.com/post/2011/06/19/p-6672342143/"/>
     <updated>2011-06-19T11:04:00+10:00</updated>
     <id>http://www.ahwkong.com/post/2011/06/19/p-6672342143</id>
-    <content type="html"><![CDATA[<p>Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.</p>
+    <content type="html"><![CDATA[<p>After choosing ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.</p>
 
 <p>Select ‘Enable IO APIC’ gets rid of the warning message.</p>
 ]]></content>

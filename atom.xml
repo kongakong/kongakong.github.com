@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-23T00:19:38+11:00</updated>
+  <updated>2015-02-23T21:34:37+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[useful vbox command]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/23/useful-vbox-command/"/>
+    <updated>2015-02-23T21:21:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/23/useful-vbox-command</id>
+    <content type="html"><![CDATA[<p>This will list out all the VMs</p>
+
+<pre><code>    $ VBoxManage list vms
+    "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2}
+    "serverr" {eca868d2-6d5d-4b49-b076-27f5ef396355}
+    "sensu_client" {70b38f62-0a0c-4965-b4f4-5360ec761d64}
+    "analytics" {ab9e59e4-7058-4c9f-80af-c403348cac6f}
+    "sensu-server_default_1424653555631_75219" {4d7174f7-6f7b-4732-98c3-9509c426cae3}
+    "simple-sensu-client_default_1424660131045_1714" {1eb59ae6-2d5e-4b0f-9135-a7de6c882e1d}
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Innovation]]></title>
@@ -37,6 +55,10 @@
 <p><a href="https://www.youtube.com/watch?v=86x-u-tz0MA">Your elusive creative genius by Elizabeth Gilbert</a></p>
 
 <blockquote><p>Fear based questions</p></blockquote>
+
+<p><a href="https://www.youtube.com/watch?v=kIruNparMGQ">The Face of Innovation by JR Reagan</a></p>
+
+<blockquote><p>Freshpaper</p></blockquote>
 ]]></content>
   </entry>
   
@@ -793,39 +815,6 @@ bundle install
 
 <pre><code>ssh -T git@github.com
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[nosetests --failed keeps picking up removed test]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/"/>
-    <updated>2015-02-13T11:38:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test</id>
-    <content type="html"><![CDATA[<p>When I run</p>
-
-<pre><code>nosetests -v --failed
-</code></pre>
-
-<p>I keep getting this exception:</p>
-
-<pre><code>    #40 Failure: ImportError (No module named test_share_link2) ... ERROR
-
-    ======================================================================
-    ERROR: Failure: ImportError (No module named test_share_link2)
-    ----------------------------------------------------------------------
-    Traceback (most recent call last):
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/loader.py", line 414, in loadTestsFromName
-        addr.filename, addr.module)
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
-        return self.importFromDir(dir_path, fqname)
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 79, in importFromDir
-        fh, filename, desc = find_module(part, path)
-    ImportError: No module named test_share_link2
-</code></pre>
-
-<p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
-
-<p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
 ]]></content>
   </entry>
   

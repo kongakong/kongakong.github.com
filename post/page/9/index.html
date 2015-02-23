@@ -9,9 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In this example, 1
+  <meta name="description" content="This piece code here: 1
 2
-NSInteger val = 15000; NSLog(@"%i", val); XCode will flag this error Values of type "NSInteger" should not be used as format &hellip;">
+3
+dismissViewControllerAnimated(true, completion: { () -> Void in let account = Account()
+}) throws exception: Cannot &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -117,6 +119,59 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift Closure Error: Boolean Is Not Convertible to Void</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-17T10:50:00+10:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This piece code here:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dismissViewControllerAnimated(true, completion: { () -> Void in
+</span><span class='line'>    let account = Account()
+</span><span class='line'>})</span></code></pre></td></tr></table></div></figure>
+
+
+<p>throws exception:</p>
+
+<pre><code>Cannot convert the expression's type 'Boolean' to type 'Void'
+</code></pre>
+
+<p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
+
+<p>Adding a <code>return ()</code> as the last expression to the block fixes the problem</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -294,44 +349,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/angular-bower/">Starting an Angularjs Project With Bower</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T10:53:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>First you need to install <code>npm</code> via <code>brew</code></p>
-
-<p>Then run <code>npm install -g bower</code> as documented in <a href="http://bower.io/">bower websiter</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/10/">&larr; Older</a>
@@ -349,6 +366,10 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/22/innovation/">Innovation</a>
       </li>
     
@@ -362,10 +383,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
     
       <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/18/chsh/">chsh</a>
       </li>
     
   </ul>

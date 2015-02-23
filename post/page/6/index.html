@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here. It is assuming you are &hellip;">
+  <meta name="description" content="I have originally created a template hello_world. Then I renamed it to sayhi. Somehow the Template Slug stays as hello-world: in the webhook payload &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">Mandrill Is Sending Me a Strange Template Name</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-05T13:11:00+11:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -358,46 +394,6 @@ def my_func():
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/20/chef/">Chef, Brekshelf and Data Bag</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-20T14:41:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
-
-<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
-
-<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -415,6 +411,10 @@ def my_func():
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/22/innovation/">Innovation</a>
       </li>
     
@@ -428,10 +428,6 @@ def my_func():
     
       <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/18/chsh/">chsh</a>
       </li>
     
   </ul>

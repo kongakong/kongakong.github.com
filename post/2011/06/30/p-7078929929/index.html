@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>To start a _VirtualBox_ VM instance in a ssh session, we can run this command - Timeline</title>
+  <title>To start a headless VirtualBox instance - Timeline</title>
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="To start a VirtualBox VM instance in a ssh session, we can run this command 1
-2
-3
-4 VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type &hellip;">
+  <meta name="description" content="To start a VirtualBox VM instance in a ssh session, we can run this command VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type headless &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +118,7 @@ alt="hit counter"></a></div></noscript>
   
   <header>
     
-      <h1 class="entry-title">To Start a _VirtualBox_ VM Instance in a Ssh Session, We Can Run This Command</h1>
+      <h1 class="entry-title">To Start a Headless VirtualBox Instance</h1>
     
     
       <p class="meta">
@@ -146,16 +143,8 @@ alt="hit counter"></a></div></noscript>
 
 <div class="entry-content"><p>To start a <em>VirtualBox</em> VM instance in a ssh session, we can run this command</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type headless
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>   VBoxManage startvm ea777d64-ad50-4d48-ae86-c856237932a0 --type headless
+</code></pre>
 
 <p>The key is the parameter <code>--type headless</code></p>
 </div>
@@ -224,6 +213,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/22/innovation/">Innovation</a>
       </li>
     
@@ -237,10 +230,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don't let private and public key sit in the same folder when vagrant up</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/18/chsh/">chsh</a>
       </li>
     
   </ul>

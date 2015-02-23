@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Getting this error from my server code which uses boto to interace with Dynamo [Mon Feb 16 07:25:22 2015] [error] JSONResponseError: &hellip;">
+  <meta name="description" content="Unable to switch to zsh which is installed from brew $ chsh -s `which zsh` Changing shell for demo. Password for demo: chsh: /usr/local/bin/zsh: non- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,52 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/18/chsh/">Chsh</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-18T05:22:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Unable to switch to zsh which is installed from brew</p>
+
+<pre><code>    $ chsh -s `which zsh`
+    Changing shell for demo.
+    Password for demo:
+    chsh: /usr/local/bin/zsh: non-standard shell
+</code></pre>
+
+<p>Solution:</p>
+
+<p>Add <code>/usr/local/bin/zsh</code> to <code>/etc/shells</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -332,157 +378,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">Chef: No Version Specified, and No Candidate Version Available for Php</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-15T14:27:00+11:00" pubdate data-updated="true">Feb 15<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In my <code>recipes\default.rb</code>, I added a line</p>
-
-<pre><code>       package "php"
-</code></pre>
-
-<p>And this caused this exception:</p>
-
-<pre><code>       * No version specified, and no candidate version available for php
-       ================================================================================
-       Error executing action `install` on resource 'apt_package[php]'
-       ================================================================================
-
-       Chef::Exceptions::Package
-       -------------------------
-       No version specified, and no candidate version available for php
-</code></pre>
-
-<p>I should use <code>package "php5"</code></p>
-
-<p>Now I am getting a different set of errors:</p>
-
-<pre><code>       * apt_package[php5] action install
-
-       ================================================================================
-       Error executing action `install` on resource 'apt_package[php5]'
-       ================================================================================
-
-       Mixlib::ShellOut::ShellCommandFailed
-       ------------------------------------
-       Expected process to exit with [0], but received '100'
-       ---- Begin output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
-       STDOUT: Reading package lists...
-       Building dependency tree...
-       Reading state information...
-       The following extra packages will be installed:
-         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
-         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5-cli php5-common php5-json
-         php5-readline ssl-cert
-       Suggested packages:
-         www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom
-         apache2-utils php-pear php5-user-cache openssl-blacklist
-       The following NEW packages will be installed:
-         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
-         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5 php5-cli php5-common php5-json
-         php5-readline ssl-cert
-       0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
-       Need to get 6,137 kB of archives.
-       After this operation, 25.8 MB of additional disk space will be used.
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-bin amd64 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-data all 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2 amd64 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main libapache2-mod-php5 amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5 all 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr/libapr1_1.5.0-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/php-json/php5-json_1.3.2-2build1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-common_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-cli_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-   ntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-ldap_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-bin_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-data_2.4.7-1ubuntu4.1_all.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/s/ssl-cert/ssl-cert_1.0.33_all.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-       ---- End output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
-       Ran apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 returned 100
-
-
-       ---------------------
-       # In /tmp/kitchen/cache/cookbooks/zeeting-analytics/recipes/default.rb
-
-         9: package "php5"
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/3/">&larr; Older</a>
@@ -500,6 +395,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/22/innovation/">Innovation</a>
       </li>
     
@@ -513,10 +412,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/18/chsh/">chsh</a>
       </li>
     
   </ul>
