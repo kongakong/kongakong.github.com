@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tmux | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/tmux/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-25T01:25:36+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[tmux resizing pane]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/25/tmux-resizing-pane/"/>
+    <updated>2015-02-25T01:20:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/25/tmux-resizing-pane</id>
+    <content type="html"><![CDATA[<p>I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-<Up>&rsquo;, but since my C-<UP> is binded to expose in OSX, it did not work.</p>
+
+<p>Fortunately it is very easy to control the behavior via command line. First of all, you need to identify the pane. It can be done either by a &lsquo;C-b q&rsquo; or by command <code>tmux list-panes</code>. The pane from which you issued the command will be marked as <code>active</code>.</p>
+
+<p>Once the id of the pane is identified, you can run the following command:</p>
+
+<pre><code>   tmux resize-pane -t 1 -U    # 1 is the pane id 
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

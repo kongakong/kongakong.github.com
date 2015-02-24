@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="32nd Decimal 1/32 0.03125 2/32 0.0625 3/32 0.09375 4/32 0.125 5/32 0.15625 6/32 0.1875 7/32 0.21875 8/32 0.25 9/32 0.28125 10/32 0.3125 11/32 0. &hellip;">
+  <meta name="description" content="Yield to maturity (YTM) is sometimes known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,44 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/yield-to-maturity/">Yield to Maturity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T07:13:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
+
+<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -548,57 +586,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/03/nslog-macro/">NSLog Macro</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T08:11:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a useful marco for doing debug logging:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
-</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
-</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
-</span><span class='line'><span class="cp">} while (0)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
-
-<p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/16/">&larr; Older</a>
@@ -616,6 +603,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
       </li>
     
@@ -629,10 +620,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
   </ul>

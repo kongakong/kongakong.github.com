@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-23T21:34:37+11:00</updated>
+  <updated>2015-02-25T01:25:36+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[tmux resizing pane]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/25/tmux-resizing-pane/"/>
+    <updated>2015-02-25T01:20:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/25/tmux-resizing-pane</id>
+    <content type="html"><![CDATA[<p>I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-<Up>&rsquo;, but since my C-<UP> is binded to expose in OSX, it did not work.</p>
+
+<p>Fortunately it is very easy to control the behavior via command line. First of all, you need to identify the pane. It can be done either by a &lsquo;C-b q&rsquo; or by command <code>tmux list-panes</code>. The pane from which you issued the command will be marked as <code>active</code>.</p>
+
+<p>Once the id of the pane is identified, you can run the following command:</p>
+
+<pre><code>   tmux resize-pane -t 1 -U    # 1 is the pane id 
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[useful vbox command]]></title>
@@ -782,38 +798,6 @@ bundle install
     <content type="html"><![CDATA[<p>This is the command:</p>
 
 <pre><code>ssh-keygen -lf /path/to/ssh/public_key
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ssh forwarding in vagrant and private github repository]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/13/ssh-forwarding/"/>
-    <updated>2015-02-13T16:23:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/13/ssh-forwarding</id>
-    <content type="html"><![CDATA[<p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
-
-<p>First in host OS (Mac OSX in my case), run</p>
-
-<pre><code>ssd-add /path/to/githubkey
-</code></pre>
-
-<p>In the <code>.ssh/config</code>, add these lines:</p>
-
-<pre><code>    Host           github
-    HostName       github.com
-    IdentityFile   /path/to/githubkey
-</code></pre>
-
-<p>Then enable port forwarding in vagrant VM</p>
-
-<pre><code>Vagrant.configure("2") do |config|
-  config.ssh.forward_agent = true
-</code></pre>
-
-<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
-
-<pre><code>ssh -T git@github.com
 </code></pre>
 ]]></content>
   </entry>

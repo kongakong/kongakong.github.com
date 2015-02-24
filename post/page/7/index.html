@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="After some trial and errors, the best way (as of this writing) to manage cookbooks for vagrant + chef is to use brekshef. You can forget about knife &hellip;">
+  <meta name="description" content="This is my code from mail_api import send_mail def my_func(): # do some work send_mail(to="test@example.com", content="data) # do some more work &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,75 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/02/a-little-catch-with-at-patch/">A Little Gotcha With @patch</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-02T16:34:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is my code</p>
+
+<pre><code>from mail_api import send_mail
+
+def my_func():
+    # do some work
+    send_mail(to="test@example.com", content="data)
+    # do some more work
+    return result
+</code></pre>
+
+<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
+
+<pre><code>from mock import patch
+
+  class MyTest(unittest.TestCase):
+
+    @patch('mail_api.send_mail')
+    def test_my_func(self, send_mail):
+      self.assertEquals(my_func(), expected_result)
+</code></pre>
+
+<p>To my surprise an email is still sent out when the test is run!</p>
+
+<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
+
+<pre><code>import mail_api
+
+def my_func():
+    # do some work
+    mail_api.send_mail(to="test@example.com", content="data)
+    # do some more work
+    return result
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -319,86 +388,6 @@ Done installing documentation for bundler, bundle after 1 seconds
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/13/toastmaster-speech-2/">My Attempt at Toastmaster Speech #2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-13T04:33:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely motivated me to look at memorisation techniques.</p>
-
-<h1>The Speech</h1>
-
-<p>You are alone, in the dark. It is coming. It is getting closer. You can almost smell it. You are tired, you are exhausted. You are making a last ditch effort in last 12 hours non-stop. You are anxious because you are not sure if everything gonna turn out as planned. Your enemy is invisible yet its feels so real. I am talking about one of the worst enemies in our work lives: meeting the Deadline!</p>
-
-<p>Does this feeling sound familiar to you? Raise your hand if you had this experience before!</p>
-
-<p>Deadline is called deadline for good reasons. The time is set in stone. The consequence of failure is real. If your project misses the deadline, it could mean a failure to meet your customer expectation. Your organisation can suffer from reputational damage and some heads gonna roll! It could well be yours.</p>
-
-<p>Can we tame this monster?</p>
-
-<p>There is a few things you can do to make it easier to meet the deadlines</p>
-
-<p>First of all, understand the objective of your project! It sounds obvious but it is extremely important.</p>
-
-<p>Imagine you are an explorer and is lost in jungle. You want to get out of it alive. It really does not matter if you know how to clear a path with your machete or how to swing from tree to tree like Tarzan. But if you are heading the wrong direction you will never get out!</p>
-
-<p>Sometimes we are too obsessed with operational details, we forget to ask the big picture question: What do we want to achieve? What is the expected outcome? How will we measure success or failure? These are the questions that we have to ask. These are the questions that set the direction.</p>
-
-<p>Next. Planning. To plan well means we need to identify constraints and limitations we will face in a project.</p>
-
-<p>A typical project has a lot of internal and external dependencies. These dependencies can become constraints and, in some case, even a blocker.</p>
-
-<p>Here is a typical example of a constraint: The new system is dependent on the implementation of a new feature by an external vendor. The vendor does not have the capability to deliver this new feature in your timeframe. So our capability to deliver is constrained by how well the vendor can meet our deadline.</p>
-
-<p>Sometimes a constraint can become a blocker. Say your project requires a key piece of new software which can only be run on an latest version of an operating system. But your internal IT insists that you can only use an older version because of policy.  How are you going to resolve it?</p>
-
-<p>It is important to map out all the potential blockers on the critical path. The failure to do so can bring u unpleasant surprise.</p>
-
-<p>3 Use milestones</p>
-
-<p>Milestone is a technique to break a project down into smaller module. They are good checkpoints for monitoring the health of a project. Once you hit a milestone, it is a good time to pause and check if the original estimate is good, reexamine all the assumption, dependencies and constraints you have identified.</p>
-
-<p>4 Set buffer.</p>
-
-<p>What is buffer? Buffer basically means extra time and resources to prepare for the unexpected. Life is full of unexpected event. Your software vendor may suddenly goes of business; your key employee may become ill and cannot report to work for a while; A sudden change in market condition forces you make some last minute revision… All of these will add pressure on your already tight schedule. If you have not budgeted for these risks in a project, you will be likely end up in a position that you have to scramble to find extra resource and, more often than not, put extra pressure on an already stressed out team.</p>
-
-<p>Burning midnight oil to meet deasline is not a fun experience. Keeping a good and even pace at work is key to avoid burnout. Therefore let me rehash the main points:</p>
-
-<p>Understand the objective; know where you are going
-Have a clear idea of the constraints and the limits &ndash; it can only done well if you understand your task or product well
-Break a project into modules and assign milestones. Each milestone is a checkpoint to review the past performance and adjust the plan and direction.</p>
-
-<p>With these technique you will be able to defeat this monster known as Deadline. After all we work to live, not live to work!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/8/">&larr; Older</a>
@@ -416,6 +405,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
       </li>
     
@@ -429,10 +422,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t let private and public key sit in the same folder when vagrant up</a>
       </li>
     
   </ul>
