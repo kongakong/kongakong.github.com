@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Video The art of innovation by Guy Kawasaki Our approach to innovation is dead wrong by Diana Kander The New Rules of Innovation by Carl Bass Do &hellip;">
+  <meta name="description" content="This will list out all the VMs $ VBoxManage list vms "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2} "serverr" { &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,51 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/23/useful-vbox-command/">Useful Vbox Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-23T21:21:00+11:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will list out all the VMs</p>
+
+<pre><code>    $ VBoxManage list vms
+    "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2}
+    "serverr" {eca868d2-6d5d-4b49-b076-27f5ef396355}
+    "sensu_client" {70b38f62-0a0c-4965-b4f4-5360ec761d64}
+    "analytics" {ab9e59e4-7058-4c9f-80af-c403348cac6f}
+    "sensu-server_default_1424653555631_75219" {4d7174f7-6f7b-4732-98c3-9509c426cae3}
+    "simple-sensu-client_default_1424660131045_1714" {1eb59ae6-2d5e-4b0f-9135-a7de6c882e1d}
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -358,52 +403,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/18/chsh/">Chsh</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-18T05:22:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Unable to switch to zsh which is installed from brew</p>
-
-<pre><code>    $ chsh -s `which zsh`
-    Changing shell for demo.
-    Password for demo:
-    chsh: /usr/local/bin/zsh: non-standard shell
-</code></pre>
-
-<p>Solution:</p>
-
-<p>Add <code>/usr/local/bin/zsh</code> to <code>/etc/shells</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/3/">&larr; Older</a>
@@ -421,6 +420,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
@@ -434,10 +437,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
       </li>
     
   </ul>

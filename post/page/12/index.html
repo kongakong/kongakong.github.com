@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Exercise 2.2 (Andersson [And91D]) In the worst case, member performs approximately 2d comparisons, where d is the depth of the tree. Rewrite member &hellip;">
+  <meta name="description" content="From StackOverflow The most obvious, practical example is: &lt;fieldset&gt; &lt;legend&gt;Colour&lt;/legend&gt; &lt;label&gt;&lt;input type="radio" &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,54 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/01/what-is-tag-fieldset/">What Is Tag Fieldset?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-01T09:40:00+10:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://stackoverflow.com/questions/9741328/why-do-we-need-a-fieldset-tag">From StackOverflow</a></p>
+
+<p>The most obvious, practical example is:</p>
+
+<pre><code>&lt;fieldset&gt;
+    &lt;legend&gt;Colour&lt;/legend&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="blue"&gt; Blue &lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="red"&gt; Red &lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="colour" value="green"&gt; Green &lt;/label&gt;
+&lt;/fieldset&gt;
+</code></pre>
+
+<p>This allows each radio button to be labeled while also providing a label for the group as a whole. This is especially important where assistive technology (such as a screen reader) is being used where the association of the controls and their legend cannot be implied by visual presentation.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -500,76 +548,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/07/06/install-mirage-failed/">Install Mirage Failed</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-07-06T21:26:00+10:00" pubdate data-updated="true">Jul 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ERROR] Due to some errors while processing optcomp.1.6, the following actions will NOT proceed:
-</span><span class='line'> - install mirage.1.1.3
-</span><span class='line'> - install ocplib-endian.0.7
-</span><span class='line'> - install io-page.1.1.1
-</span><span class='line'> - install mirage-types.1.1.3
-</span><span class='line'> - install cstruct.1.3.0
-</span><span class='line'>
-</span><span class='line'>===== ERROR while installing optcomp.1.6 =====
-</span><span class='line'>Could not get the source for optcomp.1.6:
-</span><span class='line'># opam-version    1.1.1
-</span><span class='line'># os              linux
-</span><span class='line'>Cannot download https://opam.ocaml.org/archives/optcomp.1.6+opam.tar.gz, please check your connection settings.
-</span><span class='line'>
-</span><span class='line'>The former state can be restored with opam switch import -f "/home/antkong/.opam/system/backup/state-20140606112154.export"
-</span><span class='line'>'opam install mirage' failed.</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/13/">&larr; Older</a>
@@ -587,6 +565,10 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
@@ -600,10 +582,6 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
     
       <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
       </li>
     
   </ul>

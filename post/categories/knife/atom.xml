@@ -4,7 +4,7 @@
   <title><![CDATA[Category: knife | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/knife/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-26T02:50:25+11:00</updated>
+  <updated>2015-02-26T03:30:58+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -25,9 +25,9 @@
 
 <p>but it created nothing in the databag folder.</p>
 
-<p>It turns out I need to run it in local mode:</p>
+<p>It turns out I need to run it in local mode and give it a user name:</p>
 
-<pre><code>knife data bag create users -z
+<pre><code>knife data bag create users myuser -z
 </code></pre>
 ]]></content>
   </entry>
