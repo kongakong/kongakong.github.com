@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-26T03:30:58+11:00</updated>
+  <updated>2015-02-26T10:12:23+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Some useful apt and dpkg command]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/some-useful-apt-and-dpkg-command/"/>
+    <updated>2015-02-26T09:59:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/some-useful-apt-and-dpkg-command</id>
+    <content type="html"><![CDATA[<p>List all installed packages:</p>
+
+<pre><code>dpkg --get-selection
+</code></pre>
+
+<p>List files coming from a package</p>
+
+<pre><code>dpkg -L sensu
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to add apt mulitverse in chef]]></title>
@@ -47,13 +64,26 @@
     <link href="http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem/"/>
     <updated>2015-02-26T02:12:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem</id>
-    <content type="html"><![CDATA[<p>Still looking for solution for this issue</p>
+    <content type="html"><![CDATA[<p>Encountered problem when installing sensu-plugin</p>
 
 <pre><code>    $ gem install sensu-plugin --no-rdoc --no-ri
     /usr/bin/ruby1.9.1 extconf.rb
     /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
             from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
             from extconf.rb:1:in `&lt;main&gt;'
+</code></pre>
+
+<p>This is the solution: use the ruby runtime embedded in sensu</p>
+
+<pre><code>    $ /opt/sensu/embedded/bin/gem install sensu-plugin
+    Fetching: sensu-plugin-1.1.0.gem (100%)
+    ERROR:  While executing gem ... (Gem::FilePermissionError)
+        You don't have write permissions for the /opt/sensu/embedded/lib/ruby/gems/2.0.0 directory.
+    vagrant@default-ubuntu-1404:~$ sudo /opt/sensu/embedded/bin/gem install sensu-plugin
+    Successfully installed sensu-plugin-1.1.0
+    Parsing documentation for sensu-plugin-1.1.0
+    Installing ri documentation for sensu-plugin-1.1.0
+    1 gem installed
 </code></pre>
 ]]></content>
   </entry>
@@ -619,22 +649,6 @@
 <p>I probably have installed chefdk when the system ruby is active.</p>
 
 <p>So <code>rvm use system</code> works for me</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A successful run of kitchen init]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/14/a-successful-run-of-kitchen-init/"/>
-    <updated>2015-02-14T14:57:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/14/a-successful-run-of-kitchen-init</id>
-    <content type="html"><![CDATA[<pre><code>    $ kitchen init --gem-file
-       identical  .kitchen.yml
-    Successfully installed kitchen-vagrant-0.15.0
-    Parsing documentation for kitchen-vagrant-0.15.0
-    Installing ri documentation for kitchen-vagrant-0.15.0
-    Done installing documentation for kitchen-vagrant after 0 seconds
-    1 gem installed
-</code></pre>
 ]]></content>
   </entry>
   

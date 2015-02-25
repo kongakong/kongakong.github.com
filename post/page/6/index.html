@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="When I run nosetests -v --failed I keep getting this exception: #40 Failure: ImportError (No module named test_share_link2) ... ERROR &hellip;">
+  <meta name="description" content="It is how to checkout git private repository from within a VM without leaving a key in the VM First in host OS (Mac OSX in my case), run ssd-add / &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,65 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/13/ssh-forwarding/">Ssh Forwarding in Vagrant and Private Github Repository</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-13T16:23:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
+
+<p>First in host OS (Mac OSX in my case), run</p>
+
+<pre><code>ssd-add /path/to/githubkey
+</code></pre>
+
+<p>In the <code>.ssh/config</code>, add these lines:</p>
+
+<pre><code>    Host           github
+    HostName       github.com
+    IdentityFile   /path/to/githubkey
+</code></pre>
+
+<p>Then enable port forwarding in vagrant VM</p>
+
+<pre><code>Vagrant.configure("2") do |config|
+  config.ssh.forward_agent = true
+</code></pre>
+
+<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
+
+<pre><code>ssh -T git@github.com
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -350,61 +409,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">Ochiwa Unable to Connect to Sensu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-06T05:13:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I used chef to install sensu and ochiwa.</p>
-
-<p>In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error</p>
-
-<pre><code>{"Date":"2015-02-05T09:42:23.516606749Z","Level":"warning","Src":{"Func":"github.com/sensu/uchiwa/uchiwa.Build","Line":49},"Output":"API call to \"http://127.0.0.1:4567/stashes\" returned: Get http://127.0.0.1:4567/stashes: dial tcp 127.0.0.1:4567: connection refused"}
-</code></pre>
-
-<p>With help from sensu irc chatroom, I checked</p>
-
-<pre><code>netstat -anp | grep 4567
-</code></pre>
-
-<p>There is no process.</p>
-
-<pre><code>service sensu-api status
-</code></pre>
-
-<p>The service is stopped.</p>
-
-<p>After starting the service, ochiwa can talk to sensu server now.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -422,6 +426,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
       </li>
     
@@ -435,10 +443,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
       </li>
     
   </ul>

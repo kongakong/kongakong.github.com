@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dpkg | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/dpkg/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-26T10:12:23+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Some useful apt and dpkg command]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/some-useful-apt-and-dpkg-command/"/>
+    <updated>2015-02-26T09:59:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/some-useful-apt-and-dpkg-command</id>
+    <content type="html"><![CDATA[<p>List all installed packages:</p>
+
+<pre><code>dpkg --get-selection
+</code></pre>
+
+<p>List files coming from a package</p>
+
+<pre><code>dpkg -L sensu
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
