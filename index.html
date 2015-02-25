@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-&rsquo;, but since my C- is binded to expose in OSX, it did not work. &hellip;">
+  <meta name="description" content="Still looking for solution for this issue $ gem install sensu-plugin --no-rdoc --no-ri /usr/bin/ruby1.9.1 extconf.rb /usr/lib/ruby/1.9.1/rubygems/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,138 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2015/02/26/sensu-plugin-problem/">Sensu Plugin Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T02:12:00+11:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Still looking for solution for this issue</p>
+
+<pre><code>    $ gem install sensu-plugin --no-rdoc --no-ri
+    /usr/bin/ruby1.9.1 extconf.rb
+    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
+            from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+            from extconf.rb:1:in `&lt;main&gt;'
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">Knife Did Not Create Any Data Bag</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-25T11:36:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I want to create an offline cookbook. I want to create a user databag to use the <code>users</code> recipe. I ran</p>
+
+<pre><code>knife data bag create users
+</code></pre>
+
+<p>but it created nothing in the databag folder.</p>
+
+<p>It turns out I need to run it in local mode:</p>
+
+<pre><code>knife data bag create users -z
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/25/resize-tmux-window/">Resize Tmux Window</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-25T10:38:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The size of the window is limited by the smallest size of attached client.</p>
+
+<p>So to reset the size we need to detach all non-active clients</p>
+
+<p>This is the command:</p>
+
+<pre><code> C-b :attach -d
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2015/02/25/tmux-resizing-pane/">Tmux Resizing Pane</a></h1>
     
     
@@ -204,184 +336,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/22/innovation/">Innovation</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-22T21:32:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Video</h2>
-
-<p><a href="https://www.youtube.com/watch?v=Mtjatz9r-Vc">The art of innovation by Guy Kawasaki</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=pii8tTx1UYM">Our approach to innovation is dead wrong by Diana Kander</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=YKV3rhzvaC8">The New Rules of Innovation by Carl Bass</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Do schools kill creativity? by Sir Ken Robinson</a></p>
-
-<blockquote><p>(In a kids&#8217; nativity play) The three boys came in, four-year-olds with tea towels on their heads, and they put these boxes down, and the first boy said, &ldquo;I bring you gold.&rdquo; And the second boy said, &ldquo;I bring you myrrh.&rdquo; And the third boy said, &ldquo;Frank sent this.&rdquo;</p>
-
-<p>Actually, do you know that old philosophical thing, if a tree falls in a forest and nobody hears it, did it happen? Remember that old chestnut? I saw a great t-shirt recently, which said, &ldquo;If a man speaks his mind in a forest, and no woman hears him, is he still wrong?&rdquo;</p></blockquote>
-
-<p><a href="http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"><em>Full transcript</em></a></p>
-
-<p><a href="https://www.youtube.com/watch?v=86x-u-tz0MA">Your elusive creative genius by Elizabeth Gilbert</a></p>
-
-<blockquote><p>Fear based questions</p></blockquote>
-
-<p><a href="https://www.youtube.com/watch?v=kIruNparMGQ">The Face of Innovation by JR Reagan</a></p>
-
-<blockquote><p>Freshpaper</p></blockquote>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/21/switching-to-zsh/">Switching to Zsh</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-21T16:11:00+11:00" pubdate data-updated="true">Feb 21<span>st</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have been searching the internet for a while to understand this expression <code>${0:h}</code>. Finally here is an answer:</p>
-
-<pre><code> info -f zsh -n Modifiers
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/21/my-toastmaster-speech-3/">My Toastmaster Speech 3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-21T11:25:00+11:00" pubdate data-updated="true">Feb 21<span>st</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>Remark</h3>
-
-<p>The original cut (as shown in following) is considerably longer than what I have delivered finally. It is because, after timing myself, the text takes about 8 min to finish. So I have trimmed off part of the speech. The paradox: when I finally delivered it in front of the audience, it took 9 seconds short of 6 minutes. I have talked a lot faster during the speech.</p>
-
-<h3>Feedback</h3>
-
-<ul>
-<li><p>Vocal variation</p></li>
-<li><p>The opening can be better</p></li>
-<li><p>What I have done right: the speech provided a vivid imagery.</p></li>
-</ul>
-
-
-<h3>Text</h3>
-
-<p>Memory. I want to talk to you about memory today.</p>
-
-<p>I have watched a seminar by an American World Memory Championship champion Chester Santos just a month ago. I would love to share his insight and tip with you.</p>
-
-<p>But before I continue, let’s me give you a little challenge. Let me give a list of random words and see if you can remember it. OK? Here it is:</p>
-
-<p><strong>Monkey, Iron, Rope, Kite, House, Paper, Shoe, Worm, Envelope, Pencil, River, Rock, Tree, Coin</strong></p>
-
-<p>Did you get them all? Do you think you can recite the list both forward and backward? I will tell you how later in the talk.</p>
-
-<p>But first let me tell you about some common misunderstandings about memory.</p>
-
-<p>The first common one is: our memory get worse when we get older. It is easy to understand why we have this misconception. When we were young and studying in schools, we have to remember tons of information and get quizzed from time to time. After we leave school and get our first job, we again need to absorb massive amount of new information in order to do our job well. However it is typical that in later stage of our lives, when we settle into our roles, we do not need to learn and recall the same amount of new information anymore. Since we do not use our brain for memorisation, its ability to retain and recall data becomes worse. It is just like any muscle system in our body: lack of exercise will make them weak. But we usually draw a wrong conclusion: we think our memory deteriorated because we are getting old. It is simply not true. It is more a result of our life style. As a good counter example, in a World Memory Championship some years ago, there was a contestant from Malaysia who is in his 60s. Despite his age, he managed to remember all entries in an oxford dictionary AND the words position on a page AND the associated page numbers.</p>
-
-<p>Another misunderstanding is: it takes a special brain to memorise massive amount of data. Actually use of appropriate memory techniques will go a long way. Every one of us can master the techniques.</p>
-
-<p>We have actually a lot of untapped memory capacity such as visual and olfactory memory. Visual memory is extremely powerful: for example, we can remember faces we have come across years ago. If we can enlist the visual memory, we can store a lot of information in our brain. The key is that the images have to be exaggerated, crazy and unusual.</p>
-
-<p>It is very easy to understand why: lets say, out of nowhere, a big pink elephant break through those wall (points to far end), run across this room and then break this wall (points behind me) and escaped. I am sure 30 years from now, all of us will still recall every details of the episode and cannot stop talking about it.</p>
-
-<p>Do you still remember the list I throw at you at the beginning of this speech? It is actually an example used by the World Memory Championship Champion Chester Santos in his demonstration. So let do this  visual memory exercise together!</p>
-
-<p>First imagine a monkey who is happily running around and making some monkey sound. For some reason it finds a giant iron and he starts to dance around with the iron in his hand. On one end of iron it is attached to a rope. You can feel the rope and it feels rough. You look up the rope and you can see it is attached to a kite. Somehow the kite starts to fall and hit a house. The house is very special and is all covered by paper. Out of nowhere a  shoe appears and it walks on the papers and leave footprints all over the place.</p>
-
-<p>Then you notice there is a worm in the shoe. Try picture this. You want to take a closer look but the worn jumps out and get inside an envelope. Now a pencil appears and write all over the envelope. The pencil then jumps into a river and makes a big splash. The river is crashing up a rock. Near the rock there is a tree. And there is cheese growing up on the tree. Coins are shooting out from the cheese.</p>
-
-<p>Now you have a story. Now you have a picture. You can now easily recite the list of words: Monkey, Iron, Rope, Kite, House, Paper, Shoe, Worm, Envelope, Pencil, River, Rock, Tree, Coin. And you can go backward too. Do you try to it with me? Coin, Tree, Rock, River, Pencil, Envelope, Worm, Shoe, Paper, House, Kite, Rope, Iron, Monkey! Yes, you did it!</p>
-
-<p>In conclusion: 1) Your memory does not get worse because you get old. It gets worse because you do not use it enough. 2) Our brain does not hold as much data as you wish because you do not know how to tape into your visual memory.</p>
-
-<p>Thank You.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -397,23 +351,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/22/innovation/">Innovation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
       </li>
     
   </ul>

@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="A simple prime number test rountine
-">
+  <meta name="description" content="Taken from Lecture 2 math module contains a sqrt function, but
+can&rsquo;t pass it as an argument. Module functions aren&rsquo;t higher-order &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +122,123 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449551106/">Higher Order Function in Erlang</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-13T23:38:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a></p>
+
+<p><code>math</code> module contains a <code>sqrt</code> function, but
+can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order function.</p>
+
+<p>Instead, we can wrap it with a <code>fun</code>:</p>
+
+<pre><code>1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]). 
+[3.00000,4.00000,5.00000] 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449490950/">Did Not Know I Can Declare an Anonymous Function With Multiple Clauses as Such:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-13T23:34:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Did not know I can declare an anonymous function with multiple clauses as such:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/13/p-5442998050/">Mobius (II)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-13T15:01:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Find all prime factors</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/13/p-5441456212/">Mobius</a></h1>
     
     
@@ -189,116 +306,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/12/p-5415580642/">Warm Up (III)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-12T16:59:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use of<em> tail-recursion</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/12/p-5412233175/">Warm Up (II)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-12T13:45:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Using <em>guard</em>:</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/12/p-5409864307/">Warm Up</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-12T12:20:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Fibonacci function, according to</p>
-
-<p><a href="wikipedia">http://en.wikipedia.org/wiki/Fibonacci_number</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/159/">&larr; Older</a>
@@ -316,23 +323,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/22/innovation/">Innovation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
       </li>
     
   </ul>

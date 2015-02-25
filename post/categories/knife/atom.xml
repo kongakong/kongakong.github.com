@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: knife | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/knife/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-26T02:50:25+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[knife did not create any data bag]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/25/knife-did-not-create-any-data-bag/"/>
+    <updated>2015-02-25T11:36:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/25/knife-did-not-create-any-data-bag</id>
+    <content type="html"><![CDATA[<p>I want to create an offline cookbook. I want to create a user databag to use the <code>users</code> recipe. I ran</p>
+
+<pre><code>knife data bag create users
+</code></pre>
+
+<p>but it created nothing in the databag folder.</p>
+
+<p>It turns out I need to run it in local mode:</p>
+
+<pre><code>knife data bag create users -z
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

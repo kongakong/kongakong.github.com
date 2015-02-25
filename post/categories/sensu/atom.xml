@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sensu | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/sensu/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-25T01:25:36+11:00</updated>
+  <updated>2015-02-26T02:50:25+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sensu plugin problem]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem/"/>
+    <updated>2015-02-26T02:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem</id>
+    <content type="html"><![CDATA[<p>Still looking for solution for this issue</p>
+
+<pre><code>    $ gem install sensu-plugin --no-rdoc --no-ri
+    /usr/bin/ruby1.9.1 extconf.rb
+    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
+            from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+            from extconf.rb:1:in `&lt;main&gt;'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cannot find a resource matching ruby_block[sensu_service_trigger]]]></title>

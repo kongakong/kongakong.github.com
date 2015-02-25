@@ -9,12 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In Swift it may be necessary to use autorelease if we are using objective-c objects. e.g. 1
-2
-3
-4
-5
-autoreleasepool { // do something expensive &hellip;">
+  <meta name="description" content="Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -126,6 +121,131 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/09/18/init-chain-rule-in-swift/">Init Chain Rule in Swift</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T16:30:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T16:26:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
+
+<p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/swift-ternanry-operators/">Swift Ternanry Operator ?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T01:25:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will cause a compiler error:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
+</span><span class='line'>let b=4
+</span><span class='line'> 
+</span><span class='line'>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by ';'"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Putting spaces around operators will resolve the compiler error i.e.</p>
+
+<pre><code>let max = a &gt; b ? a : b
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/09/18/autorelease-in-swift/">Autorelease in Swift</a></h1>
     
     
@@ -224,144 +344,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of Type NSInteger Should Not Be Used as Format Arguments</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-14T18:01:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In this example,</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSInteger val = 15000;
-</span><span class='line'>    NSLog(@"%i", val);</span></code></pre></td></tr></table></div></figure>
-
-
-<p>XCode will flag this error</p>
-
-<pre><code>Values of type "NSInteger" should not be used as format arguments: add an explicit cast to 'long' instead.
-</code></pre>
-
-<p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized Selector -replacementObjectForKeyedArchiver:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T22:31:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here is the code in question:</p>
-
-<pre><code>class Something: NSCoding {
-    ...
-
-let smth = Something() 
-let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
-</code></pre>
-
-<p>It throws this exception:</p>
-
-<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
-Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
-</code></pre>
-
-<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
-
-<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/10/">&larr; Older</a>
@@ -379,23 +361,23 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/22/innovation/">Innovation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
       </li>
     
   </ul>

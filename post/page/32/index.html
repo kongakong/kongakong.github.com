@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may &hellip;">
+  <meta name="description" content="By default a riak node will only listen to 127.0.0.1. Replace 127.0.0.1 with the host IP in app.config will solve this issue
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +122,167 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2013/08/09/how-to-make-riak-listen-to-addresses-other-than-localhost/">How to Make Riak Listen to IP Other Than Localhost</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-09T18:53:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By default a riak node will only listen to 127.0.0.1.</p>
+
+<p>Replace 127.0.0.1 with the host IP in app.config will solve this issue</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/04/simple-swap-calculation/">Simple Swap Calculation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-04T17:34:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Question</strong>: Today is 1st of January. The residual maturity of a swap is 9 months. The notional
+ principal is $1,000. You receive 3% fixed semiannual payments and pay semiannual
+ cash flows based on the 6-month Libor rate on March 31st and September 30th.
+ Next payment is based on Libor at 5%. The current term structure is
+ R(0, 0.25) = 4% and R(0, 0.75) = 5%.</p>
+
+<p>Find the value of the fixed leg, floating leg and the swap.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">swap</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">example1</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Fixed</span> <span class="o">=</span> <span class="n">example1_fixedleg</span><span class="p">(),</span>
+</span><span class='line'>    <span class="nv">Floating</span> <span class="o">=</span> <span class="n">example1_floatingleg</span><span class="p">(),</span>
+</span><span class='line'>    <span class="p">{</span><span class="nv">Fixed</span><span class="p">,</span> <span class="nv">Floating</span><span class="p">,</span> <span class="nv">Fixed</span><span class="o">-</span><span class="nv">Floating</span><span class="p">}.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1_fixedleg</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="mi">30</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">04</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1030</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1_floatingleg</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="c">% 25 - next floating cash-flow payment </span>
+</span><span class='line'>    <span class="c">% 1000 - the notional as if it is a zero-coupon bond</span>
+</span><span class='line'>    <span class="mi">25</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Answer</strong>: {1022.6981406074298,1012.5734611086509,10.124679498778846}</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/03/git-tip-1/">Git Tip 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T21:21:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2013/08/02/why-we-should-love-repost/">Why We Should Love Repost</a></h1>
     
     
@@ -202,137 +364,6 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/29/different-type-of-database/">Different Type of Database Models</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-29T08:08:00+10:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I find this summary in <a href="http://littleriakbook.com/">Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo;</a> book  very concise and useful.</p>
-
-<ol>
-<li><p><strong>Relational</strong> Traditional databases usually use SQL to model and query data. They are useful for data which can be stored in a highly structured schema, yet require lexible querying. Scaling a relational database (RDBMS) traditionally occurs by more powerful hardware (vertical growth).</p>
-
-<p>Examples: PostgreSQL, MySQL, Oracle</p></li>
-<li><p><strong>Graph</strong> These exist for dataighly interconnected data. They excel in modeling complex relationships between nodes, and many implementations can handle multiple billions of nodes and relationships (or edges and vertices). I tend to include triplestores and object DBs as specialized variants.</p>
-
-<p> Examples: Neo4j, Graphbase, IniniteGraph</p></li>
-<li><p><strong>Document</strong> Document datastores model hierarchical values called documents, represented in formats such as JSON or XML, and do not enforce a document schema. They generally support distributing across multiple servers (horizontal growth).</p>
-
-<p> Examples: CouchDB, MongoDB, Couchbase</p></li>
-<li><p><strong>Columnar</strong> Popularized by Google’s BigTable, this form of database exists to scale across mul- tiple servers, and groups similar data into column families. Column values can be individually versioned and managed, though families are deined in advance, not unlike RDBMS schemas.</p>
-
-<p> Examples: HBase, Cassandra, BigTable 4</p></li>
-<li><p><strong>Key/Value</strong> Key/Value, or KV stores, are conceptually like hashtables, where values are stored and accessed by an immutable key. They range from single-server varieties like Memcached used for high-speed caching, to multi-datacenter distributed systems like Riak Enterprise.</p>
-
-<p> Examples: Riak, Redis, Voldemort</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/26/concurrency-and-parallelism/">Concurrency and Parallelism</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-26T21:41:00+10:00" pubdate data-updated="true">Jul 26<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you express things that are independent, as independent executions and parallelism is about running two things at the same time. They are not the same idea and a lot of people confuse them, they think they are the same thing, but concurrency and parallelism are best thought of as a different idea. You can write beautiful concurrent programs with no parallelism whatsoever and you can also write extremely parallel programs that are not remotely concurrent. Concurrency is a model, parallelism is a result &ndash; maybe that&rsquo;s the best way to say it.</p></blockquote>
-
-<p>- Rob Pike</p>
-
-<p>Source: <a href="http://www.infoq.com/interviews/pike-concurrency">Infoq</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/17/mfa/">MFA</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T08:31:00+10:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/33/">&larr; Older</a>
@@ -350,23 +381,23 @@ number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/22/innovation/">Innovation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
       </li>
     
   </ul>

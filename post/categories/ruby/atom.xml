@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ruby/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-25T01:25:36+11:00</updated>
+  <updated>2015-02-26T02:50:25+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sensu plugin problem]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem/"/>
+    <updated>2015-02-26T02:12:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem</id>
+    <content type="html"><![CDATA[<p>Still looking for solution for this issue</p>
+
+<pre><code>    $ gem install sensu-plugin --no-rdoc --no-ri
+    /usr/bin/ruby1.9.1 extconf.rb
+    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
+            from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
+            from extconf.rb:1:in `&lt;main&gt;'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A successful run of kitchen init]]></title>
@@ -141,30 +157,6 @@ Done installing documentation for bundler, bundle after 1 seconds
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Just installed RVM]]></title>
-    <link href="http://www.ahwkong.com/post/2013/06/12/p-52782958923/"/>
-    <updated>2013-06-12T21:20:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/06/12/p-52782958923</id>
-    <content type="html"><![CDATA[<p>Just installed RVM.</p>
-
-<p>Message from RVM after installation:</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>* To start using RVM you need to run &lt;code>source /Users/antkong/.rvm/scripts/rvm&lt;/code>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>in all your open shell windows, in rare cases you need to reopen all shell windows.
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

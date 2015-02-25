@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="From http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754
-">
+  <meta name="description" content="From http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653 setValue &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,150 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5940804774/">Difference Between setObject:forKey: And setValue:forKey: In NSMutableDictionary</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T06:35:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>From</p>
+
+<p><a href="SO">http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653</a></p>
+
+<p><em>setValue:forKey:</em> is part of the <em>NSKeyValueCoding</em> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <em>setValue:forKey:</em> is implemented in classes other than NSDictionary.</p>
+
+<p><em>setObject:forKey:</em> is<em> NSMutableDictionary</em>’s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It’s somewhat of a coincidence that the signatures are so similar.</p>
+
+<p>What adds to the confusion is that <em>NSMutableDictionary</em>’s implementation of setValue:forKey: is equivalent to<em> setObject:forKey:</em> in most cases. In other classes, _setValue:forKey: _ changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a ‘@’ character — in which case it modifies member variables.</p>
+
+<p>So in a nutshell, use _setObject:forKey: _ when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/28/p-5898731686/">Boby Guard Technique</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-28T01:21:00+10:00" pubdate data-updated="true">May 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Boby guard technique</p>
+
+<p>1) Side-by-side/hand holding/hand on shoulder</p>
+
+<p>2) From behind (palm strike or knee back attack + head turn)</p>
+
+<p>3) From side</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/27/p-5886593746/">Stupid Mistake</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-27T12:52:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My app crashed for no reason.</p>
+
+<p>Turns out it is my mistake:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nl">addSublayer:</span><span class="n">myLayer</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">myLayer</span> <span class="n">dealloc</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>when I mean to do it</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nl">addSublayer:</span><span class="n">myLayer</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">myLayer</span> <span class="n">release</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/26/p-5844393478/">Counting Unique Items in an Array</a></h1>
     
     
@@ -195,132 +338,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5815038508/">Liskov Substitution Principle</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T09:41:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Liskov%20Principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5810996367/">It Is Like You Want to Be a Nun Because You Saw a Flying Nun.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T07:42:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is like you want to be a nun because you saw a flying nun.</p>
-
-<p>Edward Conlon, author of <em>Blue Blood</em>, on people wanting to join CSI after watching the TV show</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/24/p-5797170054/">Earn Another Experience Point</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-24T20:12:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Wrote up a simple test module code (simply called ‘test’), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<strong>r</strong>) and repayment periods (<strong>n</strong>).</p>
-
-<p>When I compile the module, I get this error message:</p>
-
-<pre><code>Warning: this expression will fail with a 'badarith' exception
-</code></pre>
-
-<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
-
-<p>Now I get another error message:</p>
-
-<pre><code>exception error: no function clause matching test:mp(100000, 0.00625, 360)
-</code></pre>
-
-<p>Turns out the function declaration is <code>mp(B, r, n)</code>.</p>
-
-<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/152/">&larr; Older</a>
@@ -338,23 +355,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/25/tmux-resizing-pane/">tmux resizing pane</a>
       </li>
     
       <li class="post">
         <a href="/post/2015/02/23/useful-vbox-command/">useful vbox command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/22/innovation/">Innovation</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/switching-to-zsh/">switching to zsh</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/21/my-toastmaster-speech-3/">My toastmaster speech 3</a>
       </li>
     
   </ul>

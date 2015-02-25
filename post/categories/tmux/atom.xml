@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tmux | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/tmux/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-25T01:25:36+11:00</updated>
+  <updated>2015-02-26T02:50:25+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[resize tmux window]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/25/resize-tmux-window/"/>
+    <updated>2015-02-25T10:38:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/25/resize-tmux-window</id>
+    <content type="html"><![CDATA[<p>The size of the window is limited by the smallest size of attached client.</p>
+
+<p>So to reset the size we need to detach all non-active clients</p>
+
+<p>This is the command:</p>
+
+<pre><code> C-b :attach -d
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[tmux resizing pane]]></title>
