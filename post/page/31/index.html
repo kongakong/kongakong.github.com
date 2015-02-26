@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="At first the rvm install ruby-1.9.3-p484 did not work on OSX. The extra --with-gcc=clang parameter fixed the issue
-">
+  <meta name="description" content="What is this about? ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,84 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/28/systemuiserver-app/">SystemUIServerApp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-28T23:14:00+11:00" pubdate data-updated="true">Nov 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>What is this about?</p>
+
+<p><img class="center" src="/images/SystemUIServerApp.png" width="460" height="175" title="" ></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/28/jsonkit-isa-is-deprecated/">JSONKit: Isa Is Deprecated</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-28T07:45:00+11:00" pubdate data-updated="true">Nov 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got a lot of compiler errors when compiling the JSONKit for an iOS7 project.</p>
+
+<p><img class="center" src="/images/ios_jsonkit_isa_error.png"></p>
+
+<p>Answer is here: <a href="http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated">http://stackoverflow.com/questions/19875166/ios-7-isa-is-deprecated</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -246,90 +323,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/15/riak-allow-multi/">Riak Allow-multi</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-15T01:04:00+10:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I could not create a write conflict situation.</p>
-
-<p>It turns out it is because I did not set the <strong>allow_multi</strong> property</p>
-
-<p>Here is the command line:</p>
-
-<pre><code>curl -i -XPUT http://riak001:8098/riak/cart -H "Content-Type:application/json" -d '{"props":{"allow_mult":1} }'
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/08/13/octopresss-liquid-exception/">Octopress&#8217;s Liquid Exception</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-13T18:47:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I tried to publish a blog post which contains some erlang code, I got this error message</p>
-
-<pre><code>Liquid Exception: undefined method `[]' for nil:NilClass in 2013-08-04-mypost.markdown
-</code></pre>
-
-<p>It is because in erlang &lsquo;%&rsquo; is the comment character. I used &lsquo;%%&rsquo; to start a comment and it confuses Jekyll. Switching back to a single &lsquo;%&rsquo; fixes the problem.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/32/">&larr; Older</a>
@@ -347,6 +340,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
       </li>
     
@@ -356,14 +357,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
       </li>
     
   </ul>

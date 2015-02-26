@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-26T10:12:23+11:00</updated>
+  <updated>2015-02-26T21:39:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[cannot remove file]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/cannot-remove-file/"/>
+    <updated>2015-02-26T21:36:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/cannot-remove-file</id>
+    <content type="html"><![CDATA[<p>Why I cannot remove this file redis_output.rb?</p>
+
+<pre><code>    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ ls -l                                                                      ✭ ✖ ✱ ◼
+    total 56
+    -rwxr-xr-x  1 antkong  staff   2858 25 Feb 10:40 flapjack.rb
+    -rwxr-xr-x  1 antkong  staff  11068 25 Feb 10:40 hipchat.rb
+    -rw-r--r--  1 antkong  staff    941 25 Feb 10:40 redis_output.rb
+    -rwxr-xr-x  1 antkong  staff   4594 25 Feb 10:40 ttl.rb
+    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ git rm redis_output.rb                                                   ⏎ ✭ ✖ ✱ ◼
+    fatal: pathspec 'redis_output.rb' did not match any files
+
+    fatal: pathspec 'redis_output.rb' did not match any files
+    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ git rm redis*.rb                                                         ⏎ ✭ ✖ ✱ ◼
+    fatal: pathspec 'redis_output.rb' did not match any files
+</code></pre>
+
+<p>It is because I made a wrong assumpiton: the file is not under source control yet.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[installing sensu client 0.14 and 0.17.beta1]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/"/>
+    <updated>2015-02-26T15:09:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1</id>
+    <content type="html"><![CDATA[<p>0.17.beta1 does work for me. Fall back to 0.14 but the sensu client window service stopped working too.</p>
+
+<p>I think the windows service needs to be re-registered. Very troublesome</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Some useful apt and dpkg command]]></title>
@@ -555,100 +591,6 @@
 </code></pre>
 
 <p>I can either specify the partform every time I use the kitchen command or simply remove the platform that I do not need.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[error running the motd example of the chef book]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/"/>
-    <updated>2015-02-14T15:27:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/14/error-running-the-motd-example-of-the-chef-book</id>
-    <content type="html"><![CDATA[<p>I am following the chapter &ldquo;Your First Cookbook: Message of the Day&rdquo; from <code>Learning Chef</code> by Mischa Taylor</p>
-
-<p>When I run <code>kitchen converge</code>, I got these error messages:</p>
-
-<pre><code>               ================================================================================
-               Error executing action `create` on resource 'cookbook_file[/etc/motd]'
-               ================================================================================
-
-               Chef::Exceptions::FileNotFound
-               ------------------------------
-               Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
-                 files/ubuntu-12.04/motd
-                 files/ubuntu/motd
-                 files/default/motd
-                 files/motd
-
-               Resource Declaration:
-               ---------------------
-               # In /tmp/kitchen/cookbooks/motd/recipes/default.rb
-
-                 9: cookbook_file "/etc/motd" do
-                10:   source "motd"
-                11:   mode "0644"
-                12: end
-
-               Compiled Resource:
-               ------------------
-               # Declared in /tmp/kitchen/cookbooks/motd/recipes/default.rb:9:in `from_file'
-
-               cookbook_file("/etc/motd") do
-                 provider Chef::Provider::CookbookFile
-                 action "create"
-                 retries 0
-                 retry_delay 2
-                 default_guard_interpreter :default
-                 path "/etc/motd"
-                 backup 5
-                 atomic_update true
-                 source "motd"
-                 declared_type :cookbook_file
-                 cookbook_name :motd
-                 recipe_name "default"
-                 mode "0644"
-               end
-
-
-           Running handlers:
-           [2015-02-14T04:22:29+00:00] ERROR: Running exception handlers
-           Running handlers complete
-           [2015-02-14T04:22:29+00:00] ERROR: Exception handlers complete
-           [2015-02-14T04:22:29+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
-           Chef Client failed. 0 resources updated in 11.010074864 seconds
-           [2015-02-14T04:22:29+00:00] ERROR: cookbook_file[/etc/motd] (motd::default line 9) had an error: Chef::Exceptions::FileNotFound: Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
-             files/ubuntu-12.04/motd
-             files/ubuntu/motd
-             files/default/motd
-      1 Hello, world
-             files/motd
-           [2015-02-14T04:22:29+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
-</code></pre>
-
-<p>It is because I forgot to create the file <code>files/default/motd</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[kitchen converge problem 2]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/14/kitchen-converge-problem-2/"/>
-    <updated>2015-02-14T15:07:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/14/kitchen-converge-problem-2</id>
-    <content type="html"><![CDATA[<p>Trying the <code>kitchen</code> command again, and I am still getting error messages</p>
-
-<pre><code>    $ kitchen converge
-    -----&gt; Starting Kitchen (v1.3.1)
-    -----&gt; Creating &lt;default-ubuntu-1204&gt;...
-           Bringing machine 'default' up with 'virtualbox' provider...
-           The following berks command failed to execute:
-
-               /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
-
-           The stdout and stderr are shown below:
-</code></pre>
-
-<p>I probably have installed chefdk when the system ruby is active.</p>
-
-<p>So <code>rvm use system</code> works for me</p>
 ]]></content>
   </entry>
   

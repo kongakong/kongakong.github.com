@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a &hellip;">
+  <meta name="description" content="It is impossible not to learn ruby these days. It is used everywhere: ruby powers octopress, chef and many other popular software. Here is some basic &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,130 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/01/18/basic-rvm/">Basic Rvm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-18T15:53:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
+
+<p>Here is some basic <code>rvm</code> command:</p>
+
+<pre><code>$ rvm list
+
+rvm rubies
+
+   ruby-1.9.3-p484 [ x86_64 ]
+   ruby-1.9.3-p551 [ x86_64 ]
+=* ruby-2.2.0 [ x86_64 ]
+
+# =&gt; - current
+# =* - current &amp;&amp; default
+#  * - default
+
+
+$ rvm use 2.2.0
+Using /Users/antkong/.rvm/gems/ruby-2.2.0
+
+$ bundle install
+bash: bundle: command not found
+
+$ gem install bundle
+Fetching: bundler-1.7.12.gem (100%)
+Successfully installed bundler-1.7.12
+Fetching: bundle-0.0.1.gem (100%)
+Successfully installed bundle-0.0.1
+Parsing documentation for bundler-1.7.12
+Installing ri documentation for bundler-1.7.12
+Parsing documentation for bundle-0.0.1
+Installing ri documentation for bundle-0.0.1
+Done installing documentation for bundler, bundle after 1 seconds
+2 gems installed 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
+
+<p>Probably the most elegant style</p>
+
+<pre><code>    d = 
+      b: 1
+      c: 2
+</code></pre>
+
+<p>This also works</p>
+
+<pre><code>    d = { b: 1, c: 2}
+</code></pre>
+
+<p>If you need to span multiple lines:</p>
+
+<pre><code>    d = { b: 1 , \
+      c: 2}
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -275,95 +399,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T16:26:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
-
-<p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/swift-ternanry-operators/">Swift Ternanry Operator ?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T01:25:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This will cause a compiler error:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>let a=3
-</span><span class='line'>let b=4
-</span><span class='line'> 
-</span><span class='line'>let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated by ';'"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Putting spaces around operators will resolve the compiler error i.e.</p>
-
-<pre><code>let max = a &gt; b ? a : b
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/10/">&larr; Older</a>
@@ -381,6 +416,14 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
       </li>
     
@@ -390,14 +433,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
       </li>
     
   </ul>

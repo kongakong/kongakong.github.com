@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I always thought sharks lay eggs. Obviously there is exception. For example, Hammerhead
-">
+  <meta name="description" content="It means I am missing the elib library. However according to http://www.gnu.org/software/elib/ It turns out it is because the default emacs in OSX is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,90 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/24/p-16344686959/">Installing JDEE for Emacs: Problem With Avltree</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-24T06:13:00+11:00" pubdate data-updated="true">Jan 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It means I am missing the elib library.</p>
+
+<p>However according to</p>
+
+<p><a href="GNU">http://www.gnu.org/software/elib/</a></p>
+
+<p>It turns out it is because the default emacs in OSX is of version 22. Any version less than 23 will try to invoke the old <code>avltree</code> in elib.</p>
+
+<p>Use brew to install the latest version of emacs</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/23/p-16316216610/">Know My Erlang Module (2): Erl_scan</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-23T10:00:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The Erlang Token Scanner</p>
+
+<p><a href="None">http://www.erlang.org/doc/man/erl_scan.html</a></p>
+
+<p><a href="http://www.erlang.org/doc/man/erl_scan.html">http://www.erlang.org/doc/man/erl_scan.html</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -231,96 +314,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/01/18/p-16058064684/">VirtualBox Upgrade</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-18T22:37:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Upgraded VirtualBox to 4.1.8r75467. When I start a vm I got an error message</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>$ VBoxManage startvm 7b2a72e2-08cd-483b-b594-fe27dff6974a --type headless
-</span><span class='line'>Waiting for VM "7b2a72e2-08cd-483b-b594-fe27dff6974a" to power on...
-</span><span class='line'>VBoxManage: error: No error info
-</span><span class='line'>VBoxManage: error: Details: code NS_ERROR_CALL_FAILED (0x800706be), component ProgressProxy, interface IProgress, callee
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/01/16/p-15942277859/">Michael Gazzaniga - Free Yet Determined and Constrained (Michael Gazzaniga)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-16T22:26:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Michael Gazzaniga &ndash; Free Yet Determined and Constrained (Michael Gazzaniga)</p>
-
-<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/aGtZek7RPts "></iframe></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/99/">&larr; Older</a>
@@ -338,6 +331,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
       </li>
     
@@ -347,14 +348,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
       </li>
     
   </ul>

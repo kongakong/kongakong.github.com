@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="List all installed packages: dpkg --get-selection List files coming from a package dpkg -L sensu ">
+  <meta name="description" content="Why I cannot remove this file redis_output.rb? ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ ls -l ✭ ✖ ✱ ◼ total 56 - &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,96 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/26/cannot-remove-file/">Cannot Remove File</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T21:36:00+11:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Why I cannot remove this file redis_output.rb?</p>
+
+<pre><code>    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ ls -l                                                                      ✭ ✖ ✱ ◼
+    total 56
+    -rwxr-xr-x  1 antkong  staff   2858 25 Feb 10:40 flapjack.rb
+    -rwxr-xr-x  1 antkong  staff  11068 25 Feb 10:40 hipchat.rb
+    -rw-r--r--  1 antkong  staff    941 25 Feb 10:40 redis_output.rb
+    -rwxr-xr-x  1 antkong  staff   4594 25 Feb 10:40 ttl.rb
+    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ git rm redis_output.rb                                                   ⏎ ✭ ✖ ✱ ◼
+    fatal: pathspec 'redis_output.rb' did not match any files
+
+    fatal: pathspec 'redis_output.rb' did not match any files
+    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ git rm redis*.rb                                                         ⏎ ✭ ✖ ✱ ◼
+    fatal: pathspec 'redis_output.rb' did not match any files
+</code></pre>
+
+<p>It is because I made a wrong assumpiton: the file is not under source control yet.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">Installing Sensu Client 0.14 and 0.17.beta1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T15:09:00+11:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>0.17.beta1 does work for me. Fall back to 0.14 but the sensu client window service stopped working too.</p>
+
+<p>I think the windows service needs to be re-registered. Very troublesome</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -272,95 +362,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">Knife Did Not Create Any Data Bag</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-25T11:36:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I want to create an offline cookbook. I want to create a user databag to use the <code>users</code> recipe. I ran</p>
-
-<pre><code>knife data bag create users
-</code></pre>
-
-<p>but it created nothing in the databag folder.</p>
-
-<p>It turns out I need to run it in local mode and give it a user name:</p>
-
-<pre><code>knife data bag create users myuser -z
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/25/resize-tmux-window/">Resize Tmux Window</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-25T10:38:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The size of the window is limited by the smallest size of attached client.</p>
-
-<p>So to reset the size we need to detach all non-active clients</p>
-
-<p>This is the command:</p>
-
-<pre><code> C-b :attach -d
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -376,6 +377,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
       </li>
     
@@ -385,14 +394,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
       </li>
     
   </ul>

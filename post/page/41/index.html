@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away. It usually works great… until you &hellip;">
+  <meta name="description" content="Added SSToolkit to my Podfile and got this message. Don’t know what it means… 1
+[!] [SSToolkit] Specification#config is deprecated. The config is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,104 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/29/p-51633107176/">SSToolkit</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-29T20:00:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/15/p-50445623013/">Brew Local Modification Error and Solution</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-15T07:33:00+10:00" pubdate data-updated="true">May 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>       error: Your local changes to the following files would be overwritten by  merge:
+</span><span class='line'>        Library/Formula/erlang.rb
+</span><span class='line'>      Please, commit your changes or stash them before you can merge.
+</span><span class='line'>      Aborting
+</span><span class='line'>      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Solution</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd `brew --prefix`
+</span><span class='line'>$ cd Cellar/erlang/
+</span><span class='line'>$ git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -310,121 +409,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/09/p-49957105079/">TED: Parkinson&#8217;s, Depression and the Switch That Might Turn Them Off - Andres Lozano (2013)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-09T07:02:00+10:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.ted.com/talks/andres_lozano_parkinson_s_depression_and_the_switch_that_might_turn_them_off.html">Andres Lozano: Parkinson&rsquo;s, depression and the switch that might turn them off</a></p>
-
-<p>Deep brain stimulation is becoming very precise. This technique allows surgeons to place electrodes in almost any area of the brain, and turn them up or down — like a radio dial or thermostat — to correct dysfunction. Andres Lozano offers a dramatic look at emerging techniques, in which a woman with Parkinson’s instantly stops shaking and brain areas eroded by Alzheimer’s are brought back to life. (Filmed at TEDxCaltech.)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/08/p-49924605254/">XPath, Python and Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-08T20:00:00+10:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just feel that python is easier for XML manipulation.</p>
-
-<p>e.g.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
-</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;digg-science-rss1.xml&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Very concise.</p>
-
-<p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>...
-</span><span class='line'>      #xmlText{
-</span><span class='line'>          parents = [{item,16},{channel,2},{rss,1}],
-</span><span class='line'>          pos = 3,language = [],value = "\n   ",type = text},
-</span><span class='line'>      #xmlElement{
-</span><span class='line'>          name = link,expanded_name = link,nsinfo = [],
-</span><span class='line'>          namespace = 
-</span><span class='line'>              #xmlNamespace{
-</span><span class='line'>                  default = [],
-</span><span class='line'>                  nodes =
-</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/42/">&larr; Older</a>
@@ -442,6 +426,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
       </li>
     
@@ -451,14 +443,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
       </li>
     
   </ul>

@@ -9,9 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Here is an example: 1
-2
-3 NSString* s = @&quot;{&quot; \ &quot; key1 = \&quot;value1\&quot; \ &quot; }&quot;; ">
+  <meta name="description" content="Got this error when I ran mach build: 1
+configure: error: installation or configuration problem: C++ compiler cannot create executables. Solution: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -117,6 +116,130 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach Problem: C++ Compiler Cannot Create Executables</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T19:19:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this error when I ran <code>mach build</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>configure: error: installation or configuration problem: C++ compiler cannot create executables.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: install g++</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/mach-problem/">Mach Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T08:27:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
+</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2.13.  Stop.
+</span><span class='line'> 0:00.15 make: *** [build] Error 2
+</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>it comes from this check of  mozilla-central/client.mk</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># try to find autoconf 2.13 - discard errors from 'which'
+</span><span class='line'># MacOS X 10.4 sends "no autoconf*" errors to stdout, discard those via grep
+</span><span class='line'>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v '^no autoconf' | head -1)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
+</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
+</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
+</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
+</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
+</span><span class='line'> 0:00.26 make[1]: *** [/home/antkong/wd/mozilla-central/configure] Error 1
+</span><span class='line'> 0:00.26 make: *** [build] Error 2
+</span><span class='line'> 0:00.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: install autoconf-2.13</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -272,157 +395,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/18/using-nsurlconnection-to-read-json-data/">Using NSURLConnection to Read Json Data</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-18T22:34:00+11:00" pubdate data-updated="true">Dec 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My code is not good at all for the following reasons:</p>
-
-<ul>
-<li><p>The NSURLConnection retrieves data synchronously</p></li>
-<li><p>The decoding of JSON is not neat. A strong code smell</p></li>
-</ul>
-
-
-<h3>Synchronous network call</h3>
-
-<p>Next step: rewrite the below code to asynchronous mode.</p>
-
-<p>In the viewDidLoad method of my ViewController, I called the following method:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span> <span class="nf">readJSON</span> <span class="p">{</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">receivedData</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableData</span> <span class="n">data</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="n">NSURLRequest</span> <span class="o">*</span><span class="n">theRequest</span><span class="o">=</span><span class="p">[</span><span class="n">NSURLRequest</span> <span class="nl">requestWithURL:</span><span class="p">[</span><span class="n">NSURL</span> <span class="nl">URLWithString:</span><span class="n">_server_url</span><span class="p">]];</span>
-</span><span class='line'>    <span class="n">NSURLConnection</span> <span class="o">*</span><span class="n">theConnection</span><span class="o">=</span><span class="p">[[</span><span class="n">NSURLConnection</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithRequest:</span><span class="n">theRequest</span> <span class="nl">delegate:</span><span class="n">self</span><span class="p">];</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">theConnection</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">NSData</span> <span class="o">*</span><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLConnection</span> <span class="nl">sendSynchronousRequest:</span><span class="n">theRequest</span> <span class="nl">returningResponse:</span><span class="o">&amp;</span><span class="n">response</span> <span class="nl">error:</span><span class="o">&amp;</span><span class="n">error</span><span class="p">];</span>
-</span><span class='line'>        <span class="n">NSDictionary</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">result</span> <span class="nl">objectFromJSONDataWithParseOptions:</span><span class="p">(</span><span class="n">JKParseOptionNone</span><span class="p">)];</span>
-</span><span class='line'>        <span class="p">[</span><span class="n">self</span> <span class="nl">convertJsonIntoMyData:</span><span class="n">json</span><span class="p">];</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nb">TRUE</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="nb">FALSE</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Decoding of JSON data</h3>
-
-<p>I used a lot of enumerators to walk through dictionaries and arrays at different level. It makes future changes to the JSON schema or objective-c object model difficult.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/16/cannot-init-a-class-object/">Cannot Init a Class Object</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-16T20:39:00+11:00" pubdate data-updated="true">Dec 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this exception</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>2013-12-16 17:35:59.976 MyProject[41964:70b] *** Terminating app due to uncaught 
-</span><span class='line'>exception 'NSInvalidArgumentException', reason: '*** +[MyClass&lt;0x100084d80> init]: cannot init a class object.'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It is because I have mistakenly written</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">init</span><span class="p">]</span> <span class="n">alloc</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>instead of</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[[</span><span class="n">MyClass</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/27/">&larr; Older</a>
@@ -440,6 +412,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
       </li>
     
@@ -449,14 +429,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">knife did not create any data bag</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/25/resize-tmux-window/">resize tmux window</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sensu | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/sensu/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-26T10:12:23+11:00</updated>
+  <updated>2015-02-26T21:39:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[installing sensu client 0.14 and 0.17.beta1]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/"/>
+    <updated>2015-02-26T15:09:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1</id>
+    <content type="html"><![CDATA[<p>0.17.beta1 does work for me. Fall back to 0.14 but the sensu client window service stopped working too.</p>
+
+<p>I think the windows service needs to be re-registered. Very troublesome</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[sensu plugin problem]]></title>

@@ -4341,12 +4341,22 @@
         <lastmod>2015-02-26T10:01:50+11:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/
+        </loc>
+        <lastmod>2015-02-26T21:38:03+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/02/26/cannot-remove-file/</loc>
+        <lastmod>2015-02-26T21:39:09+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2015-02-26T10:12:14+11:00</lastmod>
+        <lastmod>2015-02-26T21:39:09+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2015-02-26T10:12:14+11:00</lastmod>
+        <lastmod>2015-02-26T21:39:09+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4354,6 +4364,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2015-02-26T10:12:14+11:00</lastmod>
+        <lastmod>2015-02-26T21:39:09+11:00</lastmod>
     </url>
 </urlset>
