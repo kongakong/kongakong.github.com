@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In OS X, do cmd + Opt + F
-">
+  <meta name="description" content="Reinstalling cask on another mac. Thought it is the command to install cask brew subcommand: brew install cask Wrong! This cask is actually an emacs &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,230 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2015/02/08/brew-and-cast/">Brew and Cast</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-08T10:58:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
+
+<pre><code>brew install cask
+</code></pre>
+
+<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
+
+<p>To install <code>brew cask</code>, it is the command:</p>
+
+<pre><code>brew tap caskroom/cask
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">Ochiwa Unable to Connect to Sensu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-06T05:13:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I used chef to install sensu and ochiwa.</p>
+
+<p>In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error</p>
+
+<pre><code>{"Date":"2015-02-05T09:42:23.516606749Z","Level":"warning","Src":{"Func":"github.com/sensu/uchiwa/uchiwa.Build","Line":49},"Output":"API call to \"http://127.0.0.1:4567/stashes\" returned: Get http://127.0.0.1:4567/stashes: dial tcp 127.0.0.1:4567: connection refused"}
+</code></pre>
+
+<p>With help from sensu irc chatroom, I checked</p>
+
+<pre><code>netstat -anp | grep 4567
+</code></pre>
+
+<p>There is no process.</p>
+
+<pre><code>service sensu-api status
+</code></pre>
+
+<p>The service is stopped.</p>
+
+<p>After starting the service, ochiwa can talk to sensu server now.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">Mandrill Is Sending Me a Strange Template Name</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-05T13:11:00+11:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-04T19:58:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here.</p>
+
+<p>It is assuming you are using Google App Engine</p>
+
+<pre><code>    import webapp2
+    import hashlib
+    import hmac
+
+    class MandrillWebhookHandler(webapp2.RequestHandler):
+
+        def _calc_signature(self, raw, key):
+            hashed = hmac.new(key, raw, hashlib.sha1)
+            return hashed.digest().encode("base64").rstrip('\n')
+
+        def verify_mandrill_signature(self):
+            '''
+            Mandrill includes an additional HTTP header with webhook POST requests,
+                X-Mandrill-Signature, which will contain the signature for the request.
+                To verify a webhook request, generate a signature using the same key
+                that Mandrill uses and compare that to the value of the
+                X-Mandrill-Signature header.
+            :return: True if verified valid
+            '''
+            mandrill_signature = self.request.headers['X-Mandrill-Signature']
+            mandrill_key = 'Your mandrill webhook key goes here'
+            signed_data = self.request.path_url
+            sorted_key = sorted(self.request.arguments())
+            for k in sorted_key:
+                signed_data += k
+                signed_data += self.request.get(k)
+            expected_signature = self._calc_signature(signed_data, mandrill_key)
+            return expected_signature == mandrill_signature
+
+        def head(self):
+            '''
+            Must return 200 so Mandrill knows it is a valid webhook
+
+            http://help.mandrill.com/entries/22024856-Why-can-t-my-webhook-or-inbound-route-URL-be-verified-
+            '''
+            self.response.set_status(OK)
+
+        def post(self):
+            '''
+            Mandrill sends data to our webhook by post
+            '''
+            if not self.verify_mandrill_signature():
+                # check failed
+                self.abort()
+
+            # The rest of processing
+            # ...
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for Javascript Code in Development Console in Chrome</a></h1>
     
     
@@ -153,204 +376,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-04T09:08:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A new version of ChefDK 0.4.0 has been released. I did an upgrade via <code>brew cask</code></p>
-
-<pre><code>    $ brew update
-    ...
-    $ brew cask install --force chefdk
-    ==&gt; Downloading https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.4.0-1.dmg
-    ######################################################################## 100.0%
-    ==&gt; Running installer for chefdk; your password may be necessary.
-    ==&gt; Package installers may write to any location; options such as --appdir are ignored.
-    Password:
-    ==&gt; installer: Package name is Chef Development Kit
-    ==&gt; installer: Upgrading at base path /
-    ==&gt; installer: The upgrade was successful.
-    🍺  chefdk staged at '/opt/homebrew-cask/Caskroom/chefdk/0.4.0-1' (6 files, 99M)
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/02/a-little-catch-with-at-patch/">A Little Gotcha With @patch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-02T16:34:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is my code</p>
-
-<pre><code>from mail_api import send_mail
-
-def my_func():
-    # do some work
-    send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
-</code></pre>
-
-<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
-
-<pre><code>from mock import patch
-
-  class MyTest(unittest.TestCase):
-
-    @patch('mail_api.send_mail')
-    def test_my_func(self, send_mail):
-      self.assertEquals(my_func(), expected_result)
-</code></pre>
-
-<p>To my surprise an email is still sent out when the test is run!</p>
-
-<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
-
-<pre><code>import mail_api
-
-def my_func():
-    # do some work
-    mail_api.send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/20/chef/">Chef, Brekshelf and Data Bag</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-20T14:41:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
-
-<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
-
-<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/19/best-way-to-install-chefdk/">Best Way to Install Chefdk on OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-19T15:12:00+11:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The best way to install chefdk on OSX for me is to use <code>brew cask</code>:</p>
-
-<pre><code>brew cask install chefdk 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -368,23 +393,23 @@ def my_func():
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>

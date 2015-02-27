@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="We can use the class cluster technique to manage compatibility on different iOS platforms.
-">
+  <meta name="description" content="To avoid cyclic reference when referring to an object outside a block, we can do the following: 1
+2
+3 __weak typeof(self) weakSelf = self; gravity. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +123,206 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2014/01/23/weak-reference/">Weak Reference in Block</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-23T21:55:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>        <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/20/html5/">Html 5 Resources</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-20T16:04:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some useful links:</p>
+
+<p><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></p>
+
+<p><a href="https://github.com/scottjehl/picturefill">https://github.com/scottjehl/picturefill</a></p>
+
+<p><a href="http://www.standardista.com/responsive-images-clown-car-technique/">http://www.standardista.com/responsive-images-clown-car-technique/</a></p>
+
+<p><a href="http://www.w3.org/community/respimg/">http://www.w3.org/community/respimg/</a></p>
+
+<p><strong>Hammer.js</strong> <a href="http://eightmedia.github.io/hammer.js/">http://eightmedia.github.io/hammer.js/</a></p>
+
+<p><strong>jQT</strong> <a href="http://jqtjs.com/">http://jqtjs.com/</a></p>
+
+<p><strong>Sencha gestures</strong> <a href="http://www.sencha.com/blog/ext-js-on-tap/">http://www.sencha.com/blog/ext-js-on-tap/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/18/compile-debug-info/">Compile Debug_info</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-18T13:04:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After coming this SO question about (debug_info)[<a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a>], I am curious if it is indeed a problem.</p>
+
+<p>Based on the (documentation)[<a href="http://www.erlang.org/doc/man/compile.html#debug_info">http://www.erlang.org/doc/man/compile.html#debug_info</a>], this should enable the addition of debug info to the .beam files.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">).</span>
+</span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
+
+<p>I can only implant debug info through erlang shell like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().
+</span><span class='line'>
+</span><span class='line'>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
+</span><span class='line'>ERROR: Could not find 'wxe_driver.so' in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
+</span><span class='line'>{ok,&lt;0.49.0>}
+</span><span class='line'>5> c(testdebuginfo, [debug_info]).
+</span><span class='line'>{ok,testdebuginfo}</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2014/01/17/class-cluster/">Class Cluster</a></h1>
     
     
@@ -153,269 +354,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/11/using-automator-in-osx/">Using Automator in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-11T15:29:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I want to implement a service in OSX such that I can easily shrink the size of image files in a folder to half of their original size.</p>
-
-<p>This is what I have come up with at the end.</p>
-
-<p><img src="images/automator.png" width="860" height="617"></p>
-
-<p>Lessons/Observations:</p>
-
-<ul>
-<li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
-<li><p>A lot of useful actions are already built in e.g. Scale image</p></li>
-<li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/10/resize-images-in-a-so-post/">Resize Images in a Stackoverflow Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-10T14:18:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Markdown does not allow us to specify the size of an link image.</p>
-
-<p>To get around this restriction it is what I did:</p>
-
-<h1>1. Upload an image as usual</h1>
-
-<p>Stackoverflow will add these lines to your post:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
-
-
-<h1>2. Change the above to an image tag</h1>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
-
-
-<p>Done</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/09/firefox-build-failure-on-osx/">Firefox Build Failure on Osx</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-09T21:08:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found
-</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
-</span><span class='line'> 0:12.72          ^
-</span><span class='line'> 0:12.72 1 error generated.
-</span><span class='line'> 0:12.72 configure: failed program was:
-</span><span class='line'> 0:12.72 #line 19591 "configure"
-</span><span class='line'> 0:12.72 #include "confdefs.h"
-</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
-</span><span class='line'> 0:12.73 int main() {
-</span><span class='line'> 0:12.73  struct ethtool_cmd cmd; cmd.speed_hi = 0;
-</span><span class='line'> 0:12.73 ; return 0; }
-</span><span class='line'> 0:12.73 configure:19790: checking __attribute__ ((aligned ())) support
-</span><span class='line'> 0:12.73 configure:19807: /usr/bin/clang -c  -std=gnu99 -fno-strict-aliasing -fno-math-errno -pthread -DNO_X11 -Werror -Qunused-arguments  conftest.c 1>&5
-</span><span class='line'> 0:12.73 configure: error: yasm is a required build tool for this architecture when webm is enabled. You may either install yasm or --disable-webm (which disables the WebM video format). See https://developer.mozilla.org/en/YASM for more details.
-</span><span class='line'> 0:12.73 *** Fix above errors and then restart with               "/Applications/Xcode.app/Contents/Developer/usr/bin/make -f client.mk build"
-</span><span class='line'> 0:12.73 make[2]: *** [configure] Error 1
-</span><span class='line'> 0:12.73 make[1]: *** [obj-x86_64-apple-darwin13.0.2/Makefile] Error 2
-</span><span class='line'> 0:12.73 make: *** [build] Error 2</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Basically installing yasm fixes this problem. The &lsquo;linux/ethtool.h&rsquo; fatal error seems to be irrevelant.</p>
-
-<p>Here some build statistic (<code>mach resource-usage</code>):</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Wall Time (s)   1230.61
-</span><span class='line'>Start Date  2014-01-09T10:24:38.582Z
-</span><span class='line'>End Date    2014-01-09T10:45:09.191Z
-</span><span class='line'>CPU %   93.85
-</span><span class='line'>Write Bytes 4659960320
-</span><span class='line'>Read Bytes  1421654016
-</span><span class='line'>Write Time  1749179
-</span><span class='line'>Read Time   509074</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-06T19:12:00+11:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>By default, ipython notebook will use MathJax on a CDN</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython notebook
-</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
-</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
-</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
-</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure>
-
-
-<p>To download and install the mathjax.js locally, we can run</p>
-
-<pre><code>from IPython.external.mathjax import install_mathjax
-install_mathjax()
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/23/">&larr; Older</a>
@@ -433,23 +371,23 @@ install_mathjax()
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>

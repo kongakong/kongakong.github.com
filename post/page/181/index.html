@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful. &hellip;">
+  <meta name="description" content="Added in svn 1.6: The caret ^ shorthand notation to shorten subversion URLs when using the command line. The caret symbol can be used in place of the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,160 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/01/18/p-2807483211/">Subversion Note 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-18T16:42:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Added in svn 1.6: The caret ^ shorthand notation to shorten subversion URLs when using the command line. The caret symbol can be used in place of the portion of the URL up through the repository name.</p>
+
+<p>Ex:</p>
+
+<p>instead of</p>
+
+<p><a href="Source">http://stackoverflow.com/questions/294256/favorite-non-obvious-feature-of-svn</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/18/p-2796356969/">Core Data 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-18T04:00:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Reading <code>NSFetchedResultsController</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/16/p-2762296356/">Fall Into the Same Trap Everytime</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-16T04:34:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was just trying a very simple cpp program in osx.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/01/16/p-2759634210/">Finally I Can Bring Up a Login Screen Before the Split View in the Ipad.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-16T00:27:00+11:00" pubdate data-updated="true">Jan 16<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally I can bring up a login screen before the Split View in the ipad.</p>
+
+<p>Previously I was doing it wrong. I have the button btnLogin action to get a reference to a AppDelegate to call one of its function to dismiss view.</p>
+
+<p>A better way is to let the btnLogin to send dissmissModalController to the <code>[self parentViewController]</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/01/13/p-2727123479/">Splash Screen on iOS</a></h1>
     
     
@@ -154,164 +308,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
-
-<p>Tried</p>
-
-<p><code>if ([self modalViewController]) {</code>
-<code>return;</code>
-<code>}</code></p>
-
-<p>in <code>willHideSplitView</code> but it does not work</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/10/p-2668647745/">iOS Idiom 2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-10T02:44:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/10/p-2667588233/">NSInvalidArgumentException</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-10T00:40:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got <code>Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'</code></p>
-
-<p>when trying to dismiss a modal view controller.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/01/09/p-2658426192/">Some Note on Frame vs Bounds</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
-
-<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
-
-<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/182/">&larr; Older</a>
@@ -329,23 +325,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>

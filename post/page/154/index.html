@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Goal: return true if the root element looks something like (Actually do not know why the use of ‘2.0’ and “2.0” in the comparison below can cause a &hellip;">
+  <meta name="description" content="Wrote up a simple test module code (simply called ‘test’), inside which I defined a function mp. It does some loan calculation given a loan amount, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,180 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/05/24/p-5797170054/">Earn Another Experience Point</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-24T20:12:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wrote up a simple test module code (simply called ‘test’), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<strong>r</strong>) and repayment periods (<strong>n</strong>).</p>
+
+<p>When I compile the module, I get this error message:</p>
+
+<pre><code>Warning: this expression will fail with a 'badarith' exception
+</code></pre>
+
+<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
+
+<p>Now I get another error message:</p>
+
+<pre><code>exception error: no function clause matching test:mp(100000, 0.00625, 360)
+</code></pre>
+
+<p>Turns out the function declaration is <code>mp(B, r, n)</code>.</p>
+
+<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/24/p-5796329592/">For Some Reason My Chrome Installation Is Gone From My Window XP at Work. I Have to Re-install and Redo Some Setup Again</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-24T19:00:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For some reason my Chrome installation is gone from my window XP at work. I have to re-install and redo some setup again</p>
+
+<p>There are two must-install chrome extensions:</p>
+
+<ul>
+<li>Ad block</li>
+<li>Ghostery</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/24/p-5778741381/">Simple Grid Like Arrangement on iOS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-24T07:48:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><img class="left" src="/images/tumblr_llo4kq1ZLS1qbpfzro1_400.png"></p>
+
+<p>Simple grid like arrangement on iOS</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/23/p-5764934331/">A Friend Helps You Move.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-23T21:55:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A friend helps you move.</p>
+
+<p>A good friend helps you move a body</p>
+
+<p>Rich Hall</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/05/23/p-5760858058/">RSS Feed Parsing Tasks (I)</a></h1>
     
     
@@ -154,150 +328,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/23/p-5741485064/">CGAffineTransformMakeRotation vs CGAffineTransformRotate</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-23T05:46:00+10:00" pubdate data-updated="true">May 23<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>CGAffineTransformMakeRotation</code> vs <code>CGAffineTransformRotate</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/22/p-5724362792/">Net_adm Can Be Used to Discover the Erlang Cluster Topology.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-22T16:41:00+10:00" pubdate data-updated="true">May 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Note to self: <strong>net_adm</strong> can be used to discover the erlang cluster topology.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/22/p-5724311546/">Note to Self: _auth_ Module Can Help Us to Find Out the Cookie of Nodes.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-22T16:38:00+10:00" pubdate data-updated="true">May 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Note to self: <em>auth</em> module can help us to find out the cookie of nodes.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/22/p-5724189909/">Cannot Add Ivar to a Category @interface</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-22T16:31:00+10:00" pubdate data-updated="true">May 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Note to self: cannot add ivar to a category @interface</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/155/">&larr; Older</a>
@@ -315,23 +345,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>

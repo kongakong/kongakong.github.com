@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sudo | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/sudo/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-02-27T22:14:47+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Using chef sudo cookbook]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/27/using-chef-sudo-cookbook/"/>
+    <updated>2015-02-27T12:53:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/27/using-chef-sudo-cookbook</id>
+    <content type="html"><![CDATA[<p>If you want to LWRP to define a sudo user, do not use</p>
+
+<pre><code>   include_recipe 'sudo'
+</code></pre>
+
+<p>It will blow away your default <code>/etc/sudoers</code></p>
+]]></content>
+  </entry>
+  
+</feed>

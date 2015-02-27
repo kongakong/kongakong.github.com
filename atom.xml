@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-26T21:39:22+11:00</updated>
+  <updated>2015-02-27T22:14:47+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,114 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Using chef sudo cookbook]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/27/using-chef-sudo-cookbook/"/>
+    <updated>2015-02-27T12:53:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/27/using-chef-sudo-cookbook</id>
+    <content type="html"><![CDATA[<p>If you want to LWRP to define a sudo user, do not use</p>
+
+<pre><code>   include_recipe 'sudo'
+</code></pre>
+
+<p>It will blow away your default <code>/etc/sudoers</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Toastmaster speech 4]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/27/toastmaster-speech-4/"/>
+    <updated>2015-02-27T07:06:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/27/toastmaster-speech-4</id>
+    <content type="html"><![CDATA[<h2>Feedback</h2>
+
+<ul>
+<li><p>The transition from introduction to first point can be done better</p></li>
+<li><p>Hand clapping</p></li>
+<li><p>Use of Jargon such as &lsquo;proxy&rsquo;</p></li>
+<li><p>Repeated use of the word <code>Innovation</code></p></li>
+<li><p>Subtitle can be improved</p></li>
+</ul>
+
+
+<h2>Self accessment</h2>
+
+<p>Original version of the speech lasts almost 8 min. In real delivery the time is 5.30 minutes. A bit too fast.</p>
+
+<h1>Innovation</h1>
+
+<p>Innovation has never got so much attention before. Innovation is a key driver of wealth creation. You probably already have an example of it in your pocket right now. Yes, nothing can highlight the impact of innovations better than Apple’s iPhone.</p>
+
+<p>The success of iPhone actually combines several innovations in different area. They include supplier chain management, logistic, retails, brand management and product design.</p>
+
+<p>So what it takes to be innovative? What can we do to come up with an truly innovative product? If you want to start the next Apple, the next Google or the next Tesla, You want to listen to these research results.</p>
+
+<p>Size matters</p>
+
+<p>Big corporate is not an ideal institute for innovation. Who would have thought? It is not so much a failure of the corporate because it is exactly what a corporate is designed for: avoid mistake! A big corporate has a series of command in place because new idea or product must be cross-examined and studied before they will receive a green light. They will do numerous marketing researches to decide if a product idea is viable.</p>
+
+<p>When a product has to go through so many focus groups and polling, it is usually hardly innovative anymore. As Henry Ford has once put it famously: If you ask what a customer want out of a car, they will tell you a faster carriage!</p>
+
+<p>That’s why over past decades, R&amp;D effort of giant like AT&amp;T, Xerox or IBM has little to show for as commercial products. Don’t get me wrong, their lab has produced brilliant ideas that change the world. For example Apple and Windows’ Graphical User Interface and Mouse is essentially a Xerox’s invention. But as an organisation, Xerox failed to capitalise the idea.</p>
+
+<p>2) Gender matters</p>
+
+<pre><code>In another research, the researchers want to find out what makes a team great, or as they call it the Collective Intelligence. In two studies with about 700 people, working in groups of two to five, the researchers founds some factors that explains a group’s performance on a wide variety of tasks. This collective intelligence is not strongly correlated with the average or maximum individual intelligence of group members but is correlated with the average social sensitivity of group members and the equality in distribution of conversational turn-taking. And they are usually correlated to the proportion of females in the group.
+</code></pre>
+
+<p>  In the tech startup world, teams are made up of usually predominantly socially awkward males (like me Exhibit A). Actually time and time again females have proven they are as competent if not better than their counterparts in engineering and computer science. If you are starting a new tech startup you should seriously rethink the prevailing bias against hiring females technical staff.</p>
+
+<p>3) The mix matters</p>
+
+<p>Have you thought about what a broadway musical successful? Is it the script or the score? Is it the genre? Is it the actors and actress? Or beautiful set and costume? After looking into how a company is formed, researchers find that actually it has a lot to do with the connections between the members: For a successful company, there is usually a healthy mix of, on the one hand, experienced veterans who have known and worked with each other for a long time, and on the other hand, relatively young and new members. Once this factor is identified, it just makes a lot of sense: The old and existing networks provides stability and experience to the team when the new kids on block comes and offer fresh angles and new inspiration. If the balance tilt either way, you will have either a company that may keep repeating its past success or a team of rookies who are struggling to get the basic right.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[gem install hipchat problem 2]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/27/hipchat-gem/"/>
+    <updated>2015-02-27T05:41:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/27/hipchat-gem</id>
+    <content type="html"><![CDATA[<p>Error message:</p>
+
+<pre><code>   [2015-02-26T11:49:52+00:00] ERROR: gem_package[hipchat] (zeetings::sensu_resource line 27) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '2'
+   ---- Begin output of /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" ----
+   STDOUT: 
+   STDERR: ERROR:  Could not find a valid gem 'hipchat' (= 1.4.0), here is why:
+      Unable to download data from https://rubygems.org/ - no such name (https://rubygems.org/quick/Marshal.4.8/hipchat-1.4.0.gemspec.rz)
+   ERROR:  Possible alternatives: hipchat
+   ---- End output of /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" ----
+   Ran /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" returned 2
+   [2015-02-26T11:49:52+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[gem install hipchat problem]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/26/gem-install-hipchat/"/>
+    <updated>2015-02-26T22:45:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/26/gem-install-hipchat</id>
+    <content type="html"><![CDATA[<pre><code>    Fetching: json-1.8.2.gem (100%)
+    Building native extensions.  This could take a while...
+    ERROR:  Error installing hipchat:
+            ERROR: Failed to build gem native extension.
+
+        /opt/sensu/embedded/bin/ruby extconf.rb
+    creating Makefile
+
+    make "DESTDIR="
+    compiling generator.c
+    make: gcc: Command not found
+    make: *** [generator.o] Error 127
+
+
+    Gem files will remain installed in /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2 for inspection.
+    Results logged to /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2/ext/json/ext/generator/gem_make.out
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[cannot remove file]]></title>
@@ -391,206 +499,6 @@
 </code></pre>
 
 <p>But when I ping the server, it responds perfectly.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[setting value in chef cooking]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking/"/>
-    <updated>2015-02-16T08:47:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking</id>
-    <content type="html"><![CDATA[<p>If you set a variable this way in a cookbook:</p>
-
-<pre><code>node['mysqld']['root_password'] = 'password'
-</code></pre>
-
-<p>you will get this exception</p>
-
-<pre><code>   Chef::Exceptions::ImmutableAttributeModification
-   ------------------------------------------------
-   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[solution to php needs version number problem]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/15/solution-to-php-needs-version-number-problem/"/>
-    <updated>2015-02-15T19:09:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/15/solution-to-php-needs-version-number-problem</id>
-    <content type="html"><![CDATA[<p>I finally found a solution to <a href="http://www.ahwkong.com/post/2015/02/15/chef-cookbook-php-needs-version-number">the &lsquo;No version specified, and no candidate version available for php&rsquo; problem</a></p>
-
-<p>According to this <a href="http://askubuntu.com/questions/540423/libapache2-mod-php5-depends-php5-common">AskUbuntu answer</a>, I need to run the following command to add more repository</p>
-
-<pre><code>    sudo add-apt-repository universe
-    sudo add-apt-repository multiverse
-
-    sudo apt-get update
-</code></pre>
-
-<p>To resolve it in the Chef way, I need this in my recipe:</p>
-
-<pre><code> include_recipe "ubuntu"
-</code></pre>
-
-<p>The <code>ubuntu</code> recipe will replace the <code>/etc/apt/sources.list</code> with this content:</p>
-
-<pre><code>    #
-    # Ubuntu trusty - Generated by Chef
-    #
-
-    deb http://us.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
-    deb-src http://us.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
-
-    deb http://us.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
-    deb-src http://us.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
-
-    #
-    # Security updates
-    #
-    deb http://security.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-    deb-src http://security.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[chef: No version specified, and no candidate version available for php]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/15/chef-cookbook-php-needs-version-number/"/>
-    <updated>2015-02-15T14:27:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/15/chef-cookbook-php-needs-version-number</id>
-    <content type="html"><![CDATA[<p>In my <code>recipes\default.rb</code>, I added a line</p>
-
-<pre><code>       package "php"
-</code></pre>
-
-<p>And this caused this exception:</p>
-
-<pre><code>       * No version specified, and no candidate version available for php
-       ================================================================================
-       Error executing action `install` on resource 'apt_package[php]'
-       ================================================================================
-
-       Chef::Exceptions::Package
-       -------------------------
-       No version specified, and no candidate version available for php
-</code></pre>
-
-<p>I should use <code>package "php5"</code></p>
-
-<p>Now I am getting a different set of errors:</p>
-
-<pre><code>       * apt_package[php5] action install
-
-       ================================================================================
-       Error executing action `install` on resource 'apt_package[php5]'
-       ================================================================================
-
-       Mixlib::ShellOut::ShellCommandFailed
-       ------------------------------------
-       Expected process to exit with [0], but received '100'
-       ---- Begin output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
-       STDOUT: Reading package lists...
-       Building dependency tree...
-       Reading state information...
-       The following extra packages will be installed:
-         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
-         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5-cli php5-common php5-json
-         php5-readline ssl-cert
-       Suggested packages:
-         www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom
-         apache2-utils php-pear php5-user-cache openssl-blacklist
-       The following NEW packages will be installed:
-         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
-         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5 php5-cli php5-common php5-json
-         php5-readline ssl-cert
-       0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
-       Need to get 6,137 kB of archives.
-       After this operation, 25.8 MB of additional disk space will be used.
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-bin amd64 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-data all 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2 amd64 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main libapache2-mod-php5 amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5 all 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr/libapr1_1.5.0-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/php-json/php5-json_1.3.2-2build1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-common_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-cli_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-   ntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-ldap_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-bin_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-data_2.4.7-1ubuntu4.1_all.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/s/ssl-cert/ssl-cert_1.0.33_all.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-       ---- End output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
-       Ran apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 returned 100
-
-
-       ---------------------
-       # In /tmp/kitchen/cache/cookbooks/zeeting-analytics/recipes/default.rb
-
-         9: package "php5"
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[kitchen converge creates two VMs]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/14/kitchen-converge-creates-two-vms/"/>
-    <updated>2015-02-14T18:17:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/14/kitchen-converge-creates-two-vms</id>
-    <content type="html"><![CDATA[<p>It is because in .kitchen.yml, it contains these two lines:</p>
-
-<pre><code>    platforms:
-      - name: ubuntu-12.04
-      - name: centos-6.5 
-</code></pre>
-
-<p>I can either specify the partform every time I use the kitchen command or simply remove the platform that I do not need.</p>
 ]]></content>
   </entry>
   

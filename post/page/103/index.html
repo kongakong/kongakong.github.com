@@ -9,8 +9,20 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Probably related to my previous hg problem, my port install base is also corrupted. This is the error message: &#8220;&#8220;
-">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+/usr/bin/ranlib: file: libpython3.3m.a( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +134,240 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2011/12/29/p-14932261293/">My Python 3.3 Compilation Ends in This</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-29T07:26:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>ranlib libpython3.3m.a
+</span><span class='line'>ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>gcc -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl -framework CoreFoundation 
+</span><span class='line'>./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)
+</span><span class='line'>*** error: can't allocate region
+</span><span class='line'>*** set a breakpoint in malloc_error_break to debug
+</span><span class='line'>make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11
+</span><span class='line'>make: *** Deleting file `Lib/_sysconfigdata.py'</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913827164/">Autoconf on Lion</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T22:30:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Oops</p>
+
+<pre><code>$ autoconf
+configure.in:8: error: Autoconf version 2.65 or higher is required
+configure.in:8: the top level
+autom4te: /usr/bin/gm4 failed with exit status: 63
+</code></pre>
+
+<p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913221859/">A Simple Example of Using Hg</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T21:54:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ hg pull
+</span><span class='line'>pulling from http://hg.python.org/cpython
+</span><span class='line'>searching for changes
+</span><span class='line'>adding changesets
+</span><span class='line'>adding manifests
+</span><span class='line'>adding file changes
+</span><span class='line'>added 3265 changesets with 6204 changes to 1117 files
+</span><span class='line'>(run ‘hg update’ to get a working copy)
+</span><span class='line'>
+</span><span class='line'>$ hg summary
+</span><span class='line'>parent: 70924:d1d5a7392e39 
+</span><span class='line'>(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
+</span><span class='line'>branch: default
+</span><span class='line'>commit: 3 unknown (clean)
+</span><span class='line'>update: 2705 new changesets (update)
+</span><span class='line'>
+</span><span class='line'>$ hg update
+</span><span class='line'>991 files updated, 0 files merged, 12 files removed, 0 files unresolved
+</span><span class='line'>
+</span><span class='line'>$ hg summary
+</span><span class='line'>parent: 74189:456b02030100 tip
+</span><span class='line'>don’t fail if CLOEXEC doesn’t exist
+</span><span class='line'>branch: default
+</span><span class='line'>commit: 3 unknown (clean)
+</span><span class='line'>update: (current)</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14912930755/">Port vs Brew</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-12-28T21:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Remove <code>port</code> for now to try out <code>brew</code></p>
+
+<p>Personally <code>port</code> is simple enough. Let see if brew can exceed the bar set by MacPort</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2011/12/28/p-14912627259/">Port Is Corrupted</a></h1>
     
     
@@ -155,156 +401,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14912402052/">Hg Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T21:07:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>9:06pm</p>
-
-<p>Tried to run <code>hg</code>. Got this error:</p>
-
-<p>&#8220;</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/22/p-14584037817/">The City of London Shows That Logic Has Its Limits and That the City Lies Outside Them.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-22T09:54:00+11:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The City of London shows that logic has its limits and that the City lies outside them.</p>
-
-<p>Heard from the public lecture, The City of London, at LSE given by Professor David Kynaston</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/22/p-14580909653/">Just Find Out About Boks_sshd</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-22T08:55:00+11:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Just%20find%20out%20about%20boks_sshd">http://en.wikipedia.org/wiki/BoKS_(software)</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/21/p-14559224775/">EFP</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-21T22:43:00+11:00" pubdate data-updated="true">Dec 21<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Exchange%20for%20Physical">http://www.asx.net.au/products/what-are-efps.htm</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/104/">&larr; Older</a>
@@ -322,23 +418,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>

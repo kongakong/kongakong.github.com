@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It has become my habit that I use google search to do simple arithmetic. Now Google improves it further by adding a calculator interface.
-">
+  <meta name="description" content="The more I know about about oCaml, the more interesting it appears to me. The inferred static type system is really interesting. It is clearly ahead &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,6 +121,160 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2012/07/30/p-28328299005/">The More I Know About About oCaml, the More Interesting It Appears to Me.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T19:25:00+10:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The more I know about about oCaml, the more interesting it appears to me.</p>
+
+<p>The inferred static type system is really interesting. It is clearly ahead of many other languages.The only other language I know that has similar feature is Scala.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/07/29/p-28257805067/">Algebraic Data Type</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-29T19:58:00+10:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="Algebraic%20data%20type">http://en.wikipedia.org/wiki/Algebraic_data_type</a></p>
+
+<p>Algebraic data type is a kind of composite type, i.e. a type formed by combining other types. Two common classes of algebraic type are product types and sum types</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/07/29/p-28255736183/">This Class Is Not Key Value Coding-compliant for the Key &#8216;Xyz&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-29T18:38:00+10:00" pubdate data-updated="true">Jul 29<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I was playing with a</p>
+
+<p><a href="Speedo%20Meter%20Demo">http://www.mobisoftinfotech.com/blog/iphone/ios-tutorial-custom-speedometer-control/</a></p>
+
+<p>It turned out I added a control ‘test’, linked it to an IBOutlet and then removed the control. Since the link to IBOutlet is sTILl in the IB file, hence the error.</p>
+
+<p>By right mouse click on the ‘Owner’ and remove the invalid link, it fixes the problem.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/07/28/p-28190415948/">Python Exceptions in Python Antlr Package</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-28T19:42:00+10:00" pubdate data-updated="true">Jul 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>python exceptions in python antlr package</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2012/07/28/p-28153081297/">It Has Become My Habit That I Use Google Search to Do Simple Arithmetic. Now Google Improves It Further by Adding a Calculator Interface.</a></h1>
     
     
@@ -153,191 +306,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/26/p-28046614623/">Dfa Class</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-26T19:49:00+10:00" pubdate data-updated="true">Jul 26<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Dfa class interface:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">DFA</span><span class="p">:</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">noViableAlt</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nvae</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">specialStateTransition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">getDescription</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">unpack</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/25/p-27974299342/">The Grand Chessboard by Zbigniew Brzezinski (12)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-25T19:40:00+10:00" pubdate data-updated="true">Jul 25<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Finally reached the final chapter of the book.</p>
-
-<blockquote><p><em>The point of departure for the needed [US] policy has to be hard-nosed recognition of the three unprecedented conditions that currently define the geopolitical state of world affairs: for the first time in history, (1) a single state is a truly global power, (2) a non-Eurasian state is globally the preeminent state, and (3) the globe’s central arena, Eurasia, is dominated by a non-Eurasian power.</em></p></blockquote>
-
-<p>One of the interesting theme in this book is that it has an taken-for-granted conviction that USA <em>The Only Global Power on Earth</em> is a given. The author does not even try to explain why it should be the case.  The whole book is basically a guide or a blueprint of how to project American influence onto Eurasia, the most important landmass on Earth.</p>
-
-<p>This book is still relevant today because it helps one to understand the underlying principle of USA’s foreign policy since the G. W. Bush/Neocon era. ( You probably can argue it is not entirely different from that before then)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/24/p-27901418274/">The Grand Chessboard by Zbigniew Brzezinski (11)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-24T19:51:00+10:00" pubdate data-updated="true">Jul 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>While Chapter 6 in &lsquo;The Grand Chessboard&rsquo; (1997) by Zbigniew Brzezinski talks a lot about China, it actually talks a  lot more about Japan.</p>
-
-<p>The author has a rather clear idea why Japan is isolated in the Asia region. The dilemma of Japan: if Japan tries to assert its regional leadership role to counter China, it will find itself surrounded by a hosTILe Russia, a distrusting Korea and South East Asia, and  a China that will play a rapid catch-up. Basically the only way forward, as seen by Zbigniew, is for Japan to leverage its alliance with America to gain influence on <em>International</em> stage.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/23/p-27826866568/">The Grand Chessboard by Zbigniew Brzezinski (10)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-23T19:40:00+10:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Chapter 6, titled ‘The Far Eastern Anchor’, in &lsquo;The Grand Chessboard&rsquo;(1997) by Zbigniew Brzezinski is about Asia. In regard to China, Zbigniew said:</p>
-
-<blockquote><p><em>Chinese consumption of energy is already expanding at a rate that far exceeds domestic production. That excess will widen in any case, but especially so if China’s rate of growth continues to be very high.</em></p></blockquote>
-
-<p>I am always impressed by how well scholars or researchers in the Stats have done in the study of China. Remember the Economists have predicted cruel oil price would hit $5 a barrel in 1999? This was apparently a prediction based on extrapolation of the then oil price movement. But a geo-strategist sees beyond short-run trends and tries to foresee how nations will engage each others to compete for finite resource on planet Earth.</p>
-
-<p>Actually reading this book now I realise a fair numbers of predictions made in this chapter are not too far off the mark, e.g.</p>
-
-<p>1) energy and food supply issue</p>
-
-<p>2) when China will surpass Japan’s GDP (<em>‘within two decades [from 1997]’</em>), and may rival that of USA</p>
-
-<p>3) Tension between China and other Asian countries</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/58/">&larr; Older</a>
@@ -355,23 +323,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>

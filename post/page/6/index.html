@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="lets say we want to create a cookbook called example Method 1) chef generate cookbook example Method 2) knife cookbook create example --cookbook-path &hellip;">
+  <meta name="description" content="Trying the kitchen command again, and I am still getting error messages $ kitchen converge -----&gt; Starting Kitchen (v1.3.1) -----&gt; Creating &lt &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,364 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2015/02/14/kitchen-converge-problem-2/">Kitchen Converge Problem 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T15:07:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying the <code>kitchen</code> command again, and I am still getting error messages</p>
+
+<pre><code>    $ kitchen converge
+    -----&gt; Starting Kitchen (v1.3.1)
+    -----&gt; Creating &lt;default-ubuntu-1204&gt;...
+           Bringing machine 'default' up with 'virtualbox' provider...
+           The following berks command failed to execute:
+
+               /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
+
+           The stdout and stderr are shown below:
+</code></pre>
+
+<p>I probably have installed chefdk when the system ruby is active.</p>
+
+<p>So <code>rvm use system</code> works for me</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A Successful Run of Kitchen Init</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T14:57:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>    $ kitchen init --gem-file
+       identical  .kitchen.yml
+    Successfully installed kitchen-vagrant-0.15.0
+    Parsing documentation for kitchen-vagrant-0.15.0
+    Installing ri documentation for kitchen-vagrant-0.15.0
+    Done installing documentation for kitchen-vagrant after 0 seconds
+    1 gem installed
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/berkfile-problem/">Berkshelf Problem With Kitchen Converge</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T12:44:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My <code>kitchen converge</code> throws a lot of error message</p>
+
+<pre><code>    $ kitchen converge
+    -----&gt; Starting Kitchen (v1.3.1)
+
+    ....
+
+    &gt;&gt;&gt;&gt;&gt;&gt; ------Exception-------
+    &gt;&gt;&gt;&gt;&gt;&gt; Class: Kitchen::ActionFailed
+    &gt;&gt;&gt;&gt;&gt;&gt; Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
+    ---- Begin output of vagrant up --no-provision --provider=virtualbox ----
+    STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
+    ==&gt; default: Box 'opscode-ubuntu-12.04' could not be found. Attempting to find and install...
+        default: Box Provider: virtualbox
+        default: Box Version: &gt;= 0
+    ==&gt; default: Adding box 'opscode-ubuntu-12.04' (v0) for provider: virtualbox
+        default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
+    ==&gt; default: Successfully added box 'opscode-ubuntu-12.04' (v0) for 'virtualbox'!
+    STDERR: The following berks command failed to execute:
+
+        /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
+
+    The stdout and stderr are shown below:
+
+        stdout:
+        stderr: /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/dependency.rb:315:in `to_specs': Could not find 'berkshelf' (&gt;= 0) among 122 total gem(s) (Gem::LoadError)
+    Checked in 'GEM_PATH=/Users/antkong/.vagrant.d/gems:/opt/vagrant/bin/../embedded/gems', execute `gem env` for more information
+      from /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/dependency.rb:324:in `to_spec'
+      from /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_gem.rb:64:in `gem'
+      from /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks:22:in `&lt;main&gt;'
+
+
+    It appears that you are not using the ChefDK. Please note that Vagrant Berkshelf
+    works best when used with the ChefDK, and other installation methods are not
+    officially supported.
+
+    Please download and install the latest version of the ChefDK from:
+
+        https://downloads.getchef.com/chef-dk
+
+    and follow the installation instructions. Do not forget to add the ChefDK to
+    your PATH.
+    ---- End output of vagrant up --no-provision --provider=virtualbox ----
+    Ran vagrant up --no-provision --provider=virtualbox returned 1]
+    &gt;&gt;&gt;&gt;&gt;&gt; ----------------------
+    &gt;&gt;&gt;&gt;&gt;&gt; Please see .kitchen/logs/kitchen.log for more details
+    &gt;&gt;&gt;&gt;&gt;&gt; Also try running `kitchen diagnose --all` for configuration
+</code></pre>
+
+<p>It is related to the active <code>rvm</code>. Once I run <code>rvm use system</code>, the problem is resolved.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/strange-gem-install-error/">Strange Gem Install Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T10:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For some reason I got this error last night when I tried to run <code>gem install berkshelf</code></p>
+
+<pre><code>    $ gem install berkshelf
+    ERROR:  While executing gem ... (Errno::EHOSTDOWN)
+        Host is down - sendto(2) for "10.0.1.4" port 53
+</code></pre>
+
+<p>It is apparently OK today:</p>
+
+<pre><code>    $ gem install berkshelf
+    Fetching: nio4r-1.1.0.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed nio4r-1.1.0
+    Fetching: celluloid-io-0.16.2.gem (100%)
+    Successfully installed celluloid-io-0.16.2
+    Fetching: addressable-2.3.7.gem (100%)
+    Successfully installed addressable-2.3.7
+    Fetching: multipart-post-2.0.0.gem (100%)
+    Successfully installed multipart-post-2.0.0
+    Fetching: faraday-0.9.1.gem (100%)
+    Successfully installed faraday-0.9.1
+    Fetching: sawyer-0.6.0.gem (100%)
+    Successfully installed sawyer-0.6.0
+    Fetching: octokit-3.7.1.gem (100%)
+    Successfully installed octokit-3.7.1
+    Fetching: dep-selector-libgecode-1.0.2.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep-selector-libgecode-1.0.2
+    Fetching: dep_selector-1.0.3.gem (100%)
+    Building native extensions.  This could take a while...
+    Successfully installed dep_selector-1.0.3
+    Fetching: semverse-1.2.1.gem (100%)
+    Successfully installed semverse-1.2.1
+    Fetching: solve-1.2.1.gem (100%)
+    Successfully installed solve-1.2.1
+    Fetching: retryable-2.0.1.gem (100%)
+    Successfully installed retryable-2.0.1
+    Fetching: net-http-persistent-2.9.4.gem (100%)
+    Successfully installed net-http-persistent-2.9.4
+    Fetching: mixlib-log-1.6.0.gem (100%)
+    Successfully installed mixlib-log-1.6.0
+    Fetching: mixlib-authentication-1.3.0.gem (100%)
+    Successfully installed mixlib-authentication-1.3.0
+    Fetching: hashie-2.1.2.gem (100%)
+    Successfully installed hashie-2.1.2
+    Fetching: buff-ruby_engine-0.1.0.gem (100%)
+    Successfully installed buff-ruby_engine-0.1.0
+    Fetching: buff-shell_out-0.2.0.gem (100%)
+    Successfully installed buff-shell_out-0.2.0
+    Fetching: buff-ignore-1.1.1.gem (100%)
+    Successfully installed buff-ignore-1.1.1
+    Fetching: buff-extensions-1.0.0.gem (100%)
+    Successfully installed buff-extensions-1.0.0
+    Fetching: varia_model-0.4.0.gem (100%)
+    Successfully installed varia_model-0.4.0
+    Fetching: buff-config-1.0.1.gem (100%)
+    Successfully installed buff-config-1.0.1
+    Fetching: ridley-4.1.2.gem (100%)
+    Successfully installed ridley-4.1.2
+    Fetching: minitar-0.5.4.gem (100%)
+    Successfully installed minitar-0.5.4
+    Fetching: cleanroom-1.0.0.gem (100%)
+    Successfully installed cleanroom-1.0.0
+    Fetching: berkshelf-api-client-1.2.1.gem (100%)
+    Successfully installed berkshelf-api-client-1.2.1
+    Fetching: berkshelf-3.2.3.gem (100%)
+    Successfully installed berkshelf-3.2.3
+    Parsing documentation for nio4r-1.1.0
+    Installing ri documentation for nio4r-1.1.0
+    Parsing documentation for celluloid-io-0.16.2
+    Installing ri documentation for celluloid-io-0.16.2
+    Parsing documentation for addressable-2.3.7
+    Installing ri documentation for addressable-2.3.7
+    invalid options: -SHN
+    (invalid options are ignored)
+    Parsing documentation for multipart-post-2.0.0
+    Installing ri documentation for multipart-post-2.0.0
+    Parsing documentation for faraday-0.9.1
+    Installing ri documentation for faraday-0.9.1
+    Parsing documentation for sawyer-0.6.0
+    Installing ri documentation for sawyer-0.6.0
+    Parsing documentation for octokit-3.7.1
+    Installing ri documentation for octokit-3.7.1
+    Parsing documentation for dep-selector-libgecode-1.0.2
+    unable to convert "\xEB" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/changelog.in, skipping
+    unable to convert "\x8E" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/contribs/qecode/QCOPPlus.cc, skipping
+    unable to convert "\xFC" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/bin-packing.cpp, skipping
+    unable to convert "\xEA" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/black-hole.cpp, skipping
+    unable to convert "\xD6" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/examples/dominating-queens.cpp, skipping
+    unable to convert "\xEF" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode.m4, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for ext/libgecode3/vendor/gecode-3.7.3/gecode/int/unary.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/cumulative.hh, skipping
+    unable to convert "\xE9" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/distinct.hh, skipping
+    unable to convert "\xF3" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/gcc.hh, skipping
+    unable to convert "\xE4" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/sorted.hh, skipping
+    unable to convert "\xED" from ASCII-8BIT to UTF-8 for lib/dep-selector-libgecode/vendored-gecode/include/gecode/int/unary.hh, skipping
+    Installing ri documentation for dep-selector-libgecode-1.0.2
+    Parsing documentation for dep_selector-1.0.3
+    Installing ri documentation for dep_selector-1.0.3
+    Parsing documentation for semverse-1.2.1
+    Installing ri documentation for semverse-1.2.1
+    Parsing documentation for solve-1.2.1
+    Installing ri documentation for solve-1.2.1
+    Parsing documentation for retryable-2.0.1
+    Installing ri documentation for retryable-2.0.1
+    Parsing documentation for net-http-persistent-2.9.4
+    Installing ri documentation for net-http-persistent-2.9.4
+    Parsing documentation for mixlib-log-1.6.0
+    Installing ri documentation for mixlib-log-1.6.0
+    Parsing documentation for mixlib-authentication-1.3.0
+    Installing ri documentation for mixlib-authentication-1.3.0
+    Parsing documentation for hashie-2.1.2
+    Installing ri documentation for hashie-2.1.2
+    Parsing documentation for buff-ruby_engine-0.1.0
+    Installing ri documentation for buff-ruby_engine-0.1.0
+    Parsing documentation for buff-shell_out-0.2.0
+    Installing ri documentation for buff-shell_out-0.2.0
+    Parsing documentation for buff-ignore-1.1.1
+    Installing ri documentation for buff-ignore-1.1.1
+    Parsing documentation for buff-extensions-1.0.0
+    Installing ri documentation for buff-extensions-1.0.0
+    Parsing documentation for varia_model-0.4.0
+    Installing ri documentation for varia_model-0.4.0
+    Parsing documentation for buff-config-1.0.1
+    Installing ri documentation for buff-config-1.0.1
+    Parsing documentation for ridley-4.1.2
+    Installing ri documentation for ridley-4.1.2
+    Parsing documentation for minitar-0.5.4
+    Installing ri documentation for minitar-0.5.4
+    Parsing documentation for cleanroom-1.0.0
+    Installing ri documentation for cleanroom-1.0.0
+    Parsing documentation for berkshelf-api-client-1.2.1
+    Installing ri documentation for berkshelf-api-client-1.2.1
+    Parsing documentation for berkshelf-3.2.3
+    Installing ri documentation for berkshelf-3.2.3
+    Done installing documentation for nio4r, celluloid-io, addressable, multipart-post, faraday, sawyer, octokit, dep-selector-libgecode, dep_selector, semverse, solve, retryable, net-http-persistent, mixlib-log, mixlib-authentication, hashie, buff-ruby_engine, buff-shell_out, buff-ignore, buff-extensions, varia_model, buff-config, ridley, minitar, cleanroom, berkshelf-api-client, berkshelf after 17 seconds
+    27 gems installed
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two Way to Create Chef Cookbooks</a></h1>
     
     
@@ -165,241 +523,6 @@ bundle install
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/generate-public-key-fingerprint/">Generate Public Key Fingerprint</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T01:28:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is the command:</p>
-
-<pre><code>ssh-keygen -lf /path/to/ssh/public_key
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/13/ssh-forwarding/">Ssh Forwarding in Vagrant and Private Github Repository</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-13T16:23:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
-
-<p>First in host OS (Mac OSX in my case), run</p>
-
-<pre><code>ssd-add /path/to/githubkey
-</code></pre>
-
-<p>In the <code>.ssh/config</code>, add these lines:</p>
-
-<pre><code>    Host           github
-    HostName       github.com
-    IdentityFile   /path/to/githubkey
-</code></pre>
-
-<p>Then enable port forwarding in vagrant VM</p>
-
-<pre><code>Vagrant.configure("2") do |config|
-  config.ssh.forward_agent = true
-</code></pre>
-
-<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
-
-<pre><code>ssh -T git@github.com
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">Nosetests &#8211;failed Keeps Picking Up Removed Test</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-13T11:38:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I run</p>
-
-<pre><code>nosetests -v --failed
-</code></pre>
-
-<p>I keep getting this exception:</p>
-
-<pre><code>    #40 Failure: ImportError (No module named test_share_link2) ... ERROR
-
-    ======================================================================
-    ERROR: Failure: ImportError (No module named test_share_link2)
-    ----------------------------------------------------------------------
-    Traceback (most recent call last):
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/loader.py", line 414, in loadTestsFromName
-        addr.filename, addr.module)
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
-        return self.importFromDir(dir_path, fqname)
-      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 79, in importFromDir
-        fh, filename, desc = find_module(part, path)
-    ImportError: No module named test_share_link2
-</code></pre>
-
-<p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
-
-<p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/11/mysqld-password-and-chef/">Providing Mysqld Password to Chef Provisioner in Vagrant</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-11T05:04:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I add a chef <code>mysqld</code> receipt to the Vagrant file and here is the error from <code>vagrant up</code>:</p>
-
-<pre><code>    ==&gt; default: Required argument password is missing!
-    ==&gt; default:
-    ==&gt; default: Cookbook Trace:
-    ==&gt; default: ---------------
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:26:in `block in from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:25:in `from_file'
-    ==&gt; default:   /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/default.rb:22:in `from_file'
-    ==&gt; default:
-    ==&gt; default: Relevant File Content:
-    ==&gt; default: ----------------------
-    ==&gt; default: /tmp/vagrant-chef/3aa2e36871bb373e4212367ce1b7d9af/cookbooks/mysqld/recipes/configure.rb:
-    ==&gt; default:
-    ==&gt; default:  19:  #
-    ==&gt; default:  20:
-    ==&gt; default:
-    ==&gt; default:  21:  # Configure mysql/mariadb according to attributes
-    ==&gt; default:  22:  mysqld 'default'
-    ==&gt; default:  23:
-    ==&gt; default:  24:  # Set password according to attribute, if set
-    ==&gt; default:  25:  mysqld_password 'root' do
-    ==&gt; default:  26&gt;&gt;   password node['mysqld']['root_password']
-    ==&gt; default:
-    ==&gt; default:  27:    only_if { node['mysqld']['root_password'] }
-    ==&gt; default:  28:  end
-    ==&gt; default:  29:
-</code></pre>
-
-<p>Solution: Add this to set the <code>root_password</code>:</p>
-
-<pre><code>chef.json = {
-  :mysqld   =&gt; {
-    :root_password =&gt; "test"
-  }
-}
-</code></pre>
-
-<p>Now you can connect to the mysql server by running</p>
-
-<pre><code> mysql -u root -p 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -417,23 +540,23 @@ bundle install
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/">installing sensu client 0.14 and 0.17.beta1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/some-useful-apt-and-dpkg-command/">Some useful apt and dpkg command</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/how-to-add-mulitverse-in-chef/">How to add apt mulitverse in chef</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/sensu-plugin-problem/">sensu plugin problem</a>
       </li>
     
   </ul>
