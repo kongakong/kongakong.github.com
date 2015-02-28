@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-02-27T22:23:12+11:00</updated>
+  <updated>2015-02-28T16:55:30+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sudo and glob]]></title>
+    <link href="http://www.ahwkong.com/post/2015/02/28/sudo-and-glob/"/>
+    <updated>2015-02-28T16:52:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/02/28/sudo-and-glob</id>
+    <content type="html"><![CDATA[<p>Files are there but I cannot delete them</p>
+
+<pre><code>    $ sudo ls /etc/sensu/conf.d/handlers
+    email.json  handler.json  hipchat.json
+
+    $ sudo rm /etc/sensu/conf.d/handlers/*.json
+    rm: cannot remove ‘/etc/sensu/conf.d/handlers/*.json’: No such file or directory
+</code></pre>
+
+<p>It is because my current login has no permission to read <code>/etc/sensu/conf.d/handlers</code> and so glob failed</p>
+
+<p>This takes care of the problem:</p>
+
+<pre><code>    $ sudo bash -c 'rm /etc/sensu/conf.d/handlers/*.json'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using chef sudo cookbook]]></title>
@@ -468,36 +491,6 @@
 <p>The server is a <strong>Window Server 2012 Standard</strong> box</p>
 
 <p>Reboot the box fixed the problem</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[It happens too often]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/16/it-happens-too-often/"/>
-    <updated>2015-02-16T10:14:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/16/it-happens-too-often</id>
-    <content type="html"><![CDATA[<p>The provisioning failed a few times this morning:</p>
-
-<pre><code>   Reading state information...
-   The following extra packages will be installed:
-     patch
-   Suggested packages:
-     diffutils-doc policykit-1
-   The following NEW packages will be installed:
-     patch update-notifier-common
-   0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
-   Need to get 248 kB of archives.
-   After this operation, 2,361 kB of additional disk space will be used.
-   Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main patch amd64 2.7.1-4ubuntu1
-     Could not resolve 'us.archive.ubuntu.com'
-   Err http://us.archive.ubuntu.com/ubuntu/ trusty/main update-notifier-common all 0.154.1
-     Could not resolve 'us.archive.ubuntu.com'
-   STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.1-4ubuntu1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-   E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_0.154.1_all.deb  Could not resolve 'us.archive.ubuntu.com'
-</code></pre>
-
-<p>But when I ping the server, it responds perfectly.</p>
 ]]></content>
   </entry>
   

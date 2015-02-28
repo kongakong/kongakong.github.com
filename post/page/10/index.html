@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="You can create a dictionary in coffeescript in several ways: Probably the most elegant style d = b: 1 c: 2 This also works d = { b: 1, c: 2} If you &hellip;">
+  <meta name="description" content="It is impossible not to learn ruby these days. It is used everywhere: ruby powers octopress, chef and many other popular software. Here is some basic &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,76 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/01/18/basic-rvm/">Basic Rvm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-18T15:53:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
+
+<p>Here is some basic <code>rvm</code> command:</p>
+
+<pre><code>$ rvm list
+
+rvm rubies
+
+   ruby-1.9.3-p484 [ x86_64 ]
+   ruby-1.9.3-p551 [ x86_64 ]
+=* ruby-2.2.0 [ x86_64 ]
+
+# =&gt; - current
+# =* - current &amp;&amp; default
+#  * - default
+
+
+$ rvm use 2.2.0
+Using /Users/antkong/.rvm/gems/ruby-2.2.0
+
+$ bundle install
+bash: bundle: command not found
+
+$ gem install bundle
+Fetching: bundler-1.7.12.gem (100%)
+Successfully installed bundler-1.7.12
+Fetching: bundle-0.0.1.gem (100%)
+Successfully installed bundle-0.0.1
+Parsing documentation for bundler-1.7.12
+Installing ri documentation for bundler-1.7.12
+Parsing documentation for bundle-0.0.1
+Installing ri documentation for bundle-0.0.1
+Done installing documentation for bundler, bundle after 1 seconds
+2 gems installed 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -329,44 +399,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-18T16:26:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
-
-<p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/11/">&larr; Older</a>
@@ -384,6 +416,10 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
       </li>
     
@@ -397,10 +433,6 @@ Break a project into modules and assign milestones. Each milestone is a checkpoi
     
       <li class="post">
         <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
       </li>
     
   </ul>

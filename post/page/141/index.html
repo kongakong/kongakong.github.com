@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="For example, one should try to avoid Returning a handle of a private member variable via public member functions
-Returning a pointer of a private &hellip;">
+  <meta name="description" content="Revisiting Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object While the title sounds rather generic, the main content is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,81 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/05/p-6196319451/">Item 23 Revisited</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-05T11:42:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Revisiting <a href="/blog/2011/06/04/p-6172106672">Item 23: Don&rsquo;t Try to Return a Reference When You Must Return an Object</a></p>
+
+<p>While the title sounds rather generic, the main content is about what is appropriate to return from various operator functions.</p>
+
+<p>SO has a more</p>
+
+<p><a href="http://stackoverflow.com/questions/4421706/operator-overloading/4421729">in-depth treatment</a></p>
+
+<p>In the case of binary operators, here is a good example of the function declaration/implementation:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="k">class</span> <span class="nc">X</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">X</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// actual addition of rhs to *this </span>
+</span><span class='line'>    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'><span class="kr">inline</span> <span class="n">X</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">X</span> <span class="n">lhs</span><span class="p">,</span> <span class="k">const</span> <span class="n">X</span><span class="o">&amp;</span> <span class="n">rhs</span><span class="p">)</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">lhs</span> <span class="o">+=</span> <span class="n">rhs</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">lhs</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Note the parameter lhs is passed into <code>operator+</code> via copying.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -273,42 +347,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/05/p-6186209686/">Item 26: Guard Against Potential Ambiguity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-05T06:10:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Compiler cannot decide:</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/142/">&larr; Older</a>
@@ -326,6 +364,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
       </li>
     
@@ -339,10 +381,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/cannot-remove-file/">cannot remove file</a>
       </li>
     
   </ul>
