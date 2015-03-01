@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Why I cannot remove this file redis_output.rb? ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ ls -l ✭ ✖ ✱ ◼ total 56 - &hellip;">
+  <meta name="description" content="Fetching: json-1.8.2.gem (100%) Building native extensions. This could take a while... ERROR: Error installing hipchat: ERROR: Failed to build gem &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,58 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/26/gem-install-hipchat/">Gem Install Hipchat Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-26T22:45:00+11:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>    Fetching: json-1.8.2.gem (100%)
+    Building native extensions.  This could take a while...
+    ERROR:  Error installing hipchat:
+            ERROR: Failed to build gem native extension.
+
+        /opt/sensu/embedded/bin/ruby extconf.rb
+    creating Makefile
+
+    make "DESTDIR="
+    compiling generator.c
+    make: gcc: Command not found
+    make: *** [generator.o] Error 127
+
+
+    Gem files will remain installed in /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2 for inspection.
+    Results logged to /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2/ext/json/ext/generator/gem_make.out
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -306,62 +358,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/26/sensu-plugin-problem/">Sensu Plugin Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-26T02:12:00+11:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Encountered problem when installing sensu-plugin</p>
-
-<pre><code>    $ gem install sensu-plugin --no-rdoc --no-ri
-    /usr/bin/ruby1.9.1 extconf.rb
-    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
-            from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
-            from extconf.rb:1:in `&lt;main&gt;'
-</code></pre>
-
-<p>This is the solution: use the ruby runtime embedded in sensu</p>
-
-<pre><code>    $ /opt/sensu/embedded/bin/gem install sensu-plugin
-    Fetching: sensu-plugin-1.1.0.gem (100%)
-    ERROR:  While executing gem ... (Gem::FilePermissionError)
-        You don't have write permissions for the /opt/sensu/embedded/lib/ruby/gems/2.0.0 directory.
-    vagrant@default-ubuntu-1404:~$ sudo /opt/sensu/embedded/bin/gem install sensu-plugin
-    Successfully installed sensu-plugin-1.1.0
-    Parsing documentation for sensu-plugin-1.1.0
-    Installing ri documentation for sensu-plugin-1.1.0
-    1 gem installed
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/3/">&larr; Older</a>
@@ -379,6 +375,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
       </li>
     
@@ -392,10 +392,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/26/gem-install-hipchat/">gem install hipchat problem</a>
       </li>
     
   </ul>
