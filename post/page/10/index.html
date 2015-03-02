@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my code from mail_api import send_mail def my_func(): # do some work send_mail(to="test@example.com", content="data) # do some more work &hellip;">
+  <meta name="description" content="A new version of ChefDK 0.4.0 has been released. I did an upgrade via brew cask $ brew update ... $ brew cask install --force chefdk ==&gt; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,56 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/04/update-chefdk-in-osx/">Update ChefDK in OSX</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-04T09:08:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A new version of ChefDK 0.4.0 has been released. I did an upgrade via <code>brew cask</code></p>
+
+<pre><code>    $ brew update
+    ...
+    $ brew cask install --force chefdk
+    ==&gt; Downloading https://opscode-omnibus-packages.s3.amazonaws.com/mac_os_x/10.8/x86_64/chefdk-0.4.0-1.dmg
+    ######################################################################## 100.0%
+    ==&gt; Running installer for chefdk; your password may be necessary.
+    ==&gt; Package installers may write to any location; options such as --appdir are ignored.
+    Password:
+    ==&gt; installer: Package name is Chef Development Kit
+    ==&gt; installer: Upgrading at base path /
+    ==&gt; installer: The upgrade was successful.
+    🍺  chefdk staged at '/opt/homebrew-cask/Caskroom/chefdk/0.4.0-1' (6 files, 99M)
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -334,60 +384,6 @@ Done installing documentation for bundler, bundle after 1 seconds
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
-
-<p>Probably the most elegant style</p>
-
-<pre><code>    d = 
-      b: 1
-      c: 2
-</code></pre>
-
-<p>This also works</p>
-
-<pre><code>    d = { b: 1, c: 2}
-</code></pre>
-
-<p>If you need to span multiple lines:</p>
-
-<pre><code>    d = { b: 1 , \
-      c: 2}
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/11/">&larr; Older</a>
@@ -405,6 +401,10 @@ Done installing documentation for bundler, bundle after 1 seconds
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
       </li>
     
@@ -418,10 +418,6 @@ Done installing documentation for bundler, bundle after 1 seconds
     
       <li class="post">
         <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
       </li>
     
   </ul>

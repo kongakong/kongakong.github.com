@@ -9,8 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Do not use timer to control animation frame refresh in html5. Use RequestAnimationFrame instead.
-">
+  <meta name="description" content="To avoid cyclic reference when referring to an object outside a block, we can do the following: 1
+2
+3 __weak typeof(self) weakSelf = self; gravity. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +117,53 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/23/weak-reference/">Weak Reference in Block</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-23T21:55:00+11:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To avoid cyclic reference when referring to an object outside a block, we can do the following:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">__weak</span> <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">weakSelf</span> <span class="o">=</span> <span class="n">self</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">gravity</span><span class="p">.</span><span class="n">action</span> <span class="o">=</span> <span class="o">^</span><span class="p">{</span>
+</span><span class='line'>        <span class="n">typeof</span><span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="n">strongSelf</span> <span class="o">=</span> <span class="n">weakSelf</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -306,55 +354,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/11/using-automator-in-osx/">Using Automator in OSX</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-11T15:29:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I want to implement a service in OSX such that I can easily shrink the size of image files in a folder to half of their original size.</p>
-
-<p>This is what I have come up with at the end.</p>
-
-<p><img src="images/automator.png" width="860" height="617"></p>
-
-<p>Lessons/Observations:</p>
-
-<ul>
-<li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
-<li><p>A lot of useful actions are already built in e.g. Scale image</p></li>
-<li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/24/">&larr; Older</a>
@@ -372,6 +371,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
       </li>
     
@@ -385,10 +388,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
       </li>
     
   </ul>

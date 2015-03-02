@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hipchat | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/hipchat/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-02T19:56:36+11:00</updated>
+  <updated>2015-03-02T20:45:10+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[to quickly test a hipchat api token]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/02/to-quickly-test-a-hipchat-api-token/"/>
+    <updated>2015-03-02T20:44:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/02/to-quickly-test-a-hipchat-api-token</id>
+    <content type="html"><![CDATA[<p>Try this</p>
+
+<pre><code>curl https://api.hipchat.com/v2/room?auth_token=&lt;TOKEN&gt;
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[how to get sensu hipchat plugin to work]]></title>

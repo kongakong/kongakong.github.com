@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Lead to difference in behavior if a derived class is casted to its base class. Not advised.
+  <meta name="description" content="Virtual functions are dynamically bound, but default parameters are statically bound
 ">
   
 
@@ -116,6 +116,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/13/p-6461712369/">Item 38: Never Redefine an Inherited Default Parameter Value</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-13T05:19:00+10:00" pubdate data-updated="true">Jun 13<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Virtual functions are dynamically bound, but default parameters are statically bound</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -281,92 +317,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/12/p-6447605314/">Install Erlang on a Ubuntu 10.10 Instance</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-12T18:27:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Installing <code>erlang</code> on a ubuntu 10.10 instance</p>
-
-<p>A snapshot of dependencies:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>akong@vb-ubuntu-01:~$ sudo apt-get install erlang
-</span><span class='line'>[sudo] password for akong: 
-</span><span class='line'>Reading package lists... Done
-</span><span class='line'>Building dependency tree       
-</span><span class='line'>Reading state information... Done
-</span><span class='line'>The following extra packages will be installed:
-</span><span class='line'>  emacsen-common erlang-appmon erlang-asn1 erlang-common-test erlang-corba erlang-debugger erlang-dev erlang-dialyzer erlang-docbuilder
-</span><span class='line'>  erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inviso erlang-megaco erlang-mode
-</span><span class='line'>  erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-reltool erlang-snmp erlang-src
-</span><span class='line'>  erlang-ssh erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool odbcinst odbcinst1debian2 tk tk8.4
-</span><span class='line'>  unixodbc
-</span><span class='line'>Suggested packages:
-</span><span class='line'>  erlang-manpages erlang-doc-html fop libmyodbc odbc-postgresql tdsodbc unixodbc-bin
-</span><span class='line'>The following NEW packages will be installed:
-</span><span class='line'>  emacsen-common erlang erlang-appmon erlang-asn1 erlang-common-test erlang-corba erlang-debugger erlang-dev erlang-dialyzer
-</span><span class='line'>  erlang-docbuilder erlang-edoc erlang-erl-docgen erlang-et erlang-eunit erlang-examples erlang-gs erlang-ic erlang-inviso erlang-megaco
-</span><span class='line'>  erlang-mode erlang-observer erlang-odbc erlang-os-mon erlang-parsetools erlang-percept erlang-pman erlang-reltool erlang-snmp
-</span><span class='line'>  erlang-src erlang-ssh erlang-test-server erlang-toolbar erlang-tools erlang-tv erlang-typer erlang-webtool odbcinst odbcinst1debian2
-</span><span class='line'>  tk tk8.4 unixodbc
-</span><span class='line'>0 upgraded, 41 newly installed, 0 to remove and 327 not upgraded.
-</span><span class='line'>Need to get 18.0MB of archives.
-</span><span class='line'>After this operation, 82.5MB of additional disk space will be used.</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/139/">&larr; Older</a>
@@ -384,6 +334,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
       </li>
     
@@ -397,10 +351,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
       </li>
     
   </ul>
