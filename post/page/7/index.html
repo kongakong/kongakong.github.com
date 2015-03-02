@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying the kitchen command again, and I am still getting error messages $ kitchen converge -----&gt; Starting Kitchen (v1.3.1) -----&gt; Creating &lt &hellip;">
+  <meta name="description" content="I am following the chapter &ldquo;Your First Cookbook: Message of the Day&rdquo; from Learning Chef by Mischa Taylor When I run kitchen converge, I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,103 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">Error Running the Motd Example of the Chef Book</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T15:27:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am following the chapter &ldquo;Your First Cookbook: Message of the Day&rdquo; from <code>Learning Chef</code> by Mischa Taylor</p>
+
+<p>When I run <code>kitchen converge</code>, I got these error messages:</p>
+
+<pre><code>               ================================================================================
+               Error executing action `create` on resource 'cookbook_file[/etc/motd]'
+               ================================================================================
+
+               Chef::Exceptions::FileNotFound
+               ------------------------------
+               Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
+                 files/ubuntu-12.04/motd
+                 files/ubuntu/motd
+                 files/default/motd
+                 files/motd
+
+               Resource Declaration:
+               ---------------------
+               # In /tmp/kitchen/cookbooks/motd/recipes/default.rb
+
+                 9: cookbook_file "/etc/motd" do
+                10:   source "motd"
+                11:   mode "0644"
+                12: end
+
+               Compiled Resource:
+               ------------------
+               # Declared in /tmp/kitchen/cookbooks/motd/recipes/default.rb:9:in `from_file'
+
+               cookbook_file("/etc/motd") do
+                 provider Chef::Provider::CookbookFile
+                 action "create"
+                 retries 0
+                 retry_delay 2
+                 default_guard_interpreter :default
+                 path "/etc/motd"
+                 backup 5
+                 atomic_update true
+                 source "motd"
+                 declared_type :cookbook_file
+                 cookbook_name :motd
+                 recipe_name "default"
+                 mode "0644"
+               end
+
+
+           Running handlers:
+           [2015-02-14T04:22:29+00:00] ERROR: Running exception handlers
+           Running handlers complete
+           [2015-02-14T04:22:29+00:00] ERROR: Exception handlers complete
+           [2015-02-14T04:22:29+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+           Chef Client failed. 0 resources updated in 11.010074864 seconds
+           [2015-02-14T04:22:29+00:00] ERROR: cookbook_file[/etc/motd] (motd::default line 9) had an error: Chef::Exceptions::FileNotFound: Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
+             files/ubuntu-12.04/motd
+             files/ubuntu/motd
+             files/default/motd
+      1 Hello, world
+             files/motd
+           [2015-02-14T04:22:29+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+</code></pre>
+
+<p>It is because I forgot to create the file <code>files/default/motd</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -474,55 +571,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/two-way-to-create-chef-cookbooks/">Two Way to Create Chef Cookbooks</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T01:49:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>lets say we want to create a cookbook called <code>example</code></p>
-
-<p>Method 1)</p>
-
-<pre><code> chef generate cookbook example
-</code></pre>
-
-<p>Method 2)</p>
-
-<pre><code>knife cookbook create example --cookbook-path .
-cd example
-kitchen init --create-gemfile
-bundle install
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/8/">&larr; Older</a>
@@ -540,6 +588,10 @@ bundle install
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
@@ -553,10 +605,6 @@ bundle install
     
       <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
       </li>
     
   </ul>

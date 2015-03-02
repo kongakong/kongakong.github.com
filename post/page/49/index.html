@@ -9,8 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Scala build tool
-">
+  <meta name="description" content="This bit of code is trying to calculate a list of mid prices based on bid and ask prices 1
+2
+3
+def mids(self, bids, asks): f = lambda X, Y: (X is not &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +118,68 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/09/20/p-31877647026/">Side Effect Programming Is Bad</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-20T06:52:00+10:00" pubdate data-updated="true">Sep 20<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This bit of code is trying to calculate a list of mid prices based on bid and ask prices</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def mids(self, bids, asks):
+</span><span class='line'>    f = lambda X, Y: (X is not None) and (Y  is not None) and (X+Y)/2 or None
+</span><span class='line'>    return [f(bid, ask) for bid, ask in zip(bids, asks)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It works fine unTIL one day there is a None in mids.</p>
+
+<p>The bid and ask of the corresponding item are both zero. We expect to see zero in the result.</p>
+
+<p>So what happened?</p>
+
+<p>The original lambda, f, rely on the side effect of short-circuit behaviour of  and/or operator to return the mid price (if there is data) or None (if both are <code>None</code>)</p>
+
+<p>But it will not work if both X and Y are zero, because zero is evaluated to false. While zero is the answer we want, the execution falls to the ‘or’ part of the expression.</p>
+
+<p>A better to write the lambda:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>f = lambda X, Y:  (X+Y)/2.0 if (X is not None) and (Y  is not None)  else None</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -286,48 +350,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/09/07/p-31050185788/">External Harddisk, Airport Extreme and Time Capsule</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-09-07T19:52:00+10:00" pubdate data-updated="true">Sep 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am sharing an external harddisk connected to the Airport Extreme Base station. The shared storage will be used by three OSX machines as the time machine drive. So far so good.</p>
-
-<p>My last-gen MBP has a 320Gb harddisk and about 265Gb of data. I am too lazy to do an initial time machine backup via a ethernet cable.</p>
-
-<p>So over wifi and 10 hours later, the backup is still less than half way through.</p>
-
-<p>I did not expect this scheme to work at all because my past research indicated that Apple/TimeMachine did not allow backup to network drive unless it is hosted by Time Capsule.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/50/">&larr; Older</a>
@@ -345,6 +367,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
@@ -358,10 +384,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
       </li>
     
   </ul>

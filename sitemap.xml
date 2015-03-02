@@ -4372,7 +4372,7 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2015/03/02/lesson-from-vagrant/</loc>
-        <lastmod>2015-03-02T19:01:23+11:00</lastmod>
+        <lastmod>2015-03-03T07:06:42+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session/</loc>
@@ -4383,12 +4383,16 @@
         <lastmod>2015-03-02T20:44:53+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2015/03/03/find-out-script-location-in-bash/</loc>
+        <lastmod>2015-03-03T07:01:31+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2015-03-02T20:44:53+11:00</lastmod>
+        <lastmod>2015-03-03T07:06:42+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2015-03-02T20:44:53+11:00</lastmod>
+        <lastmod>2015-03-03T07:06:42+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4396,6 +4400,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2015-03-02T20:44:53+11:00</lastmod>
+        <lastmod>2015-03-03T07:06:42+11:00</lastmod>
     </url>
 </urlset>

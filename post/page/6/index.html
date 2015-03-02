@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="If you set a variable this way in a cookbook: node['mysqld']['root_password'] = 'password' you will get this exception Chef::Exceptions:: &hellip;">
+  <meta name="description" content="The provisioning failed a few times this morning: Reading state information... The following extra packages will be installed: patch Suggested &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,63 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/16/it-happens-too-often/">It Happens Too Often</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-16T10:14:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The provisioning failed a few times this morning:</p>
+
+<pre><code>   Reading state information...
+   The following extra packages will be installed:
+     patch
+   Suggested packages:
+     diffutils-doc policykit-1
+   The following NEW packages will be installed:
+     patch update-notifier-common
+   0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+   Need to get 248 kB of archives.
+   After this operation, 2,361 kB of additional disk space will be used.
+   Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main patch amd64 2.7.1-4ubuntu1
+     Could not resolve 'us.archive.ubuntu.com'
+   Err http://us.archive.ubuntu.com/ubuntu/ trusty/main update-notifier-common all 0.154.1
+     Could not resolve 'us.archive.ubuntu.com'
+   STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.1-4ubuntu1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+   E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_0.154.1_all.deb  Could not resolve 'us.archive.ubuntu.com'
+</code></pre>
+
+<p>But when I ping the server, it responds perfectly.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -424,103 +481,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/error-running-the-motd-example-of-the-chef-book/">Error Running the Motd Example of the Chef Book</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T15:27:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I am following the chapter &ldquo;Your First Cookbook: Message of the Day&rdquo; from <code>Learning Chef</code> by Mischa Taylor</p>
-
-<p>When I run <code>kitchen converge</code>, I got these error messages:</p>
-
-<pre><code>               ================================================================================
-               Error executing action `create` on resource 'cookbook_file[/etc/motd]'
-               ================================================================================
-
-               Chef::Exceptions::FileNotFound
-               ------------------------------
-               Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
-                 files/ubuntu-12.04/motd
-                 files/ubuntu/motd
-                 files/default/motd
-                 files/motd
-
-               Resource Declaration:
-               ---------------------
-               # In /tmp/kitchen/cookbooks/motd/recipes/default.rb
-
-                 9: cookbook_file "/etc/motd" do
-                10:   source "motd"
-                11:   mode "0644"
-                12: end
-
-               Compiled Resource:
-               ------------------
-               # Declared in /tmp/kitchen/cookbooks/motd/recipes/default.rb:9:in `from_file'
-
-               cookbook_file("/etc/motd") do
-                 provider Chef::Provider::CookbookFile
-                 action "create"
-                 retries 0
-                 retry_delay 2
-                 default_guard_interpreter :default
-                 path "/etc/motd"
-                 backup 5
-                 atomic_update true
-                 source "motd"
-                 declared_type :cookbook_file
-                 cookbook_name :motd
-                 recipe_name "default"
-                 mode "0644"
-               end
-
-
-           Running handlers:
-           [2015-02-14T04:22:29+00:00] ERROR: Running exception handlers
-           Running handlers complete
-           [2015-02-14T04:22:29+00:00] ERROR: Exception handlers complete
-           [2015-02-14T04:22:29+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
-           Chef Client failed. 0 resources updated in 11.010074864 seconds
-           [2015-02-14T04:22:29+00:00] ERROR: cookbook_file[/etc/motd] (motd::default line 9) had an error: Chef::Exceptions::FileNotFound: Cookbook 'motd' (0.1.0) does not contain a file at any of these locations:
-             files/ubuntu-12.04/motd
-             files/ubuntu/motd
-             files/default/motd
-      1 Hello, world
-             files/motd
-           [2015-02-14T04:22:29+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
-</code></pre>
-
-<p>It is because I forgot to create the file <code>files/default/motd</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -538,6 +498,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
@@ -551,10 +515,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
       </li>
     
   </ul>

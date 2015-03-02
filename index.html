@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Try this curl https://api.hipchat.com/v2/room?auth_token=&lt;TOKEN&gt; ">
+  <meta name="description" content="This is the most portable method: DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )" ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,45 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/03/find-out-script-location-in-bash/">Find Out Script Location in Bash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-03T06:46:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is the most portable method:</p>
+
+<pre><code>  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )"
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -269,7 +308,7 @@ alt="hit counter"></a></div></noscript>
 
 <h3>Plugins</h3>
 
-<p>If your primary platform is aws, you will need to install <code>vagrant-aws</code>. There are a lot of useful plugins and it is something one shoudl explore to discover all sort of possibility.</p>
+<p>If your primary platform is aws, you will need to install <code>vagrant-aws</code>. There are a lot of useful plugins and it is something one should explore to discover all sort of possibility.</p>
 
 <p>You will also need <code>vagrant-chef-zero</code>, <code>vagrant-omnibus</code> and <code>vagrant-berkshelf</code> in order to work with chef.</p>
 
@@ -285,16 +324,33 @@ alt="hit counter"></a></div></noscript>
 
 <p>Apparently <strong>chef</strong> has released a number of tools before to help with devops&#8217; jobs.</p>
 
-<p>The main tool, <strong>knife</strong>, is pretty useless to me because</p>
+<p>The main tool, <strong>knife</strong>, confuses me because</p>
 
-<p><em>. I want to run <strong>chef</strong> in a standalone mode and knife assumes you are using chef enterprise service
-</em>. Some function like data bag creation is not useful</p>
+<ol>
+<li><p>I want to run <strong>chef</strong> in a standalone mode and knife assumes you are using chef server</p></li>
+<li><p>Some function like data bag creation is not useful</p></li>
+</ol>
 
-<p><strong>Librarian</strong> is superceded by <strong>berkshelf</strong>. Especially if you are going to use vagrant with chef, the brekshelf will take care of all the cookbook dependency automagically.</p>
 
-<p>Don&rsquo;t bother with <strong>libraian</strong>.</p>
+<p><strong>Librarian</strong> is superceded by <strong>berkshelf</strong>. Especially if you are going to use vagrant with chef, the brekshelf will take care of all the cookbook dependency automagically. Don&rsquo;t bother with <strong>libraian</strong>.</p>
 
 <p>I think the book &ldquo;Learning Chef&rdquo; by Mischa Taylor is by far the most systemic and easy to read book in the subject area. If I have discovered this book at the begining I am sure I will save at least a week time in research.</p>
+
+<h3>Confusing terminology</h3>
+
+<p><a href="https://docs.chef.io/lwrp.html">LWRP</a> What the heck is it?</p>
+
+<p>The document makes sense after I have used LWRP. However the document, like many other chef document, cannot give you a context or a big picture.</p>
+
+<h3>Confusing branding</h3>
+
+<p>Maybe I start at the wrong time? Last couple of months <strong>chef</strong> has been changing their urls. e.g. getchef.com becomes chef.io</p>
+
+<p>And recipe respository is here: <a href="https://supermarket.chef.io">https://supermarket.chef.io</a>  and it is not linked from chef&rsquo;s main website.</p>
+
+<p>Then they are also changing their github repository from <code>opcodes</code> to <code>chef</code></p>
+
+<p>Utterly confusing to anyone who just started during this period.</p>
 
 <h3>How to approach cookbook?</h3>
 
@@ -388,56 +444,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/28/sudo-and-glob/">Sudo and Glob</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-28T16:52:00+11:00" pubdate data-updated="true">Feb 28<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Files are there but I cannot delete them</p>
-
-<pre><code>    $ sudo ls /etc/sensu/conf.d/handlers
-    email.json  handler.json  hipchat.json
-
-    $ sudo rm /etc/sensu/conf.d/handlers/*.json
-    rm: cannot remove ‘/etc/sensu/conf.d/handlers/*.json’: No such file or directory
-</code></pre>
-
-<p>It is because my current login has no permission to read <code>/etc/sensu/conf.d/handlers</code> and so glob failed</p>
-
-<p>This takes care of the problem:</p>
-
-<pre><code>    $ sudo bash -c 'rm /etc/sensu/conf.d/handlers/*.json'
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -453,6 +459,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
@@ -466,10 +476,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/sudo-and-glob/">sudo and glob</a>
       </li>
     
   </ul>
