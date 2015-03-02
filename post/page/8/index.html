@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I add a chef mysqld receipt to the Vagrant file and here is the error from vagrant up: ==&gt; default: Required argument password is missing! ==&gt; &hellip;">
+  <meta name="description" content="When I run nosetests -v --failed I keep getting this exception: #40 Failure: ImportError (No module named test_share_link2) ... ERROR &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,66 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/13/nosetests-failed-keeps-picking-up-removed-test/">Nosetests &#8211;failed Keeps Picking Up Removed Test</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-13T11:38:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I run</p>
+
+<pre><code>nosetests -v --failed
+</code></pre>
+
+<p>I keep getting this exception:</p>
+
+<pre><code>    #40 Failure: ImportError (No module named test_share_link2) ... ERROR
+
+    ======================================================================
+    ERROR: Failure: ImportError (No module named test_share_link2)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/loader.py", line 414, in loadTestsFromName
+        addr.filename, addr.module)
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 47, in importFromPath
+        return self.importFromDir(dir_path, fqname)
+      File "/Users/antkong/dev/project/project-ve/lib/python2.7/site-packages/nose/importer.py", line 79, in importFromDir
+        fh, filename, desc = find_module(part, path)
+    ImportError: No module named test_share_link2
+</code></pre>
+
+<p>But I have already removed this test including both py and pyc files. Why nosetests keeps picking up this test?</p>
+
+<p>It turns out I need to remove the <code>.noseids</code> file. It contains a stale reference to the removed file</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -345,42 +405,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">Mandrill Is Sending Me a Strange Template Name</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-05T13:11:00+11:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -398,6 +422,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
@@ -411,10 +439,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
       </li>
     
   </ul>

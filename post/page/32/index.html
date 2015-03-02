@@ -9,40 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Despite this wall of warnings, numpy seems to work fine 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34 &hellip;">
+  <meta name="description" content="Wanted to make a custom podspec to fix the JSONKit compilation error, as mentioned here Made a first cut and wanted to do a sanity check. At first it &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -148,6 +115,94 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/11/30/pod-spec-lint/">Pod Spec Lint</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-30T21:26:00+11:00" pubdate data-updated="true">Nov 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to make a custom podspec to fix the JSONKit compilation error, as mentioned <a href="http://www.ahwkong.com/post/2013/11/28/jsonkit-isa-is-deprecated/">here</a></p>
+
+<p>Made a first cut and wanted to do a sanity check. At first it did not look good.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>pod spec lint /Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec
+</span><span class='line'>
+</span><span class='line'>[!] Unable to find a spec named `/Users/antkong/Documents/Cocoa/jsonkit/JSONKit/JSONKit.ak.spec'.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There are several issues here:</p>
+
+<ul>
+<li>the pod lint does not take a file parameter</li>
+<li>the pod runtime expects the spec file to use file extension <code>podspec</code>.</li>
+</ul>
+
+
+<p>Fixed the above and committed the code change. Now I got these error messages:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ pod spec lint
+</span><span class='line'>
+</span><span class='line'> -> JSONKit (1.6)
+</span><span class='line'>    - WARN  | Git sources should specify a tag.
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture x86_64
+</span><span class='line'>    - NOTE  | [xcodebuild]  JSONKit/JSONKit.m:2600:77: warning: bitmasking for introspection of Objective-C object pointers is strongly discouraged [-Wdeprecated-objc-pointer-introspection]
+</span><span class='line'>    - WARN  | Unable to find a license file
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7
+</span><span class='line'>    - NOTE  | [xcodebuild]  warning: no rule to process file 'JSONKit/JSONKit.podspec' of type text for architecture armv7s
+</span><span class='line'>
+</span><span class='line'>Analyzed 1 podspec.
+</span><span class='line'>
+</span><span class='line'>[!] The spec did not pass validation.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Need to work on the two warnings</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -2605,52 +2660,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/11/27/get-image-file-size/">Get Image File Size</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-27T07:28:00+11:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The <code>identify</code> command from ImageMagick can tell us the size of an image file</p>
-
-<p>e.g.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ identify source/images/grab.png 
-</span><span class='line'>source/images/grab.png PNG 1218x472 1218x472+0+0 8-bit sRGB 86KB 0.000u 0:00.000</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/33/">&larr; Older</a>
@@ -2668,6 +2677,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
@@ -2681,10 +2694,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
       </li>
     
   </ul>

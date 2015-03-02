@@ -9,7 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector objectFromJSONString. It is my &hellip;">
+  <meta name="description" content="At the beginning I use the following code to decode a JSON string: 1
+2
+3
+4
+5
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +121,74 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/13/incorrect-way-to-use-jsonkit/">Incorrect Way to Use JSONKit?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-13T06:42:00+11:00" pubdate data-updated="true">Dec 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>At the beginning I use the following code to decode a JSON string:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">connectionDidFinishLoading:</span><span class="p">(</span><span class="n">NSURLConnection</span> <span class="o">*</span><span class="p">)</span><span class="nv">connection</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">JSONDecoder</span><span class="o">*</span> <span class="n">decoder</span> <span class="o">=</span> <span class="p">[[</span><span class="n">JSONDecoder</span> <span class="n">alloc</span><span class="p">]</span>
+</span><span class='line'>                            <span class="nl">initWithParseOptions:</span><span class="n">JKParseOptionNone</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">json</span> <span class="o">=</span> <span class="p">[</span><span class="n">decoder</span> <span class="nl">objectWithData:</span><span class="n">receivedData</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and then I tried to convert the json data with this function:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="n">voide</span><span class="p">)</span> <span class="nf">convertJSONData:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">json</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">enumerator</span> <span class="o">=</span> <span class="p">[</span><span class="n">json</span> <span class="n">objectEnumerator</span><span class="p">];</span>
+</span><span class='line'>    <span class="kt">id</span> <span class="n">anObject</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">while</span> <span class="p">(</span><span class="n">anObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">enumerator</span> <span class="n">nextObject</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// test for anObject class and handle accordingly</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is probably not an efficient way to handle the incoming json data.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1696,66 +1770,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/05/assignment-statement-in-lua-vs-python/">Assignment Statement in Lua vs Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-05T07:19:00+11:00" pubdate data-updated="true">Dec 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Given <code>a</code> is an array of  <code>[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]</code></p>
-
-<p>and this bit of code</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>i = 3
-</span><span class='line'>i, a[i] = i+1, 20</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In lua, <code>a</code> will become</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{1, 1, 1, 20, 1, 1, 1, 1, 1, 1}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Whereas in python it will become</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>>>> a
-</span><span class='line'>[1, 1, 1, 1, 20, 1, 1, 1, 1, 1]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And it is a non-issue in erlang because it does not support mutable variable</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/30/">&larr; Older</a>
@@ -1773,6 +1787,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
@@ -1786,10 +1804,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
       </li>
     
   </ul>

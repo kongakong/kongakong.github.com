@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I encountered two issues when I want to deploy the hipchat notification handler. Firstly it throws an exception of &lsquo;Connection refused&rsquo;. &hellip;">
+  <meta name="description" content="Couple of weeks ago I set out to learn to use vagrant + chef + sensu to achieve the goal of automated data server deployment and server monitoring. I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,125 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/02/lesson-from-vagrant/">Lesson From Learning to Use Vagrant, Chef and Sensu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-02T09:16:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Couple of weeks ago I set out to learn to use vagrant + <strong>chef</strong> + sensu to achieve the goal of automated data server deployment and server monitoring.</p>
+
+<p>I would like to share my experience so new comers can get up to speed faster and avoid some time-wasters.</p>
+
+<p>The structure of this post can be confusing because it is more like my cliff note.</p>
+
+<h2>Background of my final chioces</h2>
+
+<p>A small startup that uses aws ec2 for key functionality. The tools should cost as little as possible. Open source solution is prefered.</p>
+
+<h2>What are the advantages of vagrant, chef and sensu?</h2>
+
+<p><strong>Vagrant</strong> and <strong>chef</strong> are great tools. They are indispensable to automation of VM creation and provision.</p>
+
+<p><strong>Sensu</strong> is an open source monitoring platform. It is very flexible because it uses ruby to develop plugins to extend the framework&rsquo;s capability.</p>
+
+<p>All of them have strong momentum from their communities</p>
+
+<h2>Learning Vagrant</h2>
+
+<h3>Vagrantfile</h3>
+
+<p><strong>Vagrant</strong> is actually rather easy to master. The key file <strong>Vagrantfile</strong> is by itself a ruby script. It allows a lot of flexibility of customisation. The key hurdle is to write up a <strong>Vagrantfile</strong> that suits your need. The default <strong>Vagrantfile</strong> is pretty useless.</p>
+
+<h3>Know your override</h3>
+
+<p>You will need to know how to use the <code>override</code> object to customise your vagrant settings</p>
+
+<h3>Provider</h3>
+
+<p>A limitation of vagrant as of 1.6.x is that you can only use one active provider at a time. It means that if you have <code>vagrant up</code> to Virtualbox, you cannot fire up another instance in aws in the same folder. You can remove the &lsquo;.vagrant&rsquo; folder if you must.</p>
+
+<h3>Provisioner</h3>
+
+<p>My choice of provisioner is <strong>chef</strong>. I choose it over <strong>puppet</strong> mainly because of <strong>chef</strong> uses ruby as the scripting lanagage. <code>Nagios</code> is bascailly out of the question due to its legacy and complexity. Unfortunately there was a lot of changes at <strong>chef</strong> in last couple of months and it makes the learning experience less than pleasant. More on <strong>chef</strong> later.</p>
+
+<h3>Plugins</h3>
+
+<p>If your primary platform is aws, you will need to install <code>vagrant-aws</code>. There are a lot of useful plugins and it is something one shoudl explore to discover all sort of possibility.</p>
+
+<p>You will also need <code>vagrant-chef-zero</code>, <code>vagrant-omnibus</code> and <code>vagrant-berkshelf</code> in order to work with chef.</p>
+
+<h2>Learning Chef</h2>
+
+<h3>Implementation</h3>
+
+<p>My goal is to make my <strong>chef</strong> cookbook and deployment as self-contained as possible.</p>
+
+<h3>Lack of good documentation and Conflicting opinions abound</h3>
+
+<p>I were unable to find a single starting point and clear documentation to learn <strong>chef</strong> on the official website. The documentation are either very fragmented or not up to date. The biggest distraction is the use of <strong>knife</strong>. It is tightly coupled with <strong>chef</strong> server. However in my opinion the power of <strong>chef</strong> actually lies with the concept of <code>cookbook</code>.</p>
+
+<p>Apparently <strong>chef</strong> has released a number of tools before to help with devops&#8217; jobs.</p>
+
+<p>The main tool, <strong>knife</strong>, is pretty useless to me because</p>
+
+<p><em>. I want to run <strong>chef</strong> in a standalone mode and knife assumes you are using chef enterprise service
+</em>. Some function like data bag creation is not useful</p>
+
+<p><strong>Librarian</strong> is superceded by <strong>berkshelf</strong>. Especially if you are going to use vagrant with chef, the brekshelf will take care of all the cookbook dependency automagically.</p>
+
+<p>Don&rsquo;t bother with <strong>libraian</strong>.</p>
+
+<p>I think the book &ldquo;Learning Chef&rdquo; by Mischa Taylor is by far the most systemic and easy to read book in the subject area. If I have discovered this book at the begining I am sure I will save at least a week time in research.</p>
+
+<h3>How to approach cookbook?</h3>
+
+<p>I think cookbook is the best feature of chef, but it is not very adequately explained.</p>
+
+<p>That&rsquo;s why you need to get your hand dirty and learn how to write your cookbook by using <strong>kitchen</strong></p>
+
+<p>At the beginning I thought I can get away from writing custom cookbook. I now see it as an impossibility.</p>
+
+<h3>Keep converge until you get it</h3>
+
+<p>Use <strong>kitchen</strong> to create a cookbook skeleton. Start write up your recipes.</p>
+
+<p><strong>Tip</strong>: Break down your provisioning requirement into logical units and make them as self-contained and small and possible. In this way, you can test each individual recipe quickly with <code>kitchen converge</code>.</p>
+
+<p>When you are happy with all the recipes, do the final integration test by running up the chef provision with <strong>vagrant</strong>.</p>
+
+<h3>Sensu</h3>
+
+<p>More on sensu later&hellip; To be continued</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -314,7 +433,9 @@ alt="hit counter"></a></div></noscript>
 
 <h2>Self accessment</h2>
 
-<p>Original version of the speech lasts almost 8 min. In real delivery the time is 5.30 minutes. A bit too fast.</p>
+<p>Original version of the speech lasts almost 8 min. The final delivery time around 6m10s. A bit too fast.</p>
+
+<p>I haven&rsquo;t been too successfully to use metaphors and vivid images in the speech. There is still use of jargon.</p>
 
 <h1>Innovation</h1>
 
@@ -348,53 +469,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/27/hipchat-gem/">Gem Install Hipchat Problem 2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-27T05:41:00+11:00" pubdate data-updated="true">Feb 27<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Error message:</p>
-
-<pre><code>   [2015-02-26T11:49:52+00:00] ERROR: gem_package[hipchat] (zeetings::sensu_resource line 27) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '2'
-   ---- Begin output of /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" ----
-   STDOUT: 
-   STDERR: ERROR:  Could not find a valid gem 'hipchat' (= 1.4.0), here is why:
-      Unable to download data from https://rubygems.org/ - no such name (https://rubygems.org/quick/Marshal.4.8/hipchat-1.4.0.gemspec.rz)
-   ERROR:  Possible alternatives: hipchat
-   ---- End output of /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" ----
-   Ran /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" returned 2
-   [2015-02-26T11:49:52+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -410,6 +484,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
@@ -423,10 +501,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/hipchat-gem/">gem install hipchat problem 2</a>
       </li>
     
   </ul>
