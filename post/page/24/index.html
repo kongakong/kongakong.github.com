@@ -9,25 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found 0:12.72 #include &lt;linux/ &hellip;">
+  <meta name="description" content="Markdown does not allow us to specify the size of an link image. To get around this restriction it is what I did: 1. Upload an image as usual &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -133,6 +115,66 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/10/resize-images-in-a-so-post/">Resize Images in a Stackoverflow Post</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-10T14:18:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Markdown does not allow us to specify the size of an link image.</p>
+
+<p>To get around this restriction it is what I did:</p>
+
+<h1>1. Upload an image as usual</h1>
+
+<p>Stackoverflow will add these lines to your post:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>![enter image description here][1]
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>  [1]: http://i.stack.imgur.com/jxBxR.png</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>2. Change the above to an image tag</h1>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;img src="http://i.stack.imgur.com/jxBxR.png" width="100" height="100"></span></code></pre></td></tr></table></div></figure>
+
+
+<p>Done</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -523,51 +565,6 @@ install_mathjax()
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/04/swap-convention/">Swap Convention</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-04T21:15:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><pre><code>Floating-rate payer: pay 6-month LIBOR
-                     receive a fixed rate of 5.19 percent
-
-Fixed-rate payer: pay a fixed rate of 5.25 percent
-                  receive 6-month LIBOR
-</code></pre>
-
-<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p></blockquote>
-
-<p><em>from &lsquo;Moorad Choudhry &ndash; Fixed Income Securities and Derivatives Handbook (Analysis and Valuation)&rsquo;</em></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/25/">&larr; Older</a>
@@ -585,6 +582,10 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
       </li>
     
@@ -598,10 +599,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
     
       <li class="post">
         <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
       </li>
     
   </ul>

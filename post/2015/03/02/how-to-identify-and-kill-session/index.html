@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>I would hardly use the "success stories" as the au... - Timeline</title>
+  <title>How to identify and kill process spawned by a tmux session? - Timeline</title>
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I would hardly use the &ldquo;success stories&rdquo; as the authoritative list of companies that use Python.I&rsquo;m the CTO of a large hedge fund &hellip;">
+  <meta name="description" content="An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it. So I did the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.ahwkong.com/post/2008/05/02/4938064958000018731">
+  <link rel="canonical" href="http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Timeline" type="application/atom+xml">
@@ -118,7 +118,7 @@ alt="hit counter"></a></div></noscript>
   
   <header>
     
-      <h1 class="entry-title">I Would Hardly Use the "Success Stories" as the Au...</h1>
+      <h1 class="entry-title">How to Identify and Kill Process Spawned by a Tmux Session?</h1>
     
     
       <p class="meta">
@@ -134,14 +134,26 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2008-05-02T07:55:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2008</time>
+<time datetime="2015-03-02T19:49:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I would hardly use the &ldquo;success stories&rdquo; as the authoritative list of companies that use Python.<BR/><BR/>I&rsquo;m the CTO of a large hedge fund and our development platform is primarily Python. And while we are by no means a large firm (in terms of head count), I have been seeing more and more resumes in the finance world of people using Python at large financial firms.<BR/><BR/>As Python is not a &ldquo;mainstream&rdquo; language, I think it comes in the back door at organizations so you won&rsquo;t always see it in job postings or other public references. That doesn&rsquo;t mean it&rsquo;s not used.</p>
+<div class="entry-content"><p>An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it.</p>
+
+<p>So I did the following to identify the process:</p>
+
+<pre><code>    $ tmux list-panes -s -F "#{pane_pid} #{pane_current_command}"
+    1896 tmux
+    1899 ssh
+    $ pstree 1899  # Problem at the lower pane
+    -+= 01899 antkong -zsh
+     \--= 65662 antkong ssh -i prod.pem ubuntu@localhost -p 2222
+</code></pre>
+
+<p>Then run <code>kill -9 1899</code> to kill it</p>
 </div>
 
 
@@ -164,12 +176,12 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2008-05-02T07:55:00+10:00" pubdate data-updated="true">May 2<span>nd</span>, 2008</time>
+<time datetime="2015-03-02T19:49:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/post/categories/erlang/'>erlang</a>
+    <a class='category' href='/post/categories/ps/'>ps</a>, <a class='category' href='/post/categories/tmux/'>tmux</a>
   
 </span>
 
@@ -178,7 +190,7 @@ alt="hit counter"></a></div></noscript>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.ahwkong.com/post/2008/05/02/4938064958000018731/" data-via="kongakong" data-counturl="http://www.ahwkong.com/post/2008/05/02/4938064958000018731/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session/" data-via="kongakong" data-counturl="http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -189,10 +201,8 @@ alt="hit counter"></a></div></noscript>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/post/2008/04/26/jst_5181726699377686089/" title="Previous Post: UC Berkeley History 7B">&laquo; UC Berkeley History 7B</a>
+        <a class="basic-alignment left" href="/post/2015/03/02/lesson-from-vagrant/" title="Previous Post: Lesson from learning to use vagrant, chef and sensu">&laquo; Lesson from learning to use vagrant, chef and sensu</a>
       
-      
-        <a class="basic-alignment right" href="/post/2008/05/07/jst_9093636818448097737/" title="Next Post: Google Tech Talk: Economic Naturalist">Google Tech Talk: Economic Naturalist &raquo;</a>
       
     </p>
   </footer>
@@ -208,6 +218,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
       </li>
     
@@ -221,10 +235,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
       </li>
     
   </ul>

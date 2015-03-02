@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This will list out all the VMs $ VBoxManage list vms "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2} "serverr" { &hellip;">
+  <meta name="description" content="I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-&rsquo;, but since my C- is binded to expose in OSX, it did not work. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,49 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/25/tmux-resizing-pane/">Tmux Resizing Pane</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-25T01:20:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-<Up>&rsquo;, but since my C-<UP> is binded to expose in OSX, it did not work.</p>
+
+<p>Fortunately it is very easy to control the behavior via command line. First of all, you need to identify the pane. It can be done either by a &lsquo;C-b q&rsquo; or by command <code>tmux list-panes</code>. The pane from which you issued the command will be marked as <code>active</code>.</p>
+
+<p>Once the id of the pane is identified, you can run the following command:</p>
+
+<pre><code>   tmux resize-pane -t 1 -U    # 1 is the pane id 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -339,70 +382,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t Let Private and Public Key Sit in the Same Folder When Vagrant Up</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-19T16:39:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The problem is this:</p>
-
-<p><strong><code>vagrant</code> failed to provision a box after it is successfully created in aws ec2.</strong></p>
-
-<p>It reported:</p>
-
-<pre><code>     INFO ssh: SSH not up: #&lt;Vagrant::Errors::SSHAuthenticationFailed: SSH authentication failed! This is typically caused by the public/private
-     keypair for the SSH user not being properly set on the guest VM. Please
-     verify that the guest VM is setup with the proper public key, and that
-     the private key path for Vagrant is setup properly as well.&gt;
-</code></pre>
-
-<p>But if I do <code>vagrant ssh</code> I can login to the box with no problem.</p>
-
-<p>I have tried everything to get it to work. I have removed <code>rvm</code>, I have reinstalled <code>chefdk</code>, I have downgraded <code>vagrant</code>&hellip; None of them work.</p>
-
-<p>I studied the log message a bit closer and I found these lines:</p>
-
-<pre><code>     769 D, [2015-02-19T15:05:43.563478 #14537] DEBUG -- net.ssh.authentication.session[851208b0]: allowed methods: publickey
-     770 D, [2015-02-19T15:05:43.563564 #14537] DEBUG -- net.ssh.authentication.methods.none[85125400]: none failed
-     771 D, [2015-02-19T15:05:43.563650 #14537] DEBUG -- net.ssh.authentication.session[851208b0]: trying publickey
-     772 E, [2015-02-19T15:05:43.564057 #14537] ERROR -- net.ssh.authentication.key_manager[851256d0]: could not load public key file `/Users/antkong/dev/project/aws/aws-ami.pem': Net::SSH::Exception (public key at /Users/antkong/dev/project/aws/aws-ami.pem.pub is not valid)
-</code></pre>
-
-<p>Apparently for some reason the key manager picked the public key file to connect to the server: I have specified a private key file in the <code>Vagrantfile</code>. The key manager added &lsquo;.pub&rsquo; to the file name and pick the file up.</p>
-
-<p>Removing the public key file solved the issue.</p>
-
-<p><strong>Lesson</strong>: Don&rsquo;t put the public key along with the private key.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/5/">&larr; Older</a>
@@ -420,6 +399,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
       </li>
     
@@ -433,10 +416,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
       </li>
     
   </ul>

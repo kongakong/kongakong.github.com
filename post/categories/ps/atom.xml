@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ps | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/ps/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-02T19:56:36+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to identify and kill process spawned by a tmux session?]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session/"/>
+    <updated>2015-03-02T19:49:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session</id>
+    <content type="html"><![CDATA[<p>An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it.</p>
+
+<p>So I did the following to identify the process:</p>
+
+<pre><code>    $ tmux list-panes -s -F "#{pane_pid} #{pane_current_command}"
+    1896 tmux
+    1899 ssh
+    $ pstree 1899  # Problem at the lower pane
+    -+= 01899 antkong -zsh
+     \--= 65662 antkong ssh -i prod.pem ubuntu@localhost -p 2222
+</code></pre>
+
+<p>Then run <code>kill -9 1899</code> to kill it</p>
+]]></content>
+  </entry>
+  
+</feed>

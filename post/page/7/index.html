@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My kitchen converge throws a lot of error message $ kitchen converge -----&gt; Starting Kitchen (v1.3.1) .... &gt;&gt;&gt;&gt;&gt;&gt; ------ &hellip;">
+  <meta name="description" content="$ kitchen init --gem-file identical .kitchen.yml Successfully installed kitchen-vagrant-0.15.0 Parsing documentation for kitchen-vagrant-0.15.0 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,49 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/14/a-successful-run-of-kitchen-init/">A Successful Run of Kitchen Init</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-14T14:57:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>    $ kitchen init --gem-file
+       identical  .kitchen.yml
+    Successfully installed kitchen-vagrant-0.15.0
+    Parsing documentation for kitchen-vagrant-0.15.0
+    Installing ri documentation for kitchen-vagrant-0.15.0
+    Done installing documentation for kitchen-vagrant after 0 seconds
+    1 gem installed
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -468,65 +511,6 @@ bundle install
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/13/ssh-forwarding/">Ssh Forwarding in Vagrant and Private Github Repository</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-13T16:23:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is how to checkout git private repository from within a VM without leaving a key in the VM</p>
-
-<p>First in host OS (Mac OSX in my case), run</p>
-
-<pre><code>ssd-add /path/to/githubkey
-</code></pre>
-
-<p>In the <code>.ssh/config</code>, add these lines:</p>
-
-<pre><code>    Host           github
-    HostName       github.com
-    IdentityFile   /path/to/githubkey
-</code></pre>
-
-<p>Then enable port forwarding in vagrant VM</p>
-
-<pre><code>Vagrant.configure("2") do |config|
-  config.ssh.forward_agent = true
-</code></pre>
-
-<p>After you have run <code>vagrant up</code>, you can test the connection in the VM by running</p>
-
-<pre><code>ssh -T git@github.com
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/8/">&larr; Older</a>
@@ -544,6 +528,10 @@ bundle install
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
       </li>
     
@@ -557,10 +545,6 @@ bundle install
     
       <li class="post">
         <a href="/post/2015/02/27/using-chef-sudo-cookbook/">Using chef sudo cookbook</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster speech 4</a>
       </li>
     
   </ul>
