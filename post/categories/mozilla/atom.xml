@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mozilla | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/mozilla/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-04T12:40:58+11:00</updated>
+  <updated>2015-03-04T13:18:57+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -33,7 +33,7 @@
 </span><span class='line'>610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
 </span><span class='line'>610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
 </span><span class='line'>610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.61 Packaging &lt;a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x71;&#x75;&#105;&#116;&#116;&#x65;&#114;&#x40;&#109;&#111;&#122;&#x69;&#x6c;&#108;&#97;&#46;&#x6f;&#x72;&#103;&#46;&#120;&#x70;&#105;&#x2e;&#x2e;&#x2e;">&#x71;&#117;&#105;&#116;&#x74;&#x65;&#x72;&#x40;&#x6d;&#x6f;&#x7a;&#x69;&#108;&#x6c;&#x61;&#46;&#111;&#x72;&#x67;&#x2e;&#x78;&#112;&#105;&#46;&#46;&#x2e;&lt;/a>
+</span><span class='line'>610:06.61 Packaging &lt;a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x71;&#x75;&#x69;&#116;&#116;&#101;&#114;&#64;&#109;&#111;&#x7a;&#105;&#x6c;&#108;&#x61;&#x2e;&#x6f;&#114;&#103;&#x2e;&#x78;&#x70;&#x69;&#46;&#x2e;&#46;">&#113;&#117;&#105;&#x74;&#x74;&#x65;&#114;&#64;&#x6d;&#111;&#122;&#105;&#108;&#x6c;&#97;&#x2e;&#x6f;&#x72;&#x67;&#x2e;&#x78;&#112;&#x69;&#x2e;&#x2e;&#46;&lt;/a>
 </span><span class='line'>610:06.95 816 compiler warnings present.
 </span><span class='line'>We know it took a while, but your build finally finished successfully!
 </span><span class='line'>To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox

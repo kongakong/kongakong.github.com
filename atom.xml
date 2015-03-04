@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-04T12:40:58+11:00</updated>
+  <updated>2015-03-04T13:18:57+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -55,9 +55,18 @@
     <link href="http://www.ahwkong.com/post/2015/03/03/prevent-failed-task-stops-provisioning/"/>
     <updated>2015-03-03T08:50:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/03/03/prevent-failed-task-stops-provisioning</id>
-    <content type="html"><![CDATA[<p>I mentioned eariler I have ecountered problem when installing some gem like <a href="http://www.ahwkong.com/2015/02/26/gem-install-hipchat">this</a></p>
+    <content type="html"><![CDATA[<p>I mentioned eariler I have ecountered problem when installing some gem like <a href="http://www.ahwkong.com/post/2015/02/26/gem-install-hipchat">this</a></p>
 
-<p>Here is a way to prevent failure stops the chef provision. You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
+<p>Here is a way to prevent failure stops the chef provision: use <strong>ignore_failure</strong></p>
+
+<pre><code>      gem_package "mail" do
+        gem_binary '/opt/sensu/embedded/bin/gem'
+        ignore_failure true
+        action :install
+      end
+</code></pre>
+
+<p>You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
 ]]></content>
   </entry>
   

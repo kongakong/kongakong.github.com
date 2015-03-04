@@ -208,9 +208,18 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-  <div class="entry-content"><p>I mentioned eariler I have ecountered problem when installing some gem like <a href="/2015/02/26/gem-install-hipchat">this</a></p>
+  <div class="entry-content"><p>I mentioned eariler I have ecountered problem when installing some gem like <a href="/post/2015/02/26/gem-install-hipchat">this</a></p>
 
-<p>Here is a way to prevent failure stops the chef provision. You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
+<p>Here is a way to prevent failure stops the chef provision: use <strong>ignore_failure</strong></p>
+
+<pre><code>      gem_package "mail" do
+        gem_binary '/opt/sensu/embedded/bin/gem'
+        ignore_failure true
+        action :install
+      end
+</code></pre>
+
+<p>You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
 </div>
   
   
