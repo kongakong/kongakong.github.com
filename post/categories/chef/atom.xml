@@ -4,7 +4,7 @@
   <title><![CDATA[Category: chef | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/chef/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-03T07:06:49+11:00</updated>
+  <updated>2015-03-04T12:40:58+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[prevent failed task stops provisioning]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/03/prevent-failed-task-stops-provisioning/"/>
+    <updated>2015-03-03T08:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/03/prevent-failed-task-stops-provisioning</id>
+    <content type="html"><![CDATA[<p>I mentioned eariler I have ecountered problem when installing some gem like <a href="/2015/02/26/gem-install-hipchat">this</a></p>
+
+<p>Here is a way to prevent failure stops the chef provision. You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Using chef sudo cookbook]]></title>
@@ -102,25 +113,6 @@
 </code></pre>
 
 <p>But when I ping the server, it responds perfectly.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[setting value in chef cooking]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking/"/>
-    <updated>2015-02-16T08:47:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/16/setting-value-in-chef-cooking</id>
-    <content type="html"><![CDATA[<p>If you set a variable this way in a cookbook:</p>
-
-<pre><code>node['mysqld']['root_password'] = 'password'
-</code></pre>
-
-<p>you will get this exception</p>
-
-<pre><code>   Chef::Exceptions::ImmutableAttributeModification
-   ------------------------------------------------
-   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
-</code></pre>
 ]]></content>
   </entry>
   

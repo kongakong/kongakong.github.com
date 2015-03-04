@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is the most portable method: DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )" ">
+  <meta name="description" content="Got this crazy error message: /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:950:in `check_response': 454 4.7.0 TLS not available due to local &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,108 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/04/sensu-mailer-problem/">Sensu Mailer Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-04T11:39:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this crazy error message:</p>
+
+<pre><code>    /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:950:in `check_response': 454 4.7.0 TLS not available due to local problem (Net::SMTPServerBusy)
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:919:in `getok'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:819:in `starttls'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:561:in `do_start'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:519:in `start'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/network/delivery_methods/smtp.rb:112:in `deliver!'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/message.rb:2141:in `do_delivery'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/message.rb:238:in `deliver'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/mail.rb:140:in `deliver'
+            from /etc/sensu/handlers/notification/mailer.rb:138:in `block in handle'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+            from /etc/sensu/handlers/notification/mailer.rb:137:in `handle'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:55:in `block in &lt;class:Handler&gt;'
+</code></pre>
+
+<p>After checking the mail log, I found these errors:</p>
+
+<pre><code>    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:02001002:system library:fopen:No such file or directory:bss_file.c:169:fopen('/etc/postfix/cacert.pem','r'):
+    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:2006D080:BIO routines:BIO_new_file:no such file:bss_file.c:172:
+    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:0B084002:x509 certificate routines:X509_load_cert_crl_file:system lib:by_file.c:274:
+</code></pre>
+
+<p>So here is a solution:</p>
+
+<pre><code> sudo openssl req -new -x509 -nodes -out cacert.pem -keyout cacert.pem -days 3650
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">Prevent Failed Task Stops Provisioning</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-03T08:50:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I mentioned eariler I have ecountered problem when installing some gem like <a href="/2015/02/26/gem-install-hipchat">this</a></p>
+
+<p>Here is a way to prevent failure stops the chef provision. You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -242,208 +344,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/02/lesson-from-vagrant/">Lesson From Learning to Use Vagrant, Chef and Sensu</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-02T09:16:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Couple of weeks ago I set out to learn to use vagrant + <strong>chef</strong> + sensu to achieve the goal of automated data server deployment and server monitoring.</p>
-
-<p>I would like to share my experience so new comers can get up to speed faster and avoid some time-wasters.</p>
-
-<p>The structure of this post can be confusing because it is more like my cliff note.</p>
-
-<h2>Background of my final chioces</h2>
-
-<p>A small startup that uses aws ec2 for key functionality. The tools should cost as little as possible. Open source solution is prefered.</p>
-
-<h2>What are the advantages of vagrant, chef and sensu?</h2>
-
-<p><strong>Vagrant</strong> and <strong>chef</strong> are great tools. They are indispensable to automation of VM creation and provision.</p>
-
-<p><strong>Sensu</strong> is an open source monitoring platform. It is very flexible because it uses ruby to develop plugins to extend the framework&rsquo;s capability.</p>
-
-<p>All of them have strong momentum from their communities</p>
-
-<h2>Learning Vagrant</h2>
-
-<h3>Vagrantfile</h3>
-
-<p><strong>Vagrant</strong> is actually rather easy to master. The key file <strong>Vagrantfile</strong> is by itself a ruby script. It allows a lot of flexibility of customisation. The key hurdle is to write up a <strong>Vagrantfile</strong> that suits your need. The default <strong>Vagrantfile</strong> is pretty useless.</p>
-
-<h3>Know your override</h3>
-
-<p>You will need to know how to use the <code>override</code> object to customise your vagrant settings</p>
-
-<h3>Provider</h3>
-
-<p>A limitation of vagrant as of 1.6.x is that you can only use one active provider at a time. It means that if you have <code>vagrant up</code> to Virtualbox, you cannot fire up another instance in aws in the same folder. You can remove the &lsquo;.vagrant&rsquo; folder if you must.</p>
-
-<h3>Provisioner</h3>
-
-<p>My choice of provisioner is <strong>chef</strong>. I choose it over <strong>puppet</strong> mainly because of <strong>chef</strong> uses ruby as the scripting lanagage. <code>Nagios</code> is bascailly out of the question due to its legacy and complexity. Unfortunately there was a lot of changes at <strong>chef</strong> in last couple of months and it makes the learning experience less than pleasant. More on <strong>chef</strong> later.</p>
-
-<h3>Plugins</h3>
-
-<p>If your primary platform is aws, you will need to install <code>vagrant-aws</code>. There are a lot of useful plugins and it is something one should explore to discover all sort of possibility.</p>
-
-<p>You will also need <code>vagrant-chef-zero</code>, <code>vagrant-omnibus</code> and <code>vagrant-berkshelf</code> in order to work with chef.</p>
-
-<h2>Learning Chef</h2>
-
-<h3>Implementation</h3>
-
-<p>My goal is to make my <strong>chef</strong> cookbook and deployment as self-contained as possible.</p>
-
-<h3>Lack of good documentation and Conflicting opinions abound</h3>
-
-<p>I were unable to find a single starting point and clear documentation to learn <strong>chef</strong> on the official website. The documentation are either very fragmented or not up to date. The biggest distraction is the use of <strong>knife</strong>. It is tightly coupled with <strong>chef</strong> server. However in my opinion the power of <strong>chef</strong> actually lies with the concept of <code>cookbook</code>.</p>
-
-<p>Apparently <strong>chef</strong> has released a number of tools before to help with devops&#8217; jobs.</p>
-
-<p>The main tool, <strong>knife</strong>, confuses me because</p>
-
-<ol>
-<li><p>I want to run <strong>chef</strong> in a standalone mode and knife assumes you are using chef server</p></li>
-<li><p>Some function like data bag creation is not useful</p></li>
-</ol>
-
-
-<p><strong>Librarian</strong> is superceded by <strong>berkshelf</strong>. Especially if you are going to use vagrant with chef, the brekshelf will take care of all the cookbook dependency automagically. Don&rsquo;t bother with <strong>libraian</strong>.</p>
-
-<p>I think the book &ldquo;Learning Chef&rdquo; by Mischa Taylor is by far the most systemic and easy to read book in the subject area. If I have discovered this book at the begining I am sure I will save at least a week time in research.</p>
-
-<h3>Confusing terminology</h3>
-
-<p><a href="https://docs.chef.io/lwrp.html">LWRP</a> What the heck is it?</p>
-
-<p>The document makes sense after I have used LWRP. However the document, like many other chef document, cannot give you a context or a big picture.</p>
-
-<h3>Confusing branding</h3>
-
-<p>Maybe I start at the wrong time? Last couple of months <strong>chef</strong> has been changing their urls. e.g. getchef.com becomes chef.io</p>
-
-<p>And recipe respository is here: <a href="https://supermarket.chef.io">https://supermarket.chef.io</a>  and it is not linked from chef&rsquo;s main website.</p>
-
-<p>Then they are also changing their github repository from <code>opcodes</code> to <code>chef</code></p>
-
-<p>Utterly confusing to anyone who just started during this period.</p>
-
-<h3>How to approach cookbook?</h3>
-
-<p>I think cookbook is the best feature of chef, but it is not very adequately explained.</p>
-
-<p>That&rsquo;s why you need to get your hand dirty and learn how to write your cookbook by using <strong>kitchen</strong></p>
-
-<p>At the beginning I thought I can get away from writing custom cookbook. I now see it as an impossibility.</p>
-
-<h3>Keep converge until you get it</h3>
-
-<p>Use <strong>kitchen</strong> to create a cookbook skeleton. Start write up your recipes.</p>
-
-<p><strong>Tip</strong>: Break down your provisioning requirement into logical units and make them as self-contained and small and possible. In this way, you can test each individual recipe quickly with <code>kitchen converge</code>.</p>
-
-<p>When you are happy with all the recipes, do the final integration test by running up the chef provision with <strong>vagrant</strong>.</p>
-
-<h3>Sensu</h3>
-
-<p>More on sensu later&hellip; To be continued</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">How to Get Sensu Hipchat Plugin to Work</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-28T18:55:00+11:00" pubdate data-updated="true">Feb 28<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I encountered two issues when I want to deploy the hipchat notification handler.</p>
-
-<p>Firstly it throws an exception of &lsquo;Connection refused&rsquo;. But api.hipchat.com is reachable. I have verified by running <code>curl</code> against the v2 api.</p>
-
-<pre><code>    $ cat /tmp/t.json |sudo /opt/sensu/embedded/bin/ruby  /etc/sensu/handlers/notification/hipchat.rb -j /etc/sensu
-    /handlers/notification/hipchat.json
-    /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `initialize': Connection refused - connect(2) (Errno::ECONNREFUSED)
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `open'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:877:in `connect'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:851:in `start'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:1367:in `request'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:85:in `api_request'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:120:in `stash_exists?'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:132:in `block (2 levels) in filter_silenced'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
-</code></pre>
-
-<p>It turns out all sensu plugin has a dependeny on the sensu api. I did not start the sensu api when I tested, and hence the exception.</p>
-
-<p>Then I got a json config file related problem:</p>
-
-<pre><code>    $ cat /tmp/t.json |sudo /opt/sensu/embedded/bin/ruby  /etc/sensu/handlers/notification/hipchat.rb -j /handlers/notification/hipchat.json
-    /etc/sensu/handlers/notification/hipchat.rb:44:in `handle': undefined method `[]' for nil:NilClass (NoMethodError)
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:55:in `block in &lt;class:Handler&gt;'
-</code></pre>
-
-<p><code>-j</code> does not work as I expected. The script actually expects the .json configuration in the /opt/sensu/conf.d</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -459,6 +359,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -468,14 +376,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>

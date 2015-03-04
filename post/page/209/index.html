@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="One of the podcast I enjoy a lot listening to lately is the UC Berkeley History 7B by Professor Jennifer Burns.This course covers US History from &hellip;">
+  <meta name="description" content="Unit testing One of a few important lessons I learn from Java development is the importance of unit test. It is of course not a silver bullet to the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +121,84 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
+      <h1 class="entry-title"><a href="/post/2008/05/10/4108877290533417868/">The Importance of Being Nosy (Nosetests, Really)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-10T04:04:00+10:00" pubdate data-updated="true">May 10<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><span style="font-weight: bold;">Unit testing </span><br /><br />One of a few important lessons I learn from Java development is the importance of unit test. It is of course not a silver bullet to the software reliability/quality problem, but the consequence not adopting it can only be more dire.<br /><br />I used only <a href="http://www.junit.org/">JUnit </a>to implement unit tests in Java (Since JUnit is &ldquo;good enough&rdquo;, I never explore the alternative framework <a href="http://testng.org/doc/index.html">TestNG</a>.). Actually, problems in writing unit tests usually have very little to do with the frameworks themselves, but more with:<br /><br /><span style="font-weight: bold;">A</span>. The legacy code base you want to test against. For example, if the existing code base design is not modular enough, you have to go through some refactoring process to make unit testing possible. It is not the kind of luxury we can afford very often.<br /><br /><span style="font-weight: bold;">B.</span> Mock objects. <a href="http://www.easymock.org/">EasyMock</a> has made mocking a dependency easier, but maintaining the mock object codes still requires considerable effort.<br /><br /><span style="font-weight: bold;">Unit testing and Python</span><br /><br />I think unit testing is even more important for Python programmers.<br /><br />Since everything happens in runtime for Python, errors in your scripts, no matter syntactical or logical, will not be caught until you actually execute the line of code where the bug lives.</p>
+
+<br/><br/>
+
+
+<p>On top of it, a majority of commercial/in-house software contains so many features. The sheer number of possible combination of the execution pathways means thorough manual testing is simply unattainable, if not unrealistic.<br /><br />If at the end of the day, a production issue in your python software arises and it turns out to be &ldquo;incorrect indentation&rdquo;, the managers and users will look down on you pretty hard (&ldquo;Did you really test it?&rdquo;). Unit test + coverage tools can help us to avoid these kind of situation.<br /><br />Besides, unit tests can be used to safeguard corner cases and exceptional conditions. For financial applications, one of those commonly-seen mistakes is that a program fails to perform properly when a certain event (e.g. rollover) happens on a public holiday. With unit testing, we can subject the relevant codes to different combination of date and instruments, so we can make sure it will, for instance, calculate accrual correctly no matter what.<br /><br />Comparing Java, I find it easier to do unit testing in Python because, with Python&rsquo;s &ldquo;Duck Typing&rdquo; capability, we do not have to worry about maintaining mock objects at all. Whenever you need to mimic a dependency&rsquo;s behavior, just write a dummy class with just enough attributes/methods the testee expects. End of story.<br /><br />No more record and play APIs, as in EasyMock.<br /><br /><span style="font-weight: bold;">Nosetests makes it easy </span><br /><br />
+So, you can understand why I am so glad to find <a href="http://www.somethingaboutorange.com/mrl/projects/nose/">nose</a>. Nosetests is, in a nutshell, a unit test discovery tool. It can traverse down a python source code directory and pick up classes that extends <a href="http://docs.python.org/lib/testcase-objects.html">unittest.Testcase</a>, <a href="http://docs.python.org/lib/module-doctest.html">doc test</a>, and any classes/methods that follow the <a href="http://www.somethingaboutorange.com/mrl/projects/nose/#writing-tests">default naming convention</a>. I can now mix any testing styles depending on the task at hand.<br /><br />I usually use the following parameters with nosetests:<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&mdash;verbosity=3 &mdash;with-doctest -s &mdash;exe<br /><br /></code></pre><br />&ldquo;&mdash;exe&rdquo; is necessary because in <a href="http://www.cygwin.com/">cygwin</a>, my primary development environment, py files are usually set to be &ldquo;executable&rdquo;.<br /><br /><span style="font-weight: bold;">Feedback</span><br /><br />Do you have any tips and idea on unit testing/software quality assurance to share? Feel free.<br /><br /></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/05/07/jst_9093636818448097737/">Google Tech Talk: Economic Naturalist</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-07T21:53:00+10:00" pubdate data-updated="true">May 7<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>An interesting talk.<br /><br /><object height="350" width="425"><param name="movie" value="http://www.youtube.com/v/QalNVxeIKEE"><param name="wmode" value="transparent"><embed src="http://www.youtube.com/v/QalNVxeIKEE" type="application/x-shockwave-flash" wmode="transparent" height="350" width="425"></embed></object><br /><br />Although some of the feedbacks on Amazon are somewhat less than positive ( <br /><a style="font-style: italic; font-weight: bold;" type="amzn" asin="046500217X">Economic Naturalist: Explanations Everyday Enigmas</a>).</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/post/2008/04/26/jst_5181726699377686089/">UC Berkeley History 7B</a></h1>
     
     
@@ -224,78 +302,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/04/15/jst_4628982735147212056/">A New Energy Future</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-15T22:53:00+10:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is an absolutely fascinating talk by <a href="http://www.jcvi.org/">Craig Venter</a>.<br /><br /><a href="http://fora.tv/2008/02/25/Joining_3_5_Billion_Years_of_Microbial_Invention">Joining 3.5 Billion Years of Microbial Invention</a><br /><br />Very well worth your 1 hr 45 min of your life.<br /><br />Craig has actually covered a lot of subjects. A board outline here will not do justice to the brilliant talk, but I do it anyway:<br /><br />Craig first recounted his oceanic expedition in which he sailed around the world and collected micro-organism in seawater every 200 miles for genome sequencing. On his way he has met French who jealously guarded their &ldquo;genetic heritage&rdquo; in French Polynesians territory, and even detained by British navy for a while.<br /><br />The result is an astonishing proof of the richness and diversity of our eco-system.<br /><br />Each local area has its own set of unique, diverse micro-organism. But due to modern logistic, these micro-organism are transported to different part of the world by our vessels. When anchoring in destination ports, large container ships discard sea waters which they have pumped up from, possibly, another part of the world far far away. Imagine the magnitude of the evolution challenge to the local species when millions of new, alien micro-organism are being released, along with the sea water, into the local environment on a regular basis.<br /><br />Craig also described the mechanism to build a custom-design chromosomes. He emphasized that the scientists are not playing God. The technique is only possible because the microbial has invented the underlying mechanism through 3.5 billion years of evolution.<br /><br />Lastly he introduced the vision of the 4th Generation Biofuel, a fuel that is generated by engineered bacteria using solely CO2 and solar energy (whereas the 2nd and 3rd generations of technology still require sugar as input to the process). It is a better solution because, comparing ethanol solution, the generated fuel can contain more energy per unit, does not absorb water and will not bid up the food price.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/04/15/jst_494095387819494197/">Investment Survival Note 4 - Pitfalls for the Inexperienced</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-15T21:52:00+10:00" pubdate data-updated="true">Apr 15<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For any beginners in the stock market, they should try to gain experience by trading in the active , listed stocks. The beginners should learn to control their emotions through this exercise. After this  they can start to choose a particular subset of the market to focus on and trade exclusively. The idea that someone can trade equity, bond, IPO, OTC and other exotic products equally well all at the same time is absurd. In today&rsquo;s world the advantage of <span style="font-style: italic; font-weight: bold;">specialization </span>is already evident. The same holds true in capital preservation.<br /><br />The main advantages of investing in leader stocks are the following: The transaction fee is usually cheaper, and it is possible to monitor the stock performance daily.<br /><br />Beginners should avoid IPO because the prices are usually mispriced on the high side. Even if the IPO price is lower than fair value of the underlying, it will immediately lead to over-subscription. The amount allocated will be so small that it is hardly profitable.<em><br /><br />Secondly beginners should avoid buying shares directly from broker/dealer. We can hardly expect the salesman to be unbiased when they try to sell you their holdings.<br /><br />One should also avoid <a href="http://www.investorwords.com/4421/secondary_distribution.html">secondary distribution</a> because of the lack of price transparency.<br /><br />Lastly, simply avoid the promoter, the penny stock and stock with romantic titles.<br /><br /><span style="font-size:85%;"><span style="font-style: italic;"></em> I believes many &ldquo;investors&rdquo; in Hong Kong will dispute this.<br /><br /></span></span><br /><br /><span><span style="font-size: 85%;"><span style="font-style: italic;"> Quick link to </span><a target="_blank" href="http://www.amazon.com/gp/product/0471132977?ie=UTF8&amp;tag=thoonvarsub-20&amp;link_code=wql&amp;camp=212361&amp;creative=380601">The Battle for Investment Survival</a><span style="font-style: italic;"> by Gerald M. Loeb<br /><br /></span></span></span></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/210/">&larr; Older</a>
@@ -313,6 +319,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -322,14 +336,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>

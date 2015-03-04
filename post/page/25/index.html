@@ -9,7 +9,25 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is a neat trick Start your ipython like this ipython qtconsole --pylab inline, and the ipython session will plot graph in the interpreter window. ">
+  <meta name="description" content="1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found 0:12.72 #include &lt;linux/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +133,160 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/09/firefox-build-failure-on-osx/">Firefox Build Failure on Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-09T21:08:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:12.72 configure:19592:10: fatal error: 'linux/ethtool.h' file not found
+</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
+</span><span class='line'> 0:12.72          ^
+</span><span class='line'> 0:12.72 1 error generated.
+</span><span class='line'> 0:12.72 configure: failed program was:
+</span><span class='line'> 0:12.72 #line 19591 "configure"
+</span><span class='line'> 0:12.72 #include "confdefs.h"
+</span><span class='line'> 0:12.72 #include &lt;linux/ethtool.h>
+</span><span class='line'> 0:12.73 int main() {
+</span><span class='line'> 0:12.73  struct ethtool_cmd cmd; cmd.speed_hi = 0;
+</span><span class='line'> 0:12.73 ; return 0; }
+</span><span class='line'> 0:12.73 configure:19790: checking __attribute__ ((aligned ())) support
+</span><span class='line'> 0:12.73 configure:19807: /usr/bin/clang -c  -std=gnu99 -fno-strict-aliasing -fno-math-errno -pthread -DNO_X11 -Werror -Qunused-arguments  conftest.c 1>&5
+</span><span class='line'> 0:12.73 configure: error: yasm is a required build tool for this architecture when webm is enabled. You may either install yasm or --disable-webm (which disables the WebM video format). See https://developer.mozilla.org/en/YASM for more details.
+</span><span class='line'> 0:12.73 *** Fix above errors and then restart with               "/Applications/Xcode.app/Contents/Developer/usr/bin/make -f client.mk build"
+</span><span class='line'> 0:12.73 make[2]: *** [configure] Error 1
+</span><span class='line'> 0:12.73 make[1]: *** [obj-x86_64-apple-darwin13.0.2/Makefile] Error 2
+</span><span class='line'> 0:12.73 make: *** [build] Error 2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Basically installing yasm fixes this problem. The &lsquo;linux/ethtool.h&rsquo; fatal error seems to be irrevelant.</p>
+
+<p>Here some build statistic (<code>mach resource-usage</code>):</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Wall Time (s)   1230.61
+</span><span class='line'>Start Date  2014-01-09T10:24:38.582Z
+</span><span class='line'>End Date    2014-01-09T10:45:09.191Z
+</span><span class='line'>CPU %   93.85
+</span><span class='line'>Write Bytes 4659960320
+</span><span class='line'>Read Bytes  1421654016
+</span><span class='line'>Write Time  1749179
+</span><span class='line'>Read Time   509074</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/06/dependency-on-mathjax-dot-js/">Dependency on MathJax.js</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-06T19:12:00+11:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By default, ipython notebook will use MathJax on a CDN</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ipython notebook
+</span><span class='line'>2014-01-06 19:08:43.857 [NotebookApp] Using existing profile dir: u'/Users/antkong/.ipython/profile_default'
+</span><span class='line'>2014-01-06 19:08:43.865 [NotebookApp] Using MathJax from CDN: http://cdn.mathjax.org/mathjax/latest/MathJax.js
+</span><span class='line'>2014-01-06 19:08:43.888 [NotebookApp] Serving notebooks from local directory: /Users/antkong/wd/py
+</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] The IPython Notebook is running at: http://127.0.0.1:8888/
+</span><span class='line'>2014-01-06 19:08:43.889 [NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To download and install the mathjax.js locally, we can run</p>
+
+<pre><code>from IPython.external.mathjax import install_mathjax
+install_mathjax()
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -396,118 +568,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/03/conda-and-ipython/">Conda and Ipython</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-03T23:01:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
-
-<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
-
-<p>Now I have four set of python runtime installed on my MBP:</p>
-
-<ul>
-<li><p>From Apple</p></li>
-<li><p>From Homebrew</p></li>
-<li><p>From Pythonbrew</p></li>
-<li><p>From conda</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">Pandas - dateutil.parser Import Error</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-03T21:24:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Try to run <code>import pandas</code> in python. Encountered this:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span>
-</span><span class='line'><span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">hashtable</span><span class="p">,</span> <span class="n">tslib</span><span class="p">,</span> <span class="n">lib</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;tslib.pyx&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="n">init</span> <span class="n">pandas</span><span class="o">.</span><span class="n">tslib</span> <span class="p">(</span><span class="n">pandas</span><span class="o">/</span><span class="n">tslib</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">48782</span><span class="p">)</span>
-</span><span class='line'><span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Fixed by running</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install python-dateutil
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/26/">&larr; Older</a>
@@ -525,6 +585,14 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -534,14 +602,6 @@ Fixed-rate payer: pay a fixed rate of 5.25 percent
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>

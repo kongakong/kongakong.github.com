@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-03T07:06:49+11:00</updated>
+  <updated>2015-03-04T12:40:58+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sensu mailer problem]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/04/sensu-mailer-problem/"/>
+    <updated>2015-03-04T11:39:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/04/sensu-mailer-problem</id>
+    <content type="html"><![CDATA[<p>Got this crazy error message:</p>
+
+<pre><code>    /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:950:in `check_response': 454 4.7.0 TLS not available due to local problem (Net::SMTPServerBusy)
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:919:in `getok'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:819:in `starttls'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:561:in `do_start'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:519:in `start'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/network/delivery_methods/smtp.rb:112:in `deliver!'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/message.rb:2141:in `do_delivery'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/message.rb:238:in `deliver'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/mail.rb:140:in `deliver'
+            from /etc/sensu/handlers/notification/mailer.rb:138:in `block in handle'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+            from /etc/sensu/handlers/notification/mailer.rb:137:in `handle'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:55:in `block in &lt;class:Handler&gt;'
+</code></pre>
+
+<p>After checking the mail log, I found these errors:</p>
+
+<pre><code>    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:02001002:system library:fopen:No such file or directory:bss_file.c:169:fopen('/etc/postfix/cacert.pem','r'):
+    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:2006D080:BIO routines:BIO_new_file:no such file:bss_file.c:172:
+    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:0B084002:x509 certificate routines:X509_load_cert_crl_file:system lib:by_file.c:274:
+</code></pre>
+
+<p>So here is a solution:</p>
+
+<pre><code> sudo openssl req -new -x509 -nodes -out cacert.pem -keyout cacert.pem -days 3650
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[prevent failed task stops provisioning]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/03/prevent-failed-task-stops-provisioning/"/>
+    <updated>2015-03-03T08:50:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/03/prevent-failed-task-stops-provisioning</id>
+    <content type="html"><![CDATA[<p>I mentioned eariler I have ecountered problem when installing some gem like <a href="http://www.ahwkong.com/2015/02/26/gem-install-hipchat">this</a></p>
+
+<p>Here is a way to prevent failure stops the chef provision. You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[find out script location in bash]]></title>
@@ -497,55 +545,6 @@
 
 <pre><code>   tmux resize-pane -t 1 -U    # 1 is the pane id 
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[useful vbox command]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/23/useful-vbox-command/"/>
-    <updated>2015-02-23T21:21:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/23/useful-vbox-command</id>
-    <content type="html"><![CDATA[<p>This will list out all the VMs</p>
-
-<pre><code>    $ VBoxManage list vms
-    "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2}
-    "serverr" {eca868d2-6d5d-4b49-b076-27f5ef396355}
-    "sensu_client" {70b38f62-0a0c-4965-b4f4-5360ec761d64}
-    "analytics" {ab9e59e4-7058-4c9f-80af-c403348cac6f}
-    "sensu-server_default_1424653555631_75219" {4d7174f7-6f7b-4732-98c3-9509c426cae3}
-    "simple-sensu-client_default_1424660131045_1714" {1eb59ae6-2d5e-4b0f-9135-a7de6c882e1d}
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Innovation]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/22/innovation/"/>
-    <updated>2015-02-22T21:32:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/22/innovation</id>
-    <content type="html"><![CDATA[<h2>Video</h2>
-
-<p><a href="https://www.youtube.com/watch?v=Mtjatz9r-Vc">The art of innovation by Guy Kawasaki</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=pii8tTx1UYM">Our approach to innovation is dead wrong by Diana Kander</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=YKV3rhzvaC8">The New Rules of Innovation by Carl Bass</a></p>
-
-<p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Do schools kill creativity? by Sir Ken Robinson</a></p>
-
-<blockquote><p>(In a kids&#8217; nativity play) The three boys came in, four-year-olds with tea towels on their heads, and they put these boxes down, and the first boy said, &ldquo;I bring you gold.&rdquo; And the second boy said, &ldquo;I bring you myrrh.&rdquo; And the third boy said, &ldquo;Frank sent this.&rdquo;</p>
-
-<p>Actually, do you know that old philosophical thing, if a tree falls in a forest and nobody hears it, did it happen? Remember that old chestnut? I saw a great t-shirt recently, which said, &ldquo;If a man speaks his mind in a forest, and no woman hears him, is he still wrong?&rdquo;</p></blockquote>
-
-<p><a href="http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"><em>Full transcript</em></a></p>
-
-<p><a href="https://www.youtube.com/watch?v=86x-u-tz0MA">Your elusive creative genius by Elizabeth Gilbert</a></p>
-
-<blockquote><p>Fear based questions</p></blockquote>
-
-<p><a href="https://www.youtube.com/watch?v=kIruNparMGQ">The Face of Innovation by JR Reagan</a></p>
-
-<blockquote><p>Freshpaper</p></blockquote>
 ]]></content>
   </entry>
   

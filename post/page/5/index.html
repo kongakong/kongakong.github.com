@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I have been searching the internet for a while to understand this expression ${0:h}. Finally here is an answer: info -f zsh -n Modifiers ">
+  <meta name="description" content="This will list out all the VMs $ VBoxManage list vms "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2} "serverr" { &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,109 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/23/useful-vbox-command/">Useful Vbox Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-23T21:21:00+11:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This will list out all the VMs</p>
+
+<pre><code>    $ VBoxManage list vms
+    "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2}
+    "serverr" {eca868d2-6d5d-4b49-b076-27f5ef396355}
+    "sensu_client" {70b38f62-0a0c-4965-b4f4-5360ec761d64}
+    "analytics" {ab9e59e4-7058-4c9f-80af-c403348cac6f}
+    "sensu-server_default_1424653555631_75219" {4d7174f7-6f7b-4732-98c3-9509c426cae3}
+    "simple-sensu-client_default_1424660131045_1714" {1eb59ae6-2d5e-4b0f-9135-a7de6c882e1d}
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/22/innovation/">Innovation</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-22T21:32:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Video</h2>
+
+<p><a href="https://www.youtube.com/watch?v=Mtjatz9r-Vc">The art of innovation by Guy Kawasaki</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=pii8tTx1UYM">Our approach to innovation is dead wrong by Diana Kander</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=YKV3rhzvaC8">The New Rules of Innovation by Carl Bass</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Do schools kill creativity? by Sir Ken Robinson</a></p>
+
+<blockquote><p>(In a kids&#8217; nativity play) The three boys came in, four-year-olds with tea towels on their heads, and they put these boxes down, and the first boy said, &ldquo;I bring you gold.&rdquo; And the second boy said, &ldquo;I bring you myrrh.&rdquo; And the third boy said, &ldquo;Frank sent this.&rdquo;</p>
+
+<p>Actually, do you know that old philosophical thing, if a tree falls in a forest and nobody hears it, did it happen? Remember that old chestnut? I saw a great t-shirt recently, which said, &ldquo;If a man speaks his mind in a forest, and no woman hears him, is he still wrong?&rdquo;</p></blockquote>
+
+<p><a href="http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"><em>Full transcript</em></a></p>
+
+<p><a href="https://www.youtube.com/watch?v=86x-u-tz0MA">Your elusive creative genius by Elizabeth Gilbert</a></p>
+
+<blockquote><p>Fear based questions</p></blockquote>
+
+<p><a href="https://www.youtube.com/watch?v=kIruNparMGQ">The Face of Innovation by JR Reagan</a></p>
+
+<blockquote><p>Freshpaper</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -300,97 +403,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/18/chsh/">Chsh</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-18T05:22:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Unable to switch to zsh which is installed from brew</p>
-
-<pre><code>    $ chsh -s `which zsh`
-    Changing shell for demo.
-    Password for demo:
-    chsh: /usr/local/bin/zsh: non-standard shell
-</code></pre>
-
-<p>Solution:</p>
-
-<p>Add <code>/usr/local/bin/zsh</code> to <code>/etc/shells</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-17T15:14:00+11:00" pubdate data-updated="true">Feb 17<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Getting this error from my server code which uses boto to interace with Dynamo</p>
-
-<pre><code>   [Mon Feb 16 07:25:22 2015] [error] JSONResponseError: JSONResponseError: 400 Bad Request
-   [Mon Feb 16 07:25:22 2015] [error] {u'message': u'Signature expired: 20150216T072522Z is now earlier than 20150216T07252
-   2Z (20150216T074022Z - 15 min.)', u'__type': u'com.amazon.coral.service#InvalidSignatureException'}
-</code></pre>
-
-<p>The server is a <strong>Window Server 2012 Standard</strong> box</p>
-
-<p>Reboot the box fixed the problem</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/6/">&larr; Older</a>
@@ -408,6 +420,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -417,14 +437,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>

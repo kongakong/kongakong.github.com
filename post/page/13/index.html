@@ -9,7 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Here is the code in question: class Something: NSCoding { ... let smth = Something() let data = NSKeyedArchiver.archivedDataWithRootObject(smth); It &hellip;">
+  <meta name="description" content="This piece code here: 1
+2
+3
+dismissViewControllerAnimated(true, completion: { () -> Void in let account = Account()
+}) throws exception: Cannot &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +119,108 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift Closure Error: Boolean Is Not Convertible to Void</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-17T10:50:00+10:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This piece code here:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dismissViewControllerAnimated(true, completion: { () -> Void in
+</span><span class='line'>    let account = Account()
+</span><span class='line'>})</span></code></pre></td></tr></table></div></figure>
+
+
+<p>throws exception:</p>
+
+<pre><code>Cannot convert the expression's type 'Boolean' to type 'Void'
+</code></pre>
+
+<p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
+
+<p>Adding a <code>return ()</code> as the last expression to the block fixes the problem</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of Type NSInteger Should Not Be Used as Format Arguments</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-14T18:01:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In this example,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>NSInteger val = 15000;
+</span><span class='line'>    NSLog(@"%i", val);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>XCode will flag this error</p>
+
+<pre><code>Values of type "NSInteger" should not be used as format arguments: add an explicit cast to 'long' instead.
+</code></pre>
+
+<p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -243,90 +349,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/angular-bower/">Starting an Angularjs Project With Bower</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T10:53:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>First you need to install <code>npm</code> via <code>brew</code></p>
-
-<p>Then run <code>npm install -g bower</code> as documented in <a href="http://bower.io/">bower websiter</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/10/make-iphone-vibrate/">Make Iphone Vibrate</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-10T13:31:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use these APIs to set the iphone to vibrate</p>
-
-<pre><code>AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-</code></pre>
-
-<p>The first function plays a beep sound if the devices don’t support vibration. The second function on the other hand does nothing on unsupported devices.</p>
-
-<p>if <code>AVRecorder</code> is running, iphone will not vibrate too.</p>
-
-<p>Source: <a href="http://stackoverflow.com/questions/4724980/making-the-iphone-vibrate">Stackoverflow</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/14/">&larr; Older</a>
@@ -344,6 +366,14 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -353,14 +383,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>

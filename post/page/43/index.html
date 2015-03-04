@@ -9,8 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Added SSToolkit to my Podfile and got this message. Don’t know what it means… 1
-[!] [SSToolkit] Specification#config is deprecated. The config is &hellip;">
+  <meta name="description" content="When I start up emacs in shell, I got this error message: 1
+Error in init file: Symbol's function definition is void: global-linum-mode But my config &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +116,96 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/31/p-51794320183/">When I Start Up Emacs in Shell, I Got This Error Message:</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-31T20:00:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I start up emacs in shell, I got this error message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Error in init file: Symbol's function definition is void: global-linum-mode</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But my config file works fine with Aquamacs.</p>
+
+<p>It turns out the stock emacs that comes with OSX is version 22.1.1. If I switch to emacs from brew, which is of version GNU Emacs 24.2.1, the error message goes away.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/30/p-51714499390/">Adding SSZipArchive to Podfile</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-30T20:00:00+10:00" pubdate data-updated="true">May 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The podfile is for a osx 10.8 project. Here is the output from <code>podfile install</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Installing SSZipArchive (0.2.3)
+</span><span class='line'>Using libextobjc (0.2.5)
+</span><span class='line'>dtrace: failed to open framework/TestResources/CorePlotProbes.d: No such file or directory</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -322,93 +412,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/12/p-50250633524/">Algorithms for Making Good Decisions</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-12T21:35:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>Algorithms for Making Good Decisions</strong> by Kevin Leyton-Brown</p>
-
-<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/VJrqh6iT5BA "></iframe></div>
-
-
-<p>The video was posted in 2011, but it is still very informative.</p>
-
-<p>Kevin is also a contributor to the Game Theory course in coursera.org.</p>
-
-<p>Presentation slide can be found here:</p>
-
-<p><a href="http://www.cs.ubc.ca/~kevinlb/talk.php?u=2011-Calumet-AlgorithmsDecisions.pdf">http://www.cs.ubc.ca/~kevinlb/talk.php?u=2011-Calumet-AlgorithmsDecisions.pdf</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/09/p-50003419743/">Useful Erlang Function</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-09T20:00:00+10:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Tell you the location of library files</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>code:lib_dir(xmerl).</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/44/">&larr; Older</a>
@@ -426,6 +429,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -435,14 +446,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>

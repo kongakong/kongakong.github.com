@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is because I have turned on the flag ‘Native Client GDB-based debugging’. It is not compatible with nexe that are linked with newlib.
+  <meta name="description" content="Find out the current emac.d location C-H v init-user-file &lt;RET&gt;
 ">
   
 
@@ -116,6 +116,86 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/04/27/p-48953372171/">Emacs Fu 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-27T07:17:00+10:00" pubdate data-updated="true">Apr 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Find out the current emac.d location</p>
+
+<p><code>C-H v init-user-file &lt;RET&gt;</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/04/17/p-48145048805/">Using Sbt in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-17T07:18:00+10:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First, to install, follow the instrument here:</p>
+
+<p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
+
+<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
+
+<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -237,84 +317,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/12/03/p-37050868937/">XCode Linker Error</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-03T06:44:00+11:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>An old project was created for iOS 5. When trying to re-run it, I got these error messages</p>
-
-<p>Do not recall this kind of trouble before with iOS upgrade.</p>
-
-<p>Set the ‘Deployment Target’ to iOS6, clean and rebuilt but it did not work.</p>
-
-<p>AVFoundation Framework is actually dropped out from “Link Binary with Libraries” section. Re-adding the framework fixes the issue.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/12/02/p-37006859461/">What Is Portable Native Client?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-12-02T15:33:00+11:00" pubdate data-updated="true">Dec 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="What%20is%20Portable%20Native%20Client?">http://www.chromium.org/nativeclient/pnacl/building-and-testing-portable-native-client</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/47/">&larr; Older</a>
@@ -332,6 +334,14 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
@@ -341,14 +351,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/lesson-from-vagrant/">Lesson from learning to use vagrant, chef and sensu</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">how to get sensu hipchat plugin to work</a>
       </li>
     
   </ul>
