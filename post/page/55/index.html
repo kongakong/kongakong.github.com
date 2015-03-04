@@ -9,9 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Calculate regular payment based on rate, number of payment and PV 1
-2
-def pmt(i, n, p): return i * p * pow((1 + i), n) / (1 - pow((1 + i), n)) &hellip;">
+  <meta name="description" content="Q: Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -117,6 +115,60 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/11/p-29187540494/">Calculate Cash Flows in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-11T19:54:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
+
+<p><em>A:</em></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># contribution at age
+</span><span class='line'>>>> [(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+</span><span class='line'>
+</span><span class='line'>>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -303,42 +355,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/06/p-28828938592/">Wat</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-06T19:45:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.destroyallsoftware.com/talks/wat/">Wat</a>]</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/56/">&larr; Older</a>
@@ -356,6 +372,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
@@ -369,10 +389,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
       </li>
     
   </ul>

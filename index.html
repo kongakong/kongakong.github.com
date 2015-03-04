@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Got this crazy error message: /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:950:in `check_response': 454 4.7.0 TLS not available due to local &hellip;">
+  <meta name="description" content="Who will design a tool for IT professional this way? It is a pure maddness I want to dump some output from powershell. It is a very common task but &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,59 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/04/madness-of-powershell/">Madness of Powershell</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-04T17:11:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Who will design a tool for IT professional this way? It is a pure maddness</p>
+
+<p>I want to dump some output from powershell. It is a very common task but somehow Powershell takes the liberty to truncate the output based on arbitrary condition.</p>
+
+<p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
+
+<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field. It is what I want.</p>
+
+<p>After testing is done, I deploy the script to run as a background task.</p>
+
+<p>Now powershell decides it wants to truncate the commandline field. Now I am getting some &ldquo;c:\some\path&#8230;&rdquo; instead of the full path of the executables.</p>
+
+<p>Utter maddenss. A waste of everyone&rsquo;s time!</p>
+
+<p>Solution:</p>
+
+<pre><code>    ft -AutoSize | out-string -width 4096 
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -305,54 +358,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to Identify and Kill Process Spawned by a Tmux Session?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-02T19:49:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it.</p>
-
-<p>So I did the following to identify the process:</p>
-
-<pre><code>    $ tmux list-panes -s -F "#{pane_pid} #{pane_current_command}"
-    1896 tmux
-    1899 ssh
-    $ pstree 1899  # Problem at the lower pane
-    -+= 01899 antkong -zsh
-     \--= 65662 antkong ssh -i prod.pem ubuntu@localhost -p 2222
-</code></pre>
-
-<p>Then run <code>kill -9 1899</code> to kill it</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -368,6 +373,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
@@ -381,10 +390,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: powershell | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/powershell/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-04T13:18:57+11:00</updated>
+  <updated>2015-03-04T17:27:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[madness of powershell]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/04/madness-of-powershell/"/>
+    <updated>2015-03-04T17:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/04/madness-of-powershell</id>
+    <content type="html"><![CDATA[<p>Who will design a tool for IT professional this way? It is a pure maddness</p>
+
+<p>I want to dump some output from powershell. It is a very common task but somehow Powershell takes the liberty to truncate the output based on arbitrary condition.</p>
+
+<p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
+
+<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field. It is what I want.</p>
+
+<p>After testing is done, I deploy the script to run as a background task.</p>
+
+<p>Now powershell decides it wants to truncate the commandline field. Now I am getting some &ldquo;c:\some\path...&rdquo; instead of the full path of the executables.</p>
+
+<p>Utter maddenss. A waste of everyone&rsquo;s time!</p>
+
+<p>Solution:</p>
+
+<pre><code>    ft -AutoSize | out-string -width 4096 
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[I want to enable]]></title>

@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-04T13:18:57+11:00</updated>
+  <updated>2015-03-04T17:27:22+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[madness of powershell]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/04/madness-of-powershell/"/>
+    <updated>2015-03-04T17:11:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/04/madness-of-powershell</id>
+    <content type="html"><![CDATA[<p>Who will design a tool for IT professional this way? It is a pure maddness</p>
+
+<p>I want to dump some output from powershell. It is a very common task but somehow Powershell takes the liberty to truncate the output based on arbitrary condition.</p>
+
+<p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
+
+<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field. It is what I want.</p>
+
+<p>After testing is done, I deploy the script to run as a background task.</p>
+
+<p>Now powershell decides it wants to truncate the commandline field. Now I am getting some &ldquo;c:\some\path&#8230;&rdquo; instead of the full path of the executables.</p>
+
+<p>Utter maddenss. A waste of everyone&rsquo;s time!</p>
+
+<p>Solution:</p>
+
+<pre><code>    ft -AutoSize | out-string -width 4096 
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[sensu mailer problem]]></title>
@@ -537,22 +563,6 @@
 <p>This is the command:</p>
 
 <pre><code> C-b :attach -d
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[tmux resizing pane]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/25/tmux-resizing-pane/"/>
-    <updated>2015-02-25T01:20:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/25/tmux-resizing-pane</id>
-    <content type="html"><![CDATA[<p>I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-<Up>&rsquo;, but since my C-<UP> is binded to expose in OSX, it did not work.</p>
-
-<p>Fortunately it is very easy to control the behavior via command line. First of all, you need to identify the pane. It can be done either by a &lsquo;C-b q&rsquo; or by command <code>tmux list-panes</code>. The pane from which you issued the command will be marked as <code>active</code>.</p>
-
-<p>Once the id of the pane is identified, you can run the following command:</p>
-
-<pre><code>   tmux resize-pane -t 1 -U    # 1 is the pane id 
 </code></pre>
 ]]></content>
   </entry>

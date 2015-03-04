@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="if - (void)scrollViewDidScroll:(UIScrollView *)scrollView of the delegate is not called, one should check: Has the delegate of the ScrollView been &hellip;">
+  <meta name="description" content="Wanted to declare and initialise a static variable in a .m file. Objective-c compiler does not like it, and raise this error message: Initializer &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,53 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/09/dispatch-once/">Dispatch_once</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-09T21:22:00+11:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -307,42 +354,6 @@ receive 6-month LIBOR
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/24/">&larr; Older</a>
@@ -360,6 +371,10 @@ receive 6-month LIBOR
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
@@ -373,10 +388,6 @@ receive 6-month LIBOR
     
       <li class="post">
         <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to identify and kill process spawned by a tmux session?</a>
       </li>
     
   </ul>
