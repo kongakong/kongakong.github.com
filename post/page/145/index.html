@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t
-">
+  <meta name="description" content="First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency. Secondly, it avoids this kind of error &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,46 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/04/p-6172071952/">Item 22: Prefer Pass-by-reference to Pass-by-value</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-04T20:52:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>First advantage: avoid the calling of copy constructor for parameters in a function call. Good for efficiency.</p>
+
+<p>Secondly, it avoids this kind of error:</p>
+
+<p>A function takes a base class parameter using pass-by-value. The caller of the function passes in a derived class instance to this function. The copy constructor will construct an instance of the base class and thereby strip off all subclass related information.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -261,42 +300,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/06/03/p-6107440181/">How to Do Lazy Loading With NSURLConnection</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-03T00:09:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="How%20to%20do%20Lazy%20Loading%20with%20NSURLConnection">http://www.cocoanetics.com/2011/05/and-now-lazy-loading-with-nsurlconnection/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/146/">&larr; Older</a>
@@ -314,6 +317,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
       </li>
     
@@ -327,10 +334,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
       </li>
     
   </ul>

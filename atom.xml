@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-06T14:30:14+11:00</updated>
+  <updated>2015-03-06T15:10:54+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ruby gem ssl problem]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/06/ruby-gem-ssl-problem/"/>
+    <updated>2015-03-06T15:08:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/06/ruby-gem-ssl-problem</id>
+    <content type="html"><![CDATA[<p>Gem install can throw a ssl exception. Here is a <a href="http://stackoverflow.com/a/27298259/58129">solution</a></p>
+
+<p>Here is the summary:</p>
+
+<p><strong>Download</strong></p>
+
+<pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
+</code></pre>
+
+<p><strong>Find out installation location</strong></p>
+
+<pre><code>    C:\&gt;gem which rubygems
+    C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
+</code></pre>
+
+<p>Then just copy the .pem file in ../2.1.0/rubygems/ssl_certs/</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Download file with lynx]]></title>
@@ -522,35 +546,6 @@
     #
     deb http://security.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
     deb-src http://security.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[sensu plugin problem]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem/"/>
-    <updated>2015-02-26T02:12:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/26/sensu-plugin-problem</id>
-    <content type="html"><![CDATA[<p>Encountered problem when installing sensu-plugin</p>
-
-<pre><code>    $ gem install sensu-plugin --no-rdoc --no-ri
-    /usr/bin/ruby1.9.1 extconf.rb
-    /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require': cannot load such file -- mkmf (LoadError)
-            from /usr/lib/ruby/1.9.1/rubygems/custom_require.rb:36:in `require'
-            from extconf.rb:1:in `&lt;main&gt;'
-</code></pre>
-
-<p>This is the solution: use the ruby runtime embedded in sensu</p>
-
-<pre><code>    $ /opt/sensu/embedded/bin/gem install sensu-plugin
-    Fetching: sensu-plugin-1.1.0.gem (100%)
-    ERROR:  While executing gem ... (Gem::FilePermissionError)
-        You don't have write permissions for the /opt/sensu/embedded/lib/ruby/gems/2.0.0 directory.
-    vagrant@default-ubuntu-1404:~$ sudo /opt/sensu/embedded/bin/gem install sensu-plugin
-    Successfully installed sensu-plugin-1.1.0
-    Parsing documentation for sensu-plugin-1.1.0
-    Installing ri documentation for sensu-plugin-1.1.0
-    1 gem installed
 </code></pre>
 ]]></content>
   </entry>

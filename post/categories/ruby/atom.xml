@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ruby/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-06T14:30:14+11:00</updated>
+  <updated>2015-03-06T15:10:54+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ruby gem ssl problem]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/06/ruby-gem-ssl-problem/"/>
+    <updated>2015-03-06T15:08:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/06/ruby-gem-ssl-problem</id>
+    <content type="html"><![CDATA[<p>Gem install can throw a ssl exception. Here is a <a href="http://stackoverflow.com/a/27298259/58129">solution</a></p>
+
+<p>Here is the summary:</p>
+
+<p><strong>Download</strong></p>
+
+<pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
+</code></pre>
+
+<p><strong>Find out installation location</strong></p>
+
+<pre><code>    C:\&gt;gem which rubygems
+    C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
+</code></pre>
+
+<p>Then just copy the .pem file in ../2.1.0/rubygems/ssl_certs/</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[sensu plugin problem]]></title>
@@ -107,69 +131,6 @@ Done installing documentation for bundler, bundle after 1 seconds
     <updated>2013-11-27T20:24:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2013/11/27/rvm-install</id>
     <content type="html"><![CDATA[<p>At first the <code>rvm install ruby-1.9.3-p484</code> did not work on OSX. The extra <code>--with-gcc=clang</code> parameter fixed the issue</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ruby quirk?]]></title>
-    <link href="http://www.ahwkong.com/post/2013/07/06/ruby-quirk/"/>
-    <updated>2013-07-06T08:06:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/07/06/ruby-quirk</id>
-    <content type="html"><![CDATA[<p>Have absolutely zero knowledge of Ruby, although I am planning to learn more about this langauge since I started using Octopress.</p>
-
-<p>Came across this code snippet in <a href="https://twitter.com/garybernhardt/status/352864696547803136">this tweet</a></p>
-
-<p>The behavior does look a bit odd from a python prespective.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;mbp002:~ me$ irb</span>
-</span><span class='line'><span class="sr">2.0.0p195 :001 &gt; 1,2</span>
-</span><span class='line'><span class="sr">SyntaxError: (irb):1: syntax error, unexpected &amp;lsquo;,&amp;rsquo;, expecting end-of-input&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">from</span> <span class="sr">/Users/me</span><span class="o">/.</span><span class="n">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mi">2</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">p195</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="ss">irb</span><span class="p">:</span><span class="mi">16</span><span class="ss">:in</span> <span class="sb">`&amp;lt;main&amp;gt;&#39;</span>
-</span><span class='line'><span class="sb">&lt;/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sb">&lt;p&gt;2.0.0p195 :003 &gt; x=1,y=2</span>
-</span><span class='line'><span class="sb"> =&gt; [1, 2]</span>
-</span><span class='line'><span class="sb">2.0.0p195 :004 &gt; x</span>
-</span><span class='line'><span class="sb"> =&gt; [1, 2]</span>
-</span><span class='line'><span class="sb">2.0.0p195 :005 &gt; y</span>
-</span><span class='line'><span class="sb"> =&gt; 2&lt;/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sb">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>Apparently it is treated like</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;x = [1, (y = 2)]&lt;/</span><span class="nb">p</span><span class="o">&gt;&lt;</span><span class="sr">/blockquote&gt;&lt;/</span><span class="n">blockquote</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

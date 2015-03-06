@@ -9,7 +9,9 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Here is the code in question: class Something: NSCoding { ... let smth = Something() let data = NSKeyedArchiver.archivedDataWithRootObject(smth); It &hellip;">
+  <meta name="description" content="In this example, 1
+2
+NSInteger val = 15000; NSLog(@"%i", val); XCode will flag this error Values of type "NSInteger" should not be used as format &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +117,55 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of Type NSInteger Should Not Be Used as Format Arguments</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-14T18:01:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In this example,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>NSInteger val = 15000;
+</span><span class='line'>    NSLog(@"%i", val);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>XCode will flag this error</p>
+
+<pre><code>Values of type "NSInteger" should not be used as format arguments: add an explicit cast to 'long' instead.
+</code></pre>
+
+<p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -281,52 +332,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/10/make-iphone-vibrate/">Make Iphone Vibrate</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-10T13:31:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use these APIs to set the iphone to vibrate</p>
-
-<pre><code>AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
-AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-</code></pre>
-
-<p>The first function plays a beep sound if the devices don’t support vibration. The second function on the other hand does nothing on unsupported devices.</p>
-
-<p>if <code>AVRecorder</code> is running, iphone will not vibrate too.</p>
-
-<p>Source: <a href="http://stackoverflow.com/questions/4724980/making-the-iphone-vibrate">Stackoverflow</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/15/">&larr; Older</a>
@@ -344,6 +349,10 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
       </li>
     
@@ -357,10 +366,6 @@ AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
       <li class="post">
         <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
       </li>
     
   </ul>

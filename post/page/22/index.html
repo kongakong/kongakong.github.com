@@ -9,13 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
-2
-3
-4
-UIGraphicsBeginImageContext(theCell.bounds.size);
-[theCell.layer renderInContext:UIGraphicsGetCurrentContext()];
-UIImage *renderedCellImage &hellip;">
+  <meta name="description" content="I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,6 +115,55 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and View Controller</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-19T02:02:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere. But I digress).</p>
+
+<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have ensured that there is no typo in the my notification name (The name is defined in a header file). I have also make sure the notification is fired on the main thread, like so:</p>
+
+<pre><code>dispatch_async(dispatch_get_main_queue(),^{
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
+});
+</code></pre>
+
+<p>However my UIViewControllers still do not receive any notification at all.</p>
+
+<p>It turns out it is because the controllers instances have gone out of scope. I found out by putting a <code>NSLog</code> in the <code>dealloc</code> method. It proves that the controllers have gone out of scope.</p>
+
+<p> In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers. Will test if it has any adverse effect or not.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -364,109 +407,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/13/timezone-in-objective-c/">Timezones in Objective-c</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-13T07:34:00+11:00" pubdate data-updated="true">Feb 13<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To find out all timezone abbreviation,</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">NSEnumerator</span> <span class="o">*</span><span class="n">keys</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="n">keyEnumerator</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">NSString</span><span class="o">*</span> <span class="n">value</span><span class="p">;</span>
-</span><span class='line'>    <span class="k">while</span> <span class="p">((</span><span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="n">keys</span> <span class="n">nextObject</span><span class="p">]))</span> <span class="p">{</span>
-</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@ %@&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="p">[[</span><span class="n">NSTimeZone</span> <span class="n">abbreviationDictionary</span><span class="p">]</span> <span class="nl">objectForKey:</span><span class="n">value</span><span class="p">]</span> <span class="p">);</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is the output:</p>
-
-<pre><code>EDT America/New_York
-GMT GMT
-AST America/Halifax
-IRST Asia/Tehran
-ICT Asia/Bangkok
-PET America/Lima
-KST Asia/Seoul
-PST America/Los_Angeles
-CDT America/Chicago
-EEST Europe/Istanbul
-NZDT Pacific/Auckland
-WEST Europe/Lisbon
-EAT Africa/Addis_Ababa
-HKT Asia/Hong_Kong
-IST Asia/Calcutta
-MDT America/Denver
-NZST Pacific/Auckland
-WIT Asia/Jakarta
-ADT America/Halifax
-BST Europe/London
-ART America/Argentina/Buenos_Aires
-CAT Africa/Harare
-GST Asia/Dubai
-PDT America/Los_Angeles
-SGT Asia/Singapore
-COT America/Bogota
-PKT Asia/Karachi
-EET Europe/Istanbul
-UTC UTC
-WAT Africa/Lagos
-EST America/New_York
-JST Asia/Tokyo
-CLST America/Santiago
-CET Europe/Paris
-BDT Asia/Dhaka
-MSK Europe/Moscow
-AKDT America/Juneau
-CLT America/Santiago
-AKST America/Juneau
-BRST America/Sao_Paulo
-BRT America/Sao_Paulo
-CEST Europe/Paris
-CST America/Chicago
-HST Pacific/Honolulu
-MSD Europe/Moscow
-MST America/Denver
-PHT Asia/Manila
-WET Europe/Lisbon
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/23/">&larr; Older</a>
@@ -484,6 +424,10 @@ WET Europe/Lisbon
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
       </li>
     
@@ -497,10 +441,6 @@ WET Europe/Lisbon
     
       <li class="post">
         <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
       </li>
     
   </ul>
