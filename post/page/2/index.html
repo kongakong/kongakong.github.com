@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Try this curl https://api.hipchat.com/v2/room?auth_token=&lt;TOKEN&gt; ">
+  <meta name="description" content="This is the most portable method: DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )" ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,45 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/03/find-out-script-location-in-bash/">Find Out Script Location in Bash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-03T06:46:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is the most portable method:</p>
+
+<pre><code>  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )"
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -405,56 +444,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/28/sudo-and-glob/">Sudo and Glob</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-28T16:52:00+11:00" pubdate data-updated="true">Feb 28<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Files are there but I cannot delete them</p>
-
-<pre><code>    $ sudo ls /etc/sensu/conf.d/handlers
-    email.json  handler.json  hipchat.json
-
-    $ sudo rm /etc/sensu/conf.d/handlers/*.json
-    rm: cannot remove ‘/etc/sensu/conf.d/handlers/*.json’: No such file or directory
-</code></pre>
-
-<p>It is because my current login has no permission to read <code>/etc/sensu/conf.d/handlers</code> and so glob failed</p>
-
-<p>This takes care of the problem:</p>
-
-<pre><code>    $ sudo bash -c 'rm /etc/sensu/conf.d/handlers/*.json'
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/3/">&larr; Older</a>
@@ -472,7 +461,11 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
       </li>
     
       <li class="post">
@@ -485,10 +478,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
   </ul>

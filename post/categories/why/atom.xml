@@ -4,7 +4,7 @@
   <title><![CDATA[Category: why | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/why/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-06T14:17:54+11:00</updated>
+  <updated>2015-03-06T14:30:14+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,11 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[why I have to force to update?]]></title>
+    <title type="html"><![CDATA[Forced to apply Windows update]]></title>
     <link href="http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update/"/>
     <updated>2015-03-05T14:48:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update</id>
     <content type="html"><![CDATA[<p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
+
+<p>Windows is not suitable for datacenter.</p>
 ]]></content>
   </entry>
   

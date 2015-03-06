@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: lynx | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/lynx/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-06T14:30:14+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Download file with lynx]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/06/download-file-with-lynx/"/>
+    <updated>2015-03-06T14:27:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/06/download-file-with-lynx</id>
+    <content type="html"><![CDATA[<p>My cygwin does not have <code>wget</code> or <code>curl</code> preinstalled. So to download a file from internet I do</p>
+
+<pre><code>    lynx -source url  &gt; file.txt
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

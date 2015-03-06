@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Reinstalling cask on another mac. Thought it is the command to install cask brew subcommand: brew install cask Wrong! This cask is actually an emacs &hellip;">
+  <meta name="description" content="This the error message: ==&gt; default: ================================================================================ ==&gt; default: Error &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,57 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot Find a Resource Matching Ruby_block[sensu_service_trigger]</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-08T18:26:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This the error message:</p>
+
+<pre><code>    ==&gt; default: ================================================================================
+    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
+    ==&gt; default: ================================================================================
+    ==&gt; default:
+    ==&gt; default: Chef::Exceptions::ResourceNotFound
+    ==&gt; default: ----------------------------------
+    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
+    ==&gt; default:
+    ==&gt; default: Cookbook Trace:
+    ==&gt; default: ---------------
+    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
+</code></pre>
+
+<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -340,42 +391,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/04/search-for-code-in-dev-console-in-chrome/">Search for Javascript Code in Development Console in Chrome</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-04T14:32:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In OS X, do <code>cmd</code> + <code>Opt</code> + <code>F</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/11/">&larr; Older</a>
@@ -393,7 +408,11 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
       </li>
     
       <li class="post">
@@ -406,10 +425,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
   </ul>

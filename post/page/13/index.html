@@ -9,12 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This will cause a compiler error: 1
-2
-3
-4
-let a=3
-let b=4 let max = (a>b)? a:b // Compiler Error: Consecutive statements on a line must be separated &hellip;">
+  <meta name="description" content="You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder. from Apple &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -120,6 +115,44 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/09/18/at-ibdesignable-and-at-ibinspectable/">@IBDesignable and @IBInspectable</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T16:26:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>You can use two different attributes—@IBDesignable and @IBInspectable—to enable live, interactive custom view design in Interface Builder.</p></blockquote>
+
+<p>from <a href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/WritingSwiftClassesWithObjective-CBehavior.html">Apple doc</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -324,57 +357,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized Selector -replacementObjectForKeyedArchiver:</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-12T22:31:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Here is the code in question:</p>
-
-<pre><code>class Something: NSCoding {
-    ...
-
-let smth = Something() 
-let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
-</code></pre>
-
-<p>It throws this exception:</p>
-
-<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
-Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
-</code></pre>
-
-<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/14/">&larr; Older</a>
@@ -392,7 +374,11 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
       </li>
     
       <li class="post">
@@ -405,10 +391,6 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
     
       <li class="post">
         <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
   </ul>

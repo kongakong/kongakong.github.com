@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The size of the window is limited by the smallest size of attached client. So to reset the size we need to detach all non-active clients This is the &hellip;">
+  <meta name="description" content="I want to create an offline cookbook. I want to create a user databag to use the users recipe. I ran knife data bag create users but it created &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,52 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">Knife Did Not Create Any Data Bag</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-25T11:36:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I want to create an offline cookbook. I want to create a user databag to use the <code>users</code> recipe. I ran</p>
+
+<pre><code>knife data bag create users
+</code></pre>
+
+<p>but it created nothing in the databag folder.</p>
+
+<p>It turns out I need to run it in local mode and give it a user name:</p>
+
+<pre><code>knife data bag create users myuser -z
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -305,45 +351,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/21/switching-to-zsh/">Switching to Zsh</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-21T16:11:00+11:00" pubdate data-updated="true">Feb 21<span>st</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have been searching the internet for a while to understand this expression <code>${0:h}</code>. Finally here is an answer:</p>
-
-<pre><code> info -f zsh -n Modifiers
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/6/">&larr; Older</a>
@@ -361,7 +368,11 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
       </li>
     
       <li class="post">
@@ -374,10 +385,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
   </ul>

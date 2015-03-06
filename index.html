@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update
-">
+  <meta name="description" content="My cygwin does not have wget or curl preinstalled. So to download a file from internet I do lynx -source url &gt; file.txt ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +121,46 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/05/why-i-have-to-force-to-update/">Why I Have to Force to Update?</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/06/download-file-with-lynx/">Download File With Lynx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-06T14:27:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My cygwin does not have <code>wget</code> or <code>curl</code> preinstalled. So to download a file from internet I do</p>
+
+<pre><code>    lynx -source url  &gt; file.txt
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to Apply Windows Update</a></h1>
     
     
       <p class="meta">
@@ -146,6 +184,8 @@ alt="hit counter"></a></div></noscript>
 
 
   <div class="entry-content"><p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
+
+<p>Windows is not suitable for datacenter.</p>
 </div>
   
   
@@ -317,45 +357,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/03/find-out-script-location-in-bash/">Find Out Script Location in Bash</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-03T06:46:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is the most portable method:</p>
-
-<pre><code>  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )"
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -371,7 +372,11 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+      </li>
+    
+      <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
       </li>
     
       <li class="post">
@@ -384,10 +389,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">prevent failed task stops provisioning</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
       </li>
     
   </ul>

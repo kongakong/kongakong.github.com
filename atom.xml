@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-06T14:17:54+11:00</updated>
+  <updated>2015-03-06T14:30:14+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -14,11 +14,25 @@
 
   
   <entry>
-    <title type="html"><![CDATA[why I have to force to update?]]></title>
+    <title type="html"><![CDATA[Download file with lynx]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/06/download-file-with-lynx/"/>
+    <updated>2015-03-06T14:27:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/06/download-file-with-lynx</id>
+    <content type="html"><![CDATA[<p>My cygwin does not have <code>wget</code> or <code>curl</code> preinstalled. So to download a file from internet I do</p>
+
+<pre><code>    lynx -source url  &gt; file.txt
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Forced to apply Windows update]]></title>
     <link href="http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update/"/>
     <updated>2015-03-05T14:48:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update</id>
     <content type="html"><![CDATA[<p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
+
+<p>Windows is not suitable for datacenter.</p>
 ]]></content>
   </entry>
   
@@ -537,25 +551,6 @@
     Parsing documentation for sensu-plugin-1.1.0
     Installing ri documentation for sensu-plugin-1.1.0
     1 gem installed
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[knife did not create any data bag]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/25/knife-did-not-create-any-data-bag/"/>
-    <updated>2015-02-25T11:36:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/25/knife-did-not-create-any-data-bag</id>
-    <content type="html"><![CDATA[<p>I want to create an offline cookbook. I want to create a user databag to use the <code>users</code> recipe. I ran</p>
-
-<pre><code>knife data bag create users
-</code></pre>
-
-<p>but it created nothing in the databag folder.</p>
-
-<p>It turns out I need to run it in local mode and give it a user name:</p>
-
-<pre><code>knife data bag create users myuser -z
 </code></pre>
 ]]></content>
   </entry>
