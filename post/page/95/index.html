@@ -9,7 +9,10 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Lord Stern on climate change in LSE (23/2) ">
+  <meta name="description" content="Was getting ‘class has no selector alloc’ method error when I wrote 1
+2
+3 MyClass* obj;
+obj = [[MyClass alloc] init]; It is because I did not make &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +118,53 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/03/06/p-18843112135/">Was Getting ‘class Has No Selector Alloc’ Method Error When I Wrote</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T22:00:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Was getting ‘class has no selector alloc’ method error when I wrote</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>MyClass* obj;
+</span><span class='line'>obj = [[MyClass alloc] init];
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I did not make MyClass a subclass of NSObject</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -273,42 +323,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/03/03/p-18650017261/">Do Custom Initialisation in ViewDidLoad of a ViewController</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-03T16:59:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Do custom initialisation in ViewDidLoad of a ViewController</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/96/">&larr; Older</a>
@@ -326,6 +340,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
       </li>
     
@@ -339,10 +357,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
   </ul>

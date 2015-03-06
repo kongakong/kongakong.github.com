@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-04T17:27:22+11:00</updated>
+  <updated>2015-03-06T14:17:54+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[why I have to force to update?]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update/"/>
+    <updated>2015-03-05T14:48:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update</id>
+    <content type="html"><![CDATA[<p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[madness of powershell]]></title>
@@ -24,7 +33,7 @@
 
 <p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
 
-<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field. It is what I want.</p>
+<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field in one line. It is what I need. <code>wrap</code> or <code>nowrap</code> does not produce desired result.</p>
 
 <p>After testing is done, I deploy the script to run as a background task.</p>
 
@@ -547,22 +556,6 @@
 <p>It turns out I need to run it in local mode and give it a user name:</p>
 
 <pre><code>knife data bag create users myuser -z
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[resize tmux window]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/25/resize-tmux-window/"/>
-    <updated>2015-02-25T10:38:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/25/resize-tmux-window</id>
-    <content type="html"><![CDATA[<p>The size of the window is limited by the smallest size of attached client.</p>
-
-<p>So to reset the size we need to detach all non-active clients</p>
-
-<p>This is the command:</p>
-
-<pre><code> C-b :attach -d
 </code></pre>
 ]]></content>
   </entry>

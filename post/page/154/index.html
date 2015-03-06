@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="initialize is a class method which will be called before any other method is called on a class. Alternatively use a function with attribute (( &hellip;">
+  <meta name="description" content="Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +116,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -278,62 +315,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/27/p-5886593746/">Stupid Mistake</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-27T12:52:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My app crashed for no reason.</p>
-
-<p>Turns out it is my mistake:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nl">addSublayer:</span><span class="n">myLayer</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">myLayer</span> <span class="n">dealloc</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>when I mean to do it</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="nl">addSublayer:</span><span class="n">myLayer</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">myLayer</span> <span class="n">release</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/155/">&larr; Older</a>
@@ -351,6 +332,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
       </li>
     
@@ -364,10 +349,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
   </ul>

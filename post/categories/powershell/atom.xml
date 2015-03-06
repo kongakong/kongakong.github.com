@@ -4,7 +4,7 @@
   <title><![CDATA[Category: powershell | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/powershell/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-04T17:27:22+11:00</updated>
+  <updated>2015-03-06T14:17:54+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -24,7 +24,7 @@
 
 <p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
 
-<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field. It is what I want.</p>
+<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field in one line. It is what I need. <code>wrap</code> or <code>nowrap</code> does not produce desired result.</p>
 
 <p>After testing is done, I deploy the script to run as a background task.</p>
 

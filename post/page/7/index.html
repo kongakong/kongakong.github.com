@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I finally found a solution to the &lsquo;No version specified, and no candidate version available for php&rsquo; problem According to this AskUbuntu &hellip;">
+  <meta name="description" content="If you set a variable this way in a cookbook: node['mysqld']['root_password'] = 'password' you will get this exception Chef::Exceptions:: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,52 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/16/setting-value-in-chef-cooking/">Setting Value in Chef Cooking</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-16T08:47:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you set a variable this way in a cookbook:</p>
+
+<pre><code>node['mysqld']['root_password'] = 'password'
+</code></pre>
+
+<p>you will get this exception</p>
+
+<pre><code>   Chef::Exceptions::ImmutableAttributeModification
+   ------------------------------------------------
+   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -475,57 +521,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/kitchen-converge-problem-2/">Kitchen Converge Problem 2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T15:07:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying the <code>kitchen</code> command again, and I am still getting error messages</p>
-
-<pre><code>    $ kitchen converge
-    -----&gt; Starting Kitchen (v1.3.1)
-    -----&gt; Creating &lt;default-ubuntu-1204&gt;...
-           Bringing machine 'default' up with 'virtualbox' provider...
-           The following berks command failed to execute:
-
-               /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
-
-           The stdout and stderr are shown below:
-</code></pre>
-
-<p>I probably have installed chefdk when the system ruby is active.</p>
-
-<p>So <code>rvm use system</code> works for me</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/8/">&larr; Older</a>
@@ -543,6 +538,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">why I have to force to update?</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
       </li>
     
@@ -556,10 +555,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/03/find-out-script-location-in-bash/">find out script location in bash</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/02/to-quickly-test-a-hipchat-api-token/">to quickly test a hipchat api token</a>
       </li>
     
   </ul>

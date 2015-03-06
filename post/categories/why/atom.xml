@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: why | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/why/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-06T14:17:54+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[why I have to force to update?]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update/"/>
+    <updated>2015-03-05T14:48:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/05/why-i-have-to-force-to-update</id>
+    <content type="html"><![CDATA[<p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
+]]></content>
+  </entry>
+  
+</feed>
