@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Simple Numpy example. To illustrate the use of arange and resize
-">
+  <meta name="description" content="Quoted from Expert Python Programming by Tarek Ziadé The Singleton pattern makes sure that a given class has always only one living instance in the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,47 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/07/08/p-26756129197/">Singleton</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-08T20:08:00+10:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quoted from <em>Expert Python Programming</em> by Tarek Ziadé</p>
+
+<blockquote><p>The Singleton pattern makes sure that a given class has always only one living instance in the application. This can be used, for example, when you want to restrict a resource access to one and only one memory context in the process. For instance, a database connector class can be a Singleton that deals with synchronization and manages its data in memory. It makes the assumption that no other instance is interacting with the database in the meantime.
+This pattern can simplify a lot the way concurrency is handled in an application. utilities that provide application-wide functions are often declared as Singletons. For instance, in web applications, a class that is in charge of reserving a unique document ID would benefit from the Singleton pattern. There should be one and only one utility doing this job.</p></blockquote>
+
+<p>Implementing the Singleton pattern is straightforward with the <em>new</em> method:</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1044,46 +1084,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/07/08/p-26697918479/">Creational Pattern in Python</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-08T00:39:00+10:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>A creational pattern provides a particular instantiation mechanism. It can be a particular object factory or even a class factory. This is an important pattern in compiled languages such as C, since it is harder to generate types on-demand at run time.</p>
-
-<p>But this feature is built-in in Python, for instance the type built-in, which lets you define a new type by code:</p>
-
-<p>Classes and types are built-in factories</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/66/">&larr; Older</a>
@@ -1101,6 +1101,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
       </li>
     
@@ -1114,10 +1118,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
   </ul>

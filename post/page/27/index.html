@@ -9,17 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Try to run import pandas in python. Encountered this: 1
-2
-3
-4
-5
-6
-7
-8
-&gt;&gt;&gt; import pandas
-No module named dateutil.parser
-Traceback (most &hellip;">
+  <meta name="description" content="It is a follow-up on my last ipython install issue Turn out i just need to follow the suggested solution in the conda failure message, which is to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -125,6 +115,54 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/03/conda-and-ipython/">Conda and Ipython</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-03T23:01:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
+
+<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
+
+<p>Now I have four set of python runtime installed on my MBP:</p>
+
+<ul>
+<li><p>From Apple</p></li>
+<li><p>From Homebrew</p></li>
+<li><p>From Pythonbrew</p></li>
+<li><p>From conda</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -335,74 +373,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/30/conda-install-ipython-problem/">Conda Install Ipython Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-30T08:27:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>How can I update <code>pip</code>? Need research&hellip;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython
-</span><span class='line'># All packages already at latest version, nothing to do.
-</span><span class='line'># packages in environment at /Users/antkong/anaconda:
-</span><span class='line'>#
-</span><span class='line'># Warning: Your version of pip is older than what conda requires for pip
-</span><span class='line'># integration, so pip-installed packages will not be displayed.  Please
-</span><span class='line'># update pip, (conda update pip -p /Users/antkong/anaconda)
-</span><span class='line'>
-</span><span class='line'>conda                     2.2.5                    py27_0  
-</span><span class='line'>ipython                   1.1.0                    py27_0  
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip --version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/28/">&larr; Older</a>
@@ -420,6 +390,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
       </li>
     
@@ -433,10 +407,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
   </ul>

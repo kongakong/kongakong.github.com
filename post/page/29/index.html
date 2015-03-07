@@ -9,8 +9,17 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Full error message: 1
-0:08.11 configure: error: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not &hellip;">
+  <meta name="description" content="This is the full error message: 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25 0:09.25 gstreamer-app-0.10 0:09. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +125,66 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/24/gstreamer-backend/">Mach Problem: Gstreamer Backend</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-24T20:49:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is the full error message:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25
+</span><span class='line'> 0:09.25                       gstreamer-app-0.10
+</span><span class='line'> 0:09.25                       gstreamer-plugins-base-0.10
+</span><span class='line'> 0:09.25 configure: error: gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer
+</span><span class='line'> 0:09.26 *** Fix above errors and then restart with\
+</span><span class='line'> 0:09.26                "/usr/bin/make -f client.mk build"
+</span><span class='line'> 0:09.26 make[2]: *** [configure] Error 1
+</span><span class='line'> 0:09.26 make[1]: *** [obj-x86_64-unknown-linux-gnu/Makefile] Error 2
+</span><span class='line'> 0:09.26 make: *** [build] Error 2
+</span><span class='line'> 0:09.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Solution</strong>: <code>sudo apt-get install -y libgstreamer-plugins-base0.10-dev</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -330,44 +399,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/19/ownership-rule-exception/">Ownership Rule Exception</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-19T07:26:00+11:00" pubdate data-updated="true">Dec 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Normally an observer or a delegate owner should not hold a strong reference to a callback or a delegate.</p>
-
-<p>The two well-known exceptions are: an NSURLConnection ownes its delegate while the connection is running, and an NSTimer ownes its target while the timer is valid</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/30/">&larr; Older</a>
@@ -385,6 +416,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
       </li>
     
@@ -398,10 +433,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
   </ul>

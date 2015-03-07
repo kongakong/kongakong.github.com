@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Gem install can throw a ssl exception. Here is a solution Here is the summary: Download https://raw.githubusercontent.com/rubygems/rubygems/master/ &hellip;">
+  <meta name="description" content="Gem install can throw a ssl exception. This is a solution on Stackoverflow Summary of the remedy: 1. Download https://raw.githubusercontent.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -141,22 +141,24 @@ alt="hit counter"></a></div></noscript>
   </header>
 
 
-<div class="entry-content"><p>Gem install can throw a ssl exception. Here is a <a href="http://stackoverflow.com/a/27298259/58129">solution</a></p>
+<div class="entry-content"><p>Gem install can throw a ssl exception. This is a <a href="http://stackoverflow.com/a/27298259/58129">solution on Stackoverflow</a></p>
 
-<p>Here is the summary:</p>
+<p>Summary of the remedy:</p>
 
-<p><strong>Download</strong></p>
+<p><strong>1. Download</strong></p>
 
 <pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
 </code></pre>
 
-<p><strong>Find out installation location</strong></p>
+<p><strong>2. Find out installation location</strong></p>
 
 <pre><code>    C:\&gt;gem which rubygems
     C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
 </code></pre>
 
-<p>Then just copy the .pem file in ../2.1.0/rubygems/ssl_certs/</p>
+<p><strong>3. Install the file</strong></p>
+
+<p>Then just copy the .pem file into <code>../2.1.0/rubygems/ssl_certs/</code></p>
 </div>
 
 
@@ -207,6 +209,8 @@ alt="hit counter"></a></div></noscript>
         <a class="basic-alignment left" href="/post/2015/03/06/download-file-with-lynx/" title="Previous Post: Download file with lynx">&laquo; Download file with lynx</a>
       
       
+        <a class="basic-alignment right" href="/post/2015/03/07/gwmi-vs-wmic/" title="Next Post: gwmi vs wmic">gwmi vs wmic &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -219,6 +223,10 @@ alt="hit counter"></a></div></noscript>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+      </li>
     
       <li class="post">
         <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
@@ -234,10 +242,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
   </ul>

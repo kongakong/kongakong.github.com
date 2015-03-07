@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gem | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/gem/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-06T15:10:54+11:00</updated>
+  <updated>2015-03-07T11:06:53+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -18,22 +18,24 @@
     <link href="http://www.ahwkong.com/post/2015/03/06/ruby-gem-ssl-problem/"/>
     <updated>2015-03-06T15:08:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2015/03/06/ruby-gem-ssl-problem</id>
-    <content type="html"><![CDATA[<p>Gem install can throw a ssl exception. Here is a <a href="http://stackoverflow.com/a/27298259/58129">solution</a></p>
+    <content type="html"><![CDATA[<p>Gem install can throw a ssl exception. This is a <a href="http://stackoverflow.com/a/27298259/58129">solution on Stackoverflow</a></p>
 
-<p>Here is the summary:</p>
+<p>Summary of the remedy:</p>
 
-<p><strong>Download</strong></p>
+<p><strong>1. Download</strong></p>
 
 <pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
 </code></pre>
 
-<p><strong>Find out installation location</strong></p>
+<p><strong>2. Find out installation location</strong></p>
 
 <pre><code>    C:\&gt;gem which rubygems
     C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
 </code></pre>
 
-<p>Then just copy the .pem file in ../2.1.0/rubygems/ssl_certs/</p>
+<p><strong>3. Install the file</strong></p>
+
+<p>Then just copy the .pem file into <code>../2.1.0/rubygems/ssl_certs/</code></p>
 ]]></content>
   </entry>
   

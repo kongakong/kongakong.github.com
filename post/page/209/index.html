@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The author reiterated his view that why investing for dividend and interest income doom to fail. His feeling is if someone aims to double his net &hellip;">
+  <meta name="description" content="Go is an ancient Chinese board game. I always want to learn more about it, but never really have the time until recently.The more I understand Go, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2008/05/24/jst_4896780664629829060/">Go and Life</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-05-24T01:34:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_j_Rnsthw-6Y/SDb47zu6FWI/AAAAAAAAAJM/Z1Z9JX56aRM/s1600-h/go_and_life.jpg"><img style="margin: 0pt 10px 10px 0pt; float: left; cursor: pointer;" src="http://2.bp.blogspot.com/_j_Rnsthw-6Y/SDb47zu6FWI/AAAAAAAAAJM/Z1Z9JX56aRM/s200/go_and_life.jpg" alt="" id="BLOGGER_PHOTO_ID_5203620125856109922" border="0" /></a><br /><br /><span style="font-size:180%;"><span style="font-weight: bold;">G</span></span>o is an ancient Chinese board game. I always want to learn more about it, but never really have the time until recently.<br /><br />The more I understand Go, the more I appreciate the beauty of the game.<br /><br />The basic move is extremely simple: If you want to capture an enemy, just place sufficient numbers of your pieces surrounding the target such that they are completely cut off from their kind, then they become your PoW.<br /><br />In order to win, a player must occupy a bigger territory than his/her opponents at the end of the game.<br /><br />However, I can assure you that you cannot achieve this goal by simply just battling your enemy  out.<br /><br />In fact, focusing too much on winning individual battles may end up costing you the ultimate victory.  Simply put, since it usually takes more pieces to take over enemy land, if you spend your resources (i.e. pieces) to warring, instead of territory building, you may risk not occupying enough land. Battles should only be a mean to secure your territory or weaken your opponent, not an end in itself.<br /><br />How does it related to life? Well, sometimes don&rsquo;t we focus too much on immediate, short-term gain (akin to capturing enemy pieces in Go), and forget our bigger pictures in life?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -260,48 +296,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2008/05/10/4108877290533417868/">The Importance of Being Nosy (Nosetests, Really)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-05-10T04:04:00+10:00" pubdate data-updated="true">May 10<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><span style="font-weight: bold;">Unit testing </span><br /><br />One of a few important lessons I learn from Java development is the importance of unit test. It is of course not a silver bullet to the software reliability/quality problem, but the consequence not adopting it can only be more dire.<br /><br />I used only <a href="http://www.junit.org/">JUnit </a>to implement unit tests in Java (Since JUnit is &ldquo;good enough&rdquo;, I never explore the alternative framework <a href="http://testng.org/doc/index.html">TestNG</a>.). Actually, problems in writing unit tests usually have very little to do with the frameworks themselves, but more with:<br /><br /><span style="font-weight: bold;">A</span>. The legacy code base you want to test against. For example, if the existing code base design is not modular enough, you have to go through some refactoring process to make unit testing possible. It is not the kind of luxury we can afford very often.<br /><br /><span style="font-weight: bold;">B.</span> Mock objects. <a href="http://www.easymock.org/">EasyMock</a> has made mocking a dependency easier, but maintaining the mock object codes still requires considerable effort.<br /><br /><span style="font-weight: bold;">Unit testing and Python</span><br /><br />I think unit testing is even more important for Python programmers.<br /><br />Since everything happens in runtime for Python, errors in your scripts, no matter syntactical or logical, will not be caught until you actually execute the line of code where the bug lives.</p>
-
-<br/><br/>
-
-
-<p>On top of it, a majority of commercial/in-house software contains so many features. The sheer number of possible combination of the execution pathways means thorough manual testing is simply unattainable, if not unrealistic.<br /><br />If at the end of the day, a production issue in your python software arises and it turns out to be &ldquo;incorrect indentation&rdquo;, the managers and users will look down on you pretty hard (&ldquo;Did you really test it?&rdquo;). Unit test + coverage tools can help us to avoid these kind of situation.<br /><br />Besides, unit tests can be used to safeguard corner cases and exceptional conditions. For financial applications, one of those commonly-seen mistakes is that a program fails to perform properly when a certain event (e.g. rollover) happens on a public holiday. With unit testing, we can subject the relevant codes to different combination of date and instruments, so we can make sure it will, for instance, calculate accrual correctly no matter what.<br /><br />Comparing Java, I find it easier to do unit testing in Python because, with Python&rsquo;s &ldquo;Duck Typing&rdquo; capability, we do not have to worry about maintaining mock objects at all. Whenever you need to mimic a dependency&rsquo;s behavior, just write a dummy class with just enough attributes/methods the testee expects. End of story.<br /><br />No more record and play APIs, as in EasyMock.<br /><br /><span style="font-weight: bold;">Nosetests makes it easy </span><br /><br />
-So, you can understand why I am so glad to find <a href="http://www.somethingaboutorange.com/mrl/projects/nose/">nose</a>. Nosetests is, in a nutshell, a unit test discovery tool. It can traverse down a python source code directory and pick up classes that extends <a href="http://docs.python.org/lib/testcase-objects.html">unittest.Testcase</a>, <a href="http://docs.python.org/lib/module-doctest.html">doc test</a>, and any classes/methods that follow the <a href="http://www.somethingaboutorange.com/mrl/projects/nose/#writing-tests">default naming convention</a>. I can now mix any testing styles depending on the task at hand.<br /><br />I usually use the following parameters with nosetests:<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />&mdash;verbosity=3 &mdash;with-doctest -s &mdash;exe<br /><br /></code></pre><br />&ldquo;&mdash;exe&rdquo; is necessary because in <a href="http://www.cygwin.com/">cygwin</a>, my primary development environment, py files are usually set to be &ldquo;executable&rdquo;.<br /><br /><span style="font-weight: bold;">Feedback</span><br /><br />Do you have any tips and idea on unit testing/software quality assurance to share? Feel free.<br /><br /></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/210/">&larr; Older</a>
@@ -319,6 +313,10 @@ So, you can understand why I am so glad to find <a href="http://www.somethingabo
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
       </li>
     
@@ -332,10 +330,6 @@ So, you can understand why I am so glad to find <a href="http://www.somethingabo
     
       <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
   </ul>

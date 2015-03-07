@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is because in .kitchen.yml, it contains these two lines: platforms: - name: ubuntu-12.04 - name: centos-6.5 I can either specify the partform &hellip;">
+  <meta name="description" content="In my recipes\default.rb, I added a line package "php" And this caused this exception: * No version specified, and no candidate version available for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,157 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">Chef: No Version Specified, and No Candidate Version Available for Php</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-15T14:27:00+11:00" pubdate data-updated="true">Feb 15<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In my <code>recipes\default.rb</code>, I added a line</p>
+
+<pre><code>       package "php"
+</code></pre>
+
+<p>And this caused this exception:</p>
+
+<pre><code>       * No version specified, and no candidate version available for php
+       ================================================================================
+       Error executing action `install` on resource 'apt_package[php]'
+       ================================================================================
+
+       Chef::Exceptions::Package
+       -------------------------
+       No version specified, and no candidate version available for php
+</code></pre>
+
+<p>I should use <code>package "php5"</code></p>
+
+<p>Now I am getting a different set of errors:</p>
+
+<pre><code>       * apt_package[php5] action install
+
+       ================================================================================
+       Error executing action `install` on resource 'apt_package[php5]'
+       ================================================================================
+
+       Mixlib::ShellOut::ShellCommandFailed
+       ------------------------------------
+       Expected process to exit with [0], but received '100'
+       ---- Begin output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
+       STDOUT: Reading package lists...
+       Building dependency tree...
+       Reading state information...
+       The following extra packages will be installed:
+         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
+         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5-cli php5-common php5-json
+         php5-readline ssl-cert
+       Suggested packages:
+         www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom
+         apache2-utils php-pear php5-user-cache openssl-blacklist
+       The following NEW packages will be installed:
+         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
+         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5 php5-cli php5-common php5-json
+         php5-readline ssl-cert
+       0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+       Need to get 6,137 kB of archives.
+       After this operation, 25.8 MB of additional disk space will be used.
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33
+         Could not resolve 'us.archive.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.4
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.4
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-bin amd64 2.4.7-1ubuntu4.1
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-data all 2.4.7-1ubuntu4.1
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2 amd64 2.4.7-1ubuntu4.1
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main libapache2-mod-php5 amd64 5.5.9+dfsg-1ubuntu4.4
+         Could not resolve 'security.ubuntu.com'
+       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5 all 5.5.9+dfsg-1ubuntu4.4
+         Could not resolve 'security.ubuntu.com'
+       STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr/libapr1_1.5.0-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/php-json/php5-json_1.3.2-2build1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-common_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-cli_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+   ntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-ldap_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-bin_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-data_2.4.7-1ubuntu4.1_all.deb  Could not resolve 'security.ubuntu.com'
+
+       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+
+
+       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/s/ssl-cert/ssl-cert_1.0.33_all.deb  Could not resolve 'us.archive.ubuntu.com'
+
+       E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+       ---- End output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
+       Ran apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 returned 100
+
+
+       ---------------------
+       # In /tmp/kitchen/cache/cookbooks/zeeting-analytics/recipes/default.rb
+
+         9: package "php5"
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -350,91 +501,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/14/berkfile-problem/">Berkshelf Problem With Kitchen Converge</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-14T12:44:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My <code>kitchen converge</code> throws a lot of error message</p>
-
-<pre><code>    $ kitchen converge
-    -----&gt; Starting Kitchen (v1.3.1)
-
-    ....
-
-    &gt;&gt;&gt;&gt;&gt;&gt; ------Exception-------
-    &gt;&gt;&gt;&gt;&gt;&gt; Class: Kitchen::ActionFailed
-    &gt;&gt;&gt;&gt;&gt;&gt; Message: Failed to complete #create action: [Expected process to exit with [0], but received '1'
-    ---- Begin output of vagrant up --no-provision --provider=virtualbox ----
-    STDOUT: Bringing machine 'default' up with 'virtualbox' provider...
-    ==&gt; default: Box 'opscode-ubuntu-12.04' could not be found. Attempting to find and install...
-        default: Box Provider: virtualbox
-        default: Box Version: &gt;= 0
-    ==&gt; default: Adding box 'opscode-ubuntu-12.04' (v0) for provider: virtualbox
-        default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
-    ==&gt; default: Successfully added box 'opscode-ubuntu-12.04' (v0) for 'virtualbox'!
-    STDERR: The following berks command failed to execute:
-
-        /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks --version --format json
-
-    The stdout and stderr are shown below:
-
-        stdout:
-        stderr: /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/dependency.rb:315:in `to_specs': Could not find 'berkshelf' (&gt;= 0) among 122 total gem(s) (Gem::LoadError)
-    Checked in 'GEM_PATH=/Users/antkong/.vagrant.d/gems:/opt/vagrant/bin/../embedded/gems', execute `gem env` for more information
-      from /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/dependency.rb:324:in `to_spec'
-      from /Users/antkong/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/rubygems/core_ext/kernel_gem.rb:64:in `gem'
-      from /Users/antkong/.rvm/gems/ruby-2.2.0/bin/berks:22:in `&lt;main&gt;'
-
-
-    It appears that you are not using the ChefDK. Please note that Vagrant Berkshelf
-    works best when used with the ChefDK, and other installation methods are not
-    officially supported.
-
-    Please download and install the latest version of the ChefDK from:
-
-        https://downloads.getchef.com/chef-dk
-
-    and follow the installation instructions. Do not forget to add the ChefDK to
-    your PATH.
-    ---- End output of vagrant up --no-provision --provider=virtualbox ----
-    Ran vagrant up --no-provision --provider=virtualbox returned 1]
-    &gt;&gt;&gt;&gt;&gt;&gt; ----------------------
-    &gt;&gt;&gt;&gt;&gt;&gt; Please see .kitchen/logs/kitchen.log for more details
-    &gt;&gt;&gt;&gt;&gt;&gt; Also try running `kitchen diagnose --all` for configuration
-</code></pre>
-
-<p>It is related to the active <code>rvm</code>. Once I run <code>rvm use system</code>, the problem is resolved.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/9/">&larr; Older</a>
@@ -452,6 +518,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
       </li>
     
@@ -465,10 +535,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/sensu-mailer-problem/">sensu mailer problem</a>
       </li>
     
   </ul>

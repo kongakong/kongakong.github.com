@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: wmic | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/wmic/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-07T11:06:53+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[gwmi vs wmic]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/07/gwmi-vs-wmic/"/>
+    <updated>2015-03-07T10:56:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/07/gwmi-vs-wmic</id>
+    <content type="html"><![CDATA[<p><code>wmic</code> is a command line tool. <code>gwmi</code> stands for &lsquo;get-WMIObject`, a command of Powershell.</p>
+]]></content>
+  </entry>
+  
+</feed>
