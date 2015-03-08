@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="wmic is a command line tool. gwmi stands for &lsquo;get-WMIObject`, a command of Powershell.
-">
+  <meta name="description" content="Trying out emacs from brew. Here is the output: $ brew install emacs ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,55 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/08/emacs-on-osx/">Emacs on Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-08T12:01:00+11:00" pubdate data-updated="true">Mar 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying out emacs from brew. Here is the output:</p>
+
+<pre><code>    $ brew install emacs
+    ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite.bottle.3.tar.gz
+    ######################################################################## 100.0%
+    ==&gt; Pouring emacs-24.4.yosemite.bottle.3.tar.gz
+    ==&gt; Caveats
+    To have launchd start emacs at login:
+        ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
+    Then to load emacs now:
+        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+    ==&gt; Summary
+    🍺  /usr/local/Cellar/emacs/24.4: 3914 files, 104M
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -283,59 +331,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/04/madness-of-powershell/">Madness of Powershell</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-04T17:11:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Who will design a tool for IT professional this way? It is a pure maddness</p>
-
-<p>I want to dump some output from powershell. It is a very common task but somehow Powershell takes the liberty to truncate the output based on arbitrary condition.</p>
-
-<p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
-
-<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field in one line. It is what I need. <code>wrap</code> or <code>nowrap</code> does not produce desired result.</p>
-
-<p>After testing is done, I deploy the script to run as a background task.</p>
-
-<p>Now powershell decides it wants to truncate the commandline field. Now I am getting some &ldquo;c:\some\path&#8230;&rdquo; instead of the full path of the executables.</p>
-
-<p>Utter maddenss. A waste of everyone&rsquo;s time!</p>
-
-<p>Solution:</p>
-
-<pre><code>    ft -AutoSize | out-string -width 4096 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/2/">&larr; Older</a>
@@ -351,6 +346,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
       </li>
     
@@ -364,10 +363,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
       </li>
     
   </ul>

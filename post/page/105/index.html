@@ -9,8 +9,13 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Tried to install erlang. Got this error message $ brew install erlang
-==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang- &hellip;">
+  <meta name="description" content="1
+2
+3
+4
+$ ./python.exe -SE -m sysconfig --generate-posix-vars
+Fatal Python error: Py_Initialize: can't initialize sys standard streams
+Traceback ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +121,54 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/01/04/p-15288901020/">What Is Going On?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-04T09:00:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>Fatal Python error: Py_Initialize: can't initialize sys standard streams
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>  File "/Users/antkong/wd/python.project/cpython/Lib/io.py", line 60, in</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -311,50 +364,6 @@ Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/loc
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913827164/">Autoconf on Lion</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-12-28T22:30:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Oops</p>
-
-<pre><code>$ autoconf
-configure.in:8: error: Autoconf version 2.65 or higher is required
-configure.in:8: the top level
-autom4te: /usr/bin/gm4 failed with exit status: 63
-</code></pre>
-
-<p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/106/">&larr; Older</a>
@@ -372,6 +381,10 @@ autom4te: /usr/bin/gm4 failed with exit status: 63
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
       </li>
     
@@ -385,10 +398,6 @@ autom4te: /usr/bin/gm4 failed with exit status: 63
     
       <li class="post">
         <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
       </li>
     
   </ul>

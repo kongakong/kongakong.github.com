@@ -4,7 +4,7 @@
   <title><![CDATA[Category: osx | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/osx/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-07T11:06:53+11:00</updated>
+  <updated>2015-03-08T12:02:41+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[emacs on osx]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/08/emacs-on-osx/"/>
+    <updated>2015-03-08T12:01:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/08/emacs-on-osx</id>
+    <content type="html"><![CDATA[<p>Trying out emacs from brew. Here is the output:</p>
+
+<pre><code>    $ brew install emacs
+    ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite.bottle.3.tar.gz
+    ######################################################################## 100.0%
+    ==&gt; Pouring emacs-24.4.yosemite.bottle.3.tar.gz
+    ==&gt; Caveats
+    To have launchd start emacs at login:
+        ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
+    Then to load emacs now:
+        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+    ==&gt; Summary
+    🍺  /usr/local/Cellar/emacs/24.4: 3914 files, 104M
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[tmux resizing pane]]></title>
@@ -65,102 +87,6 @@
     <content type="html"><![CDATA[<p>First you need to install <code>npm</code> via <code>brew</code></p>
 
 <p>Then run <code>npm install -g bower</code> as documented in <a href="http://bower.io/">bower websiter</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[homebrew problem]]></title>
-    <link href="http://www.ahwkong.com/post/2014/04/15/homebrew-problem/"/>
-    <updated>2014-04-15T17:32:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2014/04/15/homebrew-problem</id>
-    <content type="html"><![CDATA[<p>Homebrew error message due to incomplete installation of XCode</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>$ ruby -e &ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install">https://raw.github.com/Homebrew/homebrew/go/install&lt;/a>)&rdquo;
-</span><span class='line'>==> This script will install:
-</span><span class='line'>/usr/local/bin/brew
-</span><span class='line'>/usr/local/Library/&hellip;
-</span><span class='line'>/usr/local/share/man/man1/brew.1&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Press RETURN to continue or any other key to abort
-</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /usr/local&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>WARNING: Improper use of the sudo command could lead to data loss
-</span><span class='line'>or the deletion of important system files. Please double-check your
-</span><span class='line'>typing when using sudo. Type &ldquo;man sudo&rdquo; for more information.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>To proceed, enter your password, or type Ctrl-C to abort.&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>Password:
-</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /usr/local
-</span><span class='line'>==> /usr/bin/sudo /usr/bin/chgrp admin /usr/local
-</span><span class='line'>==> /usr/bin/sudo /bin/mkdir /Library/Caches/Homebrew
-</span><span class='line'>==> /usr/bin/sudo /bin/chmod g+rwx /Library/Caches/Homebrew
-</span><span class='line'>==> Installing the Command Line Tools (expect a GUI popup):
-</span><span class='line'>==> /usr/bin/sudo /usr/bin/xcode-select &mdash;install
-</span><span class='line'>xcode-select: note: install requested for command line developer tools
-</span><span class='line'>Press any key when the installation has completed.
-</span><span class='line'>==> Downloading and installing Homebrew&hellip;
-</span><span class='line'>remote: Counting objects: 166311, done.
-</span><span class='line'>remote: Compressing objects: 100% (46739/46739), done.
-</span><span class='line'>Receiving objects:  76% (126773/166311), 23.62 MiB | 83.00 KiB/s  &lt;br/>
-</span><span class='line'>error: RPC failed; result=56, HTTP code = 200
-</span><span class='line'>fatal: The remote end hung up unexpectedly
-</span><span class='line'>fatal: early EOF
-</span><span class='line'>fatal: index-pack failed
-</span><span class='line'>Failed during: git fetch origin master:refs/remotes/origin/master -n
-</span><span class='line'>$ ruby -e &ldquo;$(curl -fsSL &lt;a href="https://raw.github.com/Homebrew/homebrew/go/install">https://raw.github.com/Homebrew/homebrew/go/install&lt;/a>)&rdquo;
-</span><span class='line'>It appears Homebrew is already installed. If your intent is to reinstall you
-</span><span class='line'>should do the following before running this installer again:&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>rm -rf /usr/local/Cellar /usr/local/.git &amp;&amp; brew cleanup
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

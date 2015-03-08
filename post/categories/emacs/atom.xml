@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/emacs/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-07T11:06:53+11:00</updated>
+  <updated>2015-03-08T12:02:41+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[emacs on osx]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/08/emacs-on-osx/"/>
+    <updated>2015-03-08T12:01:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/08/emacs-on-osx</id>
+    <content type="html"><![CDATA[<p>Trying out emacs from brew. Here is the output:</p>
+
+<pre><code>    $ brew install emacs
+    ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite.bottle.3.tar.gz
+    ######################################################################## 100.0%
+    ==&gt; Pouring emacs-24.4.yosemite.bottle.3.tar.gz
+    ==&gt; Caveats
+    To have launchd start emacs at login:
+        ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
+    Then to load emacs now:
+        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+    ==&gt; Summary
+    🍺  /usr/local/Cellar/emacs/24.4: 3914 files, 104M
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aquamacs crashed in maverick]]></title>
@@ -1335,17 +1357,6 @@ Error in init file: Symbol's function definition is void: global-linum-mode
     <content type="html"><![CDATA[<p><a href="https://github.com/erlware-deprecated/erlware-mode">erlware-mode</a> is deprecated.</p>
 
 <p>Use <code>erlang-mode</code> in erlang distribution instead</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Emacs fu 1]]></title>
-    <link href="http://www.ahwkong.com/post/2013/04/27/p-48953372171/"/>
-    <updated>2013-04-27T07:17:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2013/04/27/p-48953372171</id>
-    <content type="html"><![CDATA[<p>Find out the current emac.d location</p>
-
-<p><code>C-H v init-user-file &lt;RET&gt;</code></p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Couple of weeks ago I set out to learn to use vagrant + chef + sensu to achieve the goal of automated data server deployment and server monitoring. I &hellip;">
+  <meta name="description" content="An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it. So I did the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,54 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/02/how-to-identify-and-kill-session/">How to Identify and Kill Process Spawned by a Tmux Session?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-02T19:49:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it.</p>
+
+<p>So I did the following to identify the process:</p>
+
+<pre><code>    $ tmux list-panes -s -F "#{pane_pid} #{pane_current_command}"
+    1896 tmux
+    1899 ssh
+    $ pstree 1899  # Problem at the lower pane
+    -+= 01899 antkong -zsh
+     \--= 65662 antkong ssh -i prod.pem ubuntu@localhost -p 2222
+</code></pre>
+
+<p>Then run <code>kill -9 1899</code> to kill it</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -409,83 +457,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/27/toastmaster-speech-4/">Toastmaster Speech 4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-27T07:06:00+11:00" pubdate data-updated="true">Feb 27<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Feedback</h2>
-
-<ul>
-<li><p>The transition from introduction to first point can be done better</p></li>
-<li><p>Hand clapping</p></li>
-<li><p>Use of Jargon such as &lsquo;proxy&rsquo;</p></li>
-<li><p>Repeated use of the word <code>Innovation</code></p></li>
-<li><p>Subtitle can be improved</p></li>
-</ul>
-
-
-<h2>Self accessment</h2>
-
-<p>Original version of the speech lasts almost 8 min. The final delivery time around 6m10s. A bit too fast.</p>
-
-<p>I haven&rsquo;t been too successfully to use metaphors and vivid images in the speech. There is still use of jargon.</p>
-
-<h1>Innovation</h1>
-
-<p>Innovation has never got so much attention before. Innovation is a key driver of wealth creation. You probably already have an example of it in your pocket right now. Yes, nothing can highlight the impact of innovations better than Apple’s iPhone.</p>
-
-<p>The success of iPhone actually combines several innovations in different area. They include supplier chain management, logistic, retails, brand management and product design.</p>
-
-<p>So what it takes to be innovative? What can we do to come up with an truly innovative product? If you want to start the next Apple, the next Google or the next Tesla, You want to listen to these research results.</p>
-
-<p>Size matters</p>
-
-<p>Big corporate is not an ideal institute for innovation. Who would have thought? It is not so much a failure of the corporate because it is exactly what a corporate is designed for: avoid mistake! A big corporate has a series of command in place because new idea or product must be cross-examined and studied before they will receive a green light. They will do numerous marketing researches to decide if a product idea is viable.</p>
-
-<p>When a product has to go through so many focus groups and polling, it is usually hardly innovative anymore. As Henry Ford has once put it famously: If you ask what a customer want out of a car, they will tell you a faster carriage!</p>
-
-<p>That’s why over past decades, R&amp;D effort of giant like AT&amp;T, Xerox or IBM has little to show for as commercial products. Don’t get me wrong, their lab has produced brilliant ideas that change the world. For example Apple and Windows’ Graphical User Interface and Mouse is essentially a Xerox’s invention. But as an organisation, Xerox failed to capitalise the idea.</p>
-
-<p>2) Gender matters</p>
-
-<p>In another research, the researchers want to find out what makes a team great, or as they call it the Collective Intelligence. In two studies with about 700 people, working in groups of two to five, the researchers founds some factors that explains a group’s performance on a wide variety of tasks. This collective intelligence is not strongly correlated with the average or maximum individual intelligence of group members but is correlated with the average social sensitivity of group members and the equality in distribution of conversational turn-taking. And they are usually correlated to the proportion of females in the group.</p>
-
-<p>In the tech startup world, teams are made up of usually predominantly socially awkward males (like me Exhibit A). Actually time and time again females have proven they are as competent if not better than their counterparts in engineering and computer science. If you are starting a new tech startup you should seriously rethink the prevailing bias against hiring females technical staff.</p>
-
-<p>3) The mix matters</p>
-
-<p>Have you thought about what a broadway musical successful? Is it the script or the score? Is it the genre? Is it the actors and actress? Or beautiful set and costume? After looking into how a company is formed, researchers find that actually it has a lot to do with the connections between the members: For a successful company, there is usually a healthy mix of, on the one hand, experienced veterans who have known and worked with each other for a long time, and on the other hand, relatively young and new members. Once this factor is identified, it just makes a lot of sense: The old and existing networks provides stability and experience to the team when the new kids on block comes and offer fresh angles and new inspiration. If the balance tilt either way, you will have either a company that may keep repeating its past success or a team of rookies who are struggling to get the basic right.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -503,6 +474,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
       </li>
     
@@ -516,10 +491,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/04/madness-of-powershell/">madness of powershell</a>
       </li>
     
   </ul>
