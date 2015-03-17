@@ -4,7 +4,7 @@
   <title><![CDATA[Category: assignment | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/assignment/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:47:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -22,30 +22,25 @@
 
 <p>and this bit of code</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>i = 3
-</span><span class='line'>i, a[i] = i+1, 20&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+i = 3
+i, a[i] = i+1, 20</p>
+
+<p>{% endcodeblock %}</p>
 
 <p>In lua, <code>a</code> will become</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{1, 1, 1, 20, 1, 1, 1, 1, 1, 1}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+{1, 1, 1, 20, 1, 1, 1, 1, 1, 1}
+{% endcodeblock %}</p>
 
 <p>Whereas in python it will become</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;blockquote>&lt;blockquote>&lt;blockquote>&lt;p>a
-</span><span class='line'>[1, 1, 1, 1, 20, 1, 1, 1, 1, 1]</span></code></pre></td></tr></table></div></figure></notextile></div></p></blockquote></blockquote></blockquote>
+<p>{% codeblock %}</p>
+
+<blockquote><blockquote><blockquote><p>a
+[1, 1, 1, 1, 20, 1, 1, 1, 1, 1]
+{% endcodeblock %}</p></blockquote></blockquote></blockquote>
 
 <p>And it is a non-issue in erlang because it does not support mutable variable</p>
 ]]></content>

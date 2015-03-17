@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Apparently I am not the only who mistook Emma Stone for Linsay Lohan.
-">
+  <meta name="description" content="Finally figure out the back button title not set issue. That’s what I have been doing in the originating controller’s prepareForSegue method: It has &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/05/p-24465550078/">Apparently I Am Not the Only Who Mistook Emma Stone for Linsay Lohan.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/12/p-24942635911/">Finally Figure Out the Back Button Title Not Set Issue.</a></h1>
     
     
       <p class="meta">
@@ -138,14 +137,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-06-05T21:13:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2012</time>
+<time datetime="2012-06-12T17:06:00+10:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Apparently I am not the only who mistook Emma Stone for Linsay Lohan.</p>
+  <div class="entry-content"><p>Finally figure out the back button title not set issue.</p>
+
+<p>That’s what I have been doing in the originating controller’s <code>prepareForSegue</code> method:</p>
+
+<p>It has not effect. The <code>backBarButtonItem</code> is probably not initialised yet. (Nothing will come out of a call to a nil object).</p>
+
+<p>I should actually create an instance of the <code>UIBarButtonItem</code></p>
 </div>
   
   
@@ -158,7 +163,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/05/p-24423629594/">Pasta With Shrimp and Broccoli in a Nice Garlic Pesto</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/11/p-24875240027/">For Some Reason I Cannot Set the Title of the &#8220;backBarButtonItem&#8220; of &#8220;navigationItem&#8220; Programmatically. I Can Only Set It in the InterfaceBuilder.</a></h1>
     
     
       <p class="meta">
@@ -174,25 +179,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-06-05T07:17:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2012</time>
+<time datetime="2012-06-11T18:33:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>When everything is cooked, throw them all together in a pan, mix, and serve</p>
+  <div class="entry-content"><p>For some reason I cannot set the title of the <code>backBarButtonItem</code> of <code>navigationItem</code> programmatically. I can only set it in the InterfaceBuilder.</p>
 
-<ul>
-<li>Boil the pasta for the appropriate amount of time</li>
-<li>Cut the broccoli and throw in into a steam pot until it looks all pretty and green</li>
-<li>Boil the prepared shrimp for the appropriate amount of time (and until they look all pretty and orange), or you can simply thaw frozen cooked shrimp</li>
-<li>Prepare pesto by throwing it into a small saucepan with some milk and butter, added some garlic powder and Parmesan cheese
-When everything is cooked, throw them all together in a pan, mix, and serve</li>
-</ul>
-
-
-<p><a href="http://www.reddit.com/r/tonightsdinner/comments/uk9c2/pasta_with_shrimp_and_broccoli_in_a_nice_garlic/">(source)</a></p>
+<p>Also it must be done in the controller that initiates the page transition</p>
 </div>
   
   
@@ -205,7 +201,7 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/06/02/p-24202482392/">Did a ‘git Commit .’ but Did Not Realised the Commit Has Failed.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/11/p-24873216853/">Having Some Simple Fun With Gambit-scheme</a></h1>
     
     
       <p class="meta">
@@ -221,16 +217,14 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
   
 
 
-<time datetime="2012-06-02T03:26:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2012</time>
+<time datetime="2012-06-11T17:05:00+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Did a ‘git commit .’ but did not realised the commit has failed.</p>
-
-<p>Then I did a ‘git checkout -b next_jira’ and I lost all my changes… Nice.</p>
+  <div class="entry-content"><p>Having some simple fun with gambit-scheme</p>
 </div>
   
   
@@ -243,7 +237,7 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/31/p-24121526195/">MPMoviePlayerViewController</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/10/p-24803473772/">Annoying. Cannot Get the Subview Resized Automatically, Despite Doing This:</a></h1>
     
     
       <p class="meta">
@@ -259,14 +253,16 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
   
 
 
-<time datetime="2012-05-31T19:15:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+<time datetime="2012-06-10T18:38:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Wanted to use <code>MPMoviePlayerViewController</code> but really don’t know how to use <code>initWithContentURL</code> in the context of <code>prepareForSegue</code></p>
+  <div class="entry-content"><p>Annoying. Cannot get the subview resized automatically, despite doing this:</p>
+
+<p>Turns out, to get it to work, I have to set the properties of the subview, which is a MPMoviePlayerController</p>
 </div>
   
   
@@ -279,7 +275,7 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/31/p-24120953000/">It Is Very Easy to Remove the Tab Bar at the Bottom.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/06/10/p-24801287706/">How to Bring a Subview to the Front When You Tap It?</a></h1>
     
     
       <p class="meta">
@@ -295,16 +291,21 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
   
 
 
-<time datetime="2012-05-31T19:02:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2012</time>
+<time datetime="2012-06-10T17:11:00+10:00" pubdate data-updated="true">Jun 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is very easy to remove the tab bar at the bottom.</p>
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[parentView bringSubviewToFront:childView];
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Also need to check ‘hides bottom bars when push’ option</p>
+
+
 </div>
   
   
@@ -329,23 +330,23 @@ When everything is cooked, throw them all together in a pan, mix, and serve</li>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

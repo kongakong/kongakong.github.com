@@ -4,7 +4,7 @@
   <title><![CDATA[Category: vagrant | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/vagrant/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:47:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Converge failed with error message undefined local variable or method xxx]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/"/>
+    <updated>2015-03-15T09:35:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx</id>
+    <content type="html"><![CDATA[<p>Got this error message:</p>
+
+<pre><code>    ==&gt; default: [2015-03-14T22:04:52+00:00] INFO: Running queued delayed notifications before re-raising exception
+    ==&gt; default: [2015-03-14T22:04:52+00:00] ERROR: Converge failed with error message undefined local variable or method `role' for #&lt;Chef::Mixin::Template::Temp
+    lateContext:0x000000032e4368&gt;
+    ==&gt; default: [2015-03-14T22:04:52+00:00] DEBUG: Re-raising exception: Chef::Exceptions::RunFailedWrappingError - Found 1 errors, they are stored in the backtr
+    ace
+    ==&gt; default: 1) Chef::Mixin::Template::TemplateError -  undefined local variable or method `role' for #&lt;Chef::Mixin::Template::TemplateContext:0x000000032e436
+    8&gt;
+</code></pre>
+
+<p>This is my <code>template</code> resource:</p>
+
+<pre><code>    template '/etc/profile.d/server-env.sh' do
+      source 'server/profile-env.erb'
+      variables(
+        :role =&gt; role
+      )
+    end
+</code></pre>
+
+<p>This is my template file <code>profile-env.erb</code>:</p>
+
+<pre><code> set APP_ROLE=&lt;%= role -%&gt;
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Lesson from learning to use vagrant, chef and sensu]]></title>

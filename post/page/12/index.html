@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is my code from mail_api import send_mail def my_func(): # do some work send_mail(to="test@example.com", content="data) # do some more work &hellip;">
+  <meta name="description" content="This the error message: ==&gt; default: ================================================================================ ==&gt; default: Error &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/02/a-little-catch-with-at-patch/">A Little Gotcha With @patch</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/08/cannot-find-a-resource-matching-ruby-block-sensu-service-trigger/">Cannot Find a Resource Matching Ruby_block[sensu_service_trigger]</a></h1>
     
     
       <p class="meta">
@@ -137,46 +137,74 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-02T16:34:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2015</time>
+<time datetime="2015-02-08T18:26:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>This is my code</p>
+  <div class="entry-content"><p>This the error message:</p>
 
-<pre><code>from mail_api import send_mail
-
-def my_func():
-    # do some work
-    send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
+<pre><code>    ==&gt; default: ================================================================================
+    ==&gt; default: Error executing action `enable` on resource 'sensu_service[sensu-client]'
+    ==&gt; default: ================================================================================
+    ==&gt; default:
+    ==&gt; default: Chef::Exceptions::ResourceNotFound
+    ==&gt; default: ----------------------------------
+    ==&gt; default: Cannot find a resource matching ruby_block[sensu_service_trigger] (did you define it first?)
+    ==&gt; default:
+    ==&gt; default: Cookbook Trace:
+    ==&gt; default: ---------------
+    ==&gt; default: /tmp/vagrant-chef/c66d06dac7e6e1e4d559122d4d1a9f5c/cookbooks/sensu/providers/service.rb:52:in `block in load_current_resource'
 </code></pre>
 
-<p>Here is my unit test. I want to test for the return value but I do not want to send out any email at all from the unit test. That&rsquo;s why I patch the <code>send_mail</code> function.</p>
+<p>It is because I did not include the <code>sensu::default</code> cookbook.</p>
+</div>
+  
+  
 
-<pre><code>from mock import patch
 
-  class MyTest(unittest.TestCase):
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/08/brew-and-cast/">Brew and Cast</a></h1>
+    
+    
+      <p class="meta">
+        
 
-    @patch('mail_api.send_mail')
-    def test_my_func(self, send_mail):
-      self.assertEquals(my_func(), expected_result)
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-08T10:58:00+11:00" pubdate data-updated="true">Feb 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Reinstalling cask on another mac. Thought it is the command to install <code>cask</code> brew subcommand:</p>
+
+<pre><code>brew install cask
 </code></pre>
 
-<p>To my surprise an email is still sent out when the test is run!</p>
+<p>Wrong! This <code>cask</code> is actually an emacs package manager.</p>
 
-<p>It turns out <code>my_func</code> still retains a reference to the original <code>send_mail</code> function. If I want to successfully patch the mail api, I need to rewrite <code>my_func</code> like this:</p>
+<p>To install <code>brew cask</code>, it is the command:</p>
 
-<pre><code>import mail_api
-
-def my_func():
-    # do some work
-    mail_api.send_mail(to="test@example.com", content="data)
-    # do some more work
-    return result
+<pre><code>brew tap caskroom/cask
 </code></pre>
 </div>
   
@@ -190,7 +218,7 @@ def my_func():
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/01/20/chef/">Chef, Brekshelf and Data Bag</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/06/ochiwa-unable-to-connect-to-sensu/">Ochiwa Unable to Connect to Sensu</a></h1>
     
     
       <p class="meta">
@@ -206,18 +234,33 @@ def my_func():
   
 
 
-<time datetime="2015-01-20T14:41:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2015</time>
+<time datetime="2015-02-06T05:13:00+11:00" pubdate data-updated="true">Feb 6<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>After some trial and errors, the best way (as of this writing) to manage cookbooks for <strong>vagrant</strong> + <strong>chef</strong> is to use brekshef. You can forget about <code>knife</code> or <code>librarian-chef</code>.</p>
+  <div class="entry-content"><p>I used chef to install sensu and ochiwa.</p>
 
-<p>If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner.</p>
+<p>In the ocihwa log I see a lot of &lsquo;connection refused&rsquo; error</p>
 
-<p>However it does not apply to <code>data_bags</code>. You will still need to specify the path to <code>data_bags</code> if you need to use data bag.</p>
+<pre><code>{"Date":"2015-02-05T09:42:23.516606749Z","Level":"warning","Src":{"Func":"github.com/sensu/uchiwa/uchiwa.Build","Line":49},"Output":"API call to \"http://127.0.0.1:4567/stashes\" returned: Get http://127.0.0.1:4567/stashes: dial tcp 127.0.0.1:4567: connection refused"}
+</code></pre>
+
+<p>With help from sensu irc chatroom, I checked</p>
+
+<pre><code>netstat -anp | grep 4567
+</code></pre>
+
+<p>There is no process.</p>
+
+<pre><code>service sensu-api status
+</code></pre>
+
+<p>The service is stopped.</p>
+
+<p>After starting the service, ochiwa can talk to sensu server now.</p>
 </div>
   
   
@@ -230,7 +273,7 @@ def my_func():
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/01/19/best-way-to-install-chefdk/">Best Way to Install Chefdk on OSX</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/05/mandrill-is-sending-me-a-strange-name/">Mandrill Is Sending Me a Strange Template Name</a></h1>
     
     
       <p class="meta">
@@ -246,17 +289,14 @@ def my_func():
   
 
 
-<time datetime="2015-01-19T15:12:00+11:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
+<time datetime="2015-02-05T13:11:00+11:00" pubdate data-updated="true">Feb 5<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The best way to install chefdk on OSX for me is to use <code>brew cask</code>:</p>
-
-<pre><code>brew cask install chefdk 
-</code></pre>
+  <div class="entry-content"><p>I have originally created a template <code>hello_world</code>. Then I renamed it to <code>sayhi</code>. Somehow the <code>Template Slug</code> stays as <code>hello-world</code>: in the webhook payload the template name carries <code>hello-world</code> instead of the new name <code>sayhi</code></p>
 </div>
   
   
@@ -269,7 +309,7 @@ def my_func():
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/01/18/basic-rvm/">Basic Rvm</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/04/authenticate-mandrill-webhook-call/">Authenticate Mandrill Webhook Call in Python</a></h1>
     
     
       <p class="meta">
@@ -285,101 +325,64 @@ def my_func():
   
 
 
-<time datetime="2015-01-18T15:53:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
+<time datetime="2015-02-04T19:58:00+11:00" pubdate data-updated="true">Feb 4<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
+  <div class="entry-content"><p>There are plenty of examples in php out there, but I cannot find any in python. I reckon I can share my implementation here.</p>
 
-<p>Here is some basic <code>rvm</code> command:</p>
+<p>It is assuming you are using Google App Engine</p>
 
-<pre><code>$ rvm list
+<pre><code>    import webapp2
+    import hashlib
+    import hmac
 
-rvm rubies
+    class MandrillWebhookHandler(webapp2.RequestHandler):
 
-   ruby-1.9.3-p484 [ x86_64 ]
-   ruby-1.9.3-p551 [ x86_64 ]
-=* ruby-2.2.0 [ x86_64 ]
+        def _calc_signature(self, raw, key):
+            hashed = hmac.new(key, raw, hashlib.sha1)
+            return hashed.digest().encode("base64").rstrip('\n')
 
-# =&gt; - current
-# =* - current &amp;&amp; default
-#  * - default
+        def verify_mandrill_signature(self):
+            '''
+            Mandrill includes an additional HTTP header with webhook POST requests,
+                X-Mandrill-Signature, which will contain the signature for the request.
+                To verify a webhook request, generate a signature using the same key
+                that Mandrill uses and compare that to the value of the
+                X-Mandrill-Signature header.
+            :return: True if verified valid
+            '''
+            mandrill_signature = self.request.headers['X-Mandrill-Signature']
+            mandrill_key = 'Your mandrill webhook key goes here'
+            signed_data = self.request.path_url
+            sorted_key = sorted(self.request.arguments())
+            for k in sorted_key:
+                signed_data += k
+                signed_data += self.request.get(k)
+            expected_signature = self._calc_signature(signed_data, mandrill_key)
+            return expected_signature == mandrill_signature
 
+        def head(self):
+            '''
+            Must return 200 so Mandrill knows it is a valid webhook
 
-$ rvm use 2.2.0
-Using /Users/antkong/.rvm/gems/ruby-2.2.0
+            http://help.mandrill.com/entries/22024856-Why-can-t-my-webhook-or-inbound-route-URL-be-verified-
+            '''
+            self.response.set_status(OK)
 
-$ bundle install
-bash: bundle: command not found
+        def post(self):
+            '''
+            Mandrill sends data to our webhook by post
+            '''
+            if not self.verify_mandrill_signature():
+                # check failed
+                self.abort()
 
-$ gem install bundle
-Fetching: bundler-1.7.12.gem (100%)
-Successfully installed bundler-1.7.12
-Fetching: bundle-0.0.1.gem (100%)
-Successfully installed bundle-0.0.1
-Parsing documentation for bundler-1.7.12
-Installing ri documentation for bundler-1.7.12
-Parsing documentation for bundle-0.0.1
-Installing ri documentation for bundle-0.0.1
-Done installing documentation for bundler, bundle after 1 seconds
-2 gems installed 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
-
-<p>Probably the most elegant style</p>
-
-<pre><code>    d = 
-      b: 1
-      c: 2
-</code></pre>
-
-<p>This also works</p>
-
-<pre><code>    d = { b: 1, c: 2}
-</code></pre>
-
-<p>If you need to span multiple lines:</p>
-
-<pre><code>    d = { b: 1 , \
-      c: 2}
+            # The rest of processing
+            # ...
 </code></pre>
 </div>
   
@@ -405,23 +408,23 @@ Done installing documentation for bundler, bundle after 1 seconds
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

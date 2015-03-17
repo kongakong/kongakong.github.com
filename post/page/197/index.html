@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="I do not use pgsql a lot, so I need to jot down a few ommonly used commands here: Use \connect &lt;database name&gt; to switch database The &hellip;">
+  <meta name="description" content="Another difference between Linux and OSX: no more adduser. Use dscl instead. So, for example, in order to find out what groups are defined locally, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/14/p-1312897866/">Postgresql Memo</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388790863/">Dscl</a></h1>
     
     
       <p class="meta">
@@ -137,18 +137,24 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-14T23:57:00+11:00" pubdate data-updated="true">Oct 14<span>th</span>, 2010</time>
+<time datetime="2010-10-24T22:41:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I do not use pgsql a lot, so  I need to jot down a few ommonly used commands here:</p>
+  <div class="entry-content"><p>Another difference between Linux and OSX: no more <em>adduser</em>. Use <em>dscl</em> instead.</p>
 
-<p>Use <code>\connect &lt;database name&gt;</code> to switch database</p>
+<p>So, for example, in order to find out what groups are defined locally, we can run</p>
 
-<p>The equivalent in MSSQL or Sybase will be <code>use &lt;database name&gt; go</code></p>
+<p><code>dscl localhost -list /Local/Default/Groups</code></p>
+
+<p>To add someone to a group, we should run</p>
+
+<p><code>dscl . append /Groups/somegroup GroupMembership someuser</code></p>
+
+<p>Don&rsquo;t know where <code>GroupMembership</code> comes from. From documentation?</p>
 </div>
   
   
@@ -161,7 +167,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/11/p-1290729286/">Successfully Compiled and Built Python 2.5.5 on Osx 10.6</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1388761712/">MBP and SMB</a></h1>
     
     
       <p class="meta">
@@ -177,14 +183,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-11T22:45:00+11:00" pubdate data-updated="true">Oct 11<span>th</span>, 2010</time>
+<time datetime="2010-10-24T22:34:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>But there is no <code>ncurse</code> lib</p>
+  <div class="entry-content"><p>Has great difficulty in connecting, from my MBP, to a samba share that is living on a mac mini/osx 10.6. Need to log in and out to reconnect.</p>
 </div>
   
   
@@ -197,7 +203,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/11/p-1290583685/">Reading Framework Documentation</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1387854919/">There Is a 10-users Limit in the Afp Protocol</a></h1>
     
     
       <p class="meta">
@@ -213,14 +219,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-11T22:02:00+11:00" pubdate data-updated="true">Oct 11<span>th</span>, 2010</time>
+<time datetime="2010-10-24T19:03:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>A bit lost in OSX documentation. So many interesting thing to learn</p>
+  <div class="entry-content"><p>There is a 10 user limit in the afp protocol! An unexpected, unpleasant surprise.</p>
+
+<p>Switched file sharing to smb</p>
 </div>
   
   
@@ -233,7 +241,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/08/p-1267909194/">Overcoming Compilation Error</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/24/p-1385207169/">Nltk Setup</a></h1>
     
     
       <p class="meta">
@@ -249,16 +257,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-08T18:40:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+<time datetime="2010-10-24T12:07:00+11:00" pubdate data-updated="true">Oct 24<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>One of the steps</p>
+  <div class="entry-content"><p>Need to install libYAML-0.1.3 and PyYAML-3.0.9 first</p>
 
-<p><code>./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework</code></p>
+<p>Turns out the python system path is not set properly, and I am still unable to install nltk. Need fixing</p>
 </div>
   
   
@@ -271,7 +279,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/10/08/p-1264649679/">&#8216;Struct Winsize&#8217; Declared Inside Parameter List</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/20/p-1357321396/">Reading iOS Documentation on KVC</a></h1>
     
     
       <p class="meta">
@@ -287,20 +295,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-10-08T08:52:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
+<time datetime="2010-10-20T18:45:00+11:00" pubdate data-updated="true">Oct 20<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Seeing a lot of</p>
+  <div class="entry-content"><p><em>KVC</em> stands for Key-Value Coding</p>
 
-<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
-
-<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
-
-<p>Fixed by using forward declaration</p>
+<p>It is time to seriously engage the documentation</p>
 </div>
   
   
@@ -325,23 +329,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

@@ -9,10 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="… Simply follow the link. e.g. 1
-2
-3 ls -l `which erl`
-lrwxr-xr-x 1 antkong admin 29 29 Apr 23:49 /usr/local/bin/erl -&gt; ../Cellar/erlang/R16B/bin/ &hellip;">
+  <meta name="description" content="Added SSToolkit to my Podfile and got this message. Don’t know what it means… 1
+[!] [SSToolkit] Specification#config is deprecated. The config is &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -124,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/05/07/p-49845982745/">To Find Out Where Homebrew Keeps the Files of a Formula</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/29/p-51633107176/">SSToolkit</a></h1>
     
     
       <p class="meta">
@@ -140,27 +138,183 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-05-07T20:00:00+10:00" pubdate data-updated="true">May 7<span>th</span>, 2013</time>
+<time datetime="2013-05-29T20:00:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>… Simply follow the link.</p>
+  <div class="entry-content"><p>Added SSToolkit to my Podfile and got this message. Don’t know what it means…</p>
 
-<p>e.g.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[!] [SSToolkit] Specification#config is deprecated. The config is accessible from the parameter passed to the hooks</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/15/p-50445623013/">Brew Local Modification Error and Solution</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-15T07:33:00+10:00" pubdate data-updated="true">May 15<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>       error: Your local changes to the following files would be overwritten by  merge:
+</span><span class='line'>        Library/Formula/erlang.rb
+</span><span class='line'>      Please, commit your changes or stash them before you can merge.
+</span><span class='line'>      Aborting
+</span><span class='line'>      Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Solution</em></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>ls -l `which erl`
-</span><span class='line'>lrwxr-xr-x  1 antkong  admin  29 29 Apr 23:49 /usr/local/bin/erl -&gt; ../Cellar/erlang/R16B/bin/erl
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cd `brew --prefix`
+</span><span class='line'>$ cd Cellar/erlang/
+</span><span class='line'>$ git reset --hard HEAD</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/05/14/p-50367270258/">Whenever You Think You Need Urllib2, You Actually Need Requests</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-14T07:21:00+10:00" pubdate data-updated="true">May 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, today, when I want to write up a simple test to post data to a web server, I imported lib urllib2 right away.</p>
+
+<p>It usually works great… until you need something more than basic.</p>
+
+<p>Apparently I need to set some cookie and set to the server. Let’s import cookiejar and cookie…</p>
+
+<p>Why it throws an exception <em>AttributeError: ‘SimpleCookie’ object has no attribute +’rfc2965’</em>?</p>
+
+<p>OK, let&rsquo;s import DefaultCookiePolicy. Then I got hit by a <em>missing domain attribute</em> exception. &ldquo;Do I need to use a lower level Cookie class to set the domain?&rdquo;, I wonder. Try switching to Cookie and it throw this exception</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>    <span class="o">...</span>
+</span><span class='line'>    <span class="n">c</span> <span class="o">=</span> <span class="n">Cookie</span><span class="p">()</span>
+</span><span class='line'><span class="ne">TypeError</span><span class="p">:</span> <span class="n">__init__</span><span class="p">()</span> <span class="n">takes</span> <span class="n">at</span> <span class="n">least</span> <span class="mi">17</span> <span class="n">arguments</span> <span class="p">(</span><span class="mi">1</span> <span class="n">given</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p>At this point I said to myself: No, I am not going to figure out the 17 arguments. My test code is at this point in this dismal state:.</p>
 
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>    <span class="kn">import</span> <span class="nn">urllib2</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">cookielib</span> <span class="kn">import</span> <span class="n">Cookie</span><span class="p">,</span> <span class="n">CookieJar</span><span class="p">,</span> <span class="n">DefaultCookiePolicy</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">Cookie</span> <span class="kn">import</span> <span class="n">SimpleCookie</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">policy</span> <span class="o">=</span> <span class="n">DefaultCookiePolicy</span><span class="p">(</span><span class="n">rfc2965</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">c</span> <span class="o">=</span> <span class="n">SimpleCookie</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">c</span><span class="p">[</span><span class="s">&#39;secretkey&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">auth_token</span>
+</span><span class='line'>    <span class="n">cj</span> <span class="o">=</span> <span class="n">CookieJar</span><span class="p">(</span><span class="n">policy</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">cj</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">/postdata&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">server_url</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">proxyHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">(</span> <span class="p">{}</span> <span class="p">)</span>
+</span><span class='line'>    <span class="n">defaultErrorHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPDefaultErrorHandler</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">cookieHandler</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cj</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span> <span class="n">proxyHandler</span><span class="p">,</span> <span class="n">defaultErrorHandler</span><span class="p">,</span> <span class="n">cookieHandler</span> <span class="p">)</span>
+</span><span class='line'>    <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Instead of continuing banging my head against a wall, I recall reading about ‘requests’ module. Let give it a go.</p>
+
+<p>Like magic, it is all I need. 2 lines.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>     <span class="kn">import</span> <span class="nn">requests</span>
+</span><span class='line'>     <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">cookie</span><span class="o">=</span><span class="n">cookie</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It just works. Well done, requests!</p>
 </div>
   
   
@@ -173,7 +327,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/05/06/p-49716537787/">Single Quote Is for Something Else in Erlang</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/12/p-50250633524/">Algorithms for Making Good Decisions</a></h1>
     
     
       <p class="meta">
@@ -189,14 +343,25 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-05-06T06:56:00+10:00" pubdate data-updated="true">May 6<span>th</span>, 2013</time>
+<time datetime="2013-05-12T21:35:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>In python, single quote and double quote are pretty much interchangable. Not so in erlang.</p>
+  <div class="entry-content"><p><strong>Algorithms for Making Good Decisions</strong> by Kevin Leyton-Brown</p>
+
+<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/VJrqh6iT5BA "></iframe></div>
+
+
+<p>The video was posted in 2011, but it is still very informative.</p>
+
+<p>Kevin is also a contributor to the Game Theory course in coursera.org.</p>
+
+<p>Presentation slide can be found here:</p>
+
+<p><a href="http://www.cs.ubc.ca/~kevinlb/talk.php?u=2011-Calumet-AlgorithmsDecisions.pdf">http://www.cs.ubc.ca/~kevinlb/talk.php?u=2011-Calumet-AlgorithmsDecisions.pdf</a></p>
 </div>
   
   
@@ -209,7 +374,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/05/01/p-49349555815/">Homebrew</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/09/p-50003419743/">Useful Erlang Function</a></h1>
     
     
       <p class="meta">
@@ -225,90 +390,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-05-01T20:00:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
+<time datetime="2013-05-09T20:00:00+10:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Just find out</p>
-</div>
-  
-  
+  <div class="entry-content"><p>Tell you the location of library files</p>
 
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>code:lib_dir(xmerl).</span></code></pre></td></tr></table></div></figure>
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/05/01/p-49296939249/">Trying Out Cocoapods</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-01T06:45:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>The installation failed at the end</p>
-
-<p>It failed because I did not install the command line tools in XCode. After installing the tool, the gem command ran fine.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/04/30/p-49203298223/">Emacs Fu 2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-30T07:12:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/erlware-deprecated/erlware-mode">erlware-mode</a> is deprecated.</p>
-
-<p>Use <code>erlang-mode</code> in erlang distribution instead</p>
 </div>
   
   
@@ -333,23 +426,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

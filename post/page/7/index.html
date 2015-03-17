@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The problem is this: vagrant failed to provision a box after it is successfully created in aws ec2. It reported: INFO ssh: SSH not up: #&lt;Vagrant:: &hellip;">
+  <meta name="description" content="I want to create an offline cookbook. I want to create a user databag to use the users recipe. I ran knife data bag create users but it created &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t Let Private and Public Key Sit in the Same Folder When Vagrant Up</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/25/knife-did-not-create-any-data-bag/">Knife Did Not Create Any Data Bag</a></h1>
     
     
       <p class="meta">
@@ -137,42 +137,24 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-19T16:39:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time>
+<time datetime="2015-02-25T11:36:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The problem is this:</p>
+  <div class="entry-content"><p>I want to create an offline cookbook. I want to create a user databag to use the <code>users</code> recipe. I ran</p>
 
-<p><strong><code>vagrant</code> failed to provision a box after it is successfully created in aws ec2.</strong></p>
-
-<p>It reported:</p>
-
-<pre><code>     INFO ssh: SSH not up: #&lt;Vagrant::Errors::SSHAuthenticationFailed: SSH authentication failed! This is typically caused by the public/private
-     keypair for the SSH user not being properly set on the guest VM. Please
-     verify that the guest VM is setup with the proper public key, and that
-     the private key path for Vagrant is setup properly as well.&gt;
+<pre><code>knife data bag create users
 </code></pre>
 
-<p>But if I do <code>vagrant ssh</code> I can login to the box with no problem.</p>
+<p>but it created nothing in the databag folder.</p>
 
-<p>I have tried everything to get it to work. I have removed <code>rvm</code>, I have reinstalled <code>chefdk</code>, I have downgraded <code>vagrant</code>&hellip; None of them work.</p>
+<p>It turns out I need to run it in local mode and give it a user name:</p>
 
-<p>I studied the log message a bit closer and I found these lines:</p>
-
-<pre><code>     769 D, [2015-02-19T15:05:43.563478 #14537] DEBUG -- net.ssh.authentication.session[851208b0]: allowed methods: publickey
-     770 D, [2015-02-19T15:05:43.563564 #14537] DEBUG -- net.ssh.authentication.methods.none[85125400]: none failed
-     771 D, [2015-02-19T15:05:43.563650 #14537] DEBUG -- net.ssh.authentication.session[851208b0]: trying publickey
-     772 E, [2015-02-19T15:05:43.564057 #14537] ERROR -- net.ssh.authentication.key_manager[851256d0]: could not load public key file `/Users/antkong/dev/project/aws/aws-ami.pem': Net::SSH::Exception (public key at /Users/antkong/dev/project/aws/aws-ami.pem.pub is not valid)
+<pre><code>knife data bag create users myuser -z
 </code></pre>
-
-<p>Apparently for some reason the key manager picked the public key file to connect to the server: I have specified a private key file in the <code>Vagrantfile</code>. The key manager added &lsquo;.pub&rsquo; to the file name and pick the file up.</p>
-
-<p>Removing the public key file solved the issue.</p>
-
-<p><strong>Lesson</strong>: Don&rsquo;t put the public key along with the private key.</p>
 </div>
   
   
@@ -185,7 +167,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/18/chsh/">Chsh</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/25/resize-tmux-window/">Resize Tmux Window</a></h1>
     
     
       <p class="meta">
@@ -201,24 +183,21 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-18T05:22:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
+<time datetime="2015-02-25T10:38:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Unable to switch to zsh which is installed from brew</p>
+  <div class="entry-content"><p>The size of the window is limited by the smallest size of attached client.</p>
 
-<pre><code>    $ chsh -s `which zsh`
-    Changing shell for demo.
-    Password for demo:
-    chsh: /usr/local/bin/zsh: non-standard shell
+<p>So to reset the size we need to detach all non-active clients</p>
+
+<p>This is the command:</p>
+
+<pre><code> C-b :attach -d
 </code></pre>
-
-<p>Solution:</p>
-
-<p>Add <code>/usr/local/bin/zsh</code> to <code>/etc/shells</code></p>
 </div>
   
   
@@ -231,7 +210,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/25/tmux-resizing-pane/">Tmux Resizing Pane</a></h1>
     
     
       <p class="meta">
@@ -247,23 +226,21 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-17T15:14:00+11:00" pubdate data-updated="true">Feb 17<span>th</span>, 2015</time>
+<time datetime="2015-02-25T01:20:00+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Getting this error from my server code which uses boto to interace with Dynamo</p>
+  <div class="entry-content"><p>I want to increase a height of a pane in a tmux session. I tried &lsquo;C-b C-<Up>&rsquo;, but since my C-<UP> is binded to expose in OSX, it did not work.</p>
 
-<pre><code>   [Mon Feb 16 07:25:22 2015] [error] JSONResponseError: JSONResponseError: 400 Bad Request
-   [Mon Feb 16 07:25:22 2015] [error] {u'message': u'Signature expired: 20150216T072522Z is now earlier than 20150216T07252
-   2Z (20150216T074022Z - 15 min.)', u'__type': u'com.amazon.coral.service#InvalidSignatureException'}
+<p>Fortunately it is very easy to control the behavior via command line. First of all, you need to identify the pane. It can be done either by a &lsquo;C-b q&rsquo; or by command <code>tmux list-panes</code>. The pane from which you issued the command will be marked as <code>active</code>.</p>
+
+<p>Once the id of the pane is identified, you can run the following command:</p>
+
+<pre><code>   tmux resize-pane -t 1 -U    # 1 is the pane id 
 </code></pre>
-
-<p>The server is a <strong>Window Server 2012 Standard</strong> box</p>
-
-<p>Reboot the box fixed the problem</p>
 </div>
   
   
@@ -276,7 +253,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/16/it-happens-too-often/">It Happens Too Often</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/23/useful-vbox-command/">Useful Vbox Command</a></h1>
     
     
       <p class="meta">
@@ -292,35 +269,23 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-16T10:14:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+<time datetime="2015-02-23T21:21:00+11:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The provisioning failed a few times this morning:</p>
+  <div class="entry-content"><p>This will list out all the VMs</p>
 
-<pre><code>   Reading state information...
-   The following extra packages will be installed:
-     patch
-   Suggested packages:
-     diffutils-doc policykit-1
-   The following NEW packages will be installed:
-     patch update-notifier-common
-   0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
-   Need to get 248 kB of archives.
-   After this operation, 2,361 kB of additional disk space will be used.
-   Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main patch amd64 2.7.1-4ubuntu1
-     Could not resolve 'us.archive.ubuntu.com'
-   Err http://us.archive.ubuntu.com/ubuntu/ trusty/main update-notifier-common all 0.154.1
-     Could not resolve 'us.archive.ubuntu.com'
-   STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.1-4ubuntu1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-   E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_0.154.1_all.deb  Could not resolve 'us.archive.ubuntu.com'
+<pre><code>    $ VBoxManage list vms
+    "virtualbox_default_1418633437021_83822" {0342b0ad-d64c-4864-a0e2-c16235dc6ff2}
+    "serverr" {eca868d2-6d5d-4b49-b076-27f5ef396355}
+    "sensu_client" {70b38f62-0a0c-4965-b4f4-5360ec761d64}
+    "analytics" {ab9e59e4-7058-4c9f-80af-c403348cac6f}
+    "sensu-server_default_1424653555631_75219" {4d7174f7-6f7b-4732-98c3-9509c426cae3}
+    "simple-sensu-client_default_1424660131045_1714" {1eb59ae6-2d5e-4b0f-9135-a7de6c882e1d}
 </code></pre>
-
-<p>But when I ping the server, it responds perfectly.</p>
 </div>
   
   
@@ -333,7 +298,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/16/setting-value-in-chef-cooking/">Setting Value in Chef Cooking</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/22/innovation/">Innovation</a></h1>
     
     
       <p class="meta">
@@ -349,24 +314,36 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-16T08:47:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+<time datetime="2015-02-22T21:32:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>If you set a variable this way in a cookbook:</p>
+  <div class="entry-content"><h2>Video</h2>
 
-<pre><code>node['mysqld']['root_password'] = 'password'
-</code></pre>
+<p><a href="https://www.youtube.com/watch?v=Mtjatz9r-Vc">The art of innovation by Guy Kawasaki</a></p>
 
-<p>you will get this exception</p>
+<p><a href="https://www.youtube.com/watch?v=pii8tTx1UYM">Our approach to innovation is dead wrong by Diana Kander</a></p>
 
-<pre><code>   Chef::Exceptions::ImmutableAttributeModification
-   ------------------------------------------------
-   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
-</code></pre>
+<p><a href="https://www.youtube.com/watch?v=YKV3rhzvaC8">The New Rules of Innovation by Carl Bass</a></p>
+
+<p><a href="https://www.youtube.com/watch?v=iG9CE55wbtY">Do schools kill creativity? by Sir Ken Robinson</a></p>
+
+<blockquote><p>(In a kids&#8217; nativity play) The three boys came in, four-year-olds with tea towels on their heads, and they put these boxes down, and the first boy said, &ldquo;I bring you gold.&rdquo; And the second boy said, &ldquo;I bring you myrrh.&rdquo; And the third boy said, &ldquo;Frank sent this.&rdquo;</p>
+
+<p>Actually, do you know that old philosophical thing, if a tree falls in a forest and nobody hears it, did it happen? Remember that old chestnut? I saw a great t-shirt recently, which said, &ldquo;If a man speaks his mind in a forest, and no woman hears him, is he still wrong?&rdquo;</p></blockquote>
+
+<p><a href="http://www.ted.com/talks/ken_robinson_says_schools_kill_creativity/transcript?language=en"><em>Full transcript</em></a></p>
+
+<p><a href="https://www.youtube.com/watch?v=86x-u-tz0MA">Your elusive creative genius by Elizabeth Gilbert</a></p>
+
+<blockquote><p>Fear based questions</p></blockquote>
+
+<p><a href="https://www.youtube.com/watch?v=kIruNparMGQ">The Face of Innovation by JR Reagan</a></p>
+
+<blockquote><p>Freshpaper</p></blockquote>
 </div>
   
   
@@ -391,23 +368,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

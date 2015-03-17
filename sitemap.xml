@@ -4419,12 +4419,42 @@
         <lastmod>2015-03-08T12:02:33+11:00</lastmod>
     </url>
     <url>
+        <loc>http://www.ahwkong.com/post/2015/03/08/trying-packer/</loc>
+        <lastmod>2015-03-09T02:08:35+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/03/10/how-to-use-check-log-dot-rb-in-windows/</loc>
+        <lastmod>2015-03-10T09:10:13+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/03/12/drag-and-drop-is-bad-for-data-center/</loc>
+        <lastmod>2015-03-12T09:02:53+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/03/12/table-topic-master/</loc>
+        <lastmod>2015-03-12T10:24:51+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/03/13/xcode-exception/</loc>
+        <lastmod>2015-03-18T06:36:53+11:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.ahwkong.com/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/
+        </loc>
+        <lastmod>2015-03-16T06:59:47+11:00</lastmod>
+    </url>
+    <url>
+        <loc>http://www.ahwkong.com/post/2015/03/16/partial-chef-template/</loc>
+        <lastmod>2015-03-18T06:35:49+11:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.ahwkong.com/blog/archives/</loc>
-        <lastmod>2015-03-08T12:02:33+11:00</lastmod>
+        <lastmod>2015-03-18T06:36:53+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/</loc>
-        <lastmod>2015-03-08T12:02:33+11:00</lastmod>
+        <lastmod>2015-03-18T06:36:53+11:00</lastmod>
     </url>
     <url>
         <loc>http://www.ahwkong.com/robots.txt</loc>
@@ -4432,6 +4462,6 @@
     </url>
     <url>
         <loc>http://www.ahwkong.com/tags/</loc>
-        <lastmod>2015-03-08T12:02:33+11:00</lastmod>
+        <lastmod>2015-03-18T06:36:53+11:00</lastmod>
     </url>
 </urlset>

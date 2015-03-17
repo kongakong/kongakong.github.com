@@ -9,10 +9,16 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="1
+  <meta name="description" content="Equivalent to 1
+2 for x in y: # do something in C++ is 1
 2
 3
-4 CAGradientLayer *gradient = [CAGradientLayer layer]; gradient.frame = self.view.bounds; gradient.colors = @[ [colorOne CGColor], [colorTwo &hellip;">
+4
+5
+6
+7
+8
+void print_loop() { auto y = {0, 1, 2, 3, 4, 5, 6}; for (auto i : y) { cout & &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -124,7 +130,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/02/22/cagradientlayer/">CAGradientLayer</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">X in Y in C++</a></h1>
     
     
       <p class="meta">
@@ -140,45 +146,119 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-02-22T13:57:00+11:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2014</time>
+<time datetime="2014-03-04T08:23:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>Equivalent to</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'>   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span>
+</span><span class='line'>      <span class="c"># do something</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>in C++ is</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="kt">void</span> <span class="n">print_loop</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">i</span> <span class="o">:</span> <span class="n">y</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;.&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The above code will cause this compiler error:</p>
 
-<pre><code>/path/to/MyViewController.m:31:26: Collection element of type 'CGColorRef' (aka 'struct CGColor *') is not an Objective-C object
-</code></pre>
+</div>
+  
+  
 
-<p>It can be fixed by casting to <code>id</code></p>
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/03/bottle-and-parameters/">Bottle and Parameters</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-03T22:58:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Use   <code>request.query</code> to retrieve the url parameters</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">CAGradientLayer</span> <span class="o">*</span><span class="n">gradient</span> <span class="o">=</span> <span class="p">[</span><span class="n">CAGradientLayer</span> <span class="n">layer</span><span class="p">];</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-</span><span class='line'>    <span class="n">gradient</span><span class="p">.</span><span class="n">colors</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="p">(</span><span class="kt">id</span><span class="p">)[</span><span class="n">colorOne</span> <span class="n">CGColor</span><span class="p">],</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span> <span class="p">[</span><span class="n">colorTwo</span> <span class="n">CGColor</span><span class="p">]</span> <span class="p">];</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">gradient</span><span class="p">;</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#coding: utf-8</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/index.html&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;a href=&quot;/hello&quot;&gt;Go to Hello page&lt;/a&gt;&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/hello&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>    <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
+</span><span class='line'>        <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;h1&gt;Hello </span><span class="si">%s</span><span class="s">&lt;/h1&gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>It is a new behavior due to the use of ARC</p>
+
 </div>
   
   
@@ -191,7 +271,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/02/19/some-objective-c-note-to-self/">Some Objective-c Note-to-self</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/03/nslog-macro/">NSLog Macro</a></h1>
     
     
       <p class="meta">
@@ -207,117 +287,29 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-02-19T02:11:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
+<time datetime="2014-03-03T08:11:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>To find the number of items in a <code>NSArray</code> use</p>
-
-<pre><code>[array count];
-</code></pre>
-
-<p>It is not <code>size</code> (python) or <code>length</code> (java)</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/19/nsnotification-and-view-controller/">NSNotification and View Controller</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-19T02:02:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have created a number of custom UIViewControllers for UICollectionViewCell programmatically (Apple makes it really easy to create good looking GUI. <code>AutoLayout</code> is not as bad as I heard from the blogsphere. But I digress).</p>
-
-<p>Now I want to be able to have these UIViewController to subscribe to an adhoc NSNotification. I have ensured that there is no typo in the my notification name (The name is defined in a header file). I have also make sure the notification is fired on the main thread, like so:</p>
-
-<pre><code>dispatch_async(dispatch_get_main_queue(),^{
-    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_NAME object:self];
-});
-</code></pre>
-
-<p>However my UIViewControllers still do not receive any notification at all.</p>
-
-<p>It turns out it is because the controllers instances have gone out of scope. I found out by putting a <code>NSLog</code> in the <code>dealloc</code> method. It proves that the controllers have gone out of scope.</p>
-
-<p> In order to keep them around in memory, I added a <code>NSMutableDictionary</code> to keep reference to these controllers. Will test if it has any adverse effect or not.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/17/capture-part-of-ios-screen-as-image/">Capture Part of Ios Screen as Image</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-17T04:38:00+11:00" pubdate data-updated="true">Feb 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
+  <div class="entry-content"><p>This is a useful marco for doing debug logging:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">theCell</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
-</span><span class='line'><span class="p">[</span><span class="n">theCell</span><span class="p">.</span><span class="n">layer</span> <span class="nl">renderInContext:</span><span class="n">UIGraphicsGetCurrentContext</span><span class="p">()];</span>
-</span><span class='line'><span class="n">UIImage</span> <span class="o">*</span><span class="n">renderedCellImage</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
-</span><span class='line'><span class="n">UIGraphicsEndImageContext</span><span class="p">();</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
+</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
+</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
+</span><span class='line'><span class="cp">} while (0)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><a href="http://stackoverflow.com/a/13656612/58129">source</a></p>
+<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
+
+<p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
 </div>
   
   
@@ -330,7 +322,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/02/16/land-tax-is-adjustable/">Land Tax Is Adjustable</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R Is Presinstalled in OSX</a></h1>
     
     
       <p class="meta">
@@ -346,14 +338,113 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-02-16T17:10:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2014</time>
+<time datetime="2014-03-02T11:27:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>if <strong>Land Tax Adjustable</strong> is checked, it means the vendor seeks reimbursement of land tax from the buyer</p>
+  <div class="entry-content"><p>I just found out R is pre-installed in OSX!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ R
+</span><span class='line'>
+</span><span class='line'>R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
+</span><span class='line'>Copyright (C) 2013 The R Foundation for Statistical Computing
+</span><span class='line'>Platform: x86_64-apple-darwin10.8.0 (64-bit)
+</span><span class='line'>
+</span><span class='line'>R is free software and comes with ABSOLUTELY NO WARRANTY.
+</span><span class='line'>You are welcome to redistribute it under certain conditions.
+</span><span class='line'>Type 'license()' or 'licence()' for distribution details.
+</span><span class='line'>
+</span><span class='line'>  Natural language support but running in an English locale
+</span><span class='line'>
+</span><span class='line'>R is a collaborative project with many contributors.
+</span><span class='line'>Type 'contributors()' for more information and
+</span><span class='line'>'citation()' on how to cite R or R packages in publications.
+</span><span class='line'>
+</span><span class='line'>Type 'demo()' for some demos, 'help()' for on-line help, or
+</span><span class='line'>'help.start()' for an HTML browser interface to help.
+</span><span class='line'>Type 'q()' to quit R.
+</span><span class='line'>
+</span><span class='line'>></span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a Maverick Usb</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-01T07:08:00+11:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Get a USB flash drive that is at least 8 GBs.</p>
+
+<p>Use Disk Utility to prepare the flash drive:</p>
+
+<ul>
+<li>Click on the Erase tab in the DU main window.</li>
+<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
+<li>Click on the Erase button.</li>
+</ul>
+
+
+<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
+
+<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
+--volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
+</code></pre>
+
+<p>No need of any third party software</p>
 </div>
   
   
@@ -378,23 +469,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

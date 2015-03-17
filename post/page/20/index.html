@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Yield to maturity (YTM) is sometimes known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the &hellip;">
+  <meta name="description" content="I want to create a function for use as a predicate in the function lists:any. I try it first in erlang shell, 137&gt; F = fun(X) -&gt; X == 1 end.
+# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/03/06/yield-to-maturity/">Yield to Maturity</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/15/sometimes-it-is-not-obvious-at-the-beginning/">Sometimes It Is Not Obvious at the Beginning</a></h1>
     
     
       <p class="meta">
@@ -137,16 +138,36 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-03-06T07:13:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+<time datetime="2014-03-15T15:49:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
+  <div class="entry-content"><p>I want to create a function for use as a predicate in the function <code>lists:any</code>. I try it first in erlang shell,</p>
 
-<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
+<pre><code>137&gt; F = fun(X) -&gt; X == 1 end.
+#Fun&lt;erl_eval.6.80484245&gt;
+</code></pre>
+
+<p>It works as expected:</p>
+
+<pre><code>138&gt; lists:any(F, [2, 3]).
+false
+139&gt; lists:any(F, [2, 1, 3]).
+true
+</code></pre>
+
+<p>Then I want to change the condition to something else, and I got an error message:</p>
+
+<pre><code>140&gt; F = fun(X) -&gt; X /= 1 end.
+** exception error: no match of right hand side value #Fun&lt;erl_eval.6.80484245&gt;
+</code></pre>
+
+<p>My first thought: It is interesting&hellip; Did I mix up the &lsquo;not equal&rsquo; operator in erlang? Maybe it is not &lsquo;/=&rsquo;?</p>
+
+<p>It turns out it is because the code at 140 is effectively an attempt to rebound the <code>F</code> variable. The error message is actually about this rather than the operator. I do not usually test code in the erlang shell, so it took me a while to figure it out.</p>
 </div>
   
   
@@ -159,7 +180,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/03/05/quick-32nd-lookup/">Quick 32nd Lookup</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/10/when-top-bar-is-enabled-dot-dot-dot/">When Top Bar Is Enabled&#8230;</a></h1>
     
     
       <p class="meta">
@@ -175,185 +196,17 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
+<time datetime="2014-03-10T22:00:00+11:00" pubdate data-updated="true">Mar 10<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><table>
-<thead>
-<tr>
-<th></th>
-<th><strong>32nd</strong>  </th>
-<th> <strong>Decimal</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td> 1/32   </td>
-<td>0.03125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 2/32   </td>
-<td>0.0625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 3/32   </td>
-<td>0.09375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 4/32   </td>
-<td>0.125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 5/32   </td>
-<td>0.15625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 6/32   </td>
-<td>0.1875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 7/32   </td>
-<td>0.21875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 8/32   </td>
-<td>0.25 </td>
-</tr>
-<tr>
-<td></td>
-<td> 9/32   </td>
-<td>0.28125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 10/32  </td>
-<td>0.3125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 11/32  </td>
-<td>0.34375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 12/32  </td>
-<td>0.375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 13/32  </td>
-<td>0.40625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 14/32  </td>
-<td>0.4375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 15/32  </td>
-<td>0.46875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 16/32  </td>
-<td>0.5 </td>
-</tr>
-<tr>
-<td></td>
-<td> 17/32  </td>
-<td>0.53125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 18/32  </td>
-<td>0.5625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 19/32  </td>
-<td>0.59375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 20/32  </td>
-<td>0.625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 21/32  </td>
-<td>0.65625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 22/32  </td>
-<td>0.6875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 23/32  </td>
-<td>0.71875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 24/32  </td>
-<td>0.75 </td>
-</tr>
-<tr>
-<td></td>
-<td> 25/32  </td>
-<td>0.78125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 26/32  </td>
-<td>0.8125 </td>
-</tr>
-<tr>
-<td></td>
-<td> 27/32  </td>
-<td>0.84375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 28/32  </td>
-<td>0.875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 29/32  </td>
-<td>0.90625 </td>
-</tr>
-<tr>
-<td></td>
-<td> 30/32  </td>
-<td>0.9375 </td>
-</tr>
-<tr>
-<td></td>
-<td> 31/32  </td>
-<td>0.96875 </td>
-</tr>
-<tr>
-<td></td>
-<td> 32/32  </td>
-<td>1.0 </td>
-</tr>
-</tbody>
-</table>
+  <div class="entry-content"><p>When top bar of a navigation controller is enabled, I got this error messages:</p>
 
+<pre><code>the item height must be less that the height of the UICollectionView minus the section insets top and bottom values.
+</code></pre>
 </div>
   
   
@@ -366,7 +219,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/03/05/missing-curses-library/">Missing Curses Library</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/10/quicklook/">Quicklook</a></h1>
     
     
       <p class="meta">
@@ -382,7 +235,7 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
+<time datetime="2014-03-10T21:52:00+11:00" pubdate data-updated="true">Mar 10<span>th</span>, 2014</time>
         
       </p>
     
@@ -406,175 +259,148 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install ncurses-dev
-</span><span class='line'>Reading package lists... Done
-</span><span class='line'>Building dependency tree       
-</span><span class='line'>Reading state information... Done
-</span><span class='line'>Note, selecting 'libncurses5-dev' instead of 'ncurses-dev'
-</span><span class='line'>The following extra packages will be installed:
-</span><span class='line'>  libtinfo-dev
-</span><span class='line'>Suggested packages:
-</span><span class='line'>  ncurses-doc
-</span><span class='line'>The following NEW packages will be installed:
-</span><span class='line'>  libncurses5-dev libtinfo-dev
-</span><span class='line'>0 upgraded, 2 newly installed, 0 to remove and 107 not upgraded.
-</span><span class='line'>Need to get 328 kB of archives.
-</span><span class='line'>After this operation, 1,452 kB of additional disk space will be used.
-</span><span class='line'>Do you want to continue [Y/n]?</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Other dependency</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install libssl-dev</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do not need them for now</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>jinterface     : No Java compiler found
-</span><span class='line'>odbc           : ODBC library - link check failed</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/04/x-in-y-in-c-plus-plus/">X in Y in C++</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-04T08:23:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Equivalent to</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'>   <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span>
-</span><span class='line'>      <span class="c"># do something</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>in C++ is</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='c++'><span class='line'><span class="kt">void</span> <span class="n">print_loop</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">auto</span> <span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">i</span> <span class="o">:</span> <span class="n">y</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;.&#39;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/03/bottle-and-parameters/">Bottle and Parameters</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-03T22:58:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Use   <code>request.query</code> to retrieve the url parameters</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#coding: utf-8</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/index.html&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;a href=&quot;/hello&quot;&gt;Go to Hello page&lt;/a&gt;&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nd">@route</span><span class="p">(</span><span class="s">&#39;/hello&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
-</span><span class='line'>    <span class="n">name</span> <span class="o">=</span> <span class="bp">None</span>
-</span><span class='line'>    <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s">&#39;name&#39;</span><span class="p">)</span>
-</span><span class='line'>    <span class="k">if</span> <span class="n">names</span><span class="p">:</span>
-</span><span class='line'>        <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class='line'>    <span class="k">return</span> <span class="s">&#39;&lt;h1&gt;Hello </span><span class="si">%s</span><span class="s">&lt;/h1&gt;&#39;</span> <span class="o">%</span> <span class="n">name</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span> <span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ qlmanage -l
+</span><span class='line'>List of all generator IDs: (
+</span><span class='line'>    "com.apple.quicklookgenerator.iChat",
+</span><span class='line'>    "com.apple.qlgenerator.package",
+</span><span class='line'>    "com.apple.qlgenerator.pdf",
+</span><span class='line'>    "com.apple.qlgenerator.contact",
+</span><span class='line'>    "com.apple.qlgenerator.mail",
+</span><span class='line'>    "com.apple.qlgenerator.audio",
+</span><span class='line'>    "com.apple.garageband.quicklookgenerator",
+</span><span class='line'>    "com.apple.qlgenerator.iCal",
+</span><span class='line'>    "com.apple.Notes.qlgenerator",
+</span><span class='line'>    "com.apple.qlgenerator.movie",
+</span><span class='line'>    "com.apple.qlgenerator.image",
+</span><span class='line'>    "com.apple.qlgenerator.web",
+</span><span class='line'>    "com.apple.qlgenerator.LogicXQLGenerator",
+</span><span class='line'>    "com.apple.qlgenerator.eps",
+</span><span class='line'>    "com.apple.qlgenerator.certificates",
+</span><span class='line'>    "com.apple.qlgenerator.bookmark",
+</span><span class='line'>    "com.apple.qlgenerator.text",
+</span><span class='line'>    "com.apple.qlgenerator.clipping",
+</span><span class='line'>    "org.m0k.transmission.QuickLookPlugin",
+</span><span class='line'>    "com.apple.qlgenerator.font",
+</span><span class='line'>    "com.apple.qlgenerator.office",
+</span><span class='line'>    "com.apple.iBooksAuthor.iBooksAuthorQuickLookGenerator",
+</span><span class='line'>    "org.openemu.savestategenerator",
+</span><span class='line'>    "com.apple.qlgenerator.SceneKit",
+</span><span class='line'>    "com.apple.qlgenerator.iconset",
+</span><span class='line'>    "com.apple.qlgenerator.standard-bundles",
+</span><span class='line'>    "com.apple.qlgenerator.locPDF",
+</span><span class='line'>    "com.apple.iWork.iWorkQuickLookGenerator",
+</span><span class='line'>    "com.pixelmatorteam.quicklook"
+</span><span class='line'>)</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/07/keyboard-in-ios/">Keyboard in iOS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-07T22:03:00+11:00" pubdate data-updated="true">Mar 7<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Turns out it is not a smaller subject&hellip;</p>
+
+<p>First reading: <a href="http://stackoverflow.com/questions/1126726/how-to-make-a-uitextfield-move-up-when-keyboard-is-present">http://stackoverflow.com/questions/1126726/how-to-make-a-uitextfield-move-up-when-keyboard-is-present</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/now-in-objective-c-and-python/">Current Time in Objective-c and Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T18:49:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To get the current time in python</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">datetime</span>
+</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span><span class='line'><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">321003</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>and in objective-c</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">NSDate</span><span class="o">*</span> <span class="n">date</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDate</span> <span class="n">date</span><span class="p">];</span>
+</span><span class='line'><span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span> <span class="n">date</span><span class="p">);</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -603,23 +429,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

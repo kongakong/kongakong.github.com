@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Wat]
-">
+  <meta name="description" content="The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/06/p-28828938592/">Wat</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/13/p-29329230595/">The Importance of the Idea of &#8216;Map&#8217;</a></h1>
     
     
       <p class="meta">
@@ -138,14 +137,17 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-06T19:45:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
+<time datetime="2012-08-13T19:42:00+10:00" pubdate data-updated="true">Aug 13<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="https://www.destroyallsoftware.com/talks/wat/">Wat</a>]</p>
+  <div class="entry-content"><blockquote><p>The importance of the idea of &lsquo;map&rsquo;: you stop thinking about control structure. And you start to think about operation on the aggregate, the list.</p></blockquote>
+
+<div class="embed-video-container"><iframe width="400" height="300" src="http://www.youtube.com/embed/2QgZVYI3tDs&t=22m0s "></iframe></div>
+
 </div>
   
   
@@ -158,7 +160,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/05/p-28758435068/">Encountered This Error When Adding Core Data Support to My Ios Project</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/12/p-29256890594/">How to Dismiss a Modal View Controller Which Is Created by a Segue in Storyboard?</a></h1>
     
     
       <p class="meta">
@@ -174,20 +176,92 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-05T19:50:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+<time datetime="2012-08-12T19:50:00+10:00" pubdate data-updated="true">Aug 12<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Encountered this error when adding core data support to my ios project</p>
+  <div class="entry-content"><p>A way to dismiss a modal view controller is to link the button to an <code>IBAction</code> like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">navigationController</span> <span class="nl">popViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But it does not work in storyboard anymore.</p>
+
+<p>This is the solution:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">cancelAddItem:</span><span class="p">(</span><span class="n">UIBarButtonItem</span> <span class="o">*</span><span class="p">)</span><span class="nv">sender</span> <span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span> <span class="nl">dismissModalViewControllerAnimated:</span><span class="n">YES</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/11/p-29187540494/">Calculate Cash Flows in Python</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-11T19:54:00+10:00" pubdate data-updated="true">Aug 11<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>Q:</em> Bob began setting aside $5,000 per year in an equity fund at the age of 25. He has turned 30, and has just made another deposit into the fund. The fund has returned 4% annually. How much does Bob have in his account today?</p>
+
+<p><em>A:</em></p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Receiver 'NSManagedObjectContext' for class message is a forward declaration.</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># contribution at age
+</span><span class='line'>>>> [(i, 5000)for i in range(25, 30+1)]
+</span><span class='line'>[(25, 5000), (26, 5000), (27, 5000), (28, 5000), (29, 5000), (30, 5000)]
+</span><span class='line'>
+</span><span class='line'>>>> sum([5000*pow(1.05, i-25) for i in range(25, 30+1)])
+</span><span class='line'>34009.5640625</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
+
 </div>
   
   
@@ -200,7 +274,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/05/p-28755939075/">Google Search Intext: Operator</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/10/p-29116896037/">Calculate Regular Payment Based on Rate, Number of Payment and PV</a></h1>
     
     
       <p class="meta">
@@ -216,14 +290,30 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-05T18:24:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+<time datetime="2012-08-10T19:58:00+10:00" pubdate data-updated="true">Aug 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://www.powersearchingwithgoogle.com/class?class=3&amp;lesson=5">Google search intext: operator</a>]</p>
+  <div class="entry-content"><p>Calculate regular payment based on rate, number of payment and PV</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def pmt(i, n, p):
+</span><span class='line'>    return i * p * pow((1 + i), n) / (1 - pow((1 + i), n))</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>>>> pmt(0.06, 120, 120000)
+</span><span class='line'>-7206.622591189367</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -236,7 +326,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/04/p-28691634617/">Doing Complex Math in Python</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/09/p-29045520999/">UIViewController::setMoviePlayerController</a></h1>
     
     
       <p class="meta">
@@ -252,56 +342,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-04T19:51:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
+<time datetime="2012-08-09T19:56:00+10:00" pubdate data-updated="true">Aug 9<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Easy</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/04/p-28690806918/">Trying to Retrofit Coredata Into an iOS Tabbed Application. Kind of Painful.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-04T19:22:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Trying to retrofit coredata into an iOS Tabbed application. Kind of painful.</p>
-
-<p>Finally get it done by these steps:</p>
-
-<p>Then I have spent a bit of time to solve the problem I have encountered before:</p>
-
-<p>Now I am woking on using static style table cells in a non-UITableViewController (Error:  <code>Static table views are only valid when embedded in UITableViewController instances</code>). Gonna be bit tough to solve</p>
+  <div class="entry-content"><p><code>UIViewController::setMoviePlayerController:</code> is an undocumented API, yet it is used in one of the Apple sample project.</p>
 </div>
   
   
@@ -326,23 +374,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

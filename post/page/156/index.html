@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="From http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754
+  <meta name="description" content="Alexander’s Star
 ">
   
 
@@ -122,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/26/p-5844393478/">Counting Unique Items in an Array</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961968377/">Alexander’s Star</a></h1>
     
     
       <p class="meta">
@@ -138,7 +138,153 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-26T08:03:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2011</time>
+<time datetime="2011-05-29T21:48:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Alexander%27s_Star">Alexander’s Star</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5961356223/">Function Arguments in C++ Are Passed By-value. A Copy of Each Argument Is Made. A Function Works With the Copy, Not the Original</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T21:06:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Function arguments in C++ are passed by-value. A copy of each argument is made. A function works with the copy, not the original</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5942654011/">_initialize_ Is a Class Method Which Will Be Called Before Any Other Method Is Called on a Class. Alternatively Use a Function With ___attribute__ ((Constructor))_</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T07:39:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><em>initialize</em> is a class method which will be called before any other method is called on a class. Alternatively use a function with <em><strong>attribute</strong> ((constructor))</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5941073480/">To Find Out What iOS Device Is Attached to the System, We Can Try Monitor</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T06:44:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>To find out what iOS device is attached to the system, we can try monitor</p>
+
+<p><a href="Monitoring%20Accessory-Related%20Events">http://developer.apple.com/library/ios/#featuredarticles/ExternalAccessoryPT/Articles/MonitoringEvents.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/05/29/p-5940804774/">Difference Between setObject:forKey: And setValue:forKey: In NSMutableDictionary</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-05-29T06:35:00+10:00" pubdate data-updated="true">May 29<span>th</span>, 2011</time>
         
       </p>
     
@@ -147,173 +293,15 @@ alt="hit counter"></a></div></noscript>
 
   <div class="entry-content"><p>From</p>
 
-<p><a href="SO">http://stackoverflow.com/questions/6119076/iphone-counting-unique-items-in-an-array/6119754#6119754</a></p>
-</div>
-  
-  
+<p><a href="SO">http://stackoverflow.com/questions/1249634/wheres-the-difference-between-setobjectforkey-and-setvalueforkey-in-nsmutabl/1249653#1249653</a></p>
 
+<p><em>setValue:forKey:</em> is part of the <em>NSKeyValueCoding</em> protocol, which among other things, lets you access object properties from the likes of Interface Builder. <em>setValue:forKey:</em> is implemented in classes other than NSDictionary.</p>
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/26/p-5844217301/">When I Use Google Doc in Chrome, I Can Directly Print the Document to the Printer by Just Pressing the Printer Icon.</a></h1>
-    
-    
-      <p class="meta">
-        
+<p><em>setObject:forKey:</em> is<em> NSMutableDictionary</em>’s reason to exist. Its signature happens to be quite similar to setValue:forKey:, but is more generic (e.g. any key type). It’s somewhat of a coincidence that the signatures are so similar.</p>
 
+<p>What adds to the confusion is that <em>NSMutableDictionary</em>’s implementation of setValue:forKey: is equivalent to<em> setObject:forKey:</em> in most cases. In other classes, _setValue:forKey: _ changes member variables. In NSMutableDictionary, it changes dictionary entries, unless you prefix the key with a ‘@’ character — in which case it modifies member variables.</p>
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-26T07:57:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>When I use google doc in chrome, I can directly print the document to the printer by just pressing the printer icon.</p>
-
-<p>It was less straight-forward in the past. It usually involved downloading a pdf rendering of the file, then print it to a printer via the pdf reader.</p>
-
-<p>Nice.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5815038508/">Liskov Substitution Principle</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T09:41:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="Liskov%20Principle">http://en.wikipedia.org/wiki/Liskov_substitution_principle</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/25/p-5810996367/">It Is Like You Want to Be a Nun Because You Saw a Flying Nun.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-25T07:42:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is like you want to be a nun because you saw a flying nun.</p>
-
-<p>Edward Conlon, author of <em>Blue Blood</em>, on people wanting to join CSI after watching the TV show</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/24/p-5797170054/">Earn Another Experience Point</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-24T20:12:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Wrote up a simple test module code (simply called ‘test’), inside which I defined a function <code>mp</code>. It does some loan calculation given a loan amount, interest rate (<strong>r</strong>) and repayment periods (<strong>n</strong>).</p>
-
-<p>When I compile the module, I get this error message:</p>
-
-<pre><code>Warning: this expression will fail with a 'badarith' exception
-</code></pre>
-
-<p>Not really understand what is wrong, I proceed to run the code like so: <code>test:mp(100000, 0.075/12.0, 30*12)</code>.</p>
-
-<p>Now I get another error message:</p>
-
-<pre><code>exception error: no function clause matching test:mp(100000, 0.00625, 360)
-</code></pre>
-
-<p>Turns out the function declaration is <code>mp(B, r, n)</code>.</p>
-
-<p>See the problem there? <code>r</code> and <code>n</code> are atoms! I forgot to use uppercase to denote they are actually input variables.</p>
+<p>So in a nutshell, use _setObject:forKey: _ when you need to work with dictionary keys and valus, and setValue:forKey: in the rarer cases where you need to tackle KVP.</p>
 </div>
   
   
@@ -338,23 +326,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

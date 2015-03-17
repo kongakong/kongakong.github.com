@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one. &hellip;">
+  <meta name="description" content="Definition: The dishonesty of a charlatan. Example: Jock Colville and the king’s assistant private secretary Tommy Lascelles, lunching together one &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/03/15/p-19340098717/">Disappointed at MS Powershell</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/03/20/p-19622688865/">Charlatanism</a></h1>
     
     
       <p class="meta">
@@ -137,22 +137,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-03-15T22:05:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+<time datetime="2012-03-20T22:00:00+11:00" pubdate data-updated="true">Mar 20<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>My goal is to read a formula from a cell in a Excel Workbook, perform some transformation on it and then update the cell’s formula with the new one.</p>
+  <div class="entry-content"><p><em>Definition</em>: The dishonesty of a charlatan.</p>
 
-<p>So I had my  first surprise when I realised subversion marks the .ps1 as binary. It is because the script file is saved as unicode by Powershell ISE by default. It just introduces unnecessary  hurdle to the version control process.</p>
-
-<p>Some COM calls to the excel workbook object just failed when it works fine in vbs or python  with win32com.</p>
-
-<p>The lack of string manipulation functions is not helping either, especially the completion comes from scripting languages like python.</p>
-
-<p>Powershell is probably a good tool to interface with .Net framework and to handle Windows admin task. But for me it is not a language of first choice.</p>
+<p><em>Example</em>: Jock Colville and the king’s assistant private secretary Tommy Lascelles, lunching together one day, debated ‘whether very great men usually had a touch of charlatanism in them,’ and of course they were thinking of the prime minister.</p>
 </div>
   
   
@@ -165,7 +159,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/03/15/p-19340017302/">Gaiety</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/03/19/p-19568553378/">Development of Beam Guidance in WWII</a></h1>
     
     
       <p class="meta">
@@ -181,16 +175,15 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-03-15T22:00:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2012</time>
+<time datetime="2012-03-19T22:00:00+11:00" pubdate data-updated="true">Mar 19<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>Definition:</em> The state or quality of being lighthearted or cheerful: “the gaiety of children’s laughter”.</p>
-
-<p><em>Example:</em> Spears was impressed by the prime minister’s imposture of gaiety. Churchill poked the British officer playfully in the stomach with his stick.</p>
+  <div class="entry-content"><p>This <a href="http://en.wikipedia.org/wiki/Reginald_Victor_Jones#Beam_guidance">episode</a>]
+showed Churchill at his best: accessible, imaginative, penetrating, decisive and always suggestible about technological innovation.</p>
 </div>
   
   
@@ -203,7 +196,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/03/14/p-19286050279/">Market Hasn&#8217;t Really Changed All These Years</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/03/19/p-19567046257/">EXC_BAD_ACCESS</a></h1>
     
     
       <p class="meta">
@@ -219,16 +212,39 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-03-14T22:00:00+11:00" pubdate data-updated="true">Mar 14<span>th</span>, 2012</time>
+<time datetime="2012-03-19T20:30:00+11:00" pubdate data-updated="true">Mar 19<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Quoted from &ldquo;Winston&rsquo;s War: Churchill, 1940-1945&rdquo; by Max Hastings:</p>
+  <div class="entry-content"><p>The catch block is not reachable, because CFGetTypeID does not throw exception. It actually caused a EXC_BAD_ACCESS, which crashes the application.</p>
 
-<p>The <em>Financial Times</em> columnist Lex wrote on June 23 [1941]: &ldquo;Markets spent the morning trying to make up their minds whether the German aggression against Russia was a bull or a bear… The majority concluded that whatever happened we could hardly be worse off as a result of Hitler’s latest somersault.&rdquo;</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>    @try {
+</span><span class='line'>        CFGetTypeID(NULL);
+</span><span class='line'>    }  @catch   (NSException * e) {
+</span><span class='line'>            NSLog(@"Exception: %@", e);
+</span><span class='line'>    }
+</span><span class='line'>    @finally {
+</span><span class='line'>            NSLog(@"finally");
+</span><span class='line'>    }
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -241,7 +257,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/03/14/p-19284625022/">Start Reading the Book &#8216;a World Without Ice&#8217; by Henry Pollack</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/03/18/p-19506607484/">Acolytes</a></h1>
     
     
       <p class="meta">
@@ -257,14 +273,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-03-14T20:30:00+11:00" pubdate data-updated="true">Mar 14<span>th</span>, 2012</time>
+<time datetime="2012-03-18T22:00:00+11:00" pubdate data-updated="true">Mar 18<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="Start%20reading%20the%20book%20%22A%20World%20without%20Ice%22%20by%20Henry%20Pollack">http://www.worldwithoutice.com/</a></p>
+  <div class="entry-content"><p><em>Example:</em> It is often remarked that Churchill had acolytes, but few intimates.</p>
 </div>
   
   
@@ -277,7 +293,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/03/13/p-19231539841/">Finally Finished the Book, “Winston’s War: Churchill, 1940-1945” by Max Hastings</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/03/17/p-19446345394/">Prevaricate</a></h1>
     
     
       <p class="meta">
@@ -293,14 +309,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-03-13T22:00:00+11:00" pubdate data-updated="true">Mar 13<span>th</span>, 2012</time>
+<time datetime="2012-03-17T22:00:00+11:00" pubdate data-updated="true">Mar 17<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Finally finished the book, “Winston’s War: Churchill, 1940-1945” by Max Hastings</p>
+  <div class="entry-content"><p><em>Definition:</em> Speak or act in an evasive way</p>
 </div>
   
   
@@ -325,23 +341,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

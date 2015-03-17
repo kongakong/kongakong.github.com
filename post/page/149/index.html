@@ -9,7 +9,21 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual &hellip;">
+  <meta name="description" content="Message after a successful installation 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15 If this is your first install, automatically load on login with: mkdir -p &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +135,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048028170/">Item 14: Make Sure Base Classes Have Virtual Destructors</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103768529/">Installing Couchdb Using Brew</a></h1>
     
     
       <p class="meta">
@@ -137,14 +151,49 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-01T07:34:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-02T20:32:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual destructor , the results are <em>undefined</em></p>
+  <div class="entry-content"><p>Message after a successful installation</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>
+</span><span class='line'>If this is your first install, automatically load on login with:
+</span><span class='line'>    mkdir -p ~/Library/LaunchAgents
+</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+</span><span class='line'>
+</span><span class='line'>If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
+</span><span class='line'>    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
+</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
+</span><span class='line'>
+</span><span class='line'>Or start manually with:
+</span><span class='line'>    couchdb
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -157,7 +206,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046791916/">iPhone Buttons</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073811670/">Fill a Popover With a Tableview</a></h1>
     
     
       <p class="meta">
@@ -173,18 +222,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-01T06:56:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-02T01:42:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Library:</p>
-
-<p><a href="Jeff%20LaMarche%E2%80%99s%20programmatic%20gradient%20buttons">http://code.google.com/p/iphonegradientbuttons/</a></p>
-
-<p><a href="From%20%E2%80%9CCocoa%20is%20My%20GirlFriend%E2%80%9D">http://www.cimgf.com/2010/01/28/fun-with-uibuttons-and-core-animation-layers/</a></p>
+  <div class="entry-content"><p>Example:</p>
 </div>
   
   
@@ -197,7 +242,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046309287/">Item 13: List Members in an Initialization List in the Order in Which They Are Declared</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073241354/">Null Pointer in Different Languages</a></h1>
     
     
       <p class="meta">
@@ -213,14 +258,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-01T06:40:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-02T01:14:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Because destructor cleans up in the reverse order.</p>
+  <div class="entry-content"><p>Each programming language calls it differently: nil, null, none etc… Let’s do a revision.</p>
+
+<p><em>Objective-c</em></p>
 </div>
   
   
@@ -233,7 +280,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6069047203/">Using Const With Reference Arguments</a></h1>
     
     
       <p class="meta">
@@ -249,7 +296,43 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-01T21:18:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>_Rule of thumb: _</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6069023423/">Assignment Operator Is Right-associative</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-01T21:17:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
@@ -257,42 +340,6 @@ alt="hit counter"></a></div></noscript>
 
 
   <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036284846/">C++: Dynamic Array</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-31T23:12:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>We can dynamically allocate arrays of primitive types using new as well</p>
 </div>
   
   
@@ -317,23 +364,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

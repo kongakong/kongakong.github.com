@@ -9,8 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Geometrical interpretation of Qubit From the ‘Quantum Mechanics’ by Professor Umesh Vazirani, UCLA via Coursera.org
-">
+  <meta name="description" content="Got this error message in xcode 1
+2
+3
+4
+*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '- [ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +125,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/03/p-28620996702/">Geometrical Interpretation of Qubit</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/08/p-28973709805/">Got This Error Message in Xcode</a></h1>
     
     
       <p class="meta">
@@ -138,16 +141,26 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-03T19:33:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+<time datetime="2012-08-08T19:53:00+10:00" pubdate data-updated="true">Aug 8<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Geometrical interpretation of Qubit</p>
+  <div class="entry-content"><p>Got this error message in xcode</p>
 
-<p><em>From the ‘Quantum Mechanics’ by Professor Umesh Vazirani, UCLA via Coursera.org</em></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>*** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-   
+</span><span class='line'>[UITableViewController loadView] loaded the "nJq-Ph-OeI-view-HRK-KR-R8g" nib but didn't get 
+</span><span class='line'> a UITableView.'
+</span><span class='line'>*** First throw call stack:</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It is because I have removed a UITableView from a UITableViewController in a storyboard. Adding back a UITableView and relinking it to the view outlet of the controller fixes the problem</p>
 </div>
   
   
@@ -160,7 +173,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/03/p-28563611964/">The Ferguson Principle</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/07/p-28901315549/">In Ocaml, “let Rec” Defines a Recursive Function, for Example:</a></h1>
     
     
       <p class="meta">
@@ -176,133 +189,23 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-03T03:03:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+<time datetime="2012-08-07T19:59:00+10:00" pubdate data-updated="true">Aug 7<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Three things you must ask yourself before you say anything:</p>
-
-<ul>
-<li><p>Does This Need to Be Said</p></li>
-<li><p>Does This Need to Be Said by Me</p></li>
-<li><p>Does This Need to Be Said by Me NOW</p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/08/02/p-28548986312/">Sometimes It Is Quite Fun to Answer Some Questions in Stackoverflow: You Can Help Someone Seeking Answer and You May Also Learn a New Thing or Two Yourself in the Process.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-08-02T19:57:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sometimes it is quite fun to answer some questions in Stackoverflow: you can help someone seeking answer and you may also learn a new thing or two yourself in the process.</p>
-
-<p>This is one such example:</p>
-
-<p><a href="http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.">http://stackoverflow.com/questions/11707151/python-make-a-global-condition-break.</a></p>
-
-<p>Essentially the OP is asking if there is an easy to find the number of occurrence of a substring in a longer string. For example “assesses” has the substring “sses” 2 times.</p>
-
-<p>It is a very simple question, but there is still something new I learn: while  <code>re.findall</code> is the most elegant solution, it may not work in finding overlapped occurrence of pattern. To do so one needs to include a ‘lookahead’ in the regular expression.</p>
-
-<p>My proposed solution is simply an improved version of OP’s code.</p>
+  <div class="entry-content"><p>In ocaml, “let rec” defines a recursive function, for example:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
-</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-</span><span class='line'>
-</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">if</span> <span class="n">location</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-</span><span class='line'>                <span class="k">return</span> <span class="mi">0</span> <span class="c"># none whatsoever</span>
-</span><span class='line'>        <span class="k">else</span><span class="p">:</span>
-</span><span class='line'>                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
-</span><span class='line'>                <span class="k">while</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">):</span>
-</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span><span class='line'>                   <span class="k">if</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span class='line'>                      <span class="k">break</span>
-</span><span class='line'>                   <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Here is a even shorter version which takes advantage of python’s flexible comparison syntax:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">first</span> <span class="o">=</span> <span class="s">&quot;an&quot;</span>
-</span><span class='line'><span class="n">second</span> <span class="o">=</span> <span class="s">&quot;trans-Panamanian banana&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">def</span> <span class="nf">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-</span><span class='line'>        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span class='line'>        <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">while</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">location</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">second</span><span class="p">)):</span>
-</span><span class='line'>                   <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-</span><span class='line'>                   <span class="n">location</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">second</span><span class="p">,</span><span class="n">first</span><span class="p">,</span><span class="n">location</span> <span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">count</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">print</span><span class="p">(</span><span class="n">count_needle</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">))</span>
+</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="o">#</span> <span class="k">let</span> <span class="k">rec</span> <span class="n">ipow</span> <span class="n">n</span> <span class="n">m</span> <span class="o">=</span> <span class="k">if</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">n</span> <span class="o">*</span> <span class="n">ipow</span> <span class="n">n</span> <span class="o">(</span><span class="n">m</span> <span class="o">-</span><span class="mi">1</span><span class="o">);;</span>
+</span><span class='line'><span class="k">val</span> <span class="n">ipow</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">-&gt;</span> <span class="kt">int</span> <span class="o">=</span> <span class="o">&lt;</span><span class="k">fun</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">#</span> <span class="n">ipow</span> <span class="mi">7</span> <span class="mi">8</span><span class="o">;;</span>
+</span><span class='line'><span class="o">-</span> <span class="o">:</span> <span class="kt">int</span> <span class="o">=</span> <span class="mi">5764801</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -319,7 +222,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/01/p-28477385810/">Dirac&#8217;s Ket Notation</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/06/p-28828938592/">Wat</a></h1>
     
     
       <p class="meta">
@@ -335,16 +238,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-01T20:01:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+<time datetime="2012-08-06T19:45:00+10:00" pubdate data-updated="true">Aug 6<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Dirac&rsquo;s ket notation.</p>
-
-<p><a href="http://en.wikipedia.org/wiki/Bra-ket_notation]">Details here</a></p>
+  <div class="entry-content"><p><a href="https://www.destroyallsoftware.com/talks/wat/">Wat</a>]</p>
 </div>
   
   
@@ -357,7 +258,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/08/01/p-28476372839/">Normalization on the Complex Amplitudes</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/08/05/p-28758435068/">Encountered This Error When Adding Core Data Support to My Ios Project</a></h1>
     
     
       <p class="meta">
@@ -373,16 +274,56 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-08-01T19:29:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2012</time>
+<time datetime="2012-08-05T19:50:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The normalization on the complex amplitudes means that the state of the
-system is a unit vector in a k dimensional complex vector space &mdash; called a
-Hilbert space.</p>
+  <div class="entry-content"><p>Encountered this error when adding core data support to my ios project</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Receiver 'NSManagedObjectContext' for class message is a forward declaration.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Basically, in addition to adding the CoreData framework, we need to include the core data header file. The best place to add it is in the <code>&lt;AppName&gt;-Prefix.pch</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/08/05/p-28755939075/">Google Search Intext: Operator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-05T18:24:00+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.powersearchingwithgoogle.com/class?class=3&amp;lesson=5">Google search intext: operator</a>]</p>
 </div>
   
   
@@ -407,23 +348,23 @@ Hilbert space.</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

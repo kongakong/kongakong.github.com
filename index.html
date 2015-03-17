@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Trying out emacs from brew. Here is the output: $ brew install emacs ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite. &hellip;">
+  <meta name="description" content="My story I want to add a line to the /etc/apache2/envvars. However I did not install this file using a cookbook. I installed it by package apach2. So &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/08/emacs-on-osx/">Emacs on Osx</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/16/partial-chef-template/">Partial Chef Template</a></h1>
     
     
       <p class="meta">
@@ -137,26 +137,85 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-08T12:01:00+11:00" pubdate data-updated="true">Mar 8<span>th</span>, 2015</time>
+<time datetime="2015-03-16T07:00:00+11:00" pubdate data-updated="true">Mar 16<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Trying out emacs from brew. Here is the output:</p>
+  <div class="entry-content"><h2>My story</h2>
 
-<pre><code>    $ brew install emacs
-    ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite.bottle.3.tar.gz
-    ######################################################################## 100.0%
-    ==&gt; Pouring emacs-24.4.yosemite.bottle.3.tar.gz
-    ==&gt; Caveats
-    To have launchd start emacs at login:
-        ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
-    Then to load emacs now:
-        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
-    ==&gt; Summary
-    🍺  /usr/local/Cellar/emacs/24.4: 3914 files, 104M
+<p>I want to add a line to the /etc/apache2/envvars. However I did not install this file  using a cookbook. I installed it by <code>package apach2</code>. So partial template does not work for me.</p>
+
+<p>I usds <code>FileEdit</code> instead</p>
+
+<p>Having look through the <code>apache2</code> cookbook, I start to feel chef cookbook replicates a lot of what a <code>dpkg</code> is currently doing. Does it mean the downstream maintainer have to keep the cookbook up to date with various package management systems on every other platform?</p>
+
+<h2>Resource and Documentation</h2>
+
+<p><a href="https://github.com/danielsdeleo/partials">https://github.com/danielsdeleo/partials</a></p>
+
+<p><a href="https://docs.chef.io/resource_template.html#partial-templates">https://docs.chef.io/resource_template.html#partial-templates</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge Failed With Error Message Undefined Local Variable or Method Xxx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-15T09:35:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Got this error message:</p>
+
+<pre><code>    ==&gt; default: [2015-03-14T22:04:52+00:00] INFO: Running queued delayed notifications before re-raising exception
+    ==&gt; default: [2015-03-14T22:04:52+00:00] ERROR: Converge failed with error message undefined local variable or method `role' for #&lt;Chef::Mixin::Template::Temp
+    lateContext:0x000000032e4368&gt;
+    ==&gt; default: [2015-03-14T22:04:52+00:00] DEBUG: Re-raising exception: Chef::Exceptions::RunFailedWrappingError - Found 1 errors, they are stored in the backtr
+    ace
+    ==&gt; default: 1) Chef::Mixin::Template::TemplateError -  undefined local variable or method `role' for #&lt;Chef::Mixin::Template::TemplateContext:0x000000032e436
+    8&gt;
+</code></pre>
+
+<p>This is my <code>template</code> resource:</p>
+
+<pre><code>    template '/etc/profile.d/server-env.sh' do
+      source 'server/profile-env.erb'
+      variables(
+        :role =&gt; role
+      )
+    end
+</code></pre>
+
+<p>This is my template file <code>profile-env.erb</code>:</p>
+
+<pre><code> set APP_ROLE=&lt;%= role -%&gt;
 </code></pre>
 </div>
   
@@ -170,7 +229,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/07/gwmi-vs-wmic/">Gwmi vs Wmic</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/13/xcode-exception/">XCode Exception</a></h1>
     
     
       <p class="meta">
@@ -186,105 +245,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-07T10:56:00+11:00" pubdate data-updated="true">Mar 7<span>th</span>, 2015</time>
+<time datetime="2015-03-13T08:13:00+11:00" pubdate data-updated="true">Mar 13<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><code>wmic</code> is a command line tool. <code>gwmi</code> stands for &lsquo;get-WMIObject`, a command of Powershell.</p>
-</div>
-  
-  
+  <div class="entry-content"><p>Everytime I add a UITableView I got this&hellip;</p>
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/06/ruby-gem-ssl-problem/">Ruby Gem Ssl Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-06T15:08:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Gem install can throw a ssl exception. This is a <a href="http://stackoverflow.com/a/27298259/58129">solution on Stackoverflow</a></p>
-
-<p>Summary of the remedy:</p>
-
-<p><strong>1. Download</strong></p>
-
-<pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
-</code></pre>
-
-<p><strong>2. Find out installation location</strong></p>
-
-<pre><code>    C:\&gt;gem which rubygems
-    C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
-</code></pre>
-
-<p><strong>3. Install the file</strong></p>
-
-<p>Then just copy the .pem file into <code>../2.1.0/rubygems/ssl_certs/</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/06/download-file-with-lynx/">Download File With Lynx</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-06T14:27:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My cygwin does not have <code>wget</code> or <code>curl</code> preinstalled. So to download a file from internet I do</p>
-
-<pre><code>    lynx -source url  &gt; file.txt
+<pre><code>    2015-03-13 08:12:51.087 Counter[9123:418395] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UITableViewController loadView] loaded the "9pv-A4-QxB-view-tsR-hK-woN" nib but didn't get a UITableView.'
 </code></pre>
 </div>
   
@@ -298,7 +268,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to Apply Windows Update</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a></h1>
     
     
       <p class="meta">
@@ -314,16 +284,81 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-05T14:48:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time>
+<time datetime="2015-03-12T09:03:00+11:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
+  <div class="entry-content"><h2>Table Topic</h2>
 
-<p>Windows is not suitable for datacenter.</p>
+<p>Thanks Chair.</p>
+
+<p>Dear fellow toastmasters and guest. Welcome to our table topic segment</p>
+
+<p>Table Topic is about impromptu speaking. I will invite 8 of us to come forward and speak to us on the spot for 1 min, on topic I will reveal just before you’re picked.</p>
+
+<p>The purpose of the table topic is to help us to develop our ability to organize our thoughts quickly and respond to an impromptu question or topic. That’s why we don’t want the Table Topic participant to just ramble for a minute, just saying one word after another.</p>
+
+<p>In fact, a good table topic should appear well-organised. It should have an opening, a body and a conclusion.</p>
+
+<p>You will have a minute of time to give your speech. The ember light will come on at 45sec. The red will come on at 1 minute. If you hit the one minute mark, I’d appreciate if you can wrap up immediately. It is because in a real TT contest, overtime will result in disqualification. We also want to keep the meeting time under control.</p>
+
+<p>For the even number speakers we will have [XXX] as the evaluator. For the odd number speakers we will have [YYY] as the evaluator.</p>
+
+<p>Without further ado, let’s start!</p>
+
+<p>The theme of tonight’s Table Topic: What will you do if you receive an unexpected fortune? I will give you different scenario and let see how you will handle it.</p>
+
+<p>Situation number one: You are one lucky Toastmaster. You stumbled upon a genie in a bottle and you have released it from years of confinement. He can grant you a wish, but you have to choose between one of these two choices: Stay young forever or have abundant wealth. How would you choose? [Stay young forever or have abundant wealth]</p>
+
+<ol>
+<li><p>Look like we have yet another lucky toastmaster. Another TM stumbled upon a genie in a bottle. Unfortunately this genie’s power is bit limited. You are given two choices again, but they are: to become a boss of a bottle shop or a car wash business. Which one would you choose? [Bottle shop or car wash?]</p></li>
+<li><p>Looks like another toastmaster strikes it lucky too! Another genie in a bottle is found!  Again there are two things to choose from: You can have a beautiful voice like Susan Boyle that will let you make millions out of singing, but a face like the Orc from Lord of the ring; or you can have a good look like Emma [Mma] Watson or Brad Pitt that will let make millions out of acting, but a voice like an Orc from Lord of the Ring. How would you choose? [Beautiful voice or beautiful face]</p></li>
+<li><p>You will not believe the luck of this club! One more fellow Toastmaster find a genie in a bottle! But oh no, it is the small business genie again. Now you have a choice between a fish and chip shop and a pizza restaurant. Which one will you choose and why? [fish and chip or pizza]</p></li>
+<li><p>Tonight is the night of genie! Yet another fellow Toastmaster has rescued a genie! This genie has a gift in languages and he can make you instantly fluent in either one of these three languages: Spanish, Italian or Russian. Which one will you choose and why? [Spanish, Italian or Russian]</p></li>
+<li><p>We are on a roll! Another Toastmaster has saved a genie again! On no, guess what, it is the small business genie again! Apparently he keeps getting back into a bottle because of tax evasion! Again you can choose between these two choices: a new apple iphone every year or a new samsung galaxy every year. How would you choose? [Apple or Samsung]</p></li>
+<li><p>Finally there is no more genie in a bottle to be found. However when you are walking on beach looking out for  a bottle, you run into this legendary Nigerian prince!  You gave him 50 bucks and he gave you back a princely sum of 20 million aussie right away. How are you going to spend the 20 million dollars?</p></li>
+<li><p>We all know what is at the end of a rainbow! You are the lucky fellow who have reached the end of the rainbow and found the pot of gold! What will you do with the pot of gold?</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">Drag and Drop Is Bad for Data Center</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-12T05:02:00+11:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I just drag and drop some files to a remote server. However the drop off destination is a batch file because it is where the mouse cursor moved to. At the end the batch is executed, rather than files being copying.</p>
 </div>
   
   
@@ -346,23 +381,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

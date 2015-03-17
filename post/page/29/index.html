@@ -9,8 +9,11 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Here is the full error message: 1
-configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory Solution: sudo apt-get install libxt- &hellip;">
+  <meta name="description" content="Category does not allow addition of ivar. The restriction does not apply to class extension. That&rsquo;s why I can do something like this: 1
+2
+3
+4
+5 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +125,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/24/could-not-compile-basic-x-program/">Mach Problem: Could Not Compile Basic X Program</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/01/01/category-vs-class-extension/">Category vs Class Extension</a></h1>
     
     
       <p class="meta">
@@ -138,20 +141,33 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-24T20:51:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+<time datetime="2014-01-01T07:25:00+11:00" pubdate data-updated="true">Jan 1<span>st</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Here is the full error message:</p>
+  <div class="entry-content"><p>Category does not allow addition of ivar.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>configure:27145:35: fatal error: X11/Intrinsic.h: No such file or directory</span></code></pre></td></tr></table></div></figure>
+<p>The restriction does not apply to class extension.</p>
+
+<p>That&rsquo;s why I can do something like this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker1</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker2</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Solution</strong>: <code>sudo  apt-get install libxt-dev</code></p>
+
 </div>
   
   
@@ -164,7 +180,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/24/gstreamer-backend/">Mach Problem: Gstreamer Backend</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/12/31/swizzle/">Swizzle</a></h1>
     
     
       <p class="meta">
@@ -180,14 +196,104 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-24T20:49:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+<time datetime="2013-12-31T07:21:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>This is the full error message:</p>
+  <div class="entry-content"><p>A new concept to me: <a href="http://stackoverflow.com/questions/20775670/set-ivar-value-from-category">http://stackoverflow.com/questions/20775670/set-ivar-value-from-category</a></p>
+
+<p>Here is a summary:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">original</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">setImportantProperty:</span><span class="p">));</span>
+</span><span class='line'>    <span class="n">swizzled</span> <span class="o">=</span> <span class="n">class_getInstanceMethod</span><span class="p">([</span><span class="n">ClassA</span> <span class="n">class</span><span class="p">],</span> <span class="k">@selector</span><span class="p">(</span><span class="nl">alternative_setImportantProperty:</span><span class="p">));</span>
+</span><span class='line'>    <span class="n">method_exchangeImplementations</span><span class="p">(</span><span class="n">original</span><span class="p">,</span> <span class="n">swizzled</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>`</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/31/user-defined-runtime-attribute/">User Defined Runtime Attribute</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-31T06:42:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It comes from the interface builder. The exception is thrown when xib file is loaded and trying to set an attribute in a class.</p>
+
+<p>If the attribute is not defined, you will get this error and the app will crash</p>
+
+<pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/12/30/conda-install-ipython-problem/">Conda Install Ipython Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-30T08:27:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>How can I update <code>pip</code>? Need research&hellip;</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -199,19 +305,27 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:09.25 configure:20757: checking for gstreamer-0.10 >= 0.10.25
-</span><span class='line'> 0:09.25                       gstreamer-app-0.10
-</span><span class='line'> 0:09.25                       gstreamer-plugins-base-0.10
-</span><span class='line'> 0:09.25 configure: error: gstreamer and gstreamer-plugins-base development packages are needed to build gstreamer backend. Install them or disable gstreamer support with --disable-gstreamer
-</span><span class='line'> 0:09.26 *** Fix above errors and then restart with\
-</span><span class='line'> 0:09.26                "/usr/bin/make -f client.mk build"
-</span><span class='line'> 0:09.26 make[2]: *** [configure] Error 1
-</span><span class='line'> 0:09.26 make[1]: *** [obj-x86_64-unknown-linux-gnu/Makefile] Error 2
-</span><span class='line'> 0:09.26 make: *** [build] Error 2
-</span><span class='line'> 0:09.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython
+</span><span class='line'># All packages already at latest version, nothing to do.
+</span><span class='line'># packages in environment at /Users/antkong/anaconda:
+</span><span class='line'>#
+</span><span class='line'># Warning: Your version of pip is older than what conda requires for pip
+</span><span class='line'># integration, so pip-installed packages will not be displayed.  Please
+</span><span class='line'># update pip, (conda update pip -p /Users/antkong/anaconda)
+</span><span class='line'>
+</span><span class='line'>conda                     2.2.5                    py27_0  
+</span><span class='line'>ipython                   1.1.0                    py27_0  
+</span><span class='line'>$ which pip
+</span><span class='line'>/Users/antkong/anaconda/bin/pip
+</span><span class='line'>$ pip --version
+</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Solution</strong>: <code>sudo apt-get install -y libgstreamer-plugins-base0.10-dev</code></p>
+
 </div>
   
   
@@ -224,7 +338,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/24/library-requirements-gtk-plus-2-dot-0-not-met/">Mach Problem: Library Requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) Not Met</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/12/28/finally-firefox-is-built/">Finally Firefox Is Built</a></h1>
     
     
       <p class="meta">
@@ -240,91 +354,7 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-24T19:38:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Full error message:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:08.11 configure: error: Library requirements (gtk+-2.0 >= 2.10.0 gtk+-unix-print-2.0 glib-2.0 gobject-2.0 gdk-x11-2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>:  <code>sudo apt-get install libgtk2.0-dev</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/24/c-plus-plus-compiler-cannot-create-executables/">Mach Problem: C++ Compiler Cannot Create Executables</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-24T19:19:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this error when I ran <code>mach build</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>configure: error: installation or configuration problem: C++ compiler cannot create executables.</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Solution</strong>: install g++</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/24/mach-problem/">Mach Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-24T08:27:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
+<time datetime="2013-12-28T18:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2013</time>
         
       </p>
     
@@ -338,46 +368,22 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ ./mach  build
-</span><span class='line'> 0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.15 /home/antkong/wd/mozilla-central/client.mk:315: *** Could not find autoconf 2.13.  Stop.
-</span><span class='line'> 0:00.15 make: *** [build] Error 2
-</span><span class='line'> 0:00.17 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>it comes from this check of  mozilla-central/client.mk</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># try to find autoconf 2.13 - discard errors from 'which'
-</span><span class='line'># MacOS X 10.4 sends "no autoconf*" errors to stdout, discard those via grep
-</span><span class='line'>AUTOCONF ?= $(shell which autoconf-2.13 autoconf2.13 autoconf213 2>/dev/null | grep -v '^no autoconf' | head -1)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>The autoconf in the Ubuntu desktop system is of version 2.69. It is clearly not compatible.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>0:00.10 /usr/bin/make -f client.mk -s
-</span><span class='line'> 0:00.19 TEST-PASS | check-sync-dirs.py | /home/antkong/wd/mozilla-central/js/src/build &lt;= /home/antkong/wd/mozilla-central/build
-</span><span class='line'> 0:00.19 Generating /home/antkong/wd/mozilla-central/configure using autoconf
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: error: defn: undefined macro: AC_OUTPUT_FILES
-</span><span class='line'> 0:00.26 build/autoconf/acwinpaths.m4:10: the top level
-</span><span class='line'> 0:00.26 autom4te: /usr/bin/m4 failed with exit status: 1
-</span><span class='line'> 0:00.26 make[1]: *** [/home/antkong/wd/mozilla-central/configure] Error 1
-</span><span class='line'> 0:00.26 make: *** [build] Error 2
-</span><span class='line'> 0:00.27 0 compiler warnings present.</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>609:58.75 TestStartupCache
+</span><span class='line'>610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
+</span><span class='line'>610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
+</span><span class='line'>610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
+</span><span class='line'>610:06.61 Packaging quitter@mozilla.org.xpi...
+</span><span class='line'>610:06.95 816 compiler warnings present.
+</span><span class='line'>We know it took a while, but your build finally finished successfully!
+</span><span class='line'>To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox
+</span><span class='line'>For more information on what to do now, see https://developer.mozilla.org/docs/Developer_Guide/So_You_Just_Built_Firefox</span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Solution</strong>: install autoconf-2.13</p>
+<p>It took almost 10 hours to build in a VM instance of Ubuntu desktop 13.10 with 4GB RAM and 1 CPU</p>
 </div>
   
   
@@ -402,23 +408,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: autorelease | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/autorelease/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:47:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -20,22 +20,15 @@
     <id>http://www.ahwkong.com/post/2014/09/18/autorelease-in-swift</id>
     <content type="html"><![CDATA[<p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>    // do something expensive without using Obj-C code
-</span><span class='line'>
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+   autoreleasepool {</p>
+
+<pre><code>    // do something expensive without using Obj-C code
+
+}
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
 ]]></content>

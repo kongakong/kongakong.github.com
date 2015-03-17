@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Not good:
+  <meta name="description" content="
 ">
   
 
@@ -122,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011639593/">Item 9: Avoid Hiding the &#8216;Normal&#8217; Form of New</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
     
     
       <p class="meta">
@@ -138,14 +138,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:36:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Not good:</p>
+  <div class="entry-content">
 </div>
   
   
@@ -158,7 +158,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011529808/">Item 8: Adhere to Convention When Writing Operator New and Operator Delete</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036284846/">C++: Dynamic Array</a></h1>
     
     
       <p class="meta">
@@ -174,16 +174,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:33:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T23:12:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom <code>delete</code> will honor that guarantee</p>
-
-<p>General Idea:</p>
+  <div class="entry-content"><p>We can dynamically allocate arrays of primitive types using new as well</p>
 </div>
   
   
@@ -196,7 +194,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011303409/">United States Minor Outlying Islands</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036161971/">C++ Weirdness</a></h1>
     
     
       <p class="meta">
@@ -212,14 +210,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:26:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T23:05:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands">United States Minor Outlying Islands</a></p>
+  <div class="entry-content"><p>This calls the copy constructor</p>
 </div>
   
   
@@ -232,7 +230,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6010885434/">Item 7 Revisited</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035862177/">C++: Required Class Operations</a></h1>
     
     
       <p class="meta">
@@ -248,16 +246,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:13:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T22:47:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>There is a discussion on</p>
+  <div class="entry-content"><p>Related to</p>
 
-<p><a href="SO">http://stackoverflow.com/questions/1332015/using-class-specific-set-new-handler/1332080#1332080</a></p>
+<p>C++ requires that all classes must provide certain operations</p>
+
+<p>If you donât provide them, the compiler will make them up by following some simple rules. This can lead to problems</p>
+
+<p><a href="cs11%20lecture%202">http://www.cs.caltech.edu/courses/cs11/material/cpp/donnie/lectures/cs11-cpp-lec2.pdf</a></p>
 </div>
   
   
@@ -270,7 +272,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6010484565/">Item 7: Be Prepared for Out-of-memory Conditions</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035529872/">Item 11: Declare a Copy Constructor and an Assignment Operator for Classes With Dynamically Allocated Memory</a></h1>
     
     
       <p class="meta">
@@ -286,16 +288,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:00:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T22:27:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>When operator <code>new</code> cannot satisfy a request for memory, it calls the new-handler function not once, but repeatedly unTIL it can find enough memory.</p>
-
-<p>The handler can use do one of the following:</p>
+  <div class="entry-content"><p>An <em>assignment operator</em> is to address this kind of situation:</p>
 </div>
   
   
@@ -320,23 +320,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

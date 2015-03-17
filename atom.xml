@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:38:42+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,201 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[partial chef template]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/16/partial-chef-template/"/>
+    <updated>2015-03-16T07:00:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/16/partial-chef-template</id>
+    <content type="html"><![CDATA[<h2>My story</h2>
+
+<p>I want to add a line to the /etc/apache2/envvars. However I did not install this file  using a cookbook. I installed it by <code>package apach2</code>. So partial template does not work for me.</p>
+
+<p>I usds <code>FileEdit</code> instead</p>
+
+<p>Having look through the <code>apache2</code> cookbook, I start to feel chef cookbook replicates a lot of what a <code>dpkg</code> is currently doing. Does it mean the downstream maintainer have to keep the cookbook up to date with various package management systems on every other platform?</p>
+
+<h2>Resource and Documentation</h2>
+
+<p><a href="https://github.com/danielsdeleo/partials">https://github.com/danielsdeleo/partials</a></p>
+
+<p><a href="https://docs.chef.io/resource_template.html#partial-templates">https://docs.chef.io/resource_template.html#partial-templates</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Converge failed with error message undefined local variable or method xxx]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/"/>
+    <updated>2015-03-15T09:35:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx</id>
+    <content type="html"><![CDATA[<p>Got this error message:</p>
+
+<pre><code>    ==&gt; default: [2015-03-14T22:04:52+00:00] INFO: Running queued delayed notifications before re-raising exception
+    ==&gt; default: [2015-03-14T22:04:52+00:00] ERROR: Converge failed with error message undefined local variable or method `role' for #&lt;Chef::Mixin::Template::Temp
+    lateContext:0x000000032e4368&gt;
+    ==&gt; default: [2015-03-14T22:04:52+00:00] DEBUG: Re-raising exception: Chef::Exceptions::RunFailedWrappingError - Found 1 errors, they are stored in the backtr
+    ace
+    ==&gt; default: 1) Chef::Mixin::Template::TemplateError -  undefined local variable or method `role' for #&lt;Chef::Mixin::Template::TemplateContext:0x000000032e436
+    8&gt;
+</code></pre>
+
+<p>This is my <code>template</code> resource:</p>
+
+<pre><code>    template '/etc/profile.d/server-env.sh' do
+      source 'server/profile-env.erb'
+      variables(
+        :role =&gt; role
+      )
+    end
+</code></pre>
+
+<p>This is my template file <code>profile-env.erb</code>:</p>
+
+<pre><code> set APP_ROLE=&lt;%= role -%&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[XCode exception]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/13/xcode-exception/"/>
+    <updated>2015-03-13T08:13:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/13/xcode-exception</id>
+    <content type="html"><![CDATA[<p>Everytime I add a UITableView I got this&hellip;</p>
+
+<pre><code>    2015-03-13 08:12:51.087 Counter[9123:418395] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UITableViewController loadView] loaded the "9pv-A4-QxB-view-tsR-hK-woN" nib but didn't get a UITableView.'
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Table Topic Master]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/12/table-topic-master/"/>
+    <updated>2015-03-12T09:03:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/12/table-topic-master</id>
+    <content type="html"><![CDATA[<h2>Table Topic</h2>
+
+<p>Thanks Chair.</p>
+
+<p>Dear fellow toastmasters and guest. Welcome to our table topic segment</p>
+
+<p>Table Topic is about impromptu speaking. I will invite 8 of us to come forward and speak to us on the spot for 1 min, on topic I will reveal just before you’re picked.</p>
+
+<p>The purpose of the table topic is to help us to develop our ability to organize our thoughts quickly and respond to an impromptu question or topic. That’s why we don’t want the Table Topic participant to just ramble for a minute, just saying one word after another.</p>
+
+<p>In fact, a good table topic should appear well-organised. It should have an opening, a body and a conclusion.</p>
+
+<p>You will have a minute of time to give your speech. The ember light will come on at 45sec. The red will come on at 1 minute. If you hit the one minute mark, I’d appreciate if you can wrap up immediately. It is because in a real TT contest, overtime will result in disqualification. We also want to keep the meeting time under control.</p>
+
+<p>For the even number speakers we will have [XXX] as the evaluator. For the odd number speakers we will have [YYY] as the evaluator.</p>
+
+<p>Without further ado, let’s start!</p>
+
+<p>The theme of tonight’s Table Topic: What will you do if you receive an unexpected fortune? I will give you different scenario and let see how you will handle it.</p>
+
+<p>Situation number one: You are one lucky Toastmaster. You stumbled upon a genie in a bottle and you have released it from years of confinement. He can grant you a wish, but you have to choose between one of these two choices: Stay young forever or have abundant wealth. How would you choose? [Stay young forever or have abundant wealth]</p>
+
+<ol>
+<li><p>Look like we have yet another lucky toastmaster. Another TM stumbled upon a genie in a bottle. Unfortunately this genie’s power is bit limited. You are given two choices again, but they are: to become a boss of a bottle shop or a car wash business. Which one would you choose? [Bottle shop or car wash?]</p></li>
+<li><p>Looks like another toastmaster strikes it lucky too! Another genie in a bottle is found!  Again there are two things to choose from: You can have a beautiful voice like Susan Boyle that will let you make millions out of singing, but a face like the Orc from Lord of the ring; or you can have a good look like Emma [Mma] Watson or Brad Pitt that will let make millions out of acting, but a voice like an Orc from Lord of the Ring. How would you choose? [Beautiful voice or beautiful face]</p></li>
+<li><p>You will not believe the luck of this club! One more fellow Toastmaster find a genie in a bottle! But oh no, it is the small business genie again. Now you have a choice between a fish and chip shop and a pizza restaurant. Which one will you choose and why? [fish and chip or pizza]</p></li>
+<li><p>Tonight is the night of genie! Yet another fellow Toastmaster has rescued a genie! This genie has a gift in languages and he can make you instantly fluent in either one of these three languages: Spanish, Italian or Russian. Which one will you choose and why? [Spanish, Italian or Russian]</p></li>
+<li><p>We are on a roll! Another Toastmaster has saved a genie again! On no, guess what, it is the small business genie again! Apparently he keeps getting back into a bottle because of tax evasion! Again you can choose between these two choices: a new apple iphone every year or a new samsung galaxy every year. How would you choose? [Apple or Samsung]</p></li>
+<li><p>Finally there is no more genie in a bottle to be found. However when you are walking on beach looking out for  a bottle, you run into this legendary Nigerian prince!  You gave him 50 bucks and he gave you back a princely sum of 20 million aussie right away. How are you going to spend the 20 million dollars?</p></li>
+<li><p>We all know what is at the end of a rainbow! You are the lucky fellow who have reached the end of the rainbow and found the pot of gold! What will you do with the pot of gold?</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[drag and drop is bad for data center]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/12/drag-and-drop-is-bad-for-data-center/"/>
+    <updated>2015-03-12T05:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/12/drag-and-drop-is-bad-for-data-center</id>
+    <content type="html"><![CDATA[<p>I just drag and drop some files to a remote server. However the drop off destination is a batch file because it is where the mouse cursor moved to. At the end the batch is executed, rather than files being copying.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[how to use check-log.rb in windows]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/10/how-to-use-check-log-dot-rb-in-windows/"/>
+    <updated>2015-03-10T09:10:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/10/how-to-use-check-log-dot-rb-in-windows</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[trying packer]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/08/trying-packer/"/>
+    <updated>2015-03-08T20:10:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/08/trying-packer</id>
+    <content type="html"><![CDATA[<p>Trying to use packer to build a box for the first time. Encounter permission problem</p>
+
+<pre><code>    $  packer build -var 'aws_access_key=ABC' -var 'aws_secret_key=XYZ' my-basebox.json
+    amazon-ebs output will be in this color.
+
+    ==&gt; amazon-ebs: Inspecting the source AMI...
+    ==&gt; amazon-ebs: Creating temporary keypair: packer 54fc1177-7d3f-51fe-03ea-f16fea52ec2d
+    ==&gt; amazon-ebs: Creating temporary security group for this instance...
+    ==&gt; amazon-ebs: Authorizing SSH access on the temporary security group...
+    ==&gt; amazon-ebs: Launching a source AWS instance...
+        amazon-ebs: Instance ID: i-ead72be7
+    ==&gt; amazon-ebs: Waiting for instance (i-ead72be7) to become ready...
+    ==&gt; amazon-ebs: Waiting for SSH to become available...
+    ==&gt; amazon-ebs: Connected to SSH!
+    ==&gt; amazon-ebs: Provisioning with chef-solo
+        amazon-ebs: Installing Chef...
+        amazon-ebs: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+        amazon-ebs: Dload  Upload   Total   Spent    Left  Speed
+        amazon-ebs: 100 18378  100 18378    0     0  48243      0 --:--:-- --:--:-- --:--:-- 48363
+        amazon-ebs: Downloading Chef  for ubuntu...
+        amazon-ebs: downloading https://www.opscode.com/chef/metadata?v=&amp;prerelease=false&amp;nightlies=false&amp;p=ubuntu&amp;pv=14.04&amp;m=x86_64
+        amazon-ebs: to file /tmp/install.sh.1372/metadata.txt
+        amazon-ebs: trying wget...
+        amazon-ebs: url https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.04/x86_64/chef_12.1.0-1_amd64.deb
+        amazon-ebs: md5 b86c3dd0171e896ab3fb42f26e688fef
+        amazon-ebs: sha256  9bbde88f2eeb846a862512ab6385dff36278ff2ba8bd2e07a237a23337c4165a
+        amazon-ebs: downloaded metadata file looks valid...
+        amazon-ebs: downloading https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.04/x86_64/chef_12.1.0-1_amd64.deb
+        amazon-ebs: to file /tmp/install.sh.1372/chef_12.1.0-1_amd64.deb
+        amazon-ebs: trying wget...
+        amazon-ebs: Comparing checksum with sha256sum...
+        amazon-ebs: Installing Chef
+        amazon-ebs: installing with dpkg...
+        amazon-ebs: dpkg: error: requested operation requires superuser privilege
+        amazon-ebs: Installation failed
+        amazon-ebs: Version:
+        amazon-ebs:
+        amazon-ebs: Please file a Bug Report at https://github.com/opscode/opscode-omnitruck/issues/new
+        amazon-ebs: Alternatively, feel free to open a Support Ticket at https://www.getchef.com/support/tickets
+        amazon-ebs: More Chef support resources can be found at https://www.getchef.com/support
+        amazon-ebs:
+        amazon-ebs: Please include as many details about the problem as possible i.e., how to reproduce
+        amazon-ebs: the problem (if possible), type of the Operating System and its version, etc.,
+        amazon-ebs: and any other relevant details that might help us with troubleshooting.
+        amazon-ebs:
+    ==&gt; amazon-ebs: Terminating the source AWS instance...
+    ==&gt; amazon-ebs: Deleting temporary security group...
+    ==&gt; amazon-ebs: Deleting temporary keypair...
+    Build 'amazon-ebs' errored: Error installing Chef: Install script exited with non-zero exit status 1
+
+    ==&gt; Some builds didn't complete successfully and had errors:
+    --&gt; amazon-ebs: Error installing Chef: Install script exited with non-zero exit status 1
+
+    ==&gt; Builds finished but no artifacts were created.
+</code></pre>
+
+<p>Check the following:</p>
+
+<ol>
+<li><code>prevent_sudo</code> is not set to true</li>
+<li>If <code>install_command</code> and <code>execute_command</code> are set, make sure they use <code>sudo</code></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[emacs on osx]]></title>
@@ -366,174 +561,6 @@
 </code></pre>
 
 <p><code>-j</code> does not work as I expected. The script actually expects the .json configuration in the /opt/sensu/conf.d</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[sudo and glob]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/28/sudo-and-glob/"/>
-    <updated>2015-02-28T16:52:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/28/sudo-and-glob</id>
-    <content type="html"><![CDATA[<p>Files are there but I cannot delete them</p>
-
-<pre><code>    $ sudo ls /etc/sensu/conf.d/handlers
-    email.json  handler.json  hipchat.json
-
-    $ sudo rm /etc/sensu/conf.d/handlers/*.json
-    rm: cannot remove ‘/etc/sensu/conf.d/handlers/*.json’: No such file or directory
-</code></pre>
-
-<p>It is because my current login has no permission to read <code>/etc/sensu/conf.d/handlers</code> and so glob failed</p>
-
-<p>This takes care of the problem:</p>
-
-<pre><code>    $ sudo bash -c 'rm /etc/sensu/conf.d/handlers/*.json'
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Using chef sudo cookbook]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/27/using-chef-sudo-cookbook/"/>
-    <updated>2015-02-27T12:53:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/27/using-chef-sudo-cookbook</id>
-    <content type="html"><![CDATA[<p>If you want to LWRP to define a sudo user, do not use</p>
-
-<pre><code>   include_recipe 'sudo'
-</code></pre>
-
-<p>It will blow away your default <code>/etc/sudoers</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Toastmaster speech 4]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/27/toastmaster-speech-4/"/>
-    <updated>2015-02-27T07:06:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/27/toastmaster-speech-4</id>
-    <content type="html"><![CDATA[<h2>Feedback</h2>
-
-<ul>
-<li><p>The transition from introduction to first point can be done better</p></li>
-<li><p>Hand clapping</p></li>
-<li><p>Use of Jargon such as &lsquo;proxy&rsquo;</p></li>
-<li><p>Repeated use of the word <code>Innovation</code></p></li>
-<li><p>Subtitle can be improved</p></li>
-</ul>
-
-
-<h2>Self accessment</h2>
-
-<p>Original version of the speech lasts almost 8 min. The final delivery time around 6m10s. A bit too fast.</p>
-
-<p>I haven&rsquo;t been too successfully to use metaphors and vivid images in the speech. There is still use of jargon.</p>
-
-<h1>Innovation</h1>
-
-<p>Innovation has never got so much attention before. Innovation is a key driver of wealth creation. You probably already have an example of it in your pocket right now. Yes, nothing can highlight the impact of innovations better than Apple’s iPhone.</p>
-
-<p>The success of iPhone actually combines several innovations in different area. They include supplier chain management, logistic, retails, brand management and product design.</p>
-
-<p>So what it takes to be innovative? What can we do to come up with an truly innovative product? If you want to start the next Apple, the next Google or the next Tesla, You want to listen to these research results.</p>
-
-<p>Size matters</p>
-
-<p>Big corporate is not an ideal institute for innovation. Who would have thought? It is not so much a failure of the corporate because it is exactly what a corporate is designed for: avoid mistake! A big corporate has a series of command in place because new idea or product must be cross-examined and studied before they will receive a green light. They will do numerous marketing researches to decide if a product idea is viable.</p>
-
-<p>When a product has to go through so many focus groups and polling, it is usually hardly innovative anymore. As Henry Ford has once put it famously: If you ask what a customer want out of a car, they will tell you a faster carriage!</p>
-
-<p>That’s why over past decades, R&amp;D effort of giant like AT&amp;T, Xerox or IBM has little to show for as commercial products. Don’t get me wrong, their lab has produced brilliant ideas that change the world. For example Apple and Windows’ Graphical User Interface and Mouse is essentially a Xerox’s invention. But as an organisation, Xerox failed to capitalise the idea.</p>
-
-<p>2) Gender matters</p>
-
-<p>In another research, the researchers want to find out what makes a team great, or as they call it the Collective Intelligence. In two studies with about 700 people, working in groups of two to five, the researchers founds some factors that explains a group’s performance on a wide variety of tasks. This collective intelligence is not strongly correlated with the average or maximum individual intelligence of group members but is correlated with the average social sensitivity of group members and the equality in distribution of conversational turn-taking. And they are usually correlated to the proportion of females in the group.</p>
-
-<p>In the tech startup world, teams are made up of usually predominantly socially awkward males (like me Exhibit A). Actually time and time again females have proven they are as competent if not better than their counterparts in engineering and computer science. If you are starting a new tech startup you should seriously rethink the prevailing bias against hiring females technical staff.</p>
-
-<p>3) The mix matters</p>
-
-<p>Have you thought about what a broadway musical successful? Is it the script or the score? Is it the genre? Is it the actors and actress? Or beautiful set and costume? After looking into how a company is formed, researchers find that actually it has a lot to do with the connections between the members: For a successful company, there is usually a healthy mix of, on the one hand, experienced veterans who have known and worked with each other for a long time, and on the other hand, relatively young and new members. Once this factor is identified, it just makes a lot of sense: The old and existing networks provides stability and experience to the team when the new kids on block comes and offer fresh angles and new inspiration. If the balance tilt either way, you will have either a company that may keep repeating its past success or a team of rookies who are struggling to get the basic right.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gem install hipchat problem 2]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/27/hipchat-gem/"/>
-    <updated>2015-02-27T05:41:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/27/hipchat-gem</id>
-    <content type="html"><![CDATA[<p>Error message:</p>
-
-<pre><code>   [2015-02-26T11:49:52+00:00] ERROR: gem_package[hipchat] (zeetings::sensu_resource line 27) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '2'
-   ---- Begin output of /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" ----
-   STDOUT: 
-   STDERR: ERROR:  Could not find a valid gem 'hipchat' (= 1.4.0), here is why:
-      Unable to download data from https://rubygems.org/ - no such name (https://rubygems.org/quick/Marshal.4.8/hipchat-1.4.0.gemspec.rz)
-   ERROR:  Possible alternatives: hipchat
-   ---- End output of /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" ----
-   Ran /opt/sensu/embedded/bin/gem install hipchat -q --no-rdoc --no-ri -v "1.4.0" returned 2
-   [2015-02-26T11:49:52+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gem install hipchat problem]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/26/gem-install-hipchat/"/>
-    <updated>2015-02-26T22:45:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/26/gem-install-hipchat</id>
-    <content type="html"><![CDATA[<pre><code>    Fetching: json-1.8.2.gem (100%)
-    Building native extensions.  This could take a while...
-    ERROR:  Error installing hipchat:
-            ERROR: Failed to build gem native extension.
-
-        /opt/sensu/embedded/bin/ruby extconf.rb
-    creating Makefile
-
-    make "DESTDIR="
-    compiling generator.c
-    make: gcc: Command not found
-    make: *** [generator.o] Error 127
-
-
-    Gem files will remain installed in /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2 for inspection.
-    Results logged to /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2/ext/json/ext/generator/gem_make.out
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[cannot remove file]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/26/cannot-remove-file/"/>
-    <updated>2015-02-26T21:36:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/26/cannot-remove-file</id>
-    <content type="html"><![CDATA[<p>Why I cannot remove this file redis_output.rb?</p>
-
-<pre><code>    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ ls -l                                                                      ✭ ✖ ✱ ◼
-    total 56
-    -rwxr-xr-x  1 antkong  staff   2858 25 Feb 10:40 flapjack.rb
-    -rwxr-xr-x  1 antkong  staff  11068 25 Feb 10:40 hipchat.rb
-    -rw-r--r--  1 antkong  staff    941 25 Feb 10:40 redis_output.rb
-    -rwxr-xr-x  1 antkong  staff   4594 25 Feb 10:40 ttl.rb
-    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ git rm redis_output.rb                                                   ⏎ ✭ ✖ ✱ ◼
-    fatal: pathspec 'redis_output.rb' did not match any files
-
-    fatal: pathspec 'redis_output.rb' did not match any files
-    ~/d/z/a/v/c/z/f/d/s/e/handlers git:1685/setup-sensu-server-via-vagrant ❯❯❯ git rm redis*.rb                                                         ⏎ ✭ ✖ ✱ ◼
-    fatal: pathspec 'redis_output.rb' did not match any files
-</code></pre>
-
-<p>It is because I made a wrong assumpiton: the file is not under source control yet.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[installing sensu client 0.14 and 0.17.beta1]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1/"/>
-    <updated>2015-02-26T15:09:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/26/installing-sensu-client-0-dot-14-and-0-dot-17-dot-beta1</id>
-    <content type="html"><![CDATA[<p>0.17.beta1 does work for me. Fall back to 0.14 but the sensu client window service stopped working too.</p>
-
-<p>I think the windows service needs to be re-registered. Very troublesome</p>
 ]]></content>
   </entry>
   

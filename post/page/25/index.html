@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Do not use timer to control animation frame refresh in html5. Use RequestAnimationFrame instead.
-">
+  <meta name="description" content="This is an error message of a runtime exception thrown by NSCalendar: I mean really, what do you think that operation is supposed to mean with a nil &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/01/20/requestanimationframe/">RequestAnimationFrame</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/02/12/chastised-by-a-corefoundation-class/">Chastised by a CoreFoundation Class</a></h1>
     
     
       <p class="meta">
@@ -138,14 +137,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-01-20T18:11:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+<time datetime="2014-02-12T10:50:00+11:00" pubdate data-updated="true">Feb 12<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Do not use timer to control animation frame refresh in html5. Use <code>RequestAnimationFrame</code> instead.</p>
+  <div class="entry-content"><p>This is an error message of a runtime exception thrown by <code>NSCalendar</code>:</p>
+
+<pre><code>I mean really, what do you think that operation is supposed to mean with a nil date?
+An exception has been avoided for now.
+A few of these errors are going to be reported with this complaint, then further violations will simply silently do whatever random thing results from the nil.
+Here is the backtrace where this occurred this time (some frames may be missing due to compiler optimizations):
+</code></pre>
+
+<p>Hurts my newbie objective-c dev ego a bit :&ndash;)</p>
 </div>
   
   
@@ -158,7 +165,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/01/20/html5/">Html 5 Resources</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/02/11/missing-the-viewdidload-event/">Missing the viewDidLoad Event</a></h1>
     
     
       <p class="meta">
@@ -174,92 +181,37 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-01-20T16:04:00+11:00" pubdate data-updated="true">Jan 20<span>th</span>, 2014</time>
+<time datetime="2014-02-11T08:12:00+11:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Some useful links:</p>
-
-<p><a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">http://css-tricks.com/which-responsive-images-solution-should-you-use/</a></p>
-
-<p><a href="https://github.com/scottjehl/picturefill">https://github.com/scottjehl/picturefill</a></p>
-
-<p><a href="http://www.standardista.com/responsive-images-clown-car-technique/">http://www.standardista.com/responsive-images-clown-car-technique/</a></p>
-
-<p><a href="http://www.w3.org/community/respimg/">http://www.w3.org/community/respimg/</a></p>
-
-<p><strong>Hammer.js</strong> <a href="http://eightmedia.github.io/hammer.js/">http://eightmedia.github.io/hammer.js/</a></p>
-
-<p><strong>jQT</strong> <a href="http://jqtjs.com/">http://jqtjs.com/</a></p>
-
-<p><strong>Sencha gestures</strong> <a href="http://www.sencha.com/blog/ext-js-on-tap/">http://www.sencha.com/blog/ext-js-on-tap/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/01/18/compile-debug-info/">Compile Debug_info</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-18T13:04:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>After coming this SO question about (debug_info)[<a href="http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile">http://stackoverflow.com/questions/6830271/requesting-debug-info-in-an-erlang-module-using-compile</a>], I am curious if it is indeed a problem.</p>
-
-<p>Based on the (documentation)[<a href="http://www.erlang.org/doc/man/compile.html#debug_info">http://www.erlang.org/doc/man/compile.html#debug_info</a>], this should enable the addition of debug info to the .beam files.</p>
+  <div class="entry-content"><p>This is my original code. It does the job and put a specialised view into a cell of a UICollectionView</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">testdebuginfo</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">compile</span><span class="p">(</span><span class="n">debug_info</span><span class="p">).</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>However neither using <code>c</code> in erlang shell or using <code>erlc</code> directly will put the debug info into beam file.</p>
-
-<p>I can only implant debug info through erlang shell like this:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>4> debugger:start().
-</span><span class='line'>
-</span><span class='line'>=ERROR REPORT==== 23-Jan-2014::12:23:39 ===
-</span><span class='line'>ERROR: Could not find 'wxe_driver.so' in: /usr/local/Cellar/erlang/R16B03/lib/erlang/lib/wx-1.1.1/priv
-</span><span class='line'>{ok,&lt;0.49.0>}
-</span><span class='line'>5> c(testdebuginfo, [debug_info]).
-</span><span class='line'>{ok,testdebuginfo}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">controller</span><span class="p">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">city</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">UIView</span><span class="o">*</span> <span class="n">view</span> <span class="o">=</span> <span class="p">[[[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]</span> <span class="nl">loadNibNamed:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                                  <span class="nl">owner:</span><span class="n">controller</span>
+</span><span class='line'>                                                <span class="nl">options:</span><span class="nb">nil</span><span class="p">]</span> <span class="nl">objectAtIndex:</span><span class="mi">0</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, for some reason, the view controller <code>controller</code> will miss the ViewDidLoad event.  The selector is not called at all.</p>
+
+<p>This problem is resolved if I switch to use <code>initWithNibName</code> instead:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">TT2TimeViewController</span><span class="o">*</span> <span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TT2TimeViewController</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithNibName:</span><span class="s">@&quot;TT2TimeViewController&quot;</span>
+</span><span class='line'>                                            <span class="nl">bundle:</span><span class="p">[</span><span class="n">NSBundle</span> <span class="n">mainBundle</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -275,7 +227,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/01/17/class-cluster/">Class Cluster</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/02/09/dispatch-once/">Dispatch_once</a></h1>
     
     
       <p class="meta">
@@ -291,14 +243,25 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-01-17T22:42:00+11:00" pubdate data-updated="true">Jan 17<span>th</span>, 2014</time>
+<time datetime="2014-02-09T21:22:00+11:00" pubdate data-updated="true">Feb 9<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>We can use the <a href="https://developer.apple.com/library/ios/documentation/general/conceptual/devpedia-cocoacore/ClassCluster.html">class cluster</a> technique to manage compatibility on different iOS platforms.</p>
+  <div class="entry-content"><p>Wanted to declare and initialise a static variable in a .m file.</p>
+
+<p>Objective-c compiler does not like it, and raise this error message:</p>
+
+<pre><code>Initializer element is not a compile-time constant
+</code></pre>
+
+<p>I like the explanation <a href="http://stackoverflow.com/a/11934961/58129">here</a> on Stackoverflow:</p>
+
+<blockquote><p>Objective-C is a strict superset of C. It&rsquo;s illegal in C to have any executable code outside of a function (or method in Objective-C).</p></blockquote>
+
+<p>Leading from this answer I discovered that I should use <code>dispatch_once</code> for initialisation</p>
 </div>
   
   
@@ -311,7 +274,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/01/11/using-automator-in-osx/">Using Automator in OSX</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/02/03/scrollviewdidscroll-is-not-called/">scrollViewDidScroll Is Not Called</a></h1>
     
     
       <p class="meta">
@@ -327,26 +290,72 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-01-11T15:29:00+11:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
+<time datetime="2014-02-03T22:09:00+11:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I want to implement a service in OSX such that I can easily shrink the size of image files in a folder to half of their original size.</p>
-
-<p>This is what I have come up with at the end.</p>
-
-<p><img src="images/automator.png" width="860" height="617"></p>
-
-<p>Lessons/Observations:</p>
+  <div class="entry-content"><p>if <code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code> of the delegate is not called, one should check:</p>
 
 <ul>
-<li><p>For non-standard action (e.g. copy files to a folder which is unknown at the workflow design time), I need to add an action to assign input value to a variable and then refer to it in subsequent task.</p></li>
-<li><p>A lot of useful actions are already built in e.g. Scale image</p></li>
-<li><p>Saving it to the default automator folder will automatically register the service to Finder.</p></li>
+<li><p>Has the <code>delegate</code> of the ScrollView been assigned?</p></li>
+<li><p>Have you set the <code>contentSize</code>? Is it bigger than the bounds of the ScrollView?</p></li>
+<li><p>Is Autolayout on (if you use storyboard)?</p></li>
 </ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/02/02/mixing-c-plus-plus-and-objective-c-in-xcode/">Mixing C++ and Objective-c in XCode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-02T21:04:00+11:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The c++ header keeps getting a compiler error:</p>
+
+<pre><code>'iostream' file not found 
+</code></pre>
+
+<p>Here is the solution: wrap the <code>#include</code> inside <code>#ifdef __cplus</code></p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#ifdef __cplus</span>
+</span><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
+</span><span class='line'><span class="cp">#endif</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
 
 </div>
   
@@ -372,23 +381,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

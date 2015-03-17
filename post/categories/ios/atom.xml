@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:47:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -87,23 +87,14 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
     <link href="http://www.ahwkong.com/post/2014/02/17/capture-part-of-ios-screen-as-image/"/>
     <updated>2014-02-17T04:38:00+11:00</updated>
     <id>http://www.ahwkong.com/post/2014/02/17/capture-part-of-ios-screen-as-image</id>
-    <content type="html"><![CDATA[<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">UIGraphicsBeginImageContext</span><span class="p">(</span><span class="n">theCell</span><span class="p">.</span><span class="n">bounds</span><span class="p">.</span><span class="n">size</span><span class="p">);</span>
-</span><span class='line'><span class="p">[</span><span class="n">theCell</span><span class="p">.</span><span class="n">layer</span> <span class="nl">renderInContext:</span><span class="n">UIGraphicsGetCurrentContext</span><span class="p">()];</span>
-</span><span class='line'><span class="n">UIImage</span> <span class="o">*</span><span class="n">renderedCellImage</span> <span class="o">=</span> <span class="n">UIGraphicsGetImageFromCurrentImageContext</span><span class="p">();</span>
-</span><span class='line'><span class="n">UIGraphicsEndImageContext</span><span class="p">();</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+    <content type="html"><![CDATA[<p>{% codeblock lang:objective-c %}</p>
+
+<p>UIGraphicsBeginImageContext(theCell.bounds.size);
+[theCell.layer renderInContext:UIGraphicsGetCurrentContext()];
+UIImage *renderedCellImage = UIGraphicsGetImageFromCurrentImageContext();
+UIGraphicsEndImageContext();</p>
+
+<p>{% endcodeblock %}</p>
 
 <p><a href="http://stackoverflow.com/a/13656612/58129">source</a></p>
 ]]></content>

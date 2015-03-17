@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Windows | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/windows/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:47:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[drag and drop is bad for data center]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/12/drag-and-drop-is-bad-for-data-center/"/>
+    <updated>2015-03-12T05:02:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/12/drag-and-drop-is-bad-for-data-center</id>
+    <content type="html"><![CDATA[<p>I just drag and drop some files to a remote server. However the drop off destination is a batch file because it is where the mouse cursor moved to. At the end the batch is executed, rather than files being copying.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Bonjour]]></title>

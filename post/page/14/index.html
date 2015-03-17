@@ -9,12 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="In Swift it may be necessary to use autorelease if we are using objective-c objects. e.g. 1
-2
-3
-4
-5
-autoreleasepool { // do something expensive &hellip;">
+  <meta name="description" content="It is impossible not to learn ruby these days. It is used everywhere: ruby powers octopress, chef and many other popular software. Here is some basic &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -126,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/18/autorelease-in-swift/">Autorelease in Swift</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/01/18/basic-rvm/">Basic Rvm</a></h1>
     
     
       <p class="meta">
@@ -142,28 +137,48 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-09-18T01:01:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
+<time datetime="2015-01-18T15:53:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>In Swift it may be necessary to use <code>autorelease</code> if we are using objective-c objects. e.g.</p>
+  <div class="entry-content"><p>It is impossible not to learn <code>ruby</code> these days. It is used everywhere: ruby powers <code>octopress</code>, <code>chef</code> and many other popular software.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>autoreleasepool {
-</span><span class='line'>
-</span><span class='line'>        // do something expensive without using Obj-C code
-</span><span class='line'>
-</span><span class='line'>    }</span></code></pre></td></tr></table></div></figure>
+<p>Here is some basic <code>rvm</code> command:</p>
+
+<pre><code>$ rvm list
+
+rvm rubies
+
+   ruby-1.9.3-p484 [ x86_64 ]
+   ruby-1.9.3-p551 [ x86_64 ]
+=* ruby-2.2.0 [ x86_64 ]
+
+# =&gt; - current
+# =* - current &amp;&amp; default
+#  * - default
 
 
-<p>This is a clang doc regarding <a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html#retained-return-values">ARC and retain count</a>. A lot of info to digest&hellip;</p>
+$ rvm use 2.2.0
+Using /Users/antkong/.rvm/gems/ruby-2.2.0
+
+$ bundle install
+bash: bundle: command not found
+
+$ gem install bundle
+Fetching: bundler-1.7.12.gem (100%)
+Successfully installed bundler-1.7.12
+Fetching: bundle-0.0.1.gem (100%)
+Successfully installed bundle-0.0.1
+Parsing documentation for bundler-1.7.12
+Installing ri documentation for bundler-1.7.12
+Parsing documentation for bundle-0.0.1
+Installing ri documentation for bundle-0.0.1
+Done installing documentation for bundler, bundle after 1 seconds
+2 gems installed 
+</code></pre>
 </div>
   
   
@@ -176,7 +191,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/17/swift-closure-error-is-not-convertible-to-void/">Swift Closure Error: Boolean Is Not Convertible to Void</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/01/18/dict-in-coffeescript/">Dict in Coffeescript</a></h1>
     
     
       <p class="meta">
@@ -192,31 +207,32 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-09-17T10:50:00+10:00" pubdate data-updated="true">Sep 17<span>th</span>, 2014</time>
+<time datetime="2015-01-18T14:50:00+11:00" pubdate data-updated="true">Jan 18<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>This piece code here:</p>
+  <div class="entry-content"><p>You can create a dictionary in coffeescript in several ways:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>dismissViewControllerAnimated(true, completion: { () -> Void in
-</span><span class='line'>    let account = Account()
-</span><span class='line'>})</span></code></pre></td></tr></table></div></figure>
+<p>Probably the most elegant style</p>
 
-
-<p>throws exception:</p>
-
-<pre><code>Cannot convert the expression's type 'Boolean' to type 'Void'
+<pre><code>    d = 
+      b: 1
+      c: 2
 </code></pre>
 
-<p>It is because if the block does not have a return statement, the compiler uses the result of the last statement as the return value</p>
+<p>This also works</p>
 
-<p>Adding a <code>return ()</code> as the last expression to the block fixes the problem</p>
+<pre><code>    d = { b: 1, c: 2}
+</code></pre>
+
+<p>If you need to span multiple lines:</p>
+
+<pre><code>    d = { b: 1 , \
+      c: 2}
+</code></pre>
 </div>
   
   
@@ -229,7 +245,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/14/values-of-type-nsinteger-should-not-be-used-as-format-arguments/">Values of Type NSInteger Should Not Be Used as Format Arguments</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/01/13/toastmaster-speech-2/">My Attempt at Toastmaster Speech #2</a></h1>
     
     
       <p class="meta">
@@ -245,27 +261,58 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-09-14T18:01:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2014</time>
+<time datetime="2015-01-13T04:33:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>In this example,</p>
+  <div class="entry-content"><p>This is my second speech and I find that writing a speech is not a easy task. First of all it takes time to think of a right topic. Then it takes a lot of practices and effort to be able to give the speech without note. It definitely motivated me to look at memorisation techniques.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>NSInteger val = 15000;
-</span><span class='line'>    NSLog(@"%i", val);</span></code></pre></td></tr></table></div></figure>
+<h1>The Speech</h1>
 
+<p>You are alone, in the dark. It is coming. It is getting closer. You can almost smell it. You are tired, you are exhausted. You are making a last ditch effort in last 12 hours non-stop. You are anxious because you are not sure if everything gonna turn out as planned. Your enemy is invisible yet its feels so real. I am talking about one of the worst enemies in our work lives: meeting the Deadline!</p>
 
-<p>XCode will flag this error</p>
+<p>Does this feeling sound familiar to you? Raise your hand if you had this experience before!</p>
 
-<pre><code>Values of type "NSInteger" should not be used as format arguments: add an explicit cast to 'long' instead.
-</code></pre>
+<p>Deadline is called deadline for good reasons. The time is set in stone. The consequence of failure is real. If your project misses the deadline, it could mean a failure to meet your customer expectation. Your organisation can suffer from reputational damage and some heads gonna roll! It could well be yours.</p>
 
-<p>It is because NSInteger can be 32-bit or 64-bit, depending on the platform, the compiler recommends to add a cast to long generally.</p>
+<p>Can we tame this monster?</p>
+
+<p>There is a few things you can do to make it easier to meet the deadlines</p>
+
+<p>First of all, understand the objective of your project! It sounds obvious but it is extremely important.</p>
+
+<p>Imagine you are an explorer and is lost in jungle. You want to get out of it alive. It really does not matter if you know how to clear a path with your machete or how to swing from tree to tree like Tarzan. But if you are heading the wrong direction you will never get out!</p>
+
+<p>Sometimes we are too obsessed with operational details, we forget to ask the big picture question: What do we want to achieve? What is the expected outcome? How will we measure success or failure? These are the questions that we have to ask. These are the questions that set the direction.</p>
+
+<p>Next. Planning. To plan well means we need to identify constraints and limitations we will face in a project.</p>
+
+<p>A typical project has a lot of internal and external dependencies. These dependencies can become constraints and, in some case, even a blocker.</p>
+
+<p>Here is a typical example of a constraint: The new system is dependent on the implementation of a new feature by an external vendor. The vendor does not have the capability to deliver this new feature in your timeframe. So our capability to deliver is constrained by how well the vendor can meet our deadline.</p>
+
+<p>Sometimes a constraint can become a blocker. Say your project requires a key piece of new software which can only be run on an latest version of an operating system. But your internal IT insists that you can only use an older version because of policy.  How are you going to resolve it?</p>
+
+<p>It is important to map out all the potential blockers on the critical path. The failure to do so can bring u unpleasant surprise.</p>
+
+<p>3 Use milestones</p>
+
+<p>Milestone is a technique to break a project down into smaller module. They are good checkpoints for monitoring the health of a project. Once you hit a milestone, it is a good time to pause and check if the original estimate is good, reexamine all the assumption, dependencies and constraints you have identified.</p>
+
+<p>4 Set buffer.</p>
+
+<p>What is buffer? Buffer basically means extra time and resources to prepare for the unexpected. Life is full of unexpected event. Your software vendor may suddenly goes of business; your key employee may become ill and cannot report to work for a while; A sudden change in market condition forces you make some last minute revision… All of these will add pressure on your already tight schedule. If you have not budgeted for these risks in a project, you will be likely end up in a position that you have to scramble to find extra resource and, more often than not, put extra pressure on an already stressed out team.</p>
+
+<p>Burning midnight oil to meet deasline is not a fun experience. Keeping a good and even pace at work is key to avoid burnout. Therefore let me rehash the main points:</p>
+
+<p>Understand the objective; know where you are going
+Have a clear idea of the constraints and the limits &ndash; it can only done well if you understand your task or product well
+Break a project into modules and assign milestones. Each milestone is a checkpoint to review the past performance and adjust the plan and direction.</p>
+
+<p>With these technique you will be able to defeat this monster known as Deadline. After all we work to live, not live to work!</p>
 </div>
   
   
@@ -278,7 +325,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized Selector -replacementObjectForKeyedArchiver:</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/11/06/dictionary-in-swift/">Dictionary in Swift</a></h1>
     
     
       <p class="meta">
@@ -294,29 +341,21 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-09-12T22:31:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+<time datetime="2014-11-06T11:03:00+11:00" pubdate data-updated="true">Nov 6<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Here is the code in question:</p>
+  <div class="entry-content"><p>Dictionary look returns an Optional type by default</p>
 
-<pre><code>class Something: NSCoding {
-    ...
+<pre><code>    var dict = ["name":"hello"]
 
-let smth = Something() 
-let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
+    println(dict["name"])         # "Optional("hello")
+
+    println(dict["name"]!)        # "hello"
 </code></pre>
-
-<p>It throws this exception:</p>
-
-<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
-Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
-</code></pre>
-
-<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
 </div>
   
   
@@ -329,7 +368,7 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/09/18/init-chain-rule-in-swift/">Init Chain Rule in Swift</a></h1>
     
     
       <p class="meta">
@@ -345,16 +384,14 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   
 
 
-<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
+<time datetime="2014-09-18T16:30:00+10:00" pubdate data-updated="true">Sep 18<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
-
-<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
+  <div class="entry-content"><blockquote><p>Swift has a narrow rule whereby a class with a designated initializer with no arguments is implicitly called by dereived class initializers if no other super.init call is specified and it is otherwise unambiguous.  This is why you don&rsquo;t need to explicitly call super.init() when subclassing NSObject, for example.</p></blockquote>
 </div>
   
   
@@ -379,23 +416,23 @@ Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

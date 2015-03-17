@@ -4,7 +4,7 @@
   <title><![CDATA[Category: xcode | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/xcode/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-08T12:02:41+11:00</updated>
+  <updated>2015-03-18T06:47:43+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[XCode exception]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/13/xcode-exception/"/>
+    <updated>2015-03-13T08:13:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/13/xcode-exception</id>
+    <content type="html"><![CDATA[<p>Everytime I add a UITableView I got this&hellip;</p>
+
+<pre><code>    2015-03-13 08:12:51.087 Counter[9123:418395] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UITableViewController loadView] loaded the "9pv-A4-QxB-view-tsR-hK-woN" nib but didn't get a UITableView.'
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[XCode linker error]]></title>
@@ -60,15 +72,6 @@
 <p>The following command fix the problem</p>
 
 <p><code>sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Command-E to quick search; Command-G for repeat in-file search]]></title>
-    <link href="http://www.ahwkong.com/post/2012/06/25/p-25845648421/"/>
-    <updated>2012-06-25T20:09:00+10:00</updated>
-    <id>http://www.ahwkong.com/post/2012/06/25/p-25845648421</id>
-    <content type="html"><![CDATA[<p>Command-E to quick search; Command-G for repeat in-file search</p>
 ]]></content>
   </entry>
   

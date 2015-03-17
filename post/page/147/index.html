@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="By pointer,
+  <meta name="description" content="The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t
 ">
   
 
@@ -122,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6105544979/">Item 17: Check for Assignment to Self in Operator=</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6115767038/">Item 19: Differentiate Among Member Functions, Non-member Functions, and Friend Functions</a></h1>
     
     
       <p class="meta">
@@ -138,14 +138,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T22:23:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T06:04:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>By pointer,</p>
+  <div class="entry-content"><p>The biggest difference between member functions and non-member functions is that member functions can be virtual and non-member functions can’t</p>
 </div>
   
   
@@ -158,7 +158,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6104327299/">Item 16: Assign to All Data Members in Operator=</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6115016559/">Item 21: Use Const Whenever Possible</a></h1>
     
     
       <p class="meta">
@@ -174,14 +174,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T21:08:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T05:40:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>For a derived class, a way to achieve this is by reusing base class’s <code>=</code> operator:</p>
+  <div class="entry-content">
 </div>
   
   
@@ -194,7 +194,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103900919/">Dalai Farmer (Bill Bailey)</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6114962267/">Item 20: Avoid Data Members in the Public Interface</a></h1>
     
     
       <p class="meta">
@@ -210,16 +210,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T20:40:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T05:38:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is just a little joke in one episode of QI (Series 5, Episode 4), but there is already a webpage about</p>
-
-<p><a href="it">http://uncyclopedia.wikia.com/wiki/Dalai_Farmer</a></p>
+  <div class="entry-content">
 </div>
   
   
@@ -232,7 +230,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6103768529/">Installing Couchdb Using Brew</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6108828433/">C Trick Question</a></h1>
     
     
       <p class="meta">
@@ -248,49 +246,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T20:32:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T01:22:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Message after a successful installation</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>If this is your first install, automatically load on login with:
-</span><span class='line'>    mkdir -p ~/Library/LaunchAgents
-</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
-</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>
-</span><span class='line'>If this is an upgrade and you already have the org.apache.couchdb.plist loaded:
-</span><span class='line'>    launchctl unload -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>    cp /usr/local/Cellar/couchdb/1.0.2/Library/LaunchDaemons/org.apache.couchdb.plist ~/Library/LaunchAgents/
-</span><span class='line'>    launchctl load -w ~/Library/LaunchAgents/org.apache.couchdb.plist
-</span><span class='line'>
-</span><span class='line'>Or start manually with:
-</span><span class='line'>    couchdb
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+  <div class="entry-content"><p>Why doesn’t it compile?</p>
 </div>
   
   
@@ -303,7 +266,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/02/p-6073811670/">Fill a Popover With a Tableview</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/03/p-6107440181/">How to Do Lazy Loading With NSURLConnection</a></h1>
     
     
       <p class="meta">
@@ -319,14 +282,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-02T01:42:00+10:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2011</time>
+<time datetime="2011-06-03T00:09:00+10:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Example:</p>
+  <div class="entry-content"><p><a href="How%20to%20do%20Lazy%20Loading%20with%20NSURLConnection">http://www.cocoanetics.com/2011/05/and-now-lazy-loading-with-nsurlconnection/</a></p>
 </div>
   
   
@@ -351,23 +314,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

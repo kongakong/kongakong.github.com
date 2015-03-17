@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The City of London shows that logic has its limits and that the City lies outside them. Heard from the public lecture, The City of London, at LSE &hellip;">
+  <meta name="description" content="Design Pattern in Python
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/12/22/p-14584037817/">The City of London Shows That Logic Has Its Limits and That the City Lies Outside Them.</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/12/29/p-14937137581/">Design Pattern in Python</a></h1>
     
     
       <p class="meta">
@@ -137,16 +138,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-12-22T09:54:00+11:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2011</time>
+<time datetime="2011-12-29T09:01:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The City of London shows that logic has its limits and that the City lies outside them.</p>
-
-<p>Heard from the public lecture, The City of London, at LSE given by Professor David Kynaston</p>
+  <div class="entry-content"><p><a href="http://dpip.testingperspective.com">Design Pattern in Python</a></p>
 </div>
   
   
@@ -159,7 +158,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/12/22/p-14580909653/">Just Find Out About Boks_sshd</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/12/29/p-14932261293/">My Python 3.3 Compilation Ends in This</a></h1>
     
     
       <p class="meta">
@@ -175,14 +174,42 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-12-22T08:55:00+11:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2011</time>
+<time datetime="2011-12-29T07:26:00+11:00" pubdate data-updated="true">Dec 29<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="Just%20find%20out%20about%20boks_sshd">http://en.wikipedia.org/wiki/BoKS_(software)</a></p>
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>/usr/bin/ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>ranlib libpython3.3m.a
+</span><span class='line'>ranlib: file: libpython3.3m.a(dynamic_annotations.o) has no symbols
+</span><span class='line'>ranlib: file: libpython3.3m.a(pymath.o) has no symbols
+</span><span class='line'>gcc -framework CoreFoundation -o python.exe Modules/python.o libpython3.3m.a -ldl -framework CoreFoundation 
+</span><span class='line'>./python.exe -SE -m sysconfig --generate-posix-vars
+</span><span class='line'>python.exe(49612) malloc: *** mmap(size=7310873954244194304) failed (error code=12)
+</span><span class='line'>*** error: can't allocate region
+</span><span class='line'>*** set a breakpoint in malloc_error_break to debug
+</span><span class='line'>make: *** [Lib/_sysconfigdata.py] Segmentation fault: 11
+</span><span class='line'>make: *** Deleting file `Lib/_sysconfigdata.py'</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -195,7 +222,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/12/21/p-14559224775/">EFP</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913827164/">Autoconf on Lion</a></h1>
     
     
       <p class="meta">
@@ -211,14 +238,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-12-21T22:43:00+11:00" pubdate data-updated="true">Dec 21<span>st</span>, 2011</time>
+<time datetime="2011-12-28T22:30:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="Exchange%20for%20Physical">http://www.asx.net.au/products/what-are-efps.htm</a></p>
+  <div class="entry-content"><p>Oops</p>
+
+<pre><code>$ autoconf
+configure.in:8: error: Autoconf version 2.65 or higher is required
+configure.in:8: the top level
+autom4te: /usr/bin/gm4 failed with exit status: 63
+</code></pre>
+
+<p>The version of autoconf in both <code>brew</code> and <code>/Developer</code> are 2.61</p>
 </div>
   
   
@@ -231,7 +266,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/12/12/p-14080946389/">Oracle Solaris 11 Package Management With IPS</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14913221859/">A Simple Example of Using Hg</a></h1>
     
     
       <p class="meta">
@@ -247,14 +282,66 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-12-12T07:49:00+11:00" pubdate data-updated="true">Dec 12<span>th</span>, 2011</time>
+<time datetime="2011-12-28T21:54:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="Oracle%20Solaris%2011%20Package%20Management%20with%20IPS">http://www.oracle.com/technetwork/server-storage/solaris11/technologies/ips-323421.html</a></p>
+  <div class="entry-content">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ hg pull
+</span><span class='line'>pulling from http://hg.python.org/cpython
+</span><span class='line'>searching for changes
+</span><span class='line'>adding changesets
+</span><span class='line'>adding manifests
+</span><span class='line'>adding file changes
+</span><span class='line'>added 3265 changesets with 6204 changes to 1117 files
+</span><span class='line'>(run ‘hg update’ to get a working copy)
+</span><span class='line'>
+</span><span class='line'>$ hg summary
+</span><span class='line'>parent: 70924:d1d5a7392e39 
+</span><span class='line'>(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
+</span><span class='line'>branch: default
+</span><span class='line'>commit: 3 unknown (clean)
+</span><span class='line'>update: 2705 new changesets (update)
+</span><span class='line'>
+</span><span class='line'>$ hg update
+</span><span class='line'>991 files updated, 0 files merged, 12 files removed, 0 files unresolved
+</span><span class='line'>
+</span><span class='line'>$ hg summary
+</span><span class='line'>parent: 74189:456b02030100 tip
+</span><span class='line'>don’t fail if CLOEXEC doesn’t exist
+</span><span class='line'>branch: default
+</span><span class='line'>commit: 3 unknown (clean)
+</span><span class='line'>update: (current)</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -267,7 +354,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/12/07/p-13869082153/">Computer Scientists Study Artificial Intelligence; Economists Study Natural Stupidity</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/12/28/p-14912930755/">Port vs Brew</a></h1>
     
     
       <p class="meta">
@@ -283,14 +370,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-12-07T22:12:00+11:00" pubdate data-updated="true">Dec 7<span>th</span>, 2011</time>
+<time datetime="2011-12-28T21:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Computer scientists study Artificial Intelligence; Economists study Natural Stupidity</p>
+  <div class="entry-content"><p>Remove <code>port</code> for now to try out <code>brew</code></p>
+
+<p>Personally <code>port</code> is simple enough. Let see if brew can exceed the bar set by MacPort</p>
 </div>
   
   
@@ -315,23 +404,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It comes from the interface builder. The exception is thrown when xib file is loaded and trying to set an attribute in a class. If the attribute is &hellip;">
+  <meta name="description" content="It is a neat trick Start your ipython like this ipython qtconsole --pylab inline, and the ipython session will plot graph in the interpreter window. ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/31/user-defined-runtime-attribute/">User Defined Runtime Attribute</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/01/06/inline-plot-in-ipython/">Inline Plot in Ipython</a></h1>
     
     
       <p class="meta">
@@ -137,19 +137,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-31T06:42:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2013</time>
+<time datetime="2014-01-06T08:02:00+11:00" pubdate data-updated="true">Jan 6<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It comes from the interface builder. The exception is thrown when xib file is loaded and trying to set an attribute in a class.</p>
+  <div class="entry-content"><p>It is a neat trick</p>
 
-<p>If the attribute is not defined, you will get this error and the app will crash</p>
+<p>Start your ipython like this <code>ipython qtconsole --pylab inline</code>, and the ipython session will plot graph in the interpreter window.</p>
 
-<pre><code>this class is not key value coding-compliant for the key &lt;KEYNAME&gt;.'
-</code></pre>
+<p><img src="/images/ipython_inline.png" width="457" height="336"></p>
 </div>
   
   
@@ -162,7 +161,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/30/conda-install-ipython-problem/">Conda Install Ipython Problem</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/01/05/make-picker-2-data-dependent-on-the-selected-row-of-picker-1/">Make Picker 2 Data Dependent on the Selected Row of Picker 1</a></h1>
     
     
       <p class="meta">
@@ -178,16 +177,28 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-30T08:27:00+11:00" pubdate data-updated="true">Dec 30<span>th</span>, 2013</time>
+<time datetime="2014-01-05T06:28:00+11:00" pubdate data-updated="true">Jan 5<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>How can I update <code>pip</code>? Need research&hellip;</p>
+  <div class="entry-content"><p>It is what I want to achieve: whenever a selection is changed in the top UIPicker, the choices in the second UIPicker will change accordingly.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><img src="/images/twopickers.png" width="341" height="497" title="" >
+<img src="/images/twopickers_b.png" width="341" height="497" title="" ></p>
+
+<p>Useful lessons from this exercise:</p>
+
+<ul>
+<li>The use of API <code>reloadAllComponents</code></li>
+<li>The use of class extension and category</li>
+<li>Identification of the UI object &ndash; apparently a <code>==</code> is sufficient to find out which picker instance a picker API is handling</li>
+</ul>
+
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -201,20 +212,135 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ conda update ipython
-</span><span class='line'># All packages already at latest version, nothing to do.
-</span><span class='line'># packages in environment at /Users/antkong/anaconda:
-</span><span class='line'>#
-</span><span class='line'># Warning: Your version of pip is older than what conda requires for pip
-</span><span class='line'># integration, so pip-installed packages will not be displayed.  Please
-</span><span class='line'># update pip, (conda update pip -p /Users/antkong/anaconda)
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#import &quot;SOViewController.h&quot;</span>
 </span><span class='line'>
-</span><span class='line'>conda                     2.2.5                    py27_0  
-</span><span class='line'>ipython                   1.1.0                    py27_0  
-</span><span class='line'>$ which pip
-</span><span class='line'>/Users/antkong/anaconda/bin/pip
-</span><span class='line'>$ pip --version
-</span><span class='line'>pip 1.4.1 from /Users/antkong/anaconda/lib/python2.7/site-packages (python 2.7)</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker1</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="kt">IBOutlet</span> <span class="n">UIPickerView</span> <span class="o">*</span><span class="n">Picker2</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@interface</span> <span class="nc">SOViewController</span> <span class="nl">(SOPickerDelegate)</span> <span class="o">&lt;</span><span class="n">UIPickerViewDelegate</span><span class="p">,</span> <span class="n">UIPickerViewDataSource</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@implementation</span> <span class="nc">SOViewController</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">list_media</span><span class="p">;</span>
+</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">list_media_channel</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLoad</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">list_media</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span><span class="s">@&quot;TV&quot;</span><span class="p">,</span> <span class="s">@&quot;Radio&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="n">list_media_channel</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="err">@</span><span class="p">[</span><span class="s">@&quot;ABC&quot;</span><span class="p">,</span> <span class="s">@&quot;SBS&quot;</span><span class="p">],</span> <span class="err">@</span><span class="p">[</span><span class="s">@&quot;TripleJ&quot;</span><span class="p">,</span> <span class="s">@&quot;107.1&quot;</span><span class="p">,</span> <span class="s">@&quot;CBS&quot;</span><span class="p">]];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">didReceiveMemoryWarning</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">super</span> <span class="n">didReceiveMemoryWarning</span><span class="p">];</span>
+</span><span class='line'>    <span class="c1">// Dispose of any resources that can be recreated.</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@implementation</span> <span class="nc">SOViewController</span><span class="nl">(SOPickerDelegate)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span> <span class="nf">didSelectRow:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">row</span> <span class="nf">inComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">component</span><span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">pickerView</span> <span class="o">==</span> <span class="n">_Picker1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// set Picker 2 accordingly</span>
+</span><span class='line'>        <span class="p">[</span><span class="n">_Picker2</span> <span class="n">reloadAllComponents</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">*</span><span class="p">)</span> <span class="nf">getDataByPicker:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">pickerView</span> <span class="o">==</span> <span class="n">_Picker1</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">list_media</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSArray</span><span class="o">*</span> <span class="n">content</span> <span class="o">=</span> <span class="p">[</span><span class="n">list_media_channel</span> <span class="nl">objectAtIndex:</span><span class="p">[</span><span class="n">_Picker1</span> <span class="nl">selectedRowInComponent:</span><span class="mi">0</span><span class="p">]];</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">content</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nf">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span> <span class="nf">titleForRow:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">row</span> <span class="nf">forComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">component</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">getDataByPicker:</span><span class="n">pickerView</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">data</span> <span class="nl">objectAtIndex:</span><span class="n">row</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">pickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span> <span class="nf">numberOfRowsInComponent:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">component</span><span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">NSArray</span><span class="o">*</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">getDataByPicker:</span><span class="n">pickerView</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">[</span><span class="n">data</span> <span class="n">count</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nf">numberOfComponentsInPickerView:</span><span class="p">(</span><span class="n">UIPickerView</span> <span class="o">*</span><span class="p">)</span><span class="nv">pickerView</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -230,7 +356,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/12/28/finally-firefox-is-built/">Finally Firefox Is Built</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/01/04/swap-convention/">Swap Convention</a></h1>
     
     
       <p class="meta">
@@ -246,170 +372,135 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-12-28T18:37:00+11:00" pubdate data-updated="true">Dec 28<span>th</span>, 2013</time>
+<time datetime="2014-01-04T21:15:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><blockquote><pre><code>Floating-rate payer: pay 6-month LIBOR
+                     receive a fixed rate of 5.19 percent
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>609:58.75 TestStartupCache
-</span><span class='line'>610:02.99 /home/antkong/wd/mozilla-central/js/xpconnect/tests/components/js/xpctest.manifest: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.51 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.manifest: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.53 /home/antkong/wd/mozilla-central/startupcache/test/TestStartupCacheTelemetry.js: WARNING: no preprocessor directives found
-</span><span class='line'>610:06.61 Packaging quitter@mozilla.org.xpi...
-</span><span class='line'>610:06.95 816 compiler warnings present.
-</span><span class='line'>We know it took a while, but your build finally finished successfully!
-</span><span class='line'>To take your build for a test drive, run: /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/bin/firefox
-</span><span class='line'>For more information on what to do now, see https://developer.mozilla.org/docs/Developer_Guide/So_You_Just_Built_Firefox</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It took almost 10 hours to build in a VM instance of Ubuntu desktop 13.10 with 4GB RAM and 1 CPU</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/27/fixing-qt4-dependency-of-pyqt4/">Fixing Qt4 Dependency of Pyqt4</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-27T22:57:00+11:00" pubdate data-updated="true">Dec 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>SIP is installed</p>
-
-<p>PyQt needs qt4. <code>brew install qt4</code> takes care of this dependency.</p>
-
-<p>PyQt cannot be installed by either <code>easy_install</code> or <code>pip</code>. I have to download the package, run <code>configure.py</code> and then <code>make</code> and <code>make install</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/12/24/failed-at-unified-cpp-2/">Mach Problem: Failed at Unified_cpp_2</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-24T21:24:00+11:00" pubdate data-updated="true">Dec 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Failed at this point</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>8:57.00 {standard input}: Assembler messages:
-</span><span class='line'> 8:57.17 {standard input}:104313: Warning: end of file not at end of a line; newline inserted
-</span><span class='line'> 8:57.17 {standard input}:104921: Error: unknown pseudo-op: `.lvl'
-</span><span class='line'> 8:57.18 {standard input}: Error: open CFI at the end of file; missing .cfi_endproc directive
-</span><span class='line'> 8:57.18 c++: internal compiler error: Killed (program cc1plus)
-</span><span class='line'> 8:57.18 Please submit a full bug report,
-</span><span class='line'> 8:57.19 with preprocessed source if appropriate.
-</span><span class='line'> 8:57.19 See &lt;file:///usr/share/doc/gcc-4.8/README.Bugs> for instructions.
-</span><span class='line'> 8:57.19 
-</span><span class='line'> 8:57.19 In the directory  /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/js/src
-</span><span class='line'> 8:57.19 The following command failed to execute properly:
-</span><span class='line'> 8:57.19 c++ -o Unified_cpp_2.o -c -I../../dist/system_wrappers_js -include /home/antkong/wd/mozilla-central/js/src/config/gcc_hidden.h -DENABLE_PARALLEL_JS -DENABLE_BINARYDATA -DEXPORT_JS_API -DJS_HAS_CTYPES -DDLL_PREFIX="lib" -DDLL_SUFFIX=".so" -DMOZ_GLUE_IN_PROGRAM -DNO_NSPR_10_SUPPORT -DUSE_ZLIB -I/home/antkong/wd/mozilla-central/js/src -I. -Ictypes/libffi/include -I/home/antkong/wd/mozilla-central/js/src/../../mfbt/double-conversion -I/home/antkong/wd/mozilla-central/js/src/../../intl/icu/source/common -I/home/antkong/wd/mozilla-central/js/src/../../intl/icu/source/i18n -I../../dist/include -I/home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/dist/include/nspr -I/home/antkong/wd/mozilla-central/js/src -fPIC -DMOZILLA_CLIENT -include ./js-confdefs.h -MD -MP -MF .deps/Unified_cpp_2.o.pp -Wall -Wpointer-arith -Woverloaded-virtual -Werror=return-type -Wtype-limits -Wempty-body -Werror=conversion-null -Wsign-compare -Wno-invalid-offsetof -Wcast-align -fno-rtti -fno-exceptions -fno-math-errno -std=gnu++0x -pthread -pipe -DNDEBUG -DTRIMMED -g -O3 -freorder-blocks -fomit-frame-pointer -DUSE_SYSTEM_MALLOC=1 -DENABLE_ASSEMBLER=1 -DENABLE_JIT=1 /home/antkong/wd/mozilla-central/obj-x86_64-unknown-linux-gnu/js/src/Unified_cpp_2.cpp</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Could be due to a change I made earlier related to autoconf in <code>client.mk</code>. In order to do a clean build I will</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>hg revert --no-backup client.mk
-</span><span class='line'>./mach clobber
-</span><span class='line'>hg pull -u</span></code></pre></td></tr></table></div></figure>
-
-
-<p>When I ran <code>hg pull</code> I got this error message:</p>
-
-<pre><code>$ hg pull -u
-abort: repository default not found!
+Fixed-rate payer: pay a fixed rate of 5.25 percent
+                  receive 6-month LIBOR
 </code></pre>
 
-<p>Fixed it by creating a .hg/hgrc file:</p>
+<p>In this example, the bank is quoting an offer rate of 5.25 percent, which is what the fixed-rate payer will pay, and a bid rate of 5.19 percent, which is what the floating-rate payer will receive. The bid-offer spread is therefore 6 basis points.</p></blockquote>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<p><em>from &lsquo;Moorad Choudhry &ndash; Fixed Income Securities and Derivatives Handbook (Analysis and Valuation)&rsquo;</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/03/conda-and-ipython/">Conda and Ipython</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-03T23:01:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>It is a follow-up on <a href="/post/2013/12/30/conda-install-ipython-problem/">my last ipython install issue</a></p>
+
+<p>Turn out i just need to follow the suggested solution in the conda failure message, which is to use <code>-p /path/to/local/conda</code></p>
+
+<p>Now I have four set of python runtime installed on my MBP:</p>
+
+<ul>
+<li><p>From Apple</p></li>
+<li><p>From Homebrew</p></li>
+<li><p>From Pythonbrew</p></li>
+<li><p>From conda</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/01/03/pandas-dateutil-dot-parser-import-error/">Pandas - dateutil.parser Import Error</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-03T21:24:00+11:00" pubdate data-updated="true">Jan 3<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Try to run <code>import pandas</code> in python. Encountered this:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[paths]
-</span><span class='line'>default = http://hg.mozilla.org/mozilla-central/
-</span><span class='line'>default-push = ssh://hg.mozilla.org/mozilla-central/</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span>
+</span><span class='line'><span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pandas-0.12.0-py2.7-macosx-10.9-x86_64.egg/pandas/__init__.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">hashtable</span><span class="p">,</span> <span class="n">tslib</span><span class="p">,</span> <span class="n">lib</span>
+</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;tslib.pyx&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">31</span><span class="p">,</span> <span class="ow">in</span> <span class="n">init</span> <span class="n">pandas</span><span class="o">.</span><span class="n">tslib</span> <span class="p">(</span><span class="n">pandas</span><span class="o">/</span><span class="n">tslib</span><span class="o">.</span><span class="n">c</span><span class="p">:</span><span class="mi">48782</span><span class="p">)</span>
+</span><span class='line'><span class="ne">ImportError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="n">dateutil</span><span class="o">.</span><span class="n">parser</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Unfortunately it does not fix my problem .</p>
+<p>Fixed by running</p>
 
-<p>It turns out it has something to do with the PC. I created an instance of VirtualBox to run ubuntu desktop 13.10 for the compilation. I only allocted 512MB RAM for the exercise. The failure above is a problem of too little RAM.</p>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install python-dateutil
+</span></code></pre></td></tr></table></div></figure>
 
-<p>Allocated 4GB of RAM to the VM and the exception is gone.</p>
+
+
 </div>
   
   
@@ -434,23 +525,23 @@ abort: repository default not found!
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

@@ -9,11 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="This is a useful marco for doing debug logging: 1
-2
-3
-4
-#define DLog(msg, ...) do { \ NSString *dLogString = [NSString stringWithFormat:@&quot;%s &hellip;">
+  <meta name="description" content="Q: So, these flight computers on Dragon – there are three on board, and that&rsquo;s for redundancy? A: There are actually six computers. They &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -125,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/03/03/nslog-macro/">NSLog Macro</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/06/spacex-and-redundancy/">SpaceX and Redundancy</a></h1>
     
     
       <p class="meta">
@@ -141,29 +137,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-03-03T08:11:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2014</time>
+<time datetime="2014-03-06T07:51:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>This is a useful marco for doing debug logging:</p>
+  <div class="entry-content"><p><strong>Q:</strong> So, these flight computers on Dragon – there are three on board, and that&rsquo;s for redundancy?</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#define DLog(msg, ...) do { \</span>
-</span><span class='line'><span class="cp">  NSString *dLogString = [NSString stringWithFormat:@&quot;%s: %@&quot;, __PRETTY_FUNCTION__, msg]; \</span>
-</span><span class='line'><span class="cp">  NSLog(@&quot;%@&quot;, __VA_ARGS__); \</span>
-</span><span class='line'><span class="cp">} while (0)</span>
-</span></code></pre></td></tr></table></div></figure>
+<p><strong>A:</strong> There are actually six computers. They operate in pairs, so there are three computer units, each of which have two computers checking on each other. The reason we have three is when operating in proximity of ISS, we have to always have two computer strings voting on something on critical actions. We have three so we can tolerate a failure and still have two voting on each other. And that has nothing to do with radiation, that has to do with ensuring that we&rsquo;re safe when we&rsquo;re flying our vehicle in the proximity of the space station.</p>
 
+<p>I went into the lab earlier today, and we have 18 different processing units with computers in them. We have three main computers, but 18 units that have a computer of some kind, and all of them are triple computers – everything is three processors. So we have like 54 processors on the spacecraft. It&rsquo;s a highly distributed design and very fault-tolerant and very robust.</p>
 
-<p>Note the use of <code>__PRETTY_FUNCTION__</code></p>
-
-<p><a href="https://coderwall.com/p/2ko3la">Source</a></p>
+<p><a href="http://www.aviationweek.com/Blogs.aspx?plckBlogId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385&amp;plckPostId=Blog:04ce340e-4b63-4d23-9695-d49ab661f385Post:a8b87703-93f9-4cdf-885f-9429605e14df">Source</a></p>
 </div>
   
   
@@ -176,7 +163,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/03/02/til-r-is-presinstalled-in-osx/">TIL R Is Presinstalled in OSX</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/03/06/how-to-make-a-label-recognise-a-tape/">How to Make a Label Recognise a Tape</a></h1>
     
     
       <p class="meta">
@@ -192,14 +179,322 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-03-02T11:27:00+11:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2014</time>
+<time datetime="2014-03-06T07:44:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I just found out R is pre-installed in OSX!</p>
+  <div class="entry-content"><p>Step 1) Need to implement a selector to handle the gesture recognizer&rsquo;s callback</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">handleSingleTap:</span><span class="p">(</span><span class="n">UIGestureRecognizer</span> <span class="o">*</span><span class="p">)</span><span class="nv">gestureRecognizer</span>  <span class="p">{</span>
+</span><span class='line'>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;handleSingleTap called&quot;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 2) Create and assign a gesture recognizer to a UILabel</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="n">UITapGestureRecognizer</span> <span class="o">*</span><span class="n">singleTap</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UITapGestureRecognizer</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithTarget:</span><span class="n">self</span> <span class="nl">action:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">handleSingleTap:</span><span class="p">)];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">addGestureRecognizer:</span><span class="n">singleTap</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Step 3) <strong>Important</strong> Must make sure <code>setUserInteractionEnabled</code> of the UILabel is set</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'>    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">lblHour</span> <span class="nl">setUserInteractionEnabled:</span><span class="n">YES</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/06/yield-to-maturity/">Yield to Maturity</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-06T07:13:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yield to maturity (YTM) is sometimes  known simply as “yield”, “redemption yield” or “gross redemption yield” (GRY) because it is the yield to the redemption date assuming all cashflows are paid gross (no tax deduction for example).</p>
+
+<p>It is the internal rate of return of a bond – the yield necessary to discount all the bond’s cashflows to an NPV equal to its current price</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/05/quick-32nd-lookup/">Quick 32nd Lookup</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><table>
+<thead>
+<tr>
+<th></th>
+<th><strong>32nd</strong>  </th>
+<th> <strong>Decimal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td> 1/32   </td>
+<td>0.03125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 2/32   </td>
+<td>0.0625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 3/32   </td>
+<td>0.09375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 4/32   </td>
+<td>0.125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 5/32   </td>
+<td>0.15625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 6/32   </td>
+<td>0.1875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 7/32   </td>
+<td>0.21875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 8/32   </td>
+<td>0.25 </td>
+</tr>
+<tr>
+<td></td>
+<td> 9/32   </td>
+<td>0.28125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 10/32  </td>
+<td>0.3125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 11/32  </td>
+<td>0.34375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 12/32  </td>
+<td>0.375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 13/32  </td>
+<td>0.40625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 14/32  </td>
+<td>0.4375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 15/32  </td>
+<td>0.46875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 16/32  </td>
+<td>0.5 </td>
+</tr>
+<tr>
+<td></td>
+<td> 17/32  </td>
+<td>0.53125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 18/32  </td>
+<td>0.5625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 19/32  </td>
+<td>0.59375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 20/32  </td>
+<td>0.625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 21/32  </td>
+<td>0.65625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 22/32  </td>
+<td>0.6875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 23/32  </td>
+<td>0.71875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 24/32  </td>
+<td>0.75 </td>
+</tr>
+<tr>
+<td></td>
+<td> 25/32  </td>
+<td>0.78125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 26/32  </td>
+<td>0.8125 </td>
+</tr>
+<tr>
+<td></td>
+<td> 27/32  </td>
+<td>0.84375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 28/32  </td>
+<td>0.875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 29/32  </td>
+<td>0.90625 </td>
+</tr>
+<tr>
+<td></td>
+<td> 30/32  </td>
+<td>0.9375 </td>
+</tr>
+<tr>
+<td></td>
+<td> 31/32  </td>
+<td>0.96875 </td>
+</tr>
+<tr>
+<td></td>
+<td> 32/32  </td>
+<td>1.0 </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2014/03/05/missing-curses-library/">Missing Curses Library</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-05T07:11:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -216,221 +511,35 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ R
-</span><span class='line'>
-</span><span class='line'>R version 3.0.2 (2013-09-25) -- "Frisbee Sailing"
-</span><span class='line'>Copyright (C) 2013 The R Foundation for Statistical Computing
-</span><span class='line'>Platform: x86_64-apple-darwin10.8.0 (64-bit)
-</span><span class='line'>
-</span><span class='line'>R is free software and comes with ABSOLUTELY NO WARRANTY.
-</span><span class='line'>You are welcome to redistribute it under certain conditions.
-</span><span class='line'>Type 'license()' or 'licence()' for distribution details.
-</span><span class='line'>
-</span><span class='line'>  Natural language support but running in an English locale
-</span><span class='line'>
-</span><span class='line'>R is a collaborative project with many contributors.
-</span><span class='line'>Type 'contributors()' for more information and
-</span><span class='line'>'citation()' on how to cite R or R packages in publications.
-</span><span class='line'>
-</span><span class='line'>Type 'demo()' for some demos, 'help()' for on-line help, or
-</span><span class='line'>'help.start()' for an HTML browser interface to help.
-</span><span class='line'>Type 'q()' to quit R.
-</span><span class='line'>
-</span><span class='line'>></span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install ncurses-dev
+</span><span class='line'>Reading package lists... Done
+</span><span class='line'>Building dependency tree       
+</span><span class='line'>Reading state information... Done
+</span><span class='line'>Note, selecting 'libncurses5-dev' instead of 'ncurses-dev'
+</span><span class='line'>The following extra packages will be installed:
+</span><span class='line'>  libtinfo-dev
+</span><span class='line'>Suggested packages:
+</span><span class='line'>  ncurses-doc
+</span><span class='line'>The following NEW packages will be installed:
+</span><span class='line'>  libncurses5-dev libtinfo-dev
+</span><span class='line'>0 upgraded, 2 newly installed, 0 to remove and 107 not upgraded.
+</span><span class='line'>Need to get 328 kB of archives.
+</span><span class='line'>After this operation, 1,452 kB of additional disk space will be used.
+</span><span class='line'>Do you want to continue [Y/n]?</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Other dependency</p>
 
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/03/01/prepare-a-maverick-usb/">Prepare a Maverick Usb</a></h1>
-    
-    
-      <p class="meta">
-        
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo apt-get install libssl-dev</span></code></pre></td></tr></table></div></figure>
 
 
+<p>Do not need them for now</p>
 
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-01T07:08:00+11:00" pubdate data-updated="true">Mar 1<span>st</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Get a USB flash drive that is at least 8 GBs.</p>
-
-<p>Use Disk Utility to prepare the flash drive:</p>
-
-<ul>
-<li>Click on the Erase tab in the DU main window.</li>
-<li>Set the format type to <code>Mac OS Extended (Journaled.)</code></li>
-<li>Click on the Erase button.</li>
-</ul>
-
-
-<p>You can leave the name of the flash drive at the system default, &ldquo;Untitled.&rdquo; Open the Terminal in the Utilities folder. Run this command line after the prompt in the Terminal&rsquo;s window:</p>
-
-<pre><code>sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia \
---volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
-</code></pre>
-
-<p>No need of any third party software</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/28/create-a-nsarray-from-nsmutualarray/">Create a NSArray From NSMutualArray</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-28T19:31:00+11:00" pubdate data-updated="true">Feb 28<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>It is so simple</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// m is a NSMutualArray </span>
-</span><span class='line'><span class="n">NSArray</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="nl">arrayWithArray:</span><span class="n">m</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2014/02/23/urlencode-unicode/">Urlencode Unicode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-23T07:25:00+11:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Work in python 3</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python3</span>
-</span><span class='line'><span class="n">Python</span> <span class="mf">3.3</span><span class="o">.</span><span class="mi">4</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Feb</span> <span class="mi">23</span> <span class="mi">2014</span><span class="p">,</span> <span class="mo">06</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">55</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.2</span><span class="o">.</span><span class="mi">1</span> <span class="n">Compatible</span> <span class="n">Apple</span> <span class="n">LLVM</span> <span class="mf">5.0</span> <span class="p">(</span><span class="n">clang</span><span class="o">-</span><span class="mf">500.2</span><span class="o">.</span><span class="mi">79</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
-</span><span class='line'><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib.parse</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
-</span><span class='line'><span class="s">&#39;a=%C6%90&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Does not work in python</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="err">$</span> <span class="n">python</span>
-</span><span class='line'><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">6</span> <span class="o">|</span><span class="n">Anaconda</span> <span class="mf">1.8</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">x86_64</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Jan</span> <span class="mi">10</span> <span class="mi">2014</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">15</span><span class="p">)</span>
-</span><span class='line'><span class="p">[</span><span class="n">GCC</span> <span class="mf">4.0</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">Apple</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">build</span> <span class="mi">5493</span><span class="p">)]</span> <span class="n">on</span> <span class="n">darwin</span>
-</span><span class='line'><span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">urllib</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="nb">chr</span><span class="p">(</span><span class="mi">400</span><span class="p">)})</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'><span class="ne">ValueError</span><span class="p">:</span> <span class="nb">chr</span><span class="p">()</span> <span class="n">arg</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">256</span><span class="p">)</span>
-</span><span class='line'><span class="o">&gt;&gt;&gt;</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">({</span><span class="s">&#39;a&#39;</span><span class="p">:</span><span class="s">u&quot;</span><span class="se">\u0400</span><span class="s">&quot;</span><span class="p">})</span>
-</span><span class='line'><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span><span class='line'>  <span class="n">File</span> <span class="s">&quot;/Users/antkong/anaconda/lib/python2.7/urllib.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1329</span><span class="p">,</span> <span class="ow">in</span> <span class="n">urlencode</span>
-</span><span class='line'>    <span class="n">v</span> <span class="o">=</span> <span class="n">quote_plus</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
-</span><span class='line'><span class="ne">UnicodeEncodeError</span><span class="p">:</span> <span class="s">&#39;ascii&#39;</span> <span class="n">codec</span> <span class="n">can</span><span class="s">&#39;t encode character u&#39;</span>\<span class="n">u0400</span><span class="s">&#39; in position 0: ordinal not in range(128)</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>jinterface     : No Java compiler found
+</span><span class='line'>odbc           : ODBC library - link check failed</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -458,23 +567,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/08/emacs-on-osx/">emacs on osx</a>
+        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/07/gwmi-vs-wmic/">gwmi vs wmic</a>
+        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/ruby-gem-ssl-problem/">ruby gem ssl problem</a>
+        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/06/download-file-with-lynx/">Download file with lynx</a>
+        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to apply Windows update</a>
+        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
       </li>
     
   </ul>

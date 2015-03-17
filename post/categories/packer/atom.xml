@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: packer | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/packer/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-18T06:47:43+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[trying packer]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/08/trying-packer/"/>
+    <updated>2015-03-08T20:10:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/08/trying-packer</id>
+    <content type="html"><![CDATA[<p>Trying to use packer to build a box for the first time. Encounter permission problem</p>
+
+<pre><code>    $  packer build -var 'aws_access_key=ABC' -var 'aws_secret_key=XYZ' my-basebox.json
+    amazon-ebs output will be in this color.
+
+    ==&gt; amazon-ebs: Inspecting the source AMI...
+    ==&gt; amazon-ebs: Creating temporary keypair: packer 54fc1177-7d3f-51fe-03ea-f16fea52ec2d
+    ==&gt; amazon-ebs: Creating temporary security group for this instance...
+    ==&gt; amazon-ebs: Authorizing SSH access on the temporary security group...
+    ==&gt; amazon-ebs: Launching a source AWS instance...
+        amazon-ebs: Instance ID: i-ead72be7
+    ==&gt; amazon-ebs: Waiting for instance (i-ead72be7) to become ready...
+    ==&gt; amazon-ebs: Waiting for SSH to become available...
+    ==&gt; amazon-ebs: Connected to SSH!
+    ==&gt; amazon-ebs: Provisioning with chef-solo
+        amazon-ebs: Installing Chef...
+        amazon-ebs: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+        amazon-ebs: Dload  Upload   Total   Spent    Left  Speed
+        amazon-ebs: 100 18378  100 18378    0     0  48243      0 --:--:-- --:--:-- --:--:-- 48363
+        amazon-ebs: Downloading Chef  for ubuntu...
+        amazon-ebs: downloading https://www.opscode.com/chef/metadata?v=&amp;prerelease=false&amp;nightlies=false&amp;p=ubuntu&amp;pv=14.04&amp;m=x86_64
+        amazon-ebs: to file /tmp/install.sh.1372/metadata.txt
+        amazon-ebs: trying wget...
+        amazon-ebs: url https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.04/x86_64/chef_12.1.0-1_amd64.deb
+        amazon-ebs: md5 b86c3dd0171e896ab3fb42f26e688fef
+        amazon-ebs: sha256  9bbde88f2eeb846a862512ab6385dff36278ff2ba8bd2e07a237a23337c4165a
+        amazon-ebs: downloaded metadata file looks valid...
+        amazon-ebs: downloading https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.04/x86_64/chef_12.1.0-1_amd64.deb
+        amazon-ebs: to file /tmp/install.sh.1372/chef_12.1.0-1_amd64.deb
+        amazon-ebs: trying wget...
+        amazon-ebs: Comparing checksum with sha256sum...
+        amazon-ebs: Installing Chef
+        amazon-ebs: installing with dpkg...
+        amazon-ebs: dpkg: error: requested operation requires superuser privilege
+        amazon-ebs: Installation failed
+        amazon-ebs: Version:
+        amazon-ebs:
+        amazon-ebs: Please file a Bug Report at https://github.com/opscode/opscode-omnitruck/issues/new
+        amazon-ebs: Alternatively, feel free to open a Support Ticket at https://www.getchef.com/support/tickets
+        amazon-ebs: More Chef support resources can be found at https://www.getchef.com/support
+        amazon-ebs:
+        amazon-ebs: Please include as many details about the problem as possible i.e., how to reproduce
+        amazon-ebs: the problem (if possible), type of the Operating System and its version, etc.,
+        amazon-ebs: and any other relevant details that might help us with troubleshooting.
+        amazon-ebs:
+    ==&gt; amazon-ebs: Terminating the source AWS instance...
+    ==&gt; amazon-ebs: Deleting temporary security group...
+    ==&gt; amazon-ebs: Deleting temporary keypair...
+    Build 'amazon-ebs' errored: Error installing Chef: Install script exited with non-zero exit status 1
+
+    ==&gt; Some builds didn't complete successfully and had errors:
+    --&gt; amazon-ebs: Error installing Chef: Install script exited with non-zero exit status 1
+
+    ==&gt; Builds finished but no artifacts were created.
+</code></pre>
+
+<p>Check the following:</p>
+
+<ol>
+<li><code>prevent_sudo</code> is not set to true</li>
+<li>If <code>install_command</code> and <code>execute_command</code> are set, make sure they use <code>sudo</code></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
