@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="A common error amongst new C++ programmers is to have operator= return void, a decision that seems reasonable unTIL you realize it prevents chains of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6068911247/">Item 15: Have Operator= Return a Reference to *this</a></h1>
     
     
       <p class="meta">
@@ -138,14 +137,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
+<time datetime="2011-06-01T21:09:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>A common error amongst new C++ programmers is to have<em> operator=</em> return void, a decision that seems reasonable unTIL you realize it prevents chains of assignment.</p>
+
+<p>Here is an example implementation:</p>
 </div>
   
   
@@ -158,7 +159,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036284846/">C++: Dynamic Array</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048281435/">ANSI C Supports &#8220;const&#8220; Keyword in C99</a></h1>
     
     
       <p class="meta">
@@ -174,14 +175,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T23:12:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-06-01T07:42:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>We can dynamically allocate arrays of primitive types using new as well</p>
+  <div class="entry-content"><p>ANSI C supports <code>const</code> keyword in C99</p>
 </div>
   
   
@@ -194,7 +195,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036161971/">C++ Weirdness</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6048028170/">Item 14: Make Sure Base Classes Have Virtual Destructors</a></h1>
     
     
       <p class="meta">
@@ -210,14 +211,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T23:05:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-06-01T07:34:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>This calls the copy constructor</p>
+  <div class="entry-content"><p>The C++ language standard defines that if we try to delete a derived class object through a base class pointer and the base class has a nonvirtual destructor , the results are <em>undefined</em></p>
 </div>
   
   
@@ -230,7 +231,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035862177/">C++: Required Class Operations</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046791916/">iPhone Buttons</a></h1>
     
     
       <p class="meta">
@@ -246,20 +247,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T22:47:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-06-01T06:56:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Related to</p>
+  <div class="entry-content"><p>Library:</p>
 
-<p>C++ requires that all classes must provide certain operations</p>
+<p><a href="Jeff%20LaMarche%E2%80%99s%20programmatic%20gradient%20buttons">http://code.google.com/p/iphonegradientbuttons/</a></p>
 
-<p>If you donât provide them, the compiler will make them up by following some simple rules. This can lead to problems</p>
-
-<p><a href="cs11%20lecture%202">http://www.cs.caltech.edu/courses/cs11/material/cpp/donnie/lectures/cs11-cpp-lec2.pdf</a></p>
+<p><a href="From%20%E2%80%9CCocoa%20is%20My%20GirlFriend%E2%80%9D">http://www.cimgf.com/2010/01/28/fun-with-uibuttons-and-core-animation-layers/</a></p>
 </div>
   
   
@@ -272,7 +271,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035529872/">Item 11: Declare a Copy Constructor and an Assignment Operator for Classes With Dynamically Allocated Memory</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6046309287/">Item 13: List Members in an Initialization List in the Order in Which They Are Declared</a></h1>
     
     
       <p class="meta">
@@ -288,14 +287,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T22:27:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-06-01T06:40:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>An <em>assignment operator</em> is to address this kind of situation:</p>
+  <div class="entry-content"><p>Because destructor cleans up in the reverse order.</p>
 </div>
   
   
@@ -320,23 +319,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

@@ -9,12 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Hit a EXC_BAD_ACCESS exception. In the lldb, I tried to interrogate some internal variable, but no success. 1
-2
-3
-4
-5 (lldb) p [lessons count]
-error &hellip;">
+  <meta name="description" content="The debugger will stop at the UIApplicationMain line It totally throws me off because nothing is wrong on that line. I proceeded to reboot my iphone &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -126,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/26/p-23757431150/">Hit a EXC_BAD_ACCESS Exception.</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/27/p-23820463221/">The Debugger Will Stop at the &#8220;UIApplicationMain&#8220; Line</a></h1>
     
     
       <p class="meta">
@@ -142,31 +137,113 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-26T08:37:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
+<time datetime="2012-05-27T07:46:00+10:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Hit a EXC_BAD_ACCESS exception.</p>
+  <div class="entry-content"><p>The debugger will stop at the <code>UIApplicationMain</code> line</p>
 
-<p>In the lldb, I tried to interrogate some internal variable, but no success.</p>
+<p>It totally throws me off because nothing is wrong on that line.</p>
+
+<p>I proceeded to reboot my iphone and MacBookPro. Sometimes thing can get a bit funny if I test my apps on the iphone, the actual hardware.</p>
+
+<p>But it did not fix the problem.</p>
+
+<p>Eventually I undo the last change I made, which is</p>
+
+<p>and it works again.</p>
+
+<p>Terrible. A good half day is lost. If only I can find out what 0x171070 was in lldb.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788398195/">When I Select a Prototype Cell, It Does Not Follow Segue and Show the Destination Controller, as Defined in the Storyboard Above.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-26T19:47:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I select a prototype cell, it does not follow segue and show the destination controller, as defined in the storyboard above.</p>
+
+<p>The root cause seems to be that, since my originating controller is not a navigation controller, it does not respond to a ‘push’ segue.</p>
+
+<p>Once I change the segue type to ‘modal’, it works.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23788057388/">Sample Use of Pragma Mark</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-26T19:27:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sample use of pragma mark</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>
-</span><span class='line'>(lldb) p [lessons count]
-</span><span class='line'>error: no known method '-count'; cast the message send to the method's return type
-</span><span class='line'>error: 1 errors parsing expression
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>#pragma mark -
+</span><span class='line'>#pragma mark Data View</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p><code>
+</code></p>
 </div>
   
   
@@ -179,7 +256,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23730125189/">Dispatch IO</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23786684708/">Added a UITableVIew to My Custom Controller. Now I Want to Be Able to Add a Segway to a Cell in This Table View.</a></h1>
     
     
       <p class="meta">
@@ -195,18 +272,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-25T22:29:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+<time datetime="2012-05-26T18:25:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>New stuff</p>
+  <div class="entry-content"><p>Added a UITableVIew to my custom controller. Now I want to be able to add a segway to a cell in this table view.</p>
 
-<p><a href="None">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
+<p>Since I did not start with a UITableViewController at the beginning, I was unable to connect a segway to an individual cell inside the table view.</p>
 
-<p><a href="http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html">http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/TechniquesforReadingandWritingCustomFiles/TechniquesforReadingandWritingCustomFiles.html</a></p>
+<p>Finally, by trial and error, I dragged a ‘Table View Cell’ object onto the UITableView. It is now displayed as ‘Prototype Cells’</p>
+
+<p>I can create an outgoing segway from this prototype cell. But now I am getting this error message</p>
+
+<p>It can be easily fixed by simply filling in the <em>Identifier</em> field in the <em>Attribute inspector</em>.</p>
 </div>
   
   
@@ -219,7 +300,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23694702384/">Justinian I</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/05/26/p-23769825268/">Can You Spot the Problem Here?</a></h1>
     
     
       <p class="meta">
@@ -235,90 +316,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-05-25T08:22:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
+<time datetime="2012-05-26T12:00:00+10:00" pubdate data-updated="true">May 26<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/Justinian_I">Justinian I</a></p>
-
-<p>Very fascinating. He commissioned to build Hagia Sophia which was completed in less than 6 years. Remarkable.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/25/p-23690153155/">GLPK - the GNU Linear Programming Kit</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-25T07:11:00+10:00" pubdate data-updated="true">May 25<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="GLPK%20-%20the%20GNU%20Linear%20Programming%20Kit">http://ftp.gnu.org/gnu/glpk/</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/05/24/p-23669802351/">&#8216;12 Byzantine Rulers: The History of the Byzantine Empire&#8217; by Lars Brownworth</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-24T23:21:00+10:00" pubdate data-updated="true">May 24<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Just finished the podcast series (total to 6.7 hours). The story of Byzantine Empire is amazing. Lars has kept very good pace in the narrative. The materials are not too light or too dense.</p>
-
-<p>Absolutely a great introduction to Byzantine history for someone who knows next to nothing about this splendid empire.</p>
+  <div class="entry-content"><p>Can you spot the problem here?</p>
 </div>
   
   
@@ -343,23 +348,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

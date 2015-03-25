@@ -4,7 +4,7 @@
   <title><![CDATA[Category: plugin | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/plugin/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-18T06:47:43+11:00</updated>
+  <updated>2015-03-26T07:11:47+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[install cocoapod plugin]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/18/install-cocoapod-plugin/"/>
+    <updated>2015-03-18T18:10:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/18/install-cocoapod-plugin</id>
+    <content type="html"><![CDATA[<p>Take me a while to realise cocoapod plugins are installed via <code>gem</code></p>
+
+<pre><code>    $ pod install
+    [!] Your Podfile requires that the plugin `cocoapods-keys` be installed. Please install it and try installation again.
+
+    $ sudo gem install cocoapods-keys  
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[how to get sensu hipchat plugin to work]]></title>

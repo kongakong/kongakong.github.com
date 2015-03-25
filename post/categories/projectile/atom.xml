@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: projectile | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/projectile/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-26T07:11:47+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[package.el and projectile]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/26/package-dot-el-and-projectile/"/>
+    <updated>2015-03-26T06:59:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/26/package-dot-el-and-projectile</id>
+    <content type="html"><![CDATA[<p>I have installed <code>cask</code> to install <code>projectile</code>. But <code>projectile</code> projects says I need to use <code>package.el</code>. I have misunderstood the use of <code>cask</code> &ndash; It is for the dependency management of package development</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Did not know I can declare an anonymous function with multiple clauses as such:
+  <meta name="description" content="Getting to understand more about the role of rootViewController
 ">
   
 
@@ -122,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449490950/">Did Not Know I Can Declare an Anonymous Function With Multiple Clauses as Such:</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/17/p-5545670118/">Getting to Understand More About the Role of rootViewController</a></h1>
     
     
       <p class="meta">
@@ -138,14 +138,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-13T23:34:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+<time datetime="2011-05-17T01:26:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Did not know I can declare an anonymous function with multiple clauses as such:</p>
+  <div class="entry-content"><p>Getting to understand more about the role of rootViewController</p>
 </div>
   
   
@@ -158,7 +158,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5442998050/">Mobius (II)</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/17/p-5544709639/">If External Screen Is Attached to an Ios Device</a></h1>
     
     
       <p class="meta">
@@ -174,14 +174,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-13T15:01:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+<time datetime="2011-05-17T00:30:00+10:00" pubdate data-updated="true">May 17<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Find all prime factors</p>
+  <div class="entry-content"><p>This will return True:</p>
 </div>
   
   
@@ -194,7 +194,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/13/p-5441456212/">Mobius</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/14/p-5476741786/">UIApplicationExitsOnSuspend</a></h1>
     
     
       <p class="meta">
@@ -210,14 +210,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-13T13:45:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
+<time datetime="2011-05-14T21:08:00+10:00" pubdate data-updated="true">May 14<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>A simple prime number test rountine</p>
+  <div class="entry-content"><p>To exit an app when <code>applicationDidEnterBackground:(UIApplication *)application</code> is called, try set <code>UIApplicationExitsOnSuspend</code> to <code>YES</code> in project plist file.</p>
 </div>
   
   
@@ -230,7 +230,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/12/p-5418642232/">Cd() in Erlang on MS Windows</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/14/p-5474554164/">Removing &#8216;*.xcodeproj/project.xcworkspace/&#8217; Can Reset the Window/workspace Settings in Xcode 4</a></h1>
     
     
       <p class="meta">
@@ -246,14 +246,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-12T21:27:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2011</time>
+<time datetime="2011-05-14T17:54:00+10:00" pubdate data-updated="true">May 14<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>To <code>cd()</code> in erlang on MS Windows, one must escape the path separator properly.</p>
+  <div class="entry-content"><p>Removing <code>*.xcodeproj/project.xcworkspace/</code> can reset the window/workspace settings in xcode 4</p>
 </div>
   
   
@@ -266,7 +266,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/12/p-5415580642/">Warm Up (III)</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/13/p-5449551106/">Higher Order Function in Erlang</a></h1>
     
     
       <p class="meta">
@@ -282,14 +282,23 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-12T16:59:00+10:00" pubdate data-updated="true">May 12<span>th</span>, 2011</time>
+<time datetime="2011-05-13T23:38:00+10:00" pubdate data-updated="true">May 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Use of<em> tail-recursion</em></p>
+  <div class="entry-content"><p>Taken from <a href="http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf">Lecture 2</a></p>
+
+<p><code>math</code> module contains a <code>sqrt</code> function, but
+can&rsquo;t pass it as an argument.  Module functions aren&rsquo;t higher-order function.</p>
+
+<p>Instead, we can wrap it with a <code>fun</code>:</p>
+
+<pre><code>1&gt; lists:map(fun math:sqrt/1, [9, 16, 25]). 
+[3.00000,4.00000,5.00000] 
+</code></pre>
 </div>
   
   
@@ -314,23 +323,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

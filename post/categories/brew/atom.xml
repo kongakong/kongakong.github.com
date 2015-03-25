@@ -4,7 +4,7 @@
   <title><![CDATA[Category: brew | Timeline]]></title>
   <link href="http://www.ahwkong.com/post/categories/brew/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-18T06:47:43+11:00</updated>
+  <updated>2015-03-26T07:11:47+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -46,10 +46,10 @@
 </ul>
 
 
-<p>{% codeblock %}
-brew tap homebrew/headonly
-brew install &mdash;HEAD smpeg
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew tap homebrew/headonly
+</span><span class='line'>brew install &mdash;HEAD smpeg</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <ul>
 <li><p>Use pip to install pygame: <code>pip install hg+http://bitbucket.org/pygame/pygame</code></p></li>
@@ -68,29 +68,50 @@ brew install &mdash;HEAD smpeg
     <id>http://www.ahwkong.com/post/2013/11/30/easy-install-scipy-problem</id>
     <content type="html"><![CDATA[<p>No luck with scipy so far</p>
 
-<p>{% codeblock %}
-$ easy_install scipy
-Searching for scipy
-Reading <a href="https://pypi.python.org/simple/scipy/">https://pypi.python.org/simple/scipy/</a>
-Best match: scipy 0.13.1
-Downloading <a href="https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916">https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916</a>
-Processing scipy-0.13.1.zip
-Writing /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/setup.cfg
-Running scipy-0.13.1/setup.py -q bdist_egg &mdash;dist-dir /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/egg-dist-tmp-vWQr5z
-Running from scipy source directory.
-Splitting linalg.interpolative Fortran source files
-/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy-1.8.0-py2.7-macosx-10.9-x86_64.egg/numpy/distutils/system_info.py:507: UserWarning:</p>
-
-<pre><code>UMFPACK sparse solver (http://www.cise.ufl.edu/research/sparse/umfpack/)
-not found. Directories to search for the libraries can be specified in the
-numpy/distutils/site.cfg file (section [umfpack]) or by setting
-the UMFPACK environment variable.
-</code></pre>
-
-<p>  warnings.warn(self.notfounderror.<strong>doc</strong>)
-error: None</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ easy_install scipy
+</span><span class='line'>Searching for scipy
+</span><span class='line'>Reading &lt;a href="https://pypi.python.org/simple/scipy/">https://pypi.python.org/simple/scipy/&lt;/a>
+</span><span class='line'>Best match: scipy 0.13.1
+</span><span class='line'>Downloading &lt;a href="https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916">https://pypi.python.org/packages/source/s/scipy/scipy-0.13.1.zip#md5=485411032b02583b4eb63caec6f2a916&lt;/a>
+</span><span class='line'>Processing scipy-0.13.1.zip
+</span><span class='line'>Writing /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/setup.cfg
+</span><span class='line'>Running scipy-0.13.1/setup.py -q bdist_egg &mdash;dist-dir /var/folders/hc/9mbf3qy10mz8wxjmd9314kl80000gn/T/easy_install-fmDJqI/scipy-0.13.1/egg-dist-tmp-vWQr5z
+</span><span class='line'>Running from scipy source directory.
+</span><span class='line'>Splitting linalg.interpolative Fortran source files
+</span><span class='line'>/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy-1.8.0-py2.7-macosx-10.9-x86_64.egg/numpy/distutils/system_info.py:507: UserWarning:&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>UMFPACK sparse solver (http://www.cise.ufl.edu/research/sparse/umfpack/)
+</span><span class='line'>not found. Directories to search for the libraries can be specified in the
+</span><span class='line'>numpy/distutils/site.cfg file (section [umfpack]) or by setting
+</span><span class='line'>the UMFPACK environment variable.
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  warnings.warn(self.notfounderror.&lt;strong>doc&lt;/strong>)
+</span><span class='line'>error: None&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

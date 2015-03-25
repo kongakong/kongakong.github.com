@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Root View: the pane on the left when iPad is in Landscape mode
-Detail View: the main pane of display
+  <meta name="description" content="One of the steps ./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework
 ">
   
 
@@ -123,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/09/20/p-1153892343/">Terminology in SplitView</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1267909194/">Overcoming Compilation Error</a></h1>
     
     
       <p class="meta">
@@ -139,15 +138,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-09-20T13:26:00+10:00" pubdate data-updated="true">Sep 20<span>th</span>, 2010</time>
+<time datetime="2010-10-08T18:40:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><em>Root View</em>: the pane on the left when iPad is in Landscape mode
-<em>Detail View</em>: the main pane of display</p>
+  <div class="entry-content"><p>One of the steps</p>
+
+<p><code>./configure --enable-universalsdk=/Developer/SDKs/MacOSX10.6.sdk --disable-toolbox-glue --without-framework</code></p>
 </div>
   
   
@@ -160,7 +160,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1119099362/">EXC_BAD_ACCESS Resolved</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1264649679/">&#8216;Struct Winsize&#8217; Declared Inside Parameter List</a></h1>
     
     
       <p class="meta">
@@ -176,16 +176,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-09-14T13:56:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
+<time datetime="2010-10-08T08:52:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It turns out I was trying to send <em>release</em> message to a NSArray instance which was created using the class method <em>arrayWithObjects:</em></p>
+  <div class="entry-content"><p>Seeing a lot of</p>
 
-<p>It is probably a wrong conclusion, but commenting out the line works.</p>
+<p><code>warning: 'struct winsize' declared inside parameter list</code></p>
+
+<p>Eventually failed at <code>./Modules/posixmodule.c</code></p>
+
+<p>Fixed by using forward declaration</p>
 </div>
   
   
@@ -198,7 +202,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/09/14/p-1118971148/">EXC_BAD_ACCESS</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/08/p-1263713208/">-Wno-long-double</a></h1>
     
     
       <p class="meta">
@@ -214,16 +218,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-09-14T13:29:00+10:00" pubdate data-updated="true">Sep 14<span>th</span>, 2010</time>
+<time datetime="2010-10-08T06:07:00+11:00" pubdate data-updated="true">Oct 8<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Is it the equivalent of <em>segfault</em> in unix or <em>NPE</em> in java?</p>
+  <div class="entry-content"><p>Python 2.5.5 uses the <code>-Wno-long-double</code> c compiler flag, which is no longer supported by the gcc 4.2.1 in OSX 10.6</p>
 
-<p>Anyway, having <em>fun</em> with it…</p>
+<p>Fixed the configure.in and rerun autoconf. Let&rsquo;s see if it will work.</p>
 </div>
   
   
@@ -236,7 +240,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/09/12/p-1108382072/">Abstract Base Class Support in Objective-c</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/10/06/p-1250836116/">ActiveMQ Build Error</a></h1>
     
     
       <p class="meta">
@@ -252,16 +256,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-09-12T19:42:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2010</time>
+<time datetime="2010-10-06T07:42:00+11:00" pubdate data-updated="true">Oct 6<span>th</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Basically, there is no support of Abstract base class in objective-c.</p>
+  <div class="entry-content"><p>Try to build it, but hit this error:</p>
 
-<p>The handling is similar to what you can do in python (pre-2.6): inside the supposedly abstract class method throws an exception.</p>
+<p><code>The system is out of resources.
+Consult the following stack trace for details.
+java.lang.OutOfMemoryError: Java heap space</code></p>
 </div>
   
   
@@ -274,7 +280,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/09/09/p-1091664243/">Time Machine to Network Drive</a></h1>
+      <h1 class="entry-title"><a href="/post/2010/09/22/p-1163578480/">Hit a Persistence Related Exception</a></h1>
     
     
       <p class="meta">
@@ -290,14 +296,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-09-09T23:44:00+10:00" pubdate data-updated="true">Sep 9<span>th</span>, 2010</time>
+<time datetime="2010-09-22T08:38:00+10:00" pubdate data-updated="true">Sep 22<span>nd</span>, 2010</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Tried but failed.</p>
+  <div class="entry-content"><p><code>The model used to open the store is incompatible with the one used to create the store</code></p>
+
+<p>Killed the main thread</p>
 </div>
   
   
@@ -322,23 +330,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

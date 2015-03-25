@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Cannot get UISplitViewController to rotate. Very frustrated
-">
+  <meta name="description" content="In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -122,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/07/p-2623149828/">Cannot Get UISplitViewController to Rotate. Very Frustrated</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2727123479/">Splash Screen on iOS</a></h1>
     
     
       <p class="meta">
@@ -138,14 +137,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-07T01:05:00+11:00" pubdate data-updated="true">Jan 7<span>th</span>, 2011</time>
+<time datetime="2011-01-13T20:22:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Cannot get UISplitViewController to rotate. Very frustrated</p>
+  <div class="entry-content"><p>In iPhone/iPad development the default.png file is displayed by the device automatically so you don’t have to program it which is really useful.</p>
+
+<p><a href="http://stackoverflow.com/questions/2634898/splash-screen-for-universal-application-for-ipad-and-iphone/2634942#2634942">Source</a></p>
 </div>
   
   
@@ -158,7 +159,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/04/p-2586930582/">iOS Idiom 1</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/13/p-2716846397/">Modal View Screws Up the SplitView After Dismiss.</a></h1>
     
     
       <p class="meta">
@@ -174,16 +175,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-04T10:28:00+11:00" pubdate data-updated="true">Jan 4<span>th</span>, 2011</time>
+<time datetime="2011-01-13T06:59:00+11:00" pubdate data-updated="true">Jan 13<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>To access the main window</p>
+  <div class="entry-content"><p>Modal View screws up the SplitView after dismiss.</p>
 
-<p><code>UIWindow   *mainWindow = [[[UIApplication sharedApplication] delegate] window];</code></p>
+<p>Tried</p>
+
+<p><code>if ([self modalViewController]) {</code>
+<code>return;</code>
+<code>}</code></p>
+
+<p>in <code>willHideSplitView</code> but it does not work</p>
 </div>
   
   
@@ -196,7 +203,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566688864/">Some UIKit Classes Such as &#8220;UIColor&#8220;, &#8220;UIFont&#8220; and &#8220;UIImage&#8220; Are Thread Safe</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2668647745/">iOS Idiom 2</a></h1>
     
     
       <p class="meta">
@@ -212,14 +219,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-02T23:17:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
+<time datetime="2011-01-10T02:44:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Some UIKit classes such as <code>UIColor</code>, <code>UIFont</code> and  <code>UIImage</code> are thread safe</p>
+  <div class="entry-content"><p><code>[detailViewController performSelector:@selector(configureView) withObject:nil afterDelay:0];</code></p>
 </div>
   
   
@@ -232,7 +239,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/01/02/p-2566308188/">Use NSZombieEnabled to Catch BAD_ASSESS</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/10/p-2667588233/">NSInvalidArgumentException</a></h1>
     
     
       <p class="meta">
@@ -248,14 +255,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-01-02T22:07:00+11:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2011</time>
+<time datetime="2011-01-10T00:40:00+11:00" pubdate data-updated="true">Jan 10<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Use <code>NSZombieEnabled</code> to catch BAD_ASSESS</p>
+  <div class="entry-content"><p>Got <code>Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Popovers cannot be presented from a view which does not have a window.'</code></p>
+
+<p>when trying to dismiss a modal view controller.</p>
 </div>
   
   
@@ -268,7 +277,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2010/12/31/p-2540547762/">Use &#8220;copy&#8220; in @properta of Type NSStringy</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/01/09/p-2658426192/">Some Note on Frame vs Bounds</a></h1>
     
     
       <p class="meta">
@@ -284,18 +293,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2010-12-31T20:35:00+11:00" pubdate data-updated="true">Dec 31<span>st</span>, 2010</time>
+<time datetime="2011-01-09T10:23:00+11:00" pubdate data-updated="true">Jan 9<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>When it is a NSString, do <code>copy</code> in @property</p>
+  <div class="entry-content"><p>The <em>frame</em> property contains the frame rectangle, which specifies the size and location of the view in its superviewâs coordinate system.</p>
 
-<p>e.g.</p>
+<p>The <em>center</em> property contains the known center point of the view in the superviewâs coordinate system.</p>
 
-<p><code>@property (copy) NSString *info;</code></p>
+<p>The <em>bounds</em> property contains the bounds rectangle, which specifies the size of the view (and its content origin) in the viewâs own local coordinate syst</p>
 </div>
   
   
@@ -320,23 +329,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

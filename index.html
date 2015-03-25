@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My story I want to add a line to the /etc/apache2/envvars. However I did not install this file using a cookbook. I installed it by package apach2. So &hellip;">
+  <meta name="description" content="I have installed cask to install projectile. But projectile projects says I need to use package.el. I have misunderstood the use of cask &ndash; It &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/16/partial-chef-template/">Partial Chef Template</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and Projectile</a></h1>
     
     
       <p class="meta">
@@ -137,26 +137,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-16T07:00:00+11:00" pubdate data-updated="true">Mar 16<span>th</span>, 2015</time>
+<time datetime="2015-03-26T06:59:00+11:00" pubdate data-updated="true">Mar 26<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><h2>My story</h2>
-
-<p>I want to add a line to the /etc/apache2/envvars. However I did not install this file  using a cookbook. I installed it by <code>package apach2</code>. So partial template does not work for me.</p>
-
-<p>I usds <code>FileEdit</code> instead</p>
-
-<p>Having look through the <code>apache2</code> cookbook, I start to feel chef cookbook replicates a lot of what a <code>dpkg</code> is currently doing. Does it mean the downstream maintainer have to keep the cookbook up to date with various package management systems on every other platform?</p>
-
-<h2>Resource and Documentation</h2>
-
-<p><a href="https://github.com/danielsdeleo/partials">https://github.com/danielsdeleo/partials</a></p>
-
-<p><a href="https://docs.chef.io/resource_template.html#partial-templates">https://docs.chef.io/resource_template.html#partial-templates</a></p>
+  <div class="entry-content"><p>I have installed <code>cask</code> to install <code>projectile</code>. But <code>projectile</code> projects says I need to use <code>package.el</code>. I have misunderstood the use of <code>cask</code> &ndash; It is for the dependency management of package development</p>
 </div>
   
   
@@ -169,7 +157,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge Failed With Error Message Undefined Local Variable or Method Xxx</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/24/toastmaster-speech-5/">Toastmaster Speech 5</a></h1>
     
     
       <p class="meta">
@@ -185,38 +173,38 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-15T09:35:00+11:00" pubdate data-updated="true">Mar 15<span>th</span>, 2015</time>
+<time datetime="2015-03-24T08:55:00+11:00" pubdate data-updated="true">Mar 24<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Got this error message:</p>
+  <div class="entry-content"><h2>Speech No. 5 &ndash; Getting Old</h2>
 
-<pre><code>    ==&gt; default: [2015-03-14T22:04:52+00:00] INFO: Running queued delayed notifications before re-raising exception
-    ==&gt; default: [2015-03-14T22:04:52+00:00] ERROR: Converge failed with error message undefined local variable or method `role' for #&lt;Chef::Mixin::Template::Temp
-    lateContext:0x000000032e4368&gt;
-    ==&gt; default: [2015-03-14T22:04:52+00:00] DEBUG: Re-raising exception: Chef::Exceptions::RunFailedWrappingError - Found 1 errors, they are stored in the backtr
-    ace
-    ==&gt; default: 1) Chef::Mixin::Template::TemplateError -  undefined local variable or method `role' for #&lt;Chef::Mixin::Template::TemplateContext:0x000000032e436
-    8&gt;
-</code></pre>
+<p>The goal of the #5 speech is about using body language and gesture to tell a story. I suppose the best way to do it is to talk about something exciting and uplifting. Then I can wave my arms like this. Maybe I can  go around here truly excited. But somehow I want to set the a bar a bit higher. I want to do something different. I actually want to talk about boring, not-interesting. Something people don’t want to think too much about. Something rather depressing and sad.</p>
 
-<p>This is my <code>template</code> resource:</p>
+<p>Dear fellow toastmasters and guest, I would like to talk today is Getting Old.   Yes, G-e-t-t-i-n-g  O-l-d.</p>
 
-<pre><code>    template '/etc/profile.d/server-env.sh' do
-      source 'server/profile-env.erb'
-      variables(
-        :role =&gt; role
-      )
-    end
-</code></pre>
+<p>How many of you have looked forward to getting old when you are teenager? Exactly what I thought. None. When we are young, growing old is such an alien concept. To live like a 60 years old or older is simply beyond imagination.</p>
 
-<p>This is my template file <code>profile-env.erb</code>:</p>
+<p>But somehow, someone would like to remind you actually your biological clock is ticking.</p>
 
-<pre><code> set APP_ROLE=&lt;%= role -%&gt;
-</code></pre>
+<p>This someone is none other than your passive aggressive … BODY!</p>
+
+<p>I got my first notice not long ago: Hair is growing inside my ears! To me it is absolutely absurd for hair to grow inside my ears. What is point of having hair in the ears? I don’t even feel cold inside my ears! I will assert that hair has absolutely no business whatsoever inside the ears. That’s right. There I said it! [Wave fist] But somehow there they are. They are growing inside the ears. Then the hair in the nostril joins the party. Maybe somehow they don’t like the damp environment anymore. They start to grow longer and longer. Kind of feel like they want to retire and move to the sunshine coast and enjoy more sun.</p>
+
+<p>The problem does not stop here. For the lucky ones gary hair starts to take over, “Snow on the roof” as you may call it. Not sure if they got snow in the basement too but I am not keen to find out.</p>
+
+<p>I suppose to wink here but I think I gonna scare the ladies, since I am already on a rather uncomfortable, hairy subject here. I’ll probably look creepy.</p>
+
+<p>For the unlucky ones, like me, the hair simply goes Missing in Action. The receding hair line is going backward like the French army in WWII. They are disappearing rapidly like the water in a water hole in a drought season. Looking myself in mirror I understand why hair growth industry is such a multi-billion dollar business. If nothing works, I can understand why to some combover is an option.</p>
+
+<p>Of course, on a serious note, ageing is actually no a laughing matter. As a matter of fact, more and more resources are devoted to the study of ageing. I did a quick search on google scholar. Merely 30 years ago, there were roughly 50,000 medical papers on ageing. But in recent years, number of papers has grown to 200,000 ~ 250,000. The focus of research has changed as well. The focus has changed from longevity and life expectancy to more qualitative aspect of ageing such as quality of life. While modern medicine is capable of keeping us healthy for longer, degenerative disease like dementia can have huge impact on the patient and his/her carer. Another shift of focus is from addressing the symptom of ageing to deeper understanding of the mechanism of ageing. For example, the Sydney based biomedical researcher David Sinclair has made a breakthrough in the understanding of the ageing process at the DNA level. As we know, DNA controls the formation of cell by turning certain on and off. And depends on the gene expression we have different kind of cells like liver cell, skin cell and brain cell. Sinclair discovers that for human, our DNS is programmed to turn on all the genes when we ages. It causes damages to our gene. More importantly Sinclair discovered a molecules known as SIR2, which stands for Silent Information Regulator 2, that can turn off these genes that should not be turned on. Or in the other word, we can reverse the aging process!</p>
+
+<p>Oh, wait a minute, there is a good news when talking about getting old after all! [Arm waving!]</p>
+
+<p>In the end Aging is not just about your body, it is about you mind too. I would like share this saying about getting old with you: “You become old when all your dream and hope is replaced by regrets”</p>
 </div>
   
   
@@ -229,7 +217,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/13/xcode-exception/">XCode Exception</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">Find Out Parent HTML Element of a Webelement in Selenium</a></h1>
     
     
       <p class="meta">
@@ -245,16 +233,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-13T08:13:00+11:00" pubdate data-updated="true">Mar 13<span>th</span>, 2015</time>
+<time datetime="2015-03-21T19:40:00+11:00" pubdate data-updated="true">Mar 21<span>st</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Everytime I add a UITableView I got this&hellip;</p>
+  <div class="entry-content"><p>Sometimes you want to find out the parent HTML element of the current WebElement you are working on. The <code>parent</code> property of the WebElement, however, will give you an instance of WebDriver.</p>
 
-<pre><code>    2015-03-13 08:12:51.087 Counter[9123:418395] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '-[UITableViewController loadView] loaded the "9pv-A4-QxB-view-tsR-hK-woN" nib but didn't get a UITableView.'
+<p>You can find this out by</p>
+
+<pre><code>parent = element.find_element_by_xpath('..')
 </code></pre>
 </div>
   
@@ -268,7 +258,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/21/cats-and-mice/">Cats and Mice by Tommy Douglas</a></h1>
     
     
       <p class="meta">
@@ -284,45 +274,18 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-12T09:03:00+11:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time>
+<time datetime="2015-03-21T10:40:00+11:00" pubdate data-updated="true">Mar 21<span>st</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><h2>Table Topic</h2>
+  <div class="entry-content"><blockquote><p>It’s the story of a place called Mouseland. Mouseland was a place where all the little mice lived and played, were born and died. And they lived much the same as you and I do.They even had a Parliament. And every four years they had an election. Used to walk to the polls and cast their ballots. Some of them even got a ride to the polls. And got a ride for the next four years afterwards too. Just like you and me. And every time on election day all the little mice used to go to the ballot box and they used to elect a government. A government made up of big, fat, black cats.</p>
 
-<p>Thanks Chair.</p>
+<p>Now if you think it strange that mice should elect a government made up of cats, you just look at the history of Canada for last 90 years and maybe you’ll see that they weren’t any stupider than we are. Now I’m not saying anything against the cats&hellip; They passed good laws -– that is, laws that were good for cats. But the laws that were good for cats weren’t very good for mice&hellip; They voted the black cats out. They put in the white cats. Now the white cats had put up a terrific campaign. They said: &ldquo;All that Mouseland needs is more vision.&rdquo; They said:&ldquo;The trouble with Mouseland is those round mouseholes we got. If you put us in we’ll establish square mouseholes.&rdquo; And they did. And the square mouseholes were twice as big as the round mouseholes, and now the cat could get both his paws in. And life was tougher than ever&hellip; Presently there came along one little mouse who had an idea. My friends, watch out for the little fellow with an idea. And he said to the other mice, &ldquo;Look fellows, why do we keep on electing a government made up of cats? Why don’t we elect a government made up of mice?&rdquo; &ldquo;Oh,&rdquo; they said, &ldquo;he’s a Bolshevik. Lock him up!&rdquo; So they put him in jail.</p>
 
-<p>Dear fellow toastmasters and guest. Welcome to our table topic segment</p>
-
-<p>Table Topic is about impromptu speaking. I will invite 8 of us to come forward and speak to us on the spot for 1 min, on topic I will reveal just before you’re picked.</p>
-
-<p>The purpose of the table topic is to help us to develop our ability to organize our thoughts quickly and respond to an impromptu question or topic. That’s why we don’t want the Table Topic participant to just ramble for a minute, just saying one word after another.</p>
-
-<p>In fact, a good table topic should appear well-organised. It should have an opening, a body and a conclusion.</p>
-
-<p>You will have a minute of time to give your speech. The ember light will come on at 45sec. The red will come on at 1 minute. If you hit the one minute mark, I’d appreciate if you can wrap up immediately. It is because in a real TT contest, overtime will result in disqualification. We also want to keep the meeting time under control.</p>
-
-<p>For the even number speakers we will have [XXX] as the evaluator. For the odd number speakers we will have [YYY] as the evaluator.</p>
-
-<p>Without further ado, let’s start!</p>
-
-<p>The theme of tonight’s Table Topic: What will you do if you receive an unexpected fortune? I will give you different scenario and let see how you will handle it.</p>
-
-<p>Situation number one: You are one lucky Toastmaster. You stumbled upon a genie in a bottle and you have released it from years of confinement. He can grant you a wish, but you have to choose between one of these two choices: Stay young forever or have abundant wealth. How would you choose? [Stay young forever or have abundant wealth]</p>
-
-<ol>
-<li><p>Look like we have yet another lucky toastmaster. Another TM stumbled upon a genie in a bottle. Unfortunately this genie’s power is bit limited. You are given two choices again, but they are: to become a boss of a bottle shop or a car wash business. Which one would you choose? [Bottle shop or car wash?]</p></li>
-<li><p>Looks like another toastmaster strikes it lucky too! Another genie in a bottle is found!  Again there are two things to choose from: You can have a beautiful voice like Susan Boyle that will let you make millions out of singing, but a face like the Orc from Lord of the ring; or you can have a good look like Emma [Mma] Watson or Brad Pitt that will let make millions out of acting, but a voice like an Orc from Lord of the Ring. How would you choose? [Beautiful voice or beautiful face]</p></li>
-<li><p>You will not believe the luck of this club! One more fellow Toastmaster find a genie in a bottle! But oh no, it is the small business genie again. Now you have a choice between a fish and chip shop and a pizza restaurant. Which one will you choose and why? [fish and chip or pizza]</p></li>
-<li><p>Tonight is the night of genie! Yet another fellow Toastmaster has rescued a genie! This genie has a gift in languages and he can make you instantly fluent in either one of these three languages: Spanish, Italian or Russian. Which one will you choose and why? [Spanish, Italian or Russian]</p></li>
-<li><p>We are on a roll! Another Toastmaster has saved a genie again! On no, guess what, it is the small business genie again! Apparently he keeps getting back into a bottle because of tax evasion! Again you can choose between these two choices: a new apple iphone every year or a new samsung galaxy every year. How would you choose? [Apple or Samsung]</p></li>
-<li><p>Finally there is no more genie in a bottle to be found. However when you are walking on beach looking out for  a bottle, you run into this legendary Nigerian prince!  You gave him 50 bucks and he gave you back a princely sum of 20 million aussie right away. How are you going to spend the 20 million dollars?</p></li>
-<li><p>We all know what is at the end of a rainbow! You are the lucky fellow who have reached the end of the rainbow and found the pot of gold! What will you do with the pot of gold?</p></li>
-</ol>
-
+<p>But I want to remind you: that you can lock up a mouse or a man but you can’t lock up an idea.</p></blockquote>
 </div>
   
   
@@ -335,7 +298,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">Drag and Drop Is Bad for Data Center</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/18/install-cocoapod-plugin/">Install Cocoapod Plugin</a></h1>
     
     
       <p class="meta">
@@ -351,14 +314,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-12T05:02:00+11:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time>
+<time datetime="2015-03-18T18:10:00+11:00" pubdate data-updated="true">Mar 18<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I just drag and drop some files to a remote server. However the drop off destination is a batch file because it is where the mouse cursor moved to. At the end the batch is executed, rather than files being copying.</p>
+  <div class="entry-content"><p>Take me a while to realise cocoapod plugins are installed via <code>gem</code></p>
+
+<pre><code>    $ pod install
+    [!] Your Podfile requires that the plugin `cocoapods-keys` be installed. Please install it and try installation again.
+
+    $ sudo gem install cocoapods-keys  
+</code></pre>
 </div>
   
   
@@ -381,23 +350,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

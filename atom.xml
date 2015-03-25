@@ -4,7 +4,7 @@
   <title><![CDATA[Timeline]]></title>
   <link href="http://www.ahwkong.com/atom.xml" rel="self"/>
   <link href="http://www.ahwkong.com/"/>
-  <updated>2015-03-18T06:38:42+11:00</updated>
+  <updated>2015-03-26T07:11:47+11:00</updated>
   <id>http://www.ahwkong.com/</id>
   <author>
     <name><![CDATA[Anthony Kong]]></name>
@@ -12,6 +12,90 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[package.el and projectile]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/26/package-dot-el-and-projectile/"/>
+    <updated>2015-03-26T06:59:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/26/package-dot-el-and-projectile</id>
+    <content type="html"><![CDATA[<p>I have installed <code>cask</code> to install <code>projectile</code>. But <code>projectile</code> projects says I need to use <code>package.el</code>. I have misunderstood the use of <code>cask</code> &ndash; It is for the dependency management of package development</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[toastmaster speech 5]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/24/toastmaster-speech-5/"/>
+    <updated>2015-03-24T08:55:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/24/toastmaster-speech-5</id>
+    <content type="html"><![CDATA[<h2>Speech No. 5 &ndash; Getting Old</h2>
+
+<p>The goal of the #5 speech is about using body language and gesture to tell a story. I suppose the best way to do it is to talk about something exciting and uplifting. Then I can wave my arms like this. Maybe I can  go around here truly excited. But somehow I want to set the a bar a bit higher. I want to do something different. I actually want to talk about boring, not-interesting. Something people don’t want to think too much about. Something rather depressing and sad.</p>
+
+<p>Dear fellow toastmasters and guest, I would like to talk today is Getting Old.   Yes, G-e-t-t-i-n-g  O-l-d.</p>
+
+<p>How many of you have looked forward to getting old when you are teenager? Exactly what I thought. None. When we are young, growing old is such an alien concept. To live like a 60 years old or older is simply beyond imagination.</p>
+
+<p>But somehow, someone would like to remind you actually your biological clock is ticking.</p>
+
+<p>This someone is none other than your passive aggressive … BODY!</p>
+
+<p>I got my first notice not long ago: Hair is growing inside my ears! To me it is absolutely absurd for hair to grow inside my ears. What is point of having hair in the ears? I don’t even feel cold inside my ears! I will assert that hair has absolutely no business whatsoever inside the ears. That’s right. There I said it! [Wave fist] But somehow there they are. They are growing inside the ears. Then the hair in the nostril joins the party. Maybe somehow they don’t like the damp environment anymore. They start to grow longer and longer. Kind of feel like they want to retire and move to the sunshine coast and enjoy more sun.</p>
+
+<p>The problem does not stop here. For the lucky ones gary hair starts to take over, “Snow on the roof” as you may call it. Not sure if they got snow in the basement too but I am not keen to find out.</p>
+
+<p>I suppose to wink here but I think I gonna scare the ladies, since I am already on a rather uncomfortable, hairy subject here. I’ll probably look creepy.</p>
+
+<p>For the unlucky ones, like me, the hair simply goes Missing in Action. The receding hair line is going backward like the French army in WWII. They are disappearing rapidly like the water in a water hole in a drought season. Looking myself in mirror I understand why hair growth industry is such a multi-billion dollar business. If nothing works, I can understand why to some combover is an option.</p>
+
+<p>Of course, on a serious note, ageing is actually no a laughing matter. As a matter of fact, more and more resources are devoted to the study of ageing. I did a quick search on google scholar. Merely 30 years ago, there were roughly 50,000 medical papers on ageing. But in recent years, number of papers has grown to 200,000 ~ 250,000. The focus of research has changed as well. The focus has changed from longevity and life expectancy to more qualitative aspect of ageing such as quality of life. While modern medicine is capable of keeping us healthy for longer, degenerative disease like dementia can have huge impact on the patient and his/her carer. Another shift of focus is from addressing the symptom of ageing to deeper understanding of the mechanism of ageing. For example, the Sydney based biomedical researcher David Sinclair has made a breakthrough in the understanding of the ageing process at the DNA level. As we know, DNA controls the formation of cell by turning certain on and off. And depends on the gene expression we have different kind of cells like liver cell, skin cell and brain cell. Sinclair discovers that for human, our DNS is programmed to turn on all the genes when we ages. It causes damages to our gene. More importantly Sinclair discovered a molecules known as SIR2, which stands for Silent Information Regulator 2, that can turn off these genes that should not be turned on. Or in the other word, we can reverse the aging process!</p>
+
+<p>Oh, wait a minute, there is a good news when talking about getting old after all! [Arm waving!]</p>
+
+<p>In the end Aging is not just about your body, it is about you mind too. I would like share this saying about getting old with you: “You become old when all your dream and hope is replaced by regrets”</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[find out parent HTML element of a webelement in selenium]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/"/>
+    <updated>2015-03-21T19:40:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium</id>
+    <content type="html"><![CDATA[<p>Sometimes you want to find out the parent HTML element of the current WebElement you are working on. The <code>parent</code> property of the WebElement, however, will give you an instance of WebDriver.</p>
+
+<p>You can find this out by</p>
+
+<pre><code>parent = element.find_element_by_xpath('..')
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[cats and mice by Tommy Douglas]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/21/cats-and-mice/"/>
+    <updated>2015-03-21T10:40:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/21/cats-and-mice</id>
+    <content type="html"><![CDATA[<blockquote><p>It’s the story of a place called Mouseland. Mouseland was a place where all the little mice lived and played, were born and died. And they lived much the same as you and I do.They even had a Parliament. And every four years they had an election. Used to walk to the polls and cast their ballots. Some of them even got a ride to the polls. And got a ride for the next four years afterwards too. Just like you and me. And every time on election day all the little mice used to go to the ballot box and they used to elect a government. A government made up of big, fat, black cats.</p>
+
+<p>Now if you think it strange that mice should elect a government made up of cats, you just look at the history of Canada for last 90 years and maybe you’ll see that they weren’t any stupider than we are. Now I’m not saying anything against the cats&hellip; They passed good laws -– that is, laws that were good for cats. But the laws that were good for cats weren’t very good for mice&hellip; They voted the black cats out. They put in the white cats. Now the white cats had put up a terrific campaign. They said: &ldquo;All that Mouseland needs is more vision.&rdquo; They said:&ldquo;The trouble with Mouseland is those round mouseholes we got. If you put us in we’ll establish square mouseholes.&rdquo; And they did. And the square mouseholes were twice as big as the round mouseholes, and now the cat could get both his paws in. And life was tougher than ever&hellip; Presently there came along one little mouse who had an idea. My friends, watch out for the little fellow with an idea. And he said to the other mice, &ldquo;Look fellows, why do we keep on electing a government made up of cats? Why don’t we elect a government made up of mice?&rdquo; &ldquo;Oh,&rdquo; they said, &ldquo;he’s a Bolshevik. Lock him up!&rdquo; So they put him in jail.</p>
+
+<p>But I want to remind you: that you can lock up a mouse or a man but you can’t lock up an idea.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[install cocoapod plugin]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/18/install-cocoapod-plugin/"/>
+    <updated>2015-03-18T18:10:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/18/install-cocoapod-plugin</id>
+    <content type="html"><![CDATA[<p>Take me a while to realise cocoapod plugins are installed via <code>gem</code></p>
+
+<pre><code>    $ pod install
+    [!] Your Podfile requires that the plugin `cocoapods-keys` be installed. Please install it and try installation again.
+
+    $ sudo gem install cocoapods-keys  
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[partial chef template]]></title>
@@ -368,199 +452,6 @@
 </code></pre>
 
 <p>You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[find out script location in bash]]></title>
-    <link href="http://www.ahwkong.com/post/2015/03/03/find-out-script-location-in-bash/"/>
-    <updated>2015-03-03T06:46:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/03/03/find-out-script-location-in-bash</id>
-    <content type="html"><![CDATA[<p>This is the most portable method:</p>
-
-<pre><code>  DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &amp;&amp; pwd )"
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[to quickly test a hipchat api token]]></title>
-    <link href="http://www.ahwkong.com/post/2015/03/02/to-quickly-test-a-hipchat-api-token/"/>
-    <updated>2015-03-02T20:44:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/03/02/to-quickly-test-a-hipchat-api-token</id>
-    <content type="html"><![CDATA[<p>Try this</p>
-
-<pre><code>curl https://api.hipchat.com/v2/room?auth_token=&lt;TOKEN&gt;
-</code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to identify and kill process spawned by a tmux session?]]></title>
-    <link href="http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session/"/>
-    <updated>2015-03-02T19:49:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/03/02/how-to-identify-and-kill-session</id>
-    <content type="html"><![CDATA[<p>An app is not responding in one of the pane of my tmux session. It does not respond to any Ctl-C and I forgot what the process is it.</p>
-
-<p>So I did the following to identify the process:</p>
-
-<pre><code>    $ tmux list-panes -s -F "#{pane_pid} #{pane_current_command}"
-    1896 tmux
-    1899 ssh
-    $ pstree 1899  # Problem at the lower pane
-    -+= 01899 antkong -zsh
-     \--= 65662 antkong ssh -i prod.pem ubuntu@localhost -p 2222
-</code></pre>
-
-<p>Then run <code>kill -9 1899</code> to kill it</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lesson from learning to use vagrant, chef and sensu]]></title>
-    <link href="http://www.ahwkong.com/post/2015/03/02/lesson-from-vagrant/"/>
-    <updated>2015-03-02T09:16:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/03/02/lesson-from-vagrant</id>
-    <content type="html"><![CDATA[<p>Couple of weeks ago I set out to learn to use vagrant + <strong>chef</strong> + sensu to achieve the goal of automated data server deployment and server monitoring.</p>
-
-<p>I would like to share my experience so new comers can get up to speed faster and avoid some time-wasters.</p>
-
-<p>The structure of this post can be confusing because it is more like my cliff note.</p>
-
-<h2>Background of my final chioces</h2>
-
-<p>A small startup that uses aws ec2 for key functionality. The tools should cost as little as possible. Open source solution is prefered.</p>
-
-<h2>What are the advantages of vagrant, chef and sensu?</h2>
-
-<p><strong>Vagrant</strong> and <strong>chef</strong> are great tools. They are indispensable to automation of VM creation and provision.</p>
-
-<p><strong>Sensu</strong> is an open source monitoring platform. It is very flexible because it uses ruby to develop plugins to extend the framework&rsquo;s capability.</p>
-
-<p>All of them have strong momentum from their communities</p>
-
-<h2>Learning Vagrant</h2>
-
-<h3>Vagrantfile</h3>
-
-<p><strong>Vagrant</strong> is actually rather easy to master. The key file <strong>Vagrantfile</strong> is by itself a ruby script. It allows a lot of flexibility of customisation. The key hurdle is to write up a <strong>Vagrantfile</strong> that suits your need. The default <strong>Vagrantfile</strong> is pretty useless.</p>
-
-<h3>Know your override</h3>
-
-<p>You will need to know how to use the <code>override</code> object to customise your vagrant settings</p>
-
-<h3>Provider</h3>
-
-<p>A limitation of vagrant as of 1.6.x is that you can only use one active provider at a time. It means that if you have <code>vagrant up</code> to Virtualbox, you cannot fire up another instance in aws in the same folder. You can remove the &lsquo;.vagrant&rsquo; folder if you must.</p>
-
-<h3>Provisioner</h3>
-
-<p>My choice of provisioner is <strong>chef</strong>. I choose it over <strong>puppet</strong> mainly because of <strong>chef</strong> uses ruby as the scripting lanagage. <code>Nagios</code> is bascailly out of the question due to its legacy and complexity. Unfortunately there was a lot of changes at <strong>chef</strong> in last couple of months and it makes the learning experience less than pleasant. More on <strong>chef</strong> later.</p>
-
-<h3>Plugins</h3>
-
-<p>If your primary platform is aws, you will need to install <code>vagrant-aws</code>. There are a lot of useful plugins and it is something one should explore to discover all sort of possibility.</p>
-
-<p>You will also need <code>vagrant-chef-zero</code>, <code>vagrant-omnibus</code> and <code>vagrant-berkshelf</code> in order to work with chef.</p>
-
-<h2>Learning Chef</h2>
-
-<h3>Implementation</h3>
-
-<p>My goal is to make my <strong>chef</strong> cookbook and deployment as self-contained as possible.</p>
-
-<h3>Lack of good documentation and Conflicting opinions abound</h3>
-
-<p>I were unable to find a single starting point and clear documentation to learn <strong>chef</strong> on the official website. The documentation are either very fragmented or not up to date. The biggest distraction is the use of <strong>knife</strong>. It is tightly coupled with <strong>chef</strong> server. However in my opinion the power of <strong>chef</strong> actually lies with the concept of <code>cookbook</code>.</p>
-
-<p>Apparently <strong>chef</strong> has released a number of tools before to help with devops&#8217; jobs.</p>
-
-<p>The main tool, <strong>knife</strong>, confuses me because</p>
-
-<ol>
-<li><p>I want to run <strong>chef</strong> in a standalone mode and knife assumes you are using chef server</p></li>
-<li><p>Some function like data bag creation is not useful</p></li>
-</ol>
-
-
-<p><strong>Librarian</strong> is superceded by <strong>berkshelf</strong>. Especially if you are going to use vagrant with chef, the brekshelf will take care of all the cookbook dependency automagically. Don&rsquo;t bother with <strong>libraian</strong>.</p>
-
-<p>I think the book &ldquo;Learning Chef&rdquo; by Mischa Taylor is by far the most systemic and easy to read book in the subject area. If I have discovered this book at the begining I am sure I will save at least a week time in research.</p>
-
-<h3>Confusing terminology</h3>
-
-<p><a href="https://docs.chef.io/lwrp.html">LWRP</a> What the heck is it?</p>
-
-<p>The document makes sense after I have used LWRP. However the document, like many other chef document, cannot give you a context or a big picture.</p>
-
-<h3>Confusing branding</h3>
-
-<p>Maybe I start at the wrong time? Last couple of months <strong>chef</strong> has been changing their urls. e.g. getchef.com becomes chef.io</p>
-
-<p>And recipe respository is here: <a href="https://supermarket.chef.io">https://supermarket.chef.io</a>  and it is not linked from chef&rsquo;s main website.</p>
-
-<p>Then they are also changing their github repository from <code>opcodes</code> to <code>chef</code></p>
-
-<p>Utterly confusing to anyone who just started during this period.</p>
-
-<h3>How to approach cookbook?</h3>
-
-<p>I think cookbook is the best feature of chef, but it is not very adequately explained.</p>
-
-<p>That&rsquo;s why you need to get your hand dirty and learn how to write your cookbook by using <strong>kitchen</strong></p>
-
-<p>At the beginning I thought I can get away from writing custom cookbook. I now see it as an impossibility.</p>
-
-<h3>Keep converge until you get it</h3>
-
-<p>Use <strong>kitchen</strong> to create a cookbook skeleton. Start write up your recipes.</p>
-
-<p><strong>Tip</strong>: Break down your provisioning requirement into logical units and make them as self-contained and small and possible. In this way, you can test each individual recipe quickly with <code>kitchen converge</code>.</p>
-
-<p>When you are happy with all the recipes, do the final integration test by running up the chef provision with <strong>vagrant</strong>.</p>
-
-<h3>Sensu</h3>
-
-<p>More on sensu later&hellip; To be continued</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[how to get sensu hipchat plugin to work]]></title>
-    <link href="http://www.ahwkong.com/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/"/>
-    <updated>2015-02-28T18:55:00+11:00</updated>
-    <id>http://www.ahwkong.com/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work</id>
-    <content type="html"><![CDATA[<p>I encountered two issues when I want to deploy the hipchat notification handler.</p>
-
-<p>Firstly it throws an exception of &lsquo;Connection refused&rsquo;. But api.hipchat.com is reachable. I have verified by running <code>curl</code> against the v2 api.</p>
-
-<pre><code>    $ cat /tmp/t.json |sudo /opt/sensu/embedded/bin/ruby  /etc/sensu/handlers/notification/hipchat.rb -j /etc/sensu
-    /handlers/notification/hipchat.json
-    /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `initialize': Connection refused - connect(2) (Errno::ECONNREFUSED)
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `open'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:877:in `connect'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:851:in `start'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:1367:in `request'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:85:in `api_request'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:120:in `stash_exists?'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:132:in `block (2 levels) in filter_silenced'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
-</code></pre>
-
-<p>It turns out all sensu plugin has a dependeny on the sensu api. I did not start the sensu api when I tested, and hence the exception.</p>
-
-<p>Then I got a json config file related problem:</p>
-
-<pre><code>    $ cat /tmp/t.json |sudo /opt/sensu/embedded/bin/ruby  /etc/sensu/handlers/notification/hipchat.rb -j /handlers/notification/hipchat.json
-    /etc/sensu/handlers/notification/hipchat.rb:44:in `handle': undefined method `[]' for nil:NilClass (NoMethodError)
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:55:in `block in &lt;class:Handler&gt;'
-</code></pre>
-
-<p><code>-j</code> does not work as I expected. The script actually expects the .json configuration in the /opt/sensu/conf.d</p>
 ]]></content>
   </entry>
   

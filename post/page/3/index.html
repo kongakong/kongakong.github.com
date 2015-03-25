@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My cygwin does not have wget or curl preinstalled. So to download a file from internet I do lynx -source url &gt; file.txt ">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/06/download-file-with-lynx/">Download File With Lynx</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/10/how-to-use-check-log-dot-rb-in-windows/">How to Use check-log.rb in Windows</a></h1>
     
     
       <p class="meta">
@@ -137,16 +138,160 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-06T14:27:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
+<time datetime="2015-03-10T09:10:00+11:00" pubdate data-updated="true">Mar 10<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>My cygwin does not have <code>wget</code> or <code>curl</code> preinstalled. So to download a file from internet I do</p>
+  <div class="entry-content">
+</div>
+  
+  
 
-<pre><code>    lynx -source url  &gt; file.txt
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/08/trying-packer/">Trying Packer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-08T20:10:00+11:00" pubdate data-updated="true">Mar 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying to use packer to build a box for the first time. Encounter permission problem</p>
+
+<pre><code>    $  packer build -var 'aws_access_key=ABC' -var 'aws_secret_key=XYZ' my-basebox.json
+    amazon-ebs output will be in this color.
+
+    ==&gt; amazon-ebs: Inspecting the source AMI...
+    ==&gt; amazon-ebs: Creating temporary keypair: packer 54fc1177-7d3f-51fe-03ea-f16fea52ec2d
+    ==&gt; amazon-ebs: Creating temporary security group for this instance...
+    ==&gt; amazon-ebs: Authorizing SSH access on the temporary security group...
+    ==&gt; amazon-ebs: Launching a source AWS instance...
+        amazon-ebs: Instance ID: i-ead72be7
+    ==&gt; amazon-ebs: Waiting for instance (i-ead72be7) to become ready...
+    ==&gt; amazon-ebs: Waiting for SSH to become available...
+    ==&gt; amazon-ebs: Connected to SSH!
+    ==&gt; amazon-ebs: Provisioning with chef-solo
+        amazon-ebs: Installing Chef...
+        amazon-ebs: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+        amazon-ebs: Dload  Upload   Total   Spent    Left  Speed
+        amazon-ebs: 100 18378  100 18378    0     0  48243      0 --:--:-- --:--:-- --:--:-- 48363
+        amazon-ebs: Downloading Chef  for ubuntu...
+        amazon-ebs: downloading https://www.opscode.com/chef/metadata?v=&amp;prerelease=false&amp;nightlies=false&amp;p=ubuntu&amp;pv=14.04&amp;m=x86_64
+        amazon-ebs: to file /tmp/install.sh.1372/metadata.txt
+        amazon-ebs: trying wget...
+        amazon-ebs: url https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.04/x86_64/chef_12.1.0-1_amd64.deb
+        amazon-ebs: md5 b86c3dd0171e896ab3fb42f26e688fef
+        amazon-ebs: sha256  9bbde88f2eeb846a862512ab6385dff36278ff2ba8bd2e07a237a23337c4165a
+        amazon-ebs: downloaded metadata file looks valid...
+        amazon-ebs: downloading https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/13.04/x86_64/chef_12.1.0-1_amd64.deb
+        amazon-ebs: to file /tmp/install.sh.1372/chef_12.1.0-1_amd64.deb
+        amazon-ebs: trying wget...
+        amazon-ebs: Comparing checksum with sha256sum...
+        amazon-ebs: Installing Chef
+        amazon-ebs: installing with dpkg...
+        amazon-ebs: dpkg: error: requested operation requires superuser privilege
+        amazon-ebs: Installation failed
+        amazon-ebs: Version:
+        amazon-ebs:
+        amazon-ebs: Please file a Bug Report at https://github.com/opscode/opscode-omnitruck/issues/new
+        amazon-ebs: Alternatively, feel free to open a Support Ticket at https://www.getchef.com/support/tickets
+        amazon-ebs: More Chef support resources can be found at https://www.getchef.com/support
+        amazon-ebs:
+        amazon-ebs: Please include as many details about the problem as possible i.e., how to reproduce
+        amazon-ebs: the problem (if possible), type of the Operating System and its version, etc.,
+        amazon-ebs: and any other relevant details that might help us with troubleshooting.
+        amazon-ebs:
+    ==&gt; amazon-ebs: Terminating the source AWS instance...
+    ==&gt; amazon-ebs: Deleting temporary security group...
+    ==&gt; amazon-ebs: Deleting temporary keypair...
+    Build 'amazon-ebs' errored: Error installing Chef: Install script exited with non-zero exit status 1
+
+    ==&gt; Some builds didn't complete successfully and had errors:
+    --&gt; amazon-ebs: Error installing Chef: Install script exited with non-zero exit status 1
+
+    ==&gt; Builds finished but no artifacts were created.
+</code></pre>
+
+<p>Check the following:</p>
+
+<ol>
+<li><code>prevent_sudo</code> is not set to true</li>
+<li>If <code>install_command</code> and <code>execute_command</code> are set, make sure they use <code>sudo</code></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/08/emacs-on-osx/">Emacs on Osx</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-08T12:01:00+11:00" pubdate data-updated="true">Mar 8<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Trying out emacs from brew. Here is the output:</p>
+
+<pre><code>    $ brew install emacs
+    ==&gt; Downloading https://homebrew.bintray.com/bottles/emacs-24.4.yosemite.bottle.3.tar.gz
+    ######################################################################## 100.0%
+    ==&gt; Pouring emacs-24.4.yosemite.bottle.3.tar.gz
+    ==&gt; Caveats
+    To have launchd start emacs at login:
+        ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
+    Then to load emacs now:
+        launchctl load ~/Library/LaunchAgents/homebrew.mxcl.emacs.plist
+    ==&gt; Summary
+    🍺  /usr/local/Cellar/emacs/24.4: 3914 files, 104M
 </code></pre>
 </div>
   
@@ -160,7 +305,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/05/why-i-have-to-force-to-update/">Forced to Apply Windows Update</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/07/gwmi-vs-wmic/">Gwmi vs Wmic</a></h1>
     
     
       <p class="meta">
@@ -176,16 +321,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-05T14:48:00+11:00" pubdate data-updated="true">Mar 5<span>th</span>, 2015</time>
+<time datetime="2015-03-07T10:56:00+11:00" pubdate data-updated="true">Mar 7<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I want to restart windows ec2 instance. MS forces me to &lsquo;update and restart&rsquo;. There is no way to bypass update</p>
-
-<p>Windows is not suitable for datacenter.</p>
+  <div class="entry-content"><p><code>wmic</code> is a command line tool. <code>gwmi</code> stands for &lsquo;get-WMIObject`, a command of Powershell.</p>
 </div>
   
   
@@ -198,7 +341,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/03/04/madness-of-powershell/">Madness of Powershell</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/03/06/ruby-gem-ssl-problem/">Ruby Gem Ssl Problem</a></h1>
     
     
       <p class="meta">
@@ -214,142 +357,31 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-03-04T17:11:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2015</time>
+<time datetime="2015-03-06T15:08:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Who will design a tool for IT professional this way? It is a pure maddness</p>
+  <div class="entry-content"><p>Gem install can throw a ssl exception. This is a <a href="http://stackoverflow.com/a/27298259/58129">solution on Stackoverflow</a></p>
 
-<p>I want to dump some output from powershell. It is a very common task but somehow Powershell takes the liberty to truncate the output based on arbitrary condition.</p>
+<p>Summary of the remedy:</p>
 
-<p>Apparently when I am testing the powershell script I use a resized and large DOS prompt for my work.</p>
+<p><strong>1. Download</strong></p>
 
-<p>Use of <code>ft -autoresise</code> prints the full string of the Commandline field in one line. It is what I need. <code>wrap</code> or <code>nowrap</code> does not produce desired result.</p>
-
-<p>After testing is done, I deploy the script to run as a background task.</p>
-
-<p>Now powershell decides it wants to truncate the commandline field. Now I am getting some &ldquo;c:\some\path&#8230;&rdquo; instead of the full path of the executables.</p>
-
-<p>Utter maddenss. A waste of everyone&rsquo;s time!</p>
-
-<p>Solution:</p>
-
-<pre><code>    ft -AutoSize | out-string -width 4096 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/04/sensu-mailer-problem/">Sensu Mailer Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-04T11:39:00+11:00" pubdate data-updated="true">Mar 4<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Got this crazy error message:</p>
-
-<pre><code>    /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:950:in `check_response': 454 4.7.0 TLS not available due to local problem (Net::SMTPServerBusy)
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:919:in `getok'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:819:in `starttls'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:561:in `do_start'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/net/smtp.rb:519:in `start'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/network/delivery_methods/smtp.rb:112:in `deliver!'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/message.rb:2141:in `do_delivery'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/message.rb:238:in `deliver'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/mail-2.6.3/lib/mail/mail.rb:140:in `deliver'
-            from /etc/sensu/handlers/notification/mailer.rb:138:in `block in handle'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
-            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
-            from /etc/sensu/handlers/notification/mailer.rb:137:in `handle'
-            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:55:in `block in &lt;class:Handler&gt;'
+<pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
 </code></pre>
 
-<p>After checking the mail log, I found these errors:</p>
+<p><strong>2. Find out installation location</strong></p>
 
-<pre><code>    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:02001002:system library:fopen:No such file or directory:bss_file.c:169:fopen('/etc/postfix/cacert.pem','r'):
-    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:2006D080:BIO routines:BIO_new_file:no such file:bss_file.c:172:
-    Mar  1 04:19:20 ip-172-31-37-216 postfix/smtp[7642]: warning: TLS library problem: error:0B084002:x509 certificate routines:X509_load_cert_crl_file:system lib:by_file.c:274:
+<pre><code>    C:\&gt;gem which rubygems
+    C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
 </code></pre>
 
-<p>So here is a solution:</p>
+<p><strong>3. Install the file</strong></p>
 
-<pre><code> sudo openssl req -new -x509 -nodes -out cacert.pem -keyout cacert.pem -days 3650
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">Prevent Failed Task Stops Provisioning</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-03T08:50:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I mentioned eariler I have ecountered problem when installing some gem like <a href="/post/2015/02/26/gem-install-hipchat">this</a></p>
-
-<p>Here is a way to prevent failure stops the chef provision: use <strong>ignore_failure</strong></p>
-
-<pre><code>      gem_package "mail" do
-        gem_binary '/opt/sensu/embedded/bin/gem'
-        ignore_failure true
-        action :install
-      end
-</code></pre>
-
-<p>You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
+<p>Then just copy the .pem file into <code>../2.1.0/rubygems/ssl_certs/</code></p>
 </div>
   
   
@@ -374,23 +406,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

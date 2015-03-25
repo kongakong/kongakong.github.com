@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to &hellip;">
+  <meta name="description" content="When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/06/p-52292736599/">Health System in Oregon</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/08/p-52453247211/">OSX Terminal and .bashrc</a></h1>
     
     
       <p class="meta">
@@ -137,24 +137,25 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-06-06T20:40:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
+<time datetime="2013-06-08T21:20:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Health system of USA is odd. For example, Oregon uses a lottery based system to allocate health care coverage &ndash; a scarce resource &ndash; to its citizens.</p>
+  <div class="entry-content"><p>When I create a new tab in Terminal, the new bash shell does not automatically execute the .bashrc file. As a result my brew environmet is not setup propertly.</p>
 
-<p>From</p>
+<p>To solve it, I added this to my .bash_profile to fix the problem:</p>
 
-<p><a href="http://en.wikipedia.org/wiki/Oregon_Health_Plan">Wikipedia</a></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>[[ -s ~/.bashrc ]] && source ~/.bashrc
+</span></code></pre></td></tr></table></div></figure>
 
-<blockquote><p>New enrollment in the program was closed from mid-2004 until early
-2008, when a lottery-based system was introduced. Tens of thousands
-of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockquote>
 
-<p>It  is basically saying that the policy makers have given up on trying to design and implement a system to allocate the resource based on any meaningful and measurable metrics.</p>
+<p><code>-s</code> here means if the file exists and not of size 0</p>
 </div>
   
   
@@ -167,7 +168,7 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/05/p-52213593051/">A Word in Your Ear: Rhyming Slang</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/08/p-52451932662/">AFS</a></h1>
     
     
       <p class="meta">
@@ -183,16 +184,14 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
 
 
-<time datetime="2013-06-05T21:20:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
+<time datetime="2013-06-08T20:40:00+10:00" pubdate data-updated="true">Jun 8<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://www.abc.net.au/local/audio/2013/05/02/3750497.htm">A word in your ear: Rhyming slang</a></p>
-
-<p>‘Apple and Pear’ means ‘upstair’. Fun.</p>
+  <div class="entry-content"><p>Morgan Stanley uses <a href="http://en.wikipedia.org/wiki/Andrew_File_System">AFS</a> for application deployment with good results.</p>
 </div>
   
   
@@ -205,7 +204,7 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/05/p-52212432857/">Two Ways to Build File Names</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/07/p-52372899462/">The Core of Lisp</a></h1>
     
     
       <p class="meta">
@@ -221,14 +220,32 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
 
 
-<time datetime="2013-06-05T20:40:00+10:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
+<time datetime="2013-06-07T21:20:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Use <code>pathWithComponents</code> or <code>stringByAppendingString</code></p>
+  <div class="entry-content"><p>The core of lisp is just 7 functions:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(quote x)
+</span><span class='line'>(atom x)
+</span><span class='line'>(eq x y)
+</span><span class='line'>(cons x y)
+</span><span class='line'>(cond (x y) (w z) (t q))
+</span><span class='line'>(car x)
+</span><span class='line'>(cdr x)</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -241,7 +258,7 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/04/p-52133031773/">Basename-equivalent in Objective-C</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/07/p-52371654734/">NSDocument and First Responder</a></h1>
     
     
       <p class="meta">
@@ -257,14 +274,16 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
 
 
-<time datetime="2013-06-04T21:20:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2013</time>
+<time datetime="2013-06-07T20:40:00+10:00" pubdate data-updated="true">Jun 7<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Use <code>lastPathComponent</code></p>
+  <div class="entry-content"><p>Trying to understand how NSDocument works with First Responder model in OSX app. This SO articule seems helpful:</p>
+
+<p><a href="http://stackoverflow.com/questions/4892705/connecting-menu-items-in-document-based-applications">Connecting Menu Items in Document Based Applications</a></p>
 </div>
   
   
@@ -277,7 +296,7 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/06/04/p-52131731225/">TED: Paola Antonelli: Why I Brought Pac-Man to MoMA - Paola Antonelli (2013)</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/06/06/p-52293987426/">Useful OSX API to Find Home and Temp Directory</a></h1>
     
     
       <p class="meta">
@@ -293,16 +312,22 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   
 
 
-<time datetime="2013-06-04T20:40:00+10:00" pubdate data-updated="true">Jun 4<span>th</span>, 2013</time>
+<time datetime="2013-06-06T21:20:00+10:00" pubdate data-updated="true">Jun 6<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://feedproxy.google.com/~r/TEDTalks_video/~3/8g9dc9r8sZs/paola_antonelli_why_i_brought_pacman_to_moma.html">TEDTalks (video) &ndash; TED: Paola Antonelli: Why I brought Pac-Man to MoMA &ndash; Paola Antonelli (2013)</a></p>
+  <div class="entry-content"><p>Useful OSX API to find home and temp directory</p>
 
-<p>When the Museum of Modern Art’s senior curator of architecture and design announced the acquisition of 14 video games in 2012, “all hell broke loose.” In this far-ranging, entertaining, and deeply insightful talk, Paola Antonelli explains why she’s delighted to challenge preconceived ideas about art and galleries, and describes her burning wish to help establish a broader understanding of design</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>NSHomeDirectory
+</span><span class='line'>
+</span><span class='line'>NSTemporaryDirectory</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -327,23 +352,23 @@ of Oregonians signed up, competing for 3,000 new spots in the plan.</p></blockqu
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

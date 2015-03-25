@@ -9,7 +9,8 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked &hellip;">
+  <meta name="description" content="If I have removed a file by accident, and want to reinstate the file form a source code repository, then, in subversion I will do 1
+2 svn update file &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/04/09/p-20741837171/">viewDidLoad</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/04/23/p-21642771050/">If I Have Removed a File by Accident, and Want to Reinstate the File Form a Source Code Repository, Then&#8230;</a></h1>
     
     
       <p class="meta">
@@ -137,62 +138,45 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-04-09T09:04:00+10:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
+<time datetime="2012-04-23T22:01:00+10:00" pubdate data-updated="true">Apr 23<span>rd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The correct way to use a view controller is to to build a view objects as sub-views of the view controller. If the view controllerâs view is linked to an .xib file, we use <em>viewDidLoad</em> to do additional work after the .xib is done loading. Otherwise we should use <em>loadView</em>.</p>
-</div>
-  
-  
+  <div class="entry-content"><p>If I have removed a file by accident, and want to reinstate the file form a source code repository, then,</p>
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2012/04/07/p-20610466116/">My Syslog Is Full of These Error Messages</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-07T07:17:00+10:00" pubdate data-updated="true">Apr 7<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>My syslog is full of these error messages:</p>
+<p>in subversion I will do</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Apr  7 07:08:37 Media-Center com.apple.launchd[1] 
-</span><span class='line'>(com.google.keystone.daemon[67255]) : bootstrap_register() 
-</span><span class='line'>erroneously called instead of bootstrap_check_in(). Mach service: com.google.Keystone.Daemon</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>svn update file
+</span></code></pre></td></tr></table></div></figure>
 
 
-<p>I removed the installer using the instruction</p>
+<p>in mercurial I will do</p>
 
-<p><a href="http://support.google.com/installer/bin/answer.py?hl=en&amp;answer=100386">here</a></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>hg revert file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In git,</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>git checkout file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Reference:</p>
+
+<p><a href="mercurial">http://hgbook.red-bean.com/read/mercurial-in-daily-use.html</a></p>
 </div>
   
   
@@ -205,7 +189,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/04/06/p-20573755249/">&#8216;Inflation Clock Ticks for Big Ben&#8217; by Michael West</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/04/22/p-21564195825/">Sometimes My Time Is Spent on Things Which Are Mundane and Mindless. Today Is a Good Example&#8230;</a></h1>
     
     
       <p class="meta">
@@ -221,26 +205,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-04-06T14:59:00+10:00" pubdate data-updated="true">Apr 6<span>th</span>, 2012</time>
+<time datetime="2012-04-22T21:29:00+10:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://www.smh.com.au/business/inflation-clock-ticks-for-big-ben-20120405-1wfde.html">http://www.smh.com.au/business/inflation-clock-ticks-for-big-ben-20120405-1wfde.html</a></p>
+  <div class="entry-content"><p>Sometimes my time is spent on things which are mundane and mindless. Today is a good example,</p>
 
-<p>Excerpt:</p>
+<p>1) I reinstalled XCode 4.3</p>
 
-<blockquote><p>It is fascinating to watch what China is up to, too. The People’s Republic sold down its holdings of US treasuries by $US32 billion in December &ndash; it owns, ominously, some 7 per cent of America’s debt.</p>
+<p>2) resolved an iphone sync problem due to file permission</p>
 
-<p>And besides producing 360 tonnes of gold internally last year it imported another 428 tonnes &ndash; well up on the 119 tonnes imported in 2010.</p>
+<p>3) Trying to free up some local hard disk space</p>
 
-<p>Copper imports were up 48 per cent, despite gross domestic product subsiding in recent months. Oil imports hit a record, too.</p>
-
-<p>So China is stocking up on hard commodities and gold while easing back on US treasuries, once deemed the world’s bellwether asset. Despite our keen leverage to a Chinese boom and bust however, this shift towards hard assets suits the Lucky Country better than most.</p></blockquote>
-
-<p>Hope Michael is right about this.</p>
+<p>4) Fix brew issue due to the reinstallation of XCode</p>
 </div>
   
   
@@ -253,7 +233,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/04/06/p-20566131314/">Biannual vs Biennial</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/04/10/p-20839154995/">In AD287 Diocletian Divided Roman Empire Into East and West</a></h1>
     
     
       <p class="meta">
@@ -269,20 +249,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-04-06T12:45:00+10:00" pubdate data-updated="true">Apr 6<span>th</span>, 2012</time>
+<time datetime="2012-04-10T22:39:00+10:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Whenever I come across people saying “Biannual means once every two years,” I have an urge to correct them :&ndash;)</p>
-
-<p><a href="None">http://xkcd.com/386</a></p>
-
-<p>Biannual actually means twice every year. Biennial is word for “once every two years”.</p>
-
-<p>It is so confusing I prefer to use semiannual instead of biannual.</p>
+  <div class="entry-content"><p>In AD287 Diocletian divided Roman Empire into East and West</p>
 </div>
   
   
@@ -295,7 +269,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2012/04/05/p-20566458585/">Euler Identity Is Voted the Most Beautiful Mathematic Formula in 1988</a></h1>
+      <h1 class="entry-title"><a href="/post/2012/04/10/p-20787767752/">Start Reading &#8216;the Trial&#8217; by Kafka</a></h1>
     
     
       <p class="meta">
@@ -311,14 +285,50 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2012-04-05T18:30:00+10:00" pubdate data-updated="true">Apr 5<span>th</span>, 2012</time>
+<time datetime="2012-04-10T03:56:00+10:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Euler Identity is voted the most beautiful mathematic formula in 1988</p>
+  <div class="entry-content"><p>To be precise, I actually <em>started</em> reading the book some ten years ago.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2012/04/09/p-20767587335/">Some Useful UIViewController Properties</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-09T16:42:00+10:00" pubdate data-updated="true">Apr 9<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some useful UIViewController properties</p>
 </div>
   
   
@@ -343,23 +353,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

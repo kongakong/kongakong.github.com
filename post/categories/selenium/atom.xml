@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: selenium | Timeline]]></title>
+  <link href="http://www.ahwkong.com/post/categories/selenium/atom.xml" rel="self"/>
+  <link href="http://www.ahwkong.com/"/>
+  <updated>2015-03-26T07:11:47+11:00</updated>
+  <id>http://www.ahwkong.com/</id>
+  <author>
+    <name><![CDATA[Anthony Kong]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[find out parent HTML element of a webelement in selenium]]></title>
+    <link href="http://www.ahwkong.com/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/"/>
+    <updated>2015-03-21T19:40:00+11:00</updated>
+    <id>http://www.ahwkong.com/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium</id>
+    <content type="html"><![CDATA[<p>Sometimes you want to find out the parent HTML element of the current WebElement you are working on. The <code>parent</code> property of the WebElement, however, will give you an instance of WebDriver.</p>
+
+<p>You can find this out by</p>
+
+<pre><code>parent = element.find_element_by_xpath('..')
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

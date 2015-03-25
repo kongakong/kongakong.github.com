@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="It is not entirely obvious in http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html
+  <meta name="description" content="
 ">
   
 
@@ -122,7 +122,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6031499072/">How to Abort a Maven Build if Checkstyle Fails</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/06/01/p-6045982408/">Item 12: Prefer Initialization to Assignment in Constructors</a></h1>
     
     
       <p class="meta">
@@ -138,16 +138,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T17:50:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-06-01T06:29:00+10:00" pubdate data-updated="true">Jun 1<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is not entirely obvious in</p>
-
-<p><a href="checkstyle%20maven%20plugin%20documentation">http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html</a></p>
+  <div class="entry-content">
 </div>
   
   
@@ -160,7 +158,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011688672/">Item 10: Write Operator Delete if You Write Operator New</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036284846/">C++: Dynamic Array</a></h1>
     
     
       <p class="meta">
@@ -176,18 +174,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:38:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T23:12:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Rather self-explanatory.</p>
-
-<p>Two recommended checks:</p>
-
-<p><em>Null Pointer Check</em></p>
+  <div class="entry-content"><p>We can dynamically allocate arrays of primitive types using new as well</p>
 </div>
   
   
@@ -200,7 +194,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011639593/">Item 9: Avoid Hiding the &#8216;Normal&#8217; Form of New</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6036161971/">C++ Weirdness</a></h1>
     
     
       <p class="meta">
@@ -216,14 +210,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:36:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T23:05:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Not good:</p>
+  <div class="entry-content"><p>This calls the copy constructor</p>
 </div>
   
   
@@ -236,7 +230,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011529808/">Item 8: Adhere to Convention When Writing Operator New and Operator Delete</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035862177/">C++: Required Class Operations</a></h1>
     
     
       <p class="meta">
@@ -252,16 +246,20 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:33:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T22:47:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Since C++ guarantees it’s always safe to delete the null pointer, make sure the custom <code>delete</code> will honor that guarantee</p>
+  <div class="entry-content"><p>Related to</p>
 
-<p>General Idea:</p>
+<p>C++ requires that all classes must provide certain operations</p>
+
+<p>If you donât provide them, the compiler will make them up by following some simple rules. This can lead to problems</p>
+
+<p><a href="cs11%20lecture%202">http://www.cs.caltech.edu/courses/cs11/material/cpp/donnie/lectures/cs11-cpp-lec2.pdf</a></p>
 </div>
   
   
@@ -274,7 +272,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2011/05/31/p-6011303409/">United States Minor Outlying Islands</a></h1>
+      <h1 class="entry-title"><a href="/post/2011/05/31/p-6035529872/">Item 11: Declare a Copy Constructor and an Assignment Operator for Classes With Dynamically Allocated Memory</a></h1>
     
     
       <p class="meta">
@@ -290,14 +288,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2011-05-31T06:26:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
+<time datetime="2011-05-31T22:27:00+10:00" pubdate data-updated="true">May 31<span>st</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://en.wikipedia.org/wiki/United_States_Minor_Outlying_Islands">United States Minor Outlying Islands</a></p>
+  <div class="entry-content"><p>An <em>assignment operator</em> is to address this kind of situation:</p>
 </div>
   
   
@@ -322,23 +320,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

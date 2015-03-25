@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The installation failed at the end It failed because I did not install the command line tools in XCode. After installing the tool, the gem command &hellip;">
+  <meta name="description" content="Andres Lozano: Parkinson&rsquo;s, depression and the switch that might turn them off Deep brain stimulation is becoming very precise. This technique &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/05/01/p-49296939249/">Trying Out Cocoapods</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/09/p-49957105079/">TED: Parkinson&#8217;s, Depression and the Switch That Might Turn Them Off - Andres Lozano (2013)</a></h1>
     
     
       <p class="meta">
@@ -137,16 +137,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-05-01T06:45:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
+<time datetime="2013-05-09T07:02:00+10:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The installation failed at the end</p>
+  <div class="entry-content"><p><a href="http://www.ted.com/talks/andres_lozano_parkinson_s_depression_and_the_switch_that_might_turn_them_off.html">Andres Lozano: Parkinson&rsquo;s, depression and the switch that might turn them off</a></p>
 
-<p>It failed because I did not install the command line tools in XCode. After installing the tool, the gem command ran fine.</p>
+<p>Deep brain stimulation is becoming very precise. This technique allows surgeons to place electrodes in almost any area of the brain, and turn them up or down — like a radio dial or thermostat — to correct dysfunction. Andres Lozano offers a dramatic look at emerging techniques, in which a woman with Parkinson’s instantly stops shaking and brain areas eroded by Alzheimer’s are brought back to life. (Filmed at TEDxCaltech.)</p>
 </div>
   
   
@@ -159,7 +159,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/04/30/p-49203298223/">Emacs Fu 2</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/08/p-49924605254/">XPath, Python and Erlang</a></h1>
     
     
       <p class="meta">
@@ -175,16 +175,55 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-04-30T07:12:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2013</time>
+<time datetime="2013-05-08T20:00:00+10:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="https://github.com/erlware-deprecated/erlware-mode">erlware-mode</a> is deprecated.</p>
+  <div class="entry-content"><p>Just feel that python is easier for XML manipulation.</p>
 
-<p>Use <code>erlang-mode</code> in erlang distribution instead</p>
+<p>e.g.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+</span><span class='line'><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;digg-science-rss1.xml&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">tree</span>  <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span><span class='line'><span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Very concise.</p>
+
+<p>whereas in erlang, since the function xmerl:string may return a list that’s composed of various record type (such as  xmlRecord or xmlText etc), it makes the handling more complex (one clause per record type). The printout from REPL is also a lot more verbose. e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>      #xmlText{
+</span><span class='line'>          parents = [{item,16},{channel,2},{rss,1}],
+</span><span class='line'>          pos = 3,language = [],value = "\n   ",type = text},
+</span><span class='line'>      #xmlElement{
+</span><span class='line'>          name = link,expanded_name = link,nsinfo = [],
+</span><span class='line'>          namespace = 
+</span><span class='line'>              #xmlNamespace{
+</span><span class='line'>                  default = [],
+</span><span class='line'>                  nodes =
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
@@ -197,7 +236,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/04/30/p-49177916186/">Homebrew and Erlang R16B</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/07/p-49845982745/">To Find Out Where Homebrew Keeps the Files of a Formula</a></h1>
     
     
       <p class="meta">
@@ -213,16 +252,27 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-04-30T00:01:00+10:00" pubdate data-updated="true">Apr 30<span>th</span>, 2013</time>
+<time datetime="2013-05-07T20:00:00+10:00" pubdate data-updated="true">May 7<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Currently the version of erlang in homebrew is defaulted to version R15B03-1 even though a more recent version, R16B, is available.</p>
+  <div class="entry-content"><p>… Simply follow the link.</p>
 
-<p>To install R16B, it is what I did:</p>
+<p>e.g.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>ls -l `which erl`
+</span><span class='line'>lrwxr-xr-x  1 antkong  admin  29 29 Apr 23:49 /usr/local/bin/erl -&gt; ../Cellar/erlang/R16B/bin/erl
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
@@ -235,7 +285,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/04/27/p-48953372171/">Emacs Fu 1</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/06/p-49716537787/">Single Quote Is for Something Else in Erlang</a></h1>
     
     
       <p class="meta">
@@ -251,16 +301,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-04-27T07:17:00+10:00" pubdate data-updated="true">Apr 27<span>th</span>, 2013</time>
+<time datetime="2013-05-06T06:56:00+10:00" pubdate data-updated="true">May 6<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Find out the current emac.d location</p>
-
-<p><code>C-H v init-user-file &lt;RET&gt;</code></p>
+  <div class="entry-content"><p>In python, single quote and double quote are pretty much interchangable. Not so in erlang.</p>
 </div>
   
   
@@ -273,7 +321,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/04/17/p-48145048805/">Using Sbt in Ubuntu</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/05/01/p-49349555815/">Homebrew</a></h1>
     
     
       <p class="meta">
@@ -289,20 +337,14 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-04-17T07:18:00+10:00" pubdate data-updated="true">Apr 17<span>th</span>, 2013</time>
+<time datetime="2013-05-01T20:00:00+10:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>First, to install, follow the instrument here:</p>
-
-<p><a href="http://stackoverflow.com/a/13718915/58129">http://stackoverflow.com/a/13718915/58129</a></p>
-
-<p>You may then get a <code>Could not reserve enough space for object heap</code> exception. The following command line works for me:</p>
-
-<p><code>sbt -J-Xms256m -J-Xmx512m</code></p>
+  <div class="entry-content"><p>Just find out</p>
 </div>
   
   
@@ -327,23 +369,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

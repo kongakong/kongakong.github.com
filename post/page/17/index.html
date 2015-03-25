@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Take a look at this swift code (XCode6 Beta7) class C { func name () -&gt; String { return "C" } } class D:C { override func name () -&gt; String { &hellip;">
+  <meta name="description" content="Here is the code in question: class Something: NSCoding { ... let smth = Something() let data = NSKeyedArchiver.archivedDataWithRootObject(smth); It &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/10/swift-can-be-very-pythonic/">Difference Between Handling &#8216;Self&#8217; in Python and Swift</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/09/12/unrecognized-selector-replacementobjectforkeyedarchiver/">Unrecognized Selector -replacementObjectForKeyedArchiver:</a></h1>
     
     
       <p class="meta">
@@ -137,54 +137,29 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-09-10T12:35:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
+<time datetime="2014-09-12T22:31:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>Take a look at this <code>swift</code> code (XCode6 Beta7)</p>
+  <div class="entry-content"><p>Here is the code in question:</p>
 
-<pre><code>    class C {
-            func name () -&gt; String {
-                return "C"
-            }
-    }
+<pre><code>class Something: NSCoding {
+    ...
 
-    class D:C {
-            override func name () -&gt; String {
-                return "D"
-            }
-    }
-
-    let c = C()
-    println(c.name()) // print 'C'
-
-    let d = D()
-    println(d.name()) // print 'D' as expected
-
-    println(C.name(d)()) // print 'D'! 
+let smth = Something() 
+let data = NSKeyedArchiver.archivedDataWithRootObject(smth);
 </code></pre>
 
-<p>In python, the last case is different:</p>
+<p>It throws this exception:</p>
 
-<pre><code>    class C:
-        def name(self):
-            return 'C' 
-
-    class D(C):
-        def name(self):
-            return 'D' 
-
-    c = C() 
-    print(c.name())  // print 'C' 
-
-    d = D() 
-    print(d.name())  // print 'D' 
-
-    print(C.name(d)) // print 'C' 
+<pre><code>2014-09-12 16:30:00.463 MyApp[30078:60b] *** NSForwarding: warning: object 0x7a04ac70 of class '_TtC8MyApp7Something' does not implement methodSignatureForSelector: -- trouble ahead
+Unrecognized selector -[MyApp.Something replacementObjectForKeyedArchiver:]
 </code></pre>
+
+<p>It is because <code>Something</code> does not inherit from <code>NSObject</code></p>
 </div>
   
   
@@ -197,7 +172,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/04/ngtouch/">ngTouch</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/09/12/javascript-and-hoisting/">Javascript and Hoisting</a></h1>
     
     
       <p class="meta">
@@ -213,18 +188,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2014-09-04T16:11:00+10:00" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time>
+<time datetime="2014-09-12T15:12:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>To introduce touch behaviour in angularjs-enabled mobile app, try this:</p>
+  <div class="entry-content"><p><code>Hoisting</code> is when JavaScript moves the definition of some code to the top of the closure.</p>
 
-<pre><code>&lt;script src="bower_components/angular-touch/angular-touch.js"&gt;&lt;/script&gt;
-angular.module('myApp', ['ngTouch']) 
-</code></pre>
+<p><a href="http://www.johnpapa.net/angular-function-declarations-function-expressions-and-readable-code/">Source</a></p>
 </div>
   
   
@@ -237,7 +210,7 @@ angular.module('myApp', ['ngTouch'])
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/04/semi-colon-in-swift/">Semi-colon in Swift</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/09/12/css-overflow/">Css Overflow</a></h1>
     
     
       <p class="meta">
@@ -253,32 +226,16 @@ angular.module('myApp', ['ngTouch'])
   
 
 
-<time datetime="2014-09-04T14:52:00+10:00" pubdate data-updated="true">Sep 4<span>th</span>, 2014</time>
+<time datetime="2014-09-12T12:54:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The perfered style of semi-colon placement in swift is:</p>
+  <div class="entry-content"><p>Valid values of attribute <code>overflow</code> are visible, hidden, scroll, auto, initial and inherit</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>struct Foo: SomeProtocol {}
-</span><span class='line'>class Foo: SomeProtocol {}
-</span><span class='line'>
-</span><span class='line'>var x: Int
-</span><span class='line'>func foo(x: Int) {}
-</span><span class='line'>func bar(x: (y: Int) -> Int) -> Double {}
-</span><span class='line'>let dict = ["key": value]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>i.e. No space before the semi-colon. One space after the semi-colon</p>
+<p>It controls browser behavior if content overflows an element&rsquo;s box.</p>
 </div>
   
   
@@ -291,7 +248,7 @@ angular.module('myApp', ['ngTouch'])
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/09/01/what-is-tag-fieldset/">What Is Tag Fieldset?</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/09/12/angular-bower/">Starting an Angularjs Project With Bower</a></h1>
     
     
       <p class="meta">
@@ -307,26 +264,16 @@ angular.module('myApp', ['ngTouch'])
   
 
 
-<time datetime="2014-09-01T09:40:00+10:00" pubdate data-updated="true">Sep 1<span>st</span>, 2014</time>
+<time datetime="2014-09-12T10:53:00+10:00" pubdate data-updated="true">Sep 12<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><a href="http://stackoverflow.com/questions/9741328/why-do-we-need-a-fieldset-tag">From StackOverflow</a></p>
+  <div class="entry-content"><p>First you need to install <code>npm</code> via <code>brew</code></p>
 
-<p>The most obvious, practical example is:</p>
-
-<pre><code>&lt;fieldset&gt;
-    &lt;legend&gt;Colour&lt;/legend&gt;
-    &lt;label&gt;&lt;input type="radio" name="colour" value="blue"&gt; Blue &lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="colour" value="red"&gt; Red &lt;/label&gt;
-    &lt;label&gt;&lt;input type="radio" name="colour" value="green"&gt; Green &lt;/label&gt;
-&lt;/fieldset&gt;
-</code></pre>
-
-<p>This allows each radio button to be labeled while also providing a label for the group as a whole. This is especially important where assistive technology (such as a screen reader) is being used where the association of the controls and their legend cannot be implied by visual presentation.</p>
+<p>Then run <code>npm install -g bower</code> as documented in <a href="http://bower.io/">bower websiter</a></p>
 </div>
   
   
@@ -339,7 +286,7 @@ angular.module('myApp', ['ngTouch'])
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2014/08/29/ex-2-dot-2/">Ex 2.2</a></h1>
+      <h1 class="entry-title"><a href="/post/2014/09/10/make-iphone-vibrate/">Make Iphone Vibrate</a></h1>
     
     
       <p class="meta">
@@ -355,226 +302,24 @@ angular.module('myApp', ['ngTouch'])
   
 
 
-<time datetime="2014-08-29T14:59:00+10:00" pubdate data-updated="true">Aug 29<span>th</span>, 2014</time>
+<time datetime="2014-09-10T13:31:00+10:00" pubdate data-updated="true">Sep 10<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p><strong>Exercise 2.2</strong> (Andersson [And91D]) In the worst case, member performs approximately 2d comparisons, where d is the depth of the tree. Rewrite member to take no more than d + 1 comparisons by keeping track of a candidate element that might be equal to the query element (say, the last element for which &lt; returned false or &lt; returned true) and checking for equality only when you hit the bottom of the tree.)</p>
+  <div class="entry-content"><p>Use these APIs to set the iphone to vibrate</p>
 
-<p><strong>Answer</strong></p>
-
-<p>To test the example code, run these commands:</p>
-
-<pre><code>erl -noshell -noinit -run ex2_2 test_insert -run init stop
-erl -noshell -noinit -run ex2_2 test_member -run init stop
+<pre><code>AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 </code></pre>
 
-<p>My erlang implementation actually does not have the same performance characteristic as stated in the question. The code in question is this:</p>
+<p>The first function plays a beep sound if the devices don’t support vibration. The second function on the other hand does nothing on unsupported devices.</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ocaml'><span class='line'><span class="k">fun</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="nc">E</span><span class="o">)</span> <span class="o">=</span> <span class="bp">false</span>
-</span><span class='line'>  <span class="o">|</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="nc">T</span> <span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">y</span><span class="o">,</span> <span class="n">b</span><span class="o">))</span> <span class="o">=</span>
-</span><span class='line'>        <span class="nc">If</span> <span class="nn">Element</span><span class="p">.</span><span class="n">lt</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">y</span><span class="o">)</span> <span class="k">then</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">a</span><span class="o">)</span>
-</span><span class='line'>        <span class="k">else</span> <span class="k">if</span> <span class="nn">Element</span><span class="p">.</span><span class="n">lt</span> <span class="o">(</span><span class="n">y</span><span class="o">,</span> <span class="n">x</span><span class="o">)</span> <span class="k">then</span> <span class="n">member</span> <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">b</span><span class="o">)</span>
-</span><span class='line'>        <span class="k">else</span> <span class="bp">true</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>if <code>AVRecorder</code> is running, iphone will not vibrate too.</p>
 
-
-<p>The <code>if</code> clause in the above function will cause the <code>Element.lt</code> to be executed twice per node visit in the worst case scenarios. Hence the 2 * d comparisons.</p>
-
-<p>It does not really apply to my erlang version of code because pattern matching has shortcircuted the comparsion when there is a match. The comparsion is done by the <code>guard</code>. In a sense I cheated: I did not use a functor to compare the values. This enables me to use the pattern matching.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-<span class='line-number'>49</span>
-<span class='line-number'>50</span>
-<span class='line-number'>51</span>
-<span class='line-number'>52</span>
-<span class='line-number'>53</span>
-<span class='line-number'>54</span>
-<span class='line-number'>55</span>
-<span class='line-number'>56</span>
-<span class='line-number'>57</span>
-<span class='line-number'>58</span>
-<span class='line-number'>59</span>
-<span class='line-number'>60</span>
-<span class='line-number'>61</span>
-<span class='line-number'>62</span>
-<span class='line-number'>63</span>
-<span class='line-number'>64</span>
-<span class='line-number'>65</span>
-<span class='line-number'>66</span>
-<span class='line-number'>67</span>
-<span class='line-number'>68</span>
-<span class='line-number'>69</span>
-<span class='line-number'>70</span>
-<span class='line-number'>71</span>
-<span class='line-number'>72</span>
-<span class='line-number'>73</span>
-<span class='line-number'>74</span>
-<span class='line-number'>75</span>
-<span class='line-number'>76</span>
-<span class='line-number'>77</span>
-<span class='line-number'>78</span>
-<span class='line-number'>79</span>
-<span class='line-number'>80</span>
-<span class='line-number'>81</span>
-<span class='line-number'>82</span>
-<span class='line-number'>83</span>
-<span class='line-number'>84</span>
-<span class='line-number'>85</span>
-<span class='line-number'>86</span>
-<span class='line-number'>87</span>
-<span class='line-number'>88</span>
-<span class='line-number'>89</span>
-<span class='line-number'>90</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">ex2_2</span><span class="p">).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">make_sample_tree</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_insert</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_traverse</span><span class="o">/</span><span class="mi">0</span><span class="p">,</span> <span class="n">test_member</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">-</span><span class="ni">record</span><span class="p">(</span><span class="nl">treenode</span><span class="p">,</span> <span class="p">{</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">}).</span>
-</span><span class='line'><span class="p">-</span><span class="ni">record</span><span class="p">(</span><span class="nl">tree</span><span class="p">,</span> <span class="p">{</span><span class="n">left</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{},</span> <span class="n">right</span><span class="p">}).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">make_node</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">TN</span> <span class="o">=</span> <span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">K</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">},</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nv">TN</span><span class="p">},</span>
-</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">make_node</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">,</span> <span class="nv">LeftTree</span><span class="p">,</span> <span class="nv">RightTree</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">TN</span> <span class="o">=</span> <span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">K</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">},</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nv">TN</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="nv">LeftTree</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="nv">RightTree</span><span class="p">},</span>
-</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="n">undefined</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="n">make_node</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">);</span>
-</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="nl">#tree</span><span class="p">{</span><span class="n">left</span><span class="o">=</span><span class="nv">LT</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">_</span><span class="nv">CurV</span><span class="p">},</span> <span class="n">right</span><span class="o">=</span><span class="p">_</span><span class="nv">RT</span><span class="p">}</span><span class="o">=</span><span class="nv">T</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&lt;</span> <span class="nv">CurK</span>  <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">LT1</span><span class="o">=</span><span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">LT</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T1</span><span class="o">=</span><span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">left</span><span class="o">=</span><span class="nv">LT1</span><span class="p">},</span>
-</span><span class='line'>    <span class="nv">T1</span><span class="p">;</span>
-</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="nl">#tree</span><span class="p">{</span><span class="n">left</span><span class="o">=</span><span class="p">_</span><span class="nv">LT</span><span class="p">,</span> <span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">_</span><span class="nv">CurV</span><span class="p">},</span> <span class="n">right</span><span class="o">=</span><span class="nv">RT</span><span class="p">}</span><span class="o">=</span><span class="nv">T</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&gt;</span> <span class="nv">CurK</span>  <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">RT1</span><span class="o">=</span><span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">RT</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T1</span><span class="o">=</span><span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">right</span><span class="o">=</span><span class="nv">RT1</span><span class="p">},</span>
-</span><span class='line'>    <span class="nv">T1</span><span class="p">;</span>
-</span><span class='line'><span class="c">% when K == CurK</span>
-</span><span class='line'><span class="nf">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="p">_</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">)</span>  <span class="k">when</span> <span class="nb">is_record</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">T</span><span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">value</span><span class="o">=</span><span class="nv">V</span><span class="p">}}.</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="nf">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_record</span><span class="p">(</span><span class="nv">Tree</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">is_function</span><span class="p">(</span><span class="nv">F</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="p">,</span> <span class="mi">0</span><span class="p">).</span>
-</span><span class='line'><span class="nf">traverse</span><span class="p">(_</span><span class="nv">F</span><span class="p">,</span> <span class="n">undefined</span><span class="p">,</span> <span class="p">_</span><span class="nv">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ok</span><span class="p">;</span>
-</span><span class='line'><span class="nf">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="p">,</span> <span class="nv">D</span><span class="p">)</span> <span class="k">when</span> <span class="nb">is_record</span><span class="p">(</span><span class="nv">Tree</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">is_function</span><span class="p">(</span><span class="nv">F</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="c">% F is a function that work on K and V</span>
-</span><span class='line'>    <span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.left</span><span class="p">,</span> <span class="nv">D</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">F</span><span class="p">(</span><span class="nv">Tree</span><span class="nl">#tree.treenode#treenode.key</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.treenode#treenode.value</span><span class="p">,</span> <span class="nv">D</span><span class="p">),</span>
-</span><span class='line'>    <span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.right</span><span class="p">,</span> <span class="nv">D</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">K</span><span class="p">}}</span><span class="o">=</span><span class="nv">Tree</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="n">found</span><span class="p">;</span>
-</span><span class='line'><span class="nf">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">}}</span><span class="o">=</span><span class="nv">Tree</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&lt;</span> <span class="nv">CurK</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="c">% io:format(&quot;Compared for ~p~n&quot;, [K]),</span>
-</span><span class='line'>    <span class="n">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.left</span><span class="p">);</span>
-</span><span class='line'><span class="nf">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nl">#tree</span><span class="p">{</span><span class="n">treenode</span><span class="o">=</span><span class="nl">#treenode</span><span class="p">{</span><span class="n">key</span><span class="o">=</span><span class="nv">CurK</span><span class="p">}}</span><span class="o">=</span><span class="nv">Tree</span><span class="p">)</span> <span class="k">when</span> <span class="nv">K</span> <span class="o">&gt;</span> <span class="nv">CurK</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="c">% io:format(&quot;Compared for ~p~n&quot;, [K]),</span>
-</span><span class='line'>    <span class="n">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">Tree</span><span class="nl">#tree.right</span><span class="p">);</span>
-</span><span class='line'><span class="nf">member</span><span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="n">undefined</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="n">not_found</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'><span class="c">%% routines for testings</span>
-</span><span class='line'><span class="c">%% </span>
-</span><span class='line'><span class="nf">make_sample_tree</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">Left</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">Right</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="nv">Left</span><span class="p">,</span> <span class="nv">Right</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">make_sample_tree2</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_node</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T1</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T2</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T3</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T4</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T5</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T6</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">T6</span><span class="p">.</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">test_insert</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree</span><span class="p">(),</span>
-</span><span class='line'>    <span class="nv">T1</span> <span class="o">=</span> <span class="n">insert_tree_node</span><span class="p">(</span><span class="nv">T</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
-</span><span class='line'>    <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;old </span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">T</span><span class="p">]),</span>
-</span><span class='line'>    <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;new </span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">T1</span><span class="p">]).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">test_traverse</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">F</span> <span class="o">=</span> <span class="k">fun</span> <span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">,</span> <span class="p">_</span><span class="nv">D</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;key:</span><span class="si">~p</span><span class="s"> val:</span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">])</span> <span class="k">end</span><span class="p">,</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree</span><span class="p">(),</span>
-</span><span class='line'>    <span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">T</span><span class="p">).</span>
-</span><span class='line'>
-</span><span class='line'><span class="nf">test_member</span><span class="p">()</span> <span class="o">-&gt;</span>
-</span><span class='line'>    <span class="nv">T</span> <span class="o">=</span> <span class="n">make_sample_tree2</span><span class="p">(),</span>
-</span><span class='line'>    <span class="nv">F</span> <span class="o">=</span> <span class="k">fun</span> <span class="p">(</span><span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">,</span> <span class="nv">Depth</span><span class="p">)</span> <span class="o">-&gt;</span>
-</span><span class='line'>            <span class="nv">Indent</span> <span class="o">=</span> <span class="nn">string</span><span class="p">:</span><span class="nf">chars</span><span class="p">(</span><span class="sc">$\s</span><span class="p">,</span> <span class="nv">Depth</span><span class="o">*</span><span class="mi">4</span><span class="p">),</span>
-</span><span class='line'>            <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;</span><span class="si">~s</span><span class="s">key:</span><span class="si">~p</span><span class="s"> val:</span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">Indent</span><span class="p">,</span> <span class="nv">K</span><span class="p">,</span> <span class="nv">V</span><span class="p">])</span>
-</span><span class='line'>        <span class="k">end</span><span class="p">,</span>
-</span><span class='line'>    <span class="n">traverse</span><span class="p">(</span><span class="nv">F</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">R1</span> <span class="o">=</span> <span class="n">member</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span>
-</span><span class='line'>    <span class="nv">R2</span> <span class="o">=</span> <span class="n">member</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nv">T</span><span class="p">),</span>
-</span><span class='line'>    <span class="nn">io</span><span class="p">:</span><span class="nf">format</span><span class="p">(</span><span class="s">&quot;R1:</span><span class="si">~p</span><span class="s"> R2:</span><span class="si">~p~n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nv">R1</span><span class="p">,</span> <span class="nv">R2</span><span class="p">]).</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
+<p>Source: <a href="http://stackoverflow.com/questions/4724980/making-the-iphone-vibrate">Stackoverflow</a></p>
 </div>
   
   
@@ -599,23 +344,23 @@ erl -noshell -noinit -run ex2_2 test_member -run init stop
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

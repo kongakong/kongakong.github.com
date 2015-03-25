@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you &hellip;">
+  <meta name="description" content="Question: Today is 1st of January. The residual maturity of a swap is 9 months. The notional principal is $1,000. You receive 3% fixed semiannual &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2013/07/26/concurrency-and-parallelism/">Concurrency and Parallelism</a></h1>
+      <h1 class="entry-title"><a href="/post/2013/08/04/simple-swap-calculation/">Simple Swap Calculation</a></h1>
     
     
       <p class="meta">
@@ -137,181 +137,22 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2013-07-26T21:41:00+10:00" pubdate data-updated="true">Jul 26<span>th</span>, 2013</time>
+<time datetime="2013-08-04T17:34:00+10:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>One of the misconceptions about concurrency is people often confuse concurrency and parallelism. Concurrency is a programming model that lets you express things that are independent, as independent executions and parallelism is about running two things at the same time. They are not the same idea and a lot of people confuse them, they think they are the same thing, but concurrency and parallelism are best thought of as a different idea. You can write beautiful concurrent programs with no parallelism whatsoever and you can also write extremely parallel programs that are not remotely concurrent. Concurrency is a model, parallelism is a result &ndash; maybe that&rsquo;s the best way to say it.</p></blockquote>
+  <div class="entry-content"><p><strong>Question</strong>: Today is 1st of January. The residual maturity of a swap is 9 months. The notional
+ principal is $1,000. You receive 3% fixed semiannual payments and pay semiannual
+ cash flows based on the 6-month Libor rate on March 31st and September 30th.
+ Next payment is based on Libor at 5%. The current term structure is
+ R(0, 0.25) = 4% and R(0, 0.75) = 5%.</p>
 
-<p>- Rob Pike</p>
-
-<p>Source: <a href="http://www.infoq.com/interviews/pike-concurrency">Infoq</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/17/mfa/">MFA</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T08:31:00+10:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>You can simply refer a Module/Function/Argument tuple as <strong>MFA</strong></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/17/global-send-message/">Global:send_message</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T08:31:00+10:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>!</code> (&lsquo;bang&rsquo;) should not be used to call a globally registered name. Instead, you should use <code>global:send</code></p>
-
-<p>A bit disappointed when I first learn about this: didn&rsquo;t I come to erlang for the bang operator? Now you take it away from me, <code>global</code> module.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/16/erlang-and-pang/">Pong and Pang in Erlang</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-16T08:00:00+10:00" pubdate data-updated="true">Jul 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I know it is quite clever to use &lsquo;pang&rsquo; to indciate the process does not exist. However both responses (&lsquo;pong&rsquo; and &lsquo;pang&rsquo;) just look too similar to each other if the terminal app uses a certain kind of font. Don&rsquo;t think i would enjoy it under stress in an operation/support situation.</p>
+<p>Find the value of the fixed leg, floating leg and the swap.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">exist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
-</span><span class='line'><span class="n">pong</span>
-</span><span class='line'><span class="o">&gt;</span> <span class="nn">net_adm</span><span class="p">:</span><span class="nf">ping</span><span class="p">(</span><span class="n">notexist</span><span class="p">@</span><span class="n">server</span><span class="p">).</span>
-</span><span class='line'><span class="n">pang</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2013/07/15/a-useful-sybase-tool/">A Useful Sybase Tool</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-15T23:08:00+10:00" pubdate data-updated="true">Jul 15<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>defncopy</code> is possibly the best way to retrieve a script of any Sybase database objects if you do not have access to a decent database development tools such as <a href="http://www.aquafold.com/aquadatastudio.html">Aqua Data Studio</a></p>
-
-<p>This utility comes with Sybase distribution. Here is its usage:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -328,34 +169,209 @@ alt="hit counter"></a></div></noscript>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ defncopy
-</span><span class='line'> 
-</span><span class='line'>defncopy Syntax Error
-</span><span class='line'>Usage: defncopy
-</span><span class='line'>    [-v]
-</span><span class='line'>    [-W]
-</span><span class='line'>    [-X]
-</span><span class='line'>    [-a &lt;display_charset&gt;]
-</span><span class='line'>    [-I &lt;interfaces_file&gt;]
-</span><span class='line'>    [-J [&lt;client_charset&gt;]]
-</span><span class='line'>    [-K &lt;keytab_file&gt;]
-</span><span class='line'>    [-P &lt;password&gt;]
-</span><span class='line'>    [-R &lt;remote_server_principal&gt;]
-</span><span class='line'>    [-S [&lt;server_name&gt;]]
-</span><span class='line'>    [-U &lt;user_name&gt;]
-</span><span class='line'>    [-V &lt;security_options&gt;]
-</span><span class='line'>    [-Z &lt;security_mechanism&gt;]
-</span><span class='line'>    [-z &lt;language&gt;]
-</span><span class='line'>    { in &lt;file_name&gt; &lt;database_name&gt; |
-</span><span class='line'>      out &lt;file_name&gt; &lt;database_name&gt; [&lt;owner&gt;.]&lt;object_name&gt;
-</span><span class='line'>          [[&lt;owner&gt;.]&lt;object_name&gt;...] }
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">swap</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">example1</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Fixed</span> <span class="o">=</span> <span class="n">example1_fixedleg</span><span class="p">(),</span>
+</span><span class='line'>    <span class="nv">Floating</span> <span class="o">=</span> <span class="n">example1_floatingleg</span><span class="p">(),</span>
+</span><span class='line'>    <span class="p">{</span><span class="nv">Fixed</span><span class="p">,</span> <span class="nv">Floating</span><span class="p">,</span> <span class="nv">Fixed</span><span class="o">-</span><span class="nv">Floating</span><span class="p">}.</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1_fixedleg</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="mi">30</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">04</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1030</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">3</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">example1_floatingleg</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="c">% 25 - next floating cash-flow payment </span>
+</span><span class='line'>    <span class="c">% 1000 - the notional as if it is a zero-coupon bond</span>
+</span><span class='line'>    <span class="mi">25</span> <span class="o">/</span> <span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="nn">math</span><span class="p">:</span><span class="nf">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">0</span><span class="p">.</span><span class="mi">05</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">).</span>
+</span><span class='line'>
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p><strong>Answer</strong>: {1022.6981406074298,1012.5734611086509,10.124679498778846}</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/03/git-tip-1/">Git Tip 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T21:21:00+10:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By default git uses &lsquo;less&rsquo; as a pager. You can disable it by</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git --no-pager diff</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/02/why-we-should-love-repost/">Why We Should Love Repost</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-02T23:05:00+10:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Maybe &lsquo;love&rsquo; is a strong word. In reddit it is common to see vengeance against reposts. Sometimes it is probably justified: the OP may change title in a misleading way to fish for karma. I will not save my downvote in this case.</p>
+
+<p>However sometimes the reposts, especially of historial events, were made by new users who had no recollection of the stories at all because they were too young at the time.</p>
+
+<p>It did not need to go too far back at time too. A teenager today is merely 8 or 9 years ten years ago, right? They would barely pay attention to current affair of their time. Events we took for granted that everyone should know are simply not in the memory of the younger generation.</p>
+
+<p>I begin to be aware of this phenomena when some younger redditors said how their minds are blown when they see the footages of, says, Tiananmen Square Massacre for the first time. For many of us in our 30 or older, we saw the Tiananmen Square Massacre unfolded in front of our eye. However for many youngsters, Tiananmen Square Massacre <strong>is</strong> history.</p>
+
+<p>Therefore we should be more tolerant of reposts. They help to build up the collective memory of humanity. Let us all learn some lesson form our past mistakes.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/08/01/luck-and-skill/">Luck and Skill</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-01T08:23:00+10:00" pubdate data-updated="true">Aug 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>For almost two centuries, Spain has hosted an enormously popular Christmas lottery. Based on
+payout, it is the biggest lottery in the world and nearly all Spaniards play. In the mid 1970s, a man
+sought a ticket with the last two digits ending in 48. He found a ticket, bought it, and then won the
+lottery. When asked why he was so intent on finding that number, he replied, &ldquo;I dreamed of the
+number seven for seven straight nights. And 7 times 7 is 48.&rdquo;</p></blockquote>
+
+<p>From <a href="http://vserver1.cscs.lsa.umich.edu/~spage/ONLINECOURSE/R15SkillandLuck.pdf">&ldquo;Untangling Skill and Luck&rdquo; by Michael J. Mauboussin</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2013/07/29/different-type-of-database/">Different Type of Database Models</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-29T08:08:00+10:00" pubdate data-updated="true">Jul 29<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I find this summary in <a href="http://littleriakbook.com/">Eric Redmond&rsquo;s &lsquo;A Little Riak&rsquo;</a> book  very concise and useful.</p>
+
+<ol>
+<li><p><strong>Relational</strong> Traditional databases usually use SQL to model and query data. They are useful for data which can be stored in a highly structured schema, yet require lexible querying. Scaling a relational database (RDBMS) traditionally occurs by more powerful hardware (vertical growth).</p>
+
+<p>Examples: PostgreSQL, MySQL, Oracle</p></li>
+<li><p><strong>Graph</strong> These exist for dataighly interconnected data. They excel in modeling complex relationships between nodes, and many implementations can handle multiple billions of nodes and relationships (or edges and vertices). I tend to include triplestores and object DBs as specialized variants.</p>
+
+<p> Examples: Neo4j, Graphbase, IniniteGraph</p></li>
+<li><p><strong>Document</strong> Document datastores model hierarchical values called documents, represented in formats such as JSON or XML, and do not enforce a document schema. They generally support distributing across multiple servers (horizontal growth).</p>
+
+<p> Examples: CouchDB, MongoDB, Couchbase</p></li>
+<li><p><strong>Columnar</strong> Popularized by Google’s BigTable, this form of database exists to scale across mul- tiple servers, and groups similar data into column families. Column values can be individually versioned and managed, though families are deined in advance, not unlike RDBMS schemas.</p>
+
+<p> Examples: HBase, Cassandra, BigTable 4</p></li>
+<li><p><strong>Key/Value</strong> Key/Value, or KV stores, are conceptually like hashtables, where values are stored and accessed by an immutable key. They range from single-server varieties like Memcached used for high-speed caching, to multi-datacenter distributed systems like Riak Enterprise.</p>
+
+<p> Examples: Riak, Redis, Voldemort</p></li>
+</ol>
 
 </div>
   
@@ -381,23 +397,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

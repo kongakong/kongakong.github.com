@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="The provisioning failed a few times this morning: Reading state information... The following extra packages will be installed: patch Suggested &hellip;">
+  <meta name="description" content="I have been searching the internet for a while to understand this expression ${0:h}. Finally here is an answer: info -f zsh -n Modifiers ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -121,7 +121,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/16/it-happens-too-often/">It Happens Too Often</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/21/switching-to-zsh/">Switching to Zsh</a></h1>
     
     
       <p class="meta">
@@ -137,80 +137,16 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-16T10:14:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
+<time datetime="2015-02-21T16:11:00+11:00" pubdate data-updated="true">Feb 21<span>st</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>The provisioning failed a few times this morning:</p>
+  <div class="entry-content"><p>I have been searching the internet for a while to understand this expression <code>${0:h}</code>. Finally here is an answer:</p>
 
-<pre><code>   Reading state information...
-   The following extra packages will be installed:
-     patch
-   Suggested packages:
-     diffutils-doc policykit-1
-   The following NEW packages will be installed:
-     patch update-notifier-common
-   0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
-   Need to get 248 kB of archives.
-   After this operation, 2,361 kB of additional disk space will be used.
-   Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main patch amd64 2.7.1-4ubuntu1
-     Could not resolve 'us.archive.ubuntu.com'
-   Err http://us.archive.ubuntu.com/ubuntu/ trusty/main update-notifier-common all 0.154.1
-     Could not resolve 'us.archive.ubuntu.com'
-   STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.1-4ubuntu1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-   E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/u/update-notifier/update-notifier-common_0.154.1_all.deb  Could not resolve 'us.archive.ubuntu.com'
-</code></pre>
-
-<p>But when I ping the server, it responds perfectly.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/16/setting-value-in-chef-cooking/">Setting Value in Chef Cooking</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-16T08:47:00+11:00" pubdate data-updated="true">Feb 16<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you set a variable this way in a cookbook:</p>
-
-<pre><code>node['mysqld']['root_password'] = 'password'
-</code></pre>
-
-<p>you will get this exception</p>
-
-<pre><code>   Chef::Exceptions::ImmutableAttributeModification
-   ------------------------------------------------
-   Node attributes are read-only when you do not specify which precedence level to set. To set an attribute use code like `node.default["key"] = "value"'
+<pre><code> info -f zsh -n Modifiers
 </code></pre>
 </div>
   
@@ -224,7 +160,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/15/solution-to-php-needs-version-number-problem/">Solution to Php Needs Version Number Problem</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/21/my-toastmaster-speech-3/">My Toastmaster Speech 3</a></h1>
     
     
       <p class="meta">
@@ -240,46 +176,59 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-15T19:09:00+11:00" pubdate data-updated="true">Feb 15<span>th</span>, 2015</time>
+<time datetime="2015-02-21T11:25:00+11:00" pubdate data-updated="true">Feb 21<span>st</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>I finally found a solution to <a href="/post/2015/02/15/chef-cookbook-php-needs-version-number">the &lsquo;No version specified, and no candidate version available for php&rsquo; problem</a></p>
+  <div class="entry-content"><h3>Remark</h3>
 
-<p>According to this <a href="http://askubuntu.com/questions/540423/libapache2-mod-php5-depends-php5-common">AskUbuntu answer</a>, I need to run the following command to add more repository</p>
+<p>The original cut (as shown in following) is considerably longer than what I have delivered finally. It is because, after timing myself, the text takes about 8 min to finish. So I have trimmed off part of the speech. The paradox: when I finally delivered it in front of the audience, it took 9 seconds short of 6 minutes. I have talked a lot faster during the speech.</p>
 
-<pre><code>    sudo add-apt-repository universe
-    sudo add-apt-repository multiverse
+<h3>Feedback</h3>
 
-    sudo apt-get update
-</code></pre>
+<ul>
+<li><p>Vocal variation</p></li>
+<li><p>The opening can be better</p></li>
+<li><p>What I have done right: the speech provided a vivid imagery.</p></li>
+</ul>
 
-<p>To resolve it in the Chef way, I need this in my recipe:</p>
 
-<pre><code> include_recipe "ubuntu"
-</code></pre>
+<h3>Text</h3>
 
-<p>The <code>ubuntu</code> recipe will replace the <code>/etc/apt/sources.list</code> with this content:</p>
+<p>Memory. I want to talk to you about memory today.</p>
 
-<pre><code>    #
-    # Ubuntu trusty - Generated by Chef
-    #
+<p>I have watched a seminar by an American World Memory Championship champion Chester Santos just a month ago. I would love to share his insight and tip with you.</p>
 
-    deb http://us.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
-    deb-src http://us.archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
+<p>But before I continue, let’s me give you a little challenge. Let me give a list of random words and see if you can remember it. OK? Here it is:</p>
 
-    deb http://us.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
-    deb-src http://us.archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
+<p><strong>Monkey, Iron, Rope, Kite, House, Paper, Shoe, Worm, Envelope, Pencil, River, Rock, Tree, Coin</strong></p>
 
-    #
-    # Security updates
-    #
-    deb http://security.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-    deb-src http://security.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
-</code></pre>
+<p>Did you get them all? Do you think you can recite the list both forward and backward? I will tell you how later in the talk.</p>
+
+<p>But first let me tell you about some common misunderstandings about memory.</p>
+
+<p>The first common one is: our memory get worse when we get older. It is easy to understand why we have this misconception. When we were young and studying in schools, we have to remember tons of information and get quizzed from time to time. After we leave school and get our first job, we again need to absorb massive amount of new information in order to do our job well. However it is typical that in later stage of our lives, when we settle into our roles, we do not need to learn and recall the same amount of new information anymore. Since we do not use our brain for memorisation, its ability to retain and recall data becomes worse. It is just like any muscle system in our body: lack of exercise will make them weak. But we usually draw a wrong conclusion: we think our memory deteriorated because we are getting old. It is simply not true. It is more a result of our life style. As a good counter example, in a World Memory Championship some years ago, there was a contestant from Malaysia who is in his 60s. Despite his age, he managed to remember all entries in an oxford dictionary AND the words position on a page AND the associated page numbers.</p>
+
+<p>Another misunderstanding is: it takes a special brain to memorise massive amount of data. Actually use of appropriate memory techniques will go a long way. Every one of us can master the techniques.</p>
+
+<p>We have actually a lot of untapped memory capacity such as visual and olfactory memory. Visual memory is extremely powerful: for example, we can remember faces we have come across years ago. If we can enlist the visual memory, we can store a lot of information in our brain. The key is that the images have to be exaggerated, crazy and unusual.</p>
+
+<p>It is very easy to understand why: lets say, out of nowhere, a big pink elephant break through those wall (points to far end), run across this room and then break this wall (points behind me) and escaped. I am sure 30 years from now, all of us will still recall every details of the episode and cannot stop talking about it.</p>
+
+<p>Do you still remember the list I throw at you at the beginning of this speech? It is actually an example used by the World Memory Championship Champion Chester Santos in his demonstration. So let do this  visual memory exercise together!</p>
+
+<p>First imagine a monkey who is happily running around and making some monkey sound. For some reason it finds a giant iron and he starts to dance around with the iron in his hand. On one end of iron it is attached to a rope. You can feel the rope and it feels rough. You look up the rope and you can see it is attached to a kite. Somehow the kite starts to fall and hit a house. The house is very special and is all covered by paper. Out of nowhere a  shoe appears and it walks on the papers and leave footprints all over the place.</p>
+
+<p>Then you notice there is a worm in the shoe. Try picture this. You want to take a closer look but the worn jumps out and get inside an envelope. Now a pencil appears and write all over the envelope. The pencil then jumps into a river and makes a big splash. The river is crashing up a rock. Near the rock there is a tree. And there is cheese growing up on the tree. Coins are shooting out from the cheese.</p>
+
+<p>Now you have a story. Now you have a picture. You can now easily recite the list of words: Monkey, Iron, Rope, Kite, House, Paper, Shoe, Worm, Envelope, Pencil, River, Rock, Tree, Coin. And you can go backward too. Do you try to it with me? Coin, Tree, Rock, River, Pencil, Envelope, Worm, Shoe, Paper, House, Kite, Rope, Iron, Monkey! Yes, you did it!</p>
+
+<p>In conclusion: 1) Your memory does not get worse because you get old. It gets worse because you do not use it enough. 2) Our brain does not hold as much data as you wish because you do not know how to tape into your visual memory.</p>
+
+<p>Thank You.</p>
 </div>
   
   
@@ -292,7 +241,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/15/chef-cookbook-php-needs-version-number/">Chef: No Version Specified, and No Candidate Version Available for Php</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/19/cannot-let-private-and-public-key-sit-in-the-same-folder-when-vagrant-up/">Don&#8217;t Let Private and Public Key Sit in the Same Folder When Vagrant Up</a></h1>
     
     
       <p class="meta">
@@ -308,129 +257,42 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-15T14:27:00+11:00" pubdate data-updated="true">Feb 15<span>th</span>, 2015</time>
+<time datetime="2015-02-19T16:39:00+11:00" pubdate data-updated="true">Feb 19<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>In my <code>recipes\default.rb</code>, I added a line</p>
+  <div class="entry-content"><p>The problem is this:</p>
 
-<pre><code>       package "php"
+<p><strong><code>vagrant</code> failed to provision a box after it is successfully created in aws ec2.</strong></p>
+
+<p>It reported:</p>
+
+<pre><code>     INFO ssh: SSH not up: #&lt;Vagrant::Errors::SSHAuthenticationFailed: SSH authentication failed! This is typically caused by the public/private
+     keypair for the SSH user not being properly set on the guest VM. Please
+     verify that the guest VM is setup with the proper public key, and that
+     the private key path for Vagrant is setup properly as well.&gt;
 </code></pre>
 
-<p>And this caused this exception:</p>
+<p>But if I do <code>vagrant ssh</code> I can login to the box with no problem.</p>
 
-<pre><code>       * No version specified, and no candidate version available for php
-       ================================================================================
-       Error executing action `install` on resource 'apt_package[php]'
-       ================================================================================
+<p>I have tried everything to get it to work. I have removed <code>rvm</code>, I have reinstalled <code>chefdk</code>, I have downgraded <code>vagrant</code>&hellip; None of them work.</p>
 
-       Chef::Exceptions::Package
-       -------------------------
-       No version specified, and no candidate version available for php
+<p>I studied the log message a bit closer and I found these lines:</p>
+
+<pre><code>     769 D, [2015-02-19T15:05:43.563478 #14537] DEBUG -- net.ssh.authentication.session[851208b0]: allowed methods: publickey
+     770 D, [2015-02-19T15:05:43.563564 #14537] DEBUG -- net.ssh.authentication.methods.none[85125400]: none failed
+     771 D, [2015-02-19T15:05:43.563650 #14537] DEBUG -- net.ssh.authentication.session[851208b0]: trying publickey
+     772 E, [2015-02-19T15:05:43.564057 #14537] ERROR -- net.ssh.authentication.key_manager[851256d0]: could not load public key file `/Users/antkong/dev/project/aws/aws-ami.pem': Net::SSH::Exception (public key at /Users/antkong/dev/project/aws/aws-ami.pem.pub is not valid)
 </code></pre>
 
-<p>I should use <code>package "php5"</code></p>
+<p>Apparently for some reason the key manager picked the public key file to connect to the server: I have specified a private key file in the <code>Vagrantfile</code>. The key manager added &lsquo;.pub&rsquo; to the file name and pick the file up.</p>
 
-<p>Now I am getting a different set of errors:</p>
+<p>Removing the public key file solved the issue.</p>
 
-<pre><code>       * apt_package[php5] action install
-
-       ================================================================================
-       Error executing action `install` on resource 'apt_package[php5]'
-       ================================================================================
-
-       Mixlib::ShellOut::ShellCommandFailed
-       ------------------------------------
-       Expected process to exit with [0], but received '100'
-       ---- Begin output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
-       STDOUT: Reading package lists...
-       Building dependency tree...
-       Reading state information...
-       The following extra packages will be installed:
-         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
-         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5-cli php5-common php5-json
-         php5-readline ssl-cert
-       Suggested packages:
-         www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom
-         apache2-utils php-pear php5-user-cache openssl-blacklist
-       The following NEW packages will be installed:
-         apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
-         libaprutil1-dbd-sqlite3 libaprutil1-ldap php5 php5-cli php5-common php5-json
-         php5-readline ssl-cert
-       0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
-       Need to get 6,137 kB of archives.
-       After this operation, 25.8 MB of additional disk space will be used.
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://us.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33
-         Could not resolve 'us.archive.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-bin amd64 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-data all 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2 amd64 2.4.7-1ubuntu4.1
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main libapache2-mod-php5 amd64 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5 all 5.5.9+dfsg-1ubuntu4.4
-         Could not resolve 'security.ubuntu.com'
-       STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr/libapr1_1.5.0-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/php-json/php5-json_1.3.2-2build1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-common_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-cli_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-   ntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-ldap_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-bin_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-data_2.4.7-1ubuntu4.1_all.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-       E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
-
-
-
-       E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/s/ssl-cert/ssl-cert_1.0.33_all.deb  Could not resolve 'us.archive.ubuntu.com'
-
-       E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-       ---- End output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
-       Ran apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 returned 100
-
-
-       ---------------------
-       # In /tmp/kitchen/cache/cookbooks/zeeting-analytics/recipes/default.rb
-
-         9: package "php5"
-</code></pre>
+<p><strong>Lesson</strong>: Don&rsquo;t put the public key along with the private key.</p>
 </div>
   
   
@@ -443,7 +305,7 @@ alt="hit counter"></a></div></noscript>
       
   <header>
     
-      <h1 class="entry-title"><a href="/post/2015/02/14/kitchen-converge-creates-two-vms/">Kitchen Converge Creates Two VMs</a></h1>
+      <h1 class="entry-title"><a href="/post/2015/02/18/chsh/">Chsh</a></h1>
     
     
       <p class="meta">
@@ -459,21 +321,69 @@ alt="hit counter"></a></div></noscript>
   
 
 
-<time datetime="2015-02-14T18:17:00+11:00" pubdate data-updated="true">Feb 14<span>th</span>, 2015</time>
+<time datetime="2015-02-18T05:22:00+11:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>It is because in .kitchen.yml, it contains these two lines:</p>
+  <div class="entry-content"><p>Unable to switch to zsh which is installed from brew</p>
 
-<pre><code>    platforms:
-      - name: ubuntu-12.04
-      - name: centos-6.5 
+<pre><code>    $ chsh -s `which zsh`
+    Changing shell for demo.
+    Password for demo:
+    chsh: /usr/local/bin/zsh: non-standard shell
 </code></pre>
 
-<p>I can either specify the partform every time I use the kitchen command or simply remove the platform that I do not need.</p>
+<p>Solution:</p>
+
+<p>Add <code>/usr/local/bin/zsh</code> to <code>/etc/shells</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/17/aws-dynamo-exception-400-bad-request/">AWS Dynamo Exception: 400 Bad Request</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-17T15:14:00+11:00" pubdate data-updated="true">Feb 17<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Getting this error from my server code which uses boto to interace with Dynamo</p>
+
+<pre><code>   [Mon Feb 16 07:25:22 2015] [error] JSONResponseError: JSONResponseError: 400 Bad Request
+   [Mon Feb 16 07:25:22 2015] [error] {u'message': u'Signature expired: 20150216T072522Z is now earlier than 20150216T07252
+   2Z (20150216T074022Z - 15 min.)', u'__type': u'com.amazon.coral.service#InvalidSignatureException'}
+</code></pre>
+
+<p>The server is a <strong>Window Server 2012 Standard</strong> box</p>
+
+<p>Reboot the box fixed the problem</p>
 </div>
   
   
@@ -498,23 +408,23 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/post/2015/03/16/partial-chef-template/">partial chef template</a>
+        <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/15/converge-failed-with-error-message-undefined-local-variable-or-method-xxx/">Converge failed with error message undefined local variable or method xxx</a>
+        <a href="/post/2015/03/24/toastmaster-speech-5/">toastmaster speech 5</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/13/xcode-exception/">XCode exception</a>
+        <a href="/post/2015/03/21/find-out-parent-of-an-webelement-in-selenium/">find out parent HTML element of a webelement in selenium</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/table-topic-master/">Table Topic Master</a>
+        <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
       </li>
     
       <li class="post">
-        <a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">drag and drop is bad for data center</a>
+        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>
