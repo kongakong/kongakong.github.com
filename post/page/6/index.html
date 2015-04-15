@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="Files are there but I cannot delete them $ sudo ls /etc/sensu/conf.d/handlers email.json handler.json hipchat.json $ sudo rm /etc/sensu/conf.d/ &hellip;">
+  <meta name="description" content="I encountered two issues when I want to deploy the hipchat notification handler. Firstly it throws an exception of &lsquo;Connection refused&rsquo;. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,72 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/02/28/how-to-get-sensu-hipchat-plugin-to-work/">How to Get Sensu Hipchat Plugin to Work</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-28T18:55:00+11:00" pubdate data-updated="true">Feb 28<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I encountered two issues when I want to deploy the hipchat notification handler.</p>
+
+<p>Firstly it throws an exception of &lsquo;Connection refused&rsquo;. But api.hipchat.com is reachable. I have verified by running <code>curl</code> against the v2 api.</p>
+
+<pre><code>    $ cat /tmp/t.json |sudo /opt/sensu/embedded/bin/ruby  /etc/sensu/handlers/notification/hipchat.rb -j /etc/sensu
+    /handlers/notification/hipchat.json
+    /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `initialize': Connection refused - connect(2) (Errno::ECONNREFUSED)
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `open'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:878:in `block in connect'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:52:in `timeout'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:877:in `connect'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:862:in `do_start'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:851:in `start'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/net/http.rb:1367:in `request'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:85:in `api_request'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:120:in `stash_exists?'
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:132:in `block (2 levels) in filter_silenced'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:66:in `timeout'
+            from /opt/sensu/embedded/lib/ruby/2.0.0/timeout.rb:97:in `timeout'
+</code></pre>
+
+<p>It turns out all sensu plugin has a dependeny on the sensu api. I did not start the sensu api when I tested, and hence the exception.</p>
+
+<p>Then I got a json config file related problem:</p>
+
+<pre><code>    $ cat /tmp/t.json |sudo /opt/sensu/embedded/bin/ruby  /etc/sensu/handlers/notification/hipchat.rb -j /handlers/notification/hipchat.json
+    /etc/sensu/handlers/notification/hipchat.rb:44:in `handle': undefined method `[]' for nil:NilClass (NoMethodError)
+            from /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/sensu-plugin-1.1.0/lib/sensu-handler.rb:55:in `block in &lt;class:Handler&gt;'
+</code></pre>
+
+<p><code>-j</code> does not work as I expected. The script actually expects the .json configuration in the /opt/sensu/conf.d</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -331,58 +397,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/02/26/gem-install-hipchat/">Gem Install Hipchat Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-26T22:45:00+11:00" pubdate data-updated="true">Feb 26<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre><code>    Fetching: json-1.8.2.gem (100%)
-    Building native extensions.  This could take a while...
-    ERROR:  Error installing hipchat:
-            ERROR: Failed to build gem native extension.
-
-        /opt/sensu/embedded/bin/ruby extconf.rb
-    creating Makefile
-
-    make "DESTDIR="
-    compiling generator.c
-    make: gcc: Command not found
-    make: *** [generator.o] Error 127
-
-
-    Gem files will remain installed in /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2 for inspection.
-    Results logged to /opt/sensu/embedded/lib/ruby/gems/2.0.0/gems/json-1.8.2/ext/json/ext/generator/gem_make.out
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/7/">&larr; Older</a>
@@ -400,6 +414,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/04/15/sensu-checklog-issue/">sensu checklog issue</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
@@ -413,10 +431,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

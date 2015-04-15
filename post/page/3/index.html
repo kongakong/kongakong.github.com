@@ -9,8 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="I just drag and drop some files to a remote server. However the drop off destination is a batch file because it is where the mouse cursor moved to. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -116,6 +115,42 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/12/drag-and-drop-is-bad-for-data-center/">Drag and Drop Is Bad for Data Center</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-12T05:02:00+11:00" pubdate data-updated="true">Mar 12<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I just drag and drop some files to a remote server. However the drop off destination is a batch file because it is where the mouse cursor moved to. At the end the batch is executed, rather than files being copying.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -336,59 +371,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/06/ruby-gem-ssl-problem/">Ruby Gem Ssl Problem</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-06T15:08:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Gem install can throw a ssl exception. This is a <a href="http://stackoverflow.com/a/27298259/58129">solution on Stackoverflow</a></p>
-
-<p>Summary of the remedy:</p>
-
-<p><strong>1. Download</strong></p>
-
-<pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
-</code></pre>
-
-<p><strong>2. Find out installation location</strong></p>
-
-<pre><code>    C:\&gt;gem which rubygems
-    C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
-</code></pre>
-
-<p><strong>3. Install the file</strong></p>
-
-<p>Then just copy the .pem file into <code>../2.1.0/rubygems/ssl_certs/</code></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/4/">&larr; Older</a>
@@ -406,6 +388,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/04/15/sensu-checklog-issue/">sensu checklog issue</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
@@ -419,10 +405,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>

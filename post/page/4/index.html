@@ -9,7 +9,7 @@
   <meta name="author" content="Anthony Kong">
 
   
-  <meta name="description" content="My cygwin does not have wget or curl preinstalled. So to download a file from internet I do lynx -source url &gt; file.txt ">
+  <meta name="description" content="Gem install can throw a ssl exception. This is a solution on Stackoverflow Summary of the remedy: 1. Download https://raw.githubusercontent.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,6 +115,59 @@ alt="hit counter"></a></div></noscript>
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/post/2015/03/06/ruby-gem-ssl-problem/">Ruby Gem Ssl Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-06T15:08:00+11:00" pubdate data-updated="true">Mar 6<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Gem install can throw a ssl exception. This is a <a href="http://stackoverflow.com/a/27298259/58129">solution on Stackoverflow</a></p>
+
+<p>Summary of the remedy:</p>
+
+<p><strong>1. Download</strong></p>
+
+<pre><code>https://raw.githubusercontent.com/rubygems/rubygems/master/lib/rubygems/ssl_certs/AddTrustExternalCARoot-2048.pem
+</code></pre>
+
+<p><strong>2. Find out installation location</strong></p>
+
+<pre><code>    C:\&gt;gem which rubygems
+    C:/Ruby21/lib/ruby/2.1.0/rubygems.rb
+</code></pre>
+
+<p><strong>3. Install the file</strong></p>
+
+<p>Then just copy the .pem file into <code>../2.1.0/rubygems/ssl_certs/</code></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -310,53 +363,6 @@ alt="hit counter"></a></div></noscript>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/post/2015/03/03/prevent-failed-task-stops-provisioning/">Prevent Failed Task Stops Provisioning</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-03-03T08:50:00+11:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I mentioned eariler I have ecountered problem when installing some gem like <a href="/post/2015/02/26/gem-install-hipchat">this</a></p>
-
-<p>Here is a way to prevent failure stops the chef provision: use <strong>ignore_failure</strong></p>
-
-<pre><code>      gem_package "mail" do
-        gem_binary '/opt/sensu/embedded/bin/gem'
-        ignore_failure true
-        action :install
-      end
-</code></pre>
-
-<p>You can always go back and reinstall the gem later. You don&rsquo;t want to 10 to 20 min provisioning exercise aborted due to a temporay ruby gem installation issue.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/post/page/5/">&larr; Older</a>
@@ -374,6 +380,10 @@ alt="hit counter"></a></div></noscript>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/post/2015/04/15/sensu-checklog-issue/">sensu checklog issue</a>
+      </li>
+    
+      <li class="post">
         <a href="/post/2015/03/26/package-dot-el-and-projectile/">package.el and projectile</a>
       </li>
     
@@ -387,10 +397,6 @@ alt="hit counter"></a></div></noscript>
     
       <li class="post">
         <a href="/post/2015/03/21/cats-and-mice/">cats and mice by Tommy Douglas</a>
-      </li>
-    
-      <li class="post">
-        <a href="/post/2015/03/18/install-cocoapod-plugin/">install cocoapod plugin</a>
       </li>
     
   </ul>
