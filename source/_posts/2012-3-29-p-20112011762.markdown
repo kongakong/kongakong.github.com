@@ -3,21 +3,12 @@ layout: post
 title: "Convolution"
 date: 2012-03-29 22:00
 comments: true
-categories: 
+categories: convolution bookmark 
 ---
 
 
 
 
-[http://en.wikipedia.org/wiki/Convolution_(computer_science)](Definition of Convolution)
-
-
-An example in numpy
-
-
-
-
-Given
-
+[Definition of Convolution](http://en.wikipedia.org/wiki/Convolution_(computer_science\))
 
 

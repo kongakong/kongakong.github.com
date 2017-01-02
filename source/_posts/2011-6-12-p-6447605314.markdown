@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "Installing ``erlang`` on a ubuntu 10.10 instance"
+title: "Install erlang on a ubuntu 10.10 instance"
 date: 2011-06-12 18:27
 comments: true
 categories: erlang ubuntu
 ---
 
-Installing ``erlang`` on a ubuntu 10.10 instance
+Installing `erlang` on a ubuntu 10.10 instance
 
 A snapshot of dependencies:
 
-```
-
+{% codeblock %}
 
 akong@vb-ubuntu-01:~$ sudo apt-get install erlang
 [sudo] password for akong: 
@@ -36,6 +35,6 @@ The following NEW packages will be installed:
 Need to get 18.0MB of archives.
 After this operation, 82.5MB of additional disk space will be used.
 
+{% endcodeblock %}
 
-```
 

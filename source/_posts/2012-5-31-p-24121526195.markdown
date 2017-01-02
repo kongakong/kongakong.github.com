@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Wanted to use ``MPMoviePlayerViewController`` but really don’t know how to use ``initWithContentURL`` in the context of ``prepareForSegue``"
+title: "MPMoviePlayerViewController"
 date: 2012-05-31 19:15
 comments: true
 categories: 

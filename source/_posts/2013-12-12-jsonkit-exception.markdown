@@ -1,0 +1,44 @@
+---
+layout: post
+title: "JSONKit exception"
+date: 2013-12-12 06:59
+comments: true
+categories: objective-c JSONKit 
+---
+Trying to convert a JSON list into an NSArray. Apparently the object instance does not support the selector  `objectFromJSONString`. It is my misunderstanding of how the JSONKit APIs are used
+
+
+{% codeblock %}
+2013-12-12 02:05:11.989 Questions[9190:70b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[JKArray objectFromJSONString]: unrecognized selector sent to instance 0x109318370'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0000000101b59795 __exceptionPreprocess + 165
+	1   libobjc.A.dylib                     0x00000001018bc991 objc_exception_throw + 43
+	2   CoreFoundation                      0x0000000101beabad -[NSObject(NSObject) doesNotRecognizeSelector:] + 205
+	3   CoreFoundation                      0x0000000101b4b09d ___forwarding___ + 973
+	4   CoreFoundation                      0x0000000101b4ac48 _CF_forwarding_prep_0 + 120
+	5   Questions                           0x0000000100003b14 -[QueQuestionManager convertJsonIntoQuestionnaire:] + 804
+	6   Questions                           0x000000010000404b -[QueQuestionManager connectionDidFinishLoading:] + 203
+	7   Foundation                          0x0000000100467e9b __65-[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:]_block_invoke + 48
+	8   Foundation                          0x000000010031b6ab -[NSURLConnectionInternal _withConnectionAndDelegate:onlyActive:] + 210
+	9   Foundation                          0x000000010031b5bc -[NSURLConnectionInternal _withActiveConnectionAndDelegate:] + 69
+	10  CFNetwork                           0x000000010347a777 ___ZN27URLConnectionClient_Classic26_delegate_didFinishLoadingEU13block_pointerFvvE_block_invoke + 107
+	11  CFNetwork                           0x0000000103478942 ___ZN27URLConnectionClient_Classic18_withDelegateAsyncEPKcU13block_pointerFvP16_CFURLConnectionPK33CFURLConnectionClientCurrent_VMaxE_block_invoke_2 + 84
+	12  CFNetwork                           0x00000001034bbf74 ___ZNK17CoreSchedulingSet13_performAsyncEPKcU13block_pointerFvvE_block_invoke + 25
+	13  CoreFoundation                      0x0000000101b00114 CFArrayApplyFunction + 68
+	14  CFNetwork                           0x00000001033ebbeb _ZN19RunloopBlockContext7performEv + 115
+	15  CFNetwork                           0x00000001033eba31 _ZN17MultiplexerSource7performEv + 247
+	16  CFNetwork                           0x00000001033eb854 _ZN17MultiplexerSource8_performEPv + 72
+	17  CoreFoundation                      0x0000000101ae8ec1 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+	18  CoreFoundation                      0x0000000101ae8792 __CFRunLoopDoSources0 + 242
+	19  CoreFoundation                      0x0000000101b0461f __CFRunLoopRun + 767
+	20  CoreFoundation                      0x0000000101b03f33 CFRunLoopRunSpecific + 467
+	21  GraphicsServices                    0x000000010382f3a0 GSEventRunModal + 161
+	22  UIKit                               0x0000000100987043 UIApplicationMain + 1010
+	23  Questions                           0x0000000100003653 main + 115
+	24  libdyld.dylib                       0x00000001021e85fd start + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+
+
+{% endcodeblock %}

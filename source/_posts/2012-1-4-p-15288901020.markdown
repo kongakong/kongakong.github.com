@@ -6,10 +6,11 @@ comments: true
 categories: osx python gcc llvm llvm-gcc
 ---
 
-```
+{% codeblock %}
 
 $ ./python.exe -SE -m sysconfig --generate-posix-vars
 Fatal Python error: Py_Initialize: can't initialize sys standard streams
 Traceback (most recent call last):
   File "/Users/antkong/wd/python.project/cpython/Lib/io.py", line 60, in 
 
+{% endcodeblock %}

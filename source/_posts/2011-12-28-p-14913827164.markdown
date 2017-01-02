@@ -9,7 +9,10 @@ categories: osx autoconf
 Oops
 
 
-``
+    $ autoconf
+    configure.in:8: error: Autoconf version 2.65 or higher is required
+    configure.in:8: the top level
+    autom4te: /usr/bin/gm4 failed with exit status: 63
 
 
 The version of autoconf in both ``brew`` and ``/Developer`` are 2.61

@@ -6,19 +6,32 @@ comments: true
 categories: python hg mercurial
 ---
 
-````
+{% codeblock %}
+$ hg pull
+pulling from http://hg.python.org/cpython
+searching for changes
+adding changesets
+adding manifests
+adding file changes
+added 3265 changesets with 6204 changes to 1117 files
+(run ‘hg update’ to get a working copy)
+
+$ hg summary
+parent: 70924:d1d5a7392e39 
+(merge 3.2) Issue #12383: skip test_empty_env() if compiled is compiled in
+branch: default
+commit: 3 unknown (clean)
+update: 2705 new changesets (update)
+
+$ hg update
+991 files updated, 0 files merged, 12 files removed, 0 files unresolved
+
+$ hg summary
+parent: 74189:456b02030100 tip
+don’t fail if CLOEXEC doesn’t exist
+branch: default
+commit: 3 unknown (clean)
+update: (current)
 
 
-_$ hg pull_
-
-[http://hg.python.org/cpython](http://hg.python.org/cpython)
-
-
-_$ hg summary_
-
-
-_$ hg update_
-
-
-_$ hg summary_
-
+{% endcodeblock %}

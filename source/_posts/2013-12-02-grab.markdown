@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Grab"
+date: 2013-12-02 08:10
+comments: true
+categories: 
+---
+
+The built-in screen capture app grab... Why it only allows saving in tiff format?
+
+{% img center /images/grab.png 460 175  %}
+
+Severly reduce its usefulness

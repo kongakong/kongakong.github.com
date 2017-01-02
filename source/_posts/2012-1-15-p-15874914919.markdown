@@ -7,13 +7,12 @@ categories: osx gcc python llvm
 ---
 
 
-It is a follow-up on 
+It is a follow-up on a previous problem.
 
 
 
 Turns out this problem has been reported to python bug database: 
 
-[http://bugs.python.org/issue13241](None)
 
 [http://bugs.python.org/issue13241](http://bugs.python.org/issue13241)
 
@@ -23,9 +22,10 @@ The llvm gcc compiler that comes with XCode 4.x is causing the problem.
 
 
 
+Do
 
-Do 
+    CC=gcc-4.2; ./configure
 
 
-
+will fix the issue.
 

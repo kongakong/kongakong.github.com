@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Apparently there are a lot of possibility in clever use of ``addSubView:`` method of UIView. Need to find out more"
+title: "[UIView addSubView:subview]"
 date: 2011-04-19 09:15
 comments: true
 categories: objective-c

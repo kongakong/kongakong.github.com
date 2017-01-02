@@ -1,12 +1,92 @@
 ---
 layout: post
-title: "https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J"
+title: Learn something about dis
 date: 2011-08-16 22:56
 comments: true
 categories: python
 ---
-[https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J](https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J)
 
 
-Learn something about ``import dis`` from this post
+Classes have a special opcode, LOAD_NAME, that allows for
+
+{% codeblock lang:python %}
+>>> x = 42
+>>> class A:
+...     x = x
+...
+>>> A.x
+42
+{% endcodeblock %}
+
+which would fail in a function
+
+{% codeblock  lang:python %}
+>>> def f():
+...     x = x
+...
+>>> f()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f
+UnboundLocalError: local variable 'x' referenced before assignment
+{% endcodeblock %}
+
+
+LOAD_NAME is pretty dumb, it looks into the local namespace and if that 
+lookup fails falls back to the global namespace. Someone probably thought "I 
+can do better", and reused the static name lookup for nested functions for 
+names that occur only on the right-hand side of assignments in a class.
+
+
+{% codeblock  lang:python %}
+>>> x = "global"                                                      
+>>> def foo():                                                        
+...     x = "local"                                                   
+...     class A:                                                      
+...             x = x                                                 
+...     return A                                                      
+...                                                                   
+>>> def bar():                                                        
+...     x = "local"                                                   
+...     class A:                                                      
+...             y = x                                                 
+...     return A                                                      
+...                                                                   
+>>> foo().x
+'global'   
+>>> bar().y
+'local'    
+{% endcodeblock %}
+
+
+Now let's have a glimpse at the bytecode:
+
+{% codeblock  lang:python %}
+>>> import dis
+>>> foo.func_code.co_consts
+(None, 'local', 'A', <code object A at 0x7ffe311bdb70, file "<stdin>", line 
+3>, ())
+>>> dis.dis(foo.func_code.co_consts[3])
+  3           0 LOAD_NAME                0 (__name__)
+              3 STORE_NAME               1 (__module__)
+
+  4           6 LOAD_NAME                2 (x)
+              9 STORE_NAME               2 (x)
+             12 LOAD_LOCALS                   
+             13 RETURN_VALUE                  
+>>> bar.func_code.co_consts      
+(None, 'local', 'A', <code object A at 0x7ffe311bd828, file "<stdin>", line 
+3>, ())
+>>> dis.dis(bar.func_code.co_consts[3])
+  3           0 LOAD_NAME                0 (__name__)
+              3 STORE_NAME               1 (__module__)
+
+  4           6 LOAD_DEREF               0 (x)
+              9 STORE_NAME               2 (y)
+             12 LOAD_LOCALS                   
+             13 RETURN_VALUE                  
+{% endcodeblock %}
+
+
+[Source](https://groups.google.com/forum/#!msg/comp.lang.python/nEQ11W_ewVI/EldRwaOIeN8J)
 

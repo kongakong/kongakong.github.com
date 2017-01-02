@@ -8,10 +8,23 @@ categories: osx brew erlang
 
 Tried to install erlang. Got this error message
 
-```
 
-$ brew install erlang
-==> Downloading 
+    $ brew install erlang
+    ==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz
+    ######################################################################## 100.0%
+    ==> Pouring erlang-R14B04.bottle.tar.gz
+    ln: liberts_r.a: Permission denied
+    Error: The linking step did not complete successfully
+    The formula built, but is not symlinked into /usr/local
+    You can try again using `brew link erlang'
+    ==> Summary
+    /usr/local/Cellar/erlang/R14B04: 6978 files, 261M
 
-[https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz](https://downloads.sf.net/project/machomebrew/Bottles/erlang-R14B04-bottle.tar.gz)
+Tried the following but did not work
 
+    $ brew cleanup erlang; brew unlink erlang; brew link erlang
+    Removing /usr/local/Cellar/erlang/R14B02...
+    Removing /usr/local/Cellar/erlang/R14B03...
+    Unlinking /usr/local/Cellar/erlang/R14B04... Error: Permission denied - /usr/local/lib/erlang/bin/epmd
+
+sudo unlink and link fixed the issue finally

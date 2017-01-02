@@ -9,9 +9,16 @@ categories:
 
 My app crashed for no reason.
 
+Turns out it is my mistake: 
 
+{% codeblock lang:objc %}
+    [self.view.addSublayer:myLayer];
+    [myLayer dealloc];
+{% endcodeblock %}
 
+when I mean to do it
 
-Turns out I did it 
-
-
+{% codeblock lang:objc %}
+    [self.view.addSublayer:myLayer];
+    [myLayer release];
+{% endcodeblock %}

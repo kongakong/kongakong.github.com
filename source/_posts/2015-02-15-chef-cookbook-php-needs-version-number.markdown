@@ -1,0 +1,122 @@
+---
+layout: post
+title: "chef: No version specified, and no candidate version available for php"
+date: 2015-02-15 14:27
+comments: true
+categories: chef php ubuntu
+---
+
+In my `recipes\default.rb`, I added a line
+
+           package "php"
+
+And this caused this exception:
+
+           * No version specified, and no candidate version available for php
+           ================================================================================
+           Error executing action `install` on resource 'apt_package[php]'
+           ================================================================================
+
+           Chef::Exceptions::Package
+           -------------------------
+           No version specified, and no candidate version available for php
+
+I should use `package "php5"`
+
+Now I am getting a different set of errors:
+
+           * apt_package[php5] action install
+
+           ================================================================================
+           Error executing action `install` on resource 'apt_package[php5]'
+           ================================================================================
+
+           Mixlib::ShellOut::ShellCommandFailed
+           ------------------------------------
+           Expected process to exit with [0], but received '100'
+           ---- Begin output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
+           STDOUT: Reading package lists...
+           Building dependency tree...
+           Reading state information...
+           The following extra packages will be installed:
+             apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
+             libaprutil1-dbd-sqlite3 libaprutil1-ldap php5-cli php5-common php5-json
+             php5-readline ssl-cert
+           Suggested packages:
+             www-browser apache2-doc apache2-suexec-pristine apache2-suexec-custom
+             apache2-utils php-pear php5-user-cache openssl-blacklist
+           The following NEW packages will be installed:
+             apache2 apache2-bin apache2-data libapache2-mod-php5 libapr1 libaprutil1
+             libaprutil1-dbd-sqlite3 libaprutil1-ldap php5 php5-cli php5-common php5-json
+             php5-readline ssl-cert
+           0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+           Need to get 6,137 kB of archives.
+           After this operation, 25.8 MB of additional disk space will be used.
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libapr1 amd64 1.5.0-1
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1 amd64 1.5.3-1
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty/main php5-json amd64 1.3.2-2build1
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty-updates/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-dbd-sqlite3 amd64 1.5.3-1
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty/main libaprutil1-ldap amd64 1.5.3-1
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://us.archive.ubuntu.com/ubuntu/ trusty/main ssl-cert all 1.0.33
+             Could not resolve 'us.archive.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-common amd64 5.5.9+dfsg-1ubuntu4.4
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-cli amd64 5.5.9+dfsg-1ubuntu4.4
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5-readline amd64 5.5.9+dfsg-1ubuntu4.4
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-bin amd64 2.4.7-1ubuntu4.1
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2-data all 2.4.7-1ubuntu4.1
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main apache2 amd64 2.4.7-1ubuntu4.1
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main libapache2-mod-php5 amd64 5.5.9+dfsg-1ubuntu4.4
+             Could not resolve 'security.ubuntu.com'
+           Err http://security.ubuntu.com/ubuntu/ trusty-security/main php5 all 5.5.9+dfsg-1ubuntu4.4
+             Could not resolve 'security.ubuntu.com'
+           STDERR: E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr/libapr1_1.5.0-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+           E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+           E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/p/php-json/php5-json_1.3.2-2build1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+           E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-common_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+           E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-cli_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+       ntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+           E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-dbd-sqlite3_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+           E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/a/apr-util/libaprutil1-ldap_1.5.3-1_amd64.deb  Could not resolve 'us.archive.ubuntu.com'
+
+           E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-bin_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+           E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2-data_2.4.7-1ubuntu4.1_all.deb  Could not resolve 'security.ubuntu.com'
+
+           E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/a/apache2/apache2_2.4.7-1ubuntu4.1_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+           E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.4_amd64.deb  Could not resolve 'security.ubuntu.com'
+
+
+
+           E: Failed to fetch http://us.archive.ubuntu.com/ubuntu/pool/main/s/ssl-cert/ssl-cert_1.0.33_all.deb  Could not resolve 'us.archive.ubuntu.com'
+
+           E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+           ---- End output of apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 ----
+           Ran apt-get -q -y install php5=5.5.9+dfsg-1ubuntu4.4 returned 100
+
+
+           ---------------------
+           # In /tmp/kitchen/cache/cookbooks/zeeting-analytics/recipes/default.rb
+
+             9: package "php5"
+

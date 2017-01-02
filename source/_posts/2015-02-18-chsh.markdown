@@ -1,0 +1,18 @@
+---
+layout: post
+title: "chsh"
+date: 2015-02-18 05:22
+comments: true
+categories: osx zsh 
+---
+
+Unable to switch to zsh which is installed from brew
+
+        $ chsh -s `which zsh`
+        Changing shell for demo.
+        Password for demo:
+        chsh: /usr/local/bin/zsh: non-standard shell
+
+Solution: 
+
+Add `/usr/local/bin/zsh` to `/etc/shells`

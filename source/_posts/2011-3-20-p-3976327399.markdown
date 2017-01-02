@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "One difference between ``git clone`` and ``git pull``: ``git pull`` will require a pre-existing .git."
+title: Difference between git clone and git pull
 date: 2011-03-20 18:00
 comments: true
-categories: 
+categories: git 
 ---
 
-One difference between ``git clone`` and ``git pull``: ``git pull`` will require a pre-existing .git.
+One difference between `git clone` and `git pull`: `git pull` will require a pre-existing .git.
 
 
-If I need to check out the source code for the first time, use of ``git pull`` is certainly not the right command.
+If I need to check out the source code for the first time, use of `git pull` is certainly not the right command.
 

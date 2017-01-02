@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Ex 2.1"
+date: 2014-08-27 10:02
+comments: true
+categories: functional data structure erlang 
+---
+
+
+**Exercise 2.1** Write a function suffixes of type a list -> a list of list that takes a list xs and returns a list of all the suffixes of xs in decreasing order of length. For example,
+
+    suffixes [1,2,3,4] = [[1,2,3,4], [2,3,4], [3,4], [4], [ ] ]
+
+Show that the resulting list of suffixes can be generated in O(n) time and represented in O(n) space.
+
+
+{% codeblock lang:erlang %}
+
+-module(e2_1).
+
+-export([suffixes/1]).
+
+suffixes(L) -> suffixes(L, []).
+
+suffixes([H|T], R)  
+    -> suffixes(T, [[H|T]|R]);
+suffixes([], R) -> lists:reverse([[]|R]).
+
+
+{% endcodeblock %}

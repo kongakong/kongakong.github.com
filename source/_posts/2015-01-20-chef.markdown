@@ -1,0 +1,13 @@
+---
+layout: post
+title: "chef, brekshelf and data bag"
+date: 2015-01-20 14:41
+comments: true
+categories: vagrant chef chef-zero chef-solo berkshelf
+---
+
+After some trial and errors, the best way (as of this writing) to manage cookbooks for **vagrant** + **chef** is to use brekshef. You can forget about `knife` or `librarian-chef`.
+
+If you use berkshelf with vagrant, you will need to install the vagrant-berkshelf plugin. The plugin is quite clever and you do not need to specify the cookbook path for your chef-solo or chef-zero provisioner. 
+
+However it does not apply to `data_bags`. You will still need to specify the path to `data_bags` if you need to use data bag.

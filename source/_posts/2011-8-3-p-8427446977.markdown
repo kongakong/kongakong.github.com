@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "There are sTILl a lot to like about lion. e.g. when I run ‘mvn’, it failed because no java runtime is found on my MBP. Immediately a window pops up and asked if I want to download java. A software update dialog appears and java is installed."
+title: Lion
 date: 2011-08-03 23:50
 comments: true
-categories: 
+categories: osx lion 
 ---
 
-There are sTILl a lot to like about lion. e.g. when I run ‘mvn’, it failed because no java runtime is found on my MBP. Immediately a window pops up and asked if I want to download java. A software update dialog appears and java is installed.
+There is a lot to like about lion. e.g. when I run `mvn`, it failed because no java runtime is found on my MBP. Immediately a window pops up and asked if I want to download java. A software update dialog appears and java is installed.
 

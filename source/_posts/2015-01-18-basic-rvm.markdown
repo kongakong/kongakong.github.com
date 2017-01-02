@@ -1,0 +1,44 @@
+---
+layout: post
+title: "basic rvm"
+date: 2015-01-18 15:53
+comments: true
+categories: ruby
+---
+
+It is impossible not to learn `ruby` these days. It is used everywhere: ruby powers `octopress`, `chef` and many other popular software.
+
+
+Here is some basic `rvm` command:
+
+
+    $ rvm list
+    
+    rvm rubies
+    
+       ruby-1.9.3-p484 [ x86_64 ]
+       ruby-1.9.3-p551 [ x86_64 ]
+    =* ruby-2.2.0 [ x86_64 ]
+    
+    # => - current
+    # =* - current && default
+    #  * - default
+    
+    
+    $ rvm use 2.2.0
+    Using /Users/antkong/.rvm/gems/ruby-2.2.0
+    
+    $ bundle install
+    bash: bundle: command not found
+
+    $ gem install bundle
+    Fetching: bundler-1.7.12.gem (100%)
+    Successfully installed bundler-1.7.12
+    Fetching: bundle-0.0.1.gem (100%)
+    Successfully installed bundle-0.0.1
+    Parsing documentation for bundler-1.7.12
+    Installing ri documentation for bundler-1.7.12
+    Parsing documentation for bundle-0.0.1
+    Installing ri documentation for bundle-0.0.1
+    Done installing documentation for bundler, bundle after 1 seconds
+    2 gems installed 

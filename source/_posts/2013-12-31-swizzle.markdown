@@ -1,0 +1,17 @@
+---
+layout: post
+title: "swizzle"
+date: 2013-12-31 07:21
+comments: true
+categories: objective-c 
+---
+
+A new concept to me: http://stackoverflow.com/questions/20775670/set-ivar-value-from-category
+
+Here is a summary:
+
+{% codeblock lang:objective-c %}
+    original = class_getInstanceMethod([ClassA class], @selector(setImportantProperty:));
+    swizzled = class_getInstanceMethod([ClassA class], @selector(alternative_setImportantProperty:)); 
+    method_exchangeImplementations(original, swizzled);
+{% endcodeblock %}`

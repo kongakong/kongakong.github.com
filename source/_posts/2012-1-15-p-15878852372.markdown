@@ -7,6 +7,10 @@ categories:
 ---
 
 
-Python 3.3 build missing package
+Python 3.3 build missing packages:
+
+    Python build finished, but the necessary bits to build these modules were not found:
+    _lzma              ossaudiodev        readline        
+    spwd  
 
 

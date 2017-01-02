@@ -1,29 +1,21 @@
 ---
 layout: post
-title: "Taken from"
+title: Higher order function in erlang
 date: 2011-05-13 23:38
 comments: true
 categories: 
 ---
 
 
-Taken from 
-
-[http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf](Lecture 2)
-
+Taken from [Lecture 2](http://www.cs.caltech.edu/courses/cs11/material/erlang/lectures/cs11-erl-lec2.pdf)
 
 
 `` math`` module contains a ``sqrt`` function, but 
-canât pass it as an argument.
+can't pass it as an argument.  Module functions aren't higher-order function.
 
 
+Instead, we can wrap it with a `fun`:
 
-
-Module functions arenât higher-order function.
-
-
-
-
-Instead, we can wrap it with a _fun_
-
+    1> lists:map(fun math:sqrt/1, [9, 16, 25]). 
+    [3.00000,4.00000,5.00000] 
 

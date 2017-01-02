@@ -1,0 +1,16 @@
+---
+layout: post
+title: "ngTouch"
+date: 2014-09-04 16:11
+comments: true
+categories: ngTouch angularjs 
+---
+
+
+To introduce touch behaviour in angularjs-enabled mobile app, try this:
+
+
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    angular.module('myApp', ['ngTouch']) 
+
+

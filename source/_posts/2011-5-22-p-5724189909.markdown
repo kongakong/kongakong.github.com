@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Note to self: cannot add ivar to a category @interface"
+title: "Cannot add ivar to a category @interface"
 date: 2011-05-22 16:31
 comments: true
 categories: objective-c

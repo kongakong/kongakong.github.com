@@ -1,0 +1,28 @@
+---
+layout: post
+title: opam install log
+date: 2014-07-06 21:03
+comments: true
+categories: opam
+---
+
+Adding a repository for ocaml
+
+{% codeblock %}
+precise32:~$ sudo add-apt-repository ppa:avsm/ppa
+You are about to add the following PPA to your system:
+ Latest stable versions of OCaml and OPAM.
+ More info: https://launchpad.net/~avsm/+archive/ppa
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+
+gpg: keyring `/tmp/tmpU270CK/secring.gpg' created
+gpg: keyring `/tmp/tmpU270CK/pubring.gpg' created
+gpg: requesting key 61707B09 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpU270CK/trustdb.gpg: trustdb created
+gpg: key 61707B09: public key "Launchpad PPA for Anil Madhavapeddy" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+
+{% endcodeblock %}

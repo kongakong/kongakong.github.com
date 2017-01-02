@@ -1,0 +1,65 @@
+---
+layout: post
+title: "Table Topic Master"
+date: 2015-03-12 09:03
+comments: true
+categories: table topic master toastmaster table-topic
+---
+
+## Table Topic
+
+Thanks Chair.
+
+Dear fellow toastmasters and guest. Welcome to our table topic segment 
+
+Table Topic is about impromptu speaking. I will invite 8 of us to come forward and speak to us on the spot for 1 min, on topic I will reveal just before you’re picked. 
+
+
+
+The purpose of the table topic is to help us to develop our ability to organize our thoughts quickly and respond to an impromptu question or topic. That’s why we don’t want the Table Topic participant to just ramble for a minute, just saying one word after another. 
+
+
+
+In fact, a good table topic should appear well-organised. It should have an opening, a body and a conclusion.  
+
+
+
+You will have a minute of time to give your speech. The ember light will come on at 45sec. The red will come on at 1 minute. If you hit the one minute mark, I’d appreciate if you can wrap up immediately. It is because in a real TT contest, overtime will result in disqualification. We also want to keep the meeting time under control.
+
+
+
+
+For the even number speakers we will have [XXX] as the evaluator. For the odd number speakers we will have [YYY] as the evaluator.
+
+
+Without further ado, let’s start!
+
+
+The theme of tonight’s Table Topic: What will you do if you receive an unexpected fortune? I will give you different scenario and let see how you will handle it.
+
+Situation number one: You are one lucky Toastmaster. You stumbled upon a genie in a bottle and you have released it from years of confinement. He can grant you a wish, but you have to choose between one of these two choices: Stay young forever or have abundant wealth. How would you choose? [Stay young forever or have abundant wealth]  
+
+
+2. Look like we have yet another lucky toastmaster. Another TM stumbled upon a genie in a bottle. Unfortunately this genie’s power is bit limited. You are given two choices again, but they are: to become a boss of a bottle shop or a car wash business. Which one would you choose? [Bottle shop or car wash?]
+
+
+3. Looks like another toastmaster strikes it lucky too! Another genie in a bottle is found!  Again there are two things to choose from: You can have a beautiful voice like Susan Boyle that will let you make millions out of singing, but a face like the Orc from Lord of the ring; or you can have a good look like Emma [Mma] Watson or Brad Pitt that will let make millions out of acting, but a voice like an Orc from Lord of the Ring. How would you choose? [Beautiful voice or beautiful face]
+
+
+4. You will not believe the luck of this club! One more fellow Toastmaster find a genie in a bottle! But oh no, it is the small business genie again. Now you have a choice between a fish and chip shop and a pizza restaurant. Which one will you choose and why? [fish and chip or pizza]
+
+
+
+
+5. Tonight is the night of genie! Yet another fellow Toastmaster has rescued a genie! This genie has a gift in languages and he can make you instantly fluent in either one of these three languages: Spanish, Italian or Russian. Which one will you choose and why? [Spanish, Italian or Russian]
+
+
+6. We are on a roll! Another Toastmaster has saved a genie again! On no, guess what, it is the small business genie again! Apparently he keeps getting back into a bottle because of tax evasion! Again you can choose between these two choices: a new apple iphone every year or a new samsung galaxy every year. How would you choose? [Apple or Samsung]
+
+
+7. Finally there is no more genie in a bottle to be found. However when you are walking on beach looking out for  a bottle, you run into this legendary Nigerian prince!  You gave him 50 bucks and he gave you back a princely sum of 20 million aussie right away. How are you going to spend the 20 million dollars? 
+
+
+8. We all know what is at the end of a rainbow! You are the lucky fellow who have reached the end of the rainbow and found the pot of gold! What will you do with the pot of gold?
+
+

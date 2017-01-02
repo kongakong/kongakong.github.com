@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Note to self: _net_adm_ can be used to discover the erlang cluster topology."
+title: "net_adm can be used to discover the erlang cluster topology."
 date: 2011-05-22 16:41
 comments: true
-categories: 
+categories: erlang
 ---
 
-Note to self: _net_adm_ can be used to discover the erlang cluster topology.
+Note to self: **net_adm** can be used to discover the erlang cluster topology.
 
 
 

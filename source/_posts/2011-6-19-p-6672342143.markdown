@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning."
+title: "VirtualBox ‘non-optimal setting’ warning"
 date: 2011-06-19 11:04
 comments: true
 categories: virtualbox solaris express
 ---
 
-Choose ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.
+After choosing ‘2 CPUs’ for my VM, VirtualBox shows ‘non-optimal setting’ warning. Any value bigger than one will show this warning.
 
 
 Select ‘Enable IO APIC’ gets rid of the warning message.

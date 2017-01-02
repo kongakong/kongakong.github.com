@@ -3,7 +3,65 @@ layout: post
 title: Little Erlang Exercise 4
 date:  2008-01-31 21:37
 comments: true
-categories: erlang
+categories: erlang euler
 meta: 
 ---
-Problem Definition: <a href="http://projecteuler.net/index.php?section=problems&amp;id=4">Euler Problem 4</a><br /><br />Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet handy.<br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br />"""<br />A palindromic number reads the same both ways. The largest palindrome<br />made from the product of two 2-digit numbers is 9009 = 91 x 99.<br /><br />Find the largest palindrome made from the product of two 3-digit numbers.<br />"""<br /><br />def isPalindromic(Num):<br />  """<br />    For string reversal, pls check this url:<br /><br />      http://www.python.org/doc/2.3.5/whatsnew/section-slices.html<br /><br />  """<br />  N = str(Num)<br />  l = len(N)<br />  div, mod = divmod(l, 2)<br />  if mod == 1: # odd<br />    fh = N[0:l/2]<br />    sh = N[1+l/2:]<br />    # print "%s %s" % (fh, sh)<br />  else:<br />    fh = N[0:l/2]<br />    sh = N[l/2:]<br />  return fh == sh[::-1]<br /><br /><br />if __name__ == "__main__":<br />  g = [ x * y for x in xrange(100, 999) for y in xrange(100, 999) ]<br />  print max(filter(lambda x: isPalindromic(x), g))<br /><br /><br /></code></pre><br /><br />Here comes an erlang version. In this rare occasion, erlang runs faster than python. It is probably because, first of all, the list comprehension I used in erlang produces a smaller list. Secondly the test of palindromic is more straightforward in the erlang version. <br /><br />I will revisit the python version, later, when I get a bit more time.<br /><br /><br /><pre style="border: 1px dashed rgb(153, 153, 153); padding: 5px; overflow: auto; font-family: Andale Mono,Lucida Console,Monaco,fixed,monospace; color: rgb(0, 0, 0); background-color: rgb(238, 238, 238); font-size: 12px; line-height: 14px; width: 100%;"><code><br /><br />-module(p4).<br />-export([findLargestProduct/0]).<br /><br />isPalindromic(N) when is_list(N) -><br />  N == lists:reverse(N).<br /><br />findLargestProduct() -><br />  List = [X * Y || X <- lists:seq(100, 999),<br />                   Y <- lists:seq(100, 999),<br />                   isPalindromic(integer_to_list(X * Y))],<br />  lists:max(List).<br /><br /><br /><br /></code><br /></pre>
+
+Problem Definition: [Euler Problem 4](http://projecteuler.net/index.php?section=problems&amp;id=4)
+
+Through this exercise, I realised that I can reverse a string using a [::-1] operator. Really cryptic, but yet handy.
+
+{% codeblock lang:python  %}
+
+# A palindromic number reads the same both ways. The largest palindrome
+# made from the product of two 2-digit numbers is 9009 = 91 x 99.
+# 
+# Find the largest palindrome made from the product of two 3-digit numbers.
+
+def isPalindromic(Num):
+  #  For string reversal, pls check this url:
+  #
+  #    http://www.python.org/doc/2.3.5/whatsnew/section-slices.html
+
+  N = str(Num)
+  l = len(N)
+  div, mod = divmod(l, 2)
+  if mod == 1: # odd
+    fh = N[0:l/2]
+    sh = N[1+l/2:]
+    # print “%s %s” % (fh, sh)
+  else:
+    fh = N[0:l/2]
+    sh = N[l/2:]
+  return fh == sh[::-1]
+
+
+if __name__ == "__main__":
+  g = [ x * y for x in xrange(100, 999) for y in xrange(100, 999) ]
+  print max(filter(lambda x: isPalindromic(x), g))
+
+
+{% endcodeblock %}
+
+Here comes an erlang version. In this rare occasion, erlang runs faster than python. It is probably because, first of all, the list comprehension I used in erlang produces a smaller list. Secondly the test of palindromic is more straightforward in the erlang version. 
+
+I will revisit the python version, later, when I get a bit more time.
+
+
+{% codeblock lang:erlang %}
+
+-module(p4).
+-export([findLargestProduct/0]).
+
+isPalindromic(N) when is_list(N) –>
+  N == lists:reverse(N).
+
+findLargestProduct() –>
+  List = [X * Y || X <– lists:seq(100, 999),
+                   Y <– lists:seq(100, 999),
+                   isPalindromic(integer_to_list(X * Y))],
+  lists:max(List).
+
+
+
+{% endcodeblock %}

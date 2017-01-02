@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "The _python_ build on _solaris express_ is a partial success. Here is part of the output message:"
+title: "The python build on solaris express is a partial success"
 date: 2011-06-22 00:22
 comments: true
 categories: python solaris express
 ---
 
-The _python_ build on _solaris express_ is a partial success. Here is part of the output message:
+The *python* build on *solaris express* is a partial success. Here is part of the output message:
 
 ```
 
